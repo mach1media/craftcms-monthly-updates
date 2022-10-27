@@ -1,0 +1,47 @@
+{##
+ # NEO BLOCK TYPE: IMAGE+TEXT BOX
+ #}
+{% set imgDesktop    = block.imageDesktop.one %}
+{% set imgDesktopSrc = imgDesktop.url('responsiveMedium') %}
+{% set imgDesktopAlt = imgDesktop.alt ?: imgDesktop.caption %}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-8{% endif %}">
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock, 'class': 'mb-4'} %}
+				
+				<div class="c-img-text-box row no-gutters">
+					<div class="c-img-text-box__img col-12 col-md-5{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">
+						{% if block.imageMobile is defined and block.imageMobile | length %}
+							{% set imgMobile    = block.imageDesktop.one %}
+							{% set imgMobileSrc = imgMobile.url('responsiveSmall') %}
+							{% set imgMobileAlt = imgMobile.alt ?: imgMobile.caption %}
+							<img class="d-md-none" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" />
+							<img class="d-none d-md-block" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" />
+						{% else %}
+							<img src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" />
+						{% endif %}
+					</div>
+					
+					<div class="col-12 col-md-7{% if block.imagePositionLR == 'right' %} order-md-1{% endif %}">
+						<div class="c-img-text-box__description">
+							{% if block.heading is defined and block.heading != '' %}<h3 class="c-img-text-box__heading">{{ block.heading }}</h3>{% endif %}
+							{{ block.description }}
+							{% if block.listItems is defined and block.listItems | length %}
+							<ul class="u-list-checks">
+								{% for li in block.listItems %}
+								<li>{{ li.listItem | raw }}</li>
+								{% endfor %}
+							</ul>
+							{% endif %}
+							{% if block.button | length %}
+							{% set btnColor = block.buttonColor == 'default' ? 'white' : block.buttonColor %}
+							<p>{% include "_fields/button" with {'button': block.button, 'color': btnColor} %}</p>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

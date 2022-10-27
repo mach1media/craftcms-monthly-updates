@@ -1,0 +1,22 @@
+{##
+ # NEO BLOCK TYPE: LEAD BLOCK
+ #}
+{% set bgPhoto = '' %}
+{% if block.backgroundPhoto|length %}
+	{% set img = block.backgroundPhoto.one %}
+	{% set bgPhoto = ' style="background:url(' ~ img.url('responsiveLarge') ~ ') center center no-repeat;background-size:cover;"' %}
+{% endif %}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}"{{ bgPhoto | raw }}>
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-8{% endif %} text-center">
+				{% if block.heading is defined and block.heading != '' %}<h2 class="u-color-default">{{ block.heading }}</h2>{% endif %}
+				{{ block.description }}
+				{% if block.button | length %}
+				{% set btnColor = block.buttonColor == 'default' ? 'white' : block.buttonColor %}
+				<p>{% include "_fields/button" with {'button': block.button, 'color': btnColor} %}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

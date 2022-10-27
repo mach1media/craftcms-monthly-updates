@@ -1,0 +1,115 @@
+/**
+ * PLACEHOLDERS
+ */
+%block-padding {
+	padding-top: $gutter*2;
+	padding-bottom: $gutter*2;
+	
+	@include media-breakpoint-up(sm) {
+		padding-top: $gutter*3;
+		padding-bottom: $gutter*3;
+	}
+}
+
+%first-last-child {
+	& > :first-child {
+		margin-top: 0;
+	}
+	& > :last-child {
+		margin-bottom: 0;
+	}
+}
+
+%clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// custom square bullet lists
+%custom-ul {
+	ul:not(.u-list-checks):not(.c-link-group__links):not(.slick-dots) {
+		list-style-type: none;
+		
+		li {
+			&:before {
+				content: "";
+				width: 5px;
+				height: 5px;
+				background: #595b96;
+				display: block;
+				float: left;
+				margin: .6em 0 0 -20px;
+				vertical-align: bottom
+			}
+		}
+	}
+}
+
+%carousel-pagination-buttons {
+	.prev,
+	.next {
+		position: absolute;
+		display: block;
+		text-align: center;
+		width: $carousel-pagination-size;
+		height: $carousel-pagination-size;
+		line-height: $carousel-pagination-size;
+		background-color: rgba(black, .7);
+		color: $color-silver;
+		bottom: 0;
+		cursor: pointer;
+		@include animate;
+		
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+	}
+	.next {
+		right: 0;
+		
+		&:before {
+			margin-left: 3px;
+		}
+	}
+	.prev {
+		right: $carousel-pagination-size + 2;
+		
+		&:before {
+			margin-right: 3px;
+		}
+	}
+}
+
+/*
+// https://scotch.io/tutorials/customize-the-browsers-scrollbar-with-css
+%scrollbar-custom {
+	&::-webkit-scrollbar {
+		width: 10px;
+		background-color: transparent;
+	}
+	
+	&::-webkit-scrollbar-track {
+		border-radius: 10px;
+		background: $color-silver;
+		border: 1px solid #ccc;
+	}
+		
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background: lighten($color-gray, 10%);
+		border: 1px solid lighten($color-gray, 10%);
+	}
+		
+	&::-webkit-scrollbar-thumb:hover {
+		background: $color-gray;
+	}
+		
+	&::-webkit-scrollbar-thumb:active {
+		background: $color-gray;
+	}
+}
+*/

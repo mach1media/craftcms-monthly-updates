@@ -1,0 +1,28 @@
+{##
+ # NEO BLOCK TYPE: IMAGE
+ #}
+{% if block.imageDesktop is defined and block.imageDesktop | length %}
+	{% set imgDesktop    = block.imageDesktop.one %}
+	{% set imgDesktopSrc = imgDesktop.url('responsiveMedium') %}
+	{% set imgDesktopAlt = imgDesktop.alt ?: imgDesktop.caption %}
+{% endif %}
+
+{% if block.imageMobile is defined and block.imageMobile | length %}
+	{% set imgMobile    = block.imageMobile.one %}
+	{% set imgMobileSrc = imgMobile.url('responsiveSmall') %}
+	{% set imgMobileAlt = imgMobile.alt ?: imgMobile.caption %}
+{% endif %}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-8{% endif %}">
+				{% if block.imageDesktop | length and block.imageMobile | length %}
+					<p class="d-md-none"><img class="img-fluid" style="width:100%;" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" /></p>
+					<p class="d-none d-md-block"><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
+				{% elseif block.imageDesktop | length %}
+					<p><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,76 @@
+/**
+ * TWITTER BOOTSTRAP CARD OVERRIDES
+ */
+
+.card {
+	border: none;
+	
+	&-founder {
+		padding: $gutter;
+		color: gray('700');
+	}
+	
+	&-organizer {
+		position: relative;
+		padding: 0;
+		overflow: hidden;
+		
+		figcaption {
+			position: absolute;
+			display: flex;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			text-align: center;
+			padding: $gutter;
+			color: white;
+			background-image: linear-gradient(to right, rgba($color-purple, .75) 0%, rgba($color-blue, .75) 100%);
+			@include animate;
+			//transform: translate(0,100%);
+			opacity: 0;
+			
+			& > div {
+				align-self: flex-end;
+				transform: translate(0,100%);
+				@include animate;
+			}
+		}
+		
+		&:hover {
+			figcaption {
+				//transform: translate(0,0);
+				opacity: 1;
+				
+				& > div {
+					transform: translate(0,0);
+				}
+			}
+		}
+	}
+	
+	&-session {
+		width: 100%;
+		
+		&:hover {
+			text-decoration: none;
+		}
+		
+		.card-header {
+			text-align: center;
+			background-color: transparent;
+			border-bottom: 2px solid $color-blue-bright;
+			color: $color-blue;
+			@include base-font-bold;
+			text-transform: uppercase;
+			line-height: 1.2em;
+		}
+		.card-body {
+			@extend %first-last-child;
+			color: $color-blue-bright;
+			text-align: center;
+			font-size: 75%;
+			line-height: 1.5em;
+		}
+	}
+}

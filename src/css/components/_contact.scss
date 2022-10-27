@@ -1,0 +1,11 @@
+/**
+ * CONTACT BLOCK
+ */
+@include component('contact') {
+	padding: $gutter;
+	
+	@include media-breakpoint-up(sm) {
+		padding-top: $gutter*3;
+		padding-bottom: $gutter*3;
+	}
+}

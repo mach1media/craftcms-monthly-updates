@@ -1,0 +1,8 @@
+{% if link is defined and link | length %}
+	{% set linkText = link.getCustomText('Read more') %}
+	{% if class is defined and class != '' %}
+		{{ link.getLink({'text': linkText, 'class': class}) }}
+	{% else %}
+		{{ link.getLink({'text': linkText}) }}
+	{% endif %}
+{% endif %}

@@ -1,0 +1,122 @@
+/**
+ * GENERAL CONTENT BLOCK
+ */
+@include component('block') {
+	position: relative;
+	@extend %block-padding;
+	
+	[class*="col"] {
+		@extend %first-last-child;
+	}
+	
+	@include modifier('no-padding-bottom') {
+		padding-bottom: 0;
+	}
+	
+	@include modifier('no-padding-top') {
+		padding-top: 0;
+	}
+	
+	@include element('content') {
+		@extend %first-last-child;
+	}
+	
+	
+	//
+	// BACKGROUND COLORS
+	//
+	@include modifier('bg-gray') {
+		background-color: $gray-300;
+	}
+	@include modifier('bg-silver') {
+		background-color: $color-silver;
+	}
+	@include modifier('bg-blue-light') {
+		background-color: rgba($color-navy, .15);
+	}
+	@include modifier('bg-sand-light') {
+		background-color: rgba($color-sand, .15);
+	}
+	@include modifier('bg-taupe-light') {
+		background-color: rgba($color-taupe, .15);
+	}
+	@include modifier('bg-green-light') {
+		background-color: rgba($color-green, .15);
+	}
+	@include modifier('bg-blue') {
+		background-color: $color-blue;
+		color: white;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: white;
+		}
+		.u-color-default {
+			color: white !important;
+		}
+		
+		a:not(.btn):hover {
+			color: white;
+		}
+	}
+	@include modifier('bg-navy') {
+		background-color: $color-navy;
+		color: white;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: white;
+		}
+		.u-color-default {
+			color: white !important;
+		}
+		
+		a:not(.btn):hover {
+			color: white;
+		}
+	}
+	@include modifier('bg-sand') {
+		background-color: $color-sand;
+		color: white;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: white;
+		}
+		.u-color-default {
+			color: white !important;
+		}
+		
+		a:not(.btn):hover {
+			color: white;
+		}
+	}
+	@include modifier('bg-taupe') {
+		background-color: $color-taupe;
+		color: white;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: white;
+		}
+		.u-color-default {
+			color: white !important;
+		}
+		
+		a:not(.btn):hover {
+			color: white;
+		}
+	}
+	@include modifier('bg-green') {
+		background-color: $color-green;
+		color: white;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: white;
+		}
+		.u-color-default {
+			color: white !important;
+		}
+		
+		a:not(.btn):hover {
+			color: white;
+		}
+	}
+	
+}

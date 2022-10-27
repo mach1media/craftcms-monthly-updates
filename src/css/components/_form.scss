@@ -1,0 +1,11 @@
+/**
+ * FORM
+ */
+@include component('form') {
+	
+	.form-control:not(textarea) {
+		border-top: none;
+		border-right: none;
+		border-left: none;
+	}
+}

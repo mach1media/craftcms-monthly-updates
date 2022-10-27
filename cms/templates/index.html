@@ -1,0 +1,21 @@
+{#
+ # HOME PAGE TEMPLATE
+ #}
+{% extends "_layout/default" %}
+
+{# SET PAGE CLASSES #}
+{% set bodyClass = 'home' %}
+
+{% block content %}
+
+<main class="c-main">
+
+{# --------------------- PAGE HEADER -------------------- #}
+{% include "_pageBuilders/pageHeader" with { 'entry': entry } %}
+
+{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
+{% include "_pageBuilders/pageBuilder" with { 'entry': entry } %}
+
+</main>
+
+{% endblock %}

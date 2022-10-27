@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ currentSite.language }}" dir="{{ craft.app.i18n.getLocaleById(currentSite.id).getOrientation() }}"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Viewport params (for iOS) -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Preload Web Fonts, CSS, and JS -->
+<link rel="preload" href="/dist/css/app.css" as="style">
+<link rel="preload" href="/dist/js/app.js" as="script">
+
+{# FAVICON #}
+{# {% include '_layouts/_favicon' %} #}
+
+{% if getenv('ENVIRONMENT') == 'production' %}
+{#
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=$GA_TRACKING_ID$"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('set', 'developer_id.dZjQwMz', true);
+gtag('config', 'UA-129415858-1');
+</script>
+<script>
+(function(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start':
+        new Date().getTime(),
+        event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-MG87KDV');
+</script>
+<!-- End Google Tag Manager -->
+#}
+{% endif %}
+
+<!-- CSS Styles -->
+<link rel="stylesheet" href="/dist/css/app.css?v=20221027.1">
+</head>
+

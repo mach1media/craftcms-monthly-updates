@@ -1,0 +1,150 @@
+/**
+ * FOOTER
+ */
+@include component('footer') {
+	background-color: $color-silver;
+	color: $color-body-text;
+	
+	a {
+		color: $color-body-text;
+		text-decoration: none;
+		@include animate;
+		
+		&:hover {
+			color: white;
+		}
+	}
+	
+	h3 {
+		color: $color-body-text;
+	}
+	
+	.btn-outline-white,
+	.btn-outline-silver {
+		&:hover {
+			color: $color-body-text;
+		}
+	}
+	
+	//
+	// NAV
+	//
+	@include element('nav') {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		@include media-breakpoint-between(md, lg) {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 2px solid $gray-300;
+			margin-bottom: $gutter*2 !important;
+			
+			li {
+				margin-bottom: $gutter*2 !important;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			border-right: 2px solid $gray-300;
+		}
+		@include media-breakpoint-between(lg, xl) {
+			width: 75%;
+		}
+		
+		li {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			
+			&:not(:last-of-type) {
+				margin-bottom: .5em;
+			}
+		}
+		
+		a {
+			@include font-heading;
+			font-size: 22px;
+		}
+	}
+	
+	
+	//
+	// SOCIAL
+	//
+	@include element('social') {
+		a {
+			position: relative;
+			display: inline-block;
+			width: 1.5em;
+			height: 1.5em;
+			
+			&:not(:first-of-type) {
+				margin-left: .25em;
+			}
+			&:not(:last-of-type) {
+				margin-right: .25em;
+			}
+			
+			
+			span {
+				position: absolute;
+				left: -99999em;
+			}
+		}
+		
+		.facebook {
+			background:url('/dist/img/icon-facebook-white.svg') center center no-repeat;
+		}
+		.twitter {
+			background:url('/dist/img/icon-twitter-white.svg') center center no-repeat;
+		}
+		.instagram {
+			background:url('/dist/img/icon-instagram-white.svg') center center no-repeat;
+		}
+	}
+	
+	//
+	// OPTIN FORM
+	//
+	@include element('optin') {
+		padding: $gutter/2;
+		
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		@include media-breakpoint-between(sm, md) {
+			.col-12 {
+				width: 50%;
+				padding: $gutter/2;
+			}
+		}
+		@include media-breakpoint-between(md, lg) {
+			padding-left: 0;
+			padding-right: 0;
+			
+			.col-12 {
+				width: 25%;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			padding: $gutter $gutter*.75;
+			
+			.col-12 {
+				width: 28%;
+				
+				&:last-of-type {
+					width: 16%;
+				}
+			}
+		}
+	}
+	
+	//
+	// COPYRIGHT
+	//
+	@include element('copyright') {
+		font-size: 14px;
+	}
+}

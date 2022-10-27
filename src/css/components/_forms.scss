@@ -1,0 +1,113 @@
+/**
+ * FORMS
+ */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: theme-color('blue-light') !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: theme-color('blue-light') !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: theme-color('blue-light') !important;
+}
+
+label {
+	@include base-font-bold;
+	font-size: 75%;
+	line-height: 1.2em;
+}
+
+.form-control {
+	color: theme-color('blue');
+	border: 1px solid theme-color('blue');
+	
+	&:focus {
+		color: theme-color('blue');
+		border-color: theme-color('blue-bright');
+		//box-shadow: 0 0 0 .2rem rgba(0,123,255,0.25);
+	}
+}
+
+//
+// DATE FIELD TYPE
+//
+::-webkit-datetime-edit-text { color: theme-color('blue-light'); }
+::-webkit-datetime-edit-month-field { color: theme-color('blue-light'); }
+::-webkit-datetime-edit-day-field { color: theme-color('blue-light'); }
+::-webkit-datetime-edit-year-field { color: theme-color('blue-light'); }
+::-webkit-datetime-edit { color: gray('300'); }
+
+
+@include component('form') {
+	label {
+		color: white;
+	}
+
+	.form-control {
+		border: 1px solid $white;
+	}
+}
+
+
+//
+// SELECT DROPDOWNS
+//
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;       /* Remove default arrow */
+	background-image: none;   /* Add custom arrow */
+}
+.select-wrap {
+	position: relative;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 50%;
+		right: $gutter/2;
+		transform: translate(0, -60%) rotate(45deg);
+		width: 10px;
+		height: 10px;
+		border-right: 1px solid gray('600');
+		border-bottom: 1px solid gray('600');
+	}
+}
+
+
+//
+// PRETTY CHECKBOXES
+//
+.pretty {
+	white-space: inherit;
+}
+.pretty .state {
+	position: relative;
+	padding-left: $gutter;
+}
+.pretty .state label {
+	display: block;
+	text-indent: 0;
+}
+.pretty .state label:before, 
+.pretty .state label:after {
+	top: -2px;
+}
+.c-general--blue-light {
+	.pretty .state label:before, 
+	.pretty .state label:after {
+		border: 1px solid transparent;
+		background-color: transparent;//rgba(white,.8);
+	}
+	.pretty .state label:before {
+		border-color: white;
+	}
+	.pretty.p-default input:checked ~ .state label:after {
+		background-color: white !important;
+	}
+}

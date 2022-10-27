@@ -1,0 +1,165 @@
+{#
+ # HOME PAGE
+ #}
+{% extends "_layout/default" %}
+
+{# SET PAGE BODY CLASS #}
+{# {% set bodyClass = "pagehead-nav-bleed" %} #}
+
+{% block content %}
+
+
+<!-- PAGE HEADER: HERO -->
+<section class="c-pagehead c-pagehead--hero d-flex align-items-end" style="background:url('/uploads/photos/CE4A0142.jpg') center center no-repeat;background-size:cover;">
+	<div class="container">
+		<div class="row align-items-end justify-content-end">
+			<div class="col-12 col-sm-5 ps-sm-5">
+				<div class="c-pagehead__collapse u-bg-slate">
+					<button type="button" data-bs-toggle="collapse" data-bs-target="#hero-collapse" aria-expanded="true" aria-controls="hero-collapse">
+						<span class="label-open">Hide</span>
+						<span class="label-collapsed">Show</span>
+					</button>
+					<div class="collapse show" id="hero-collapse">
+						<div class="c-pagehead__collapse-content">
+							<div class="row">
+								<div class="col-6">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta massa vitae viverra ultrices. Morbi ac risus vel orci interdum viverra quis id eros. Mauris mauris mi, dictum sed est eu, consequat interdum lorem.</p>
+								</div>
+								
+								<div class="col-6">
+									<p><img class="img-fluid" src="/uploads/photos/CE4A0228.jpg" alt="" /></p>
+									<p><a class="u-color-white u-font-heading text-uppercase" href="#">Learn More</a> &rarr;</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!-- MOSAIC BLOCK -->
+<section class="c-block">
+	<div class="container">
+		<div class="row align-items-center">
+			
+			<div class="col-12 col-lg-7 mb-5 mb-lg-0">
+				<div class="c-mosaic"> 
+					<div class="c-mosaic__large">
+						<img src="/uploads/photos/_E0A9984.jpg" alt="" />
+					</div>
+					
+					<div class="c-mosaic__medium">
+						<img src="/uploads/photos/CE4A0173.jpg" alt="" />
+					</div>
+					
+					<div class="c-mosaic__small-1">
+						<img src="/uploads/photos/CE4A0295.jpg" alt="" />
+					</div>
+					
+					<div class="c-mosaic__small-2">
+						<img src="/uploads/photos/CE4A0166.jpg" alt="" />
+					</div> 
+				</div>
+			</div>
+			
+			<div class="col-12 col-lg-5 ps-lg-5">
+				<h2 class="h1">Tradition, Family, & Friends</h2>
+				<div class="lead">
+					<p>Talk about Breakfast, Lunch, Dinner? Come experience creations from an exemplary culinary team. Fresh ingredients, sophisticated flavor profiles, and attentive service summarize our flagship restaurant. Located on the hotel side lower lobby (Level LL), inside the University Avenue entrance.</p>
+				</div>
+				<p>
+					<a class="btn btn-primary btn-lg" href="#">Reservations</a>
+				</p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+
+<!-- CTA BLOCK: 3-up -->
+<section class="c-block c-block--bg-slate">
+	<div class="container">
+		<div class="row g-0">
+			
+			<div class="col-12 col-lg-5 mb-3 mb-lg-0 d-flex align-items-stretch">
+				<div class="c-cta__description d-flex align-items-center u-bg-orange">
+					<div>
+						<h2>Happy Hour at the Carillon</h2>
+						<p>
+							Tuesday-Saturday, 5-10 pm<br />
+							Happy Hour, 5-6:30 pm
+						</p>
+						<p>
+							<a class="btn btn-outline-white" href="#">Happy Hour Menu</a>
+						</p>
+						<p>&nbsp;</p>
+						<h3>Validated Parking</h3>
+						<p>We validate your parking for Happy Hour. Please park in the Conference Center Garage and bring your ticket.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-4 col-lg-2 ps-0 ps-lg-3 c-cta__img-panel">
+				<img src="/uploads/photos/CE4A0220.jpg" alt="" />
+			</div>
+			
+			<div class="col-8 col-lg-5 ps-3 c-cta__img-panel">
+				<img src="/uploads/photos/CE4A0246.jpg" alt="" />
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+
+<!-- OPT-IN BLOCK -->
+<section class="c-optin" style="background:url('/uploads/photos/CE4A0595.jpg') center center no-repeat;background-size:cover;">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-8 col-lg-7 col-xl-5">
+				
+				<div class="c-optin__form">
+					<h2>Why Sign Up?</h2>
+					<p>
+						We validate your parking for Happy Hour. Please park in the Conference Center Garage and bring your ticket.
+					</p>
+					<p>&nbsp;</p>
+					
+					<h2 class="u-base-font text-uppercase fs-5 mb-3">Newsletter Signup</h2>
+					<form class="row">
+						<div class="col-12 mb-3">
+							<label for="optin-firstname" class="visually-hidden-focusable">First Name</label>
+							<input id="optin-firstname" class="form-control" type="text" placeholder="First Name" />
+						</div>
+						
+						<div class="col-12 mb-3">
+							<label for="optin-lastname" class="visually-hidden-focusable">Last Name</label>
+							<input id="optin-lastname" class="form-control" type="text" placeholder="Last Name" />
+						</div>
+						
+						<div class="col-12 mb-3">
+							<label for="optin-email" class="visually-hidden-focusable">Email</label>
+							<input id="optin-email" class="form-control" type="email" placeholder="Your Email" />
+						</div>
+						
+						<div class="col-12">
+							<button class="btn btn-primary" type="submit">Sign Up</button>
+						</div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+{% endblock %}

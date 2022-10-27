@@ -1,0 +1,26 @@
+/**
+ * MENU CARDS
+ */
+@include component('menu-card') {
+	position: relative;
+	min-height: 300px;
+	
+	@include media-breakpoint-up(md) {
+		min-height: 400px;
+	}
+	@include media-breakpoint-up(xl) {
+		min-height: 600px;
+	}
+	
+	
+	@include element('head') {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: $gutter;
+		
+		@include media-breakpoint-up(md) {
+			padding: $gutter*1.5;
+		}
+	}
+}

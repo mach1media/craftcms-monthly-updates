@@ -1,0 +1,20 @@
+{##
+ # NEO BLOCK TYPE: ICON LIST
+ #}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+		
+		<dl class="row row-cols-1 row-cols-sm-2 row-cols-lg-5">
+			{% for li in block.iconList %}
+			<dt class="col text-center font-weight-normal mb-5 mb-lg-0">
+				<div class="u-icon-wrapper">
+					<img src="/assets/icon/{{ li.icon }}.svg" alt="" aria-hidden="true" />
+				</div>
+				{% if li.heading != '' %}<h2 class="h4">{{ li.heading }}</h2>{% endif %}
+				{% if li.description != '' %}<p>{{ li.description | nl2br }}</p>{% endif %}
+			</dt>
+			{% endfor %}
+		</dl>
+	</div>
+</section>

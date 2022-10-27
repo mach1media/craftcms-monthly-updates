@@ -1,0 +1,38 @@
+{##
+ # PAGE HEADER: HOME HERO
+ #}
+{% set bgPhoto = '' %}
+{% if block.backgroundPhoto|length %}
+	{% set img = block.backgroundPhoto.one %}
+	{% set bgPhoto = ' style="background:url(' ~ img.url('responsiveLarge') ~ ') center center no-repeat;background-size:cover;"' %}
+{% endif %}
+<section class="c-hero"{{ bgPhoto | raw }}>
+	<div class="c-hero__wedge-left"></div>
+	<div class="c-hero__wedge-right"></div>
+	
+	<div class="container">
+		<div class="row align-items-lg-center">
+			<div class="col-12 col-lg-6 order-lg-2">
+				<div class="c-hero__text">
+					{% if block.heading is defined and block.heading != '' %}<h1>{{ block.heading | raw }}</h1>{% endif %}
+					{% if block.summary is defined and block.summary != '' %}<p>{{ block.summary }}</p>{% endif %}
+					{% if block.button | length %}
+					{% set btnColor = block.buttonColor == 'default' ? 'white' : block.buttonColor %}
+					<p>{% include "_fields/button" with {'button': block.button, 'color': btnColor} %}</p>
+					{% endif %}
+				</div>
+			</div>
+			
+			<div class="col-12 col-lg-5 order-lg-1">
+				{% if block.image is defined and block.image | length %}
+				{% set img    = block.image.one %}
+				{% set imgSrc = img.url('square600') %}
+				{% set imgAlt = img.alt ?: img.caption %}
+				<div class="c-hero__feature">
+					<img class="img-fluid" src="{{ imgSrc }}" alt="{{ imgAlt }}" />
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

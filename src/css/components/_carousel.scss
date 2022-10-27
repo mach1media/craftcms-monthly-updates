@@ -1,0 +1,192 @@
+/**
+ * CAROUSEL: BOOTSTRAP OVERRIDES
+ */
+
+.carousel-item {
+	padding-bottom: $gutter*2;
+}
+
+.carousel-indicators {
+	bottom: -$gutter*2;
+	
+	&.cards {
+		@include media-breakpoint-up(md) {
+			bottom: -$gutter*4;
+		}
+	}
+	
+	& [data-bs-target] {
+		background-color: $color-body-text;
+	}
+}
+
+@include component('carousel') {
+	
+	@include element('card') {
+		position: relative;
+		padding: $gutter;
+		height: 100%;
+		min-height: 300px;
+		
+		@include media-breakpoint-up(lg) {
+			min-height: 400px;
+		}
+		@include media-breakpoint-up(xl) {
+			min-height: 500px;
+		}
+		
+		&.u-bg-slate,
+		&.u-bg-orange,
+		&.u-bg-blue,
+		&.u-bg-green,
+		&.u-bg-turquoise {
+			@include animate;
+			
+			h1, h2, h3, h4, a:not(.btn) {
+				color: white;
+			}
+			.u-color-default {
+				color: white !important;
+			}
+			
+			a:not(.btn) {
+				color: white;
+				text-decoration: none;
+				
+				&:hover {
+					color: white;
+				}
+			}
+		}
+		
+		&.u-bg-slate:hover {
+			background-color: rgba($color-slate, .9) !important;
+		}
+		&.u-bg-orange:hover {
+			background-color: rgba($color-orange, .9) !important;
+		}
+		&.u-bg-blue:hover {
+			background-color: rgba($color-blue, .9) !important;
+		}
+		&.u-bg-green:hover {
+			background-color: rgba($color-green, .9) !important;
+		}
+		&.u-bg-turquoise:hover {
+			background-color: rgba($color-turquoise, .9) !important;
+		}
+	}
+	
+	@include element('card-img') {
+		@include media-breakpoint-up(lg) {
+			width: 75%;
+			margin-left: auto;
+			
+			img {
+				transform: translate(0, $gutter*3);
+			}
+		}
+	}
+	
+	@include element('card-description') {
+		@extend %first-last-child;
+		
+		h2 {
+			line-height: 1em;
+		}
+	}
+}
+
+
+/*
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	@include respond-above(sm) {
+		width: $gutter;
+		height: $gutter;
+	}
+	@include respond-below(sm) {
+		width: $gutter/2;
+		height: $gutter/2;
+	}
+}
+
+.carousel-control-prev-icon {
+	position: relative;
+	background-image: none;
+	transform: rotate(-45deg);
+	
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 3px;
+		background-color: white;
+		top: 3px;
+		left: 0;
+		
+		@include respond-above(sm) {
+			height: $gutter - 3;
+		}
+		@include respond-below(sm) {
+			height: $gutter/2 - 3;
+		}
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		height: 3px;
+		background-color: white;
+		top: 0;
+		left: 0px;
+		
+		@include respond-above(sm) {
+			width: $gutter;
+		}
+		@include respond-below(sm) {
+			width: $gutter/2;
+		}
+	}
+}
+
+.carousel-control-next-icon {
+	position: relative;
+	background-image: none;
+	transform: rotate(45deg);
+	
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 3px;
+		background-color: white;
+		top: 3px;
+		right: 0;
+		
+		@include respond-above(sm) {
+			height: $gutter - 3;
+		}
+		@include respond-below(sm) {
+			height: $gutter/2 - 3;
+		}
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		height: 3px;
+		background-color: white;
+		top: 0;
+		right: 0px;
+		
+		@include respond-above(sm) {
+			width: $gutter;
+		}
+		@include respond-below(sm) {
+			width: $gutter/2;
+		}
+	}
+}
+*/

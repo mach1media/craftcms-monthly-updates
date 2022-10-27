@@ -1,0 +1,33 @@
+{##
+ # NEO BLOCK TYPE: TEAM MEMBER
+ #}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-8{% endif %}">
+				<div class="row">
+					{% if block.image is defined and block.image | length %}
+						{% set img    = block.image.one %}
+						{% set imgSrc = img.url('responsiveMedium') %}
+						{% set imgAlt = img.alt ?: img.caption %}
+					<div class="c-team__img col-12 col-md-4 col-xl-3 mb-4 mb-md-0">
+						<p class="text-center">
+							<img class="img-fluid mx-auto" src="{{ imgSrc }}" alt="{{ imgAlt }}" />
+						</p>
+					</div>
+					
+					<div class="c-team__description col-12 col-md-8 col-xl-9">
+					{% else %}
+					<div class="c-team__description col-12">
+					{% endif %}
+						{% if block.heading != '' %}<h2 class="h3">{{ block.heading }}</h2>{% endif %}
+						{{ block.description }}
+						{% if block.textLink | length %}
+						<p>{% include "_fields/link" with {'button': block.textLink} %}</p>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

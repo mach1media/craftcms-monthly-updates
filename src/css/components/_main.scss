@@ -1,0 +1,13 @@
+/**
+ * MAIN ELEMENT
+ * ex: <main>
+ */
+@include component('main') {
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+	
+	@include media-breakpoint-up(md) {
+		overflow: inherit;
+	}
+}

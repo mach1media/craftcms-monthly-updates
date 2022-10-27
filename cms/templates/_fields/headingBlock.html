@@ -1,0 +1,3 @@
+{% if heading | length and heading.heading != '' %}
+<h2 class="{{ heading.size != 'h2 ' ? heading.size : '' }}u-{{ heading.color }}{% if heading.decorator == '1' %} u-heading-decorator{% endif %}{% if class is defined and class != '' %} {{ class }}{% endif %}"><span>{{ heading.heading | raw }}</span></h2>
+{% endif %}
