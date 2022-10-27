@@ -1,0 +1,22 @@
+dateModified: 1666837728
+email:
+  fromEmail: roger@mach1media.com
+  fromName: TMF
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF
+    5cf2d429-9442-49de-b0fb-aaaec557b2cd: TMF
+    a40a3743-3dbc-48e7-a8cd-0196dd8021df: Common
+system:
+  edition: solo
+  live: true
+  name: TMF
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

@@ -1,0 +1,38 @@
+{
+  "name": "tmf-fdn.com",
+  "version": "1.0.0",
+  "description": "TMF Foundation Craft CMS website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mach1media/tmf.git"
+  },
+  "keywords": [
+    "tmf",
+    "craftcms",
+    "bootstrap",
+    "laravel",
+    "mix"
+  ],
+  "author": "roger@mach1media.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mach1media/tmf/issues"
+  },
+  "homepage": "https://github.com/mach1media/tmf#readme",
+  "devDependencies": {
+    "@popperjs/core": "^2.11.6",
+    "autoprefixer": "^10.4.12",
+    "bootstrap": "^5.2.2",
+    "css-loader": "^6.7.1",
+    "jquery": "^3.6.1",
+    "laravel-mix": "^6.0.49",
+    "postcss-loader": "^7.0.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1"
+  }
+}
