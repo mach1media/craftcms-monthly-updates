@@ -1,0 +1,27 @@
+/.idea
+.DS_Store
+.notes
+!assets/scss/vendor
+
+# Build
+# from yarn/webpack assets
+.cache-loader
+cms/web/build
+cms/web/mix-manifest.json
+node_modules
+npm-debug.log
+yarn-error.log
+resources/assets/config-local.json
+*.map
+
+# CRAFT CMS
+cms/.env*
+cms/vendor
+cms/storage/*
+cms/web/cpresources/*
+
+# User uploads
+cms/web/uploads
+
+
+
