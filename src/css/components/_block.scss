@@ -119,4 +119,79 @@
 		}
 	}
 	
+	
+	
+	//
+	// TEXT COLORS
+	//
+	@include modifier('text-white') {
+		color: white;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: white;
+		}
+		.u-color-default {
+			color: white !important;
+		}
+	}
+	@include modifier('text-navy') {
+		color: $color-navy;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: $color-navy;
+		}
+		.u-color-default {
+			color: $color-navy !important;
+		}
+	}
+	@include modifier('text-blue') {
+		color: $color-blue;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: $color-blue;
+		}
+		.u-color-default {
+			color: $color-blue !important;
+		}
+	}
+	@include modifier('text-sand') {
+		color: $color-sand;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: $color-sand;
+		}
+		.u-color-default {
+			color: $color-sand !important;
+		}
+	}
+	@include modifier('text-taupe') {
+		color: $color-taupe;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: $color-taupe;
+		}
+		.u-color-default {
+			color: $color-taupe !important;
+		}
+	}
+	@include modifier('text-green') {
+		color: $color-green;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: $color-green;
+		}
+		.u-color-default {
+			color: $color-green !important;
+		}
+	}
+	@include modifier('text-green-light') {
+		color: $color-green-light;
+		
+		h1, h2, h3, h4, a:not(.btn) {
+			color: $color-green-light;
+		}
+		.u-color-default {
+			color: $color-green-light !important;
+		}
+	}
 }

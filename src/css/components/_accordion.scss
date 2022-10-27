@@ -8,7 +8,7 @@
 .accordion-button {
 	border-left: none;
 	border-right: none;
-	@include font-heading;
+	@include font-heading-semibold;
 	//font-size: 120%;
 	//color: $color-black;
 	@include animate;

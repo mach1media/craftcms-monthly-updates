@@ -6,13 +6,14 @@
 	$height-top-large: 60px;
 	$height-nav-small: 60px;
 	$height-nav-large: 100px;
+	$color-topbar-bg:  #e8e7ed;
 	
 	background-color: white;
-	border-bottom: 1px solid $color-sand;
+	border-bottom: 1px solid $gray-300;
 	
 	@include media-breakpoint-down(xl) {
 		//border-bottom: 1px solid $color-sand;
-		background-color: lighten($color-sand, 40%);
+		background-color: $color-topbar-bg;
 	}
 	
 	@include element('hamburger') {
@@ -59,7 +60,7 @@
 		@include media-breakpoint-up(xl) {
 			height: $height-top-large;
 			//border-bottom: 1px solid $gray-500;
-			background-color: rgba($color-sand, .15);
+			background-color: $color-topbar-bg;
 		}
 	}
 	@include element('top-nav') {
@@ -91,7 +92,7 @@
 				box-shadow: 0px 3px 6px rgba(black, .2);
 				
 				.dropdown-item:not(:last-of-type) {
-					border-bottom: 1px solid rgba($color-sand, .5);
+					border-bottom: 1px solid rgba($color-navy, .5);
 				}
 			}
 		}
@@ -174,14 +175,14 @@
 				color: $color-navy !important;
 				text-align: right;
 				text-decoration: none;
-				border-top: 1px solid rgba($color-sand, .5);
+				border-top: 1px solid rgba($color-navy, .5);
 				
 				&:hover {
 					text-decoration: none;
 				}
 				
 				.navbar-nav li:last-of-type & {
-					border-bottom: 1px solid rgba($color-sand, .5);
+					border-bottom: 1px solid rgba($color-navy, .5);
 				}
 			}
 		}
