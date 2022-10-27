@@ -2,11 +2,11 @@
  * FOOTER
  */
 @include component('footer') {
-	background-color: $color-silver;
-	color: $color-body-text;
+	background-color: $color-navy;
+	color: $gray-400;
 	
 	a {
-		color: $color-body-text;
+		color: $gray-400;
 		text-decoration: none;
 		@include animate;
 		
@@ -16,7 +16,7 @@
 	}
 	
 	h3 {
-		color: $color-body-text;
+		color: $gray-400;
 	}
 	
 	.btn-outline-white,
@@ -103,48 +103,15 @@
 		}
 	}
 	
-	//
-	// OPTIN FORM
-	//
-	@include element('optin') {
-		padding: $gutter/2;
-		
-		@include media-breakpoint-down(sm) {
-			padding-left: 0;
-			padding-right: 0;
-		}
-		
-		@include media-breakpoint-between(sm, md) {
-			.col-12 {
-				width: 50%;
-				padding: $gutter/2;
-			}
-		}
-		@include media-breakpoint-between(md, lg) {
-			padding-left: 0;
-			padding-right: 0;
-			
-			.col-12 {
-				width: 25%;
-			}
-		}
-		@include media-breakpoint-up(lg) {
-			padding: $gutter $gutter*.75;
-			
-			.col-12 {
-				width: 28%;
-				
-				&:last-of-type {
-					width: 16%;
-				}
-			}
-		}
+	@include element('logo-ii') {
+		max-width: 200px;
 	}
 	
 	//
 	// COPYRIGHT
 	//
 	@include element('copyright') {
+		@include font-heading-light;
 		font-size: 14px;
 	}
 }

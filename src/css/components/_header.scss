@@ -12,7 +12,7 @@
 	
 	@include media-breakpoint-down(xl) {
 		//border-bottom: 1px solid $color-sand;
-		background-color: rgba($color-sand, .15);
+		background-color: lighten($color-sand, 40%);
 	}
 	
 	@include element('hamburger') {

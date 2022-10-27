@@ -6,7 +6,10 @@
 // typography
 $font-family-base:            $base-font;
 $font-family-sans-serif:      $base-font;
+
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$line-height-base:            1.75;
+
 $h1-font-size:                $font-size-base * 3;//$font-size-base * 2.5 !default;
 //$h2-font-size:                $font-size-base * 2 !default;
 //$h3-font-size:                $font-size-base * 1.75 !default;
@@ -52,6 +55,16 @@ $headings-color:              $body-color;
 //$enable-negative-margins:     false !default;
 //$enable-deprecation-messages: true !default;
 //$enable-important-utilities:  true !default;
+
+
+//
+// BUTTONS
+//
+$btn-padding-x:              1.5rem;
+$btn-padding-x-sm:           1.5rem;
+$btn-padding-x-lg:           1.5rem;
+$btn-font-size-sm:           .75rem;
+
 
 
 //
