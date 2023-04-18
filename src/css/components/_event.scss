@@ -45,13 +45,13 @@
 			}
 		}
 		
-		&.b-turquoise {
+		&.b-teal {
 			img {
-				border-bottom: 10px solid $color-turquoise;
+				border-bottom: 10px solid $color-teal;
 				
 				@include media-breakpoint-up(md) {
 					border-bottom: none;
-					border-right: 10px solid $color-turquoise;
+					border-right: 10px solid $color-teal;
 				}
 			}
 		}

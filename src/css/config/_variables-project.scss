@@ -4,24 +4,21 @@ $color-body-bg:      white;
 
 $color-silver:       #F5F5F5;
 
-$color-blue:         #455fbf;
-$color-navy:         #221551;
-$color-sand:         #BD9B60;
-$color-taupe:        #83786F;
-$color-green:        #005151;
-$color-green-light:  #137d7c;
+$color-tan:          #C19D68;
+$color-navy:         #231F5B;
+
 
 $color-block-border: #ccc;
 $color-black:        #333;
-$color-body-text:    #555;
+$color-body-text:    $color-navy;
 
 // FONTS
 $font-stack-helvetica:    'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-stack-arial-narrow: "Arial Narrow", Arial, sans-serif;
 $font-stack-georgia:      Georgia, Times, 'Times New Roman', serif;
 
-$base-font:               'Montserrat', $font-stack-helvetica;
-$font-heading:            'Open Sans', $font-stack-helvetica;
+$base-font:               'proxima-nova', $font-stack-helvetica;
+$font-heading:            'Raleway', $font-stack-helvetica;
 
 
 // PROJECT GLOBALS

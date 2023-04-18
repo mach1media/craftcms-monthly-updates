@@ -1,0 +1,187 @@
+{#
+ # PODCASTS PAGE
+ #}
+{% extends "_layout/default" %}
+
+{# SET PAGE BODY CLASS #}
+{# {% set bodyClass = "pagehead-nav-bleed" %} #}
+
+{% block content %}
+
+
+<!-- HERO: DEFAULT -->
+<section class="position-relative">
+	<div class="c-hero c-hero--general c-hero--podcast">
+		<div class="container">
+			<div class="row align-items-center">
+				<!-- Intro text -->
+				<div class="col-12 col-md-5">
+					<p class="u-preheading">Igniting Imagination Podcast</p>
+					<h1>Conversations That Inspire Courage and Innovation</h1>
+					<p>The Igniting Imagination podcast features rich conversations with prominent leaders from across the cultural and spiritual landscape that invite listeners into new relationships with themselves, their church, and their communities. It offers ideas to strengthen spiritual practice, build community, and inspire courage and innovation.
+					</p>
+					<p>
+						Every movement for change starts with a generative conversation. Join us to spark the Spirit within you as a leader bringing about a world where people know love, grace, joy and belonging.</p>
+					<p>
+						<a class="btn btn-pill btn-secondary" href="#">Subscribe to Podcast</a> &nbsp;
+						<a class="btn btn-pill btn-outline-secondary text-white" href="#">Receive Podcast Email</a>
+					</p>
+				</div>
+				
+				<!-- Image for desktop only -->
+				<div class="col-12 col-md-4 offset-md-1 d-none d-md-flex">
+					<div class="c-hero__img-podcast">
+						<img class="d-block w-100 img-fluid" src="/dist/img/hero-podcasts.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c-hero__scoop"></div>
+</section>
+
+
+
+<!-- SLIDER BLOCK: PODCAST SEASON -->
+<section class="c-block">
+	<!-- SLIDER CONTROLS -->
+	<div class="container">
+		<div class="d-flex justify-content-between">
+			<h2 class="mb-0" style="line-height:37px;">Season 7</h2>
+			
+			<div class="c-slider__controls" data-snap-slider-nav="slider-0">
+				<button class="btn btn-text" data-snap-slider-goto="prev" title="previous">
+					<img class="d-block w-100" src="/dist/img/icon-arrow-circle-left.svg" alt="" aria-hidden="true"/>
+				</button>
+				
+				<button class="btn btn-text" data-snap-slider-goto="next" title="next">
+					<img class="d-block w-100" src="/dist/img/icon-arrow-circle-right.svg" alt="" aria-hidden="true"/>
+				</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid px-0">
+		<div class="row gx-0 align-items-center">
+			<div class="col-12 py-5 ps-3 pe-0 ps-lg-5">
+				
+				<!-- wrap slider in div with class='position-relative' -->
+				<div class="position-relative">
+					<div class="c-slider c-slider--story-cards pe-4" data-snap-slider="slider-0">
+						
+						<div class="c-slider__slide">
+							<div class="c-story-card" style="background:url('/uploads/images/27083181230_b3a907cd8c_k+(1).jpg') center center no-repeat;background-size:cover;">
+								<div class="c-story-card__content">
+									<p class="mb-0">
+										<img class="c-story-card__play" src="/dist/img/play-icon.svg" alt="" />
+									</p>
+									<p class="u-preheading">
+										<a class="stretched-link" href="/layouts/podcast">Episode 1</a>
+									</p>
+									<h2 class="c-story-card__heading">Spiritual Formation Everywhere You Look</h2>
+									<p>With Tim Sorrens</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="c-slider__slide">
+							<div class="c-story-card" style="background:url('/uploads/images/27083181230_b3a907cd8c_k+(1).jpg') center center no-repeat;background-size:cover;">
+								<div class="c-story-card__content">
+									<p class="mb-0">
+										<img class="c-story-card__play" src="/dist/img/play-icon.svg" alt="" />
+									</p>
+									<p class="u-preheading">
+										<a class="stretched-link" href="/layouts/podcast">Episode 1</a>
+									</p>
+									<h2 class="c-story-card__heading">Spiritual Formation Everywhere You Look</h2>
+									<p>With Tim Sorrens</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="c-slider__slide">
+							<div class="c-story-card" style="background:url('/uploads/images/27083181230_b3a907cd8c_k+(1).jpg') center center no-repeat;background-size:cover;">
+								<div class="c-story-card__content">
+									<p class="mb-0">
+										<img class="c-story-card__play" src="/dist/img/play-icon.svg" alt="" />
+									</p>
+									<p class="u-preheading">
+										<a class="stretched-link" href="/layouts/podcast">Episode 1</a>
+									</p>
+									<h2 class="c-story-card__heading">Spiritual Formation Everywhere You Look</h2>
+									<p>With Tim Sorrens</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="c-slider__slide">
+							<div class="c-story-card" style="background:url('/uploads/images/27083181230_b3a907cd8c_k+(1).jpg') center center no-repeat;background-size:cover;">
+								<div class="c-story-card__content">
+									<p class="mb-0">
+										<img class="c-story-card__play" src="/dist/img/play-icon.svg" alt="" />
+									</p>
+									<p class="u-preheading">
+										<a class="stretched-link" href="/layouts/podcast">Episode 1</a>
+									</p>
+									<h2 class="c-story-card__heading">Spiritual Formation Everywhere You Look</h2>
+									<p>With Tim Sorrens</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="c-slider__slide">
+							<div class="c-story-card" style="background:url('/uploads/images/27083181230_b3a907cd8c_k+(1).jpg') center center no-repeat;background-size:cover;">
+								<div class="c-story-card__content">
+									<p class="mb-0">
+										<img class="c-story-card__play" src="/dist/img/play-icon.svg" alt="" />
+									</p>
+									<p class="u-preheading">
+										<a class="stretched-link" href="/layouts/podcast">Episode 1</a>
+									</p>
+									<h2 class="c-story-card__heading">Spiritual Formation Everywhere You Look</h2>
+									<p>With Tim Sorrens</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="c-slider__slide">
+							<div class="c-story-card" style="background:url('/uploads/images/27083181230_b3a907cd8c_k+(1).jpg') center center no-repeat;background-size:cover;">
+								<div class="c-story-card__content">
+									<p class="mb-0">
+										<img class="c-story-card__play" src="/dist/img/play-icon.svg" alt="" />
+									</p>
+									<p class="u-preheading">
+										<a class="stretched-link" href="/layouts/podcast">Episode 1</a>
+									</p>
+									<h2 class="c-story-card__heading">Spiritual Formation Everywhere You Look</h2>
+									<p>With Tim Sorrens</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="c-slider__slide">
+							<div class="c-story-card" style="background:url('/uploads/images/27083181230_b3a907cd8c_k+(1).jpg') center center no-repeat;background-size:cover;">
+								<div class="c-story-card__content">
+									<p class="mb-0">
+										<img class="c-story-card__play" src="/dist/img/play-icon.svg" alt="" />
+									</p>
+									<p class="u-preheading">
+										<a class="stretched-link" href="/layouts/podcast">Episode 1</a>
+									</p>
+									<h2 class="c-story-card__heading">Spiritual Formation Everywhere You Look</h2>
+									<p>With Tim Sorrens</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<!-- //wrap slider -->
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+{% endblock %}

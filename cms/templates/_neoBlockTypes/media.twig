@@ -1,0 +1,70 @@
+{##
+ # NEO BLOCK TYPE: MEDIA
+ #}
+{% if block.imageDesktop is defined and block.imageDesktop | length %}
+	{% set imgDesktop    = block.imageDesktop.one %}
+	{% set imgDesktopSrc = imgDesktop.url('responsiveMedium') %}
+	{% set imgDesktopAlt = imgDesktop.alt ?: imgDesktop.caption %}
+{% endif %}
+
+{% if block.imageMobile is defined and block.imageMobile | length %}
+	{% set imgMobile    = block.imageMobile.one %}
+	{% set imgMobileSrc = imgMobile.url('responsiveSmall') %}
+	{% set imgMobileAlt = imgMobile.alt ?: imgMobile.caption %}
+{% endif %}
+
+{% if block.preheading != '' or block.headingBlock | length or block.description != '' %}
+<section class="c-block--decorator-top">
+	<div class="c-block c-media__intro">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-10 col-lg-9 col-xl-8 text-center">
+					{% if block.preheading is defined and block.preheading != '' %}
+					<p class="u-preheading">{{ block.preheading }}</p>
+					{% endif %}
+					{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+					{% if block.description is defined and block.description != '' %}
+					<div class="c-wysiwyg">{{ block.description }}</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="c-media__wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					{% if block.imageDesktop | length and block.imageMobile | length %}
+						<p class="d-md-none"><img class="img-fluid" style="width:100%;" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" /></p>
+						<p class="d-none d-md-block"><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
+					{% elseif block.imageDesktop | length %}
+						<p><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
+					{% elseif block.video | length %}
+						{% set embeddedAsset = craft.embeddedAssets.get(block.video) %}
+						{{ embeddedAsset ? embeddedAsset.html }}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% else %}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				{% if block.imageDesktop | length and block.imageMobile | length %}
+					<p class="d-md-none"><img class="img-fluid" style="width:100%;" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" /></p>
+					<p class="d-none d-md-block"><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
+				{% elseif block.imageDesktop | length %}
+					<p><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
+				{% elseif block.video | length %}
+					{% set embeddedAsset = craft.embeddedAssets.get(block.video) %}
+					{{ embeddedAsset ? embeddedAsset.html }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}

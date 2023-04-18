@@ -1,0 +1,116 @@
+/**
+ * TABS
+ */
+@include component('tabs') {
+	position: relative;
+	background: white;
+	padding: $gutter;
+	
+	@include media-breakpoint-up(sm) {
+		padding: $gutter 0;
+	}
+	
+	.nav-fill {
+		.nav-item {
+			&:not(:last-of-type) {
+				margin-bottom: $gutter;
+			}
+			
+			.nav-link {
+				position: relative;
+				text-align: left;
+				background-color: $gray-600;
+				color: $color-body-text;
+				padding: .5em .5em .5em 3em;
+				@include font-heading-light;
+				font-size: 24px;
+				
+				&[aria-expanded="true"] {
+					background-color: $color-blue;
+					color: white;
+				}
+				
+				&:before {
+					content: "";
+					position: absolute;
+					top: .25em;
+					left: .5em;
+					width: 2em;
+					height: 2em;
+					background-color: $color-orange;
+					border-radius: 100%;
+				}
+				
+				&:after {
+					content: "";
+					position: absolute;
+					top: .25em;
+					left: .5em;
+					width: 2em;
+					height: 2em;
+					line-height: 2em;
+					border-radius: 100%;
+					text-align: center;
+					@include font-heading-light;
+				}
+			}
+			
+			&:nth-of-type(1) .nav-link:after {
+				content: "1";
+			}
+			&:nth-of-type(2) .nav-link:after {
+				content: "2";
+			}
+			&:nth-of-type(3) .nav-link:after {
+				content: "3";
+			}
+			&:nth-of-type(4) .nav-link:after {
+				content: "4";
+			}
+			&:nth-of-type(5) .nav-link:after {
+				content: "5";
+			}
+			&:nth-of-type(6) .nav-link:after {
+				content: "6";
+			}
+			&:nth-of-type(7) .nav-link:after {
+				content: "7";
+			}
+			&:nth-of-type(8) .nav-link:after {
+				content: "8";
+			}
+			&:nth-of-type(9) .nav-link:after {
+				content: "9";
+			}
+			
+			
+			&:nth-of-type(1) .nav-link[aria-expanded="false"] {
+				background-color: $gray-100;
+			}
+			&:nth-of-type(2) .nav-link[aria-expanded="false"] {
+				background-color: $gray-200;
+			}
+			&:nth-of-type(3) .nav-link[aria-expanded="false"] {
+				background-color: $gray-300;
+			}
+			&:nth-of-type(4) .nav-link[aria-expanded="false"] {
+				background-color: $gray-400;
+			}
+			&:nth-of-type(5) .nav-link[aria-expanded="false"] {
+				background-color: $gray-500;
+			}
+			&:nth-of-type(6) .nav-link[aria-expanded="false"] {
+				background-color: $gray-600;
+			}
+			&:nth-of-type(7) .nav-link[aria-expanded="false"] {
+				background-color: $gray-700;
+			}
+			&:nth-of-type(8) .nav-link[aria-expanded="false"] {
+				background-color: $gray-800;
+			}
+			&:nth-of-type(9) .nav-link[aria-expanded="false"] {
+				background-color: $gray-900;
+			}
+		}
+	}
+}

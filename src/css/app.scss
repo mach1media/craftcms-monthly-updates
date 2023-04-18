@@ -1,9 +1,9 @@
 /**
- * TMF WEBSITE
+ * wesleyanimpactpartners
  * 
  * Roger Glenn
  * roger@mach1media.com
- * Created: October 2022
+ * Created: December 2022
  *
  * Compiled using Laravel Mix
  * 
@@ -20,7 +20,7 @@
 
 // Project Variables and Bootstrap overrides second
 @import "config/variables-project";
-@import "config/variables-bootstrap";
+//@import "config/variables-bootstrap";
 
 // Bootstrap variables
 @import "~bootstrap/scss/variables";
@@ -55,15 +55,15 @@
 //@import "~bootstrap/scss/breadcrumb";
 //@import "~bootstrap/scss/pagination";
 //@import "~bootstrap/scss/badge";
-@import "~bootstrap/scss/alert";
+//@import "~bootstrap/scss/alert";
 //@import "~bootstrap/scss/progress";
 //@import "~bootstrap/scss/list-group";
-//@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/close";
 //@import "~bootstrap/scss/toasts";
-//@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/modal";
 //@import "~bootstrap/scss/tooltip";
 //@import "~bootstrap/scss/popover";
-@import "~bootstrap/scss/carousel";
+//@import "~bootstrap/scss/carousel";
 //@import "~bootstrap/scss/spinners";
 //@import "~bootstrap/scss/offcanvas";
 //@import "~bootstrap/scss/placeholders";

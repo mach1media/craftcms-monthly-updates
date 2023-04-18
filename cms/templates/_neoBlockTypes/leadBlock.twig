@@ -1,0 +1,21 @@
+{##
+ # NEO BLOCK TYPE: LEAD BLOCK
+ #}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-9 col-xl-8{% endif %} text-{{ block.textAlignment }}">
+				{% if block.preheading is defined and block.preheading != '' %}
+				<p class="u-preheading">{{ block.preheading }}</p>
+				{% endif %}
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg lead">{{ block.description }}</div>
+				{% endif %}
+				{% if block.button.getLink() %}
+				<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,112 +1,323 @@
 /**
- * HOME HERO
+ * HERO
  */
 
 @include component('hero') {
-	position: relative;
-	overflow: hidden;
-	background-color: white;
+	background-image: linear-gradient(map-get($theme-colors, 'primary') 0%, lighten(map-get($theme-colors, 'primary'), 10%) 100%);
+	color: white;
 	
-	@include media-breakpoint-up(lg) {
-		padding-top: $gutter*3 + 160;
-	}
-	@include media-breakpoint-down(md) {
-		padding-top: 120px;
+	h1, h2, p:not(.u-preheading) {
+		color: white;
 	}
 	
 	//
-	// WEDGES
+	// HOME
 	//
-	@include element('wedge-left') {
+	@include modifier('home') {
+		padding-bottom: $gutter*2;
+		
+		@include media-breakpoint-up(lg) {
+			padding-bottom: $gutter*4;
+		}
+	}
+	@include element('home-wrap') {
+		position: relative;
+		margin-bottom: 150px;
+		
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 200px;
+		}
+		
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 50px;
+			height: 300px;
+			top: 100%;
+			left: 50%;
+			background: url('/dist/img/section-connector.svg') center bottom no-repeat;
+			background-size: contain;
+			transform: translate(-50%,-150px);
+			@include z-1;
+
+			// LILA hide connector on mmobile
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+			
+			@include media-breakpoint-up(lg) {
+				height: 400px;
+				transform: translate(-50%,-200px);
+			}
+		}
+	}
+	@include element('home-lead') {
+		text-align: center;
+		font-size: 200%;
+		line-height: 1.5em;
+	}
+	@include element('home-heading') {
 		position: absolute;
 		display: block;
 		width: 100%;
-		height: 100%;
-		background-color: white;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		@include base-font;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: .1em;
+		
+		.u-font-script-alt {
+			text-transform: none;
+			letter-spacing: none;
+			color: map-get($theme-colors, 'secondary');
+			font-size: 400%;
+			display: block;
+			text-shadow: 0 0 .1em rgba(black, .75);
+			line-height: .75em;
+		}
+		.u-base-font-semibold {
+			font-size: 125%;
+		}
+		
+		
+		@include media-breakpoint-between(sm,md) {
+			.u-font-script-alt {
+				font-size: 300%;
+				display: inline-block;
+				line-height: var(--bs-body-line-height);
+			}
+		}
+		
+		@include media-breakpoint-between(md,lg) {
+			font-size: 120%;
+			
+			.u-font-script-alt {
+				font-size: 400%;
+				display: inline-block;
+				line-height: var(--bs-body-line-height);
+			}
+		}
 		
 		@include media-breakpoint-up(lg) {
-			top: 85%;
-			left: 50%;
-			transform: translate(-85%, 0) rotate(10deg);
-		}
-		@include media-breakpoint-down(md) {
-			width: 200%;
-			top: 100%;
-			right: 0;
-			transform: translate(10%, -10%) rotate(10deg);
-			transform-origin: top right;
+			font-size: 150%;
+			
+			.u-font-script-alt {
+				font-size: 500%;
+				display: inline-block;
+				line-height: var(--bs-body-line-height);
+			}
 		}
 	}
-	@include element('wedge-right') {
+	
+	
+	
+	//
+	// GENERAL
+	//
+	@include modifier('general') {
+		//padding-top: $gutter*2;
+		padding-bottom: $gutter*4;
+		
 		@include media-breakpoint-up(lg) {
+			padding-top: $gutter*4;
+			padding-bottom: $gutter*8;
+		}
+	}
+	@include element('img-circle') {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin-right: auto;
+		//overflow: hidden;
+		border-radius: 100%;
+		
+		&:before {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+	@include element('img-circle-decorator') {
+		position: absolute;
+		display: block;
+		width: 50%;
+		height: 100%;
+		top: 0;
+		left: 100%;
+		overflow: hidden;
+		@include z-1;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 200%;
+			height: 100%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: map-get($theme-colors, 'secondary');
+			border-radius: 100%;
+		}
+	}
+	
+	//
+	// PODCAST
+	//
+	@include modifier('podcast') {
+		background-image: 
+			url('/dist/img/podcast-decorator.svg'),
+			linear-gradient(map-get($theme-colors, 'primary') 0%, lighten(map-get($theme-colors, 'primary'), 10%) 100%);
+		background-position:
+			center bottom,
+			center top;
+		background-repeat:
+			repeat-x,
+			no-repeat;
+		
+		@include media-breakpoint-up(lg) {
+			min-height: 400px;
+		}
+	}
+	@include modifier('podcast-player') {
+		margin-bottom: $gutter*3;
+		
+		@include media-breakpoint-up(lg) {
+			margin-bottom: $gutter*6;
+		}
+	}
+	@include element('img-podcast') {
+		position: relative;
+		
+		&:before {
+			content: "";
 			position: absolute;
 			display: block;
 			width: 100%;
-			height: 200%;
-			background-color: white;
-			top: 15%;
-			right: -50%;
-			transform: translate(45%, 0) rotate(10deg);
+			height: 100%;
+			top: -$gutter;
+			left: 50%;
+			background: url('/dist/img/logo-igniting-imagination.svg') top right no-repeat;
+			@include z-1;
 		}
-		@include media-breakpoint-down(md) {
-			display: none;
+		&:after {
+			content: "Play the latest podcast";
+			position: absolute;
+			display: block;
+			bottom: 0;
+			right: 0;
+			transform: translate(25%, $gutter);
+			color: white;
+			text-transform: uppercase;
+		}
+	}
+	@include element('podcast-player') {
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 0;
+		left: 0;
+		transform: translate(0, 25%);
+		@include z-2;
+	}
+	
+	
+	//
+	// SCOOP
+	//
+	// @include element('scoop') {
+	// 	position: relative;
+	// 	display: block;
+	// 	width: 100%;
+	// 	height: 10vw;
+	// 	background-color: var(--bs-body-bg);
+	// 	overflow: hidden;
+	// 	
+	// 	@include media-breakpoint-up(lg) {
+	// 		height: 200px;
+	// 	}
+	// 	
+	// 	&:after {
+	// 		content: "";
+	// 		position: absolute;
+	// 		display: block;
+	// 		top: -400%;
+	// 		right: -25%;
+	// 		bottom: 0;
+	// 		left: -25%;
+	// 		background-color: lighten(map-get($theme-colors, 'primary'), 10%);
+	// 		border-radius: 100%;
+	// 	}
+	// }
+	@include element('scoop') {
+		position: absolute;
+		display: block;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: $gutter;
+		background: url('/dist/img/header-scoop.svg') center center no-repeat;
+		background-size: cover;
+		@include z-1;
+		
+		@include media-breakpoint-up(md) {
+			height: $gutter*2;
+		}
+		@include media-breakpoint-up(xl) {
+			height: $gutter*3;
 		}
 	}
 	
 	//
-	// TEXT
+	// CONNECTING DECORATOR
 	//
-	@include element('text') {
-		color: white;
-		
-		h1 {
-			@include base-font-bold;
-			line-height: 1.2em;
-			color: white;
-		}
-		p {
-			@include base-font-light;
-		}
+	@include element('connector-wrap') {
+		position: relative;
+		margin-bottom: 100px;
 		
 		@include media-breakpoint-up(lg) {
-			padding-left: $gutter*2;
-			
-			h1 {
-				font-size: 56px;
-			}
-			p {
-				font-size: 24px;
-			}
+			margin-bottom: 100px;
 		}
-		@include media-breakpoint-down(md) {
-			max-width: 500px;
-			margin-left: auto;
-			margin-right: auto;
-			padding-top: $gutter*2;
-			padding-bottom: $gutter;
-			text-align: center;
+		
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 50px;
+			height: 300px;
+			top: 100%;
+			left: 50%;
+			background: url('/dist/img/section-connector.svg') center bottom no-repeat;
+			background-size: contain;
+			transform: translate(-50%,-200px);
+			@include z-1;
 			
-			p {
-				font-size: 20px;
+			@include media-breakpoint-up(lg) {
+				height: 400px;
+				transform: translate(-50%,-300px);
 			}
 		}
 	}
 	
 	//
-	// FEATURE IMAGE
+	// LILA CTA
 	//
-	@include element('feature') {
-		background-color: white;
-		padding: $spacer;
-		
-		img {
-			width: 100%;
+	@include element('lila-cta') {
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			display: block;
+			top: 0;
+			right: 0;
+			max-width: 400px;
 		}
-
-		@include media-breakpoint-down(md) {
-			max-width: 500px;
-			margin-left: auto;
-			margin-right: auto;
+		@include media-breakpoint-up(xl) {
+			width: 25%;
+			min-width: 400px;
 		}
 	}
 }

@@ -39,7 +39,7 @@
 		&.u-bg-orange,
 		&.u-bg-blue,
 		&.u-bg-green,
-		&.u-bg-turquoise {
+		&.u-bg-teal {
 			@include animate;
 			
 			h1, h2, h3, h4, a:not(.btn) {
@@ -71,8 +71,8 @@
 		&.u-bg-green:hover {
 			background-color: rgba($color-green, .9) !important;
 		}
-		&.u-bg-turquoise:hover {
-			background-color: rgba($color-turquoise, .9) !important;
+		&.u-bg-teal:hover {
+			background-color: rgba($color-teal, .9) !important;
 		}
 	}
 	

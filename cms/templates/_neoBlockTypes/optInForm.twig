@@ -1,0 +1,47 @@
+{##
+ # NEO BLOCK TYPE: FORM BLOCK
+ #}
+{% set bgPhoto = '' %}
+{% if block.backgroundPhoto|length %}
+	{% set img = block.backgroundPhoto.one %}
+	{% set bgPhoto = ' style="background:url(' ~ img.url('responsiveLarge') ~ ') center center no-repeat;background-size:cover;"' %}
+{% endif %}
+<section class="c-optin c-block--{{ block.backgroundColor }}"{{ bgPhoto | raw }}>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-8 col-lg-7 col-xl-5">
+				
+				<div class="c-optin__form">
+					{% include "_fields/headingBlock" with {'heading': block.headingBlock, 'class': 'mb-4'} %}
+					{% if block.description != '' %}
+						{{ block.description }}
+						<p>&nbsp;</p>
+					{% endif %}
+					
+					<h2 class="u-base-font text-uppercase fs-5 mb-3">Newsletter Signup</h2>
+					<form class="row">
+						<div class="col-12 mb-3">
+							<label for="optin-firstname" class="visually-hidden-focusable">First Name</label>
+							<input id="optin-firstname" class="form-control" type="text" placeholder="First Name" />
+						</div>
+						
+						<div class="col-12 mb-3">
+							<label for="optin-lastname" class="visually-hidden-focusable">Last Name</label>
+							<input id="optin-lastname" class="form-control" type="text" placeholder="Last Name" />
+						</div>
+						
+						<div class="col-12 mb-3">
+							<label for="optin-email" class="visually-hidden-focusable">Email</label>
+							<input id="optin-email" class="form-control" type="email" placeholder="Your Email" />
+						</div>
+						
+						<div class="col-12">
+							<button class="btn btn-primary" type="submit">Sign Up</button>
+						</div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>

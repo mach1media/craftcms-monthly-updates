@@ -1,0 +1,27 @@
+/**
+ * TEAM
+ */
+@include component('team') {
+	
+	@include element('card') {
+		position: relative;
+		display: flex;
+		width: 100%;
+	}
+	
+	@include element('card-img') {
+		flex: 0 0 120px;
+	}
+	
+	@include element('card-description') {
+		flex: 1 1 auto;
+		padding-left: $gutter;
+	}
+	
+	@include element('group-heading') {
+		@include base-font-bold;
+		text-transform: uppercase;
+		color: $color-body-text;
+		letter-spacing: .1em;
+	}
+}

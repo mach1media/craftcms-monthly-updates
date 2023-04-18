@@ -1,0 +1,36 @@
+{##
+ # NEO BLOCK TYPE: CTA: PANELS
+ #}
+<section class="c-block c-block--bg-slate">
+	<div class="container">
+		<div class="row g-0">
+			
+			<div class="col-12 col-lg-5 mb-3 mb-lg-0 d-flex align-items-stretch">
+				<div class="c-cta__description d-flex align-items-center u-{{ block.textBoxColor }}">
+					<div>
+						{% for textBlock in block.children.all() %}
+							{% if not loop.first %}<p>&nbsp;</p>{% endif %}
+							{% if textBlock.heading != '' %}<h2>{{ textBlock.heading | raw }}</h2>{% endif %}
+							{{ textBlock.description }}
+							{% if textBlock.button.getLink() %}
+								{% set btnColor = textBlock.buttonColor == 'default' ? 'white' : textBlock.buttonColor %}
+								<p>{% include "_fields/button" with {'button': textBlock.button, 'color': btnColor} %}</p>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			
+			{% set imgSmall = block.imageMobile.one %}
+			<div class="col-4 col-lg-2 ps-0 ps-lg-3 c-cta__img-panel">
+				<img src="{{ imgSmall.url('responsiveMedium') }}" alt="{{ imgSmall.alt ?: imgSmall.caption }}" />
+			</div>
+			
+			{% set imgLarge = block.imageDesktop.one %}
+			<div class="col-8 col-lg-5 ps-3 c-cta__img-panel">
+				<img src="{{ imgLarge.url('responsiveMedium') }}" alt="{{ imgLarge.alt ?: imgLarge.caption }}" />
+			</div>
+			
+		</div>
+	</div>
+</section>

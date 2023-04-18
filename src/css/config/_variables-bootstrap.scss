@@ -6,10 +6,7 @@
 // typography
 $font-family-base:            $base-font;
 $font-family-sans-serif:      $base-font;
-
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$line-height-base:            1.75;
-
 $h1-font-size:                $font-size-base * 3;//$font-size-base * 2.5 !default;
 //$h2-font-size:                $font-size-base * 2 !default;
 //$h3-font-size:                $font-size-base * 1.75 !default;
@@ -18,19 +15,11 @@ $h1-font-size:                $font-size-base * 3;//$font-size-base * 2.5 !defau
 //$h6-font-size:                $font-size-base !default;
 
 $body-color:                  $color-body-text;
-$link-color:                  $color-blue;
-$link-hover-color:            lighten($color-blue, 10%);
+$link-color:                  $color-navy;
+$link-hover-color:            $color-tan;
 
-
-//
-// Headings
-//
-//$headings-margin-bottom:      $spacer * .5 !default;
-$headings-font-family:        $font-heading;
-//$headings-font-style:         null !default;
-$headings-font-weight:        300;
-//$headings-line-height:        1.2 !default;
 $headings-color:              $body-color;
+$headings-font-weight:        400;
 
 
 
@@ -39,7 +28,7 @@ $headings-color:              $body-color;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 //
-// $enable-caret:               true !default;
+//$enable-caret:                true !default;
 //$enable-rounded:              true !default;
 //$enable-shadows:              false !default;
 //$enable-gradients:            false !default;
@@ -55,16 +44,6 @@ $headings-color:              $body-color;
 //$enable-negative-margins:     false !default;
 //$enable-deprecation-messages: true !default;
 //$enable-important-utilities:  true !default;
-
-
-//
-// BUTTONS
-//
-$btn-padding-x:              1.5rem;
-$btn-padding-x-sm:           1.5rem;
-$btn-padding-x-lg:           1.5rem;
-$btn-font-size-sm:           .75rem;
-
 
 
 //
@@ -111,4 +90,4 @@ $accordion-button-active-color:           $color-body-text; //shade-color($prima
 //
 // LIST GROUP
 //
-$list-group-active-bg: $color-blue;
+$list-group-active-bg: $color-navy;

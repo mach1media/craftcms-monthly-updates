@@ -6,7 +6,7 @@ This project uses:
 2. DDEV + Docker for local hosting
 3. Laravel Mix for frontend development
 4. Twitter Bootstrap
-
+5. [HC Offcanvas Nav](https://github.com/somewebmedia/hc-offcanvas-nav) for mobile nav menu
 
 
 # First Time Setup

@@ -8,29 +8,20 @@
 @include utility('color-white') {
 	color: white !important;
 }
-@include utility('color-blue') {
-	color: $color-blue !important;
-}
 @include utility('color-navy') {
 	color: $color-navy !important;
 }
-@include utility('color-sand') {
-	color: $color-sand !important;
+@include utility('color-tan') {
+	color: $color-tan !important;
 }
-@include utility('color-taupe') {
-	color: $color-taupe !important;
-}
-@include utility('color-green') {
-	color: $color-green !important;
-}
-@include utility('color-green-light') {
-	color: $color-green-light !important;
+@include utility('color-black') {
+	color: $color-black !important;
 }
 @include utility('color-silver') {
 	color: $color-silver !important;
 }
-@include utility('color-black') {
-	color: $color-black !important;
+@include utility('color-body-text') {
+	color: $color-body-text !important;
 }
 
 
@@ -41,42 +32,26 @@
 	background-color: white !important;
 	color: $color-body-text;
 }
-@include utility('bg-blue') {
-	background-color: $color-blue !important;
-	color: white;
-}
 @include utility('bg-navy') {
 	background-color: $color-navy !important;
 	color: white;
 }
-@include utility('bg-sand') {
-	background-color: $color-sand !important;
-}
-@include utility('bg-taupe') {
-	background-color: $color-taupe !important;
+@include utility('bg-tan') {
+	background-color: $color-tan !important;
 	color: white;
 }
-@include utility('bg-green') {
-	background-color: $color-green !important;
-	color: white;
-}
-@include utility('bg-green-light') {
-	background-color: $color-green-light !important;
+@include utility('bg-black') {
+	background-color: $color-black !important;
 	color: white;
 }
 @include utility('bg-silver') {
 	background-color: $color-silver !important;
 	color: $color-body-text;
 }
-@include utility('bg-black') {
-	background-color: $color-black !important;
-	color: white;
-}
 
 //
-// FONTS
+// BASE FONT UTILITIES
 //
-// BASE FONT: MONTSERRAT
 @include utility('base-font-thin') {
 	@include base-font-thin;
 }
@@ -132,8 +107,9 @@
 	@include base-font-black-italic;
 }
 
-// FONT HEADING: OPEN SANS
-/*
+//
+// FONT HEADING UTILITIES
+//
 @include utility('font-heading-thin') {
 	@include font-heading-thin;
 }
@@ -146,7 +122,6 @@
 @include utility('font-heading-extralight-italic') {
 	@include font-heading-extralight-italic;
 }
-*/
 @include utility('font-heading-light') {
 	@include font-heading-light;
 }
@@ -183,17 +158,24 @@
 @include utility('font-heading-extrabold-italic') {
 	@include font-heading-extrabold-italic;
 }
-/*
 @include utility('font-heading-black') {
 	@include font-heading-black;
 }
 @include utility('font-heading-black-italic') {
 	@include font-heading-black-italic;
 }
-*/
 
 
 
+//
+// PRE-HEADING
+//
+@include utility('preheading') {
+	@include base-font-semibold;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: map-get($theme-colors, 'secondary');
+}
 
 
 //
@@ -209,13 +191,46 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) rotate(90deg);
-		@include shape(triangle, 30px, rgba(white, .5));
+		//@include shape(triangle, 30px, rgba(white, .5));
+		width: 100px;
+		height: 100px;
+		background: url('/dist/img/play-icon.svg') center center no-repeat;
+		background-size: contain;
+		transform: scale(1);
 		@include animate;
 	}
 	
 	&:hover:before {
-		@include shape(triangle, 40px, rgba(white, .75));
+		//@include shape(triangle, 40px, rgba(white, .75));
+		transform: scale(1.1);
 	}
+}
+
+
+//
+// TEXT DECORATOR
+//
+@include utility('text-decorator') {
+	position: relative;
+	display: inline-block;
+	padding-left: .5em;
+	padding-right: .5em;
+	background: url('/dist/img/text-decorator.svg') center center no-repeat;
+	background-size: 100% 100%;
+	
+	/*
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url('/dist/img/text-decorator.svg') center center no-repeat;
+			background-size: 100% 100%;
+		}
+	*/
 }
 
 

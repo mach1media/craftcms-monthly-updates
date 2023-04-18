@@ -1,0 +1,29 @@
+/**
+ * PAGINATION
+ */
+.page-item .page-link {
+	border: none;
+	background-color: transparent;
+	
+	@include base-font-medium;
+	@include animate;
+	color: $color-body-text;
+	
+	&:hover {
+		color: theme-color("secondary");
+	}
+}
+
+.page-item.disabled .page-link {
+	border: none;
+	background-color: transparent;
+	
+	color: $gray-400;
+}
+
+.page-item.active .page-link {
+	border: none;
+	background-color: transparent;
+	
+	color: theme-color("secondary")
+}

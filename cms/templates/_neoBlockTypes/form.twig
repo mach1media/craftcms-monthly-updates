@@ -1,0 +1,19 @@
+{##
+ # NEO BLOCK TYPE: FORM
+ #}
+<section class="c-block c-block--{{ block.backgroundColor }}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-9 col-xl-8{% endif %}">
+				{% if block.preheading is defined and block.preheading != '' %}
+				<p class="u-preheading">{{ block.preheading }}</p>
+				{% endif %}
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg">{{ block.description }}</div>
+				{% endif %}
+				{% include "_formie/form-bootstrap" with {'formHandle': block.form.one.handle} %}
+			</div>
+		</div>
+	</div>
+</section>

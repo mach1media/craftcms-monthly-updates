@@ -1,13 +1,78 @@
-dateModified: 1666837728
+dateModified: 1681433275
 email:
   fromEmail: roger@mach1media.com
   fromName: TMF
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF
-    5cf2d429-9442-49de-b0fb-aaaec557b2cd: TMF
-    a40a3743-3dbc-48e7-a8cd-0196dd8021df: Common
+    3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF # TMF
+    5cf2d429-9442-49de-b0fb-aaaec557b2cd: TMF # TMF
+    424904af-03e0-49ac-aabf-921f78be4c4e: New # New
+    a40a3743-3dbc-48e7-a8cd-0196dd8021df: Common # Common
+    e96bcdab-a9b7-4e6d-b220-57bf0ce7b15f: 'Contact Form' # Contact Form
+plugins:
+  config-values-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: BCK6Q291W0TCF0LWBUSFZ08Q
+    schemaVersion: 2.0.10
+  neo:
+    edition: standard
+    enabled: true
+    licenseKey: WGWS3FIJ3F81FB4EPTVL5Z4D
+    schemaVersion: 3.6.2
+  obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-tweaks:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redirect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.5
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  tablemaker:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
 system:
   edition: solo
   live: true

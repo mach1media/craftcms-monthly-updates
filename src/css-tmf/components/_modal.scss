@@ -1,0 +1,35 @@
+/**
+ * MODAL: BOOTSTRAP OVERRIDES
+ */
+.modal-backdrop.show {
+	opacity: .8;
+}
+.modal-dialog {
+	@include respond-above(sm) {
+		max-width: map-get($breakpoints, lg) - 60;
+	}
+}
+.modal-content {
+	border: none;
+	border-radius: 0;
+	max-height: 80vh;
+	background-color: transparent;
+	
+	.close {
+		position: absolute;
+		display: block;
+		bottom: 100%;
+		right: -5px;
+		
+		background: none;
+		border: none;
+		color: white;
+		font-size: 48px;
+		padding: 5px;
+		line-height: 1em;
+		cursor: pointer;
+	}
+}
+.modal-body {
+	padding: 0;
+}

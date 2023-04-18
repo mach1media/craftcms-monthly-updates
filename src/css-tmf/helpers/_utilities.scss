@@ -1,0 +1,251 @@
+/**
+ * UTILITIES
+ */
+
+//
+// TEXT COLORS
+//
+@include utility('color-white') {
+	color: white !important;
+}
+@include utility('color-blue') {
+	color: $color-blue !important;
+}
+@include utility('color-navy') {
+	color: $color-navy !important;
+}
+@include utility('color-sand') {
+	color: $color-sand !important;
+}
+@include utility('color-taupe') {
+	color: $color-taupe !important;
+}
+@include utility('color-green') {
+	color: $color-green !important;
+}
+@include utility('color-green-light') {
+	color: $color-green-light !important;
+}
+@include utility('color-silver') {
+	color: $color-silver !important;
+}
+@include utility('color-black') {
+	color: $color-black !important;
+}
+
+
+//
+// BACKGROUND COLORS
+//
+@include utility('bg-white') {
+	background-color: white !important;
+	color: $color-body-text;
+}
+@include utility('bg-blue') {
+	background-color: $color-blue !important;
+	color: white;
+}
+@include utility('bg-navy') {
+	background-color: $color-navy !important;
+	color: white;
+}
+@include utility('bg-sand') {
+	background-color: $color-sand !important;
+}
+@include utility('bg-taupe') {
+	background-color: $color-taupe !important;
+	color: white;
+}
+@include utility('bg-green') {
+	background-color: $color-green !important;
+	color: white;
+}
+@include utility('bg-green-light') {
+	background-color: $color-green-light !important;
+	color: white;
+}
+@include utility('bg-silver') {
+	background-color: $color-silver !important;
+	color: $color-body-text;
+}
+@include utility('bg-black') {
+	background-color: $color-black !important;
+	color: white;
+}
+
+//
+// FONTS
+//
+// BASE FONT: MONTSERRAT
+@include utility('base-font-thin') {
+	@include base-font-thin;
+}
+@include utility('base-font-thin-italic') {
+	@include base-font-thin-italic;
+}
+@include utility('base-font-extralight') {
+	@include base-font-extralight;
+}
+@include utility('base-font-extralight-italic') {
+	@include base-font-extralight-italic;
+}
+@include utility('base-font-light') {
+	@include base-font-light;
+}
+@include utility('base-font-light-italic') {
+	@include base-font-light-italic;
+}
+@include utility('base-font') {
+	@include base-font;
+}
+@include utility('base-font-italic') {
+	@include base-font-italic;
+}
+@include utility('base-font-medium') {
+	@include base-font-medium;
+}
+@include utility('base-font-medium-italic') {
+	@include base-font-medium-italic;
+}
+@include utility('base-font-semibold') {
+	@include base-font-semibold;
+}
+@include utility('base-font-semibold-italic') {
+	@include base-font-semibold-italic;
+}
+@include utility('base-font-bold') {
+	@include base-font-bold;
+}
+@include utility('base-font-bold-italic') {
+	@include base-font-bold-italic;
+}
+@include utility('base-font-extrabold') {
+	@include base-font-extrabold;
+}
+@include utility('base-font-extrabold-italic') {
+	@include base-font-extrabold-italic;
+}
+@include utility('base-font-black') {
+	@include base-font-black;
+}
+@include utility('base-font-black-italic') {
+	@include base-font-black-italic;
+}
+
+// FONT HEADING: OPEN SANS
+/*
+@include utility('font-heading-thin') {
+	@include font-heading-thin;
+}
+@include utility('font-heading-thin-italic') {
+	@include font-heading-thin-italic;
+}
+@include utility('font-heading-extralight') {
+	@include font-heading-extralight;
+}
+@include utility('font-heading-extralight-italic') {
+	@include font-heading-extralight-italic;
+}
+*/
+@include utility('font-heading-light') {
+	@include font-heading-light;
+}
+@include utility('font-heading-light-italic') {
+	@include font-heading-light-italic;
+}
+@include utility('font-heading') {
+	@include font-heading;
+}
+@include utility('font-heading-italic') {
+	@include font-heading-italic;
+}
+@include utility('font-heading-medium') {
+	@include font-heading-medium;
+}
+@include utility('font-heading-medium-italic') {
+	@include font-heading-medium-italic;
+}
+@include utility('font-heading-semibold') {
+	@include font-heading-semibold;
+}
+@include utility('font-heading-semibold-italic') {
+	@include font-heading-semibold-italic;
+}
+@include utility('font-heading-bold') {
+	@include font-heading-bold;
+}
+@include utility('font-heading-bold-italic') {
+	@include font-heading-bold-italic;
+}
+@include utility('font-heading-extrabold') {
+	@include font-heading-extrabold;
+}
+@include utility('font-heading-extrabold-italic') {
+	@include font-heading-extrabold-italic;
+}
+/*
+@include utility('font-heading-black') {
+	@include font-heading-black;
+}
+@include utility('font-heading-black-italic') {
+	@include font-heading-black-italic;
+}
+*/
+
+
+
+//
+// PRE-HEADING
+//
+@include utility('preheading') {
+	@include base-font-semibold;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: map-get($theme-colors, 'secondary');
+}
+
+
+//
+// PLAY VIDEO
+//
+@include utility('play-video') {
+	position: relative;
+	display: block;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(90deg);
+		//@include shape(triangle, 30px, rgba(white, .5));
+		width: 100px;
+		height: 100px;
+		background: url('/dist/img/play-icon.svg') center center no-repeat;
+		background-size: contain;
+		transform: scale(1);
+		@include animate;
+	}
+	
+	&:hover:before {
+		//@include shape(triangle, 40px, rgba(white, .75));
+		transform: scale(1.1);
+	}
+}
+
+
+
+
+//
+// IMG FILL
+//
+@include utility('img-fill') {
+	position: relative;
+	height: 100%;
+	
+	& > img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

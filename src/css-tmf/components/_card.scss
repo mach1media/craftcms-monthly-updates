@@ -1,0 +1,67 @@
+/**
+ * CARD
+ */
+@include component('card') {
+	position: relative;
+	
+	@include element('img') {
+		@include media-breakpoint-up(lg) {
+			transform: translate(-10px, 0);
+		}
+		@include media-breakpoint-down(md) {
+			transform: translate(-5px, 0);
+		}
+	}
+	
+	@include element('description') {
+		position: relative;
+		@extend %first-last-child;
+		text-align: center;
+		background-color: white;
+		box-shadow: 0px 0px 12px 6px rgba(black, .2);
+		
+		@include media-breakpoint-up(lg) {
+			padding: $gutter*1.5;
+			transform: translate(10px, -10px);
+		}
+		@include media-breakpoint-down(md) {
+			padding: $gutter;
+			transform: translate(5px, -5px);
+		}
+		
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 20px;
+			bottom: $spacer;
+			right: $spacer;
+			background: url('/assets/icon/arrow-right-blue.svg') center center no-repeat;
+			@include animate;
+		}
+		
+		&:hover:before {
+			right: $spacer/2;
+		}
+	}
+	
+	@include element('heading') {
+		@include base-font-bold;
+		color: $color-blue-dark;
+		
+		a {
+			color: $color-blue-dark;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+{% if button | length %}
+	{% set classes = ['btn btn-pill'] %}
+	{% set classes = classes|merge(['btn-outline-' ~ color]) %}
+	{{ button.getLink({'class':classes|join(' ')}) }}
+{% endif %}

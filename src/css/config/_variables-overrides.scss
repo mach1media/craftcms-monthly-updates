@@ -3,22 +3,23 @@
 //
 
 $theme-colors: (
-  "primary":     $color-navy,
-  "secondary":   $color-sand,
-  "tertiary":    $color-green,
-  "white":       white,
-  "success":     $success,
-  "info":        $info,
-  "warning":     $warning,
-  "danger":      $danger,
-  "light":       $light,
-  "dark":        $dark,
-  "blue":        $color-blue,
-  "navy":        $color-navy,
-  "sand":        $color-sand,
-  "taupe":       $color-taupe,
-  "green":       $color-green,
-  "green-light": $color-green-light
+  "primary":    $color-navy,
+  "secondary":  $color-tan,
+  "primary-light":    rgba($color-navy, .1),
+  "secondary-light":  rgba($color-tan, .1),
+  "primary-extralight":    rgba($color-navy, .05),
+  "secondary-extralight":  rgba($color-tan, .05),
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "white":      white,
+  "black":      black,
+  "silver":     $color-silver,
+  "navy":       $color-navy,
+  "tan":        $color-tan
 );
 
 /*
@@ -38,6 +39,22 @@ $container-max-widths: (
 );
 */
 
+//
+// GRID GUTTERS
+//
+$gutters: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+  10: $spacer * 8,
+);
 
 //
 // PROJECT VARS USING BOOTSTRAP'S VALUES
@@ -46,5 +63,5 @@ $container-max-widths: (
 $gutter: $grid-gutter-width;
 
 // body text color
-$body-bg: $color-silver;
-//$body-color: $gray-600;
+$body-bg: white;
+$body-color: $color-body-text;

@@ -1,0 +1,55 @@
+{##
+ # NEO BLOCK TYPE: SLIDER: BOARD MEMBERS
+ #}
+<section class="c-block">
+	<!-- SLIDER CONTROLS -->
+	<div class="container">
+		<div class="d-flex justify-content-between">
+			{% if block.heading != '' %}
+			<h2 class="mb-0" style="line-height:37px;">{{ block.heading }}</h2>
+			{% endif %}
+			<div class="c-slider__controls" data-snap-slider-nav="slider-{{ block.id }}">
+				<button class="btn btn-text" data-snap-slider-goto="prev" title="previous">
+					<img class="d-block w-100" style="width:37px;height:37px;" src="/dist/img/icon-arrow-circle-left.svg" alt="" aria-hidden="true"/>
+				</button>
+				
+				<button class="btn btn-text" data-snap-slider-goto="next" title="next">
+					<img class="d-block w-100" style="width:37px;height:37px;" src="/dist/img/icon-arrow-circle-right.svg" alt="" aria-hidden="true"/>
+				</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid px-0">
+		<div class="row gx-0 align-items-center">
+			<div class="col-12 py-5 ps-3 pe-0 ps-lg-5">
+				
+				<!-- wrap slider in div with class='position-relative' -->
+				<div class="position-relative">
+					<div class="c-slider c-slider--bio-cards pe-4" data-snap-slider="slider-{{ block.id }}">
+						{% for entry in block.boardMembers.all() %}
+							{% set img    = entry.image.one %}
+							{% set imgSrc = img.url('responsiveMedium') %}
+						<div class="c-slider__slide">
+							<div class="c-bio-card" style="background:url('{{ imgSrc }}') center center no-repeat;background-size:cover;">
+								<div class="c-bio-card__content">
+									{% if entry.preheading != '' %}
+									<p class="u-preheading">{{ entry.preheading }}</p>
+									{% endif %}
+									<h2 class="c-bio-card__heading">{{ entry.title }}</h2>
+									
+									<p>
+										<a href="{{ entry.url }}" class="btn btn-pill btn-outline-secondary">Read Bio</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<!-- //wrap slider -->
+				
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,114 @@
+/**
+ * BOOTSTRAP VARIABLE OVERRIDES
+ */
+
+
+// typography
+$font-family-base:            $base-font;
+$font-family-sans-serif:      $base-font;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$line-height-base:            1.75;
+
+$h1-font-size:                $font-size-base * 3;//$font-size-base * 2.5 !default;
+//$h2-font-size:                $font-size-base * 2 !default;
+//$h3-font-size:                $font-size-base * 1.75 !default;
+//$h4-font-size:                $font-size-base * 1.5 !default;
+//$h5-font-size:                $font-size-base * 1.25 !default;
+//$h6-font-size:                $font-size-base !default;
+
+$body-color:                  $color-body-text;
+$link-color:                  $color-blue;
+$link-hover-color:            lighten($color-blue, 10%);
+
+
+//
+// Headings
+//
+//$headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        $font-heading;
+//$headings-font-style:         null !default;
+$headings-font-weight:        300;
+//$headings-line-height:        1.2 !default;
+$headings-color:              $body-color;
+
+
+
+//
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+//
+// $enable-caret:               true !default;
+//$enable-rounded:              true !default;
+//$enable-shadows:              false !default;
+//$enable-gradients:            false !default;
+//$enable-transitions:          true !default;
+//$enable-reduced-motion:       true !default;
+//$enable-smooth-scroll:        true !default;
+//$enable-grid-classes:         true !default;
+//$enable-container-classes:    true !default;
+//$enable-cssgrid:              false !default;
+//$enable-button-pointers:      true !default;
+//$enable-rfs:                  true !default;
+//$enable-validation-icons:     true !default;
+//$enable-negative-margins:     false !default;
+//$enable-deprecation-messages: true !default;
+//$enable-important-utilities:  true !default;
+
+
+//
+// BUTTONS
+//
+$btn-padding-x:              1.5rem;
+$btn-padding-x-sm:           1.5rem;
+$btn-padding-x-lg:           1.5rem;
+$btn-font-size-sm:           .75rem;
+
+
+
+//
+// Dropdowns
+//
+//$dropdown-min-width:                10rem !default;
+$dropdown-padding-y:                0;//.5rem !default;
+//$dropdown-spacer:                   .125rem !default;
+//$dropdown-font-size:                $font-size-base !default;
+//$dropdown-color:                    $body-color !default;
+//$dropdown-bg:                       $white !default;
+$dropdown-border-color:             transparent;//rgba($black, .15) !default;
+//$dropdown-border-radius:            $border-radius !default;
+$dropdown-border-width:             0;//$border-width !default;
+//$dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
+//$dropdown-divider-bg:               $gray-200 !default;
+//$dropdown-divider-margin-y:         $nav-divider-margin-y !default;
+$dropdown-box-shadow:               0 .5rem 1rem rgba($color-black, .175) !default;
+
+$dropdown-link-color:               $body-color;//$gray-900 !default;
+$dropdown-link-hover-color:         $color-navy;//darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg:            transparent;//$gray-100 !default;
+
+$dropdown-link-active-color:        $color-navy;//$component-active-color !default;
+$dropdown-link-active-bg:           transparent;//$component-active-bg !default;
+
+//$dropdown-link-disabled-color:      $gray-600 !default;
+
+$dropdown-item-padding-y:           .5rem;//.25rem !default;
+$dropdown-item-padding-x:           0;//1.5rem !default;
+
+//$dropdown-header-color:             $gray-600 !default;
+//$dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x !default;
+
+
+//
+// Accordion
+//
+$accordion-bg:                            transparent; //$body-bg !default;
+$accordion-padding-x:                     0; //1.25rem !default;
+$accordion-button-active-bg:              transparent; //tint-color($component-active-bg, 90%) !default;
+$accordion-button-active-color:           $color-body-text; //shade-color($primary, 10%) !default;
+
+//
+// LIST GROUP
+//
+$list-group-active-bg: $color-blue;

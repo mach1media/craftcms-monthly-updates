@@ -1,0 +1,59 @@
+{##
+ # NEO BLOCK TYPE: PAGE HEADER: PODCASTS
+ #}
+<section class="position-relative">
+	<div class="c-hero c-hero--general">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-5 text-center">
+					{% if block.preheading is defined and block.preheading != '' %}
+					<p class="u-preheading">{{ block.preheading }}</p>
+					{% endif %}
+					<h1>{{ block.heading != '' block.heading : entry.title }}</h1>
+					{% if block.description is defined and block.description != '' %}
+					<div class="c-wysiwyg">{{ block.description }}</div>
+					{% endif %}
+					{% if block.button.getLink() %}
+					<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c-hero__scoop"></div>
+</section>
+
+<section class="position-relative">
+	<div class="c-hero c-hero--general c-hero--podcast">
+		<div class="container">
+			<div class="row align-items-center">
+				<!-- Intro text -->
+				<div class="col-12 col-md-5">
+					{% if block.preheading is defined and block.preheading != '' %}
+					<p class="u-preheading">{{ block.preheading }}</p>
+					{% endif %}
+					<h1>{{ block.heading != '' block.heading : entry.title }}</h1>
+					{% if block.description is defined and block.description != '' %}
+					<div class="c-wysiwyg">{{ block.description }}</div>
+					{% endif %}
+					{% if block.button.getLink() %}
+					<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
+					{% endif %}
+				</div>
+				
+				{% if block.image | length %}
+					{% set img    = block.image.one %}
+					{% set imgSrc = img.url('square600') %}
+					{% set imgAlt = img.alt ?: img.title %}
+				<!-- Image for desktop only -->
+				<div class="col-12 col-md-4 offset-md-1 d-none d-md-flex">
+					<div class="c-hero__img-podcast">
+						<img class="d-block w-100 img-fluid" src="{{ imgSrc }}" alt="{{ imgAlt }}" />
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="c-hero__scoop"></div>
+</section>

@@ -1,0 +1,79 @@
+<!-- DATA TABLE BLOCK -->
+{##
+ # NEO BLOCK TYPE: DATA TABLE BLOCK
+ #}
+<section class="c-block c-data-table{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-6 pe-lg-5 mb-5 mb-lg-0">
+				<div class="c-data-table__card rounded">
+					{% if block.thumbnail is defined and block.thumbnail | length %}
+					{% set img    = block.thumbnail.one %}
+					{% set imgSrc = img.url('responsiveSmall') %}
+					{% set imgAlt = img.alt ?: '' %}
+					<div class="c-data-table__card-thumb">
+						<img class="d-block w-100 img-fluid" src="{{ imgSrc }}" alt="{{ imgAlt }}" />
+					</div>
+					{% endif %}
+					<div class="c-data-table__card-content">
+						{% if block.preheading is defined and block.preheading != '' %}
+						<p class="u-preheading">{{ block.preheading }}</p>
+						{% endif %}
+						{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+						{% if block.description is defined and block.description != '' %}
+						<div class="c-wysiwyg">{{ block.description }}</div>
+						{% endif %}
+						{% if block.button.getLink() %}
+						<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-12 col-lg-6 ps-lg-5">
+				{% if block.heading is defined and block.heading != '' %}
+				<p class="h4 mb-3">{{ block.heading | raw }}</p>
+				{% endif %}
+				
+				{% for stat in block.dataStats %}
+				<div class="d-flex justify-content-between border border-secondary rounded p-3 mb-2 text-primary">
+					<div class="u-base-font-semibold text-uppercase">{{ stat.label }}</div>
+					<div>{{ stat.stat }}</div>
+				</div>
+				{% endfor %}
+				
+				{% if block.dataTable | length %}
+				<div class="border border-secondary rounded p-3 mb-3">
+					<table class="table table-sm text-primary">
+						<thead>
+							<tr class="align-bottom">
+								{% for col in block.dataTable.columns %}
+									<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
+								{% endfor %}
+							</tr>
+						</thead>
+				
+						<tbody>
+							{% for row in block.dataTable.rows %}
+								<tr>
+									{% for cell in row %}
+										{% if loop.first %}
+										<th align="{{ block.dataTable.columns[loop.index0].align }}">{{ cell }}</th>
+										{% else %}
+										<td align="{{ block.dataTable.columns[loop.index0].align }}">{{ cell }}</td>
+										{% endif %}
+									{% endfor %}
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				{% endif %}
+				
+				{% if block.summary %}
+				<p class="u-base-font-semibold">{{ block.summary | raw | nl2br }}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

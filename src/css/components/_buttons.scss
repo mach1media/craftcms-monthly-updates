@@ -5,53 +5,68 @@
  */
  
 .btn {
-	@include base-font-semibold;
+	@include base-font-medium;
+	letter-spacing: .1em;
 	text-transform: uppercase;
-	letter-spacing: .05em;
+
+	// pill button
+	line-height: 1em;
+	border-radius: 3em;
+	border-width: 2px;
+	padding: .75em 1.5em;
 }
-.btn-secondary,
-.btn-tertiary,
-.btn-blue,
-.btn-navy,
-.btn-sand,
-.btn-taupe,
-.btn-green,
-.btn-green-light {
-	color: white !important;
+.btn-secondary {
+	color: white;
 	
-	&:hover {
-		color: white !important;
-	}
-}
-.btn-outline-secondary,
-.btn-outline-tertiary,
-.btn-outline-blue,
-.btn-outline-navy,
-.btn-outline-sand,
-.btn-outline-taupe,
-.btn-outline-green,
-.btn-outline-green-light {
 	&:hover {
 		color: white;
 	}
 }
-
-.btn-sm {
-	@include base-font;
-	letter-spacing: .1em;
+.btn-outline-secondary {
+	color: map-get($theme-colors, 'primary');
+	
+	&:hover {
+		color: white;
+	}
 }
-
-.btn-text {
-	@include font-heading;
+/*
+.btn-arrow {
+	position: relative;
+	padding-right: 2em;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 50%;
+		right: $spacer/1.2;
+		transform: translate(0, -50%);
+		width: 1em;
+		height: .5em;
+		background: url('/assets/icon/arrow-right-blue.svg') right center no-repeat;
+		background-size: contain;
+		@include animate;
+	}
+	&:hover:after {
+		right: $spacer/2;
+	}
 }
+*/
 
 .btn-shadow {
 	box-shadow: 2px 2px 6px 3px rgba(black, .1);
 }
 
+.btn-sm {
+	font-size: 14px;
+	padding: 0.5em 1em;
+}
+
+/*
 .btn-pill {
 	line-height: 1em;
 	border-radius: 3em;
-	border-width: 3px;
-	padding: 1em 2em;
+	border-width: 2px;
+	padding: .75em 1.5em;
 }
+*/

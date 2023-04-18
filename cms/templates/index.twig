@@ -1,0 +1,74 @@
+{#
+ # HOME PAGE TEMPLATE
+ #}
+{% extends "_layout/default" %}
+
+{% if entry is not defined %}
+	{% set entry = craft.entries.section('homepage').one() %}
+{% endif %}
+
+{##
+ # https://www.unixtimestamp.com 
+ # use {now | date('U')} for comparison
+ #}
+{# Sun, Apr 30, 7pm Central #}
+{% set eventSart = 1682899200 %}
+
+{# Sun, Apr 30, 8pm Central #}
+{% set eventEnd  = 1682902800 %}
+ 
+{% block content %}
+<section class="c-hero__home-wrap">
+	<div class="c-hero c-hero--home">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="position-relative">
+						<img class="d-block w-100 img-fluid" src="/uploads/images/hero-home.png" alt="home hero" />
+						<div class="c-hero__home-heading">
+							<p>
+								<span class="u-font-script-alt">Investing</span>
+								<span>in the</span>
+								<span class="u-base-font-semibold">Wesleyan Movement</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-8">
+					<div class="c-hero__home-lead">
+						<p>
+							<img src="/dist/img/logo-mark.png" style="width:100px;height:auto;" alt="" aria-hidden="true" />
+						</p>
+						{{ entry.description }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c-hero__scoop"></div>
+	{# ---------------------------------------- LILA CTA ---------------------------------------- #}
+	{% if now|date('U') < eventEnd %}
+	<a class="c-hero__lila-cta" role="button" href="#modal-lila" data-bs-toggle="modal" data-bs-target="#modal-lila">
+		<img class="img-fluid d-none d-md-block img-desktop" src="/dist/img/lila-cta-desktop.png" />
+		<img class="img-fluid d-md-none" src="/dist/img/lila-cta-mobile.png" />
+	</a>
+	{% js on ready %}
+	$('.c-hero__lila-cta').hover(
+		function(){
+			$(this).find('.img-desktop').attr('src','/dist/img/lila-cta-desktop-hover-2.png');
+		},
+		function(){
+			$(this).find('.img-desktop').attr('src','/dist/img/lila-cta-desktop.png');
+		}
+	);
+	{% endjs %}
+	{% endif %}
+</section>
+	
+{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
+{% include "_pageBuilders/pageBuilderHome" with { 'entry': entry } %}
+
+{% endblock %}

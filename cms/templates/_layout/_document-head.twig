@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ currentSite.language }}" dir="{{ craft.app.i18n.getLocaleById(currentSite.id).getOrientation() }}"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Viewport params (for iOS) -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Preload Web Fonts, CSS, and JS -->
+<link rel="preload" href="/dist/css/app.css" as="style">
+<link rel="preload" href="/dist/js/app.js" as="script">
+
+{# FAVICON #}
+{# {% include '_layouts/_favicon' %} #}
+<link rel="apple-touch-icon" sizes="180x180" href="/dist/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/favicon/favicon-16x16.png">
+<link rel="manifest" href="/dist/favicon/site.webmanifest">
+
+{% if getenv('CRAFT_ENVIRONMENT') == 'production' %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6768227-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'UA-6768227-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f, b, e, v, n, t, s)
+{
+		if (f.fbq)
+				return;
+		n = f.fbq = function() {
+				n.callMethod ?
+				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+		};
+		if (!f._fbq)
+				f._fbq = n;
+		n.push = n;
+		n.loaded = !0;
+		n.version = '2.0';
+		n.queue = [];
+		t = b.createElement(e);
+		t.async = !0;
+		t.src = v;
+		s = b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t, s)
+}(window, document, 'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1062691254478367');
+fbq('track', 'PageView');
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1062691254478367&ev=PageView&noscript=1"/>
+</noscript>
+<meta name="facebook-domain-verification" content="n126ct5vifj0a3d9ys3bc3yb1v9xjj"/>
+<!-- End Facebook Pixel Code -->
+{% endif %}
+
+<!-- CSS Styles -->
+<link rel="stylesheet" href="https://use.typekit.net/qsq2srv.css">
+<link rel="stylesheet" href="/dist/css/app.css?v=20230416.1">
+</head>
+

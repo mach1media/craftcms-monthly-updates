@@ -1,0 +1,79 @@
+{##
+ # NEO BLOCK TYPE: HEADSHOT LISTINGS
+ #}
+<section class="c-block c-block--{{ block.backgroundColor }}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-9 col-xl-8{% endif %}">
+				{% if block.preheading is defined and block.preheading != '' %}
+				<p class="u-preheading">{{ block.preheading }}</p>
+				{% endif %}
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg">{{ block.description }}</div>
+				{% endif %}
+				{% if block.button | length and block.button.getLink() %}
+				<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
+				{% endif %}
+				
+				{% for listing in block.children.all() %}
+				<div class="row align-items-center mt-5 pt-5 border-top">
+					<div class="col-12 col-md-4 px-5 px-md-0 mb-5">
+						<p class="text-center px-5 px-md-0">
+							<img class="img-fluid" src="{{ listing.image.one.url('responsiveMedium') }}" alt="{{ entry.title }}" />
+						</p>
+					</div>
+					
+					<div class="col-12 col-md-8">
+						{% if listing.preheading is defined and listing.preheading != '' %}
+						<p class="u-preheading">{{ listing.preheading }}</p>
+						{% endif %}
+						{% if listing.heading is defined and listing.heading != '' %}
+						<h3>{{ listing.heading }}</h3>
+						{% endif %}
+						{% if listing.description is defined and listing.description != '' %}
+						<div class="c-wysiwyg">{{ listing.description }}</div>
+						{% endif %}
+						{% if listing.video | length %}
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-pill btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#video-{{ listing.id }}">
+							Watch Video
+						</button>
+						
+						<!-- Modal -->
+						<div class="modal fade" id="video-{{ listing.id }}" tabindex="-1" aria-labelledby="video-{{ listing.id }}-label" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered modal-xl">
+								<div class="modal-content bg-dark">
+									{#
+									<div class="modal-header" data-bs-theme="dark">
+										<h3 class="modal-title fs-5" id="video-{{ listing.id }}-label">Modal title</h3>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									#}
+									<div class="modal-body">
+										{% set video = craft.embeddedAssets.get(listing.video.one()) %}
+										<div class="js-fitvids">{{ video ? video.html }}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% js %}
+						$("#video-{{ listing.id }}").on("hidden.bs.modal", function (e) {
+								$("#video-{{ listing.id }}").find('iframe').attr("src", $("#video-{{ listing.id }}").find('iframe').attr("src"));
+						});
+						{% endjs %}
+						{% endif %}
+						{% if listing.socialIcons | length %}
+						<p class="d-flex align-items-center">
+							{% for row in listing.socialIcons %}
+							<a class="me-2" href="{{ row.href }}" target="_blank" rel="noopener"><img src="/dist/img/icon-{{ row.icon }}.svg" alt="{{ listing.heading }} on {{ row.icon }}" style="height:1.5rem;width:auto" /></a>
+							{% endfor %}
+						</p>
+						{% endif %}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

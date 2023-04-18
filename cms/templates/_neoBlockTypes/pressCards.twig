@@ -1,0 +1,100 @@
+{##
+ # NEO BLOCK TYPE: PRESS CARDS
+ #}
+{% set slides = block.children.all() %}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row}">
+			<div class="col-12 mb-md-5">
+			
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock, 'class': 'mb-4'} %}
+				
+				{% if slides | length <= 3 %}
+				<div class="row">
+					{% for card in slides %}
+					<div class="col-12 col-lg-4 mb-3 mb-lg-0">
+						<div class="c-carousel__card{% if card.thumbnail | length %} d-lg-flex flex-lg-column-reverse justify-content-between{% endif %} u-{{ card.backgroundColor }}">
+							{% if card.thumbnail | length %}
+								{% set img = card.thumbnail.one %}
+							<div class="c-carousel__card-img mb-3 mb-lg-0">
+								<img class="img-fluid" src="{{ img.url('responsiveSmall') }}" alt="{{ img.alt ?: img.caption }}" />
+							</div>
+							{% endif %}
+							<div class="c-carousel__card-description text-start">
+								<h2 class="h1"><a href="{{ card.textLink }}" class="stretched-link">{{ card.heading | raw }}</a></h2>
+								{% if card.subheading != '' %}<p>{{ card.subheading }}</p>{% endif %}
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				
+				{% else %}
+				<!-- CAROUSEL: DESKTOP -->
+				<div id="carousel-{{ block.id }}-lg" class="c-carousel carousel slide d-none d-lg-block" data-bs-ride="false">
+					<div class="carousel-indicators cards">
+						{% for group in slides|batch(3) %}
+						<button type="button" data-bs-target="#carousel-{{ block.id }}-lg" data-bs-slide-to="{{ loop.index0 }}" aria-label="Slide {{ loop.index }}"{% if loop.first %} class="active" aria-current="true"{% endif %}></button>
+						{% endfor %}
+					</div>
+					
+					<div class="carousel-inner">
+						{% for group in slides|batch(3) %}
+						<div class="carousel-item active">
+							<div class="row">
+								{% for card in group %}
+								<div class="col-12 col-lg-4 mb-3 mb-lg-0">
+									<div class="c-carousel__card{% if card.thumbnail | length %} d-lg-flex flex-lg-column-reverse justify-content-between{% endif %} u-{{ card.backgroundColor }}">
+										{% if card.thumbnail | length %}
+											{% set img = card.thumbnail.one %}
+										<div class="c-carousel__card-img mb-3 mb-lg-0">
+											<img class="img-fluid" src="{{ img.url('responsiveSmall') }}" alt="{{ img.alt ?: img.caption }}" />
+										</div>
+										{% endif %}
+										<div class="c-carousel__card-description text-start">
+											<h2 class="h1"><a href="{{ card.textLink }}" class="stretched-link">{{ card.heading | raw }}</a></h2>
+											{% if card.subheading != '' %}<p>{{ card.subheading }}</p>{% endif %}
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				
+				<!-- CAROUSEL: MOBILE -->
+				<div id="carousel-{{ block.id }}-sm" class="c-carousel carousel slide d-lg-none" data-bs-ride="false">
+					<div class="carousel-indicators cards">
+						{% for card in slides %}
+						<button type="button" data-bs-target="#carousel-{{ block.id }}-sm" data-bs-slide-to="{{ loop.index0 }}" aria-label="Slide {{ loop.index }}"{% if loop.first %} class="active" aria-current="true"{% endif %}></button>
+						{% endfor %}
+					</div>
+					
+					<div class="carousel-inner">
+						{% for card in slides %}
+						<div class="carousel-item active">
+							<div class="c-carousel__card u-{{ card.backgroundColor }}">
+								{% if card.thumbnail | length %}
+									{% set img = card.thumbnail.one %}
+								<div class="c-carousel__card-img mb-3">
+									<img class="img-fluid" src="{{ img.url('responsiveSmall') }}" alt="{{ img.alt ?: img.caption }}" />
+								</div>
+								{% endif %}
+								
+								<div class="c-carousel__card-description text-start">
+									<h2 class="h1"><a href="{{ card.textLink }}" class="stretched-link">{{ card.heading | raw }}</a></h2>
+									{% if card.subheading != '' %}<p>{{ card.subheading }}</p>{% endif %}
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				{% endif %}
+				
+			</div>
+		</div>
+	</div>
+</section>

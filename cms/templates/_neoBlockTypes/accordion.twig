@@ -1,0 +1,44 @@
+{##
+ # NEO BLOCK TYPE: ACCORDION
+ #}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		{% if block.preheading != '' or block.headingBlock | length or block.description != '' %}
+		<div class="row justify-content-center mb-5">
+			<div class="col-12 col-md-10 col-lg-9 col-xl-8 text-center">
+				{% if block.preheading is defined and block.preheading != '' %}
+				<p class="u-preheading">{{ block.preheading }}</p>
+				{% endif %}
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg">{{ block.description }}</div>
+				{% endif %}
+			</div>
+		</div>
+		{% endif %}
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-9 col-xl-8{% endif %}">
+				{% if block.accordionItems | length %}
+				<div class="c-accordion accordion" id="accordion-{{ block.id }}">
+					{% for item in block.accordionItems %}
+					<button id="heading-{{ item.id }} fs-2" type="button"
+						class="c-accordion__toggle btn btn-link btn-block text-left" 
+						data-toggle="collapse" 
+						data-target="#accordion-item-{{ item.id }}" 
+						aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" 
+						aria-controls="accordion-item-{{ item.id }}">
+						{{ item.heading }}
+					</button>
+				
+					<div id="accordion-item-{{ item.id }}" class="accordion-collapse collapse{% if loop.first %} show{% endif %}" aria-labelledby="heading-{{ item.id }}" data-parent="#accordion-{{ block.id }}">
+						<div class="accordion-body">
+							{{ item.description }}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

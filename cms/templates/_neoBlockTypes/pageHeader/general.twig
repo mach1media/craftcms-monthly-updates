@@ -1,0 +1,26 @@
+{##
+ # NEO BLOCK TYPE: PAGE HEADER: GENERAL
+ #}
+<section class="position-relative">
+	<div class="c-hero c-hero--general">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-5 text-center">
+					{% if block.preheading is defined and block.preheading != '' %}
+					<p class="u-preheading">{{ block.preheading }}</p>
+					{% endif %}
+					
+					<h1>{{ block.heading | raw ?: entry.title | raw }}</h1>
+					
+					{% if block.description is defined and block.description != '' %}
+					<div class="c-wysiwyg">{{ block.description }}</div>
+					{% endif %}
+					{% if block.button.getLink() %}
+					<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c-hero__scoop"></div>
+</section>

@@ -1,6 +1,21 @@
 {
   "require": {
-    "craftcms/cms": "^4.2.7",
+    "craftcms/cms": "4.3.9",
+    "craftcms/redactor": "3.0.4",
+    "dolphiq/redirect": "2.0.0",
+    "hybridinteractive/craft-position-fieldtype": "4.0.0",
+    "miranj/craft-obfuscator": "1.1.1",
+    "mmikkel/cp-field-inspect": "1.4.4",
+    "sebastianlenz/linkfield": "2.1.5",
+    "spicyweb/craft-embedded-assets": "3.1.4",
+    "spicyweb/craft-neo": "3.7.6",
+    "statikbe/craft-config-values": "2.0.2",
+    "topshelfcraft/wordsmith": "4.2.0",
+    "verbb/field-manager": "3.0.5",
+    "verbb/formie": "2.0.26",
+    "verbb/redactor-tweaks": "3.0.0",
+    "verbb/super-table": "3.0.8.1",
+    "verbb/tablemaker": "4.0.4",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

@@ -1,0 +1,35 @@
+{# Eager-load the Neo field #}
+{% for block in entry.pageBuilderNewsStory %}
+	{% do block.useMemoized() %}
+{% endfor %}
+
+{# Loop through eager-loaded Neo fields blocks #}
+{% for block in entry.pageBuilderNewsStory %}
+{% if block.level == 1 %}
+
+{# = = = = = = = = = SECTION STYLES = = = = = = = = = = = #}
+{% set sectionStyleClasses = [] %}
+
+{#
+{% if block.backgroundColor is defined and block.backgroundColor != 'none' %}
+	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--' ~ block.backgroundColor]) %}
+{% endif %}
+#}
+{% if block.paddingTop is defined and block.paddingTop != '1' %}
+	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-top']) %}
+{% endif %}
+
+{% if block.paddingBottom is defined and block.paddingBottom != '1' %}
+	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-bottom']) %}
+{% endif %}
+{#
+{% if block.paddingSides is defined and block.paddingSides == '1' %}
+	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--guttered']) %}
+{% endif %}
+#}
+
+<!-- {{ block.type }}: {{ block.id }} -->
+{% include "_neoBlockTypes/" ~ block.type with {'block': block, 'sectionStyleClasses': sectionStyleClasses | join(' ')} %}
+
+{% endif %}
+{% endfor %}

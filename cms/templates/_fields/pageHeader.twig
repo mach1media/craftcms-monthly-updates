@@ -1,0 +1,14 @@
+{# Eager-load the Neo field #}
+{% for block in entry.pageHeader %}
+	{% do block.useMemoized() %}
+{% endfor %}
+
+{# Loop through eager-loaded Neo fields blocks #}
+{% for block in entry.pageHeader %}
+{% if block.level == 1 %}
+
+<!-- {{ block.type }}: {{ block.id }} -->
+{% include "_neoBlockTypes/pageHeader/" ~ block.type with {'block': block} %}
+
+{% endif %}
+{% endfor %}

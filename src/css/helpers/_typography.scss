@@ -2,14 +2,18 @@ body {
 	@include base-font;
 }
 
-/*
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
+h1, h2, h3,
+.h1, .h2, .h3 {
 	@include font-heading;
-	letter-spacing: -0.025em;
-	color: $color-blue;
+	//text-transform: uppercase;
+	//letter-spacing: 0.13em;
+	color: map-get($theme-colors, 'primary');
 }
-*/
+h4, h5,
+.h4, .h5 {
+	@include base-font-semibold;
+	color: map-get($theme-colors, 'primary');
+}
 
 /*
 h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
@@ -18,7 +22,3 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 	letter-spacing: .1em;
 }
 */
-
-.blockquote {
-	@include font-heading-light;
-}

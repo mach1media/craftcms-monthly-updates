@@ -1,0 +1,14 @@
+{# Eager-load the Neo field #}
+{% for block in entry.pageBuilderMenu %}
+	{% do block.useMemoized() %}
+{% endfor %}
+
+{# Loop through eager-loaded Neo fields blocks #}
+{% for block in entry.pageBuilderMenu %}
+{% if block.level == 1 %}
+
+<!-- {{ block.type }}: {{ block.id }} -->
+{% include "_neoBlockTypes/pageBuilderMenu/" ~ block.type with {'block': block} %}
+
+{% endif %}
+{% endfor %}

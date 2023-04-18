@@ -1,0 +1,67 @@
+{##
+ # NEO BLOCK TYPE: PAGE HEADER: IMG+TEXT
+ #}
+
+{##
+# https://www.unixtimestamp.com 
+# use {now | date('U')} for comparison
+#}
+{# Sun, Apr 30, 7pm Central #}
+{% set eventSart = 1682899200 %}
+
+{# Sun, Apr 30, 8pm Central #}
+{% set eventEnd  = 1682902800 %}
+
+{% set img    = block.image.one %}
+{% set imgSrc = img.url('square600') %}
+<section class="c-hero__connector-wrap">
+	<div class="c-hero c-hero--general">
+		<div class="container">
+			<div class="row">
+				<!-- Intro text -->
+				<div class="col-12 col-md-5 order-2 order-md-1">
+					 {% if block.preheading is defined and block.preheading != '' %}
+					<p class="u-preheading">{{ block.preheading }}</p>
+					 {% endif %}
+					 <h1>{{ block.heading != '' ? block.heading : entry.title }}</h1>
+					 {% if block.description is defined and block.description != '' %}
+					<div class="c-wysiwyg">{{ block.description }}</div>
+					 {% endif %}
+					 {% if block.button.getLink() %}
+					<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary text-white'} %}</p>
+					 {% endif %}
+				</div>
+				 
+				<!-- Image for desktop only -->
+				<div class="col-12 col-md-4 offset-md-1 order-1 order-md-2 mb-5 mb-md-0">
+					{#
+					<div class="c-hero__img-circle" style="background:url('{{ imgSrc }}') center center no-repeat;background-size:cover;">
+						<div class="c-hero__img-circle-decorator"></div>
+					</div>
+					#}
+					{% if img %}
+					<img class="img-fluid" src="{{ imgSrc }}" alt="{{ img.alt }}" />
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c-hero__scoop c-hero__scoop--tall"></div>
+	{# ---------------------------------------- LILA CTA ---------------------------------------- #}
+	{% if now|date('U') < eventEnd %}
+	<a class="c-hero__lila-cta" role="button" href="#modal-lila" data-bs-toggle="modal" data-bs-target="#modal-lila">
+		<img class="img-fluid d-none d-md-block img-desktop" src="/dist/img/lila-cta-desktop.png" />
+		<img class="img-fluid d-md-none" src="/dist/img/lila-cta-mobile.png" />
+	</a>
+	{% js on ready %}
+	$('.c-hero__lila-cta').hover(
+		function(){
+			$(this).find('.img-desktop').attr('src','/dist/img/lila-cta-desktop-hover-2.png');
+		},
+		function(){
+			$(this).find('.img-desktop').attr('src','/dist/img/lila-cta-desktop.png');
+		}
+	);
+	{% endjs %}
+	{% endif %}
+</section>

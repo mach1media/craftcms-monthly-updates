@@ -1,0 +1,54 @@
+/**
+ * BOOTSTRAP BUTTON OVERRIDES
+ *
+ * Use Bootstrap's .btn class for a basic button
+ */
+ 
+.btn {
+	@include base-font-semibold;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	line-height: 1em;
+	border-radius: 3em;
+	border-width: 3px;
+	padding: 1em 2em;
+}
+.btn-secondary,
+.btn-tertiary,
+.btn-blue,
+.btn-navy,
+.btn-sand,
+.btn-taupe,
+.btn-green,
+.btn-green-light {
+	color: white !important;
+	
+	&:hover {
+		color: white !important;
+	}
+}
+.btn-outline-secondary,
+.btn-outline-tertiary,
+.btn-outline-blue,
+.btn-outline-navy,
+.btn-outline-sand,
+.btn-outline-taupe,
+.btn-outline-green,
+.btn-outline-green-light {
+	&:hover {
+		color: white;
+	}
+}
+
+.btn-sm {
+	@include base-font;
+	letter-spacing: .1em;
+}
+
+.btn-text {
+	@include font-heading;
+}
+
+.btn-shadow {
+	box-shadow: 2px 2px 6px 3px rgba(black, .1);
+}
