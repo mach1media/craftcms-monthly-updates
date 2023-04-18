@@ -1,5 +1,5 @@
 <a id="top"></a>
-<header class="c-header sticky-top">
+<header class="c-header sticky-top" id="header">
 	<!-- DESKTOP HEADER -->
 	<div class="container-fluid d-none d-xxl-block c-header__desktop">
 		<div class="row align-items-center justify-content-between">
@@ -10,11 +10,23 @@
 
 				<nav class="c-header__nav">
 					<ul class="nav flex-nowrap">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Impact Investing</a>
+						<li class="nav-item c-header__mega-toggle">
+							<button class="nav-link"
+								type="button" 
+								id="mega-impact-tab"
+								data-bs-toggle="collapse" 
+								data-bs-target="#mega-impact" 
+								aria-expanded="false" 
+								aria-controls="mega-impact">Impact Investing</button>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="">Loans for Ministries</a>
+						<li class="nav-item c-header__mega-toggle">
+							<button class="nav-link"
+								type="button" 
+								id="mega-loans-tab"
+								data-bs-toggle="collapse" 
+								data-bs-target="#mega-loans" 
+								aria-expanded="false" 
+								aria-controls="mega-loans">Loans for Ministries</button>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="">Philanthropy</a>
@@ -108,6 +120,123 @@
 				<span class="c-icon c-icon--hamburger-white"></span>
 				<span class="c-icon c-icon--close-white d-none"></span>
 			</button>
+		</div>
+	</div>
+
+	<!-- MEGA MENU TRAYS -->
+	<div id="mega-impact" class="c-header__mega-menu shadow collapse" aria-labelledby="mega-impact-tab" data-bs-parent="#header">
+		<div class="row gx-0">
+			<div class="col-4 c-header__mega-menu-features">
+				<p class="u-base-font-semibold">Popular Resources</p>
+
+				<a class="d-block lh-sm mb-5" href="#">
+					<img class="d-block w-100 img-fluid rounded mb-2" src="/dist/img/mega-menu-img-1.jpg" alt="" />
+					Lorem ipsum dolor sit amet consectetur adipiscing elit
+				</a>
+
+				<a class="d-block lh-sm" href="#">
+					<img class="d-block w-100 img-fluid rounded mb-2" src="/dist/img/mega-menu-img-2.jpg" alt="" />
+					Lorem ipsum dolor sit amet consectetur adipiscing elit
+				</a>
+			</div>
+
+			<div class="col-8 p-5">
+				<div class="row">
+					<div class="col-6">
+						<p class="h5"><a href="">Impact Notes</a></p>
+						<ul class="mb-5">
+							<li><a href="">Current Rates</a></li>
+							<li><a href="">Churches</a></li>
+							<li><a href="">Clergy</a></li>
+							<li><a href="">Individuals</a></li>
+						</ul>
+
+						<p class="h5"><a href="">Investment Resources</a></p>
+						<ul>
+							<li><a href="">Weekly Rate Flyer</a></li>
+							<li><a href="">Offering Circular</a></li>
+							<li><a href="">Information Statement</a></li>
+							<li><a href="">2021 Impact Report</a></li>
+							<li><a href="">Audited Financial Statements</a></li>
+						</ul>
+					</div>
+
+					<div class="col-6">
+						<p class="h5"><a href="">Equity & Bond Investments</a></p>
+						<ul class="mb-5">
+							<li><a href="">TMF Balance Portfolio</a></li>
+							<li><a href="">Wespath Funds</a></li>
+						</ul>
+
+						<p class="h5 mb-5"><a href="">Meet The Team</a></p>
+
+						<p class="h5"><a href="">Open an Account</a></p>
+						<ul>
+							<li><a href="">Church or Nonprofit</a></li>
+							<li><a href="">Equity and Bond Investments</a></li>
+							<li><a href="">Individual</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="mega-loans" class="c-header__mega-menu shadow collapse" aria-labelledby="mega-loans-tab" data-bs-parent="#header">
+		<div class="row gx-0">
+			<div class="col-4 c-header__mega-menu-features">
+				<p class="u-base-font-semibold">Popular Resources</p>
+
+				<a class="d-block lh-sm mb-5" href="#">
+					<img class="d-block w-100 img-fluid rounded mb-2" src="/dist/img/mega-menu-img-2.jpg" alt="" />
+					Lorem ipsum dolor sit amet consectetur adipiscing elit
+				</a>
+
+				<a class="d-block lh-sm" href="#">
+					<img class="d-block w-100 img-fluid rounded mb-2" src="/dist/img/mega-menu-img-1.jpg" alt="" />
+					Lorem ipsum dolor sit amet consectetur adipiscing elit
+				</a>
+			</div>
+
+			<div class="col-8 p-5">
+				<div class="row">
+					<div class="col-6">
+						<p class="h5"><a href="">Impact Notes</a></p>
+						<ul class="mb-5">
+							<li><a href="">Current Rates</a></li>
+							<li><a href="">Churches</a></li>
+							<li><a href="">Clergy</a></li>
+							<li><a href="">Individuals</a></li>
+						</ul>
+
+						<p class="h5"><a href="">Investment Resources</a></p>
+						<ul>
+							<li><a href="">Weekly Rate Flyer</a></li>
+							<li><a href="">Offering Circular</a></li>
+							<li><a href="">Information Statement</a></li>
+							<li><a href="">2021 Impact Report</a></li>
+							<li><a href="">Audited Financial Statements</a></li>
+						</ul>
+					</div>
+
+					<div class="col-6">
+						<p class="h5"><a href="">Equity & Bond Investments</a></p>
+						<ul class="mb-5">
+							<li><a href="">TMF Balance Portfolio</a></li>
+							<li><a href="">Wespath Funds</a></li>
+						</ul>
+
+						<p class="h5 mb-5"><a href="">Meet The Team</a></p>
+
+						<p class="h5"><a href="">Open an Account</a></p>
+						<ul>
+							<li><a href="">Church or Nonprofit</a></li>
+							<li><a href="">Equity and Bond Investments</a></li>
+							<li><a href="">Individual</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </header>

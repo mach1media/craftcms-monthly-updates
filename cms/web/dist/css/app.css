@@ -9760,7 +9760,7 @@ textarea.form-control-lg {
   }
 }
 
-.c-slider__indicator-current button.is-current, .c-header__utility button.nav-link {
+.c-slider__indicator-current button.is-current, .c-header__mega-toggle button, .c-header__utility button.nav-link {
   border: none;
   margin: 0;
   padding: 0;
@@ -9779,7 +9779,7 @@ textarea.form-control-lg {
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
 }
-.c-slider__indicator-current button.is-current:hover, .c-header__utility button.nav-link:hover {
+.c-slider__indicator-current button.is-current:hover, .c-header__mega-toggle button:hover, .c-header__utility button.nav-link:hover {
   cursor: pointer;
 }
 
@@ -10246,13 +10246,80 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   color: #231F5B;
   transition: all 0.2s ease-in-out;
 }
-.c-header__nav .nav-link:hover, .c-header__nav .nav-link.active {
+.c-header__nav .nav-link:hover, .c-header__nav .nav-link.active, .c-header__nav .nav-link[aria-expanded=true] {
   color: #C19D68;
+}
+.c-header__nav .nav-link[aria-expanded=true] {
+  position: relative;
+}
+.c-header__nav .nav-link[aria-expanded=true]:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 1.5rem);
+  border-bottom: 12px solid #f5efe7;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
 }
 .c-header__utility .nav-link.btn {
   font-size: 12px;
   padding: 1em 2em;
   margin-left: 1em;
+}
+.c-header__desktop {
+  position: relative;
+}
+.c-header__mega-toggle button {
+  font-size: 14px;
+  padding: var(--bs-nav-link-padding-y) 1em;
+  white-space: nowrap;
+  color: #231F5B;
+  transition: all 0.2s ease-in-out;
+}
+.c-header__mega-toggle button:hover, .c-header__mega-toggle button.active {
+  color: #C19D68;
+}
+.c-header__mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 960px;
+  background-color: white;
+  color: #231F5B;
+}
+.c-header__mega-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.c-header__mega-menu ul li {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  list-style-type: none;
+}
+.c-header__mega-menu a {
+  color: #231F5B;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.c-header__mega-menu a:hover {
+  color: #C19D68;
+}
+.c-header__mega-menu-features {
+  padding: 2.25rem;
+  background-color: #f5efe7;
+  color: #C19D68;
+}
+.c-header__mega-menu-features a {
+  color: #C19D68;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.c-header__mega-menu-features a:hover {
+  color: #231F5B;
 }
 .c-header__mobile > .row {
   padding-top: 0.75rem;

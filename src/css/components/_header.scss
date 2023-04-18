@@ -6,6 +6,8 @@
 	$height-top-large: 60px;
 	$height-nav-small: 60px;
 	$height-nav-large: 100px;
+	$bg-megamenu-features: lighten(map-get($theme-colors, 'secondary'), 35%);
+
 	color: white;
 	background-color: map-get($theme-colors,'white');
 	//padding-top: $gutter/2;
@@ -67,8 +69,23 @@
 			@include animate;
 
 			&:hover,
-			&.active {
+			&.active,
+			&[aria-expanded="true"] {
 				color: map-get($theme-colors, 'secondary');
+			}
+
+			&[aria-expanded="true"] {
+				position: relative;
+
+				&:after {
+					content: "";
+					position: absolute;
+					display: block;
+					top: 100%;
+					left: 50%;
+					transform: translate(-50%, $gutter);
+					@include triangle('up', 12px, $bg-megamenu-features);
+				}
 			}
 		}
 	}
@@ -81,6 +98,75 @@
 
 		button.nav-link {
 			@extend %reset-button;
+		}
+	}
+
+
+	//
+	// MEGA MENUS
+	//
+	@include element('desktop') {
+		position: relative;
+	}
+	@include element('mega-toggle') {
+		button {
+			@extend %reset-button;
+			font-size: 14px;
+			padding: var(--bs-nav-link-padding-y) 1em;
+			white-space: nowrap;
+			color: map-get($theme-colors, 'primary');
+			@include animate;
+
+			&:hover,
+			&.active {
+				color: map-get($theme-colors, 'secondary');
+			}
+		}
+	}
+	@include element('mega-menu') {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: map-get($container-max-widths, 'lg');
+		background-color: white;
+		color: map-get($theme-colors, 'primary');
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+
+			li {
+				margin: 0 0 .5em 0;
+				padding: 0;
+				list-style-type: none;
+			}
+		}
+
+		a {
+			color: map-get($theme-colors, 'primary');
+			text-decoration: none;
+			@include animate;
+
+			&:hover {
+				color: map-get($theme-colors, 'secondary');
+			}
+		}
+	}
+	@include element('mega-menu-features') {
+		padding: $gutter * 1.5;
+		background-color: $bg-megamenu-features;
+		color: map-get($theme-colors, 'secondary');
+
+		a {
+			color: map-get($theme-colors, 'secondary');
+			text-decoration: none;
+			@include animate;
+
+			&:hover {
+				color: map-get($theme-colors, 'primary');
+			}
 		}
 	}
 
