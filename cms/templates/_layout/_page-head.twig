@@ -11,7 +11,7 @@
 				<nav class="c-header__nav">
 					<ul class="nav flex-nowrap">
 						<li class="nav-item c-header__mega-toggle">
-							<button class="nav-link"
+							<button class="nav-link js-nav-item"
 								type="button" 
 								id="mega-impact-tab"
 								data-bs-toggle="collapse" 
@@ -20,7 +20,7 @@
 								aria-controls="mega-impact">Impact Investing</button>
 						</li>
 						<li class="nav-item c-header__mega-toggle">
-							<button class="nav-link"
+							<button class="nav-link js-nav-item"
 								type="button" 
 								id="mega-loans-tab"
 								data-bs-toggle="collapse" 
@@ -29,19 +29,19 @@
 								aria-controls="mega-loans">Loans for Ministries</button>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="">Philanthropy</a>
+							<a class="nav-link js-nav-item" href="">Philanthropy</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="">Grants</a>
+							<a class="nav-link js-nav-item" href="">Grants</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="">Area Representatives</a>
+							<a class="nav-link js-nav-item" href="">Congregational Engagement</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="">Leadership Ministry</a>
+							<a class="nav-link js-nav-item" href="">Leadership Ministry</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="">About</a>
+							<a class="nav-link js-nav-item" href="">About</a>
 						</li>
 					</ul>
 				</nav>
@@ -84,11 +84,8 @@
 	<div class="continaer-fluid d-xxl-none c-header__mobile">
 		<div class="d-flex align-items-center justify-content-between p-1 border-secondary border-bottom">
 			<button class="btn btn-text p-0" 
-				type="button" 
-				role="tab" 
-				aria-controls="profile-tab-pane" 
-				aria-selected="false" 
-				aria-label="search">
+				id="search-label"
+				type="button">
 				<span class="c-icon c-icon--search"></span>
 			</button>
 			
@@ -116,14 +113,20 @@
 				<img src="/dist/img/logo-color.svg" alt="{{ siteName }} home" />
 			</a>
 
-			<button type="button" class="btn btn-secondary c-header__menu-toggle">
+			<button class="btn btn-secondary c-header__menu-toggle"
+				id="menu-mobile-label"
+				type="button" 
+				data-bs-toggle="offcanvas"
+				data-bs-target="#menu-mobile"
+				aria-controls="menu-mobile"
+				aria-label="open/close menu">
 				<span class="c-icon c-icon--hamburger-white"></span>
 				<span class="c-icon c-icon--close-white d-none"></span>
 			</button>
 		</div>
 	</div>
 
-	<!-- MEGA MENU TRAYS -->
+	<!-- MEGA MENU: IMPACT -->
 	<div id="mega-impact" class="c-header__mega-menu shadow collapse" aria-labelledby="mega-impact-tab" data-bs-parent="#header">
 		<div class="row gx-0">
 			<div class="col-4 c-header__mega-menu-features">
@@ -182,6 +185,7 @@
 		</div>
 	</div>
 
+	<!-- MEGA MENU: LOANS -->
 	<div id="mega-loans" class="c-header__mega-menu shadow collapse" aria-labelledby="mega-loans-tab" data-bs-parent="#header">
 		<div class="row gx-0">
 			<div class="col-4 c-header__mega-menu-features">
@@ -240,3 +244,555 @@
 		</div>
 	</div>
 </header>
+
+<!-- MOBILE OFFCANVAS MENU -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="menu-mobile" aria-labelledby="menu-mobile-label">
+	<div class="offcanvas-header">
+		<a class="c-header__offcanvas-branding" href="{{ siteUrl }}" title="homepage">
+			<img src="/dist/img/logo-color.svg" alt="{{ siteName }} home" />
+		</a>
+		
+		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+
+	<div class="offcanvas-body p-0">
+		<!-- faceted nav -->
+		<div class="c-header__faceted d-block h-100">
+			<ul class="d-flex h-100 flex-column justify-content-start">
+				<li class="menu-impact">
+					<label for="menu-impact">Impact Investing</label>
+					<input type="checkbox" id="menu-impact" name="menu-impact" class="c-header__faceted-checkbox" />
+
+					<div class="c-header__faceted-sub">
+						<label class="c-header__faceted-sub-toggle" for="menu-impact">Back</label>
+						<ul id="accordion-impact">
+							<li>
+								<button
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-impact-notes"
+									aria-expanded="false"
+									aria-controls="accordion-impact-notes">Impact Notes</button>
+								<div class="collapse" id="accordion-impact-notes" data-bs-parent="#accordion-impact">
+									<ul>
+										<li><a href="">Current Rates</a></li>
+										<li><a href="">Churches</a></li>
+										<li><a href="">Clergy</a></li>
+										<li><a href="">Individuals</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-investment-resources"
+									aria-expanded="false"
+									aria-controls="accordion-investment-resources">Investment Resources</button>
+								<div class="collapse" id="accordion-investment-resources" data-bs-parent="#accordion-impact">
+									<ul>
+										<li><a href="">Weekly Rate Flyer</a></li>
+										<li><a href="">Offering Circular</a></li>
+										<li><a href="">Information Statement</a></li>
+										<li><a href="">2021 Impact Report</a></li>
+										<li><a href="">Audited Financial Statements</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-equity"
+									aria-expanded="false"
+									aria-controls="accordion-equity">Equity & Bond Investments</button>
+								<div class="collapse" id="accordion-equity" data-bs-parent="#accordion-impact">
+									<ul>
+										<li><a href="">TMF Balance Portfolio</a></li>
+										<li><a href="">Wespath Funds</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="">Meet the Team</a></li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-account"
+									aria-expanded="false"
+									aria-controls="accordion-account">Open an Account</button>
+								<div class="collapse" id="accordion-account" data-bs-parent="#accordion-impact">
+									<ul>
+										<li><a href="">Church or Nonprofit</a></li>
+										<li><a href="">Equity and Bond Investments</a></li>
+										<li><a href="">Individual</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="menu-loans">
+					<label for="menu-loans">Loans for Ministries</label>
+					<input type="checkbox" id="menu-loans" name="menu-loans" class="c-header__faceted-checkbox" />
+
+					<div class="c-header__faceted-sub">
+						<label class="c-header__faceted-sub-toggle" for="menu-loans">Back</label>
+						<ul id="accordion-loans">
+							<li>
+								<button
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-types"
+									aria-expanded="false"
+									aria-controls="accordion-types">Loan Types</button>
+								<div class="collapse" id="accordion-types" data-bs-parent="#accordion-loans">
+									<ul>
+										<li><a href="">Lorem Ipsum Dolor</a></li>
+										<li><a href="">Consectetur Adipiscing</a></li>
+										<li><a href="">Eiusmod Tempor</a></li>
+										<li><a href="">Labore et Dolore</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-loan-resources"
+									aria-expanded="false"
+									aria-controls="accordion-loan-resources">Loan Resources</button>
+								<div class="collapse" id="accordion-loan-resources" data-bs-parent="#accordion-loans">
+									<ul>
+										<li><a href="">Leo Integer Malesuada</a></li>
+										<li><a href="">Mattis Vulputate</a></li>
+										<li><a href="">Aliquet Porttitor</a></li>
+										<li><a href="">Luctus Accumsan</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-apply"
+									aria-expanded="false"
+									aria-controls="accordion-apply">Apply for a Loan</button>
+								<div class="collapse" id="accordion-apply" data-bs-parent="#accordion-loans">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="menu-philanthropy">
+					<label for="menu-philanthropy">Philanthropy</label>
+					<input type="checkbox" id="menu-philanthropy" name="menu-philanthropy" class="c-header__faceted-checkbox" />
+
+					<div class="c-header__faceted-sub">
+						<label class="c-header__faceted-sub-toggle" for="menu-philanthropy">Back</label>
+						<ul id="accordion-philanthropy">
+							<li>
+								<button
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-plan"
+									aria-expanded="false"
+									aria-controls="accordion-plan">Plan Your Legacy</button>
+								<div class="collapse" id="accordion-plan" data-bs-parent="#accordion-philanthropy">
+									<ul>
+										<li><a href="">Lorem Ipsum Dolor</a></li>
+										<li><a href="">Consectetur Adipiscing</a></li>
+										<li><a href="">Eiusmod Tempor</a></li>
+										<li><a href="">Labore et Dolore</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-giving"
+									aria-expanded="false"
+									aria-controls="accordion-giving">Charitable Giving Options</button>
+								<div class="collapse" id="accordion-giving" data-bs-parent="#accordion-philanthropy">
+									<ul>
+										<li><a href="">Leo Integer Malesuada</a></li>
+										<li><a href="">Mattis Vulputate</a></li>
+										<li><a href="">Aliquet Porttitor</a></li>
+										<li><a href="">Luctus Accumsan</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-support"
+									aria-expanded="false"
+									aria-controls="accordion-support">Support Churches & Ministries</button>
+								<div class="collapse" id="accordion-support" data-bs-parent="#accordion-philanthropy">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="">Donate</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="menu-grants">
+					<label for="menu-grants">Loans for Ministries</label>
+					<input type="checkbox" id="menu-grants" name="menu-grants" class="c-header__faceted-checkbox" />
+
+					<div class="c-header__faceted-sub">
+						<label class="c-header__faceted-sub-toggle" for="menu-grants">Back</label>
+						<ul id="accordion-grants">
+							<li>
+								<button
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-focus"
+									aria-expanded="false"
+									aria-controls="accordion-focus">Focus Areas</button>
+								<div class="collapse" id="accordion-focus" data-bs-parent="#accordion-grants">
+									<ul>
+										<li><a href="">Lorem Ipsum Dolor</a></li>
+										<li><a href="">Consectetur Adipiscing</a></li>
+										<li><a href="">Eiusmod Tempor</a></li>
+										<li><a href="">Labore et Dolore</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-partners"
+									aria-expanded="false"
+									aria-controls="accordion-partners">Partners in Ministry</button>
+								<div class="collapse" id="accordion-partners" data-bs-parent="#accordion-grants">
+									<ul>
+										<li><a href="">Leo Integer Malesuada</a></li>
+										<li><a href="">Mattis Vulputate</a></li>
+										<li><a href="">Aliquet Porttitor</a></li>
+										<li><a href="">Luctus Accumsan</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-apply-grant"
+									aria-expanded="false"
+									aria-controls="accordion-apply-grant">Apply for a Grant</button>
+								<div class="collapse" id="accordion-apply-grant" data-bs-parent="#accordion-grants">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="menu-engagement">
+					<label for="menu-engagement">Congregational Engagement</label>
+					<input type="checkbox" id="menu-engagement" name="menu-engagement" class="c-header__faceted-checkbox" />
+
+					<div class="c-header__faceted-sub">
+						<label class="c-header__faceted-sub-toggle" for="menu-engagement">Back</label>
+						<ul id="accordion-engagement">
+							<li>
+								<button
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-courage"
+									aria-expanded="false"
+									aria-controls="accordion-courage">Courage Conversations</button>
+								<div class="collapse" id="accordion-courage" data-bs-parent="#accordion-engagement">
+									<ul>
+										<li><a href="">Lorem Ipsum Dolor</a></li>
+										<li><a href="">Consectetur Adipiscing</a></li>
+										<li><a href="">Eiusmod Tempor</a></li>
+										<li><a href="">Labore et Dolore</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-purpose"
+									aria-expanded="false"
+									aria-controls="accordion-purpose">Purpose Conversations</button>
+								<div class="collapse" id="accordion-purpose" data-bs-parent="#accordion-engagement">
+									<ul>
+										<li><a href="">Leo Integer Malesuada</a></li>
+										<li><a href="">Mattis Vulputate</a></li>
+										<li><a href="">Aliquet Porttitor</a></li>
+										<li><a href="">Luctus Accumsan</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-generosity"
+									aria-expanded="false"
+									aria-controls="accordion-generosity">Generosity Conversations</button>
+								<div class="collapse" id="accordion-generosity" data-bs-parent="#accordion-engagement">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="">Contact</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="menu-leadership">
+					<label for="menu-leadership">Leadership Ministry</label>
+					<input type="checkbox" id="menu-leadership" name="menu-leadership" class="c-header__faceted-checkbox" />
+
+					<div class="c-header__faceted-sub">
+						<label class="c-header__faceted-sub-toggle" for="menu-leadership">Back</label>
+						<ul id="accordion-engagement">
+							<li>
+								<button
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-learning"
+									aria-expanded="false"
+									aria-controls="accordion-learning">Learning Communities</button>
+								<div class="collapse" id="accordion-learning" data-bs-parent="#accordion-leadership">
+									<ul>
+										<li><a href="">Lorem Ipsum Dolor</a></li>
+										<li><a href="">Consectetur Adipiscing</a></li>
+										<li><a href="">Eiusmod Tempor</a></li>
+										<li><a href="">Labore et Dolore</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-imperative"
+									aria-expanded="false"
+									aria-controls="accordion-imperative">Courageous Leadership Imperative</button>
+								<div class="collapse" id="accordion-imperative" data-bs-parent="#accordion-leadership">
+									<ul>
+										<li><a href="">Leo Integer Malesuada</a></li>
+										<li><a href="">Mattis Vulputate</a></li>
+										<li><a href="">Aliquet Porttitor</a></li>
+										<li><a href="">Luctus Accumsan</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-collaborative"
+									aria-expanded="false"
+									aria-controls="accordion-collaborative">Courageous Congregations Collaborative</button>
+								<div class="collapse" id="accordion-collaborative" data-bs-parent="#accordion-leadership">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-podcast"
+									aria-expanded="false"
+									aria-controls="accordion-podcast">Igniting Imagination Podcast</button>
+								<div class="collapse" id="accordion-podcast" data-bs-parent="#accordion-leadership">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="">Resources</a></li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-team"
+									aria-expanded="false"
+									aria-controls="accordion-team">Meet the Leadership Ministry Team</button>
+								<div class="collapse" id="accordion-team" data-bs-parent="#accordion-leadership">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-slm"
+									aria-expanded="false"
+									aria-controls="accordion-slm">Support Leadership Ministry</button>
+								<div class="collapse" id="accordion-slm" data-bs-parent="#accordion-leadership">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="menu-about">
+					<label for="menu-about">About</label>
+					<input type="checkbox" id="menu-about" name="menu-about" class="c-header__faceted-checkbox" />
+
+					<div class="c-header__faceted-sub">
+						<label class="c-header__faceted-sub-toggle" for="menu-about">Back</label>
+						<ul id="accordion-engagement">
+							<li>
+								<button
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-purpose"
+									aria-expanded="false"
+									aria-controls="accordion-purpose">Core Purpose & Impact</button>
+								<div class="collapse" id="accordion-purpose" data-bs-parent="#accordion-about">
+									<ul>
+										<li><a href="">Lorem Ipsum Dolor</a></li>
+										<li><a href="">Consectetur Adipiscing</a></li>
+										<li><a href="">Eiusmod Tempor</a></li>
+										<li><a href="">Labore et Dolore</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-lead"
+									aria-expanded="false"
+									aria-controls="accordion-lead">Meet the Lead Team</button>
+								<div class="collapse" id="accordion-lead" data-bs-parent="#accordion-about">
+									<ul>
+										<li><a href="">Leo Integer Malesuada</a></li>
+										<li><a href="">Mattis Vulputate</a></li>
+										<li><a href="">Aliquet Porttitor</a></li>
+										<li><a href="">Luctus Accumsan</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-board"
+									aria-expanded="false"
+									aria-controls="accordion-board">Meet the Board of Directors</button>
+								<div class="collapse" id="accordion-board" data-bs-parent="#accordion-about">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<button 
+									class="c-header__faceted-accordion-toggle"
+									type="button" 
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-history"
+									aria-expanded="false"
+									aria-controls="accordion-history">History</button>
+								<div class="collapse" id="accordion-history" data-bs-parent="#accordion-about">
+									<ul>
+										<li><a href="">Nisl Nisi Scelerisque</a></li>
+										<li><a href="">Ultrices Vitae</a></li>
+										<li><a href="">Auctor eu Augue</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

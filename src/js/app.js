@@ -17,6 +17,30 @@ import '../vendor/fitvids/fitvids.js';
 
 
 $(function() {
+	//
+	// mega menu toggle hovers
+	//
+	$('.js-nav-item').mouseenter(function(){
+		// reset all other open megamenus
+		$('.js-nav-item').attr('aria-expanded','false');
+		$('.c-header__mega-menu.show').removeClass('show');
+		
+		// open the corresponding megamenu
+		var megaMenuId = $(this).attr('data-bs-target');
+		if (megaMenuId) {
+			$(megaMenuId).addClass('show');
+			$(this).attr('aria-expanded','true');
+		}
+	});
+	$(document).click(function(event) { 
+		var $target = $(event.target);
+		if(!$target.closest('.c-header__mega-menu.show').length && 
+		$('.c-header__mega-menu.show').is(":visible")) {
+			$('.c-header__mega-menu.show').removeClass('show');
+			$('.js-nav-item').attr('aria-expanded','false');
+		}
+	});
+	
 	
 	// responsive video embeds
 	$(".js-fitvids").fitVids();
