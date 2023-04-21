@@ -336,73 +336,57 @@
 	<div class="c-block container">
 		<div class="row justify-content-between align-items-center">
 			<div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 mb-5 mb-md-0 c-footer__cta">
-				<h2 class="h1 text-white mb-5">Grow the <span class="u-text-decorator">Impact</span> of the Church</h2>
-				<p class="c-footer__subhead">Talk to one of our team today at <a href="tel://8008628633">800.862.8633</a> or <a href="{{ url('contact') }}">contact us</a></p>
-				<p class="mt-5">Stay connected to the latest news and investing insights. We respect your privacy.</p>
-                {##
-                 # FORMIE NEWSLETTER SIGNUP
-                 #
-				{% set form = craft.formie.forms({ handle: 'newsletter' }).one() %}
-				<form class="c-footer__optin" method="post" data-fui-form="{{ form.configJson }}">
-					{{ csrfInput() }}
-					{{ actionInput('formie/submissions/submit') }}
-					{{ hiddenInput('handle', form.handle) }}
-					<div class="row align-items-center">
-						<div class="col col-sm-9">
-							{{ craft.formie.renderField(form, 'email', {
-								themeConfig: bootstrapFormieThemeConfig,
-							}) }}
-						</div>
-						
-						<div class="col col-sm-3">
-							<button class="btn btn-pill btn-outline-secondary text-white">Subscribe</button>
-						</div>
-					</div>
-				</form>
-                #}
+				<h2 class="c-footer__heading text-white mb-5">Get the latest from Texas Methodist Foundation</h2>
 
                 {# CAMPAIGN MONITOR SUBSCRIBE #}
 				<form class="c-footer__optin js-cm-form" 
                     method="post" 
                     id="subForm" 
                     action="https://www.createsend.com/t/subscribeerror?description=" data-id="A61C50BEC994754B1D79C5819EC1255C220F4A756820C0A9A04CE4F74E1C2820F72AFCCA27B699262F40CA1784E2C498713E55839CA30E6371FD43CE858DB5E2">
-					<div class="row align-items-center">
-						<div class="col col-sm-9">
-							<input autocomplete="Email" aria-label="Email" class="form-control js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-tljudyl-tljudyl" required="" type="email">
-						</div>
+					<p>
+                        <input aria-label="Full Name" class="form-control" id="fieldName" maxlength="200" name="cm-tljudyl-tljudyl" required="" type="text" placeholder="Your Full Name">
+					</p>
+					<p>
+                        <input autocomplete="Email" aria-label="Email" class="form-control js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-tljudyl-tljudyl" required="" type="email" placeholder="Your Email">
+					</p>
 						
-						<div class="col col-sm-3">
-							<button tuype="submit" class="btn btn-pill btn-outline-secondary text-white">Subscribe</button>
-						</div>
-					</div>
+                    <p>
+                        <button tuype="submit" class="btn btn-primary btn-arrow text-white">Subscribe</button>
+                    </p>
 				</form>
                 {% js "https://js.createsend1.com/javascript/copypastesubscribeformlogic.js" %}
-
-				<p class="u-base-font-semibold mt-5">* Past performance is no guarantee of future results. Rates subject to change. The purchase of Wesleyan Impact Partners securities is subject to risks, which are described in our Offering Circular. This is not an offer to sell you our securities and we are not soliciting you to buy our securities. The offering is made solely by the Offering Circular and only in states where authorized. Not FDIC or SIPC insured. Not a bank deposit. Not guaranteed by any denomination.</p>
 			</div>
 			
 			<div class="col-12 col-md-3 col-lg-4 col-xl-3">
-				<nav class="c-footer__nav">
+                <p class="c-footer__list-heading">Learn More</p>
+                <nav class="c-footer__nav">
 					<ul class="list-unstyled">
-						{% for page in craft.entries.section('pages').all() %}
-						<li>
-							<a href="{{ page.url }}">{{ page.title }}</a>
-						</li>
-						{% endfor %}
-						<li>
-							<a href="{{ url('privacy') }}">Privacy Policy</a>
-						</li>
+						<li><a href="#">Impact Investing</a></li>
+						<li><a href="#">Loans for Ministry</a></li>
+						<li><a href="#">Philanthropy</a></li>
+						<li><a href="#">Area Representatives</a></li>
+						<li><a href="#">Leadership Ministry</a></li>
+						<li><a href="#">About</a></li>
 					</ul>
 				</nav>
-				<p class="opacity-50 mt-2">
-					{% apply enkode_emails %}
-					<a class="text-white" href="mailto:info@wesleyanimpactpartners.org">info@wesleyanimpactpartners.org</a>
-					{% endapply %}
-				</p>
-				<p class="opacity-25 mt-2" style="line-height:1.2em;">
+            </div>
+
+
+			<div class="col-12 col-md-3 col-lg-4 col-xl-3">
+                <p class="c-footer__list-heading">Contact</p>
+				<p style="line-height:1.5em;">
 					11709 Boulder Lane, Suite 220<br />
 					Austin, TX 78726
 				</p>
+
+                <p class="c-footer__list-heading">Legal</p>
+				<nav class="c-footer__nav">
+					<ul class="list-unstyled">
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Transparency in Coverage</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</div>
@@ -411,19 +395,19 @@
 		<div class="row align-items-center">
 			<div class="col-12 col-md-6 order-md-2 text-center text-md-end">
 				<p>
-					<a class="c-footer__social" href="https://www.facebook.com/wesleyanimpact" target="_blank" rel="noopener" title="Connect with us on Facebook"><img src="/dist/img/icon-facebook.svg" alt="Facebook" style="height:1.2rem;width:auto" /></a>
+					<a class="c-footer__social" href="https://www.facebook.com/wesleyanimpact" target="_blank" rel="noopener" title="Connect with us on Facebook"><img src="/dist/img/icon-facebook-white.svg" alt="Facebook" style="height:1.5rem;width:auto" /></a>
 					
-					<a class="c-footer__social" href="https://www.instagram.com/wesleyanimpactpartners" target="_blank" rel="noopener" title="Follow us on Instagram"><img src="/dist/img/icon-instagram.svg" alt="Instagram" style="height:1.2rem;width:auto" /></a>
+					<a class="c-footer__social" href="https://www.instagram.com/wesleyanimpactpartners" target="_blank" rel="noopener" title="Follow us on Instagram"><img src="/dist/img/icon-instagram-white.svg" alt="Instagram" style="height:1.5rem;width:auto" /></a>
 					
-					<a class="c-footer__social" href="https://twitter.com/wesleyanimpact" target="_blank" rel="noopener" title="Follow us on Twitter" ><img class="opacity-50" src="/dist/img/icon-twitter.svg" alt="Twitter" style="height:1.2rem;width:auto" /></a>
+					<a class="c-footer__social" href="" target="_blank" rel="noopener" title="Follow us on YouTube" ><img src="/dist/img/icon-youtube-white.svg" alt="Twitter" style="height:1.25rem;width:auto" /></a>
 					
-					<a class="c-footer__social" href="https://www.linkedin.com/company/wesleyanimpact" target="_blank" rel="noopener" title="Connect with us on LinkedIn"><img src="/dist/img/icon-linkedin.svg" alt="LinkedIn" style="height:1.2rem;width:auto" /></a>
+					<a class="c-footer__social" href="https://www.linkedin.com/company/wesleyanimpact" target="_blank" rel="noopener" title="Connect with us on LinkedIn"><img src="/dist/img/icon-linkedin.svg" alt="LinkedIn" style="height:1.5rem;width:auto" /></a>
 				</p>
 			</div>
 			
 			<div class="col-12 col-md-6 order-md-1 text-center text-md-start">
-				<p class="opacity-25" style="font-size:85%;">
-					&copy;{{ now|date('Y') == '2022' ? now|date('Y') : '2022-' ~ now|date('Y') }} {{ siteName }}. Designed by <a href="https://studionuma.co" target="_blank" rel="noopener" title="Studio Numa - Jarrett Johnston - Graphic Designer">Numa</a>
+				<p style="font-size:75%;">
+					&copy;{{ now|date('Y') == '2022' ? now|date('Y') : '2022-' ~ now|date('Y') }} Texas Methodist Foundation. Designed by <a href="https://studionuma.co" target="_blank" rel="noopener" title="Studio Numa - Jarrett Johnston - Graphic Designer">Numa</a>
 				</p>
 			</div>
 		</div>

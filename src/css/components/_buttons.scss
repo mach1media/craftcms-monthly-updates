@@ -5,7 +5,8 @@
  */
  
 .btn {
-	@include base-font-medium;
+	font-size: .75rem;
+	@include base-font;
 	letter-spacing: .1em;
 	text-transform: uppercase;
 
@@ -13,7 +14,7 @@
 	line-height: 1em;
 	border-radius: 3em;
 	border-width: 2px;
-	padding: .75em 1.5em;
+	padding: 1.25em 2em;
 }
 .btn-secondary {
 	color: white;
@@ -29,29 +30,28 @@
 		color: white;
 	}
 }
-/*
+
 .btn-arrow {
 	position: relative;
-	padding-right: 2em;
+	padding-right: 3.5em;
 	
 	&:after {
 		content: "";
 		position: absolute;
 		display: block;
 		top: 50%;
-		right: $spacer/1.2;
+		right: 1rem;
 		transform: translate(0, -50%);
-		width: 1em;
-		height: .5em;
-		background: url('/assets/icon/arrow-right-blue.svg') right center no-repeat;
+		width: 1.5em;
+		height: .75em;
+		background: url('/dist/img/icon-arrow-right-tan.svg') right center no-repeat;
 		background-size: contain;
 		@include animate;
 	}
 	&:hover:after {
-		right: $spacer/2;
+		right: .75rem;
 	}
 }
-*/
 
 .btn-shadow {
 	box-shadow: 2px 2px 6px 3px rgba(black, .1);

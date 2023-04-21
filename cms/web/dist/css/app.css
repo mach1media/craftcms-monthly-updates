@@ -309,7 +309,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .c-footer__subhead, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -334,11 +334,11 @@ h2, .h2 {
   }
 }
 
-h3, .c-footer__subhead, .h3 {
+h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
 @media (min-width: 1200px) {
-  h3, .c-footer__subhead, .h3 {
+  h3, .h3 {
     font-size: 1.75rem;
   }
 }
@@ -10707,7 +10707,7 @@ body {
 }
 
 h1,
-.h1, h2, .h2, h3, .c-footer__subhead, .h3 {
+.h1, h2, .h2, h3, .h3 {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -11168,36 +11168,35 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
  */
 .c-footer {
   position: relative;
-  color: white;
-  background-image: linear-gradient(to right, #231F5B 0%, 100%);
+  color: #231F5B;
+  background-color: #C19D68;
 }
-.c-footer .h1 {
+.c-footer__heading {
   line-height: 1em;
+  letter-spacing: 0.15em;
 }
-.c-footer__subhead {
-  font-size: 20px;
-  color: white;
-  line-height: 1.5em;
-}
-.c-footer__cta a {
-  color: #C19D68;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-.c-footer__cta a:hover {
-  text-decoration: underline;
+.c-footer__list-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.65);
 }
 .c-footer__bottom {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  background-color: #141235;
+  color: rgba(255, 255, 255, 0.25);
+  background-color: #ae8548;
 }
 .c-footer__bottom p {
   margin: 0;
   line-height: 1em;
 }
 .c-footer__bottom a {
-  color: white;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.25);
+}
+.c-footer__bottom a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 @media (min-width: 576px) {
   .c-footer__bottom p {
@@ -11208,26 +11207,43 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   margin-bottom: 0.75em;
 }
 .c-footer__nav a {
-  color: white;
+  color: #231F5B;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 .c-footer__nav a:hover {
-  color: #C19D68;
-  text-decoration: underline;
-}
-.c-footer__branding {
-  position: relative;
-  display: block;
-  max-width: 175px;
-  height: auto;
-}
-.c-footer__optin input[type=email] {
-  border: none;
-  border-radius: 0;
-  background-color: transparent;
-  border-bottom: 2px solid #C19D68;
   color: white;
+  text-decoration: none;
+}
+.c-footer__optin input[type=email],
+.c-footer__optin input[type=text] {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+  border-width: 2px;
+  outline: none;
+}
+.c-footer__optin input[type=email]::-moz-placeholder, .c-footer__optin input[type=text]::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1; /* Firefox */
+}
+.c-footer__optin input[type=email]::placeholder,
+.c-footer__optin input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1; /* Firefox */
+}
+.c-footer__optin input[type=email]:-ms-input-placeholder,
+.c-footer__optin input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(255, 255, 255, 0.5);
+}
+.c-footer__optin input[type=email]::-ms-input-placeholder,
+.c-footer__optin input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(255, 255, 255, 0.5);
+}
+.c-footer__optin input[type=email]:focus,
+.c-footer__optin input[type=text]:focus {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
 }
 .c-footer__optin .btn {
   transform: scale(0.8);
@@ -11237,8 +11253,15 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
     transform: none;
   }
 }
+.c-footer__social {
+  transition: all 0.2s ease-in-out;
+  opacity: 0.5;
+}
 .c-footer__social:not(:last-of-type) {
   margin-right: 0.5em;
+}
+.c-footer__social:hover {
+  opacity: 1;
 }
 
 /**
@@ -11286,15 +11309,16 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
  * Use Bootstrap's .btn class for a basic button
  */
 .btn {
+  font-size: 0.75rem;
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1em;
   border-radius: 3em;
   border-width: 2px;
-  padding: 0.75em 1.5em;
+  padding: 1.25em 2em;
 }
 
 .btn-secondary {
@@ -11311,29 +11335,27 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   color: white;
 }
 
-/*
 .btn-arrow {
-	position: relative;
-	padding-right: 2em;
-
-	&:after {
-		content: "";
-		position: absolute;
-		display: block;
-		top: 50%;
-		right: $spacer/1.2;
-		transform: translate(0, -50%);
-		width: 1em;
-		height: .5em;
-		background: url('/assets/icon/arrow-right-blue.svg') right center no-repeat;
-		background-size: contain;
-		@include animate;
-	}
-	&:hover:after {
-		right: $spacer/2;
-	}
+  position: relative;
+  padding-right: 3.5em;
 }
-*/
+.btn-arrow:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 1rem;
+  transform: translate(0, -50%);
+  width: 1.5em;
+  height: 0.75em;
+  background: url("/dist/img/icon-arrow-right-tan.svg") right center no-repeat;
+  background-size: contain;
+  transition: all 0.2s ease-in-out;
+}
+.btn-arrow:hover:after {
+  right: 0.75rem;
+}
+
 .btn-shadow {
   box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.1);
 }
@@ -11383,7 +11405,7 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 .c-block.bg-navy, .c-block.bg-tan, .c-block.bg-primary, .c-block.bg-secondary {
   color: white;
 }
-.c-block.bg-navy h1, .c-block.bg-navy .h1, .c-block.bg-navy h2, .c-block.bg-navy .h2, .c-block.bg-navy h3, .c-block.bg-navy .h3, .c-block.bg-navy .c-footer__subhead, .c-block.bg-navy h4, .c-block.bg-navy .h4, .c-block.bg-navy a:not(.btn), .c-block.bg-tan h1, .c-block.bg-tan .h1, .c-block.bg-tan h2, .c-block.bg-tan .h2, .c-block.bg-tan h3, .c-block.bg-tan .h3, .c-block.bg-tan .c-footer__subhead, .c-block.bg-tan h4, .c-block.bg-tan .h4, .c-block.bg-tan a:not(.btn), .c-block.bg-primary h1, .c-block.bg-primary .h1, .c-block.bg-primary h2, .c-block.bg-primary .h2, .c-block.bg-primary h3, .c-block.bg-primary .h3, .c-block.bg-primary .c-footer__subhead, .c-block.bg-primary h4, .c-block.bg-primary .h4, .c-block.bg-primary a:not(.btn), .c-block.bg-secondary h1, .c-block.bg-secondary .h1, .c-block.bg-secondary h2, .c-block.bg-secondary .h2, .c-block.bg-secondary h3, .c-block.bg-secondary .h3, .c-block.bg-secondary .c-footer__subhead, .c-block.bg-secondary h4, .c-block.bg-secondary .h4, .c-block.bg-secondary a:not(.btn) {
+.c-block.bg-navy h1, .c-block.bg-navy .h1, .c-block.bg-navy h2, .c-block.bg-navy .h2, .c-block.bg-navy h3, .c-block.bg-navy .h3, .c-block.bg-navy h4, .c-block.bg-navy .h4, .c-block.bg-navy a:not(.btn), .c-block.bg-tan h1, .c-block.bg-tan .h1, .c-block.bg-tan h2, .c-block.bg-tan .h2, .c-block.bg-tan h3, .c-block.bg-tan .h3, .c-block.bg-tan h4, .c-block.bg-tan .h4, .c-block.bg-tan a:not(.btn), .c-block.bg-primary h1, .c-block.bg-primary .h1, .c-block.bg-primary h2, .c-block.bg-primary .h2, .c-block.bg-primary h3, .c-block.bg-primary .h3, .c-block.bg-primary h4, .c-block.bg-primary .h4, .c-block.bg-primary a:not(.btn), .c-block.bg-secondary h1, .c-block.bg-secondary .h1, .c-block.bg-secondary h2, .c-block.bg-secondary .h2, .c-block.bg-secondary h3, .c-block.bg-secondary .h3, .c-block.bg-secondary h4, .c-block.bg-secondary .h4, .c-block.bg-secondary a:not(.btn) {
   color: white;
 }
 .c-block.bg-navy .u-color-default, .c-block.bg-tan .u-color-default, .c-block.bg-primary .u-color-default, .c-block.bg-secondary .u-color-default {

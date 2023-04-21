@@ -3,39 +3,26 @@
  */
 @include component('footer') {
 	position: relative;
-	color: white;
-	background-image: linear-gradient(
-		to right, 
-		map-get($theme-colors, 'primary') 0%, 
-		map-get($theme-colors, 'tertiary') 100%);
+	color: map-get($theme-colors, 'primary');
+	background-color: map-get($theme-colors, 'secondary');
 	
-	.h1 {
+	@include element('heading') {
 		line-height: 1em;
+		letter-spacing: .15em;
 	}
-	
-	@include element('subhead') {
-		@extend h3;
-		font-size: 20px;
-		color: white;
-		line-height: 1.5em;
+
+	@include element('list-heading') {
+		text-transform: uppercase;
+		letter-spacing: .15em;
+		color: rgba(white, .65);
 	}
-	
-	@include element('cta') {
-		a {
-			color: map-get($theme-colors, 'secondary');
-			text-decoration: none;
-			@include animate;
-			
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
+
 	
 	@include element('bottom') {
 		padding-top: $gutter/2;
 		padding-bottom: $gutter/2;
-		background-color: darken(map-get($theme-colors, 'primary'), 10%);
+		color: rgba(white, .25);
+		background-color: darken(map-get($theme-colors, 'secondary'), 10%);
 		
 		p {
 			margin: 0;
@@ -43,7 +30,13 @@
 		}
 		
 		a {
-			color: white;
+			@include animate;
+			color: rgba(white, .25);
+
+			&:hover {
+				color: rgba(white, .5);
+				text-decoration: none;
+			}
 		}
 		
 		@include media-breakpoint-up(sm) {
@@ -58,31 +51,43 @@
 			margin-bottom: .75em;
 		}
 		a {
-			color: white;
+			color: map-get($theme-colors, 'primary');
 			text-decoration: none;
 			@include animate;
 			
 			&:hover {
-				color: map-get($theme-colors, 'secondary');
-				text-decoration: underline;
+				color: white;
+				text-decoration: none;
 			}
 		}
 	}
 	
-	@include element('branding') {
-		position: relative;
-		display: block;
-		max-width: 175px;
-		height: auto;
-	}
-	
 	@include element('optin') {
-		input[type="email"] {
-			border: none;
-			border-radius: 0;
-			background-color: transparent;
-			border-bottom: 2px solid map-get($theme-colors, 'secondary');
-			color: white;
+		input[type="email"],
+		input[type="text"] {
+			background-color: rgba(white, .2);
+			border-color: transparent;
+			border-width: 2px;
+			outline: none;
+
+			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+				color: rgba(white, .5);
+				opacity: 1; /* Firefox */
+			}
+			
+			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+				color: rgba(white, .5);
+			}
+			
+			&::-ms-input-placeholder { /* Microsoft Edge */
+				color: rgba(white, .5);
+			}
+
+			&:focus {
+				border-color: white;
+				background-color: rgba(white, .5);
+				box-shadow: none;
+			}
 		}
 		
 		.btn {
@@ -95,8 +100,15 @@
 	}
 	
 	@include element('social') {
+		@include animate;
+		opacity: .5;
+
 		&:not(:last-of-type) {
 			margin-right: .5em;
+		}
+
+		&:hover {
+			opacity: 1;
 		}
 	}
 }
