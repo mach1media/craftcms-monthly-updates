@@ -149,4 +149,47 @@
 			}
 		}
 	}
+
+	@include element('img-link') {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+
+		& > img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: .5;
+			@include animate;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			@include z-1;
+		}
+
+		&:hover > img {
+			opacity: .75;
+		}
+	}
+
+	@include element('description') {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		h2 {
+			text-shadow: 0 0 .25em rgba(black, .25);
+		}
+	}
 }
