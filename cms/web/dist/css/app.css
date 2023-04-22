@@ -11463,6 +11463,27 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 
 /**
+ * HEADING BAR with buttons
+ */
+@media (max-width: 767.98px) {
+  .c-heading-bar {
+    text-align: center;
+  }
+}
+.c-heading-bar__heading {
+  line-height: 1em;
+  letter-spacing: 0.15em;
+}
+@media (max-width: 767.98px) {
+  .c-heading-bar__heading {
+    margin-bottom: 0.75rem;
+  }
+}
+.c-heading-bar__buttons .btn {
+  margin: 0.5rem;
+}
+
+/**
  * IMG TEXT
  */
 .c-img-text__description {

@@ -1,0 +1,24 @@
+/**
+ * HEADING BAR with buttons
+ */
+@include component('heading-bar') {
+	
+	@include media-breakpoint-down(md) {
+		text-align: center;
+	}
+
+	@include element('heading') {
+		line-height: 1em;
+		letter-spacing: 0.15em;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: $gutter/2;
+		}
+	}
+
+	@include element('buttons') {
+		.btn {
+			margin: $gutter/3;
+		}
+	}
+}
