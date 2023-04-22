@@ -274,3 +274,27 @@
 		object-fit: cover;
 	}
 }
+
+//
+// ROUNDED CORNERS ON IMAGES
+//
+@include utility('rounded-top-left') {
+	overflow: hidden;
+	img {
+		border-top-left-radius: $gutter*4;
+
+		@include media-breakpoint-up(sm) {
+			border-top-left-radius: $gutter*8;
+		}
+	}
+}
+@include utility('rounded-top-right') {
+	overflow: hidden;
+	img {
+		border-top-right-radius: $gutter*4;
+
+		@include media-breakpoint-up(sm) {
+			border-top-right-radius: $gutter*8;
+		}
+	}
+}

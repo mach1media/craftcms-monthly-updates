@@ -2,51 +2,31 @@
  * IMG TEXT
  */
 @include component('img-text') {
-	position: relative;
-	
-/*
-	@include element('img') {
-		@include media-breakpoint-up(lg) {
-			overflow: hidden;
-			
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-		}
-	}
-*/
 	
 	@include element('description') {
-		@extend %first-last-child;
-	}
-	
-	//
-	// EDGE BLEED
-	// Image element is anchored to right/left edge of viewport
-	//
-	@include modifier('edge-bleed') {
-		[class*='col-'] {
-			@extend %block-padding; 
+		padding-right: $gutter/2;
+		padding-left: $gutter/2;
+
+		@include media-breakpoint-between(md,lg) {
+			width: map-get($container-max-widths, 'md');
 		}
-		@include media-breakpoint-up(lg) {
-			[class*='col-'] {
-				padding-top: 0;
-				padding-bottom: 0;
-			}
+		@include media-breakpoint-between(lg,xl) {
+			width: map-get($container-max-widths, 'lg') / 2;
+		}
+		@include media-breakpoint-between(xl,xxl) {
+			width: map-get($container-max-widths, 'xl') / 2;
+		}
+		@include media-breakpoint-up(xxl) {
+			width: map-get($container-max-widths, 'xxl') / 2;
 		}
 	}
-	@include element('edge-bleed-content') {
-		@include media-breakpoint-up(md) {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			
-			display: flex;
-			align-items: center;
+
+	@include element('image') {
+		&.start {
+			padding: $gutter $gutter*2 0 0;
+		}
+		&.end {
+			padding: $gutter 0 0 $gutter*2;
 		}
 	}
 }
