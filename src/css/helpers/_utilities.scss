@@ -171,10 +171,36 @@
 // PRE-HEADING
 //
 @include utility('preheading') {
-	@include base-font-semibold;
+	@include base-font;
 	text-transform: uppercase;
 	letter-spacing: .05em;
 	color: map-get($theme-colors, 'secondary');
+}
+
+
+//
+// CHEVRON LINK
+//
+@include utility('link-chevron') {
+	position: relative;
+	display: inline-block;
+	padding-right: 2em;
+	@include base-font;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 1em;
+		height: 1em;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		background: url('/dist/img/icon-chevron-circle-right.svg') center center no-repeat;
+		background-size: contain;
+	}
 }
 
 

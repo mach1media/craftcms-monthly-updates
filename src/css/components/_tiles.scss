@@ -1,0 +1,114 @@
+/**
+ * CTA TILES
+ */
+@include component('tiles') {
+
+	@include element('tile') {
+		position: relative;
+		@include border-radius;
+		background-color: map-get($theme-colors, 'secondary');
+		color: white;
+		@extend %first-last-child;
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+		p, h1, h2, h3 {
+			color: white;
+		}
+
+		.u-preheading {
+			font-size: .75rem;
+			letter-spacing: .1em;
+		}
+
+		[class^="col-"],
+		& > .d-flex {
+			padding: $gutter;
+
+			// @include media-breakpoint-up(md) {
+			// 	padding: $gutter * 1.5;
+			// }
+		}
+
+		@include modifier('wide') {
+			.row {
+				& > [class^="col-"] {
+					@include border-start-radius;
+				}
+			}
+		}
+
+		@include modifier('featured') {
+			background-color: map-get($theme-colors, 'primary');
+		}
+	}
+
+	@include element('home') {
+		display: grid; 
+		grid-template-columns: repeat(4, 1fr); 
+		grid-template-rows: repeat(3, 1fr); 
+		grid-column-gap: 10px;
+		grid-row-gap: 10px; 
+
+		.c-tiles__tile:nth-of-type(1) { grid-area: 1 / 1 / 2 / 3; 
+			background-color: transparent; 
+			p, h1, h2, h3, h4, a {
+				color: map-get($theme-colors, 'primary');
+			}
+		} 
+		.c-tiles__tile:nth-of-type(2) { grid-area: 2 / 1 / 3 / 3; } 
+		.c-tiles__tile:nth-of-type(3) { grid-area: 1 / 3 / 3 / 5; aspect-ratio: 1; } 
+		.c-tiles__tile:nth-of-type(4) { grid-area: 3 / 1 / 4 / 2; aspect-ratio: 1; } 
+		.c-tiles__tile:nth-of-type(5) { grid-area: 3 / 2 / 4 / 3; aspect-ratio: 1; } 
+		.c-tiles__tile:nth-of-type(6) { grid-area: 3 / 3 / 4 / 4; aspect-ratio: 1; } 
+		.c-tiles__tile:nth-of-type(7) { grid-area: 3 / 4 / 4 / 5; aspect-ratio: 1; } 
+	}
+
+	@include element('video-link') {
+		position: absolute;
+		display: block;
+		top: 0;
+		right:0 ;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(map-get($theme-colors, 'secondary'), .1);
+
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 80px;
+			height: 80px;
+			border: 2px solid white;
+			border-radius: 100%;
+			@include z-1;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-45%, -50%) rotate(90deg);
+			@include shape(triangle, 15px, white);
+			@include z-1;
+		}
+
+		& > img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: .5;
+
+			.c-tiles__tile--wide & {
+				@include border-start-radius;
+			}
+		}
+	}
+}
