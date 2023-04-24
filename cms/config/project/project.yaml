@@ -1,4 +1,4 @@
-dateModified: 1681433275
+dateModified: 1682191516
 email:
   fromEmail: roger@mach1media.com
   fromName: TMF
@@ -74,10 +74,10 @@ plugins:
     enabled: true
     schemaVersion: 0.0.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: TMF
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

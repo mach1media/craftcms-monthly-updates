@@ -10816,8 +10816,6 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 .c-header__branding {
   position: relative;
   padding: 0;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
 }
 .c-header__branding img {
   position: relative;
@@ -11588,6 +11586,32 @@ button > .c-icon--search {
 .c-tiles__tile--featured {
   background-color: #231F5B;
 }
+.c-tiles__tile--featured .c-tiles__description {
+  padding: 0;
+}
+.c-tiles__tile--featured .c-tiles__description .u-preheading {
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+.c-tiles__tile--featured .c-tiles__description h2, .c-tiles__tile--featured .c-tiles__description .h2 {
+  padding: 1.5rem;
+}
+@media (min-width: 1200px) {
+  .c-tiles__tile--featured .c-tiles__description h2, .c-tiles__tile--featured .c-tiles__description .h2 {
+    max-width: 50%;
+  }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .c-tiles__tile--featured .c-tiles__description h2, .c-tiles__tile--featured .c-tiles__description .h2 {
+    max-width: 70%;
+  }
+}
+.c-tiles__tile--video img {
+  transition: all 0.2s ease-in-out;
+}
+.c-tiles__tile--video:hover img {
+  opacity: 0.75;
+}
 .c-tiles__home .c-tiles__tile:nth-of-type(1) {
   background-color: transparent;
 }
@@ -11686,14 +11710,14 @@ button > .c-icon--search {
     aspect-ratio: 1;
   }
 }
-.c-tiles__video-link {
+.c-tiles__play-icon {
   display: block;
   background-color: rgba(193, 157, 104, 0.1);
   overflow: hidden;
   aspect-ratio: 1;
 }
 @media (min-width: 576px) {
-  .c-tiles__video-link {
+  .c-tiles__play-icon {
     position: absolute;
     top: 0;
     right: 0;
@@ -11701,7 +11725,7 @@ button > .c-icon--search {
     left: 0;
   }
 }
-.c-tiles__video-link:before {
+.c-tiles__play-icon:before {
   content: "";
   position: absolute;
   display: block;
@@ -11714,7 +11738,7 @@ button > .c-icon--search {
   border-radius: 100%;
   z-index: 100;
 }
-.c-tiles__video-link:after {
+.c-tiles__play-icon:after {
   content: "";
   position: absolute;
   display: block;
@@ -11728,14 +11752,14 @@ button > .c-icon--search {
   border-bottom: 22.5px solid white;
   z-index: 100;
 }
-.c-tiles__video-link > img {
+.c-tiles__play-icon > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.5;
 }
-.c-tiles__tile--wide .c-tiles__video-link > img {
+.c-tiles__tile--wide .c-tiles__play-icon > img {
   border-top-left-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
 }
@@ -11776,4 +11800,83 @@ button > .c-icon--search {
 }
 .c-tiles__description h2, .c-tiles__description .h2 {
   text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+}
+.c-tiles__description-footer {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  line-height: 1em;
+  padding: 1.125rem 1.5rem;
+  background-color: #231F5B;
+}
+.c-tiles__description-footer > span {
+  position: relative;
+  display: inline-block;
+  padding-right: 2em;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.c-tiles__description-footer > span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%) scale(1.5);
+  background: url("/dist/img/icon-chevron-circle-right-white.svg") center center no-repeat;
+  background-size: contain;
+}
+.c-tiles__icon-investments {
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2em;
+  height: 2em;
+  background: url("/dist/img/icon-impact-investing-white.svg") center center no-repeat;
+  background-size: contain;
+}
+.c-tiles__icon-grants {
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2em;
+  height: 2em;
+  background: url("/dist/img/icon-grants-white.svg") center center no-repeat;
+  background-size: contain;
+}
+.c-tiles__icon-area-representatives {
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2em;
+  height: 2em;
+  background: url("/dist/img/icon-area-representatives-white.svg") center center no-repeat;
+  background-size: contain;
+}
+.c-tiles__icon-philanthropy {
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2em;
+  height: 2em;
+  background: url("/dist/img/icon-philanthropy-white.svg") center center no-repeat;
+  background-size: contain;
+}
+.c-tiles__icon-leadership-ministry {
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2em;
+  height: 2em;
+  background: url("/dist/img/icon-leadership-ministry-white.svg") center center no-repeat;
+  background-size: contain;
 }

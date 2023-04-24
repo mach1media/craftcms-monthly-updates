@@ -43,6 +43,37 @@
 
 		@include modifier('featured') {
 			background-color: map-get($theme-colors, 'primary');
+
+			& .c-tiles__description {
+				padding: 0;
+
+				.u-preheading {
+					padding-top: $gutter;
+					padding-left: $gutter;
+				}
+
+				h2 {
+					padding: $gutter;
+
+					@include media-breakpoint-up(xl) {
+						max-width: 50%;
+					}
+					@include media-breakpoint-between(sm, lg) {
+						max-width: 70%;
+					}
+				}
+			}
+		}
+
+		@include modifier('video') {
+			img {
+				@include animate;
+			}
+			&:hover {
+				img {
+					opacity: .75;
+				}
+			}
 		}
 	}
 
@@ -99,7 +130,7 @@
 		}
 	}
 
-	@include element('video-link') {
+	@include element('play-icon') {
 		display: block;
 		background-color: rgba(map-get($theme-colors, 'secondary'), .1);
 		overflow: hidden;
@@ -191,5 +222,85 @@
 		h2 {
 			text-shadow: 0 0 .25em rgba(black, .25);
 		}
+	}
+	@include element('description-footer') {
+		font-size: .85rem;
+		letter-spacing: .1em;
+		line-height: 1em;
+		padding: $gutter * .75 $gutter;
+		background-color: map-get($theme-colors, 'primary');
+
+		& > span {
+			position: relative;
+			display: inline-block;
+			padding-right: 2em;
+			@include base-font;
+			letter-spacing: .05em;
+			text-transform: uppercase;
+
+			&:after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 1em;
+				height: 1em;
+				top: 50%;
+				right: 0;
+				transform: translate(0, -50%) scale(1.5);
+				background: url('/dist/img/icon-chevron-circle-right-white.svg') center center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+
+	@include element('icon-investments') {
+		position: absolute;
+		display: block;
+		top: $gutter;
+		right: $gutter;
+		width: 2em;
+		height: 2em;
+		background: url('/dist/img/icon-impact-investing-white.svg') center center no-repeat;
+		background-size: contain;
+	}
+	@include element('icon-grants') {
+		position: absolute;
+		display: block;
+		top: $gutter;
+		right: $gutter;
+		width: 2em;
+		height: 2em;
+		background: url('/dist/img/icon-grants-white.svg') center center no-repeat;
+		background-size: contain;
+	}
+	@include element('icon-area-representatives') {
+		position: absolute;
+		display: block;
+		top: $gutter;
+		right: $gutter;
+		width: 2em;
+		height: 2em;
+		background: url('/dist/img/icon-area-representatives-white.svg') center center no-repeat;
+		background-size: contain;
+	}
+	@include element('icon-philanthropy') {
+		position: absolute;
+		display: block;
+		top: $gutter;
+		right: $gutter;
+		width: 2em;
+		height: 2em;
+		background: url('/dist/img/icon-philanthropy-white.svg') center center no-repeat;
+		background-size: contain;
+	}
+	@include element('icon-leadership-ministry') {
+		position: absolute;
+		display: block;
+		top: $gutter;
+		right: $gutter;
+		width: 2em;
+		height: 2em;
+		background: url('/dist/img/icon-leadership-ministry-white.svg') center center no-repeat;
+		background-size: contain;
 	}
 }
