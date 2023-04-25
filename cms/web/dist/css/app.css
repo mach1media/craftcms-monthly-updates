@@ -11645,6 +11645,32 @@ button > .c-icon--search {
 .c-tiles__tile [class^=col-], .c-tiles__tile > .d-flex {
   padding: 1.5rem;
 }
+.c-tiles__tile--wide {
+  aspect-ratio: 2/1;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .c-tiles__tile--wide {
+    aspect-ratio: 2.07/1;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .c-tiles__tile--wide {
+    aspect-ratio: 2.06/1;
+  }
+}
+@media (min-width: 1400px) {
+  .c-tiles__tile--wide {
+    aspect-ratio: 2.05/1;
+  }
+}
+.c-tiles__tile--square {
+  aspect-ratio: 2/1;
+}
+@media (min-width: 576px) {
+  .c-tiles__tile--square {
+    aspect-ratio: 1;
+  }
+}
 .c-tiles__tile--featured {
   background-color: #231F5B;
 }
