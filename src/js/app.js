@@ -34,13 +34,24 @@ $(function() {
 	});
 	$(document).click(function(event) { 
 		var $target = $(event.target);
-		if(!$target.closest('.c-header__mega-menu.show').length && 
-		$('.c-header__mega-menu.show').is(":visible")) {
+		if (!$target.closest('.c-header__mega-menu.show').length && $('.c-header__mega-menu.show').is(":visible")) {
+			console.log($target);
 			$('.c-header__mega-menu.show').removeClass('show');
 			$('.js-nav-item').attr('aria-expanded','false');
 		}
 	});
 	
+	// search bar toggle
+	$('.js-modal-search-toggle').click(function(e){
+		e.preventDefault();
+
+		if ($('#search-bar').hasClass('show')) {
+			$('#search-bar').removeClass('show');
+		}
+		else {
+			$('#search-bar').addClass('show');
+		}
+	});
 	
 	// responsive video embeds
 	$(".js-fitvids").fitVids();

@@ -11516,6 +11516,68 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 
 /**
+ * SEARCH MODAL
+ */
+.c-search {
+  position: fixed;
+  top: -50px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  z-index: 1100;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 1400px) {
+  .c-search {
+    top: -110px;
+    height: 110px;
+  }
+}
+.c-search.show {
+  top: 0;
+}
+.c-search button[type=submit] {
+  border: none;
+  width: 3em;
+  background: transparent url("/dist/img/icon-search-white.svg") center center no-repeat;
+}
+@media (max-width: 1399.98px) {
+  .c-search button.js-modal-search-toggle {
+    padding: 0.5em 0.75em !important;
+  }
+}
+.c-search__form {
+  width: 85%;
+}
+.c-search__form input[type=search] {
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  color: #231F5B;
+}
+.c-search__form input[type=search]::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1; /* Firefox */
+}
+.c-search__form input[type=search]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1; /* Firefox */
+}
+.c-search__form input[type=search]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(255, 255, 255, 0.5);
+}
+.c-search__form input[type=search]::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(255, 255, 255, 0.5);
+}
+.c-search__form input[type=search]:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+  box-shadow: none;
+}
+
+/**
  * ICONS
  */
 .c-icon {

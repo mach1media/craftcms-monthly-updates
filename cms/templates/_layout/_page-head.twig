@@ -53,12 +53,7 @@
 				<nav class="c-header__utility">
 					<ul class="nav flex-nowrap">
 						<li class="nav-item" role="presentation">
-							<button class="nav-link btn btn-text p-0" 
-								type="button" 
-								role="tab" 
-								aria-controls="profile-tab-pane" 
-								aria-selected="false" 
-								aria-label="search">
+							<button class="nav-link btn btn-text p-0 js-modal-search-toggle" type="button">
 								<span class="c-icon c-icon--search"></span>
 							</button>
 						</li>
@@ -85,9 +80,7 @@
 	<!-- MOBILE HEADER -->
 	<div class="continaer-fluid d-xxl-none c-header__mobile">
 		<div class="d-flex align-items-center justify-content-between p-1 border-secondary border-bottom">
-			<button class="btn btn-text p-0" 
-				id="search-label"
-				type="button">
+			<button class="btn btn-text p-0 js-modal-search-toggle" type="button">
 				<span class="c-icon c-icon--search"></span>
 			</button>
 			
@@ -207,39 +200,24 @@
 			<div class="col-8 p-5">
 				<div class="row">
 					<div class="col-6">
-						<p class="h5"><a href="">Impact Notes</a></p>
+						<p class="h5"><a href="">Loan Types</a></p>
 						<ul class="mb-5">
-							<li><a href="">Current Rates</a></li>
-							<li><a href="">Churches</a></li>
-							<li><a href="">Clergy</a></li>
-							<li><a href="">Individuals</a></li>
+							<li><a href="">Lorem ipsum dolor</a></li>
+							<li><a href="">Consectetur adipiscing</a></li>
+							<li><a href="">Tempor incididunt</a></li>
 						</ul>
 
-						<p class="h5"><a href="">Investment Resources</a></p>
+						<p class="h5"><a href="">Loan Resources</a></p>
 						<ul>
-							<li><a href="">Weekly Rate Flyer</a></li>
-							<li><a href="">Offering Circular</a></li>
-							<li><a href="">Information Statement</a></li>
-							<li><a href="">2021 Impact Report</a></li>
-							<li><a href="">Audited Financial Statements</a></li>
+							<li><a href="">Massa ultricies</a></li>
+							<li><a href="">Proin sed libero</a></li>
+							<li><a href="">Maecenas accumsan</a></li>
+							<li><a href="">Scelerisque eleifend</a></li>
 						</ul>
 					</div>
 
 					<div class="col-6">
-						<p class="h5"><a href="">Equity & Bond Investments</a></p>
-						<ul class="mb-5">
-							<li><a href="">TMF Balance Portfolio</a></li>
-							<li><a href="">Wespath Funds</a></li>
-						</ul>
-
-						<p class="h5 mb-5"><a href="">Meet The Team</a></p>
-
-						<p class="h5"><a href="">Open an Account</a></p>
-						<ul>
-							<li><a href="">Church or Nonprofit</a></li>
-							<li><a href="">Equity and Bond Investments</a></li>
-							<li><a href="">Individual</a></li>
-						</ul>
+						<p class="h5"><a href="">Apply for a Loan</a></p>
 					</div>
 				</div>
 			</div>
@@ -797,4 +775,16 @@
 			</ul>
 		</div>
 	</div>
+</div>
+
+<!-- SITE SEARCH -->
+<div id="search-bar" class="c-search bg-secondary text-white d-flex align-items-center justify-content-between">
+	<form class="c-search__form">
+		<div class="input-group">
+			<button class="c-search__submit" type="submit" id="modal-search-button" aria-label="search website"></button>
+			<input type="search" class="form-control" placeholder="search our website" aria-label="search website" aria-describedby="modal-search-button">
+		</div>
+	</form>
+
+	<button type="button" class="btn btn-primary js-modal-search-toggle" aria-label="Close"><span class="visually-hidden-selectable">Close</span></button>
 </div>
