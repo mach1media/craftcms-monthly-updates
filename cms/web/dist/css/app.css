@@ -10642,7 +10642,7 @@ textarea.form-control-lg {
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   color: #C19D68;
 }
 
@@ -11575,6 +11575,125 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background-color: rgba(255, 255, 255, 0.3);
   outline: 0;
   box-shadow: none;
+}
+
+/**
+ * VIDEO BLOCK
+ */
+.c-video-block {
+  overflow: hidden;
+}
+.c-video-block__media-wrapper {
+  position: relative;
+}
+.order-2 .c-video-block__media-wrapper:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  left: 30%;
+  background-color: #C19D68;
+}
+.c-video-block__media {
+  position: relative;
+}
+.c-video-block__media:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 100%;
+  z-index: 100;
+}
+.c-video-block__media:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%) rotate(90deg);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 22.5px solid white;
+  z-index: 100;
+}
+
+/**
+ * DATA TABLE
+ */
+.c-data-table__card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1.5rem 1.5rem 160px 1.5rem;
+  background-color: rgba(193, 157, 104, 0.25);
+}
+@media (min-width: 992px) {
+  .c-data-table__card {
+    padding: 3rem 3rem 160px 3rem;
+  }
+}
+.c-data-table__card:before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: url("/dist/img/tile.svg") center center repeat-x;
+  background-size: 80px;
+}
+.c-data-table__card-thumb {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: auto;
+  bottom: 20px;
+  right: 40px;
+  z-index: 100;
+}
+
+/**
+ * ACCORDION
+ */
+.accordion-item {
+  border-left: none;
+  border-right: none;
+}
+
+.accordion-button {
+  border-left: none;
+  border-right: none;
+}
+.accordion-button:hover {
+  color: #C19D68;
+}
+.accordion-button:after {
+  width: 37px;
+  height: 37px;
+  background-image: url("/dist/img/icon-circle-plus.svg");
+  background-repeat: no-repeat;
+  background-size: 37px;
+  transform: none;
+}
+.accordion-button:not(.collapsed) {
+  color: #231F5B;
+  background-color: transparent;
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed):after {
+  transform: none;
+  background-image: url("/dist/img/icon-circle-minus.svg");
 }
 
 /**

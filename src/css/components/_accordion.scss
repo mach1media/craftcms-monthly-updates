@@ -8,16 +8,7 @@
 .accordion-button {
 	border-left: none;
 	border-right: none;
-	@include base-font-semibold;
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: 0.13em;
-	color: map-get($theme-colors, 'primary');
-	//@include animate;
-	
-	//&:not(.collapsed) {
-	//	color: $color-black;
-	//}
+	//@include base-font-semibold;
 	
 	&:hover {
 		color: map-get($theme-colors, 'secondary');
