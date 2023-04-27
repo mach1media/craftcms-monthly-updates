@@ -1,0 +1,32 @@
+/**
+ * BREADCRUMBS
+ */
+@include component('breadcrumb') {
+	@include base-font;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	color: map-get($theme-colors, 'secondary');
+
+	a {
+		color: map-get($theme-colors, 'secondary');
+		text-decoration: none;
+		@include animate;
+
+		&:hover {
+			color: map-get($theme-colors, 'primary');
+			text-decoration: none;
+		}
+
+		&:after {
+			content: "";
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			line-height: 1em;
+			margin-left: .5em;
+			background: url('/dist/img/icon-chevron-right-tan.svg') center center no-repeat;
+			background-size: contain;
+			transform: translate(0, .1em) scale(.8);
+		}
+	}
+}

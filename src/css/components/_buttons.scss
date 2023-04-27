@@ -51,6 +51,11 @@
 	&:hover:after {
 		right: .75rem;
 	}
+
+	&.btn-secondary:hover:after,
+	&.btn-outline-secondary:hover:after {
+		background: url('/dist/img/icon-arrow-right-white.svg') right center no-repeat !important;
+	}
 }
 
 .btn-shadow {
