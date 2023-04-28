@@ -1,0 +1,239 @@
+{#
+ # HOME PAGE
+ #}
+{% extends "_layout/default" %}
+
+{# SET PAGE BODY CLASS #}
+{# {% set bodyClass = "pagehead-nav-bleed" %} #}
+
+{% block content %}
+
+<!-- CONTACT FORM BLOCK -->
+<section class="c-contact">
+	<div class="container">
+		<div class="row justify-content-between g-0">
+			<div class="col-12 col-lg-5 col-xl-4 c-contact__description">
+				<p>
+					<img class="d-block w-50" src="/dist/img/contact-form-preheading-headshots.png" alt="">
+				</p>
+				<h1>Contact Form Block Lorem Ipsum Dolor Sit Amet</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+				<div class="row justify-content-between mt-5">
+					<div class="col-12 col-md-6">
+						<p class="u-preheading">Contact</p>
+						<p>
+							phone: (800) 933-5502<br />
+							Fax: (512) 331-0670
+						</p>
+						<p>
+							<a href="mailto:info@tmf.org">info@tmf.org</a>
+						</p>
+					</div>
+
+					<div class="col-12 col-md-6">
+						<p class="u-preheading">Address</p>
+						<p>
+							11709 Boulder Lane, Ste. 100<br />
+							Austin, TX 78726
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-lg-6 c-contact__form">
+				<h2 class="mb-5">Reach Out</h2>
+
+				<form class="c-form">
+					<div>
+						<div id="fui-contact-mdlatu-p-146" class="" data-index="0" data-id="146" data-fui-page="">
+							<div>
+								<div class="row gx-3 mb-3 ">
+									<div class="col" data-field-handle="fullName" data-field-type="name">
+										<fieldset>
+											<div>
+												<div class="mb-n3">
+													<div class="row gx-3">
+														<div class="col" data-field-handle="prefix" data-field-type="dropdown">
+															<div>
+																<label class="form-label col-form-label visually-hidden" for="fui-contact-mdlatu-fields-fullName-prefix">Prefix</label>
+																<div>
+																	<select id="fui-contact-mdlatu-fields-fullName-prefix" class="form-select" name="fields[fullName][prefix]" autocomplete="honorific-prefix" data-fui-id="contact-fullName-prefix">
+																		<option value="mr">Mr.</option>
+																		<option value="mrs">Mrs.</option>
+																		<option value="ms">Ms.</option>
+																		<option value="miss">Miss.</option>
+																		<option value="mx">Mx.</option>
+																		<option value="dr">Dr.</option>
+																		<option value="prof">Prof.</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+
+														<div class="col" data-field-handle="firstName" data-field-type="single-line-text">
+															<div>
+																<label class="form-label col-form-label visually-hidden" for="fui-contact-mdlatu-fields-fullName-firstName">First Name</label>
+																<div><input type="text" id="fui-contact-mdlatu-fields-fullName-firstName" class="form-control" name="fields[fullName][firstName]" autocomplete="given-name" placeholder="First Name" data-fui-id="contact-fullName-firstName"></div>
+															</div>
+														</div>
+
+														<div class="col" data-field-handle="lastName" data-field-type="single-line-text">
+															<div>
+																<label class="form-label col-form-labe visually-hidden" for="fui-contact-mdlatu-fields-fullName-lastName">Last Name</label>
+																<div><input type="text" id="fui-contact-mdlatu-fields-fullName-lastName" class="form-control" name="fields[fullName][lastName]" autocomplete="family-name" placeholder="Last Name" data-fui-id="contact-fullName-lastName"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="row gx-3 mb-3 ">
+									<div class="col col-12 col-md-6 mb-3 mb-md-0" data-field-handle="email" data-field-type="email-address">
+										<div>
+											<label class="form-label col-form-label visually-hidden" for="fui-contact-mdlatu-fields-email">Email&nbsp;<span aria-hidden="true">*</span></label>
+											<div><input type="email" id="fui-contact-mdlatu-fields-email" class="form-control" name="fields[email]" autocomplete="email" required="" placeholder="Email" data-fui-id="contact-email"></div>
+										</div>
+									</div>
+
+									<div class="col col-12 col-md-6 mb-3 mb-md-0" data-field-handle="phone" data-field-type="phone-number">
+										<div>
+											<label class="form-label col-form-label visually-hidden" for="fui-contact-mdlatu-fields-phone">Phone</label>
+											<div><input type="tel" id="fui-contact-mdlatu-fields-phone" class="form-control" name="fields[phone][number]" autocomplete="tel-national" placeholder="Phone" data-fui-id="contact-phone-number"></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row gx-3 mb-3 ">
+									<div class="col col-12 col-md-4 mb-3 mb-md-0" data-field-handle="churchOrganization" data-field-type="single-line-text">
+										<div>
+											<label class="form-label col-form-label visually-hidden" for="fui-contact-mdlatu-fields-churchOrganization">Organization</label>
+											<div><input type="text" id="fui-contact-mdlatu-fields-churchOrganization" class="form-control" name="fields[churchOrganization]" data-fui-id="contact-churchOrganization" placeholder="Organization"></div>
+										</div>
+									</div>
+
+									<div class="col col-12 col-md-4 mb-3 mb-md-0" data-field-handle="churchCity" data-field-type="single-line-text">
+										<div>
+											<label class="form-label col-form-label visually-hidden" for="fui-contact-mdlatu-fields-churchCity">Organization City</label>
+											<div><input type="text" id="fui-contact-mdlatu-fields-churchCity" class="form-control" name="fields[churchCity]" data-fui-id="contact-churchCity" placeholder="Organization City"></div>
+										</div>
+									</div>
+
+									<div class="col col-12 col-md-4 mb-3 mb-md-0" data-field-handle="churchState" data-field-type="dropdown">
+										<div>
+											<label class="form-label col-form-label visually-hidden" for="fui-contact-mdlatu-fields-churchState">Organization State</label>
+											<div>
+												<select id="fui-contact-mdlatu-fields-churchState" class="form-select" name="fields[churchState]" data-fui-id="contact-churchState">
+													<option value="" selected="">Select an option</option>
+													<option value="Alabama">Alabama</option>
+													<option value="Alaska">Alaska</option>
+													<option value="Arizona">Arizona</option>
+													<option value="Arkansas">Arkansas</option>
+													<option value="California">California</option>
+													<option value="Colorado">Colorado</option>
+													<option value="Connecticut">Connecticut</option>
+													<option value="Delaware">Delaware</option>
+													<option value="Florida">Florida</option>
+													<option value="Georgia">Georgia</option>
+													<option value="Hawaii">Hawaii</option>
+													<option value="Idaho">Idaho</option>
+													<option value="Illinois">Illinois</option>
+													<option value="Indiana">Indiana</option>
+													<option value="Iowa">Iowa</option>
+													<option value="Kansas">Kansas</option>
+													<option value="Kentucky">Kentucky</option>
+													<option value="Louisiana">Louisiana</option>
+													<option value="Maine">Maine</option>
+													<option value="Maryland">Maryland</option>
+													<option value="Massachusetts">Massachusetts</option>
+													<option value="Michigan">Michigan</option>
+													<option value="Minnesota">Minnesota</option>
+													<option value="Mississippi">Mississippi</option>
+													<option value="Missouri">Missouri</option>
+													<option value="Montana">Montana</option>
+													<option value="Nebraska">Nebraska</option>
+													<option value="Nevada">Nevada</option>
+													<option value="New Hampshire">New Hampshire</option>
+													<option value="New Jersey">New Jersey</option>
+													<option value="New Mexico">New Mexico</option>
+													<option value="New York">New York</option>
+													<option value="North Carolina">North Carolina</option>
+													<option value="North Dakota">North Dakota</option>
+													<option value="Ohio">Ohio</option>
+													<option value="Oklahoma">Oklahoma</option>
+													<option value="Oregon">Oregon</option>
+													<option value="Pennsylvania">Pennsylvania</option>
+													<option value="Rhode Island">Rhode Island</option>
+													<option value="South Carolina">South Carolina</option>
+													<option value="South Dakota">South Dakota</option>
+													<option value="Tennessee">Tennessee</option>
+													<option value="Texas">Texas</option>
+													<option value="Utah">Utah</option>
+													<option value="Vermont">Vermont</option>
+													<option value="Virginia">Virginia</option>
+													<option value="Washington">Washington</option>
+													<option value="West Virginia">West Virginia</option>
+													<option value="Wisconsin">Wisconsin</option>
+													<option value="Wyoming">Wyoming</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row gx-3 mb-3 ">
+									<div class="col" data-field-handle="message" data-field-type="multi-line-text">
+										<div>
+											<label class="form-label col-form-label visually-hidden" for="fui-contact-mdlatu-fields-message">Message</label>
+											<div><textarea id="fui-contact-mdlatu-fields-message" placeholder="Message" class="form-control" name="fields[message]" data-fui-id="contact-message"></textarea></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row gx-3 mb-3 ">
+									<div class="col" data-field-handle="optinConsent" data-field-type="checkboxes" data-field-config="[{&quot;module&quot;:&quot;FormieCheckboxRadio&quot;}]">
+										<fieldset>
+											<div>
+												<input type="hidden" name="fields[optinConsent]" value="">
+												<div>
+													<div class="form-check"><input type="checkbox" id="fui-contact-mdlatu-fields-optinConsent-sign-me-up-for-updates" class="form-check-input" name="fields[optinConsent][]" value="Sign me up for updates" data-fui-id="contact-optinConsent-sign-me-up-for-updates"><label class="form-check-label" for="fui-contact-mdlatu-fields-optinConsent-sign-me-up-for-updates">Sign me up for updates</label></div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+							
+							<div class="d-flex justify-content-start mx-n2">
+								<button type="submit" class="btn btn-pill btn-primary btn-arrow mx-2 order-5" data-submit-action="submit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!-- HEADING BAR BLOCK with top border -->
+<section class="c-block border-top border-secondary c-heading-bar">
+	<div class="container">
+		<div class="d-md-flex justify-content-between align-items-center">
+			<h2 class="c-heading-bar__heading text-secondary">Partner in Mission and Make an Impact</h2>
+
+			<div class="c-heading-bar__buttons">
+				<a class="btn btn-primary btn-arrow" href="#">Give Today</a>
+				<a class="btn btn-primary btn-arrow" href="#">Start Investing</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+{% endblock %}

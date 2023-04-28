@@ -3,9 +3,32 @@
  */
 @include component('form') {
 	
-	.form-control:not(textarea) {
+	.form-control,
+	.form-select {
+		border-radius: 0;
+		background-color: transparent;
 		border-top: none;
 		border-right: none;
 		border-left: none;
+		border-color: map-get($theme-colors, 'secondary');
+		color: map-get($theme-colors, 'secondary');
+
+		&:focus {
+			box-shadow: none;
+			background-color: rgba(white, .5);
+		}
+
+		&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: map-get($theme-colors, 'secondary');
+			opacity: 1; /* Firefox */
+		}
+		
+		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color: map-get($theme-colors, 'secondary');
+		}
+		
+		&::-ms-input-placeholder { /* Microsoft Edge */
+			color: map-get($theme-colors, 'secondary');
+		}
 	}
 }

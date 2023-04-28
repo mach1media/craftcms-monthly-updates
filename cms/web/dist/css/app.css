@@ -10299,12 +10299,12 @@ textarea.form-control-lg {
 /**
  * PLACEHOLDERS
  */
-.c-block {
+.c-contact__form, .c-contact__description, .c-block {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 @media (min-width: 576px) {
-  .c-block {
+  .c-contact__form, .c-contact__description, .c-block {
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
   }
@@ -12131,4 +12131,79 @@ button > .c-icon--search {
   height: 2em;
   background: url("/dist/img/icon-leadership-ministry-white.svg") center center no-repeat;
   background-size: contain;
+}
+
+/**
+ * CONTACT BLOCK
+ */
+.c-contact {
+  overflow: hidden;
+}
+.c-contact__form {
+  position: relative;
+  background: #f5efe7;
+}
+.c-contact__form:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  width: 300%;
+  background-color: #f5efe7;
+}
+.c-contact__form:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 100%;
+  bottom: 0;
+  width: 300%;
+  background-color: #f5efe7;
+}
+@media (min-width: 992px) {
+  .c-contact__form {
+    padding-left: 4.5rem;
+  }
+  .c-contact__form:before {
+    display: none;
+  }
+}
+
+/**
+ * FORM
+ */
+.c-form .form-control,
+.c-form .form-select {
+  border-radius: 0;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: #C19D68;
+  color: #C19D68;
+}
+.c-form .form-control:focus,
+.c-form .form-select:focus {
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.c-form .form-control::-moz-placeholder, .c-form .form-select::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #C19D68;
+  opacity: 1; /* Firefox */
+}
+.c-form .form-control::placeholder,
+.c-form .form-select::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #C19D68;
+  opacity: 1; /* Firefox */
+}
+.c-form .form-control:-ms-input-placeholder,
+.c-form .form-select:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #C19D68;
+}
+.c-form .form-control::-ms-input-placeholder,
+.c-form .form-select::-ms-input-placeholder { /* Microsoft Edge */
+  color: #C19D68;
 }

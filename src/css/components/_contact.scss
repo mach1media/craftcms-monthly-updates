@@ -2,10 +2,45 @@
  * CONTACT BLOCK
  */
 @include component('contact') {
-	padding: $gutter;
+	overflow: hidden;
 	
-	@include media-breakpoint-up(sm) {
-		padding-top: $gutter*3;
-		padding-bottom: $gutter*3;
+
+	@include element('description') {
+		@extend %block-padding;
+	}
+
+	@include element('form') {
+		position: relative;
+		@extend %block-padding;
+		background: map-get($theme-colors, 'secondary-extralight');
+
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 0;
+			right: 100%;
+			bottom: 0;
+			width: 300%;
+			background-color: map-get($theme-colors, 'secondary-extralight');
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 100%;
+			bottom: 0;
+			width: 300%;
+			background-color: map-get($theme-colors, 'secondary-extralight');
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding-left: $gutter*3;
+
+			&:before {
+				display: none;
+			}
+		}
 	}
 }
