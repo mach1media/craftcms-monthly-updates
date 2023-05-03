@@ -1,15 +1,288 @@
-dateModified: 1682191516
+dateModified: 1683140289
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - section
+        - type
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: singles
+      tableAttributes:
+        - link
+      type: native
+    -
+      heading: Navigation
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+      tableAttributes:
+        - type
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+      tableAttributes:
+        - uri
+        - type
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+      tableAttributes:
+        - postDate
+        - author
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+      tableAttributes:
+        - postDate
+        - author
+        - link
+      type: native
 email:
-  fromEmail: roger@mach1media.com
-  fromName: TMF
+  fromEmail: jmitchell@tmf-fdn.org
+  fromName: 'Texas Methodist Foundation'
+  replyToEmail: jmitchell@tmf-fdn.org
+  template: ''
+  transportSettings:
+    command: '/usr/sbin/sendmail -bs'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  documents:
+    hasUrls: true
+    name: Documents
+    settings:
+      path: '@webroot/uploads/docs'
+    type: craft\fs\Local
+    url: /uploads/docs/
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/uploads/images'
+    type: craft\fs\Local
+    url: /uploads/images/
+  transforms:
+    hasUrls: true
+    name: Transforms
+    settings:
+      path: '@webroot/uploads/transforms'
+    type: craft\fs\Local
+    url: /uploads/transforms/
+  videos:
+    hasUrls: false
+    name: Videos
+    settings:
+      path: '@webroot/uploads/videos'
+    type: craft\fs\Local
+    url: null
 meta:
   __names__:
+    0b2d797a-1a89-4e24-8ef6-9d5d39a5d548: 'Select Fields' # Select Fields
+    0ba00a47-4ce1-4c02-a3ca-61119f702d8d: 'Mega Menu: Links' # Mega Menu: Links
+    0d19f0b1-727c-4654-9f11-09b986093f3d: 'CTA Link' # CTA Link
+    0d346e5c-0f60-4911-9492-f7c3c2b17328: Label # Label
+    0e20b322-d191-4a5f-b3df-37ba66888043: 'Social Icons' # Social Icons
+    1a59398d-6900-4df1-a904-341d0b1c005c: 'CTA Tiles' # CTA Tiles
+    1fc01eb4-e3aa-4109-b017-9a4357415660: Form # Form
+    2bd2d918-16fc-4147-9b16-0a5c2a448d3e: 'Label: Custom' # Label: Custom
+    2f76bca5-2eaf-4262-8c5d-edb7401cc84f: Video # Video
+    3b6ab5b3-228a-4f9a-b6ba-5958d0d9daf2: 'Icon: Custom' # Icon: Custom
+    3b51443f-4e3e-4232-8ca5-f70fda28a3c2: Link # Link
+    3d088ba7-2012-45f1-8454-ccf6895bd50b: 'Home: Square Tiles' # Home: Square Tiles
     3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF # TMF
+    3dd8a012-e0af-46a4-a906-a538bd2c6a64: Style # Style
+    3e2c33e8-dd58-40f6-bb8b-ee1504d3711e: 'Navigation Menu' # Navigation Menu
+    4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd: Media # Media
+    4cf16f08-8357-449b-a33e-172385d1c66e: 'CTA Link' # CTA Link
+    04cfb406-f722-44ab-8bcf-9bdc925cd5d8: 'Heading+Button Bar' # Heading+Button Bar
+    4d7096da-e00f-4539-976f-2ab6e40967b7: Thumbnail # Thumbnail
+    4f1a3081-cb03-47eb-b862-638e1b362e22: 'Image Position [L|R]' # Image Position [L|R]
+    4fea1dfb-b830-4129-bfa9-b72c6f184fef: 'Link to Page' # Link to Page
+    5a4d2142-edd7-4628-9ce3-353689734632: Dropdown # Dropdown
+    005b0010-da6f-4cab-a5df-5047ecc802b0: General # General
     5cf2d429-9442-49de-b0fb-aaaec557b2cd: TMF # TMF
+    5d256d74-c235-43c7-aa5c-7df02909be2a: Heading # Heading
+    5ecdb404-4694-4031-a4a8-b1a523c6d775: Label # Label
+    6a0d0683-24f8-47d9-b693-069ad30f6a5d: 'Matrix Fields' # Matrix Fields
+    6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c: Heading # Heading
+    6b8077d5-b074-4ffc-8cba-4946fd5d9a35: 'Img+Text Header' # Img+Text Header
+    6caec3d2-766a-490b-9491-7b784243b1d4: 'Mega Menu: CTAs' # Mega Menu: CTAs
+    6ed354ea-1804-41ca-a57f-9e843614ea4a: General # General
+    6eef926d-daad-4ff8-9cce-8ececaa4dcf4: Description # Description
+    6eeff1eb-96ce-43ab-911f-a6e7aa97139e: Heading # Heading
+    6f769974-aa7c-451e-85dc-681b49af0e84: 'Responsive: Medium' # Responsive: Medium
+    7a533a82-4f0f-4e24-b8e2-f37bb95a4b06: Thumbnail # Thumbnail
+    07a87980-eb4d-4710-896e-772170d1d21d: 'Section Settings' # Section Settings
+    7e96a64e-53b0-4605-98b2-53710eb1c5bf: Media # Media
+    7f134341-6c01-4975-9ea9-60df3c3dd5f0: Image # Image
+    08a4604d-4fdb-476b-b82c-88ef59973d9e: 'Label: Custom' # Label: Custom
+    8cccdb1c-6473-404a-9289-b9a52343d552: 'Label: Custom' # Label: Custom
+    8cf524a9-c788-4109-8c27-b973b5da1c8b: Image # Image
+    8d53efd7-98eb-40ec-a000-4b904766072d: Button # Button
+    8f655278-2023-4da0-a4d7-64814ef5c669: 'CTA Tiles' # CTA Tiles
+    9d7fafd1-35d2-468a-929a-b88e876f64e2: Email # Email
+    9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa: Link # Link
+    12a86971-9af3-496d-9a73-1f277506afaa: 'Padding: Sides' # Padding: Sides
+    13c74871-8a4f-4e3d-9caf-998a4119ec36: 'Text Link' # Text Link
+    17fcc0b6-4e93-425f-9380-11c07300553d: Buttons # Buttons
+    19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a: General # General
+    24a26f70-67f3-45a7-8828-d33f091c1508: 'Home: Tile - Wide' # Home: Tile - Wide
+    28a04878-3d6a-4889-ad36-87cce2dd449e: 'Padding: Top' # Padding: Top
+    31f2b911-731f-42b5-84c6-4b2777260f2f: 'Section Heading' # Section Heading
+    38b1109c-b2b4-4a24-8273-95f4885fdbbe: Label # Label
+    38f59447-9f79-465c-96fc-aba9497a5d04: 'Large | Small | Small' # Large | Small | Small
+    040d7db9-375b-4b41-989d-2e38c47b90f6: 'Padding: Bottom' # Padding: Bottom
+    40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link # Link
+    49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
+    55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
+    69a66c94-0c41-4248-949e-0b52659f8c9e: 'Dropdown Links' # Dropdown Links
+    74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
+    91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
+    92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages # Pages
+    160cd5ce-bdfd-4507-b851-369a31a5bbb6: Label # Label
+    283a58a7-7d64-4ce3-96c6-6a2fe93bf942: 'Embed Code' # Embed Code
+    403b04cf-f24a-4706-8842-0ecd144931b6: Label # Label
+    431ce2c5-de63-4209-b6b9-a5a836a67d82: 'Home Page Fields' # Home Page Fields
+    449b0c4e-c289-419e-bc2c-ac1a03c1a3c2: 'Background Photo' # Background Photo
+    489ff905-09c2-4e5b-a990-e00ceda4050e: Tile # Tile
+    517cdef8-d041-4ff8-857b-21f4f518180b: 'CTA Link' # CTA Link
+    543e6694-6bf5-44ed-936b-11dd6e5ae656: 'Image Tile' # Image Tile
+    643e4c17-f296-47ae-8806-45847ebda838: 'Pre Heading' # Pre Heading
+    704cc16d-0736-4a6b-8d40-f267fd9ae8f9: 'Lead Block' # Lead Block
+    838ea19b-287d-4d04-bf6e-bce6a0de9c66: 'Dropdown Link' # Dropdown Link
+    853a2eb8-d408-4486-afc1-8e24fd201174: Alignment # Alignment
+    865ca38f-50ad-4e67-9a95-bd05ae709908: 'Embed Code' # Embed Code
+    0914ee96-13fc-4737-ae93-8ab00d611b35: 'Page Builder: Blog' # Page Builder: Blog
+    0990fff1-3f3d-49e5-a5b1-afdeb683d20e: 'CTA Tile: Large' # CTA Tile: Large
+    1174bd31-94ac-4b8b-9fd9-b003f12684ae: 'Data Table' # Data Table
+    01903d5e-0af8-4625-91a8-6d55351c5ec3: 'Video+Text Block' # Video+Text Block
+    2160ef32-2844-4834-a6c8-c374a3efa675: 'Link Fields' # Link Fields
+    3030cab8-78a4-43c1-965d-edcb8d53848e: 'Contact Form Block' # Contact Form Block
+    6552f23c-7f92-493a-bd10-b47693edab05: 'Column: Image' # Column: Image
+    9030c997-69e7-4a71-b846-fdadd3c6112f: Heading # Heading
+    13815e4c-247f-4715-b11d-7d23e38f23a4: 'Mega Menu' # Mega Menu
+    0014573b-36a9-48c6-b523-64fbabf469f2: 'Button Style' # Button Style
+    18834ccd-54b8-4774-a03c-b16f65a84197: Thumbnail # Thumbnail
+    23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8: 'Page Header' # Page Header
+    32847f30-97a7-46a4-aa8a-1d662159da7d: 'Link to Asset' # Link to Asset
+    34324a9e-7ce8-4902-8508-1d7046c34d97: 'Board Members' # Board Members
+    048761f8-a826-44ed-ad18-7137532f8c0a: 'Dropdown Link' # Dropdown Link
+    54632eea-be0d-432e-9b18-64f95cdb3ddc: 'Lead Block' # Lead Block
+    72143de2-34b2-4912-87dc-02d8eb4a1a0f: News # News
+    86898b1e-5316-4337-9b1b-3b0b541bdf37: 'CTA Block' # CTA Block
+    98126def-cd93-43c8-b0eb-eafba4c890e0: 'Large | Small | Small' # Large | Small | Small
+    251036cc-4dfd-4b0f-9823-b109a413bd0b: Image # Image
+    312692fe-0d39-45bc-889d-f49efeaa0dc0: 'Column: Image' # Column: Image
+    356681f1-6b5a-48fb-94b8-d856247a3b67: Tile # Tile
     424904af-03e0-49ac-aabf-921f78be4c4e: New # New
+    972197b6-eda9-4a11-a983-eb2cb09bada3: Accordion # Accordion
+    7393216b-9c58-4d00-9d10-ebbc0ca2130b: Accordion # Accordion
+    37449807-b7fe-4e44-bc5d-f3469359b775: Heading # Heading
+    54458965-37a8-4b1e-839f-f19934f7a8e3: 'Img+Text Block' # Img+Text Block
+    56133272-2baa-403c-9702-0c006d9c3676: 'Accordion Items' # Accordion Items
+    a1c959ad-0f2a-4fc4-8654-11be8c04b62f: Tile # Tile
+    a6fd1543-ece4-4710-ad3b-195db37614a1: CTA # CTA
+    a9e9ac13-8b36-4627-b8f4-43f5e99aede5: 'Responsive: Large' # Responsive: Large
     a40a3743-3dbc-48e7-a8cd-0196dd8021df: Common # Common
+    a60f746d-4da8-4419-876b-782449ea1381: Form # Form
+    a7681ee3-3f28-4c6f-9cb3-453e519368ae: Documents # Documents
+    aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e: Pre-heading # Pre-heading
+    aa96dc63-49ff-4c1a-89df-d34525227436: 'Embed Code' # Embed Code
+    aa92801f-a617-4884-96f7-2f325db59d9e: 'Element Fields' # Element Fields
+    ab7e2d93-36c3-4838-bcb0-b9378b70308a: Heading # Heading
+    ab39e5a8-9059-4669-8998-c898c3c7ed89: Heading # Heading
+    ad9d8d2b-1080-4917-ae1e-3a6d6460fd11: 'Favicon File' # Favicon File
+    ae512cd8-d6a4-49a2-b185-8ba40a87fc1e: Images # Images
+    aec4cf66-3af8-44c6-ba81-0ebbf0e6c837: Homepage # Homepage
+    aec4351f-8a70-4278-9846-54ad19f795fc: 'Icon: Custom' # Icon: Custom
+    aed0fd2d-f074-485f-b1f7-4c8ef97e91cc: Arrow # Arrow
+    b00ccfa2-369c-471f-ae02-ae5ed2a9bae6: Thumbnail # Thumbnail
+    b070c34a-c1d0-4e63-ad06-862e534e4843: 'Square: 600' # Square: 600
+    b5e2bd07-e195-4564-94a1-74ce51723188: 'Link Group' # Link Group
+    b6b4cc71-d295-40ea-a6fc-c7b67ec1a6c4: Columns # Columns
+    b99b6148-253d-4660-ac78-eaf2703b3856: 'Image: Mobile' # Image: Mobile
+    b456d0e0-6918-43cd-82ff-a4eacd5f33cd: 'Responsive: Small' # Responsive: Small
+    ba00da73-87ef-49e2-b1ed-2160ae5e4857: Homepage # Homepage
+    baddf677-8996-4c34-b436-ea8341d9bed3: Heading # Heading
+    bb9e3568-5ca9-4a9a-8534-c5e97ea203d7: 'Icon: Custom' # Icon: Custom
+    be37b343-87c7-4b21-8965-829e7c555685: 'Video Tile' # Video Tile
+    be950c11-5fd5-43e5-962d-aa30d3dd2834: Form # Form
+    bf0e4db0-9861-4bba-b0d0-98bafe12bc6c: 'Page Builders' # Page Builders
+    c1d10006-9965-425c-961a-e3bd34a9f34c: 'Column: Text' # Column: Text
+    c13a4a02-215c-406f-8eb0-6aaca8403db8: 'CTA Link' # CTA Link
+    c67bfc40-e256-429b-8bc2-bf32fdbf8e43: 'Home: Intro' # Home: Intro
+    c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: Label # Label
+    c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link' # CTA Link
+    c937445d-2edd-4336-b195-241254cef98a: 'Icon: Custom' # Icon: Custom
+    cdb162a5-f0d2-429b-b5ac-588fc77a48da: Summary # Summary
+    ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop' # Image: Desktop
+    cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption # Caption
+    d2cf84b8-da42-48ed-9ffa-4f93da867f96: 'Text Link' # Text Link
+    d3ccac65-2f19-4621-b98f-cb5f46bf796d: 'Home: Feature Tile' # Home: Feature Tile
+    d4a66aad-fd77-4abe-97e2-a01cabc77bac: Description # Description
+    d5a26941-e90f-43b4-8e8b-b34c12674c8b: 'Column: Text' # Column: Text
+    d5b3ab4a-0901-4e78-ab46-45130ae47282: Blog # Blog
+    d33d4fab-55e7-446f-8972-f4676b5ee14a: Heading # Heading
+    d46a26f8-acd0-4f06-8f57-f8e755cbcddb: Label # Label
+    d1801112-12c8-4cf2-aaea-f0154e2d39a3: News # News
+    dbd3cd32-4e50-4ba5-8894-bbf8b63b3278: 'Mega Menu Fields' # Mega Menu Fields
+    dc0ed69d-1dd6-496a-ab73-dea06d776bc0: Heading # Heading
+    dc757580-d89c-4eb2-8e98-f03470f73495: Columns # Columns
+    dd3266ad-0d93-46fc-89f3-e57ebce2178c: Videos # Videos
+    dd9615db-bd5d-4050-9139-1b6174979ce8: Phone # Phone
+    dfbc0047-f74f-4940-baf3-7f9402fc918e: 'Background Color' # Background Color
+    e03100b7-f50b-4daf-9652-85e6e60138a8: Pages # Pages
+    e1cb6898-debf-4b78-bbb2-440b65278382: 'Small | Small | Large' # Small | Small | Large
+    e32da315-685c-424c-8b52-95706a2d1026: 'Centered Text' # Centered Text
     e96bcdab-a9b7-4e6d-b220-57bf0ce7b15f: 'Contact Form' # Contact Form
+    e359f1b1-385c-4017-9823-ab7e63cd7efe: Citation # Citation
+    e636fe1a-91ea-493b-81c8-354c9c08220f: 'Items Per Row' # Items Per Row
+    e11568a1-11e3-4147-ae18-1ff01fdcd4f7: 'CTA Tile: Small' # CTA Tile: Small
+    e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item' # Accordion Item
+    e545221b-a425-4bf5-adef-30e8193f800d: Image # Image
+    efb726bf-a523-4889-94d6-8865ebb534d9: 'Small | Small | Large' # Small | Small | Large
+    f06a4480-f195-4705-bd40-a33a08e72d0f: Images # Images
+    f69cfc32-4011-4eea-a32a-f5ae9fd5b24e: 'Page Builder: General' # Page Builder: General
+    f6513c96-9a09-43f8-b901-27de58e1f28e: Blog # Blog
+    f126506f-a32d-40b2-9d16-466e4201be40: Label # Label
+    fae047fe-30da-49d5-b8da-b1d6adafd530: 'Label: Custom' # Label: Custom
+    fae55152-701b-4c22-9f50-453a213e9e05: Size # Size
+    fb633af9-99e4-499c-b90f-60a8039f3046: 'Text Alignment' # Text Alignment
+    fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0: 'Text Fields' # Text Fields
 plugins:
   config-values-field:
     edition: standard
@@ -32,6 +305,222 @@ plugins:
     enabled: true
     licenseKey: BCK6Q291W0TCF0LWBUSFZ08Q
     schemaVersion: 2.0.10
+    settings:
+      ajaxTimeout: 10
+      alertEmails: null
+      captchas:
+        __assoc__:
+          -
+            - recaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Recaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - recaptcha
+                      3:
+                        - type
+                        - v3
+                      4:
+                        - size
+                        - normal
+                      5:
+                        - theme
+                        - light
+                      6:
+                        - badge
+                        - bottomright
+                      7:
+                        - language
+                        - en
+                      8:
+                        - minScore
+                        - 0.5
+                      10:
+                        - scriptLoadingMethod
+                        - asyncDefer
+          -
+            - hcaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Hcaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - hcaptcha
+                      3:
+                        - size
+                        - normal
+                      4:
+                        - theme
+                        - light
+                      5:
+                        - language
+                        - en
+                      6:
+                        - minScore
+                        - 0.5
+                      7:
+                        - scriptLoadingMethod
+                        - asyncDefer
+          -
+            - friendlyCaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\FriendlyCaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - friendlyCaptcha
+          -
+            - turnstile
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Turnstile
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - turnstile
+                      3:
+                        - scriptLoadingMethod
+                        - asyncDefer
+          -
+            - duplicate
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Duplicate
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - duplicate
+          -
+            - honeypot
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Honeypot
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - honeypot
+          -
+            - javascript
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Javascript
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - javascript
+      defaultDateDisplayType: calendar
+      defaultDateTime: null
+      defaultDateValueOption: ''
+      defaultEmailTemplate: ''
+      defaultFileUploadVolume: ''
+      defaultFormTemplate: ''
+      defaultInstructionsPosition: verbb\formie\positions\AboveInput
+      defaultLabelPosition: verbb\formie\positions\AboveInput
+      defaultPage: submissions
+      emptyValuePlaceholder: 'No response.'
+      enableBackSubmission: true
+      enableCsrfValidationForGuests: true
+      enableLargeFieldStorage: false
+      enableUnloadWarning: true
+      includeDraftElementUsage: false
+      includeRevisionElementUsage: false
+      maxIncompleteSubmissionAge: 30
+      maxSentNotificationsAge: 30
+      pdfPaperOrientation: portrait
+      pdfPaperSize: letter
+      pluginName: Formie
+      queuePriority: null
+      saveSpam: true
+      sendEmailAlerts: false
+      sentNotifications: true
+      spamBehaviour: showSuccess
+      spamBehaviourMessage: ''
+      spamEmailNotifications: false
+      spamKeywords: ''
+      spamLimit: 500
+      useQueueForIntegrations: true
+      useQueueForNotifications: true
   neo:
     edition: standard
     enabled: true

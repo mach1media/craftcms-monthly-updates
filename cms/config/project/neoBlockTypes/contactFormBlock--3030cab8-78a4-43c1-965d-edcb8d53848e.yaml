@@ -1,0 +1,72 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+fieldLayouts:
+  a357d2c4-41ba-46fe-b9a6-05f72b346779:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Contact form will be shown to the right of this text description.'
+            type: craft\fieldlayoutelements\Tip
+            uid: 014fadda-7061-429c-a500-92d3c36eb29f
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87022131-e4c4-4a1e-b074-79ca8f86727e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57c0aa3e-e972-4914-bf36-79e1e0d80682
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0e1002a0-bd1e-4fae-9982-3d7631c9d34f
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Text Description'
+        uid: 85fc8dce-0fe3-4b14-98fe-7945e7f1d489
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: contactFormBlock
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Contact Form Block'
+sortOrder: 16
+topLevel: true

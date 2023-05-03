@@ -1,0 +1,88 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
+fieldLayouts:
+  a3571b19-4ed1-41ac-8459-9a56971c39fb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a921a12-b984-4b32-82aa-907e053af4e3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa10b9a0-7591-4072-b55d-a5a376552b7b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e55eb5b3-3068-468c-91ad-9f692a6c75c6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b46897af-656f-4e59-b4aa-31e07f17c705
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 777c88d2-b1f5-46bf-9e0f-9af705ffa03e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Column
+        uid: bfd3e69d-f2e0-442e-b8be-e781814e5330
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: columnText
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Column: Text'
+sortOrder: 5
+topLevel: false

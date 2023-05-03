@@ -10,11 +10,10 @@
 {# = = = = = = = = = SECTION STYLES = = = = = = = = = = = #}
 {% set sectionStyleClasses = [] %}
 
-{#
 {% if block.backgroundColor is defined and block.backgroundColor != 'none' %}
-	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--' ~ block.backgroundColor]) %}
+	{% set sectionStyleClasses = sectionStyleClasses|merge([block.backgroundColor]) %}
 {% endif %}
-#}
+
 {% if block.paddingTop is defined and block.paddingTop != '1' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-top']) %}
 {% endif %}

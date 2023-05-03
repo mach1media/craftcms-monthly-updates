@@ -3290,7 +3290,7 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary {
+.btn-primary, .btn-default {
   --bs-btn-color: #fff;
   --bs-btn-bg: #231F5B;
   --bs-btn-border-color: #231F5B;
@@ -3579,7 +3579,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #C19D68;
 }
 
-.btn-outline-primary {
+.btn-outline-primary, .btn-outline-default {
   --bs-btn-color: #231F5B;
   --bs-btn-border-color: #231F5B;
   --bs-btn-hover-color: #fff;

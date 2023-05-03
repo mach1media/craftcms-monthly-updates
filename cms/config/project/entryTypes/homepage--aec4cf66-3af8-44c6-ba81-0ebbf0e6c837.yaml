@@ -1,0 +1,109 @@
+fieldLayouts:
+  1e5594dd-cdeb-4f9c-9619-d81d77b1a225:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 92127fde-ff38-4830-9324-553067cc66bd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c67bfc40-e256-429b-8bc2-bf32fdbf8e43 # Home: Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 833aaedc-a670-4990-90a7-41694f0130b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d3ccac65-2f19-4621-b98f-cb5f46bf796d # Home: Feature Tile
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 627fac0a-0ab5-4a77-8801-050f306182ab
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 24a26f70-67f3-45a7-8828-d33f091c1508 # Home: Tile - Wide
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e9f8551-5b9e-440c-abb6-ed6bb67b5442
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3d088ba7-2012-45f1-8454-ccf6895bd50b # Home: Square Tiles
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 43b41e99-1fab-4839-93d7-d8256b4da4cf
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Page Header'
+        uid: 2c7f424f-91b9-46c7-84f8-4ff19f631765
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c793dd81-05fb-4fb2-adbf-7123e3a56998
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Page Builder'
+        uid: 07c67ff5-b047-43ba-9eef-ea7d79d7aea1
+        userCondition: null
+handle: homepage
+hasTitleField: false
+name: Homepage
+section: ba00da73-87ef-49e2-b1ed-2160ae5e4857 # Homepage
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

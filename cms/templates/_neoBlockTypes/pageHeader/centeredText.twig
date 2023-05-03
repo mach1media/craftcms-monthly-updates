@@ -1,0 +1,25 @@
+{##
+ # NEO BLOCK TYPE: PAGE HEADER: PODCASTS
+ #}
+<section>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10 col-md-8 col-lg-7 col-xl-6 text-center">
+				<p class="c-breadcrumb">
+					{% for ancestor in entry.ancestors %}
+						<a href="{{ ancestor.url }}">{{ ancestor.title }}</a>
+					{% endfor %}
+					{{ entry.title }}
+				</p>
+				
+				<h1>{{ block.heading != '' block.heading : entry.title }}</h1>
+				
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg">{{ block.description }}</div>
+				{% endif %}
+
+				{% include "_fields/buttons" with {'buttons': block.buttons} %}
+			</div>
+		</div>
+	</div>
+</section>

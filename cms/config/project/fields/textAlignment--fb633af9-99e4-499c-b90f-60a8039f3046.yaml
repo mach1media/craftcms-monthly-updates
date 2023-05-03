@@ -1,0 +1,45 @@
+columnSuffix: nafufeyw
+contentColumnType: string
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
+handle: textAlignment
+instructions: null
+name: 'Text Alignment'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - left
+        -
+          - default
+          - 1
+    -
+      __assoc__:
+        -
+          - label
+          - Center
+        -
+          - value
+          - center
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Right
+        -
+          - value
+          - right
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,0 +1,32 @@
+columnSuffix: arqjmnef
+contentColumnType: string
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
+handle: imagePositionLR
+instructions: null
+name: 'Image Position [L|R]'
+searchable: false
+settings:
+  default: ''
+  options:
+    __assoc__:
+      -
+        - left
+        - '1'
+      -
+        - center
+        - ''
+      -
+        - right
+        - '1'
+      -
+        - full
+        - ''
+      -
+        - drop-left
+        - ''
+      -
+        - drop-right
+        - ''
+translationKeyFormat: null
+translationMethod: none
+type: rias\positionfieldtype\fields\Position

@@ -1,0 +1,140 @@
+changedFieldIndicator: 1790467734
+field: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
+fieldLayouts:
+  f5e410bb-9ab8-4e93-b35c-b34f3dcfc610:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 55bd2a63-aca2-431f-bdc7-c44414ac0418 # Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22dc290a-e6c6-4d13-8106-687d1021c4cb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3dd8a012-e0af-46a4-a906-a538bd2c6a64 # Style
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e978eff-bab4-4525-9adc-23dbd0b33874
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aed0fd2d-f074-485f-b1f7-4c8ef97e91cc # Arrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2d052ea5-4f62-4e0c-845a-cdb504aa38cf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: aecde2d4-8aa8-4c00-9378-f6c9a101f611
+        userCondition: null
+fields:
+  3dd8a012-e0af-46a4-a906-a538bd2c6a64: # Style
+    columnSuffix: gukpxksf
+    contentColumnType: string
+    fieldGroup: null
+    handle: btnStyle
+    instructions: null
+    name: Style
+    searchable: false
+    settings:
+      dataSet: 'Button Style'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  55bd2a63-aca2-431f-bdc7-c44414ac0418: # Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: btnLink
+    instructions: null
+    name: Link
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: true
+      customTextMaxLength: 0
+      customTextRequired: true
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  aed0fd2d-f074-485f-b1f7-4c8ef97e91cc: # Arrow
+    columnSuffix: cgjmpefi
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: arrow
+    instructions: null
+    name: Arrow
+    searchable: false
+    settings:
+      default: false
+      offLabel: 'No'
+      onLabel: 'Yes'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch

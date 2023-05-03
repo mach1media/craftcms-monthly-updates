@@ -1,0 +1,58 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 431ce2c5-de63-4209-b6b9-a5a836a67d82 # Home Page Fields
+handle: homeFeatureTile
+instructions: null
+name: 'Home: Feature Tile'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 50401739
+  columns:
+    __assoc__:
+      -
+        - f126506f-a32d-40b2-9d16-466e4201be40 # Label
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2bd2d918-16fc-4147-9b16-0a5c2a448d3e # Label: Custom
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - bb9e3568-5ca9-4a9a-8534-c5e97ea203d7 # Icon: Custom
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - dc0ed69d-1dd6-496a-ab73-dea06d776bc0 # Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 4cf16f08-8357-449b-a33e-172385d1c66e # CTA Link
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_homefeaturetile}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: 'Add a Feature Tile'
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

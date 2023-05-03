@@ -1,0 +1,14 @@
+columnSuffix: krfzahjp
+contentColumnType: boolean
+fieldGroup: 07a87980-eb4d-4710-896e-772170d1d21d # Section Settings
+handle: paddingSides
+instructions: null
+name: 'Padding: Sides'
+searchable: true
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

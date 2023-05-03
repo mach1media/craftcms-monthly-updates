@@ -1,0 +1,19 @@
+columnSuffix: gglrvpuw
+contentColumnType: text
+fieldGroup: fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0 # Text Fields
+handle: summary
+instructions: null
+name: Summary
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: text
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

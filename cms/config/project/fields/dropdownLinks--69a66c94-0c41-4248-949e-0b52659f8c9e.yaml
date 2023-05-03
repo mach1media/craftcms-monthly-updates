@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 2160ef32-2844-4834-a6c8-c374a3efa675 # Link Fields
+handle: dropdownLinks
+instructions: null
+name: 'Dropdown Links'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_dropdownlinks}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

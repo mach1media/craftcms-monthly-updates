@@ -1,0 +1,13 @@
+columnSuffix: pfkkixvf
+contentColumnType: string
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
+handle: buttonStyle
+instructions: null
+name: 'Button Style'
+searchable: false
+settings:
+  dataSet: 'Button Style'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

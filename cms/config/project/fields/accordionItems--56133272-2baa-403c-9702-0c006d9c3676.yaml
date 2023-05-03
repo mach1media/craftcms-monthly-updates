@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
+handle: accordionItems
+instructions: null
+name: 'Accordion Items'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_accordionitems}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

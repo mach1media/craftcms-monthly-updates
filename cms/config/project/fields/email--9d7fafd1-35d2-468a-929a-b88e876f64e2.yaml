@@ -1,0 +1,12 @@
+columnSuffix: zzraddzd
+contentColumnType: string
+fieldGroup: fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0 # Text Fields
+handle: email
+instructions: null
+name: Email
+searchable: true
+settings:
+  placeholder: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

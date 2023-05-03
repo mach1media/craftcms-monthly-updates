@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
+fieldLayouts:
+  ed9a58a7-37b2-4815-99c3-4fb3ea586075:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 865ca38f-50ad-4e67-9a95-bd05ae709908 # Embed Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6fc912fc-b372-4214-944f-f4308e9f9362
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ec7a9c46-e4bb-4add-bcb8-df712720c718
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: embedCode
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Embed Code'
+sortOrder: 10
+topLevel: true

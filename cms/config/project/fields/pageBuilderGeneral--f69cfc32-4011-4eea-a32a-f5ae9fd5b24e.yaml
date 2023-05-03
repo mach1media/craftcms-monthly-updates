@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: bf0e4db0-9861-4bba-b0d0-98bafe12bc6c # Page Builders
+handle: pageBuilderGeneral
+instructions: null
+name: 'Page Builder: General'
+searchable: true
+settings:
+  maxBlocks: null
+  maxLevels: null
+  maxTopBlocks: null
+  minBlocks: null
+  minLevels: null
+  minTopBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: benf\neo\Field

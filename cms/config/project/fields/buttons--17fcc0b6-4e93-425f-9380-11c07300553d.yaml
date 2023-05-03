@@ -1,0 +1,44 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 2160ef32-2844-4834-a6c8-c374a3efa675 # Link Fields
+handle: buttons
+instructions: null
+name: Buttons
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 2101682175
+  columns:
+    __assoc__:
+      -
+        - 55bd2a63-aca2-431f-bdc7-c44414ac0418 # Link
+        -
+          __assoc__:
+            -
+              - width
+              - 60%
+      -
+        - 3dd8a012-e0af-46a4-a906-a538bd2c6a64 # Style
+        -
+          __assoc__:
+            -
+              - width
+              - 20%
+      -
+        - aed0fd2d-f074-485f-b1f7-4c8ef97e91cc # Arrow
+        -
+          __assoc__:
+            -
+              - width
+              - 20%
+  contentTable: '{{%stc_buttons}}'
+  fieldLayout: table
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: 'Add a button'
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

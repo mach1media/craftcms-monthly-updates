@@ -1,0 +1,66 @@
+childBlocks:
+  - largeSmallSmall
+  - smallSmallLarge
+conditions: null
+description: ''
+enabled: true
+field: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
+fieldLayouts:
+  c678e22f-1d4f-4829-9c87-407b5b3b92ce:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14eebdef-e498-4707-9ca2-9d416b3ada28
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ed79d63b-b0cf-498b-a52e-99f863e77594
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 823e7fc7-88a3-455b-a297-7ffbf9197990
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Intro Text'
+        uid: bf13238b-0a68-4f5a-86bb-43a4becebc55
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: ctaTiles
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 2
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'CTA Tiles'
+sortOrder: 3
+topLevel: true

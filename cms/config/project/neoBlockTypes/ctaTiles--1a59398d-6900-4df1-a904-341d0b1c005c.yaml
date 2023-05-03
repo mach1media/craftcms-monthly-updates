@@ -1,0 +1,21 @@
+childBlocks:
+  - largeSmallSmall
+  - smallSmallLarge
+conditions: null
+description: ''
+enabled: true
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+group: null
+groupChildBlockTypes: true
+handle: ctaTiles
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 1
+minSiblingBlocks: 0
+name: 'CTA Tiles'
+sortOrder: 6
+topLevel: true

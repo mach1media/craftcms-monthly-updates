@@ -16,6 +16,14 @@
 	border-width: 2px;
 	padding: 1.25em 2em;
 }
+
+.btn-default {
+	@extend .btn-primary;
+}
+.btn-outline-default {
+	@extend .btn-outline-primary;
+}
+
 .btn-secondary {
 	color: white;
 	

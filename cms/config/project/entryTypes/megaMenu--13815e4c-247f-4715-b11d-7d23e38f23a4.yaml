@@ -1,0 +1,67 @@
+fieldLayouts:
+  469f4387-b2ad-4fa1-9960-5d9b7ef8c0b9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 522b721f-46e6-4d02-9f52-5f1d5008ebdd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6caec3d2-766a-490b-9491-7b784243b1d4 # Mega Menu: CTAs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 864d5d28-186f-481a-93da-091c4c836154
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0ba00a47-4ce1-4c02-a3ca-61119f702d8d # Mega Menu: Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9116f252-e115-4c76-8da1-2132dd592d51
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: df94371a-fd20-4e03-9a60-d2d201117c72
+        userCondition: null
+handle: megaMenu
+hasTitleField: true
+name: 'Mega Menu'
+section: 3e2c33e8-dd58-40f6-bb8b-ee1504d3711e # Navigation Menu
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

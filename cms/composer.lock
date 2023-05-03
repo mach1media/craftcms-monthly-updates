@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "263d19639904357e53273a42dfb9b3b6",
+    "content-hash": "05cfeaf66ba01fb8a2c5a87ef02d389f",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -440,11 +440,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.4.7.1",
+            "version": "4.4.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/5035cee5c412e35c5b53943d777627c53f1dc9fe",
-                "reference": "5035cee5c412e35c5b53943d777627c53f1dc9fe",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/c2947a7633375432d23dbbf11c21b4b6cc415650",
+                "reference": "c2947a7633375432d23dbbf11c21b4b6cc415650",
                 "shasum": ""
             },
             "require": {
@@ -474,7 +474,7 @@
                 "monolog/monolog": "^2.3",
                 "php": "^8.0.2",
                 "pixelandtonic/imagine": "~1.3.3.1",
-                "samdark/yii2-psr-log-target": "1.1.3",
+                "samdark/yii2-psr-log-target": "^1.1.3",
                 "seld/cli-prompt": "^1.0.4",
                 "symfony/http-client": "^6.0.3",
                 "symfony/var-dumper": "^5.0|^6.0",
@@ -535,7 +535,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2023-04-15T21:58:56+00:00"
+            "time": "2023-04-25T17:56:18+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -2113,7 +2113,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/0168d0e44ea0c4fe5451fe08cde7049b9e9f9741",
@@ -2158,7 +2158,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/bea24daa0fa84b7e7b0d5b84f62c71b7e2dc3364",
@@ -2194,7 +2194,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/44f65d723b13823baa02ff69751a5948bde60c22",
@@ -2232,7 +2232,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/e3bfaf6401742a9c6abca61b9b10e998e5b6449a",
@@ -3313,29 +3313,15 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.20.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "57f6787f0bb6431905a18aa7caea25dcd2bd59e0"
-            },
+            "version": "1.20.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/57f6787f0bb6431905a18aa7caea25dcd2bd59e0",
-                "reference": "57f6787f0bb6431905a18aa7caea25dcd2bd59e0",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6c04009f6cae6eda2f040745b6b846080ef069c2",
+                "reference": "6c04009f6cae6eda2f040745b6b846080ef069c2",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
-            },
-            "require-dev": {
-                "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^1.5",
-                "phpstan/phpstan-phpunit": "^1.1",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpunit/phpunit": "^9.5",
-                "symfony/process": "^5.2"
             },
             "type": "library",
             "autoload": {
@@ -3345,16 +3331,11 @@
                     ]
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "support": {
-                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.1"
-            },
-            "time": "2023-04-22T09:05:52+00:00"
+            "time": "2023-04-25T09:01:03+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -4173,30 +4154,16 @@
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "3.7.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spicywebau/craft-neo.git",
-                "reference": "4f2aea4998e8bbd47f9bf573d5b021dfcecb13e9"
-            },
+            "version": "3.7.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/4f2aea4998e8bbd47f9bf573d5b021dfcecb13e9",
-                "reference": "4f2aea4998e8bbd47f9bf573d5b021dfcecb13e9",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/416cc89e083f84845a6da81ea64e8768167f1a55",
+                "reference": "416cc89e083f84845a6da81ea64e8768167f1a55",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0.0",
                 "php": "^8.0.2"
-            },
-            "require-dev": {
-                "codeception/codeception": "^4.0",
-                "codeception/module-asserts": "*",
-                "codeception/module-phpbrowser": "^1.0.2",
-                "codeception/module-yii2": "^1.1.5",
-                "craftcms/ecs": "dev-main",
-                "craftcms/rector": "dev-main",
-                "vlucas/phpdotenv": "^3.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -4205,14 +4172,13 @@
                 "schemaVersion": "3.6.2",
                 "class": "benf\\neo\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-neo/blob/3.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/3.7.6.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/3.7.7.zip"
             },
             "autoload": {
                 "psr-4": {
                     "benf\\neo\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -4224,20 +4190,20 @@
             ],
             "description": "A Matrix-like field type that uses existing fields",
             "keywords": [
-                "Neo",
                 "cms",
                 "craftcms",
                 "field",
                 "matrix",
+                "neo",
                 "plugin"
             ],
             "support": {
-                "docs": "https://github.com/spicywebau/craft-neo/blob/3.7.6/README.md",
                 "issues": "https://github.com/spicywebau/craft-neo/issues",
-                "rss": "https://github.com/spicywebau/craft-neo/commits/3.x.atom",
-                "source": "https://github.com/spicywebau/craft-neo"
+                "source": "https://github.com/spicywebau/craft-neo",
+                "docs": "https://github.com/spicywebau/craft-neo/blob/3.7.7/README.md",
+                "rss": "https://github.com/spicywebau/craft-neo/commits/3.x.atom"
             },
-            "time": "2023-04-05T23:49:54+00:00"
+            "time": "2023-05-01T09:10:12+00:00"
         },
         {
             "name": "statikbe/craft-config-values",
@@ -4455,11 +4421,11 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.4.22",
+            "version": "v5.4.23",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3cd51fd2e6c461ca678f84d419461281bd87a0a8",
-                "reference": "3cd51fd2e6c461ca678f84d419461281bd87a0a8",
+                "url": "https://api.github.com/repos/symfony/console/zipball/90f21e27d0d88ce38720556dd164d4a1e4c3934c",
+                "reference": "90f21e27d0d88ce38720556dd164d4a1e4c3934c",
                 "shasum": ""
             },
             "require": {
@@ -4518,7 +4484,7 @@
                 "console",
                 "terminal"
             ],
-            "time": "2023-03-25T09:27:28+00:00"
+            "time": "2023-04-24T18:47:29+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -5674,11 +5640,11 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.4.22",
+            "version": "v5.4.23",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e2edac9ce47e6df07e38143c7cfa6bdbc1a6dcc4",
-                "reference": "e2edac9ce47e6df07e38143c7cfa6bdbc1a6dcc4",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/9a8a5b6d6508928174ded2109e29328a55342a42",
+                "reference": "9a8a5b6d6508928174ded2109e29328a55342a42",
                 "shasum": ""
             },
             "require": {
@@ -5729,7 +5695,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2023-03-25T09:27:28+00:00"
+            "time": "2023-04-18T09:26:27+00:00"
         },
         {
             "name": "symfony/var-exporter",
@@ -5779,11 +5745,11 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.4.21",
+            "version": "v5.4.23",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/3713e20d93e46e681e51605d213027e48dab3469",
-                "reference": "3713e20d93e46e681e51605d213027e48dab3469",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/4cd2e3ea301aadd76a4172756296fe552fb45b0b",
+                "reference": "4cd2e3ea301aadd76a4172756296fe552fb45b0b",
                 "shasum": ""
             },
             "require": {
@@ -5824,7 +5790,7 @@
             ],
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
-            "time": "2023-02-21T19:46:44+00:00"
+            "time": "2023-04-23T19:33:36+00:00"
         },
         {
             "name": "theiconic/name-parser",

@@ -1,0 +1,86 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
+fieldLayouts:
+  5fcc3780-a517-44c9-a5c1-8fec94a4781b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Choose an image or video'
+            type: craft\fieldlayoutelements\Tip
+            uid: 9e701fbc-b152-4197-b1a7-e8f0ad2076b2
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4e09afd5-cf03-4485-ab3a-39fe86656878
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b131504-bca4-4f03-8556-5dafd8bcafdf
+            userCondition: null
+            warning: null
+            width: 25
+        name: Image
+        uid: cccadcb7-7e57-44c0-84b0-ab590997b6c4
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: "1. Click the [+ Video] button\r\n2. In the Asset picker window click the [EMBED] button\r\n3. Copy and paste video's URL"
+            type: craft\fieldlayoutelements\Tip
+            uid: e51f3ab9-70da-43d1-a260-29f2658803eb
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f # Video
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c219af4-7319-4010-888e-792968979b9e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Video
+        uid: 971bba37-863b-4f10-a8a2-5f683ebb5c6c
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: media
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Media
+sortOrder: 7
+topLevel: true

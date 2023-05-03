@@ -12,67 +12,37 @@
 	{% set imgMobileSrc = imgMobile.url('responsiveSmall') %}
 	{% set imgMobileAlt = imgMobile.alt ?: imgMobile.caption %}
 {% endif %}
-
-{% if block.bleedToEdge == '1' %}
-<section class="c-block c-img-text--edge-bleed">
+<section class="c-block c-img-text{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container-fluid px-0">
-		<div class="row gx-0 justify-content-start">
-			<div class="col-12 col-md-5 col-lg-6">
-				{% if block.imageDesktop | length and block.imageMobile | length %}
-				<img class="d-block d-md-none w-100 img-fluid" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" />
-				<img class="d-none d-md-block w-100 img-fluid" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" />
-				{% elseif block.imageDesktop | length %}
-				<img class="d-block w-100 img-fluid" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" />
-				{% endif %}
+		<div class="row align-items-center g-0">
+			<div class="col-12 col-lg-6 d-flex justify-content-center {% if block.imagePositionLR == 'right' %} justify-content-lg-start order-lg-2{% else %}justify-content-lg-end{% endif %}">
+				<div class="c-img-text__description start">
+					<div>
+						{% if block.preheading is defined and block.preheading != '' %}
+						<p class="u-preheading">{{ block.preheading }}</p>
+						{% endif %}
+
+						{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+						
+						{% if block.description is defined and block.description != '' %}
+						<div class="c-wysiwyg">{{ block.description }}</div>
+						{% endif %}
+
+						{% include "_fields/buttons" with {'buttons': block.buttons} %}
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	
-	<div class="c-img-text__edge-bleed-content">
-		<div class="container">
-			<div class="row justify-content-end">
-				<div class="col-12 col-md-6 col-lg-5">
-					{% if block.preheading is defined and block.preheading != '' %}
-					<p class="u-preheading">{{ block.preheading }}</p>
-					{% endif %}
-					{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
-					{% if block.description is defined and block.description != '' %}
-					<div class="c-wysiwyg">{{ block.description }}</div>
-					{% endif %}
-					{% if block.button.getLink() %}
-					<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
-					{% endif %}
+			
+			<div class="col-12 col-lg-6{% if block.imagePositionLR == 'right' %} order-lg-1{% endif %}">
+				<div class="c-img-text__image {% if block.imagePositionLR == 'left' %}end u-rounded-top-left{% else %}start u-rounded-top-right{% endif %}">
+				{% if block.imageDesktop | length and block.imageMobile | length %}
+					<img class="d-md-none w-100 img-fluid" src="{{ imgMobile.url('responsiveMedium' ) }}" alt="{{ imgMobile.alt }}" />
+					<img class="d-none d-md-block w-100 img-fluid" src="{{ imgDesktop.url('responsiveMedium') }}" alt="{{ imgDesktop.alt }}" />
+				{% elseif block.imageDesktop | length %}
+					<img class="d-block w-100 img-fluid" src="{{ imgDesktop.url('responsiveMedium') }}" alt="{{ imgDesktop.alt }}" />
+				{% endif %}
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-{% else %}
-<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
-	<div class="container">
-		<div class="row justify-content-between align-items-center">
-			<div class="col-12 col-md-6{% if block.imagePositionLR == 'right' %} order-md-2{% else %} mb-5 mb-md-0{% endif %}">
-				{% if block.imageDesktop | length and block.imageMobile | length %}
-					<p class="d-md-none"><img class="img-fluid" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" /></p>
-					<p class="d-none d-md-block"><img class="img-fluid" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
-				{% elseif block.imageDesktop | length %}
-					<p><img class="img-fluid" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
-				{% endif %}
-			</div>
-			
-			<div class="col-12 col-md-5{% if block.imagePositionLR == 'right' %} order-md-1 mb-5 mb-md-0{% endif %}">
-				{% if block.preheading is defined and block.preheading != '' %}
-				<p class="u-preheading">{{ block.preheading }}</p>
-				{% endif %}
-				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
-				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
-				{% endif %}
-				{% if block.button.getLink() %}
-				<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
-				{% endif %}
-			</div>
-		</div>
-	</div>
-</section>
-{% endif %}

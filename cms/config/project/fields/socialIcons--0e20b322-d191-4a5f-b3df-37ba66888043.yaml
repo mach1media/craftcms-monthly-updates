@@ -1,0 +1,97 @@
+columnSuffix: xatbkcex
+contentColumnType: text
+fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
+handle: socialIcons
+instructions: null
+name: 'Social Icons'
+searchable: false
+settings:
+  addRowLabel: 'Add an icon'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Icon
+            -
+              - handle
+              - icon
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Facebook
+                    -
+                      - value
+                      - facebook
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Instagram
+                    -
+                      - value
+                      - instagram
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - YouTube
+                    -
+                      - value
+                      - youtube
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - LinkedIn
+                    -
+                      - value
+                      - linkedin
+                    -
+                      - default
+                      - false
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Link
+            -
+              - handle
+              - href
+            -
+              - width
+              - ''
+            -
+              - type
+              - url
+  defaults: null
+  maxRows: null
+  minRows: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table
