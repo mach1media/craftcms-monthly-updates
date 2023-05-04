@@ -11400,6 +11400,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 .btn-arrow:hover:after {
   right: 0.75rem;
 }
+.btn-arrow.btn-secondary:after {
+  background: url("/dist/img/icon-arrow-right-white.svg") right center no-repeat !important;
+}
 .btn-arrow.btn-secondary:hover:after, .btn-arrow.btn-outline-secondary:hover:after {
   background: url("/dist/img/icon-arrow-right-white.svg") right center no-repeat !important;
 }

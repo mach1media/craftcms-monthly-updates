@@ -60,6 +60,10 @@
 		right: .75rem;
 	}
 
+	&.btn-secondary:after {
+		background: url('/dist/img/icon-arrow-right-white.svg') right center no-repeat !important;
+	}
+
 	&.btn-secondary:hover:after,
 	&.btn-outline-secondary:hover:after {
 		background: url('/dist/img/icon-arrow-right-white.svg') right center no-repeat !important;
