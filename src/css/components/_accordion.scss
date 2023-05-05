@@ -4,11 +4,20 @@
 .accordion-item {
 	border-left: none;
 	border-right: none;
+
+	&:first-of-type {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+	&:last-of-type {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 }
 .accordion-button {
 	border-left: none;
 	border-right: none;
-	//@include base-font-semibold;
+	color: map-get($theme-colors, 'primary');
 	
 	&:hover {
 		color: map-get($theme-colors, 'secondary');

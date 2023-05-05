@@ -11686,10 +11686,19 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   border-left: none;
   border-right: none;
 }
+.accordion-item:first-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.accordion-item:last-of-type {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 
 .accordion-button {
   border-left: none;
   border-right: none;
+  color: #231F5B;
 }
 .accordion-button:hover {
   color: #C19D68;

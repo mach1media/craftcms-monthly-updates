@@ -19,20 +19,25 @@
 		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
 			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-9 col-xl-8{% endif %}">
 				{% if block.accordionItems | length %}
-				<div class="c-accordion accordion" id="accordion-{{ block.id }}">
+				<div class="accordion" id="accordion-{{ block.id }}">
 					{% for item in block.accordionItems %}
-					<button id="heading-{{ item.id }} fs-2" type="button"
-						class="c-accordion__toggle btn btn-link btn-block text-left" 
-						data-toggle="collapse" 
-						data-target="#accordion-item-{{ item.id }}" 
-						aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" 
-						aria-controls="accordion-item-{{ item.id }}">
-						{{ item.heading }}
-					</button>
-				
-					<div id="accordion-item-{{ item.id }}" class="accordion-collapse collapse{% if loop.first %} show{% endif %}" aria-labelledby="heading-{{ item.id }}" data-parent="#accordion-{{ block.id }}">
-						<div class="accordion-body">
-							{{ item.description }}
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="accordion-heading-{{ item.id }}">
+							<button class="accordion-button fs-4{% if not loop.first %} collapsed{% endif %}" type="button" 
+								data-bs-toggle="collapse" 
+								data-bs-target="#accordion-panel-{{ item.id }}" 
+								aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" 
+								aria-controls="accordion-panel-{{ item.id }}">
+								{{ item.heading }}
+							</button>
+						</h2>
+						<div id="accordion-panel-{{ item.id }}" 
+							class="accordion-collapse collapse{% if loop.first %} show{% endif %}" 
+							aria-labelledby="accordion-heading-{{ item.id }}"
+							data-bs-parent="#accordion-{{ block.id }}">
+							<div class="accordion-body">
+								{{ item.description }}
+							</div>
 						</div>
 					</div>
 					{% endfor %}
