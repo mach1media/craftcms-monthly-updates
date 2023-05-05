@@ -22,7 +22,9 @@
 					{% if block.preheading is defined and block.preheading != '' %}
 					<p class="u-preheading">{{ block.preheading }}</p>
 					{% endif %}
+
 					{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+					
 					{% if block.description is defined and block.description != '' %}
 					<div class="c-wysiwyg">{{ block.description }}</div>
 					{% endif %}

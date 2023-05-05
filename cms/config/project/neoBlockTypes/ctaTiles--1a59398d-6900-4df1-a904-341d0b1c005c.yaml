@@ -14,7 +14,7 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 minBlocks: 0
-minChildBlocks: 1
+minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'CTA Tiles'
 sortOrder: 6

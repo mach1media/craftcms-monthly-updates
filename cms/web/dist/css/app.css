@@ -12135,6 +12135,14 @@ button > .c-icon--search {
   background: url("/dist/img/icon-leadership-ministry-white.svg") center center no-repeat;
   background-size: contain;
 }
+.c-tiles__icon-custom {
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2em;
+  height: 2em;
+}
 
 /**
  * CONTACT BLOCK

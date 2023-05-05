@@ -312,4 +312,12 @@
 		background: url('/dist/img/icon-leadership-ministry-white.svg') center center no-repeat;
 		background-size: contain;
 	}
+	@include element('icon-custom') {
+		position: absolute;
+		display: block;
+		top: $gutter;
+		right: $gutter;
+		width: 2em;
+		height: 2em;
+	}
 }

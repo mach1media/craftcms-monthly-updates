@@ -67,7 +67,7 @@ return [
 			'philanthropy'         => 'Philanthropy',
 			'investments'          => 'Investments',
 			'area-representatives' => 'Area Representatives',
-			'leadersnip-ministry'  => 'Leadership Ministry',
+			'leadership-ministry'  => 'Leadership Ministry',
 		],
 	]
 ];
