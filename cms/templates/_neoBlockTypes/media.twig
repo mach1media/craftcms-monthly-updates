@@ -43,8 +43,8 @@
 					{% elseif block.imageDesktop | length %}
 						<p><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
 					{% elseif block.video | length %}
-						{% set embeddedAsset = craft.embeddedAssets.get(block.video) %}
-						{{ embeddedAsset ? embeddedAsset.html }}
+						{% set embeddedAsset = craft.embeddedAssets.get(block.vide.one) %}
+						<div class="js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
 					{% endif %}
 				</div>
 			</div>
@@ -62,8 +62,8 @@
 				{% elseif block.imageDesktop | length %}
 					<p><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
 				{% elseif block.video | length %}
-					{% set embeddedAsset = craft.embeddedAssets.get(block.video) %}
-					{{ embeddedAsset ? embeddedAsset.html }}
+					{% set embeddedAsset = craft.embeddedAssets.get(block.video.one) %}
+					<div class="js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
 				{% endif %}
 			</div>
 		</div>
