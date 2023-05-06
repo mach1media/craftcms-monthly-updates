@@ -1,4 +1,4 @@
-dateModified: 1683343101
+dateModified: 1683392067
 elementSources:
   craft\elements\Entry:
     -
@@ -223,6 +223,7 @@ meta:
     aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e: Pre-heading # Pre-heading
     aa96dc63-49ff-4c1a-89df-d34525227436: 'Embed Code' # Embed Code
     aa92801f-a617-4884-96f7-2f325db59d9e: 'Element Fields' # Element Fields
+    ab0cec03-165b-46cc-b1d9-9974464ffb9a: Image # Image
     ab7e2d93-36c3-4838-bcb0-b9378b70308a: Heading # Heading
     ab39e5a8-9059-4669-8998-c898c3c7ed89: Heading # Heading
     ad9d8d2b-1080-4917-ae1e-3a6d6460fd11: 'Favicon File' # Favicon File

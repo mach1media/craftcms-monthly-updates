@@ -1,4 +1,4 @@
-changedFieldIndicator: 1180672080
+changedFieldIndicator: 761531689
 field: d3ccac65-2f19-4621-b98f-cb5f46bf796d # Home: Feature Tile
 fieldLayouts:
   45c880df-3252-46c4-afc9-82cac4860991:
@@ -6,6 +6,18 @@ fieldLayouts:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: ab0cec03-165b-46cc-b1d9-9974464ffb9a # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88a325dc-1b55-44b8-b916-fdc13a201771
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: f126506f-a32d-40b2-9d16-466e4201be40 # Label
@@ -153,6 +165,56 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  ab0cec03-165b-46cc-b1d9-9974464ffb9a: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: false
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      sources:
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   bb9e3568-5ca9-4a9a-8534-c5e97ea203d7: # Icon: Custom
     columnSuffix: null
     contentColumnType: string

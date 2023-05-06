@@ -6,69 +6,145 @@
 {% if entry is not defined %}
 	{% set entry = craft.entries.section('homepage').one() %}
 {% endif %}
-
-{##
- # https://www.unixtimestamp.com 
- # use {now | date('U')} for comparison
- #}
-{# Sun, Apr 30, 7pm Central #}
-{% set eventSart = 1682899200 %}
-
-{# Sun, Apr 30, 8pm Central #}
-{% set eventEnd  = 1682902800 %}
  
 {% block content %}
-<section class="c-hero__home-wrap">
-	<div class="c-hero c-hero--home">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="position-relative">
-						<img class="d-block w-100 img-fluid" src="/uploads/images/hero-home.png" alt="home hero" />
-						<div class="c-hero__home-heading">
-							<p>
-								<span class="u-font-script-alt">Investing</span>
-								<span>in the</span>
-								<span class="u-base-font-semibold">Wesleyan Movement</span>
-							</p>
+
+<!-- HOMEPAGE HERO WITH CTA TILES -->
+<section class="c-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				
+				<div class="c-tiles__home"> 
+					{# INTRO HEADING AND LINK #}
+					{% if entry.homeIntro | length %}
+					{% set block = entry.homeIntro %}
+					<div class="c-tiles__tile">
+						<div class="h-100 d-flex flex-column justify-content-end">
+							<div class="row align-items-end">
+								<div class="col-12 col-xl-8">
+									{% if block.preHeading != '' %}<p class="u-preheading text-secondary">&ndash; {{ block.preHeading }}</p>{% endif %}
+									{% if block.heading != '' %}<h1 class="h2">{{ block.heading }}</h1>{% endif %}
+								</div>
+
+								<div class="col-12 col-xl-4">
+									{% if block.ctaLink | length %}
+									<p><a class="u-link-chevron" href="{{ block.ctaLink.getIntrinsicUrl() }}">{{ block.ctaLink.getText() }}</a></p>
+									{% endif %}
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			
-			<div class="row justify-content-center">
-				<div class="col-12 col-md-8">
-					<div class="c-hero__home-lead">
-						<p>
-							<img src="/dist/img/logo-mark.png" style="width:100px;height:auto;" alt="" aria-hidden="true" />
-						</p>
-						{{ entry.description }}
+					{% endif %}
+
+					{# WIDE VIDEO TILE #}
+					{% if entry.homeTileWide | length %}
+					{% set block = entry.homeTileWide.one() %}
+					{% set thumb = block.thumbnail.one %}
+					<div class="c-tiles__tile c-tiles__tile--wide c-tiles__tile--video">
+						<div class="row g-0 h-100 position-relative">
+							<div class="col-12 col-sm-6 p-0 position-relative">
+								<span class="c-tiles__play-icon">
+									<img src="{{ thumb.url('square600') }}" alt="{{ thumb.alt }}" />
+									<span class="visually-hidden">Watch video</span>
+								</span>
+							</div>
+
+							<div class="col-12 col-sm-6">
+								<div class="h-100 d-flex flex-column justify-content-between">
+									{% if block.label != '' %}
+									<p class="u-preheading text-primary">{{ block.label }}</p>
+									{% endif %}
+
+									{% if block.heading != '' %}
+									<h2 class="h3">
+										<a class="stretched-link" href="">{{ block.heading }}</a>
+									</h2>
+									{% endif %}
+								</div>
+							</div>
+						</div>
 					</div>
+					{% endif %}
+
+					{# LARGE FEATURE TILE #}
+					{% if entry.homeFeatureTile | length %}
+					{% set block = entry.homeFeatureTile.one() %}
+					{% set img = block.image.one %}
+					<div class="c-tiles__tile c-tiles__tile--featured">
+						<a class="c-tiles__img-link" href="{{ block.ctaLink.getIntrinsicUrl() }}">
+							<img src="{{ img.url('responsiveLarge') }}" alt="{{ img.alt }}" />
+						</a>
+						<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
+							{% if block.labelCustom != '' and block.iconCustom | length %}
+							<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
+							<p class="u-preheading">{{ block.labelCustom }}</p>
+							{% elseif block.label == 'grants' %}
+							<span class="c-tiles__icon-grants"></span>
+							<p class="u-preheading">Grants</p>
+							{% elseif block.label == 'investments' %}
+							<span class="c-tiles__icon-investments"></span>
+							<p class="u-preheading">Investments</p>
+							{% elseif block.label == 'area-representatives' %}
+							<span class="c-tiles__icon-area-representatives"></span>
+							<p class="u-preheading">Area Representatives</p>
+							{% elseif block.label == 'philanthropy' %}
+							<span class="c-tiles__icon-philanthropy"></span>
+							<p class="u-preheading">Philanthropy</p>
+							{% elseif block.label == 'leadership-ministry' %}
+							<span class="c-tiles__icon-leadership-ministry"></span>
+							<p class="u-preheading">Leadership Ministry</p>
+							{% endif %}
+
+							<div>
+								{% if block.heading != '' %}<h2 class="h3">{{ block.heading }}</h2>{% endif %}
+								<div class="c-tiles__description-footer"><span class="text-white">{{ block.ctaLink.getText() }}</span></div>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+
+					{% for block in entry.homeSquareTiles.all() %}
+					{% set img          = block.thumbnail.one %}
+					{% set imgSrc       = img.url('responsiveMedium') %}
+					{% set imgAlt       = img.alt %}
+					<div class="c-tiles__tile">
+						<a class="c-tiles__img-link" href="{{ block.ctaLink.getIntrinsicUrl() }}">
+							<img src="{{ img.url('responsiveLarge') }}" alt="{{ img.alt }}" />
+						</a>
+						<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
+							{% if block.labelCustom != '' and block.iconCustom | length %}
+							<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
+							<p class="u-preheading">{{ block.labelCustom }}</p>
+							{% elseif block.label == 'grants' %}
+							<span class="c-tiles__icon-grants"></span>
+							<p class="u-preheading">Grants</p>
+							{% elseif block.label == 'investments' %}
+							<span class="c-tiles__icon-investments"></span>
+							<p class="u-preheading">Investments</p>
+							{% elseif block.label == 'area-representatives' %}
+							<span class="c-tiles__icon-area-representatives"></span>
+							<p class="u-preheading">Area Representatives</p>
+							{% elseif block.label == 'philanthropy' %}
+							<span class="c-tiles__icon-philanthropy"></span>
+							<p class="u-preheading">Philanthropy</p>
+							{% elseif block.label == 'leadership-ministry' %}
+							<span class="c-tiles__icon-leadership-ministry"></span>
+							<p class="u-preheading">Leadership Ministry</p>
+							{% endif %}
+							
+							<h2 class="h4">{{ block.heading ?: block.ctaLink.getText() }}</h2>
+						</div>
+					</div>
+					{% endfor %}
 				</div>
+
 			</div>
 		</div>
 	</div>
-	<div class="c-hero__scoop"></div>
-	{# ---------------------------------------- LILA CTA ---------------------------------------- #}
-	{% if now|date('U') < eventEnd %}
-	<a class="c-hero__lila-cta" role="button" href="#modal-lila" data-bs-toggle="modal" data-bs-target="#modal-lila">
-		<img class="img-fluid d-none d-md-block img-desktop" src="/dist/img/lila-cta-desktop.png" />
-		<img class="img-fluid d-md-none" src="/dist/img/lila-cta-mobile.png" />
-	</a>
-	{% js on ready %}
-	$('.c-hero__lila-cta').hover(
-		function(){
-			$(this).find('.img-desktop').attr('src','/dist/img/lila-cta-desktop-hover-2.png');
-		},
-		function(){
-			$(this).find('.img-desktop').attr('src','/dist/img/lila-cta-desktop.png');
-		}
-	);
-	{% endjs %}
-	{% endif %}
 </section>
 	
 {# --------------------- PAGE BUILDER OUTPUT -------------------- #}
-{% include "_pageBuilders/pageBuilderHome" with { 'entry': entry } %}
+{% include "_pageBuilders/pageBuilderGeneral" with { 'entry': entry } %}
 
 {% endblock %}
