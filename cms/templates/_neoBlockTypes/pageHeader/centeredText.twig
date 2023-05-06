@@ -12,7 +12,7 @@
 					{{ entry.title }}
 				</p>
 				
-				<h1>{{ block.heading != '' block.heading : entry.title }}</h1>
+				<h1>{{ block.heading != '' ? block.heading : entry.title }}</h1>
 				
 				{% if block.description is defined and block.description != '' %}
 				<div class="c-wysiwyg">{{ block.description }}</div>

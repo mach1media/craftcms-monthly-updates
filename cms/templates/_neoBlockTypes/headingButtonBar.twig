@@ -1,0 +1,18 @@
+{##
+ # NEO BLOCK TYPE: PAGE HEADER: GENERAL
+ #}
+<section class="c-block bg-secondary-extralight c-heading-bar">
+	<div class="container">
+		<div class="d-md-flex justify-content-between align-items-center">
+			<h2 class="c-heading-bar__heading text-secondary">{{ block.heading | raw }}</h2>
+
+			<div class="c-heading-bar__buttons">
+				{% for button in block.buttons %}
+					{% if button.btnLink.getLink() %}
+						{% include "_fields/button" with {'button': button.btnLink, 'color': button.btnStyle, 'class': button.arrow == 1 ? 'btn-arrow m-2' : 'm-2' } %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

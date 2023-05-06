@@ -1,26 +1,22 @@
 {##
  # NEO BLOCK TYPE: PAGE HEADER: GENERAL
  #}
-<section class="position-relative">
-	<div class="c-hero c-hero--general">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-12 col-md-5 text-center">
-					{% if block.preheading is defined and block.preheading != '' %}
-					<p class="u-preheading">{{ block.preheading }}</p>
-					{% endif %}
-					
-					<h1>{{ block.heading | raw ?: entry.title | raw }}</h1>
-					
-					{% if block.description is defined and block.description != '' %}
-					<div class="c-wysiwyg">{{ block.description }}</div>
-					{% endif %}
-					{% if block.button.getLink() %}
-					<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>
-					{% endif %}
-				</div>
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
+				{% if block.preheading is defined and block.preheading != '' %}
+				<p class="u-preheading">{{ block.preheading }}</p>
+				{% endif %}
+				
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+				
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg fs-5">{{ block.description }}</div>
+				{% endif %}
+				
+				{% include "_fields/buttons" with {'buttons': block.buttons} %}
 			</div>
 		</div>
 	</div>
-	<div class="c-hero__scoop"></div>
 </section>

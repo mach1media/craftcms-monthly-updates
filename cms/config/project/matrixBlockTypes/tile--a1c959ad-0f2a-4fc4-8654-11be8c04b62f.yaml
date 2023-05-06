@@ -175,12 +175,12 @@ fields:
         asset:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: false
+          enabled: true
           sources: '*'
         category:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: false
+          enabled: true
           sources: '*'
         custom:
           allowAliases: false
@@ -193,10 +193,10 @@ fields:
         entry:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: false
+          enabled: true
           sources: '*'
         site:
-          enabled: true
+          enabled: false
           sites: '*'
         tel:
           allowAliases: false
@@ -209,7 +209,7 @@ fields:
         user:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: true
+          enabled: false
           sources: '*'
     translationKeyFormat: null
     translationMethod: none

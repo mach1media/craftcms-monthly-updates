@@ -1,0 +1,48 @@
+{##
+ # NEO BLOCK TYPE: PAGE HEADER: CTA TILES
+ #}
+<section class="c-block">
+	<div class="container">
+		<div class="row mb-5 align-items-center justify-content-between">
+			<div class="col-12 col-lg-7 text-center text-lg-start mb-3 mb-lg-0">
+				<h1>{{ block.heading != '' ? block.heading : entry.title }}</h1>
+				
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg">{{ block.description }}</div>
+				{% endif %}
+			</div>
+
+			<div class="col-12 col-lg-3 text-center">
+				{% if block.button.getLink() %}
+				<p>
+					{% include "_fields/button" with {'button': block.button, 'color':'btn-outline-secondary', 'class': 'btn-arrow'} %}
+				</p>
+				{% endif %}
+			</div>
+		</div>
+
+		<div class="row g-3 c-tiles">
+			{% for row in block.children.all() %}
+				{% if row.type == 'largeSmallSmall' %}
+					{% for block in row.ctaTileLarge.all %}
+						{% include "_neoBlockTypes/_ctaTileLarge" with { block: block } %}
+					{% endfor %}
+					
+					{% for block in row.ctaTileSmall.all %}
+						{% include "_neoBlockTypes/_ctaTileSmall" with { block: block } %}
+					{% endfor %}
+
+				{% elseif row.type == 'smallSmallLarge' %}
+					{% for block in row.ctaTileSmall.all %}
+						{% include "_neoBlockTypes/_ctaTileSmall" with { block: block } %}
+					{% endfor %}
+
+					{% for block in row.ctaTileLarge.all %}
+						{% include "_neoBlockTypes/_ctaTileLarge" with { block: block } %}
+					{% endfor %}
+
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
