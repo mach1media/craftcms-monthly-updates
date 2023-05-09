@@ -16,10 +16,22 @@ fieldLayouts:
             uid: ea6d80ea-e4d2-4ccd-8cd0-705e292bdac6
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
-            fieldUid: 38b1109c-b2b4-4a24-8273-95f4885fdbbe # Label
+            fieldUid: 7122cd83-09df-457d-8ea8-284328ec238f # label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1974ba1d-f724-4a30-b77f-e59d04362aad
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 38b1109c-b2b4-4a24-8273-95f4885fdbbe # Label: Custom
             instructions: null
             label: null
             required: false
@@ -28,7 +40,19 @@ fieldLayouts:
             uid: a3b3a0a1-98d7-472b-b6ca-68673dd210d1
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ff81d39c-f083-4ae5-aaa1-08eabba9c8da # Icon: Custom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e891993-fb4f-4a9b-b945-1208091a5393
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: 37449807-b7fe-4e44-bc5d-f3469359b775 # Heading
@@ -96,7 +120,7 @@ fields:
             - class
             - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add a thumbnail image'
-      showSiteMenu: false
+      showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: true
       sources:
@@ -107,13 +131,13 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  38b1109c-b2b4-4a24-8273-95f4885fdbbe: # Label
+  38b1109c-b2b4-4a24-8273-95f4885fdbbe: # Label: Custom
     columnSuffix: nhanvqto
     contentColumnType: text
     fieldGroup: null
-    handle: label
+    handle: labelCustom
     instructions: null
-    name: Label
+    name: 'Label: Custom'
     searchable: false
     settings:
       byteLimit: null
@@ -127,6 +151,20 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  7122cd83-09df-457d-8ea8-284328ec238f: # label
+    columnSuffix: nvmfxgto
+    contentColumnType: string
+    fieldGroup: null
+    handle: label
+    instructions: null
+    name: label
+    searchable: false
+    settings:
+      dataSet: 'CTA Tile Labels'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
   37449807-b7fe-4e44-bc5d-f3469359b775: # Heading
     columnSuffix: icklxuaz
     contentColumnType: text
@@ -210,6 +248,56 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  ff81d39c-f083-4ae5-aaa1-08eabba9c8da: # Icon: Custom
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: iconCustom
+    instructions: null
+    name: 'Icon: Custom'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an icon'
+      showSiteMenu: false
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      sources:
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
 handle: imageTile
 name: 'Image Tile'
 sortOrder: 2

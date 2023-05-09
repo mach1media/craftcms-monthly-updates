@@ -12114,6 +12114,16 @@ button > .c-icon--search {
   background: url("/dist/img/icon-grants-white.svg") center center no-repeat;
   background-size: contain;
 }
+.c-tiles__icon-loans {
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2em;
+  height: 2em;
+  background: url("/dist/img/icon-loans-white.svg") center center no-repeat;
+  background-size: contain;
+}
 .c-tiles__icon-area-representatives {
   position: absolute;
   display: block;

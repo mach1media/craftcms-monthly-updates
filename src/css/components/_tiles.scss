@@ -282,6 +282,16 @@
 		background: url('/dist/img/icon-grants-white.svg') center center no-repeat;
 		background-size: contain;
 	}
+	@include element('icon-loans') {
+		position: absolute;
+		display: block;
+		top: $gutter;
+		right: $gutter;
+		width: 2em;
+		height: 2em;
+		background: url('/dist/img/icon-loans-white.svg') center center no-repeat;
+		background-size: contain;
+	}
 	@include element('icon-area-representatives') {
 		position: absolute;
 		display: block;

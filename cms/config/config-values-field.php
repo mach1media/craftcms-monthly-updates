@@ -63,6 +63,7 @@ return [
 		
 		// CTA TILE LABELS
 		'CTA Tile Labels' => [
+			'loans'                => 'Loans',
 			'grants'               => 'Grants',
 			'philanthropy'         => 'Philanthropy',
 			'investments'          => 'Investments',

@@ -1,4 +1,4 @@
-dateModified: 1683392067
+dateModified: 1683646449
 elementSources:
   craft\elements\Entry:
     -
@@ -163,7 +163,7 @@ meta:
     24a26f70-67f3-45a7-8828-d33f091c1508: 'Home: Tile - Wide' # Home: Tile - Wide
     28a04878-3d6a-4889-ad36-87cce2dd449e: 'Padding: Top' # Padding: Top
     31f2b911-731f-42b5-84c6-4b2777260f2f: 'Section Heading' # Section Heading
-    38b1109c-b2b4-4a24-8273-95f4885fdbbe: Label # Label
+    38b1109c-b2b4-4a24-8273-95f4885fdbbe: 'Label: Custom' # Label: Custom
     38f59447-9f79-465c-96fc-aba9497a5d04: 'Large | Small | Small' # Large | Small | Small
     040d7db9-375b-4b41-989d-2e38c47b90f6: 'Padding: Bottom' # Padding: Bottom
     40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link # Link
@@ -193,6 +193,7 @@ meta:
     2160ef32-2844-4834-a6c8-c374a3efa675: 'Link Fields' # Link Fields
     3030cab8-78a4-43c1-965d-edcb8d53848e: 'Contact Form Block' # Contact Form Block
     6552f23c-7f92-493a-bd10-b47693edab05: 'Column: Image' # Column: Image
+    7122cd83-09df-457d-8ea8-284328ec238f: label # label
     9030c997-69e7-4a71-b846-fdadd3c6112f: Heading # Heading
     13815e4c-247f-4715-b11d-7d23e38f23a4: 'Mega Menu' # Mega Menu
     0014573b-36a9-48c6-b523-64fbabf469f2: 'Button Style' # Button Style
@@ -284,6 +285,7 @@ meta:
     fae55152-701b-4c22-9f50-453a213e9e05: Size # Size
     fb633af9-99e4-499c-b90f-60a8039f3046: 'Text Alignment' # Text Alignment
     fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0: 'Text Fields' # Text Fields
+    ff81d39c-f083-4ae5-aaa1-08eabba9c8da: 'Icon: Custom' # Icon: Custom
 plugins:
   config-values-field:
     edition: standard

@@ -41,30 +41,64 @@
 					{% if entry.homeTileWide | length %}
 					{% set block = entry.homeTileWide.one() %}
 					{% set thumb = block.thumbnail.one %}
-					<div class="c-tiles__tile c-tiles__tile--wide c-tiles__tile--video">
-						<div class="row g-0 h-100 position-relative">
-							<div class="col-12 col-sm-6 p-0 position-relative">
-								<span class="c-tiles__play-icon">
-									<img src="{{ thumb.url('square600') }}" alt="{{ thumb.alt }}" />
-									<span class="visually-hidden">Watch video</span>
-								</span>
-							</div>
+						{% if block.type == 'videoTile' %}
+						<div class="c-tiles__tile c-tiles__tile--wide c-tiles__tile--video">
+							<div class="row g-0 h-100 position-relative">
+								<div class="col-12 col-sm-6 p-0 position-relative">
+									<span class="c-tiles__play-icon">
+										<img src="{{ thumb.url('square600') }}" alt="{{ thumb.alt }}" />
+										<span class="visually-hidden">Watch video</span>
+									</span>
+								</div>
 
-							<div class="col-12 col-sm-6">
-								<div class="h-100 d-flex flex-column justify-content-between">
-									{% if block.label != '' %}
-									<p class="u-preheading text-primary">{{ block.label }}</p>
-									{% endif %}
+								<div class="col-12 col-sm-6">
+									<div class="h-100 d-flex flex-column justify-content-between">
+										{% if block.label != '' %}
+										<p class="u-preheading text-primary">{{ block.label }}</p>
+										{% endif %}
 
-									{% if block.heading != '' %}
-									<h2 class="h3">
-										<a class="stretched-link" href="">{{ block.heading }}</a>
-									</h2>
-									{% endif %}
+										{% if block.heading != '' %}
+										<h2 class="h3">
+											<a class="stretched-link" href="">{{ block.heading }}</a>
+										</h2>
+										{% endif %}
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+						{% else %}
+						<div class="c-tiles__tile">
+							<a class="c-tiles__img-link" href="{{ block.ctaLink.getIntrinsicUrl() }}">
+								<img src="{{ thumb.url('responsiveLarge') }}" alt="{{ thumb.alt }}" />
+							</a>
+							<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
+								{% if block.labelCustom != '' and block.iconCustom | length %}
+								<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
+								<p class="u-preheading">{{ block.labelCustom }}</p>
+								{% elseif block.label == 'loans' %}
+								<span class="c-tiles__icon-loans"></span>
+								<p class="u-preheading">Loans</p>
+								{% elseif block.label == 'grants' %}
+								<span class="c-tiles__icon-grants"></span>
+								<p class="u-preheading">Grants</p>
+								{% elseif block.label == 'investments' %}
+								<span class="c-tiles__icon-investments"></span>
+								<p class="u-preheading">Investments</p>
+								{% elseif block.label == 'area-representatives' %}
+								<span class="c-tiles__icon-area-representatives"></span>
+								<p class="u-preheading">Area Representatives</p>
+								{% elseif block.label == 'philanthropy' %}
+								<span class="c-tiles__icon-philanthropy"></span>
+								<p class="u-preheading">Philanthropy</p>
+								{% elseif block.label == 'leadership-ministry' %}
+								<span class="c-tiles__icon-leadership-ministry"></span>
+								<p class="u-preheading">Leadership Ministry</p>
+								{% endif %}
+								
+								<h2 class="h4">{{ block.heading ?: block.ctaLink.getText() }}</h2>
+							</div>
+						</div>
+						{% endif %}
 					{% endif %}
 
 					{# LARGE FEATURE TILE #}
@@ -79,6 +113,9 @@
 							{% if block.labelCustom != '' and block.iconCustom | length %}
 							<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
 							<p class="u-preheading">{{ block.labelCustom }}</p>
+							{% elseif block.label == 'loans' %}
+							<span class="c-tiles__icon-loans"></span>
+							<p class="u-preheading">Loans</p>
 							{% elseif block.label == 'grants' %}
 							<span class="c-tiles__icon-grants"></span>
 							<p class="u-preheading">Grants</p>
@@ -116,6 +153,9 @@
 							{% if block.labelCustom != '' and block.iconCustom | length %}
 							<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
 							<p class="u-preheading">{{ block.labelCustom }}</p>
+							{% elseif block.label == 'loans' %}
+							<span class="c-tiles__icon-loans"></span>
+							<p class="u-preheading">Loans</p>
 							{% elseif block.label == 'grants' %}
 							<span class="c-tiles__icon-grants"></span>
 							<p class="u-preheading">Grants</p>

@@ -13,6 +13,9 @@
 			{% if block.labelCustom != '' and block.iconCustom | length %}
 			<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
 			<p class="u-preheading">{{ block.labelCustom }}</p>
+			{% elseif block.label == 'loans' %}
+			<span class="c-tiles__icon-loans"></span>
+			<p class="u-preheading">Loans</p>
 			{% elseif block.label == 'grants' %}
 			<span class="c-tiles__icon-grants"></span>
 			<p class="u-preheading">Grants</p>
