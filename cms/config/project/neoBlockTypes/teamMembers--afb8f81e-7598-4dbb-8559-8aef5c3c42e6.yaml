@@ -1,10 +1,11 @@
-childBlocks: null
+childBlocks:
+  - teamMember
 conditions: null
 description: ''
 enabled: true
 field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
-  85058b95-9a48-4cc6-87d4-1b4e1d027f03:
+  f22e6f22-193a-4815-845c-5a6a46684672:
     tabs:
       -
         elementCondition: null
@@ -17,7 +18,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 83e66656-d9fe-4ba1-b669-fadbc9c65884
+            uid: 6b415374-8e99-4e5b-8bfb-eeb86045ac29
             userCondition: null
             warning: null
             width: 100
@@ -29,7 +30,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 43c2629b-7927-4829-844b-c08f5b0b46dc
+            uid: cc2081ff-3f89-4b54-b60f-45ccb3390993
             userCondition: null
             warning: null
             width: 100
@@ -41,30 +42,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 24cd42c9-b5ca-4757-8e4f-fc2fdd2a8d2f
+            uid: 4c7e2cfb-8cea-4b38-9aa6-0b207878a6b8
             userCondition: null
             warning: null
             width: 100
-        name: 'Intro Description'
-        uid: af747433-6950-4b81-ad84-29157b272b72
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 56133272-2baa-403c-9702-0c006d9c3676 # Accordion Items
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 4fd90cb6-a8d1-44b7-8427-4dc276b57a0c
-            userCondition: null
-            warning: null
-            width: 100
-        name: 'Accordion Items'
-        uid: 5826a7c3-d362-4334-98e5-dead8d7251eb
+        name: Content
+        uid: 5fe85774-069b-4d28-80b3-5892aa1d9569
         userCondition: null
       -
         elementCondition: null
@@ -77,7 +60,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 12205958-e457-492a-a81b-5692dff4482d
+            uid: b5a48650-5a2f-42a0-90ea-07ef0fe5543c
             userCondition: null
             warning: null
             width: 25
@@ -89,7 +72,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f9d0e939-e02d-4efb-9b87-733f0b9f728f
+            uid: 3275bf2b-af39-44f7-b8f9-b547c63f7229
             userCondition: null
             warning: null
             width: 25
@@ -101,7 +84,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b6e7b5d5-cf9f-45fb-be12-bc7bd8cc6c8d
+            uid: ac860fbb-078d-4c3c-bd10-df7f0b69ba5a
             userCondition: null
             warning: null
             width: 25
@@ -113,16 +96,28 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1f97c3a6-b0da-4902-9193-bb5502e6b042
+            uid: edd00ac2-4d76-4c7d-882a-5570ad6650a0
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea01b410-9355-4de6-ab20-fd78d0eb734c
             userCondition: null
             warning: null
             width: 25
         name: 'Section Settings'
-        uid: 2f324fc4-b5ab-4369-a2a2-39035ee06e30
+        uid: 7c1a8291-bb20-4c73-91e1-85a771d67cc3
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: accordion
+handle: teamMembers
 icon: null
 ignorePermissions: true
 maxBlocks: 0
@@ -131,6 +126,6 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: Accordion
-sortOrder: 16
+name: 'Team Members'
+sortOrder: 13
 topLevel: true

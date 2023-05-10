@@ -16,7 +16,7 @@ fieldLayouts:
             uid: 16ec6cb3-79c0-4643-8004-f2d581247695
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6 # Label
@@ -28,7 +28,7 @@ fieldLayouts:
             uid: bdcce914-b0af-4ef5-8cd4-fe988cd66b0b
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 08a4604d-4fdb-476b-b82c-88ef59973d9e # Label: Custom

@@ -1,3 +1,9 @@
+{##
+ # PAGE HEADER AND NAVIGATION MENU
+ #}
+{% set navNodes   = craft.entries.section('navigationMenu').all() %}
+{% set linkGive   = '#' %}
+{% set linkInvest = '#' %}
 <a id="top"></a>
 <header class="c-header sticky-top" id="header">
 	<!-- DESKTOP HEADER -->
@@ -12,39 +18,40 @@
 			<div class="col d-flex justify-content-center">
 				<nav class="c-header__nav">
 					<ul class="nav flex-nowrap">
-						<li class="nav-item c-header__mega-toggle">
-							<button class="nav-link js-nav-item"
-								type="button" 
-								id="mega-impact-tab"
-								data-bs-toggle="collapse" 
-								data-bs-target="#mega-impact" 
-								aria-expanded="false" 
-								aria-controls="mega-impact">Impact Investing</button>
-						</li>
-						<li class="nav-item c-header__mega-toggle">
-							<button class="nav-link js-nav-item"
-								type="button" 
-								id="mega-loans-tab"
-								data-bs-toggle="collapse" 
-								data-bs-target="#mega-loans" 
-								aria-expanded="false" 
-								aria-controls="mega-loans">Loans for Ministries</button>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-nav-item" href="">Philanthropy</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-nav-item" href="">Grants</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-nav-item" href="">Congregational Engagement</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-nav-item" href="">Leadership Ministry</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-nav-item" href="">About</a>
-						</li>
+						{% for node in navNodes %}
+							{% if node.type == 'megaMenu' %}
+							<li class="nav-item c-header__mega-toggle">
+								<button class="nav-link js-nav-item"
+									type="button" 
+									id="mega-{{ node.slug }}-tab"
+									data-bs-toggle="collapse" 
+									data-bs-target="#mega-{{ node.slug }}" 
+									aria-expanded="false" 
+									aria-controls="mega-{{ node.slug }}">{{ node.title }}</button>
+							</li>
+							{% elseif node.type == 'dropdown' %}
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" 
+									href="#" 
+									role="button" 
+									data-bs-toggle="dropdown"
+									aria-expanded="false">
+									{{ node.title }}
+								</a>
+								<ul class="dropdown-menu">
+									{% for dropdownItem in node.dropdownLinks.all() %}
+									{% set page = dropdownItem.dropdownLink %}
+									<li><a class="dropdown-item" href="{{ page.getIntrinsicUrl() }}">{{ page.getText() ?: page.element.title }}</a></li>
+									{% endfor %}
+								</ul>
+							</li>
+							{% elseif node.type == 'link' %}
+							{% set page = node.textLink %}
+							<li class="nav-item">
+								<a class="nav-link js-nav-item" href="{{ page.getIntrinsicUrl() }}">{{ page.getText() ?: node.title }}</a>
+							</li>
+							{% endif %}
+						{% endfor %}
 					</ul>
 				</nav>
 			</div>
@@ -65,11 +72,11 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link btn btn-secondary" href="#">Give</a>
+							<a class="nav-link btn btn-secondary" href="{{ linkGive }}">Give</a>
 						</li>
 						
 						<li class="nav-item">
-							<a class="nav-link btn btn-outline-secondary" href="#">Invest</a>
+							<a class="nav-link btn btn-outline-secondary" href="{{ linkInvest }}">Invest</a>
 						</li>
 					</ul>
 				</nav>
@@ -87,11 +94,11 @@
 			<nav>
 				<ul class="nav">
 					<li class="nav-item">
-						<a class="nav-link text-uppercase text-primary" href="#">Give</a>
+						<a class="nav-link text-uppercase text-primary" href="{{ linkGive }}">Give</a>
 					</li>
 					
 					<li class="nav-item">
-						<a class="nav-link text-uppercase text-primary" href="#">Invest</a>
+						<a class="nav-link text-uppercase text-primary" href="{{ linkInvest }}">Invest</a>
 					</li>
 
 					<li class="nav-item">
@@ -121,108 +128,55 @@
 		</div>
 	</div>
 
-	<!-- MEGA MENU: IMPACT -->
-	<div id="mega-impact" class="c-header__mega-menu shadow collapse" aria-labelledby="mega-impact-tab" data-bs-parent="#header">
+	{# MEGA MENU PANELS #}
+	{% for node in navNodes %}
+	{% if node.type == 'megaMenu' %}
+	<div id="mega-{{ node.slug }}" class="c-header__mega-menu shadow collapse" aria-labelledby="mega-{{ node.slug }}-tab" data-bs-parent="#header">
 		<div class="row gx-0">
+			{% if node.megaMenuCtas | length %}
 			<div class="col-4 c-header__mega-menu-features">
-				<p class="u-base-font-semibold">Popular Resources</p>
-
-				<a class="d-block lh-sm mb-5" href="#">
-					<img class="d-block w-100 img-fluid rounded mb-2" src="/dist/img/mega-menu-img-1.jpg" alt="" />
-					Lorem ipsum dolor sit amet consectetur adipiscing elit
-				</a>
-
-				<a class="d-block lh-sm" href="#">
-					<img class="d-block w-100 img-fluid rounded mb-2" src="/dist/img/mega-menu-img-2.jpg" alt="" />
-					Lorem ipsum dolor sit amet consectetur adipiscing elit
-				</a>
+				{% for block in node.megaMenuCtas.all() %}
+					{% if block.type == 'label' %}
+						<p class="u-base-font-semibold">{{ block.label | raw }}</p>
+					{% elseif block.type == 'cta' %}
+						{% set link   = block.ctaLink %}
+						{% set img    = block.image.one() %}
+						{% set imgSrc = img.url('responsiveSmall') %}
+						{% set imgAlt = img.alt %}
+						<a class="d-block lh-sm{% if not loop.last%} mb-5{% endif %}" href="{{ link.getIntrinsicUrl() }}">
+							<img class="d-block w-100 img-fluid rounded mb-2" src="{{ imgSrc }}" alt="{{ imgAlt }}" />
+							{{ link.getText() ?: link.element.title }}
+						</a>
+					{% endif %}
+				{% endfor %}
 			</div>
+			{% endif %}
 
 			<div class="col-8 p-5">
 				<div class="row">
+					{% set columns = (node.megaMenuLinks.level(1) | length / 2) | round(0, 'ceil') %}
+					{% for column in node.megaMenuLinks.level(1)|batch(columns) %}
 					<div class="col-6">
-						<p class="h5"><a href="">Impact Notes</a></p>
-						<ul class="mb-5">
-							<li><a href="">Current Rates</a></li>
-							<li><a href="">Churches</a></li>
-							<li><a href="">Clergy</a></li>
-							<li><a href="">Individuals</a></li>
-						</ul>
-
-						<p class="h5"><a href="">Investment Resources</a></p>
-						<ul>
-							<li><a href="">Weekly Rate Flyer</a></li>
-							<li><a href="">Offering Circular</a></li>
-							<li><a href="">Information Statement</a></li>
-							<li><a href="">2021 Impact Report</a></li>
-							<li><a href="">Audited Financial Statements</a></li>
-						</ul>
+						{% for group in column %}
+							{% if group.textLink | length %}
+							<p class="h5"><a href="{{ group.textLink.getIntrinsicUrl() }}">{{ group.textLink.getText() }}</a></p>
+							{% endif %}
+							{% if group.children | length %}
+							<ul class="mb-5">
+								{% for child in group.children.all() %}
+								<li><a href="{{ child.textLink.getIntrinsicUrl() }}">{{ child.textLink.getText() }}</a></li>
+								{% endfor %}
+							</ul>
+							{% endif %}
+						{% endfor %}
 					</div>
-
-					<div class="col-6">
-						<p class="h5"><a href="">Equity & Bond Investments</a></p>
-						<ul class="mb-5">
-							<li><a href="">TMF Balance Portfolio</a></li>
-							<li><a href="">Wespath Funds</a></li>
-						</ul>
-
-						<p class="h5 mb-5"><a href="">Meet The Team</a></p>
-
-						<p class="h5"><a href="">Open an Account</a></p>
-						<ul>
-							<li><a href="">Church or Nonprofit</a></li>
-							<li><a href="">Equity and Bond Investments</a></li>
-							<li><a href="">Individual</a></li>
-						</ul>
-					</div>
+					{% endfor %}
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- MEGA MENU: LOANS -->
-	<div id="mega-loans" class="c-header__mega-menu shadow collapse" aria-labelledby="mega-loans-tab" data-bs-parent="#header">
-		<div class="row gx-0">
-			<div class="col-4 c-header__mega-menu-features">
-				<p class="u-base-font-semibold">Popular Resources</p>
-
-				<a class="d-block lh-sm mb-5" href="#">
-					<img class="d-block w-100 img-fluid rounded mb-2" src="/dist/img/mega-menu-img-2.jpg" alt="" />
-					Lorem ipsum dolor sit amet consectetur adipiscing elit
-				</a>
-
-				<a class="d-block lh-sm" href="#">
-					<img class="d-block w-100 img-fluid rounded mb-2" src="/dist/img/mega-menu-img-1.jpg" alt="" />
-					Lorem ipsum dolor sit amet consectetur adipiscing elit
-				</a>
-			</div>
-
-			<div class="col-8 p-5">
-				<div class="row">
-					<div class="col-6">
-						<p class="h5"><a href="">Loan Types</a></p>
-						<ul class="mb-5">
-							<li><a href="">Lorem ipsum dolor</a></li>
-							<li><a href="">Consectetur adipiscing</a></li>
-							<li><a href="">Tempor incididunt</a></li>
-						</ul>
-
-						<p class="h5"><a href="">Loan Resources</a></p>
-						<ul>
-							<li><a href="">Massa ultricies</a></li>
-							<li><a href="">Proin sed libero</a></li>
-							<li><a href="">Maecenas accumsan</a></li>
-							<li><a href="">Scelerisque eleifend</a></li>
-						</ul>
-					</div>
-
-					<div class="col-6">
-						<p class="h5"><a href="">Apply for a Loan</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	{% endif %}
+	{% endfor %}
 </header>
 
 <!-- MOBILE OFFCANVAS MENU -->

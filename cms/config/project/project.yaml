@@ -1,4 +1,4 @@
-dateModified: 1683646449
+dateModified: 1683660767
 elementSources:
   craft\elements\Entry:
     -
@@ -119,9 +119,11 @@ meta:
     1a59398d-6900-4df1-a904-341d0b1c005c: 'CTA Tiles' # CTA Tiles
     1fc01eb4-e3aa-4109-b017-9a4357415660: Form # Form
     2bd2d918-16fc-4147-9b16-0a5c2a448d3e: 'Label: Custom' # Label: Custom
+    2c56ec44-02d8-449f-b55a-ccb4e0f64909: 'Custom Table' # Custom Table
     2f76bca5-2eaf-4262-8c5d-edb7401cc84f: Video # Video
     3b6ab5b3-228a-4f9a-b6ba-5958d0d9daf2: 'Icon: Custom' # Icon: Custom
     3b51443f-4e3e-4232-8ca5-f70fda28a3c2: Link # Link
+    3cd86bf3-6755-432c-a7cd-8fdb85ad0ccb: 'Table Footer' # Table Footer
     3d088ba7-2012-45f1-8454-ccf6895bd50b: 'Home: Square Tiles' # Home: Square Tiles
     3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF # TMF
     3dd8a012-e0af-46a4-a906-a538bd2c6a64: Style # Style
@@ -141,6 +143,7 @@ meta:
     6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c: Heading # Heading
     6b8077d5-b074-4ffc-8cba-4946fd5d9a35: 'Img+Text Header' # Img+Text Header
     6caec3d2-766a-490b-9491-7b784243b1d4: 'Mega Menu: CTAs' # Mega Menu: CTAs
+    6e1fd6d5-5ab2-4bee-8393-d541afe51eea: Heading # Heading
     6ed354ea-1804-41ca-a57f-9e843614ea4a: General # General
     6eef926d-daad-4ff8-9cce-8ececaa4dcf4: Description # Description
     6eeff1eb-96ce-43ab-911f-a6e7aa97139e: Heading # Heading
@@ -149,12 +152,15 @@ meta:
     07a87980-eb4d-4710-896e-772170d1d21d: 'Section Settings' # Section Settings
     7e96a64e-53b0-4605-98b2-53710eb1c5bf: Media # Media
     7f134341-6c01-4975-9ea9-60df3c3dd5f0: Image # Image
+    7fdd5ed0-dc8b-4df8-bdb3-5909ceccface: Subheading # Subheading
     08a4604d-4fdb-476b-b82c-88ef59973d9e: 'Label: Custom' # Label: Custom
+    08b49f0a-64a0-4753-9893-80ca6d6ddf85: 'Rate Table' # Rate Table
     8cccdb1c-6473-404a-9289-b9a52343d552: 'Label: Custom' # Label: Custom
     8cf524a9-c788-4109-8c27-b973b5da1c8b: Image # Image
     8d53efd7-98eb-40ec-a000-4b904766072d: Button # Button
     8f655278-2023-4da0-a4d7-64814ef5c669: 'CTA Tiles' # CTA Tiles
     9d7fafd1-35d2-468a-929a-b88e876f64e2: Email # Email
+    9e28f3c9-7883-4de5-93ef-fcf8ed4ca639: Subheading # Subheading
     9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa: Link # Link
     12a86971-9af3-496d-9a73-1f277506afaa: 'Padding: Sides' # Padding: Sides
     13c74871-8a4f-4e3d-9caf-998a4119ec36: 'Text Link' # Text Link
@@ -162,6 +168,7 @@ meta:
     19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a: General # General
     24a26f70-67f3-45a7-8828-d33f091c1508: 'Home: Tile - Wide' # Home: Tile - Wide
     28a04878-3d6a-4889-ad36-87cce2dd449e: 'Padding: Top' # Padding: Top
+    30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b: 'Team Member' # Team Member
     31f2b911-731f-42b5-84c6-4b2777260f2f: 'Section Heading' # Section Heading
     38b1109c-b2b4-4a24-8273-95f4885fdbbe: 'Label: Custom' # Label: Custom
     38f59447-9f79-465c-96fc-aba9497a5d04: 'Large | Small | Small' # Large | Small | Small
@@ -171,6 +178,7 @@ meta:
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
     69a66c94-0c41-4248-949e-0b52659f8c9e: 'Dropdown Links' # Dropdown Links
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
+    75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading # Heading
     91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
     92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages # Pages
     160cd5ce-bdfd-4507-b851-369a31a5bbb6: Label # Label
@@ -178,6 +186,7 @@ meta:
     403b04cf-f24a-4706-8842-0ecd144931b6: Label # Label
     431ce2c5-de63-4209-b6b9-a5a836a67d82: 'Home Page Fields' # Home Page Fields
     449b0c4e-c289-419e-bc2c-ac1a03c1a3c2: 'Background Photo' # Background Photo
+    479ec005-6f3d-4922-b8e5-da10aad75bdc: 'Data Tables' # Data Tables
     489ff905-09c2-4e5b-a990-e00ceda4050e: Tile # Tile
     517cdef8-d041-4ff8-857b-21f4f518180b: 'CTA Link' # CTA Link
     543e6694-6bf5-44ed-936b-11dd6e5ae656: 'Image Tile' # Image Tile
@@ -201,6 +210,7 @@ meta:
     23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8: 'Page Header' # Page Header
     32847f30-97a7-46a4-aa8a-1d662159da7d: 'Link to Asset' # Link to Asset
     34324a9e-7ce8-4902-8508-1d7046c34d97: 'Board Members' # Board Members
+    40462e8a-a238-4adf-9317-22de98d2878f: 'Data Table' # Data Table
     048761f8-a826-44ed-ad18-7137532f8c0a: 'Dropdown Link' # Dropdown Link
     54632eea-be0d-432e-9b18-64f95cdb3ddc: 'Lead Block' # Lead Block
     72143de2-34b2-4912-87dc-02d8eb4a1a0f: News # News
@@ -228,10 +238,12 @@ meta:
     ab7e2d93-36c3-4838-bcb0-b9378b70308a: Heading # Heading
     ab39e5a8-9059-4669-8998-c898c3c7ed89: Heading # Heading
     ad9d8d2b-1080-4917-ae1e-3a6d6460fd11: 'Favicon File' # Favicon File
+    ad7213bd-2585-46b4-80ac-945289d706b3: 'Rate Table' # Rate Table
     ae512cd8-d6a4-49a2-b185-8ba40a87fc1e: Images # Images
     aec4cf66-3af8-44c6-ba81-0ebbf0e6c837: Homepage # Homepage
     aec4351f-8a70-4278-9846-54ad19f795fc: 'Icon: Custom' # Icon: Custom
     aed0fd2d-f074-485f-b1f7-4c8ef97e91cc: Arrow # Arrow
+    afb8f81e-7598-4dbb-8559-8aef5c3c42e6: 'Team Members' # Team Members
     b00ccfa2-369c-471f-ae02-ae5ed2a9bae6: Thumbnail # Thumbnail
     b070c34a-c1d0-4e63-ad06-862e534e4843: 'Square: 600' # Square: 600
     b5e2bd07-e195-4564-94a1-74ce51723188: 'Link Group' # Link Group
@@ -253,11 +265,13 @@ meta:
     cdb162a5-f0d2-429b-b5ac-588fc77a48da: Summary # Summary
     ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop' # Image: Desktop
     cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption # Caption
+    d0098f21-2d27-4c01-a70b-b9f036b1d94b: 'Custom Table' # Custom Table
     d2cf84b8-da42-48ed-9ffa-4f93da867f96: 'Text Link' # Text Link
     d3ccac65-2f19-4621-b98f-cb5f46bf796d: 'Home: Feature Tile' # Home: Feature Tile
     d4a66aad-fd77-4abe-97e2-a01cabc77bac: Description # Description
     d5a26941-e90f-43b4-8e8b-b34c12674c8b: 'Column: Text' # Column: Text
     d5b3ab4a-0901-4e78-ab46-45130ae47282: Blog # Blog
+    d8ff4807-a709-4131-95b1-7a565312e33d: 'Table Footer' # Table Footer
     d33d4fab-55e7-446f-8972-f4676b5ee14a: Heading # Heading
     d46a26f8-acd0-4f06-8f57-f8e755cbcddb: Label # Label
     d1801112-12c8-4cf2-aaea-f0154e2d39a3: News # News

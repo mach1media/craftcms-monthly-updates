@@ -88,6 +88,27 @@
 				}
 			}
 		}
+
+		.dropdown-toggle:after {
+			display: none;
+		}
+
+		.dropdown-item {
+			font-size: 14px;
+			color: map-get($theme-colors, 'primary');
+			
+			&:hover {
+				color: map-get($theme-colors, 'secondary');
+				text-decoration: none;
+				background-color: transparent;
+			}
+		}
+
+		@include media-breakpoint-up(xxl) {
+			ul.nav li.dropdown:hover > ul.dropdown-menu {
+				display: block;    
+			}
+		}
 	}
 	@include element('utility') {
 		.nav-link.btn {

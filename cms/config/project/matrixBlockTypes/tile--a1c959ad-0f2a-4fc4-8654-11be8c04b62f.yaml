@@ -16,7 +16,7 @@ fieldLayouts:
             uid: e8c2be9a-24bf-4bc7-a7b5-1a565e21e08d
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 160cd5ce-bdfd-4507-b851-369a31a5bbb6 # Label
@@ -28,7 +28,7 @@ fieldLayouts:
             uid: 5cc7edee-567a-4216-ad3d-ed0d9ca68d52
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 8cccdb1c-6473-404a-9289-b9a52343d552 # Label: Custom
@@ -40,7 +40,7 @@ fieldLayouts:
             uid: 54c2d01c-7541-4557-beb8-ad4815fabb4b
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 3b6ab5b3-228a-4f9a-b6ba-5958d0d9daf2 # Icon: Custom
@@ -52,7 +52,7 @@ fieldLayouts:
             uid: ca588bd1-be1c-4e89-8664-c2619fe5c9eb
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: baddf677-8996-4c34-b436-ea8341d9bed3 # Heading

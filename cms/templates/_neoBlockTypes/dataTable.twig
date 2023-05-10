@@ -1,0 +1,109 @@
+{##
+ # NEO BLOCK TYPE: DATA TABLE
+ #}
+<section class="c-block c-data-table{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-6 pe-lg-5 mb-5 mb-lg-0">
+				{% if block.preheading is defined and block.preheading != '' %}
+				<p class="u-preheading">{{ block.preheading }}</p>
+				{% endif %}
+				
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+				
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg">{{ block.description }}</div>
+				{% endif %}
+				
+				{% include "_fields/buttons" with {'buttons': block.buttons} %}
+			</div>
+			
+			<div class="col-12 col-lg-6 ps-lg-5">
+				{% for table in block.dataTables.all() %}
+					{% if table.heading != '' or table.subheading != '' %}
+					<p class="h4 mb-3">
+						{{ table.heading | raw }}
+						{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+					</p>
+					{% endif %}
+
+					{% if table.type == 'rateTable' %}
+					<div class="border border-secondary rounded p-3 mb-5">
+						<div class="table-responsive">
+							<table class="table table-sm text-primary">
+								<thead>
+									<tr class="align-bottom">
+										{% for row in table.rateTable %}
+											{% if loop.first %}
+											<th>{{ row.heading }}</th>
+											<th class="text-left" align="left" width="">{{ row.yr1 }}</th>
+											<th class="text-left" align="left" width="">{{ row.yr2 }}</th>
+											<th class="text-left" align="left" width="">{{ row.yr3 }}</th>
+											<th class="text-left" align="left" width="">{{ row.yr4 }}</th>
+											<th class="text-left" align="left" width="">{{ row.yr5 }}</th>
+											{% endif %}
+										{% endfor %}
+									</tr>
+								</thead>
+						
+								<tbody>
+									{% for row in table.rateTable %}
+										{% if not loop.first %}
+										<tr>
+											<th align="left">{{ row.heading }}</th>
+											<td align="left">{{ row.yr1 }}</td>
+											<td align="left">{{ row.yr2 }}</td>
+											<td align="left">{{ row.yr3 }}</td>
+											<td align="left">{{ row.yr4 }}</td>
+											<td align="left">{{ row.yr5 }}</td>
+										</tr>
+										{% endif %}
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+					{% elseif table.type == 'customTable' %}
+					<div class="border border-secondary rounded p-3 mb-3">
+						<div class="table-responsive">
+							<table class="table table-sm text-primary">
+								<thead>
+									<tr class="align-bottom">
+										{% for col in block.dataTable.columns %}
+											<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
+										{% endfor %}
+									</tr>
+								</thead>
+						
+								<tbody>
+									{% for row in block.dataTable.rows %}
+										<tr>
+											{% for cell in row %}
+												{% if loop.first %}
+												<th align="{{ block.dataTable.columns[loop.index0].align }}">{{ cell }}</th>
+												{% else %}
+												<td align="{{ block.dataTable.columns[loop.index0].align }}">{{ cell }}</td>
+												{% endif %}
+											{% endfor %}
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+					{% endif %}
+
+					{% if table.tableFooter != '' %}
+					<small>{{ table.tableFooter }}</small>
+					{% endif %}
+				{% endfor %}
+
+				{% if block.summary != '' %}
+				<small>
+					<p>{{ block.summary | nl2br }}</p>
+				</small>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

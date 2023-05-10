@@ -1,0 +1,148 @@
+field: 479ec005-6f3d-4922-b8e5-da10aad75bdc # Data Tables
+fieldLayouts:
+  8471f1ca-f929-4338-9577-09ce381a828a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6e1fd6d5-5ab2-4bee-8393-d541afe51eea # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9713dc0b-aece-42e3-9d29-4d7101bb6909
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9e28f3c9-7883-4de5-93ef-fcf8ed4ca639 # Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 328ecab7-bd38-4d50-8c63-661a0bf37ac8
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: d0098f21-2d27-4c01-a70b-b9f036b1d94b # Custom Table
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be928742-f146-4f2b-b097-658ccf0d3f13
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3cd86bf3-6755-432c-a7cd-8fdb85ad0ccb # Table Footer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3b18510b-5379-4be5-b63f-8ddc802ba4e1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: df0fef86-6c35-47a5-84fa-7e4da4a42f51
+        userCondition: null
+fields:
+  3cd86bf3-6755-432c-a7cd-8fdb85ad0ccb: # Table Footer
+    columnSuffix: cqetytot
+    contentColumnType: text
+    fieldGroup: null
+    handle: tableFooter
+    instructions: null
+    name: 'Table Footer'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  6e1fd6d5-5ab2-4bee-8393-d541afe51eea: # Heading
+    columnSuffix: klcjgoty
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  9e28f3c9-7883-4de5-93ef-fcf8ed4ca639: # Subheading
+    columnSuffix: lexzoyzw
+    contentColumnType: text
+    fieldGroup: null
+    handle: subheading
+    instructions: null
+    name: Subheading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d0098f21-2d27-4c01-a70b-b9f036b1d94b: # Custom Table
+    columnSuffix: jhxfkvpb
+    contentColumnType: text
+    fieldGroup: null
+    handle: customTable
+    instructions: null
+    name: 'Custom Table'
+    searchable: false
+    settings:
+      columnsAddRowLabel: null
+      columnsInstructions: null
+      columnsLabel: null
+      rowsAddRowLabel: null
+      rowsInstructions: null
+      rowsLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\tablemaker\fields\TableMakerField
+handle: customTable
+name: 'Custom Table'
+sortOrder: 2

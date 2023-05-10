@@ -10858,6 +10858,23 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
 }
+.c-header__nav .dropdown-toggle:after {
+  display: none;
+}
+.c-header__nav .dropdown-item {
+  font-size: 14px;
+  color: #231F5B;
+}
+.c-header__nav .dropdown-item:hover {
+  color: #C19D68;
+  text-decoration: none;
+  background-color: transparent;
+}
+@media (min-width: 1400px) {
+  .c-header__nav ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
 .c-header__utility .nav-link.btn {
   font-size: 12px;
   padding: 1em 2em;
