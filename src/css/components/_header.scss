@@ -277,8 +277,9 @@
 			margin-bottom: .5em;
 		}
 		
-		a,
-		li > label {
+		li > a,
+		li > label,
+		li > button {
 			display: block;
 			width: 100%;
 			font-size: 1.2em;
@@ -295,14 +296,24 @@
 				color:  map-get($theme-colors, 'secondary');
 			}
 		}
+
+		// top-level dropdown links
+		& > ul > li > div:not(.c-header__faceted-sub) > ul > li > a {
+			font-size: 1em;
+		}
 		
 		label {
 			cursor: pointer;
 		}
 		
-		li > label {
-			position: relative;
 
+		li > label,
+		li > button,
+		li > a {
+			position: relative;
+		}
+
+		li > label {
 			&:after {
 				content: "";
 				position: absolute;
@@ -317,7 +328,9 @@
 			}
 		}
 
-		.menu-impact > label {
+		.menu-impact > label,
+		.menu-impact > button,
+		.menu-impact > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -332,7 +345,9 @@
 			}
 		}
 
-		.menu-loans > label {
+		.menu-loans > label,
+		.menu-loans > button,
+		.menu-loans > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -347,7 +362,9 @@
 			}
 		}
 
-		.menu-philanthropy > label {
+		.menu-philanthropy > label,
+		.menu-philanthropy > button,
+		.menu-philanthropy > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -362,7 +379,9 @@
 			}
 		}
 
-		.menu-grants > label {
+		.menu-grants > label,
+		.menu-grants > button,
+		.menu-grants > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -377,7 +396,9 @@
 			}
 		}
 
-		.menu-engagement > label {
+		.menu-engagement > label,
+		.menu-engagement > button,
+		.menu-engagement > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -392,7 +413,9 @@
 			}
 		}
 
-		.menu-leadership > label {
+		.menu-leadership > label,
+		.menu-leadership > button,
+		.menu-leadership > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -407,7 +430,9 @@
 			}
 		}
 
-		.menu-about > label {
+		.menu-about > label,
+		.menu-about > button,
+		.menu-about > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -434,6 +459,11 @@
 		background-color: $bg-megamenu-features;
 		@include z-1;
 
+		& li > a,
+		& li > label,
+		& li > button {
+			padding-left: 0;
+		}
 		& > ul {
 			& > li {
 				padding-left: 0;

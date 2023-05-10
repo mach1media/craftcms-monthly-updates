@@ -10999,8 +10999,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 .c-header__faceted > ul > li:not(:last-of-type) {
   margin-bottom: 0.5em;
 }
-.c-header__faceted a,
-.c-header__faceted li > label {
+.c-header__faceted li > a,
+.c-header__faceted li > label,
+.c-header__faceted li > button {
   display: block;
   width: 100%;
   font-size: 1.2em;
@@ -11013,14 +11014,20 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
-.c-header__faceted a:hover,
-.c-header__faceted li > label:hover {
+.c-header__faceted li > a:hover,
+.c-header__faceted li > label:hover,
+.c-header__faceted li > button:hover {
   color: #C19D68;
+}
+.c-header__faceted > ul > li > div:not(.c-header__faceted-sub) > ul > li > a {
+  font-size: 1em;
 }
 .c-header__faceted label {
   cursor: pointer;
 }
-.c-header__faceted li > label {
+.c-header__faceted li > label,
+.c-header__faceted li > button,
+.c-header__faceted li > a {
   position: relative;
 }
 .c-header__faceted li > label:after {
@@ -11035,7 +11042,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background: url("/dist/img/icon-chevron-circle-right.svg") center center no-repeat;
   background-size: contain;
 }
-.c-header__faceted .menu-impact > label:before {
+.c-header__faceted .menu-impact > label:before,
+.c-header__faceted .menu-impact > button:before,
+.c-header__faceted .menu-impact > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11047,7 +11056,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background: url("/dist/img/icon-impact-investing-tan.svg") center center no-repeat;
   background-size: contain;
 }
-.c-header__faceted .menu-loans > label:before {
+.c-header__faceted .menu-loans > label:before,
+.c-header__faceted .menu-loans > button:before,
+.c-header__faceted .menu-loans > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11059,7 +11070,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background: url("/dist/img/icon-loans-tan.svg") center center no-repeat;
   background-size: contain;
 }
-.c-header__faceted .menu-philanthropy > label:before {
+.c-header__faceted .menu-philanthropy > label:before,
+.c-header__faceted .menu-philanthropy > button:before,
+.c-header__faceted .menu-philanthropy > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11071,7 +11084,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background: url("/dist/img/icon-philanthropy-tan.svg") center center no-repeat;
   background-size: contain;
 }
-.c-header__faceted .menu-grants > label:before {
+.c-header__faceted .menu-grants > label:before,
+.c-header__faceted .menu-grants > button:before,
+.c-header__faceted .menu-grants > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11083,7 +11098,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background: url("/dist/img/icon-grants-tan.svg") center center no-repeat;
   background-size: contain;
 }
-.c-header__faceted .menu-engagement > label:before {
+.c-header__faceted .menu-engagement > label:before,
+.c-header__faceted .menu-engagement > button:before,
+.c-header__faceted .menu-engagement > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11095,7 +11112,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background: url("/dist/img/icon-area-representatives-tan.svg") center center no-repeat;
   background-size: contain;
 }
-.c-header__faceted .menu-leadership > label:before {
+.c-header__faceted .menu-leadership > label:before,
+.c-header__faceted .menu-leadership > button:before,
+.c-header__faceted .menu-leadership > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11107,7 +11126,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background: url("/dist/img/icon-leadership-ministry-tan.svg") center center no-repeat;
   background-size: contain;
 }
-.c-header__faceted .menu-about > label:before {
+.c-header__faceted .menu-about > label:before,
+.c-header__faceted .menu-about > button:before,
+.c-header__faceted .menu-about > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11130,6 +11151,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   padding: 1.5rem;
   background-color: #f8f4ee;
   z-index: 100;
+}
+.c-header__faceted-sub li > a, .c-header__faceted-sub li > label, .c-header__faceted-sub li > button {
+  padding-left: 0;
 }
 .c-header__faceted-sub > ul > li {
   padding-left: 0;
