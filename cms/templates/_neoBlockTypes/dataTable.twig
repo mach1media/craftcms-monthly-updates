@@ -69,20 +69,20 @@
 							<table class="table table-sm text-primary">
 								<thead>
 									<tr class="align-bottom">
-										{% for col in block.dataTable.columns %}
+										{% for col in table.customTable.columns %}
 											<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
 										{% endfor %}
 									</tr>
 								</thead>
 						
 								<tbody>
-									{% for row in block.dataTable.rows %}
+									{% for row in table.customTable.rows %}
 										<tr>
 											{% for cell in row %}
 												{% if loop.first %}
-												<th align="{{ block.dataTable.columns[loop.index0].align }}">{{ cell }}</th>
+												<th align="{{ table.customTable.columns[loop.index0].align }}">{{ cell }}</th>
 												{% else %}
-												<td align="{{ block.dataTable.columns[loop.index0].align }}">{{ cell }}</td>
+												<td align="{{ table.customTable.columns[loop.index0].align }}">{{ cell }}</td>
 												{% endif %}
 											{% endfor %}
 										</tr>

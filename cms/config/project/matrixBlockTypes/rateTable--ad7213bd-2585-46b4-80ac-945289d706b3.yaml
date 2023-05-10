@@ -64,7 +64,7 @@ fields:
     handle: subheading
     instructions: null
     name: Subheading
-    searchable: false
+    searchable: true
     settings:
       byteLimit: null
       charLimit: null
@@ -84,7 +84,7 @@ fields:
     handle: rateTable
     instructions: null
     name: 'Rate Table'
-    searchable: false
+    searchable: true
     settings:
       addRowLabel: 'Add a row'
       columnType: text
@@ -259,7 +259,7 @@ fields:
     handle: heading
     instructions: null
     name: Heading
-    searchable: false
+    searchable: true
     settings:
       byteLimit: null
       charLimit: null
@@ -279,7 +279,7 @@ fields:
     handle: tableFooter
     instructions: null
     name: 'Table Footer'
-    searchable: false
+    searchable: true
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
