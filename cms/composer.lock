@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05cfeaf66ba01fb8a2c5a87ef02d389f",
+    "content-hash": "8157004967bee2509c8c6d9becf0c7d7",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -440,11 +440,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.4.8",
+            "version": "4.4.10.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/c2947a7633375432d23dbbf11c21b4b6cc415650",
-                "reference": "c2947a7633375432d23dbbf11c21b4b6cc415650",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d51831dfb7f9ee81182952f716aa5cfb5a9a5b21",
+                "reference": "d51831dfb7f9ee81182952f716aa5cfb5a9a5b21",
                 "shasum": ""
             },
             "require": {
@@ -535,7 +535,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2023-04-25T17:56:18+00:00"
+            "time": "2023-05-10T15:11:06+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -1531,11 +1531,11 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.13.10",
+            "version": "8.13.11",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/5b5a467a322d3a23706c729e28b88e3cc73df74f",
-                "reference": "5b5a467a322d3a23706c729e28b88e3cc73df74f",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/e2395dadce92f139fc6ec71bfe8ae46a2e942944",
+                "reference": "e2395dadce92f139fc6ec71bfe8ae46a2e942944",
                 "shasum": ""
             },
             "require": {
@@ -1580,7 +1580,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2023-04-19T12:13:30+00:00"
+            "time": "2023-04-27T11:06:55+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -2529,17 +2529,15 @@
         },
         {
             "name": "masterminds/html5",
-            "version": "2.7.6",
+            "version": "2.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/897eb517a343a2281f11bc5556d6548db7d93947",
-                "reference": "897eb517a343a2281f11bc5556d6548db7d93947",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/3c5d5a56d56f48a1ca08a0670f0f80c1dad368f3",
+                "reference": "3c5d5a56d56f48a1ca08a0670f0f80c1dad368f3",
                 "shasum": ""
             },
             "require": {
-                "ext-ctype": "*",
                 "ext-dom": "*",
-                "ext-libxml": "*",
                 "php": ">=5.3.0"
             },
             "type": "library",
@@ -2581,7 +2579,7 @@
                 "serializer",
                 "xml"
             ],
-            "time": "2022-08-18T16:18:26+00:00"
+            "time": "2023-04-26T07:27:39+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
@@ -3313,11 +3311,11 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.20.3",
+            "version": "1.20.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6c04009f6cae6eda2f040745b6b846080ef069c2",
-                "reference": "6c04009f6cae6eda2f040745b6b846080ef069c2",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd",
+                "reference": "7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd",
                 "shasum": ""
             },
             "require": {
@@ -3335,7 +3333,7 @@
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2023-04-25T09:01:03+00:00"
+            "time": "2023-05-02T09:19:37+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -3757,11 +3755,11 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.9.0",
+            "version": "v2.10.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/234f8fd1023c9158e2314fa9d7d0e6a83db42910",
-                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/f913fb8cceba1e6644b7b90c4bfb678ed8a3ef38",
+                "reference": "f913fb8cceba1e6644b7b90c4bfb678ed8a3ef38",
                 "shasum": ""
             },
             "require": {
@@ -3806,7 +3804,7 @@
                 "promise",
                 "promises"
             ],
-            "time": "2022-02-11T10:27:51+00:00"
+            "time": "2023-05-02T15:15:43+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -4154,11 +4152,11 @@
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "3.7.7",
+            "version": "3.7.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/416cc89e083f84845a6da81ea64e8768167f1a55",
-                "reference": "416cc89e083f84845a6da81ea64e8768167f1a55",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/8bcfe9bccd04f6ec9d79b9535f6be87fc127b851",
+                "reference": "8bcfe9bccd04f6ec9d79b9535f6be87fc127b851",
                 "shasum": ""
             },
             "require": {
@@ -4172,7 +4170,7 @@
                 "schemaVersion": "3.6.2",
                 "class": "benf\\neo\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-neo/blob/3.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/3.7.7.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/3.7.8.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -4200,10 +4198,10 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-neo/issues",
                 "source": "https://github.com/spicywebau/craft-neo",
-                "docs": "https://github.com/spicywebau/craft-neo/blob/3.7.7/README.md",
+                "docs": "https://github.com/spicywebau/craft-neo/blob/3.7.8/README.md",
                 "rss": "https://github.com/spicywebau/craft-neo/commits/3.x.atom"
             },
-            "time": "2023-05-01T09:10:12+00:00"
+            "time": "2023-05-09T07:06:06+00:00"
         },
         {
             "name": "statikbe/craft-config-values",
@@ -6014,11 +6012,16 @@
         },
         {
             "name": "verbb/base",
-            "version": "2.0.1",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/verbb-base.git",
+                "reference": "ced85b38b7afd51251ab806c44d2fb05669c0181"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/3a7c0b9c36d446d2765e467161c7d40aa41f1ae4",
-                "reference": "3a7c0b9c36d446d2765e467161c7d40aa41f1ae4",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/ced85b38b7afd51251ab806c44d2fb05669c0181",
+                "reference": "ced85b38b7afd51251ab806c44d2fb05669c0181",
                 "shasum": ""
             },
             "require": {
@@ -6031,6 +6034,7 @@
                     "verbb\\base\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6041,7 +6045,20 @@
                 }
             ],
             "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
-            "time": "2022-09-30T11:02:57+00:00"
+            "support": {
+                "docs": "https://github.com/verbb/verbb-base",
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/verbb-base/issues?state=open",
+                "rss": "https://github.com/verbb/verbb-base/commits/v2.atom",
+                "source": "https://github.com/verbb/verbb-base"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/verbb",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-05-10T02:57:47+00:00"
         },
         {
             "name": "verbb/field-manager",
@@ -6109,11 +6126,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "2.0.27.1",
+            "version": "2.0.28",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/d8e2920472d11959d04819619adfc7cca2e60f38",
-                "reference": "d8e2920472d11959d04819619adfc7cca2e60f38",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/f6b98dd03cb76ddbc055f9f335ffb79b936e81a9",
+                "reference": "f6b98dd03cb76ddbc055f9f335ffb79b936e81a9",
                 "shasum": ""
             },
             "require": {
@@ -6173,7 +6190,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2023-04-19T20:47:02+00:00"
+            "time": "2023-05-01T22:27:11+00:00"
         },
         {
             "name": "verbb/redactor-tweaks",
