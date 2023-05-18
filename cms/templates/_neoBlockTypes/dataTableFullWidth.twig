@@ -1,24 +1,10 @@
 {##
- # NEO BLOCK TYPE: DATA TABLE
+ # NEO BLOCK TYPE: DATA TABLE: FULL WIDTH
  #}
 <section class="c-block c-data-table{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-lg-6 pe-lg-5 mb-5 mb-lg-0">
-				{% if block.preheading is defined and block.preheading != '' %}
-				<p class="u-preheading">{{ block.preheading }}</p>
-				{% endif %}
-				
-				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
-				
-				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
-				{% endif %}
-				
-				{% include "_fields/buttons" with {'buttons': block.buttons} %}
-			</div>
-			
-			<div class="col-12 col-lg-6 ps-lg-5">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
 				{% for table in block.dataTables.all() %}
 					{% if table.heading != '' or table.subheading != '' %}
 					<p class="h4 mb-3">

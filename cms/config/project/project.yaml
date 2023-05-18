@@ -1,4 +1,4 @@
-dateModified: 1683843560
+dateModified: 1684426938
 elementSources:
   craft\elements\Entry:
     -
@@ -205,6 +205,7 @@ meta:
     6552f23c-7f92-493a-bd10-b47693edab05: 'Column: Image' # Column: Image
     7122cd83-09df-457d-8ea8-284328ec238f: label # label
     9030c997-69e7-4a71-b846-fdadd3c6112f: Heading # Heading
+    9804d284-d129-4704-8883-92fcd4aec0a8: 'Data Table: Full Width' # Data Table: Full Width
     13815e4c-247f-4715-b11d-7d23e38f23a4: 'Mega Menu' # Mega Menu
     0014573b-36a9-48c6-b523-64fbabf469f2: 'Button Style' # Button Style
     18834ccd-54b8-4774-a03c-b16f65a84197: Thumbnail # Thumbnail
