@@ -66,9 +66,9 @@
 										<tr>
 											{% for cell in row %}
 												{% if loop.first %}
-												<th align="{{ table.customTable.columns[loop.index0].align }}">{{ cell }}</th>
+												<th align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</th>
 												{% else %}
-												<td align="{{ table.customTable.columns[loop.index0].align }}">{{ cell }}</td>
+												<td align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</td>
 												{% endif %}
 											{% endfor %}
 										</tr>
