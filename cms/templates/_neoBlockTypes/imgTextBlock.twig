@@ -15,7 +15,7 @@
 <section class="c-block c-img-text{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container-fluid px-0">
 		<div class="row align-items-center g-0">
-			<div class="col-12 col-lg-6 d-flex justify-content-center {% if block.imagePositionLR == 'right' %} justify-content-lg-start order-lg-2{% else %}justify-content-lg-end{% endif %}">
+			<div class="col-12 col-lg-6 d-flex justify-content-center {% if block.imagePositionLR == 'left' %} justify-content-lg-start order-lg-2{% else %}justify-content-lg-end{% endif %}">
 				<div class="c-img-text__description start">
 					<div>
 						{% if block.preheading is defined and block.preheading != '' %}
@@ -25,7 +25,11 @@
 						{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 						
 						{% if block.description is defined and block.description != '' %}
-						<div class="c-wysiwyg">{{ block.description }}</div>
+						<div class="c-wysiwyg">
+							{% apply enkode_emails %}
+								{{ block.description }}
+							{% endapply %}
+						</div>
 						{% endif %}
 
 						{% include "_fields/buttons" with {'buttons': block.buttons} %}
@@ -33,8 +37,8 @@
 				</div>
 			</div>
 			
-			<div class="col-12 col-lg-6{% if block.imagePositionLR == 'right' %} order-lg-1{% endif %}">
-				<div class="c-img-text__image {% if block.imagePositionLR == 'left' %}end u-rounded-top-left{% else %}start u-rounded-top-right{% endif %}">
+			<div class="col-12 col-lg-6{% if block.imagePositionLR == 'left' %} order-lg-1{% endif %}">
+				<div class="c-img-text__image {% if block.imagePositionLR == 'right' %}end u-rounded-top-left{% else %}start u-rounded-top-right{% endif %}">
 				{% if block.imageDesktop | length and block.imageMobile | length %}
 					<img class="d-md-none w-100 img-fluid" src="{{ imgMobile.url('responsiveMedium' ) }}" alt="{{ imgMobile.alt }}" />
 					<img class="d-none d-md-block w-100 img-fluid" src="{{ imgDesktop.url('responsiveMedium') }}" alt="{{ imgDesktop.alt }}" />

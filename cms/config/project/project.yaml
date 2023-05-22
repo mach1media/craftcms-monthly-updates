@@ -1,4 +1,4 @@
-dateModified: 1684426938
+dateModified: 1684793759
 elementSources:
   craft\elements\Entry:
     -
@@ -72,6 +72,16 @@ elementSources:
         - postDate
         - author
         - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+      tableAttributes:
+        - 'field:6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c' # Heading
+        - 'field:e359f1b1-385c-4017-9823-ab7e63cd7efe' # Citation
       type: native
 email:
   fromEmail: jmitchell@tmf-fdn.org
@@ -154,11 +164,13 @@ meta:
     7e96a64e-53b0-4605-98b2-53710eb1c5bf: Media # Media
     7f134341-6c01-4975-9ea9-60df3c3dd5f0: Image # Image
     7fdd5ed0-dc8b-4df8-bdb3-5909ceccface: Subheading # Subheading
+    8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd: Table # Table
     08a4604d-4fdb-476b-b82c-88ef59973d9e: 'Label: Custom' # Label: Custom
     08b49f0a-64a0-4753-9893-80ca6d6ddf85: 'Rate Table' # Rate Table
     8cccdb1c-6473-404a-9289-b9a52343d552: 'Label: Custom' # Label: Custom
     8cf524a9-c788-4109-8c27-b973b5da1c8b: Image # Image
     8d53efd7-98eb-40ec-a000-4b904766072d: Button # Button
+    8d67fd8f-ca95-4a56-9885-6ada3b8515de: 'Rate Table' # Rate Table
     8f655278-2023-4da0-a4d7-64814ef5c669: 'CTA Tiles' # CTA Tiles
     9d7fafd1-35d2-468a-929a-b88e876f64e2: Email # Email
     9e28f3c9-7883-4de5-93ef-fcf8ed4ca639: Subheading # Subheading
@@ -178,6 +190,7 @@ meta:
     49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
     69a66c94-0c41-4248-949e-0b52659f8c9e: 'Dropdown Links' # Dropdown Links
+    72c21d48-1ae1-46e6-a4d8-57c63a5eb883: Subheading # Subheading
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
     75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading # Heading
     91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
@@ -215,9 +228,11 @@ meta:
     40462e8a-a238-4adf-9317-22de98d2878f: 'Data Table' # Data Table
     048761f8-a826-44ed-ad18-7137532f8c0a: 'Dropdown Link' # Dropdown Link
     54632eea-be0d-432e-9b18-64f95cdb3ddc: 'Lead Block' # Lead Block
+    58712ece-7721-4366-900b-2cc4858ea5e0: Heading # Heading
     72143de2-34b2-4912-87dc-02d8eb4a1a0f: News # News
     86898b1e-5316-4337-9b1b-3b0b541bdf37: 'CTA Block' # CTA Block
     98126def-cd93-43c8-b0eb-eafba4c890e0: 'Large | Small | Small' # Large | Small | Small
+    115274b7-184f-4d2c-898d-b1f9504e6aef: Tables # Tables
     251036cc-4dfd-4b0f-9823-b109a413bd0b: Image # Image
     312692fe-0d39-45bc-889d-f49efeaa0dc0: 'Column: Image' # Column: Image
     356681f1-6b5a-48fb-94b8-d856247a3b67: Tile # Tile
@@ -287,15 +302,19 @@ meta:
     e03100b7-f50b-4daf-9652-85e6e60138a8: Pages # Pages
     e1cb6898-debf-4b78-bbb2-440b65278382: 'Small | Small | Large' # Small | Small | Large
     e32da315-685c-424c-8b52-95706a2d1026: 'Centered Text' # Centered Text
+    e40f1bde-3da7-4a14-a813-c341a064e9a3: 'Data Table' # Data Table
     e96bcdab-a9b7-4e6d-b220-57bf0ce7b15f: 'Contact Form' # Contact Form
     e359f1b1-385c-4017-9823-ab7e63cd7efe: Citation # Citation
     e636fe1a-91ea-493b-81c8-354c9c08220f: 'Items Per Row' # Items Per Row
     e11568a1-11e3-4147-ae18-1ff01fdcd4f7: 'CTA Tile: Small' # CTA Tile: Small
     e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item' # Accordion Item
     e545221b-a425-4bf5-adef-30e8193f800d: Image # Image
+    eaf0d64e-a5d2-48e0-9547-b790b9262fe3: 'Table Footer' # Table Footer
+    eee5e319-f63b-458a-8ea2-ae0a83ba319d: 'Pre-defined Table' # Pre-defined Table
     efb726bf-a523-4889-94d6-8865ebb534d9: 'Small | Small | Large' # Small | Small | Large
     f06a4480-f195-4705-bd40-a33a08e72d0f: Images # Images
     f69cfc32-4011-4eea-a32a-f5ae9fd5b24e: 'Page Builder: General' # Page Builder: General
+    f92f1b34-68ad-48fd-a712-c4cdb6b682f0: 'Rate Table' # Rate Table
     f6513c96-9a09-43f8-b901-27de58e1f28e: Blog # Blog
     f126506f-a32d-40b2-9d16-466e4201be40: Label # Label
     fae047fe-30da-49d5-b8da-b1d6adafd530: 'Label: Custom' # Label: Custom

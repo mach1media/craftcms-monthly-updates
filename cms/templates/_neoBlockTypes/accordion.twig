@@ -11,7 +11,11 @@
 				{% endif %}
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
+				<div class="c-wysiwyg">
+					{% apply enkode_emails %}
+						{{ block.description }}
+					{% endapply %}
+				</div>
 				{% endif %}
 			</div>
 		</div>
@@ -36,7 +40,7 @@
 							aria-labelledby="accordion-heading-{{ item.id }}"
 							data-bs-parent="#accordion-{{ block.id }}">
 							<div class="accordion-body">
-								{{ item.description }}
+								{% apply enkode_emails %}{{ item.description }}{% endapply %}
 							</div>
 						</div>
 					</div>

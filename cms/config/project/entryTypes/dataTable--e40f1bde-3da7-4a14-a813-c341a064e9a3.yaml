@@ -1,0 +1,91 @@
+fieldLayouts:
+  a71ef22f-6823-47ea-8e79-70a2e4e24283:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f26d5b48-79ca-4846-8c78-c66c143af5a9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: edd9fdb7-4c79-42f5-857f-158814dfdfeb
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e359f1b1-385c-4017-9823-ab7e63cd7efe # Citation
+            instructions: null
+            label: Subheading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8f810abe-dac5-4701-a6c6-ec9c1f659d3a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 1174bd31-94ac-4b8b-9fd9-b003f12684ae # Data Table
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e014187-d1b4-41e0-a0ab-e6d66c61bfcf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: 'Table Footer'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a004d44-05be-443d-b1a5-2d3605899f67
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0a2790bb-c6a8-4bf4-bf0a-ffa05a07046e
+        userCondition: null
+handle: dataTable
+hasTitleField: true
+name: 'Data Table'
+section: 115274b7-184f-4d2c-898d-b1f9504e6aef # Tables
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

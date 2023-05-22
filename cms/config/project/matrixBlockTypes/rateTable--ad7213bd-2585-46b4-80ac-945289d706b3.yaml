@@ -302,4 +302,4 @@ fields:
     type: craft\redactor\Field
 handle: rateTable
 name: 'Rate Table'
-sortOrder: 1
+sortOrder: 2

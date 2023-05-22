@@ -12,7 +12,11 @@
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
+				<div class="c-wysiwyg">
+					{% apply enkode_emails %}
+						{{ block.description }}
+					{% endapply %}
+				</div>
 				{% endif %}
 				
 				{% include "_fields/buttons" with {'buttons': block.buttons} %}
@@ -20,81 +24,70 @@
 			
 			<div class="col-12 col-lg-6 ps-lg-5">
 				{% for table in block.dataTables.all() %}
-					{% if table.heading != '' or table.subheading != '' %}
-					<p class="h4 mb-3">
-						{{ table.heading | raw }}
-						{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
-					</p>
-					{% endif %}
-
-					{% if table.type == 'rateTable' %}
-					<div class="border border-secondary rounded p-3 mb-5">
-						<div class="table-responsive">
-							<table class="table table-sm text-primary">
-								<thead>
-									<tr class="align-bottom">
-										{% for row in table.rateTable %}
-											{% if loop.first %}
-											<th>{{ row.heading }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr1 | raw }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr2 | raw }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr3 | raw }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr4 | raw }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr5 | raw }}</th>
-											{% endif %}
-										{% endfor %}
-									</tr>
-								</thead>
+					
+					{##
+					 # PRE-DEFINED TABLE
+					 #}
+					{% if table.type == 'preDefinedTable' %}
+						{% set entry = table.table.one %}
 						
-								<tbody>
-									{% for row in table.rateTable %}
-										{% if not loop.first %}
-										<tr>
-											<th align="left">{{ row.heading }}</th>
-											<td align="left">{{ row.yr1 | raw }}</td>
-											<td align="left">{{ row.yr2 | raw }}</td>
-											<td align="left">{{ row.yr3 | raw }}</td>
-											<td align="left">{{ row.yr4 | raw }}</td>
-											<td align="left">{{ row.yr5 | raw }}</td>
-										</tr>
-										{% endif %}
-									{% endfor %}
-								</tbody>
-							</table>
-						</div>
-					</div>
-					{% elseif table.type == 'customTable' %}
-					<div class="border border-secondary rounded p-3 mb-3">
-						<div class="table-responsive">
-							<table class="table table-sm text-primary">
-								<thead>
-									<tr class="align-bottom">
-										{% for col in table.customTable.columns %}
-											<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
-										{% endfor %}
-									</tr>
-								</thead>
-						
-								<tbody>
-									{% for row in table.customTable.rows %}
-										<tr>
-											{% for cell in row %}
-												{% if loop.first %}
-												<th align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</th>
-												{% else %}
-												<td align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</td>
-												{% endif %}
-											{% endfor %}
-										</tr>
-									{% endfor %}
-								</tbody>
-							</table>
-						</div>
-					</div>
-					{% endif %}
+						{% if table.heading != '' or table.subheading != '' %}
+						<p class="h4 mb-3">
+							{{ table.heading | raw }}
+							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+						</p>
+						{% elseif entry.heading != '' or entry.citation != '' %}
+						<p class="h4 mb-3">
+							{{ entry.heading | raw }}
+							{% if entry.citation != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ entry.citation | raw }}</span>{% endif %}
+						</p>
+						{% endif %}
 
-					{% if table.tableFooter != '' %}
-					<small>{{ table.tableFooter }}</small>
+						<div class="border border-secondary rounded p-3 mb-3">
+							<div class="table-responsive">
+								{% set entry = table.table.one %}
+								{% if entry.type == 'dataTable' %}
+									{% include "_fields/tableCustom" with {'table':table.dataTable } %}
+								{% elseif entry.type == 'rateTable' %}
+									{% include "_fields/tableRate" with {'table':table.rateTable } %}
+								{% endif %}
+							</div>
+						</div>
+
+						{% if table.tableFooter != '' %}
+						<small>{{ table.tableFooter }}</small>
+						{% elseif entry.description != '' %}
+						<small>{{ entry.description }}</small>
+						{% endif %}
+
+					{##
+					 # CUSTOM TABLE
+					 #}
+					{% else %}
+						{% if table.heading != '' or table.subheading != '' %}
+						<p class="h4 mb-3">
+							{{ table.heading | raw }}
+							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+						</p>
+						{% endif %}
+
+						{% if table.type == 'rateTable' %}
+						<div class="border border-secondary rounded p-3 mb-5">
+							<div class="table-responsive">
+								{% include "_fields/tableRate" with {'table':table.rateTable } %}
+							</div>
+						</div>
+						{% elseif table.type == 'customTable' %}
+						<div class="border border-secondary rounded p-3 mb-3">
+							<div class="table-responsive">
+								{% include "_fields/tableCustom" with {'table':table.customTable } %}
+							</div>
+						</div>
+						{% endif %}
+
+						{% if table.tableFooter != '' %}
+						<small>{{ table.tableFooter }}</small>
+						{% endif %}
 					{% endif %}
 				{% endfor %}
 

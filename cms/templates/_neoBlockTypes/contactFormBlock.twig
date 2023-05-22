@@ -16,7 +16,11 @@
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock, 'class': 'mb-4'} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
+				<div class="c-wysiwyg">
+					{% apply enkode_emails %}
+						{{ block.description }}
+					{% endapply %}
+				</div>
 				{% endif %}
 
 				<div class="row justify-content-between mt-5">

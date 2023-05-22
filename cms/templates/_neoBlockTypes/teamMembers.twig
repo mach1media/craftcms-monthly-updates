@@ -12,7 +12,11 @@
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
+				<div class="c-wysiwyg">
+					{% apply enkode_emails %}
+						{{ block.description }}
+					{% endapply %}
+				</div>									
 				{% endif %}
 				
 				{% if block.children | length %}
@@ -64,7 +68,9 @@
 													{% if person.heading != '' %}
 													<h3 class="h5">{{ person.heading | raw }}</h3>
 													{% endif %}
-													{{ person.description }}
+													{% apply enkode_emails %}
+														{{ person.description }}
+													{% endapply %}
 												</div>
 											</div>
 										</div>

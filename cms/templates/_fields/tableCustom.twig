@@ -1,0 +1,23 @@
+<table class="table table-sm text-primary">
+	<thead>
+		<tr class="align-bottom">
+			{% for col in table.columns %}
+				<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
+			{% endfor %}
+		</tr>
+	</thead>
+
+	<tbody>
+		{% for row in table.rows %}
+			<tr>
+				{% for cell in row %}
+					{% if loop.first %}
+					<th align="{{ table.columns[loop.index0].align }}">{{ cell | raw }}</th>
+					{% else %}
+					<td align="{{ table.columns[loop.index0].align }}">{{ cell | raw }}</td>
+					{% endif %}
+				{% endfor %}
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

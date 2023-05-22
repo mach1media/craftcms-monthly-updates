@@ -10,7 +10,11 @@
 				{% endif %}
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
+				<div class="c-wysiwyg">
+					{% apply enkode_emails %}
+						{{ block.description }}
+					{% endapply %}
+				</div>
 				{% endif %}
 				{% if block.button | length and block.button.getLink() %}
 				<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary'} %}</p>

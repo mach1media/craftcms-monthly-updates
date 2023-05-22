@@ -1,0 +1,31 @@
+<table class="table table-sm text-primary">
+	<thead>
+		<tr class="align-bottom">
+			{% for row in table %}
+				{% if loop.first %}
+				<th>{{ row.heading }}</th>
+				<th class="text-left" align="left" width="">{{ row.yr1 | raw }}</th>
+				<th class="text-left" align="left" width="">{{ row.yr2 | raw }}</th>
+				<th class="text-left" align="left" width="">{{ row.yr3 | raw }}</th>
+				<th class="text-left" align="left" width="">{{ row.yr4 | raw }}</th>
+				<th class="text-left" align="left" width="">{{ row.yr5 | raw }}</th>
+				{% endif %}
+			{% endfor %}
+		</tr>
+	</thead>
+
+	<tbody>
+		{% for row in table %}
+			{% if not loop.first %}
+			<tr>
+				<th align="left">{{ row.heading }}</th>
+				<td align="left">{{ row.yr1 | raw }}</td>
+				<td align="left">{{ row.yr2 | raw }}</td>
+				<td align="left">{{ row.yr3 | raw }}</td>
+				<td align="left">{{ row.yr4 | raw }}</td>
+				<td align="left">{{ row.yr5 | raw }}</td>
+			</tr>
+			{% endif %}
+		{% endfor %}
+	</tbody>
+</table>

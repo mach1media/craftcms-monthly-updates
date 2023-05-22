@@ -16,7 +16,11 @@
 				<h2 class="text-white mb-3">{{ block.heading }}</h2>
 				{% endif %}
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
+				<div class="c-wysiwyg">
+					{% apply enkode_emails %}
+						{{ block.description }}
+					{% endapply %}
+				</div>
 				{% endif %}
 				{% if block.button.getLink() %}
 				<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary text-white'} %}</p>

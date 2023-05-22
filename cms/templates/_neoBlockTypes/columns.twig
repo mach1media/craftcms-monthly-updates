@@ -26,10 +26,14 @@
 							{% include "_fields/headingBlock" with {'heading': col.headingBlock} %}
 							
 							{% if col.description is defined and col.description != '' %}
-							<div class="c-wysiwyg">{{ col.description }}</div>
+							<div class="c-wysiwyg">
+								{% apply enkode_emails %}
+									{{ col.description }}
+								{% endapply %}
+							</div>
 							{% endif %}
 							
-							{% include "_fields/buttons" with {'buttons': block.buttons} %}
+							{% include "_fields/button" with {'buttons': col.button} %}
 						
 						{% elseif col.type == 'columnImage' %}
 							{% if col.imageMobile | length and col.imageDesktop | length %}

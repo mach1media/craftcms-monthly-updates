@@ -145,4 +145,4 @@ fields:
     type: verbb\tablemaker\fields\TableMakerField
 handle: customTable
 name: 'Custom Table'
-sortOrder: 2
+sortOrder: 3
