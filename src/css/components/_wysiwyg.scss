@@ -1,0 +1,18 @@
+@include component('wysiwyg') {
+	& > p > img {
+		max-width: 100%;
+		height: auto;
+		margin: $gutter;
+	}
+
+	& > figure {
+		max-width: 100%;
+		height: auto;
+		padding: $gutter;
+
+		& > img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

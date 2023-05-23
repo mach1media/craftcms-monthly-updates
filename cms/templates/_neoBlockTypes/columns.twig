@@ -20,10 +20,12 @@
 					<div class="col-12 col-lg-{{ columnsClass }}{% if not loop.last %} mb-5 mb-lg-0{% endif %} text-{{ col.textAlignment }}">
 						{% if col.type == 'columnText' %}
 							{% if col.preheading is defined and col.preheading != '' %}
-							<p class="u-preheading">{{ col.preheading }}</p>
+							<p class="u-preheading mb-0">{{ col.preheading }}</p>
 							{% endif %}
 							
-							{% include "_fields/headingBlock" with {'heading': col.headingBlock} %}
+							{% if col.heading != '' %}
+							<h3>{{ col.heading | raw }}</h3>
+							{% endif %}
 							
 							{% if col.description is defined and col.description != '' %}
 							<div class="c-wysiwyg">
@@ -33,7 +35,7 @@
 							</div>
 							{% endif %}
 							
-							{% include "_fields/button" with {'buttons': col.button} %}
+							{% include "_fields/button" with {'button': col.button} %}
 						
 						{% elseif col.type == 'columnImage' %}
 							{% if col.imageMobile | length and col.imageDesktop | length %}
