@@ -21,6 +21,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            instructions: 'Section identifier for a specific section of the page, ex: for-churches'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 641f7825-0a13-443f-b11d-7fb2456a546a
+            userCondition: null
+            warning: null
+            width: 100
         name: 'Text Link'
         uid: e7e70f12-b8f9-423f-98c1-c4ba71534f50
         userCondition: null
