@@ -11,6 +11,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4dfcb124-8c98-42ec-bfef-8813e07753ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f # Video
             instructions: null
             label: null

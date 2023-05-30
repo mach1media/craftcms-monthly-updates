@@ -1,118 +1,115 @@
-childBlocks: null
-conditions: null
-description: ''
-enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
-  c4c06ccc-e79d-4549-9718-3c65956d6a20:
+  81226ade-9924-411c-9682-f5d421b68c18:
     tabs:
       -
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            id: null
             instructions: null
             label: null
-            required: false
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b193f669-d3b7-4658-872e-5238b85c83e9
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: af50f0a7-58c9-4c5d-9fff-0a81017e0472
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 479ec005-6f3d-4922-b8e5-da10aad75bdc # Data Tables
+            fieldUid: 9d7fafd1-35d2-468a-929a-b88e876f64e2 # Email
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ba49148e-1e31-497a-b71d-95222b40c60d
+            uid: 9f2afbba-2763-414d-997e-5cc76ba07620
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: dd9615db-bd5d-4050-9139-1b6174979ce8 # Phone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dca032a7-4a93-4dcc-93ac-21c88a33ad76
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b17bd168-fdb6-4efd-ac22-2ba9488d1ed9
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e388b31-7087-4de5-abd7-ed9adbbcaa47
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5e219101-8ea3-4cf4-9e31-20cd634ca9b7
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
-            label: Footnotes
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c825e164-ce28-49ce-9828-6f7617f154c0
+            uid: c1f5886b-8ac0-4e75-ac45-dae1db660b48
             userCondition: null
             warning: null
             width: 100
-        name: Tables
-        uid: 1963b42a-e53a-4f12-92ad-e2660ec972eb
+        name: Content
+        uid: 3eb83c90-8106-4f49-9f36-999625fb38ce
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e3cf2e9e-e731-41ec-8340-5019902e0309
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7fd17a6f-2cf0-45a0-8e8e-fb6869a01d6f
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8184ef13-1449-4066-a93a-c6b5c7d2ead9
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa # Padding: Sides
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 93da294e-187b-474e-8cf5-a55bdcb14ca8
-            userCondition: null
-            warning: null
-            width: 25
-        name: 'Section Settings'
-        uid: 78a4b31f-a392-442a-bdab-819be60eee55
-        userCondition: null
-group: null
-groupChildBlockTypes: true
-handle: dataTableFullWidth
-icon: null
-ignorePermissions: true
-maxBlocks: 0
-maxChildBlocks: 0
-maxSiblingBlocks: 0
-minBlocks: 0
-minChildBlocks: 0
-minSiblingBlocks: 0
-name: 'Data Table: Full Width'
-sortOrder: 18
-topLevel: true
+handle: person
+hasTitleField: true
+name: Person
+section: 61a1068b-a537-4bde-85ac-b0fe8f04946e # Team
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -13,6 +13,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6f4ca46d-28b3-4a2e-809d-f71d6a2637c1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: null
@@ -22,7 +34,7 @@ fieldLayouts:
             uid: 9c57f977-77cd-4c43-8ae6-7366e047dfdf
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading

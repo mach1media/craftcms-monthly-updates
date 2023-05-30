@@ -12,6 +12,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 66ae94e3-320b-4ee9-9753-ec50a4f053e2
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: null
@@ -21,7 +33,7 @@ fieldLayouts:
             uid: 6b415374-8e99-4e5b-8bfb-eeb86045ac29
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
@@ -43,6 +55,26 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4c7e2cfb-8cea-4b38-9aa6-0b207878a6b8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Select team members and/or insert custom Team Member cards'
+            type: craft\fieldlayoutelements\Tip
+            uid: a9f9805c-5d90-4b30-a651-d14206469961
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 34324a9e-7ce8-4902-8508-1d7046c34d97 # Team Members
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 53d1012f-bcf5-4464-99cc-e1509d4d42ef
             userCondition: null
             warning: null
             width: 100

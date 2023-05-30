@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
-handle: boardMembers
+handle: newsStories
 instructions: null
-name: 'Board Members'
+name: 'News Stories'
 searchable: true
 settings:
   allowSelfRelations: false
@@ -23,9 +23,10 @@ settings:
       -
         - class
         - craft\elements\conditions\entries\EntryCondition
-  selectionLabel: 'Add a Board Member'
+  selectionLabel: 'Add a News Story'
   showSiteMenu: true
-  sources: '*'
+  sources:
+    - 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

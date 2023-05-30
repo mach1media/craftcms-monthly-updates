@@ -1,4 +1,4 @@
-dateModified: 1684793759
+dateModified: 1685480969
 elementSources:
   craft\elements\Entry:
     -
@@ -189,6 +189,8 @@ meta:
     40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link # Link
     49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
+    61a1068b-a537-4bde-85ac-b0fe8f04946e: Team # Team
+    61b6248e-c14a-44e7-b438-2ccdbfafe7a7: 'Blog Entries' # Blog Entries
     69a66c94-0c41-4248-949e-0b52659f8c9e: 'Dropdown Links' # Dropdown Links
     72c21d48-1ae1-46e6-a4d8-57c63a5eb883: Subheading # Subheading
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
@@ -214,7 +216,9 @@ meta:
     1174bd31-94ac-4b8b-9fd9-b003f12684ae: 'Data Table' # Data Table
     01903d5e-0af8-4625-91a8-6d55351c5ec3: 'Video+Text Block' # Video+Text Block
     2160ef32-2844-4834-a6c8-c374a3efa675: 'Link Fields' # Link Fields
+    02953e5d-2354-4eef-bbab-fd22e7b929c9: 'News Stories' # News Stories
     3030cab8-78a4-43c1-965d-edcb8d53848e: 'Contact Form Block' # Contact Form Block
+    5018ac6a-d423-4ea7-93a2-71816abf326f: Person # Person
     6552f23c-7f92-493a-bd10-b47693edab05: 'Column: Image' # Column: Image
     7122cd83-09df-457d-8ea8-284328ec238f: label # label
     9030c997-69e7-4a71-b846-fdadd3c6112f: Heading # Heading
@@ -224,7 +228,7 @@ meta:
     18834ccd-54b8-4774-a03c-b16f65a84197: Thumbnail # Thumbnail
     23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8: 'Page Header' # Page Header
     32847f30-97a7-46a4-aa8a-1d662159da7d: 'Link to Asset' # Link to Asset
-    34324a9e-7ce8-4902-8508-1d7046c34d97: 'Board Members' # Board Members
+    34324a9e-7ce8-4902-8508-1d7046c34d97: 'Team Members' # Team Members
     40462e8a-a238-4adf-9317-22de98d2878f: 'Data Table' # Data Table
     048761f8-a826-44ed-ad18-7137532f8c0a: 'Dropdown Link' # Dropdown Link
     54632eea-be0d-432e-9b18-64f95cdb3ddc: 'Lead Block' # Lead Block
@@ -248,6 +252,8 @@ meta:
     a40a3743-3dbc-48e7-a8cd-0196dd8021df: Common # Common
     a60f746d-4da8-4419-876b-782449ea1381: Form # Form
     a7681ee3-3f28-4c6f-9cb3-453e519368ae: Documents # Documents
+    a8366a49-97a6-4a33-a567-a948f6a481ac: 'Section ID' # Section ID
+    a28912df-88d7-46df-b6fa-105330a08e97: Tables # Tables
     aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e: Pre-heading # Pre-heading
     aa96dc63-49ff-4c1a-89df-d34525227436: 'Embed Code' # Embed Code
     aa92801f-a617-4884-96f7-2f325db59d9e: 'Element Fields' # Element Fields
