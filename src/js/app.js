@@ -58,6 +58,15 @@ $(function() {
 	
 	// scroll to anchor when landing on page with hash in url
 	if (window.location.hash) {
-		$('a[href^="'+window.location.hash+'"]').first().trigger('click');
+		var anchorLink;
+		
+		if ($('a[href^="'+window.location.hash+'"]') === undefined) {
+			anchorLink = $('a[href^="'+window.location.hash+'"]');
+		}
+		else {
+			anchorLink = $('a[href^="'+window.location.hash+'"]').first();
+		}
+		
+		anchorLink.trigger('click');
 	}
 });

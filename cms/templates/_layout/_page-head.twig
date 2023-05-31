@@ -164,7 +164,7 @@
 							{% if group.children | length %}
 							<ul class="mb-5">
 								{% for child in group.children.all() %}
-								<li><a href="{{ child.textLink.getIntrinsicUrl() }}">{{ child.textLink.getText() }}</a></li>
+								<li><a href="{{ child.textLink.getIntrinsicUrl() }}{% if child.sectionId != '' %}#{{ child.sectionId }}{% endif %}">{{ child.textLink.getText() }}</a></li>
 								{% endfor %}
 							</ul>
 							{% endif %}
@@ -217,7 +217,7 @@
 												<ul>
 													{% for child in group.children.all() %}
 														{% set page = child.textLink %}
-														<li><a href="{{ page.getIntrinsicUrl() }}">{{ page.getText() ?: child.element.title }}</a></li>
+														<li><a href="{{ page.getIntrinsicUrl() }}{% if child.sectionId != '' %}#{{ child.sectionId }}{% endif %}">{{ page.getText() ?: child.element.title }}</a></li>
 													{% endfor %}
 												</ul>
 											</div>
