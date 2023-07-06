@@ -64,19 +64,27 @@
 								<span class="c-icon c-icon--search"></span>
 							</button>
 						</li>
-
+						{# USER ICON
 						<li class="nav-item">
 							<a class="nav-link btn btn-text p-0 my-0 me-2" href="https://onlineportal.tmf-fdn.org/login" target="_blank" rel="noopener" title="Log in">
 								<span class="c-icon c-icon--user"></span>
 							</a>
 						</li>
-
+						
 						<li class="nav-item">
 							<a class="nav-link btn btn-secondary" href="{{ linkGive }}">Give</a>
 						</li>
 						
 						<li class="nav-item">
 							<a class="nav-link btn btn-outline-secondary" href="{{ linkInvest }}">Invest</a>
+						</li>
+						#}
+						<li class="nav-item">
+							<a class="nav-link btn btn-secondary" href="https://onlineportal.tmf-fdn.org/login" target="_blank" rel="noopener">Login</a>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link btn btn-outline-secondary" href="{{ url('contact') }}">Contact</a>
 						</li>
 					</ul>
 				</nav>
@@ -90,7 +98,7 @@
 			<button class="btn btn-text p-0 js-modal-search-toggle" type="button">
 				<span class="c-icon c-icon--search"></span>
 			</button>
-			
+			{#
 			<nav>
 				<ul class="nav">
 					<li class="nav-item">
@@ -105,6 +113,18 @@
 						<a class="btn btn-text p-0 my-0" href="https://onlineportal.tmf-fdn.org/login" target="_blank" rel="noopener" title="Log in">
 							<span class="c-icon c-icon--user"></span>
 						</a>
+					</li>
+				</ul>
+			</nav>
+			#}
+			<nav>
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link text-uppercase text-primary" href="https://onlineportal.tmf-fdn.org/login" target="_blank" rel="noopener">Login</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link text-uppercase text-primary" href="{{ url('contact') }}">Contact</a>
 					</li>
 				</ul>
 			</nav>

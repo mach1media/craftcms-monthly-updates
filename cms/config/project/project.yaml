@@ -1,4 +1,4 @@
-dateModified: 1685485455
+dateModified: 1688603365
 elementSources:
   craft\elements\Entry:
     -
@@ -56,7 +56,7 @@ elementSources:
         - postDate
         - desc
       disabled: false
-      key: 'section:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+      key: 'section:f6513c96-9a09-43f8-b901-27de58e1f28e'
       tableAttributes:
         - postDate
         - author
@@ -294,7 +294,6 @@ meta:
     d3ccac65-2f19-4621-b98f-cb5f46bf796d: 'Home: Feature Tile' # Home: Feature Tile
     d4a66aad-fd77-4abe-97e2-a01cabc77bac: Description # Description
     d5a26941-e90f-43b4-8e8b-b34c12674c8b: 'Column: Text' # Column: Text
-    d5b3ab4a-0901-4e78-ab46-45130ae47282: Blog # Blog
     d8ff4807-a709-4131-95b1-7a565312e33d: 'Table Footer' # Table Footer
     d33d4fab-55e7-446f-8972-f4676b5ee14a: Heading # Heading
     d46a26f8-acd0-4f06-8f57-f8e755cbcddb: Label # Label
@@ -321,7 +320,6 @@ meta:
     f06a4480-f195-4705-bd40-a33a08e72d0f: Images # Images
     f69cfc32-4011-4eea-a32a-f5ae9fd5b24e: 'Page Builder: General' # Page Builder: General
     f92f1b34-68ad-48fd-a712-c4cdb6b682f0: 'Rate Table' # Rate Table
-    f6513c96-9a09-43f8-b901-27de58e1f28e: Blog # Blog
     f126506f-a32d-40b2-9d16-466e4201be40: Label # Label
     fae047fe-30da-49d5-b8da-b1d6adafd530: 'Label: Custom' # Label: Custom
     fae55152-701b-4c22-9f50-453a213e9e05: Size # Size

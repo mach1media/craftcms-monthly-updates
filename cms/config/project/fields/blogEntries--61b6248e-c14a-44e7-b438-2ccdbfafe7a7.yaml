@@ -26,7 +26,7 @@ settings:
   selectionLabel: 'Add a Blog Entry'
   showSiteMenu: true
   sources:
-    - 'section:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+    - 'section:f6513c96-9a09-43f8-b901-27de58e1f28e'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

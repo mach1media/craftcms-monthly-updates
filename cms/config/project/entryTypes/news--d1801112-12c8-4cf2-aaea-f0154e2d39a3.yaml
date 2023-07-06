@@ -32,6 +32,48 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: b00ccfa2-369c-471f-ae02-ae5ed2a9bae6 # Thumbnail
+            instructions: 'Choose a thumbnail image for the preview card'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6144b3a2-0c11-469c-96fb-57a80cbe4ae1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: 'Override entry title on preview card'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 390e8402-7350-4d75-869e-0e15cb3def47
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
+            instructions: 'Short summary for the preview card'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1263907a-9108-457b-80e7-3ee4c7eaa687
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Preview Card'
+        uid: b98a7140-70fa-4174-81b7-36c0bd5b8f57
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
             instructions: null
             label: null

@@ -13,7 +13,7 @@ permissions:
   - 'createentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'createentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'createentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
-  - 'createentries:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'createentries:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - 'createfolders:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'createfolders:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'createfolders:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
@@ -23,19 +23,19 @@ permissions:
   - 'deleteentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'deleteentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'deleteentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
-  - 'deleteentries:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'deleteentries:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - 'deletepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'deletepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'deletepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
   - 'deletepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'deletepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'deletepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
-  - 'deletepeerentries:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'deletepeerentries:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - 'deletepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'deletepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'deletepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'deletepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
-  - 'deletepeerentrydrafts:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'deletepeerentrydrafts:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - deleteusers
   - 'editimages:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'editimages:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
@@ -196,19 +196,19 @@ permissions:
   - 'saveentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'saveentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'saveentries:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
-  - 'saveentries:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'saveentries:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - 'savepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'savepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'savepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
   - 'savepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'savepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'savepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
-  - 'savepeerentries:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'savepeerentries:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - 'savepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'savepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'savepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'savepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
-  - 'savepeerentrydrafts:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'savepeerentrydrafts:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - 'utility:asset-indexes'
   - 'utility:clear-caches'
   - 'utility:db-backup'
@@ -226,16 +226,16 @@ permissions:
   - 'viewentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'viewentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'viewentries:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
-  - 'viewentries:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'viewentries:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - 'viewpeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'viewpeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'viewpeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
   - 'viewpeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'viewpeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'viewpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
-  - 'viewpeerentries:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'viewpeerentries:f6513c96-9a09-43f8-b901-27de58e1f28e'
   - 'viewpeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'viewpeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'viewpeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'viewpeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
-  - 'viewpeerentrydrafts:f6513c96-9a09-43f8-b901-27de58e1f28e' # Blog
+  - 'viewpeerentrydrafts:f6513c96-9a09-43f8-b901-27de58e1f28e'
