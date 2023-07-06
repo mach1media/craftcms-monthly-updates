@@ -131,7 +131,7 @@
 	{# =========== MEGA MENU PANELS =========== #}
 	{% for node in navNodes %}
 	{% if node.type == 'megaMenu' %}
-	<div id="mega-{{ node.slug }}" class="c-header__mega-menu shadow collapse" aria-labelledby="mega-{{ node.slug }}-tab" data-bs-parent="#header">
+	<div id="mega-{{ node.slug }}" class="c-header__mega-menu js-megamenu shadow collapse" aria-labelledby="mega-{{ node.slug }}-tab" data-bs-parent="#header">
 		<div class="row gx-0">
 			{% if node.megaMenuCtas | length %}
 			<div class="col-4 c-header__mega-menu-features">
