@@ -72,6 +72,7 @@
 								<img src="{{ thumb.url('responsiveLarge') }}" alt="{{ thumb.alt }}" />
 							</a>
 							<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
+								{#
 								{% if block.labelCustom != '' and block.iconCustom | length %}
 								<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
 								<p class="u-preheading">{{ block.labelCustom }}</p>
@@ -94,6 +95,22 @@
 								<span class="c-tiles__icon-leadership-ministry"></span>
 								<p class="u-preheading">Leadership Ministry</p>
 								{% endif %}
+								#}
+								{% if block.labelCustom != '' and block.iconCustom | length %}
+								<p class="u-preheading">{{ block.labelCustom }}</p>
+								{% elseif block.label == 'loans' %}
+								<p class="u-preheading">Loans</p>
+								{% elseif block.label == 'grants' %}
+								<p class="u-preheading">Grants</p>
+								{% elseif block.label == 'investments' %}
+								<p class="u-preheading">Investments</p>
+								{% elseif block.label == 'area-representatives' %}
+								<p class="u-preheading">Area Representatives</p>
+								{% elseif block.label == 'philanthropy' %}
+								<p class="u-preheading">Philanthropy</p>
+								{% elseif block.label == 'leadership-ministry' %}
+								<p class="u-preheading">Leadership Ministry</p>
+								{% endif %}
 								
 								<h2 class="h4">{{ block.heading ?: block.ctaLink.getText() }}</h2>
 							</div>
@@ -110,6 +127,7 @@
 							<img src="{{ img.url('responsiveLarge') }}" alt="{{ img.alt }}" />
 						</a>
 						<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
+							{#
 							{% if block.labelCustom != '' and block.iconCustom | length %}
 							<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
 							<p class="u-preheading">{{ block.labelCustom }}</p>
@@ -130,6 +148,22 @@
 							<p class="u-preheading">Philanthropy</p>
 							{% elseif block.label == 'leadership-ministry' %}
 							<span class="c-tiles__icon-leadership-ministry"></span>
+							<p class="u-preheading">Leadership Ministry</p>
+							{% endif %}
+							#}
+							{% if block.labelCustom != '' and block.iconCustom | length %}
+							<p class="u-preheading">{{ block.labelCustom }}</p>
+							{% elseif block.label == 'loans' %}
+							<p class="u-preheading">Loans</p>
+							{% elseif block.label == 'grants' %}
+							<p class="u-preheading">Grants</p>
+							{% elseif block.label == 'investments' %}
+							<p class="u-preheading">Investments</p>
+							{% elseif block.label == 'area-representatives' %}
+							<p class="u-preheading">Area Representatives</p>
+							{% elseif block.label == 'philanthropy' %}
+							<p class="u-preheading">Philanthropy</p>
+							{% elseif block.label == 'leadership-ministry' %}
 							<p class="u-preheading">Leadership Ministry</p>
 							{% endif %}
 
@@ -150,6 +184,7 @@
 							<img src="{{ img.url('responsiveLarge') }}" alt="{{ img.alt }}" />
 						</a>
 						<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
+							{#
 							{% if block.labelCustom != '' and block.iconCustom | length %}
 							<span class="c-tiles__icon-custom" style="background: url('{{ block.iconCustom.one.url }}') center center no-repeat;background-size: contain;"></span>
 							<p class="u-preheading">{{ block.labelCustom }}</p>
@@ -172,7 +207,23 @@
 							<span class="c-tiles__icon-leadership-ministry"></span>
 							<p class="u-preheading">Leadership Ministry</p>
 							{% endif %}
-							
+							#}
+							{% if block.labelCustom != '' and block.iconCustom | length %}
+							<p class="u-preheading">{{ block.labelCustom }}</p>
+							{% elseif block.label == 'loans' %}
+							<p class="u-preheading">Loans</p>
+							{% elseif block.label == 'grants' %}
+							<p class="u-preheading">Grants</p>
+							{% elseif block.label == 'investments' %}
+							<p class="u-preheading">Investments</p>
+							{% elseif block.label == 'area-representatives' %}
+							<p class="u-preheading">Area Representatives</p>
+							{% elseif block.label == 'philanthropy' %}
+							<p class="u-preheading">Philanthropy</p>
+							{% elseif block.label == 'leadership-ministry' %}
+							<p class="u-preheading">Leadership Ministry</p>
+							{% endif %}
+
 							<h2 class="h4">{{ block.heading ?: block.ctaLink.getText() }}</h2>
 						</div>
 					</div>
