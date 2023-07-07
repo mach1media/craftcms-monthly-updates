@@ -11931,7 +11931,7 @@ button > .c-icon--search {
   aspect-ratio: auto;
 }
 .c-tiles__home .c-tiles__tile:nth-of-type(2) {
-  aspect-ratio: auto;
+  aspect-ratio: 1;
 }
 @media (min-width: 576px) and (max-width: 991.98px) {
   .c-tiles__home {

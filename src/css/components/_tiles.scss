@@ -100,7 +100,7 @@
 
 		.c-tiles__tile { margin-bottom: $gutter; aspect-ratio: 1; } 
 		.c-tiles__tile:nth-of-type(1) { aspect-ratio: auto; } 
-		.c-tiles__tile:nth-of-type(2) { aspect-ratio: auto; } 
+		.c-tiles__tile:nth-of-type(2) { aspect-ratio: 1; } 
 		
 		@include media-breakpoint-between(sm,lg) {
 			display: grid; 
