@@ -3,36 +3,55 @@
  #}
 {% extends "_layout/default" %}
 
+{% set perPage = 6 %}
+{% set query = craft.entries.section('news').limit(perPage) %}
+{% paginate query as pageInfo, pageEntries %}
+
+
 {% block content %}
 
-{# --------------------- PAGE HEADER -------------------- #}
-<section class="c-block">
+
+<section class="c-block bg-secondary-extralight">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-10 col-md-8 col-lg-7 col-xl-6 text-center">
-				{#
-				<p class="c-breadcrumb">
-					<a href="{{ siteUrl }}">Home</a>
-					<a href="{{ siturl('news') }}">News</a>
-				</p>
-				#}
+		<div class="row justify-content-center mb-5">
+			<div class="col-10 col-md-8 col-lg-7 col-xl-6 text-center mb-md-5">
 				<h1>News</h1>
-				{#
-				<div class="c-wysiwyg">
-					<p class="opacity-50">{{ entry.postDate | date }}</p>
-				</div>
-				#}
 			</div>
 		</div>
-	</div>
-</section>
-
-
-<section class="c-block">
-	<div class="container">
-		<div class="row justify-content-center">
-			{% for entry in newsEntries %}
-			
+		
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+			{% set counterPlaceholders = 1 %}
+			{% for entry in pageEntries %}
+				{% if entry.thumbnail | length %}
+					{% set img    = entry.thumbnail.one %}
+					{% set imgSrc = img.url('previewCard') %}
+					{% set imgAlt = img.alt ?: entry.title %}
+				{% else %}
+					{% set imgSrc = '/dist/img/placeholder-' ~ counterPlaceholders ~ '.jpg' %}
+					{% set imgAlt = 'placeholder' %}
+					{% set counterPlaceholders = counterPlaceholders + 1 %}
+				{% endif %}
+				<div class="col mb-4">
+					<article class="c-card card bg-white h-100">
+						<a href="{{ entry.url }}">
+							<img class="c-card__img d-block w-100 rounded-top" src="{{ imgSrc }}" alt="{{ imgAlt }}">
+						</a>
+						
+						<div class="card-body d-flex flex-column justify-content-between">
+							<div>
+								<p class="c-card__date">{{ entry.postDate | date }}</p>
+								<h2 class="fs-4 u-font-heading-bold">{{ entry.title }}</h2>
+								{% if entry.summary != '' %}
+								<p class="opacity-75">{{ entry.summary | raw }}</p>
+								{% endif %}
+							</div>
+							
+							<div class="pt-4">
+								<a href="{{ entry.url }}" class="btn btn-sm btn-outline-secondary">Read More</a>
+							</div>
+						</div>
+					</article>
+				</div>
 			{% endfor %}
 		</div>
 	</div>

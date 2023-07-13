@@ -12029,7 +12029,7 @@ button > .c-icon--search {
 .c-tiles__tile {
   position: relative;
   border-radius: 0.375rem;
-  background-color: #C19D68;
+  background-color: #5f5f5f;
   color: white;
   overflow: hidden;
 }
@@ -12289,7 +12289,7 @@ button > .c-icon--search {
   left: 0;
 }
 .c-tiles__description h2, .c-tiles__description .h2 {
-  text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.75);
+  text-shadow: 0 2px 0.2em black;
 }
 .c-tiles__description-footer {
   font-size: 0.85rem;
@@ -12482,3 +12482,24 @@ button > .c-icon--search {
 /**
  * TWITTER BOOTSTRAP CARD OVERRIDES
  */
+/**
+ * CARD
+ */
+@media (min-width: 768px) {
+  .c-card__img {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+  .c-card__img:hover {
+    opacity: 0.75;
+  }
+}
+.c-card__date {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 75%;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}

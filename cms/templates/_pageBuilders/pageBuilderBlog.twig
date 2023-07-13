@@ -1,10 +1,10 @@
 {# Eager-load the Neo field #}
-{% for block in entry.pageBuilderNewsStory %}
+{% for block in entry.pageBuilderBlog %}
 	{% do block.useMemoized() %}
 {% endfor %}
 
 {# Loop through eager-loaded Neo fields blocks #}
-{% for block in entry.pageBuilderNewsStory %}
+{% for block in entry.pageBuilderBlog %}
 {% if block.level == 1 %}
 
 {# = = = = = = = = = SECTION STYLES = = = = = = = = = = = #}

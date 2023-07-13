@@ -60,6 +60,36 @@ fieldLayouts:
         name: Content
         uid: 28dd7732-9eb2-4110-903e-256aebcf25fb
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 668a4d71-ab6f-4020-903f-67aac11bad79
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 400a4dab-53c0-490d-9dd5-d34ddfc225c5
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Section Settings'
+        uid: f6d0c382-470c-418a-b25d-9a39b30e2f47
+        userCondition: null
 group: null
 groupChildBlockTypes: true
 handle: general

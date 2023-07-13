@@ -1,4 +1,4 @@
-dateModified: 1689266178
+dateModified: 1689270335
 elementSources:
   craft\elements\Entry:
     -
@@ -202,6 +202,7 @@ meta:
     38f59447-9f79-465c-96fc-aba9497a5d04: 'Large | Small | Small' # Large | Small | Small
     040d7db9-375b-4b41-989d-2e38c47b90f6: 'Padding: Bottom' # Padding: Bottom
     40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link # Link
+    41d75776-461e-4d36-8d1b-3d3935125b2d: 'Preview Card' # Preview Card
     49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
     61a1068b-a537-4bde-85ac-b0fe8f04946e: Team # Team

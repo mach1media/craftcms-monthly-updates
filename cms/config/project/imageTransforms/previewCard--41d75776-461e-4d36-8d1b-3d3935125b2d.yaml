@@ -1,0 +1,11 @@
+fill: null
+format: webp
+handle: previewCard
+height: 500
+interlace: none
+mode: crop
+name: 'Preview Card'
+position: center-center
+quality: 100
+upscale: true
+width: 800
