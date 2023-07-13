@@ -1,4 +1,4 @@
-dateModified: 1689275429
+dateModified: 1689278514
 elementSources:
   craft\elements\Entry:
     -
@@ -212,6 +212,7 @@ meta:
     72c21d48-1ae1-46e6-a4d8-57c63a5eb883: Subheading # Subheading
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
     75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading # Heading
+    84ac4acb-fc23-476c-b9be-da451f38f371: 'Grant Recipient Card Logo' # Grant Recipient Card Logo
     91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
     92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages # Pages
     160cd5ce-bdfd-4507-b851-369a31a5bbb6: Label # Label

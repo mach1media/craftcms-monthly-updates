@@ -1,0 +1,11 @@
+fill: null
+format: webp
+handle: grantRecipientCardLogo
+height: 300
+interlace: none
+mode: fit
+name: 'Grant Recipient Card Logo'
+position: center-center
+quality: 100
+upscale: true
+width: null

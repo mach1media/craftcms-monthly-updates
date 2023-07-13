@@ -1,0 +1,125 @@
+{##
+ # NEO BLOCK TYPE: GRANT RECIPIENT CARDS
+ #}
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-10 col-xl-9">
+				{% if block.preheading != '' 
+					or block.headingBlock | length 
+					or block.description != ''
+				%}
+				<div class="text-center mb-4">
+					{% if block.preheading is defined and block.preheading != '' %}
+					<p class="u-preheading">{{ block.preheading }}</p>
+					{% endif %}
+					
+					{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+					
+					{% if block.description is defined and block.description != '' %}
+					<div class="c-wysiwyg">
+						{% apply enkode_emails %}
+							{{ block.description }}
+						{% endapply %}
+					</div>
+					{% endif %}
+				</div>
+				{% endif %}
+
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+					{% for entry in block.grantRecipients.all() %}
+					<div class="col mb-4">
+						<article class="c-card card bg-white h-100">
+							<div class="card-body d-flex flex-column justify-content-between">
+								<div>
+									{% if entry.image | length %}
+										{% set img    = entry.image.one %}
+										{% set imgSrc = img.url('grantRecipientCardLogo') %}
+										{% set imgAlt = img.alt ?: entry.title %}
+										<div class="d-flex align-items-end mb-4" style="height:80px;">
+											<img class="img-fluid me-auto" src="{{ imgSrc }}" alt="{{ imgAlt }}" style="max-height:80px;width:auto;">
+										</div>
+									{% endif %}
+									<h2 class="fs-5 u-base-font text-uppercase text-secondary">{{ entry.programProjectName ?: entry.title }}</h2>
+									{% if entry.summary != '' %}
+									<p class="opacity-75">{{ entry.summary | raw }}</p>
+									{% endif %}
+								</div>
+								
+								<div class="pt-4">
+									<a class="btn btn-sm btn-outline-secondary"
+										href="#modal-{{ entry.id }}" 
+										data-bs-toggle="modal" 
+										data-bs-target="#modal-{{ entry.id }}">
+										Read More
+									</a>
+								</div>
+							</div>
+						</article>
+
+						<!-- Recipient Modal: {{ entry.id }} -->
+						<div class="modal fade" id="modal-{{ entry.id }}" tabindex="-1" aria-labelledby="modal-{{ entry.id }}-label" aria-hidden="true">
+							<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+								<div class="modal-content">
+									<div class="modal-body p-md-5">
+										<p class="text-end">
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</p>
+										<div class="row">
+											<div class="col-12 col-md-4">
+												<p>
+													<img class="img-fluid mb-5" src="{{ imgSrc }}" alt="{{ imgAlt }}">
+												</p>
+											</div>
+
+											<div class="col-12 col-md-8">
+												<div class="ps-md-5 text-start">
+													<p class="u-preheading mb-0">
+														{% for year in entry.grantYear.all %}{{ year.title }}{% if not loop.last %}, {% endif %}{% endfor %}
+														Grant Recipient
+													</p>
+													
+													<h3 class="h5 u-base-font-semibold mb-4">{{ entry.title }}</h3>
+
+													{% apply enkode_emails %}
+													<dl class="row mb-4">
+														{% if entry.programProjectName != '' %}
+														<dt class="col-sm-3 u-base-font-semibold">Project/Program</dt>
+														<dd class="col-sm-9 mb-3 mb-sm-0">{{ entry.programProjectName }}</dd>
+														{% endif %}
+														{% if entry.programCoordinator != '' %}
+														<dt class="col-sm-3 u-base-font-semibold">Coordinator</dt>
+														<dd class="col-sm-9 mb-3 mb-sm-0">{{ entry.programCoordinator }}</dd>
+														{% endif %}
+														{% if entry.email != '' %}
+														<dt class="col-sm-3 u-base-font-semibold">Email</dt>
+														<dd class="col-sm-9 mb-3 mb-sm-0">{{ entry.email }}</dd>
+														{% endif %}
+														{% if entry.website != '' %}
+														<dt class="col-sm-3 u-base-font-semibold">Website</dt>
+														<dd class="col-sm-9 mb-3 mb-sm-0"><a href="{{ entry.website }}" target="_blank" rel="noopener">{{ entry.website }}</a></dd>
+														{% endif %}
+														{% if entry.cityState != '' %}
+														<dt class="col-sm-3 u-base-font-semibold">Location</dt>
+														<dd class="col-sm-9 mb-3 mb-sm-0">{{ entry.cityState }}</dd>
+														{% endif %}
+													</dl>
+
+													{{ entry.description }}
+
+													{% endapply %}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
