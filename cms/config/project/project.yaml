@@ -1,4 +1,4 @@
-dateModified: 1689289749
+dateModified: 1689290095
 elementSources:
   craft\elements\Entry:
     -
@@ -163,6 +163,7 @@ meta:
     4fea1dfb-b830-4129-bfa9-b72c6f184fef: 'Link to Page' # Link to Page
     5a4d2142-edd7-4628-9ce3-353689734632: Dropdown # Dropdown
     005b0010-da6f-4cab-a5df-5047ecc802b0: General # General
+    5c591ed1-2a79-44d1-8390-283dc6ed3105: 'Resource Card' # Resource Card
     5cf2d429-9442-49de-b0fb-aaaec557b2cd: TMF # TMF
     5d256d74-c235-43c7-aa5c-7df02909be2a: Heading # Heading
     5ecdb404-4694-4031-a4a8-b1a523c6d775: Label # Label
