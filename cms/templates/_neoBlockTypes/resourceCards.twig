@@ -25,8 +25,10 @@
 					{% endif %}
 				</div>
 				{% endif %}
+			</div>
 
-				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+			<div class="col-12">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center">
 					{% for resource in block.resourceCards %}
 					{% set asset = resource.resource.one %}
 					<div class="col mb-4">
