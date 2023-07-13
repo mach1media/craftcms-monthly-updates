@@ -47,9 +47,9 @@
 							<div class="table-responsive">
 								{% set entry = table.table.one %}
 								{% if entry.type == 'dataTable' %}
-									{% include "_fields/tableCustom" with {'table':table.dataTable } %}
+									{% include "_fields/tableCustom" with {'table':entry.dataTable } %}
 								{% elseif entry.type == 'rateTable' %}
-									{% include "_fields/tableRate" with {'table':table.rateTable } %}
+									{% include "_fields/tableRate" with {'table':entry.rateTable } %}
 								{% endif %}
 							</div>
 						</div>
