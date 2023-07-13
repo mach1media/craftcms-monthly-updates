@@ -1,4 +1,4 @@
-dateModified: 1689270335
+dateModified: 1689274826
 elementSources:
   craft\elements\Entry:
     -
@@ -332,6 +332,7 @@ meta:
     e9d8566e-91f5-421f-a131-b9222fbc2a77: 'Grant Recipient' # Grant Recipient
     e32da315-685c-424c-8b52-95706a2d1026: 'Centered Text' # Centered Text
     e40f1bde-3da7-4a14-a813-c341a064e9a3: 'Data Table' # Data Table
+    e91b719a-22b8-4836-ac94-2eb6af576e65: 'Grant Recipient Cards' # Grant Recipient Cards
     e96bcdab-a9b7-4e6d-b220-57bf0ce7b15f: 'Contact Form' # Contact Form
     e359f1b1-385c-4017-9823-ab7e63cd7efe: Citation # Citation
     e636fe1a-91ea-493b-81c8-354c9c08220f: 'Items Per Row' # Items Per Row
