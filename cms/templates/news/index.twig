@@ -1,23 +1,42 @@
+{#
+ # BASE TEMPLATE: NEWS SECTION
+ #}
+{% extends "_layout/default" %}
+
+{% block content %}
 
 {# --------------------- PAGE HEADER -------------------- #}
 <section class="c-block">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-10 col-md-8 col-lg-7 col-xl-6 text-center">
+				{#
 				<p class="c-breadcrumb">
 					<a href="{{ siteUrl }}">Home</a>
 					<a href="{{ siturl('news') }}">News</a>
 				</p>
-				
-				<h1>{{ entry.title }}</h1>
-				
+				#}
+				<h1>News</h1>
+				{#
 				<div class="c-wysiwyg">
 					<p class="opacity-50">{{ entry.postDate | date }}</p>
 				</div>
+				#}
 			</div>
 		</div>
 	</div>
 </section>
 
-{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
-{% include "_pageBuilders/pageBuilderNewsStory" with { 'entry': entry } %}
+
+<section class="c-block">
+	<div class="container">
+		<div class="row justify-content-center">
+			{% for entry in newsEntries %}
+			
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+
+{% endblock %}
