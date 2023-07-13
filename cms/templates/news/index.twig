@@ -21,16 +21,14 @@
 		</div>
 		
 		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
-			{% set counterPlaceholders = 1 %}
 			{% for entry in pageEntries %}
 				{% if entry.thumbnail | length %}
 					{% set img    = entry.thumbnail.one %}
 					{% set imgSrc = img.url('previewCard') %}
 					{% set imgAlt = img.alt ?: entry.title %}
 				{% else %}
-					{% set imgSrc = '/dist/img/placeholder-' ~ counterPlaceholders ~ '.jpg' %}
+					{% set imgSrc = '/dist/img/placeholder-' ~ cycle([1,2,3], loop.index) ~ '.jpg' %}
 					{% set imgAlt = 'placeholder' %}
-					{% set counterPlaceholders = counterPlaceholders + 1 %}
 				{% endif %}
 				<div class="col mb-4">
 					<article class="c-card card bg-white h-100">
