@@ -1,0 +1,44 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
+handle: resourceCards
+instructions: null
+name: 'Resource Cards'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 636933390
+  columns:
+    __assoc__:
+      -
+        - b613c984-854f-41b5-baea-92cd77be6d0c # Resource
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d3166c3a-ca64-4122-be3f-716e818e0868 # Card Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 1f41377c-9452-4c44-85f2-23bcfbec5b44 # Button Label
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_resourcecards}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: 'Add a resource'
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

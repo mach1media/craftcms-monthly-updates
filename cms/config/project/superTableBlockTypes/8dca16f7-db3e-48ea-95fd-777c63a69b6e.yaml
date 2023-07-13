@@ -1,0 +1,143 @@
+changedFieldIndicator: 999351318
+field: da39494d-b4b7-4e57-8c52-887a18f71959 # Resource Cards
+fieldLayouts:
+  336639be-8a62-45e7-a2cf-c5e1c40c0108:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b613c984-854f-41b5-baea-92cd77be6d0c # Resource
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef4c4332-c85b-4479-9832-7482659b196d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d3166c3a-ca64-4122-be3f-716e818e0868 # Card Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0621076f-9058-4f83-b364-b06583f1f3ff
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1f41377c-9452-4c44-85f2-23bcfbec5b44 # Button Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: df51f173-4d05-461f-8801-3cf37737b0f9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 95ae342c-25b0-4c72-84f4-26a24d3182b2
+        userCondition: null
+fields:
+  1f41377c-9452-4c44-85f2-23bcfbec5b44: # Button Label
+    columnSuffix: eqvkrypm
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonLabel
+    instructions: null
+    name: 'Button Label'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: Download
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b613c984-854f-41b5-baea-92cd77be6d0c: # Resource
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: resource
+    instructions: null
+    name: Resource
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - compressed
+        - excel
+        - pdf
+        - powerpoint
+        - text
+        - word
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      sources:
+        - 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d3166c3a-ca64-4122-be3f-716e818e0868: # Card Title
+    columnSuffix: gqntnjwz
+    contentColumnType: text
+    fieldGroup: null
+    handle: cardTitle
+    instructions: null
+    name: 'Card Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Asset title'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

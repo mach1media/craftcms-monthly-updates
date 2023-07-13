@@ -59,6 +59,23 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: da39494d-b4b7-4e57-8c52-887a18f71959 # Resource Cards
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 24c7689b-df02-46b2-943e-df5276fffb9c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: b15a50b0-8595-40a6-b214-9ea5cba23fb4
+            userCondition: null
+          -
+            elementCondition: null
             fieldUid: c01f8239-e66d-46b2-92be-458a8a5914f6 # Resources
             instructions: null
             label: null

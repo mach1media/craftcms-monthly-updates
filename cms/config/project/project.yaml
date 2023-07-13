@@ -1,4 +1,4 @@
-dateModified: 1689278514
+dateModified: 1689289105
 elementSources:
   craft\elements\Entry:
     -
@@ -141,6 +141,7 @@ meta:
     0d346e5c-0f60-4911-9492-f7c3c2b17328: Label # Label
     0e20b322-d191-4a5f-b3df-37ba66888043: 'Social Icons' # Social Icons
     1a59398d-6900-4df1-a904-341d0b1c005c: 'CTA Tiles' # CTA Tiles
+    1f41377c-9452-4c44-85f2-23bcfbec5b44: 'Button Label' # Button Label
     1fc01eb4-e3aa-4109-b017-9a4357415660: Form # Form
     2bd2d918-16fc-4147-9b16-0a5c2a448d3e: 'Label: Custom' # Label: Custom
     2c56ec44-02d8-449f-b55a-ccb4e0f64909: 'Custom Table' # Custom Table
@@ -187,6 +188,7 @@ meta:
     8d53efd7-98eb-40ec-a000-4b904766072d: Button # Button
     8d67fd8f-ca95-4a56-9885-6ada3b8515de: 'Rate Table' # Rate Table
     8f655278-2023-4da0-a4d7-64814ef5c669: 'CTA Tiles' # CTA Tiles
+    9cbb1147-31ed-4893-8ea8-2731c0e9484a: 'Grant Recipient Card Logo' # Grant Recipient Card Logo
     9d7fafd1-35d2-468a-929a-b88e876f64e2: Email # Email
     9e28f3c9-7883-4de5-93ef-fcf8ed4ca639: Subheading # Subheading
     9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa: Link # Link
@@ -212,7 +214,6 @@ meta:
     72c21d48-1ae1-46e6-a4d8-57c63a5eb883: Subheading # Subheading
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
     75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading # Heading
-    84ac4acb-fc23-476c-b9be-da451f38f371: 'Grant Recipient Card Logo' # Grant Recipient Card Logo
     91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
     92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages # Pages
     160cd5ce-bdfd-4507-b851-369a31a5bbb6: Label # Label
@@ -294,6 +295,7 @@ meta:
     b87e2875-e61c-41af-a2fa-3878aa0bc72d: 'TMF Admins' # TMF Admins
     b99b6148-253d-4660-ac78-eaf2703b3856: 'Image: Mobile' # Image: Mobile
     b456d0e0-6918-43cd-82ff-a4eacd5f33cd: 'Responsive: Small' # Responsive: Small
+    b613c984-854f-41b5-baea-92cd77be6d0c: Resource # Resource
     ba00da73-87ef-49e2-b1ed-2160ae5e4857: Homepage # Homepage
     baddf677-8996-4c34-b436-ea8341d9bed3: Heading # Heading
     bafdb566-dc62-40b5-9a8f-ca3010a690f9: 'Grant Years' # Grant Years
@@ -322,8 +324,10 @@ meta:
     d8ff4807-a709-4131-95b1-7a565312e33d: 'Table Footer' # Table Footer
     d33d4fab-55e7-446f-8972-f4676b5ee14a: Heading # Heading
     d46a26f8-acd0-4f06-8f57-f8e755cbcddb: Label # Label
+    d3166c3a-ca64-4122-be3f-716e818e0868: 'Card Title' # Card Title
     d62585aa-389f-4f17-a6f8-ea404770633a: 'Preview Cards' # Preview Cards
     d1801112-12c8-4cf2-aaea-f0154e2d39a3: News # News
+    da39494d-b4b7-4e57-8c52-887a18f71959: 'Resource Cards' # Resource Cards
     dbd3cd32-4e50-4ba5-8894-bbf8b63b3278: 'Mega Menu Fields' # Mega Menu Fields
     dc0ed69d-1dd6-496a-ab73-dea06d776bc0: Heading # Heading
     dc757580-d89c-4eb2-8e98-f03470f73495: Columns # Columns
