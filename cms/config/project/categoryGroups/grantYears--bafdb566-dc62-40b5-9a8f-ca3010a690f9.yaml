@@ -1,0 +1,46 @@
+defaultPlacement: end
+fieldLayouts:
+  540216b3-793c-41d0-a8c3-5a5cfad36ceb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 397a86c8-cb36-424b-9bc3-6276663d70d4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 85ea63c9-3f6e-4c00-892e-b4fdfcc15c51
+        userCondition: null
+handle: grantYears
+name: 'Grant Years'
+siteSettings:
+  5cf2d429-9442-49de-b0fb-aaaec557b2cd: # TMF
+    hasUrls: true
+    template: null
+    uriFormat: 'grant-years/{slug}'
+structure:
+  maxLevels: null
+  uid: e00274b6-5322-426e-8ab2-1999bdfdcbbb

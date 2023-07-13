@@ -41,7 +41,19 @@ fieldLayouts:
             uid: 707eac8e-69a7-41ed-be76-79bd1ba45129
             userCondition: null
             warning: null
-            width: 100
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: c8054437-50a0-4ca2-a78f-02657392c71c # Grant Year
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 057bcc4a-5cd1-4de3-a180-5d70d6ca8524
+            userCondition: null
+            warning: null
+            width: 25
           -
             elementCondition: null
             fieldUid: 8069e6aa-35e5-43c0-9baa-abd171d2a2f2 # Program/Project Name

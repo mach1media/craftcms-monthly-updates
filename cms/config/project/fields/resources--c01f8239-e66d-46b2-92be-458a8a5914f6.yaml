@@ -4,7 +4,7 @@ fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
 handle: resources
 instructions: null
 name: Resources
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   allowSubfolders: false
@@ -41,7 +41,7 @@ settings:
         - class
         - craft\elements\conditions\assets\AssetCondition
   selectionLabel: 'Add a resource document'
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: true
   showUnpermittedVolumes: true
   sources:

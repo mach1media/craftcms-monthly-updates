@@ -1,4 +1,4 @@
-dateModified: 1689274826
+dateModified: 1689275429
 elementSources:
   craft\elements\Entry:
     -
@@ -91,6 +91,7 @@ elementSources:
       key: 'section:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
       tableAttributes:
         - 'field:7f134341-6c01-4975-9ea9-60df3c3dd5f0' # Image
+        - 'field:c8054437-50a0-4ca2-a78f-02657392c71c' # Grant Year
         - 'field:8069e6aa-35e5-43c0-9baa-abd171d2a2f2' # Program/Project Name
         - 'field:4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a' # City, State
         - link
@@ -294,6 +295,7 @@ meta:
     b456d0e0-6918-43cd-82ff-a4eacd5f33cd: 'Responsive: Small' # Responsive: Small
     ba00da73-87ef-49e2-b1ed-2160ae5e4857: Homepage # Homepage
     baddf677-8996-4c34-b436-ea8341d9bed3: Heading # Heading
+    bafdb566-dc62-40b5-9a8f-ca3010a690f9: 'Grant Years' # Grant Years
     bb9e3568-5ca9-4a9a-8534-c5e97ea203d7: 'Icon: Custom' # Icon: Custom
     be37b343-87c7-4b21-8965-829e7c555685: 'Video Tile' # Video Tile
     be950c11-5fd5-43e5-962d-aa30d3dd2834: Form # Form
@@ -307,6 +309,7 @@ meta:
     c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: Label # Label
     c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link' # CTA Link
     c937445d-2edd-4336-b195-241254cef98a: 'Icon: Custom' # Icon: Custom
+    c8054437-50a0-4ca2-a78f-02657392c71c: 'Grant Year' # Grant Year
     cdb162a5-f0d2-429b-b5ac-588fc77a48da: Summary # Summary
     ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop' # Image: Desktop
     cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption # Caption
