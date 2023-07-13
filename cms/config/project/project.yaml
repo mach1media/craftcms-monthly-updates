@@ -1,4 +1,4 @@
-dateModified: 1689289105
+dateModified: 1689289749
 elementSources:
   craft\elements\Entry:
     -
@@ -317,6 +317,7 @@ meta:
     ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop' # Image: Desktop
     cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption # Caption
     d0098f21-2d27-4c01-a70b-b9f036b1d94b: 'Custom Table' # Custom Table
+    d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66: Thumbnail # Thumbnail
     d2cf84b8-da42-48ed-9ffa-4f93da867f96: 'Text Link' # Text Link
     d3ccac65-2f19-4621-b98f-cb5f46bf796d: 'Home: Feature Tile' # Home: Feature Tile
     d4a66aad-fd77-4abe-97e2-a01cabc77bac: Description # Description

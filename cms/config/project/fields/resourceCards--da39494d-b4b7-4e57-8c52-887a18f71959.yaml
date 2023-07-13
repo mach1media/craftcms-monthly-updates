@@ -7,7 +7,7 @@ name: 'Resource Cards'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 636933390
+  changedFieldIndicator: 625570324
   columns:
     __assoc__:
       -

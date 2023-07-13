@@ -1,4 +1,4 @@
-changedFieldIndicator: 999351318
+changedFieldIndicator: 435040336
 field: da39494d-b4b7-4e57-8c52-887a18f71959 # Resource Cards
 fieldLayouts:
   336639be-8a62-45e7-a2cf-c5e1c40c0108:
@@ -15,6 +15,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ef4c4332-c85b-4479-9832-7482659b196d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66 # Thumbnail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca262393-41e5-491b-b796-e239b8188e84
             userCondition: null
             warning: null
             width: 100
@@ -77,7 +89,7 @@ fields:
     settings:
       allowSelfRelations: false
       allowSubfolders: false
-      allowUploads: true
+      allowUploads: false
       allowedKinds:
         - compressed
         - excel
@@ -118,6 +130,56 @@ fields:
       targetSiteId: null
       validateRelatedElements: false
       viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66: # Thumbnail
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: thumbnail
+    instructions: null
+    name: Thumbnail
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: false
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      sources:
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
