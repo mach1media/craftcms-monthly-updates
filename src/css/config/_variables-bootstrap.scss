@@ -2,68 +2,43 @@
  * BOOTSTRAP VARIABLE OVERRIDES
  */
 
-
-// typography
-$font-family-base:            $base-font;
-$font-family-sans-serif:      $base-font;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$h1-font-size:                $font-size-base * 3;//$font-size-base * 2.5 !default;
-//$h2-font-size:                $font-size-base * 2 !default;
-//$h3-font-size:                $font-size-base * 1.75 !default;
-//$h4-font-size:                $font-size-base * 1.5 !default;
-//$h5-font-size:                $font-size-base * 1.25 !default;
-//$h6-font-size:                $font-size-base !default;
-
-$body-color:                  $color-body-text;
-$link-color:                  $color-navy;
-$link-hover-color:            $color-tan;
-
-$headings-color:              $body-color;
-$headings-font-weight:        400;
-
-
 //
-// Dropdowns
+// PAGINATION
 //
-//$dropdown-min-width:                10rem !default;
-$dropdown-padding-y:                0;//.5rem !default;
-//$dropdown-spacer:                   .125rem !default;
-//$dropdown-font-size:                $font-size-base !default;
-//$dropdown-color:                    $body-color !default;
-//$dropdown-bg:                       $white !default;
-$dropdown-border-color:             transparent;//rgba($black, .15) !default;
-//$dropdown-border-radius:            $border-radius !default;
-$dropdown-border-width:             0;//$border-width !default;
-//$dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
-//$dropdown-divider-bg:               $gray-200 !default;
-//$dropdown-divider-margin-y:         $nav-divider-margin-y !default;
-$dropdown-box-shadow:               0 .5rem 1rem rgba($color-black, .175) !default;
+// $pagination-padding-y:              .375rem;
+// $pagination-padding-x:              .75rem;
+// $pagination-padding-y-sm:           .25rem;
+// $pagination-padding-x-sm:           .5rem;
+// $pagination-padding-y-lg:           .75rem;
+// $pagination-padding-x-lg:           1.5rem;
 
-$dropdown-link-color:               $body-color;//$gray-900 !default;
-$dropdown-link-hover-color:         $color-navy;//darken($gray-900, 5%) !default;
-$dropdown-link-hover-bg:            transparent;//$gray-100 !default;
+// $pagination-font-size:              $font-size-base;
 
-$dropdown-link-active-color:        $color-navy;//$component-active-color !default;
-$dropdown-link-active-bg:           transparent;//$component-active-bg !default;
+$pagination-color:                  $color-tan; // var(--#{$prefix}link-color);
+$pagination-bg:                     white; // var(--#{$prefix}body-bg);
+// $pagination-border-radius:          var(--#{$prefix}border-radius);
+// $pagination-border-width:           var(--#{$prefix}border-width);
+// $pagination-margin-start:           calc(#{$pagination-border-width} * -1); // stylelint-disable-line function-disallowed-list
+$pagination-border-color:           $color-tan; // var(--#{$prefix}border-color);
 
-//$dropdown-link-disabled-color:      $gray-600 !default;
+$pagination-focus-color:            white; // var(--#{$prefix}link-hover-color);
+$pagination-focus-bg:               $color-tan; // var(--#{$prefix}secondary-bg);
+// $pagination-focus-box-shadow:       $focus-ring-box-shadow;
+// $pagination-focus-outline:          0;
 
-$dropdown-item-padding-y:           .5rem;//.25rem !default;
-$dropdown-item-padding-x:           0;//1.5rem !default;
+$pagination-hover-color:            white; // var(--#{$prefix}link-hover-color);
+$pagination-hover-bg:               $color-tan; // var(--#{$prefix}tertiary-bg);
+$pagination-hover-border-color:     $color-tan; // var(--#{$prefix}border-color); // Todo in v6: remove this?
 
-//$dropdown-header-color:             $gray-600 !default;
-//$dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x !default;
+$pagination-active-color:           white; // $component-active-color;
+$pagination-active-bg:              lighten($color-tan, 10%); // $component-active-bg;
+$pagination-active-border-color:    $color-tan; // $component-active-bg;
 
+// $pagination-disabled-color:         var(--#{$prefix}secondary-color);
+// $pagination-disabled-bg:            var(--#{$prefix}secondary-bg);
+// $pagination-disabled-border-color:  var(--#{$prefix}border-color);
 
-//
-// Accordion
-//
-$accordion-bg:                            transparent; //$body-bg !default;
-$accordion-padding-x:                     0; //1.25rem !default;
-$accordion-button-active-bg:              transparent; //tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color:           $color-body-text; //shade-color($primary, 10%) !default;
+// $pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
-//
-// LIST GROUP
-//
-$list-group-active-bg: $color-navy;
+// $pagination-border-radius-sm:       var(--#{$prefix}border-radius-sm);
+// $pagination-border-radius-lg:       var(--#{$prefix}border-radius-lg);

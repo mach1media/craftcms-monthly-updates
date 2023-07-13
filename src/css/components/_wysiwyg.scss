@@ -1,4 +1,6 @@
 @include component('wysiwyg') {
+	@extend %first-last-child;
+
 	& > p > img {
 		max-width: 100%;
 		height: auto;

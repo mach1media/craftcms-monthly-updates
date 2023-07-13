@@ -8,6 +8,16 @@
 	[class*="col"] {
 		@extend %first-last-child;
 	}
+
+	@include modifier('news') {
+		padding-top: $gutter;
+		padding-bottom: $gutter;
+		
+		@include media-breakpoint-up(sm) {
+			padding-top: $gutter*2;
+			padding-bottom: $gutter*2;
+		}
+	}
 	
 	@include modifier('no-padding-bottom') {
 		padding-bottom: 0;
@@ -40,7 +50,7 @@
 		}
 	}
 
-	a:not(.btn) {
+	a:not(.btn):not(.page-link) {
 		color: darken(map-get($theme-colors, 'secondary'), 10%);
 	}
 	
