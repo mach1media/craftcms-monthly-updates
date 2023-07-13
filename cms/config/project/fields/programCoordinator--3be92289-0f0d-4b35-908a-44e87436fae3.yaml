@@ -1,10 +1,10 @@
-columnSuffix: ckhqcsef
+columnSuffix: eygsuail
 contentColumnType: text
 fieldGroup: fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0 # Text Fields
-handle: preheading
+handle: programCoordinator
 instructions: null
-name: Pre-heading
-searchable: true
+name: 'Program Coordinator'
+searchable: false
 settings:
   byteLimit: null
   charLimit: null

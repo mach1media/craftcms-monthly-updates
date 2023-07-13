@@ -1,6 +1,7 @@
 {
   "require": {
     "craftcms/cms": "4.4.13",
+    "craftcms/feed-me": "5.2.0",
     "craftcms/redactor": "3.0.4",
     "dolphiq/redirect": "2.0.0",
     "hybridinteractive/craft-position-fieldtype": "4.0.0",

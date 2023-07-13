@@ -9,7 +9,11 @@
 			<div class="c-heading-bar__buttons">
 				{% for button in block.buttons %}
 					{% if button.btnLink.getLink() %}
-						{% include "_fields/button" with {'button': button.btnLink, 'color': button.btnStyle, 'class': button.arrow == 1 ? 'btn-arrow m-2' : 'm-2' } %}
+						{% include "_fields/button" with {
+							'button': button.btnLink, 
+							'color': button.btnStyle, 
+							'class': button.arrow == 1 ? 'btn-arrow m-2' : 'm-2' 
+						} %}
 					{% endif %}
 				{% endfor %}
 			</div>

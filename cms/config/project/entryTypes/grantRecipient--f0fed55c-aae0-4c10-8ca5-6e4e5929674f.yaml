@@ -1,0 +1,145 @@
+fieldLayouts:
+  901c9c00-b544-4f05-96d6-a42f27be656a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7f1bed1e-0633-40a5-aa23-43ec6359d9e4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 707eac8e-69a7-41ed-be76-79bd1ba45129
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8069e6aa-35e5-43c0-9baa-abd171d2a2f2 # Program/Project Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ffe2ed6c-d53f-4171-8f5a-1430052619cd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d632f4fc-c19b-4c73-94b1-fc611a6abdda
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Preview Card'
+        uid: 02444076-a3b0-4cdd-a72f-c844f6bdb7fb
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3be92289-0f0d-4b35-908a-44e87436fae3 # Program Coordinator
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 844d33b4-b2aa-4a0f-a3d3-bd838c80d2ae
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9d7fafd1-35d2-468a-929a-b88e876f64e2 # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3fdc0158-5406-4dae-bc8b-0a58da0d8e9b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: bf77811a-bc78-4e53-8e51-bb8a6e9d0c69 # Website
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67f4163b-01ea-4900-851b-72d5427c55f5
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a # City, State
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 801735b5-01fe-40dc-89cf-22c7cff1dd74
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 97601e63-d6c0-4497-a890-a4890bd98d75
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Modal Overlay'
+        uid: 3f44d5da-c352-49f7-aa88-4d1a7905f29b
+        userCondition: null
+handle: grantRecipient
+hasTitleField: true
+name: 'Grant Recipient'
+section: 3dfc7896-c87e-4252-ad06-4a34e187be45 # Grant Recipients
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

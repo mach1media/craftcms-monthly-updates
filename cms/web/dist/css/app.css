@@ -11292,13 +11292,13 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 .c-footer__nav li {
   margin-bottom: 0.75em;
 }
-.c-footer__nav a {
-  color: #231F5B;
+.c-footer__nav a:not(.btn) {
+  color: #231F5B !important;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
-.c-footer__nav a:hover {
-  color: white;
+.c-footer__nav a:not(.btn):hover {
+  color: white !important;
   text-decoration: none;
 }
 .c-footer__optin input[type=email],
@@ -11493,6 +11493,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background-size: contain;
   transform: translate(-50%, 1.5rem);
   z-index: 100;
+}
+.c-block a:not(.btn) {
+  color: #ae8548;
 }
 .c-block.bg-navy, .c-block.bg-tan, .c-block.bg-primary, .c-block.bg-secondary {
   color: white;
@@ -12293,3 +12296,7 @@ button > .c-icon--search {
   max-width: 100%;
   height: auto;
 }
+
+/**
+ * TWITTER BOOTSTRAP CARD OVERRIDES
+ */

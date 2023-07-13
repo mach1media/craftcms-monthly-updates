@@ -5,6 +5,8 @@
 	position: relative;
 	color: map-get($theme-colors, 'primary');
 	background-color: map-get($theme-colors, 'secondary');
+
+
 	
 	@include element('heading') {
 		line-height: 1em;
@@ -50,13 +52,13 @@
 		li {
 			margin-bottom: .75em;
 		}
-		a {
-			color: map-get($theme-colors, 'primary');
+		a:not(.btn) {
+			color: map-get($theme-colors, 'primary') !important;
 			text-decoration: none;
 			@include animate;
 			
 			&:hover {
-				color: white;
+				color: white !important;
 				text-decoration: none;
 			}
 		}

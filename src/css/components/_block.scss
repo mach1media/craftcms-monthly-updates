@@ -39,6 +39,10 @@
 			@include z-1;
 		}
 	}
+
+	a:not(.btn) {
+		color: darken(map-get($theme-colors, 'secondary'), 10%);
+	}
 	
 	
 	//

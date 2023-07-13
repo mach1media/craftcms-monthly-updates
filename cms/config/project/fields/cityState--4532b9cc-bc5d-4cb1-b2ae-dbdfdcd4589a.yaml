@@ -1,10 +1,10 @@
-columnSuffix: ckhqcsef
+columnSuffix: jfzurntb
 contentColumnType: text
 fieldGroup: fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0 # Text Fields
-handle: preheading
+handle: cityState
 instructions: null
-name: Pre-heading
-searchable: true
+name: 'City, State'
+searchable: false
 settings:
   byteLimit: null
   charLimit: null

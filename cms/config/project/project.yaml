@@ -1,4 +1,4 @@
-dateModified: 1688603365
+dateModified: 1689199889
 elementSources:
   craft\elements\Entry:
     -
@@ -56,17 +56,6 @@ elementSources:
         - postDate
         - desc
       disabled: false
-      key: 'section:f6513c96-9a09-43f8-b901-27de58e1f28e'
-      tableAttributes:
-        - postDate
-        - author
-        - link
-      type: native
-    -
-      defaultSort:
-        - postDate
-        - desc
-      disabled: false
       key: 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
       tableAttributes:
         - postDate
@@ -82,6 +71,29 @@ elementSources:
       tableAttributes:
         - 'field:6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c' # Heading
         - 'field:e359f1b1-385c-4017-9823-ab7e63cd7efe' # Citation
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+      tableAttributes:
+        - 'field:7f134341-6c01-4975-9ea9-60df3c3dd5f0' # Image
+        - 'field:aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e' # Pre-heading
+        - 'field:6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c' # Heading
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+      tableAttributes:
+        - 'field:7f134341-6c01-4975-9ea9-60df3c3dd5f0' # Image
+        - 'field:8069e6aa-35e5-43c0-9baa-abd171d2a2f2' # Program/Project Name
+        - 'field:4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a' # City, State
+        - link
       type: native
 email:
   fromEmail: jmitchell@tmf-fdn.org
@@ -134,10 +146,12 @@ meta:
     2f76bca5-2eaf-4262-8c5d-edb7401cc84f: Video # Video
     3b6ab5b3-228a-4f9a-b6ba-5958d0d9daf2: 'Icon: Custom' # Icon: Custom
     3b51443f-4e3e-4232-8ca5-f70fda28a3c2: Link # Link
+    3be92289-0f0d-4b35-908a-44e87436fae3: 'Program Coordinator' # Program Coordinator
     3cd86bf3-6755-432c-a7cd-8fdb85ad0ccb: 'Table Footer' # Table Footer
     3d088ba7-2012-45f1-8454-ccf6895bd50b: 'Home: Square Tiles' # Home: Square Tiles
     3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF # TMF
     3dd8a012-e0af-46a4-a906-a538bd2c6a64: Style # Style
+    3dfc7896-c87e-4252-ad06-4a34e187be45: 'Grant Recipients' # Grant Recipients
     3e2c33e8-dd58-40f6-bb8b-ee1504d3711e: 'Navigation Menu' # Navigation Menu
     4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd: Media # Media
     4cf16f08-8357-449b-a33e-172385d1c66e: 'CTA Link' # CTA Link
@@ -177,6 +191,7 @@ meta:
     9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa: Link # Link
     12a86971-9af3-496d-9a73-1f277506afaa: 'Padding: Sides' # Padding: Sides
     13c74871-8a4f-4e3d-9caf-998a4119ec36: 'Text Link' # Text Link
+    16e2e1ff-7c35-4030-b21c-207a4d1e88b7: 'Preview Card' # Preview Card
     17fcc0b6-4e93-425f-9380-11c07300553d: Buttons # Buttons
     19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a: General # General
     24a26f70-67f3-45a7-8828-d33f091c1508: 'Home: Tile - Wide' # Home: Tile - Wide
@@ -218,9 +233,11 @@ meta:
     2160ef32-2844-4834-a6c8-c374a3efa675: 'Link Fields' # Link Fields
     02953e5d-2354-4eef-bbab-fd22e7b929c9: 'News Stories' # News Stories
     3030cab8-78a4-43c1-965d-edcb8d53848e: 'Contact Form Block' # Contact Form Block
+    4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a: 'City, State' # City, State
     5018ac6a-d423-4ea7-93a2-71816abf326f: Person # Person
     6552f23c-7f92-493a-bd10-b47693edab05: 'Column: Image' # Column: Image
     7122cd83-09df-457d-8ea8-284328ec238f: label # label
+    8069e6aa-35e5-43c0-9baa-abd171d2a2f2: 'Program/Project Name' # Program/Project Name
     9030c997-69e7-4a71-b846-fdadd3c6112f: Heading # Heading
     9804d284-d129-4704-8883-92fcd4aec0a8: 'Data Table: Full Width' # Data Table: Full Width
     13815e4c-247f-4715-b11d-7d23e38f23a4: 'Mega Menu' # Mega Menu
@@ -280,9 +297,12 @@ meta:
     be37b343-87c7-4b21-8965-829e7c555685: 'Video Tile' # Video Tile
     be950c11-5fd5-43e5-962d-aa30d3dd2834: Form # Form
     bf0e4db0-9861-4bba-b0d0-98bafe12bc6c: 'Page Builders' # Page Builders
+    bf77811a-bc78-4e53-8e51-bb8a6e9d0c69: Website # Website
+    c01f8239-e66d-46b2-92be-458a8a5914f6: Resources # Resources
     c1d10006-9965-425c-961a-e3bd34a9f34c: 'Column: Text' # Column: Text
     c13a4a02-215c-406f-8eb0-6aaca8403db8: 'CTA Link' # CTA Link
     c67bfc40-e256-429b-8bc2-bf32fdbf8e43: 'Home: Intro' # Home: Intro
+    c87c2284-cb4d-4e16-9b19-d1ae79c72fc5: 'Grant Recipients' # Grant Recipients
     c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: Label # Label
     c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link' # CTA Link
     c937445d-2edd-4336-b195-241254cef98a: 'Icon: Custom' # Icon: Custom
@@ -297,6 +317,7 @@ meta:
     d8ff4807-a709-4131-95b1-7a565312e33d: 'Table Footer' # Table Footer
     d33d4fab-55e7-446f-8972-f4676b5ee14a: Heading # Heading
     d46a26f8-acd0-4f06-8f57-f8e755cbcddb: Label # Label
+    d62585aa-389f-4f17-a6f8-ea404770633a: 'Preview Cards' # Preview Cards
     d1801112-12c8-4cf2-aaea-f0154e2d39a3: News # News
     dbd3cd32-4e50-4ba5-8894-bbf8b63b3278: 'Mega Menu Fields' # Mega Menu Fields
     dc0ed69d-1dd6-496a-ab73-dea06d776bc0: Heading # Heading
@@ -306,6 +327,8 @@ meta:
     dfbc0047-f74f-4940-baf3-7f9402fc918e: 'Background Color' # Background Color
     e03100b7-f50b-4daf-9652-85e6e60138a8: Pages # Pages
     e1cb6898-debf-4b78-bbb2-440b65278382: 'Small | Small | Large' # Small | Small | Large
+    e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3: 'Resource Cards' # Resource Cards
+    e9d8566e-91f5-421f-a131-b9222fbc2a77: 'Grant Recipient' # Grant Recipient
     e32da315-685c-424c-8b52-95706a2d1026: 'Centered Text' # Centered Text
     e40f1bde-3da7-4a14-a813-c341a064e9a3: 'Data Table' # Data Table
     e96bcdab-a9b7-4e6d-b220-57bf0ce7b15f: 'Contact Form' # Contact Form
@@ -317,6 +340,7 @@ meta:
     eaf0d64e-a5d2-48e0-9547-b790b9262fe3: 'Table Footer' # Table Footer
     eee5e319-f63b-458a-8ea2-ae0a83ba319d: 'Pre-defined Table' # Pre-defined Table
     efb726bf-a523-4889-94d6-8865ebb534d9: 'Small | Small | Large' # Small | Small | Large
+    f0fed55c-aae0-4c10-8ca5-6e4e5929674f: 'Grant Recipient' # Grant Recipient
     f06a4480-f195-4705-bd40-a33a08e72d0f: Images # Images
     f69cfc32-4011-4eea-a32a-f5ae9fd5b24e: 'Page Builder: General' # Page Builder: General
     f92f1b34-68ad-48fd-a712-c4cdb6b682f0: 'Rate Table' # Rate Table
@@ -339,6 +363,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.0.0
   field-manager:
     edition: standard
     enabled: true
