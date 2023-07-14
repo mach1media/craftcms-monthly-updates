@@ -24,7 +24,7 @@
 				</div>									
 				{% endif %}
 
-				<div class="row">
+				<div class="row justify-content-center">
 					{% for person in teamMembers %}
 					{% set img = person.image.one %}
 					<div class="col-12 col-sm-6 col-md-4 col-xl-3 text-center p-5{% if not loop.last %} mb-5{% endif %}">

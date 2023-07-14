@@ -49,6 +49,7 @@
 							</table>
 						</div>
 					</div>
+
 					{% elseif table.type == 'customTable' %}
 					<div class="border border-secondary rounded p-3 mb-3">
 						<div class="table-responsive">
@@ -69,6 +70,36 @@
 												<th align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</th>
 												{% else %}
 												<td align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</td>
+												{% endif %}
+											{% endfor %}
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					{% elseif table.type == 'preDefinedTable' %}
+					{% set tableEntry = table.table.one %}
+					<div class="border border-secondary rounded p-3 mb-3">
+						<div class="table-responsive">
+							<table class="table table-sm text-primary">
+								<thead>
+									<tr class="align-bottom">
+										{% for col in tableEntry.dataTable.columns %}
+											<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
+										{% endfor %}
+									</tr>
+								</thead>
+						
+								<tbody>
+									{% for row in tableEntry.dataTable.rows %}
+										<tr>
+											{% for cell in row %}
+												{% if loop.first %}
+												<th align="{{ tableEntry.dataTable.columns[loop.index0].align }}">{{ cell | raw }}</th>
+												{% else %}
+												<td align="{{ tableEntry.dataTable.columns[loop.index0].align }}">{{ cell | raw }}</td>
 												{% endif %}
 											{% endfor %}
 										</tr>

@@ -28,7 +28,7 @@
 							{% endif %}
 							
 							{% if col.description is defined and col.description != '' %}
-							<div class="c-wysiwyg">
+							<div class="c-wysiwyg{% if col.button | length %} mb-4{% endif %}">
 								{% apply enkode_emails %}
 									{{ col.description }}
 								{% endapply %}
