@@ -1,4 +1,4 @@
-dateModified: 1689355246
+dateModified: 1689367745
 elementSources:
   craft\elements\Entry:
     -
@@ -178,6 +178,7 @@ meta:
     7a533a82-4f0f-4e24-b8e2-f37bb95a4b06: Thumbnail # Thumbnail
     07a87980-eb4d-4710-896e-772170d1d21d: 'Section Settings' # Section Settings
     7e96a64e-53b0-4605-98b2-53710eb1c5bf: Media # Media
+    7f4113a8-8cb2-4670-bac9-e4de20179209: 'Text Links' # Text Links
     7f134341-6c01-4975-9ea9-60df3c3dd5f0: Image # Image
     7fdd5ed0-dc8b-4df8-bdb3-5909ceccface: Subheading # Subheading
     8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd: Table # Table
@@ -192,6 +193,7 @@ meta:
     9d7fafd1-35d2-468a-929a-b88e876f64e2: Email # Email
     9e28f3c9-7883-4de5-93ef-fcf8ed4ca639: Subheading # Subheading
     9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa: Link # Link
+    11a02d8c-6388-4bec-914d-2e386b4d1101: 'Legal Links' # Legal Links
     12a86971-9af3-496d-9a73-1f277506afaa: 'Padding: Sides' # Padding: Sides
     13c74871-8a4f-4e3d-9caf-998a4119ec36: 'Text Link' # Text Link
     16e2e1ff-7c35-4030-b21c-207a4d1e88b7: 'Preview Card' # Preview Card
@@ -210,6 +212,7 @@ meta:
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
     61a1068b-a537-4bde-85ac-b0fe8f04946e: Team # Team
     61b6248e-c14a-44e7-b438-2ccdbfafe7a7: 'Blog Entries' # Blog Entries
+    68ecabf7-ddb5-437f-8844-30eb450a69ee: Footer # Footer
     69a66c94-0c41-4248-949e-0b52659f8c9e: 'Dropdown Links' # Dropdown Links
     72c21d48-1ae1-46e6-a4d8-57c63a5eb883: Subheading # Subheading
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
@@ -259,6 +262,7 @@ meta:
     98126def-cd93-43c8-b0eb-eafba4c890e0: 'Large | Small | Small' # Large | Small | Small
     115274b7-184f-4d2c-898d-b1f9504e6aef: Tables # Tables
     251036cc-4dfd-4b0f-9823-b109a413bd0b: Image # Image
+    283865a1-e9b4-416a-a6ec-a6433ef01a5a: Link # Link
     312692fe-0d39-45bc-889d-f49efeaa0dc0: 'Column: Image' # Column: Image
     356681f1-6b5a-48fb-94b8-d856247a3b67: Tile # Tile
     424904af-03e0-49ac-aabf-921f78be4c4e: New # New
@@ -313,6 +317,7 @@ meta:
     c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link' # CTA Link
     c937445d-2edd-4336-b195-241254cef98a: 'Icon: Custom' # Icon: Custom
     c8054437-50a0-4ca2-a78f-02657392c71c: 'Grant Year' # Grant Year
+    cb377aa9-4075-4012-9aed-7f7baf560233: 'Text Link' # Text Link
     cdb162a5-f0d2-429b-b5ac-588fc77a48da: Summary # Summary
     ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop' # Image: Desktop
     cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption # Caption
@@ -360,6 +365,8 @@ meta:
     fae55152-701b-4c22-9f50-453a213e9e05: Size # Size
     fb633af9-99e4-499c-b90f-60a8039f3046: 'Text Alignment' # Text Alignment
     fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0: 'Text Fields' # Text Fields
+    fdacfdd8-aa17-4862-b03c-7ed6c0177dee: 'Text Link' # Text Link
+    ff02b5d9-24b9-4da0-858a-ad8253a72bb3: 'Text Link' # Text Link
     ff81d39c-f083-4ae5-aaa1-08eabba9c8da: 'Icon: Custom' # Icon: Custom
 plugins:
   config-values-field:

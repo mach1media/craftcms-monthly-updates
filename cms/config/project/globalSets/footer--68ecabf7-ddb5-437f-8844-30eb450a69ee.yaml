@@ -1,0 +1,36 @@
+fieldLayouts:
+  ae211381-d3c7-4b3d-9461-e72c7fef5450:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7f4113a8-8cb2-4670-bac9-e4de20179209 # Text Links
+            instructions: null
+            label: 'Learn More Links'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d1b3dd0b-b0f1-402e-9d38-86dff884c8f8
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 11a02d8c-6388-4bec-914d-2e386b4d1101 # Legal Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c440c4e-f826-4d6f-a551-7214417b451b
+            userCondition: null
+            warning: null
+            width: 50
+        name: 'Footer Links'
+        uid: 2374e61f-ac8d-466e-953a-f5c1e5eecb96
+        userCondition: null
+handle: footer
+name: Footer
+sortOrder: 1
