@@ -45,7 +45,12 @@
 							<p class="u-preheading mb-0">{{ person.preheading }}</p>
 						{% endif %}
 
-						{% if person.heading != '' %}
+						{% if person.title is defined %}
+						<h3 class="h5">{{ person.title | raw }}</h3>
+							{% if person.heading is defined and person.heading != '' %}
+							<p>{{ person.heading | raw }}</p>
+							{% endif %}
+						{% elseif person.heading is defined and person.heading != '' %}
 						<h3 class="h5">{{ person.heading | raw }}</h3>
 						{% endif %}
 
