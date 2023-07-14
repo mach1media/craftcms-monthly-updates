@@ -7,11 +7,18 @@ name: 'Resource Cards'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 625570324
+  changedFieldIndicator: 1460332570
   columns:
     __assoc__:
       -
         - b613c984-854f-41b5-baea-92cd77be6d0c # Resource
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66 # Thumbnail
         -
           __assoc__:
             -

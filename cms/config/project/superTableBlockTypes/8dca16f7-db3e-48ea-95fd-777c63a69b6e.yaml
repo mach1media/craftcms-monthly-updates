@@ -1,4 +1,4 @@
-changedFieldIndicator: 435040336
+changedFieldIndicator: 469415814
 field: da39494d-b4b7-4e57-8c52-887a18f71959 # Resource Cards
 fieldLayouts:
   336639be-8a62-45e7-a2cf-c5e1c40c0108:
@@ -87,52 +87,60 @@ fields:
     name: Resource
     searchable: true
     settings:
-      allowSelfRelations: false
-      allowSubfolders: false
-      allowUploads: false
-      allowedKinds:
-        - compressed
-        - excel
-        - pdf
-        - powerpoint
-        - text
-        - word
-      branchLimit: null
-      defaultUploadLocationSource: 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
-      defaultUploadLocationSubpath: null
-      localizeRelations: false
-      maintainHierarchy: false
-      maxRelations: 1
-      minRelations: 1
-      previewMode: full
-      restrictFiles: true
-      restrictLocation: false
-      restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
-      restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
-      selectionLabel: null
-      showSiteMenu: true
-      showUnpermittedFiles: true
-      showUnpermittedVolumes: true
-      sources:
-        - 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: list
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: true
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: asset
+      defaultText: Download
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
   d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66: # Thumbnail
     columnSuffix: null
     contentColumnType: string
@@ -172,7 +180,7 @@ fields:
             - class
             - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an image'
-      showSiteMenu: false
+      showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: true
       sources:
