@@ -2,7 +2,7 @@
  # NEO BLOCK TYPE: PRESS CARDS
  #}
 {% set slides = block.children.all() %}
-<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row}">
 			<div class="col-12 mb-md-5">

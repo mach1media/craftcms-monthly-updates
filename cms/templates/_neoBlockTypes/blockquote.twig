@@ -6,7 +6,7 @@
 	{% set img = block.backgroundPhoto.one %}
 	{% set bgPhoto = ' style="background:url(' ~ img.url('responsiveLarge') ~ ') center center no-repeat;background-size:cover;"' %}
 {% endif %}
-<section class="c-block c-block--quote c-block--{{ block.backgroundColor }}"{{ bgPhoto | raw }}>
+<section id="{{ sectionId }}" class="c-block c-block--quote c-block--{{ block.backgroundColor }}"{{ bgPhoto | raw }}>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-lg-8 col-md-10">

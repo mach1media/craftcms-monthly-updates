@@ -3,10 +3,15 @@
  */
 @include component('block') {
 	position: relative;
+	scroll-margin-top: 100px;
 	@extend %block-padding;
 	
 	[class*="col"] {
 		@extend %first-last-child;
+	}
+
+	@include media-breakpoint-up(md) {
+		scroll-margin-top: 200px;
 	}
 
 	@include modifier('news') {

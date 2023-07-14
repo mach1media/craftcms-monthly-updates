@@ -6,7 +6,7 @@
 	{% set img = block.backgroundPhoto.one %}
 	{% set bgPhoto = ' style="background:url(' ~ img.url('responsiveLarge') ~ ') center center no-repeat;background-size:cover;"' %}
 {% endif %}
-<section class="c-hero"{{ bgPhoto | raw }}>
+<section id="{{ sectionId }}" class="c-hero"{{ bgPhoto | raw }}>
 	<div class="c-hero__wedge-left"></div>
 	<div class="c-hero__wedge-right"></div>
 	

@@ -28,6 +28,12 @@
 {% endif %}
 #}
 
+{% if block.sectionId is defined and block.sectionId != '' %}
+	{% set sectionId = block.sectionId %}
+{% else %}
+	{% set sectionId = 'section-' ~ block.id %}
+{% endif %}
+
 <!-- {{ block.type }}: {{ block.id }} -->
 {% include "_neoBlockTypes/" ~ block.type with {'block': block, 'sectionStyleClasses': sectionStyleClasses | join(' ')} %}
 

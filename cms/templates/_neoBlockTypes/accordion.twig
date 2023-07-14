@@ -1,7 +1,7 @@
 {##
  # NEO BLOCK TYPE: ACCORDION
  #}
-<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		{% if block.preheading != '' or block.headingBlock | length or block.description != '' %}
 		<div class="row justify-content-center mb-5">
