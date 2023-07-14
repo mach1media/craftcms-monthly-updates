@@ -1,6 +1,11 @@
 {##
  # NEO BLOCK TYPE: TEAM MEMBERS
- #}
+ #}			
+{% if block.teamMembers | length %}
+	{% set teamMembers = block.teamMembers.all() %}
+{% elseif block.children | length %}
+	{% set teamMembers = block.children.all() %}
+{% endif %}
 <section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
@@ -12,17 +17,11 @@
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">
+				<div class="c-wysiwyg{% if teamMembers | length %} mb-4{% endif %}">
 					{% apply enkode_emails %}
 						{{ block.description }}
 					{% endapply %}
 				</div>									
-				{% endif %}
-				
-				{% if block.teamMembers | length %}
-					{% set teamMembers = block.teamMembers.all() %}
-				{% elseif block.children | length %}
-					{% set teamMembers = block.children.all() %}
 				{% endif %}
 
 				<div class="row">

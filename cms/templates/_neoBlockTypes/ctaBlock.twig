@@ -12,7 +12,7 @@
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg fs-5">{{ block.description }}</div>
+				<div class="c-wysiwyg fs-5{% if block.buttons | length %} mb-4{% endif %}">{{ block.description }}</div>
 				{% endif %}
 				
 				{% include "_fields/buttons" with {'buttons': block.buttons} %}

@@ -12,7 +12,7 @@
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">
+				<div class="c-wysiwyg{% if block.buttons | length %} mb-4{% endif %}">
 					{% apply enkode_emails %}
 						{{ block.description }}
 					{% endapply %}
