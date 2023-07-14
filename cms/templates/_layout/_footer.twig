@@ -361,12 +361,11 @@
                 <p class="c-footer__list-heading">Learn More</p>
                 <nav class="c-footer__nav">
 					<ul class="list-unstyled">
-						<li><a href="#">Impact Investing</a></li>
-						<li><a href="#">Loans for Ministry</a></li>
-						<li><a href="#">Philanthropy</a></li>
-						<li><a href="#">Area Representatives</a></li>
-						<li><a href="#">Leadership Ministry</a></li>
-						<li><a href="#">About</a></li>
+						{% for block in footer.textLinks.all() %}
+                            {% if block.textLink.getLink() %}
+                                <li>{% include "_fields/textLink" with {'textLink': block.textLink} %}</li>
+                            {% endif %}
+                        {% endfor %}
 					</ul>
 				</nav>
             </div>
@@ -382,9 +381,11 @@
                 <p class="c-footer__list-heading">Legal</p>
 				<nav class="c-footer__nav">
 					<ul class="list-unstyled">
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms of Use</a></li>
-						<li><a href="#">Transparency in Coverage</a></li>
+                        {% for block in footer.legalLinks.all() %}
+                            {% if block.textLink.getLink() %}
+                                <li>{% include "_fields/textLink" with {'textLink': block.textLink} %}</li>
+                            {% endif %}
+                        {% endfor %}
 					</ul>
 				</nav>
 			</div>

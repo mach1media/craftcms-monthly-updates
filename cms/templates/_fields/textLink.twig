@@ -1,0 +1,7 @@
+{% if textLink | length %}
+	{% set classes = color is defined ? [color] : [] %}
+	{% if class is defined and class != '' %}
+		{% set classes = classes|merge([class]) %}
+	{% endif %}
+	{{ textLink.getLink({'class':classes|join(' ')}) }}
+{% endif %}

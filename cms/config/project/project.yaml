@@ -1,4 +1,4 @@
-dateModified: 1689367745
+dateModified: 1689377610
 elementSources:
   craft\elements\Entry:
     -
@@ -313,6 +313,7 @@ meta:
     c13a4a02-215c-406f-8eb0-6aaca8403db8: 'CTA Link' # CTA Link
     c67bfc40-e256-429b-8bc2-bf32fdbf8e43: 'Home: Intro' # Home: Intro
     c87c2284-cb4d-4e16-9b19-d1ae79c72fc5: 'Grant Recipients' # Grant Recipients
+    c932c240-70a9-4a42-b4e8-452cde3498d7: 'Resource Card' # Resource Card
     c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: Label # Label
     c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link' # CTA Link
     c937445d-2edd-4336-b195-241254cef98a: 'Icon: Custom' # Icon: Custom

@@ -1,0 +1,11 @@
+fill: null
+format: webp
+handle: resourceCard
+height: 800
+interlace: none
+mode: crop
+name: 'Resource Card'
+position: center-center
+quality: 100
+upscale: true
+width: 620
