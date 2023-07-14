@@ -1,4 +1,4 @@
-dateModified: 1689290095
+dateModified: 1689349754
 elementSources:
   craft\elements\Entry:
     -
@@ -609,6 +609,13 @@ plugins:
     enabled: true
     licenseKey: WGWS3FIJ3F81FB4EPTVL5Z4D
     schemaVersion: 3.6.2
+    settings:
+      blockTypeIconSources: '*'
+      collapseAllBlocks: true
+      defaultAlwaysShowGroupDropdowns: true
+      enableBlockTypeUserPermissions: true
+      newBlockMenuStyle: classic
+      optimiseSearchIndexing: true
   obfuscator:
     edition: standard
     enabled: true
