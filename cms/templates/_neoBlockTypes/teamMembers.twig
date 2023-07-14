@@ -19,10 +19,10 @@
 				</div>									
 				{% endif %}
 				
-				{% if block.children | length %}
-					{% set teamMembers = block.children.all() %}
-				{% elseif block.teamMembers | length %}
+				{% if block.teamMembers | length %}
 					{% set teamMembers = block.teamMembers.all() %}
+				{% elseif block.children | length %}
+					{% set teamMembers = block.children.all() %}
 				{% endif %}
 
 				<div class="row">
@@ -81,9 +81,9 @@
 														<dt class="col-sm-3 u-base-font-semibold">Email</dt>
 														<dd class="col-sm-9 mb-3 mb-sm-0">{{ person.email }}</dd>
 														{% endif %}
-														{% if entry.phone != '' %}
+														{% if person.phone != '' %}
 														<dt class="col-sm-3 u-base-font-semibold">Phone</dt>
-														<dd class="col-sm-9 mb-3 mb-sm-0"><a href="{{ entry.phone }}">{{ entry.phone }}</a></dd>
+														<dd class="col-sm-9 mb-3 mb-sm-0"><a href="{{ person.phone }}">{{ person.phone }}</a></dd>
 														{% endif %}
 													</dl>
 
@@ -100,7 +100,6 @@
 					</div>
 					{% endfor %}
 				</div>
-				{% endif %}
 			</div>
 		</div>
 	</div>
