@@ -11248,8 +11248,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   transform: translate(0, -50%);
   background-color: #231F5B;
 }
-.c-header__mobile nav .nav-item:last-of-type {
-  margin-left: 0.75em;
+.c-header__mobile nav .nav-item:last-of-type .nav-link:after {
+  display: none;
 }
 .c-header__menu-toggle {
   border-radius: 0.5rem !important;

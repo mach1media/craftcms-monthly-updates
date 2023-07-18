@@ -240,7 +240,11 @@
 		}
 
 		nav .nav-item:last-of-type {
-			margin-left: .75em;
+			// margin-left: .75em;
+
+			.nav-link:after {
+				display: none;
+			}
 		}
 	}
 	@include element('menu-toggle') {
