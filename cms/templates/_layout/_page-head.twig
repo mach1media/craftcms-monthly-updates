@@ -31,7 +31,7 @@
 							</li>
 							{% elseif node.type == 'dropdown' %}
 							<li class="nav-item dropdown">
-								{#
+								{# BOOTSTRAP DROPDOWN BUTTON TOGGLE
 								<a class="nav-link dropdown-toggle" 
 									href="#" 
 									role="button" 
@@ -288,10 +288,10 @@
 
 <!-- SITE SEARCH -->
 <div id="search-bar" class="c-search bg-secondary text-white d-flex align-items-center justify-content-between">
-	<form class="c-search__form">
+	<form action="{{ url('search') }}" method="get" class="c-search__form">
 		<div class="input-group">
 			<button class="c-search__submit" type="submit" id="modal-search-button" aria-label="search website"></button>
-			<input type="search" class="form-control" placeholder="search our website" aria-label="search website" aria-describedby="modal-search-button">
+			<input name="q" type="search" class="form-control" placeholder="search our website" aria-label="search website" aria-describedby="modal-search-button">
 		</div>
 	</form>
 
