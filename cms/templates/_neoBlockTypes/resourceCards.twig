@@ -34,7 +34,7 @@
 					<div class="col mb-4">
 						<article class="c-card card bg-white h-100">
 							<div class="card-body d-flex flex-column justify-content-between">
-								<div class="text-center">
+								<div class="text-center px-4">
 									{% if resource.thumbnail | length %}
 										{% set img    = resource.thumbnail.one %}
 										{% set imgSrc = img.url('resourceCard') %}
@@ -43,11 +43,13 @@
 										{% set imgSrc = '/dist/img/placeholder-resource-' ~ cycle([1,2,3], loop.index) ~ '.jpg' %}
 										{% set imgAlt = 'placeholder' %}
 									{% endif %}
-									<img class="img-fluid mx-auto" src="{{ imgSrc }}" alt="{{ imgAlt }}" style="max-height:240px;width:auto;">
+									<div class="mb-3">
+										<img class="img-fluid mx-auto" src="{{ imgSrc }}" alt="{{ imgAlt }}" style="max-height:240px;width:auto;">
+									</div>
+									<p>{{ resource.cardTitle ?: asset.title }}</p>
 								</div>
 								
 								<div class="pt-4 text-center">
-									<p>{{ resource.cardTitle ?: asset.title }}</p>
 									<a class="btn btn-primary btn-arrow" href="{{ asset.url }}">{{ resource.buttonLabel ?: 'Download' }}</a>
 								</div>
 							</div>

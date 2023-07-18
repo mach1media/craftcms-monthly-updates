@@ -29,7 +29,19 @@ fieldLayouts:
             uid: 97cba58e-2055-492c-a504-ae1cba26fc8b
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 4fea1dfb-b830-4129-bfa9-b72c6f184fef # Link to Page
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d0baa105-b6f1-4a4a-85ea-ab7cc7d4cb5c
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: 69a66c94-0c41-4248-949e-0b52659f8c9e # Dropdown Links

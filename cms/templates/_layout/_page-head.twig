@@ -31,11 +31,17 @@
 							</li>
 							{% elseif node.type == 'dropdown' %}
 							<li class="nav-item dropdown">
+								{#
 								<a class="nav-link dropdown-toggle" 
 									href="#" 
 									role="button" 
 									data-bs-toggle="dropdown"
 									aria-expanded="false">
+									{{ node.title }}
+								</a>
+								#}
+								{% set parentLink = node.linkToPage | length ? node.linkToPage.one : null %}
+								<a class="nav-link dropdown-toggle" href="{{ parentLink ? parentLink.url : '#' }}">
 									{{ node.title }}
 								</a>
 								<ul class="dropdown-menu">
