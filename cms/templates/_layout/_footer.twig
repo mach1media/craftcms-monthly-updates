@@ -338,7 +338,7 @@
 			<div class="col-12 col-lg-5 col-xl-6 col-xxl-5 mb-5 mb-lg-0 c-footer__cta">
 				<h2 class="c-footer__heading text-white mb-5">Get the latest from Texas Methodist Foundation</h2>
 
-                {# CAMPAIGN MONITOR SUBSCRIBE #}
+                {# CAMPAIGN MONITOR SUBSCRIBE 
 				<form class="c-footer__optin js-cm-form" 
                     method="post" 
                     id="subForm" 
@@ -355,7 +355,45 @@
                     </p>
 				</form>
                 {% js "https://js.createsend1.com/javascript/copypastesubscribeformlogic.js" %}
-			</div>
+                #}
+
+                {# FORM STACK 
+                <script type="text/javascript" id="jsFastForms" src="https://sfapi.formstack.io/FormEngine/Scripts/Main.js?d=_10amEraIQTBm7QyK70vjEHqYwWHiz0SGK2yt7UigbYAwhXY7AbcQFUgsE4NmEfS"></script>
+                
+                <div id="iFrameWrapper"><div id="ffDialog"></div><div id="ffLookupDialog"></div><iframe frameborder="0" scrolling="no" name="ffEmbedFrame" id="ffEmbedFrame"></iframe><script type="text/javascript">function FFSetIframeSize(t,e){var n=document.getElementById("ffEmbedFrame");n.height=t,n.width=e}var i=document.getElementById("ffEmbedFrame");i=i.contentWindow?i.contentWindow:i.contentDocument.document?i.contentDocument.document:i.contentDocument,i.document.open(),i.document.write('<script type="text/javascript" id="jsFastForms" src=https://sfapi.formstack.io/FormEngine/Scripts/Main.js?d=_10amEraIQTBm7QyK70vjEHqYwWHiz0SGK2yt7UigbYR2R1io9eGV1OqDElqlPai></' + 'script>'),i.document.close();</script></div>
+                #}
+				<form class="c-footer__optin js-cm-form" method="get" action="{{ url('optin') }}">
+                    <input type="hidden" id="fieldFirstName" name="Lead.FirstName" value="" />
+                    <input type="hidden" id="fieldLastName" name="Lead.LastName" value="" />
+					<p>
+                        <input aria-label="Full Name" class="form-control" id="fieldFullName" maxlength="200" name="fieldFullName" required="" type="text" placeholder="Your Full Name">
+					</p>
+					<p>
+                        <input autocomplete="Email" aria-label="Email" class="form-control" id="fieldEmail" maxlength="200" name="Lead.Email" required="" type="email" placeholder="Your Email">
+					</p>
+						
+                    <p>
+                        <button tuype="submit" class="btn btn-primary btn-arrow text-white">Subscribe</button>
+                    </p>
+				</form>
+                {% js on ready %}
+                $('#fieldFullName').on('keyup', function() {
+                    // Get the value from the full name input
+                    const fullNameValue = $(this).val().trim();
+                    
+                    // Find the first space character in the full name
+                    const firstSpaceIndex = fullNameValue.indexOf(' ');
+
+                    // Extract the first name and last name using substrings
+                    const firstNameValue = (firstSpaceIndex !== -1) ? fullNameValue.substring(0, firstSpaceIndex) : fullNameValue;
+                    const lastNameValue = (firstSpaceIndex !== -1) ? fullNameValue.substring(firstSpaceIndex + 1) : '';
+
+                    // Set the first name and last name input values
+                    $('#fieldFirstName').val(firstNameValue);
+                    $('#fieldLastName').val(lastNameValue);
+                });
+                {% endjs %}
+            </div>
 			
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 offset-xxl-1">
                 <p class="c-footer__list-heading">Learn More</p>
