@@ -338,30 +338,6 @@
 			<div class="col-12 col-lg-5 col-xl-6 col-xxl-5 mb-5 mb-lg-0 c-footer__cta">
 				<h2 class="c-footer__heading text-white mb-5">Get the latest from Texas Methodist Foundation</h2>
 
-                {# CAMPAIGN MONITOR SUBSCRIBE 
-				<form class="c-footer__optin js-cm-form" 
-                    method="post" 
-                    id="subForm" 
-                    action="https://www.createsend.com/t/subscribeerror?description=" data-id="A61C50BEC994754B1D79C5819EC1255C220F4A756820C0A9A04CE4F74E1C2820F72AFCCA27B699262F40CA1784E2C498713E55839CA30E6371FD43CE858DB5E2">
-					<p>
-                        <input aria-label="Full Name" class="form-control" id="fieldName" maxlength="200" name="cm-tljudyl-tljudyl" required="" type="text" placeholder="Your Full Name">
-					</p>
-					<p>
-                        <input autocomplete="Email" aria-label="Email" class="form-control js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-tljudyl-tljudyl" required="" type="email" placeholder="Your Email">
-					</p>
-						
-                    <p>
-                        <button tuype="submit" class="btn btn-primary btn-arrow text-white">Subscribe</button>
-                    </p>
-				</form>
-                {% js "https://js.createsend1.com/javascript/copypastesubscribeformlogic.js" %}
-                #}
-
-                {# FORM STACK 
-                <script type="text/javascript" id="jsFastForms" src="https://sfapi.formstack.io/FormEngine/Scripts/Main.js?d=_10amEraIQTBm7QyK70vjEHqYwWHiz0SGK2yt7UigbYAwhXY7AbcQFUgsE4NmEfS"></script>
-                
-                <div id="iFrameWrapper"><div id="ffDialog"></div><div id="ffLookupDialog"></div><iframe frameborder="0" scrolling="no" name="ffEmbedFrame" id="ffEmbedFrame"></iframe><script type="text/javascript">function FFSetIframeSize(t,e){var n=document.getElementById("ffEmbedFrame");n.height=t,n.width=e}var i=document.getElementById("ffEmbedFrame");i=i.contentWindow?i.contentWindow:i.contentDocument.document?i.contentDocument.document:i.contentDocument,i.document.open(),i.document.write('<script type="text/javascript" id="jsFastForms" src=https://sfapi.formstack.io/FormEngine/Scripts/Main.js?d=_10amEraIQTBm7QyK70vjEHqYwWHiz0SGK2yt7UigbYR2R1io9eGV1OqDElqlPai></' + 'script>'),i.document.close();</script></div>
-                #}
 				<form class="c-footer__optin js-cm-form" method="get" action="{{ url('optin') }}">
                     <input type="hidden" id="fieldFirstName" name="Lead.FirstName" value="" />
                     <input type="hidden" id="fieldLastName" name="Lead.LastName" value="" />
