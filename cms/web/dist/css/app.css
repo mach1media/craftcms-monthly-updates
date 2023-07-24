@@ -11055,6 +11055,27 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 	letter-spacing: .1em;
 }
 */
+.c-block b, .c-block strong {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.c-block b em, .c-block b i, .c-block strong em, .c-block strong i {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.c-block em, .c-block i {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.c-block em b, .c-block em strong, .c-block i b, .c-block i strong {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 /**
  * MAIN ELEMENT
  * ex: <main>

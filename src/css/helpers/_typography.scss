@@ -22,3 +22,20 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 	letter-spacing: .1em;
 }
 */
+
+.c-block {
+	b, strong {
+		@include base-font-bold;
+
+		em, i {
+			@include base-font-bold-italic;
+		}
+	}
+	em, i {
+		@include base-font-italic;
+		
+		b, strong {
+			@include base-font-bold-italic;
+		}
+	}
+}
