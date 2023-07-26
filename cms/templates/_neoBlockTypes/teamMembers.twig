@@ -29,13 +29,14 @@
 					{% set img = person.image.one %}
 					<div class="col-12 col-sm-6 col-md-4 col-xl-3 text-center p-5{# {% if not loop.last %} mb-5{% endif %} #}">
 						{% if img | length %}
+						{% set imgSrc = img.format != 'svg' ? img.url('square600') : img.url %}
 						<p>
 							{% if person.description != '' %}
 							<a href="#modal-{{ person.id }}" data-bs-toggle="modal" data-bs-target="#modal-{{ person.id }}">
-								<img class="img-fluid rounded-circle" src="{{ img.url('square600') }}" alt="{{ img.alt ?: img.title }}">
+								<img class="img-fluid rounded-circle" src="{{ imgSrc }}" alt="{{ img.alt ?: img.title }}">
 							</a>
 							{% else %}
-							<img class="img-fluid rounded-circle" src="{{ img.url('square600') }}" alt="{{ img.alt ?: img.title }}">
+							<img class="img-fluid rounded-circle" src="{{ imgSrc }}" alt="{{ img.alt ?: img.title }}">
 							{% endif %}
 						</p>
 						{% endif %}
@@ -64,9 +65,12 @@
 										</p>
 										<div class="row">
 											<div class="col-12 col-md-4">
+												{% if img | length %}
+												{% set imgSrc = img.format != 'svg' ? img.url('square600') : img.url %}
 												<p>
-													<img class="img-fluid rounded-circle mb-5" src="{{ img.url('square600') }}" alt="{{ img.alt ?: img.title }}">
+													<img class="img-fluid rounded-circle mb-5" src="{{ imgSrc }}" alt="{{ img.alt ?: img.title }}">
 												</p>
+												{% endif %}
 											</div>
 
 											<div class="col-12 col-md-8">

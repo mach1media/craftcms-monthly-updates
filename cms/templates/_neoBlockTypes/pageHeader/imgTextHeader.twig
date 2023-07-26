@@ -34,10 +34,10 @@
 			<div class="col-12 col-lg-6">
 				<div class="c-img-text__image end u-rounded-top-left">
 					{% if block.imageDesktop | length and block.imageMobile | length %}
-						<img class="d-md-none w-100 img-fluid" src="{{ imgMobile.url('responsiveMedium' ) }}" alt="{{ imgMobile.alt }}" />
-						<img class="d-none d-md-block w-100 img-fluid" src="{{ imgDesktop.url('responsiveMedium') }}" alt="{{ imgDesktop.alt }}" />
+						<img class="d-md-none w-100 img-fluid" src="{{ imgMobile.format != 'svg' ? imgMobile.url('responsiveMedium') : imgMobile.url }}" alt="{{ imgMobile.alt }}" />
+						<img class="d-none d-md-block w-100 img-fluid" src="{{ imgDesktop.format != 'svg' ? imgDesktop.url('responsiveMedium') : imgDesktop.url }}" alt="{{ imgDesktop.alt }}" />
 					{% elseif block.imageDesktop | length %}
-						<img class="d-block w-100 img-fluid" src="{{ imgDesktop.url('responsiveMedium') }}" alt="{{ imgDesktop.alt }}" />
+						<img class="d-block w-100 img-fluid" src="{{ imgDesktop.format != 'svg' ? imgDesktop.url('responsiveMedium') : imgDesktop.url }}" alt="{{ imgDesktop.alt }}" />
 					{% endif %}
 				</div>
 			</div>

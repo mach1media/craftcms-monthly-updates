@@ -3,13 +3,13 @@
  #}
 {% if block.imageDesktop is defined and block.imageDesktop | length %}
 	{% set imgDesktop    = block.imageDesktop.one %}
-	{% set imgDesktopSrc = imgDesktop.url('responsiveMedium') %}
+	{% set imgDesktopSrc = imgDesktop.format != 'svg' ? imgDesktop.url('responsiveMedium') : imgDesktop.url %}
 	{% set imgDesktopAlt = imgDesktop.alt ?: imgDesktop.caption %}
 {% endif %}
 
 {% if block.imageMobile is defined and block.imageMobile | length %}
 	{% set imgMobile    = block.imageMobile.one %}
-	{% set imgMobileSrc = imgMobile.url('responsiveSmall') %}
+	{% set imgMobileSrc = imgMobile.format != 'svg' ? imgMobile.url('responsiveSmall') : imgMobile.url %}
 	{% set imgMobileAlt = imgMobile.alt ?: imgMobile.caption %}
 {% endif %}
 <section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">

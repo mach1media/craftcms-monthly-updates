@@ -47,17 +47,17 @@
 						{% elseif col.type == 'columnImage' %}
 							{% if col.imageMobile | length and col.imageDesktop | length %}
 								{% set img    = col.imageMobile.one %}
-								{% set imgSrc = img.url('responsiveMedium') %}
+								{% set imgSrc = img.format != 'svg' ? img.url('responsiveMedium') : img.url %}
 								{% set imgAlt = img.alt ?: img.caption %}
 							<p class="d-lg-none"><img class="img-fluid" src="{{ imgSrc }}" alt="{{ imgAlt }}" /></p>
 								{% set img    = col.imageDesktop.one %}
-								{% set imgSrc = img.url('responsiveMedium') %}
+								{% set imgSrc = img.format != 'svg' ? img.url('responsiveMedium') : img.url %}
 								{% set imgAlt = img.alt ?: img.caption %}
 							<p class="d-none d-lg-block"><img class="img-fluid" src="{{ imgSrc }}" alt="{{ imgAlt }}" /></p>
 							
 							{% elseif col.imageDesktop | length %}
 								{% set img    = col.imageDesktop.one %}
-								{% set imgSrc = img.url('responsiveMedium') %}
+								{% set imgSrc = img.format != 'svg' ? img.url('responsiveMedium') : img.url %}
 								{% set imgAlt = img.alt ?: img.caption %}
 							<p><img class="img-fluid" src="{{ imgSrc }}" alt="{{ imgAlt }}" /></p>
 							{% endif %}

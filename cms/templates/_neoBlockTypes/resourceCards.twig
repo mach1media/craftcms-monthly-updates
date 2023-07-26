@@ -37,7 +37,7 @@
 								<div class="text-center px-4">
 									{% if resource.thumbnail | length %}
 										{% set img    = resource.thumbnail.one %}
-										{% set imgSrc = img.url('resourceCard') %}
+										{% set imgSrc = img.format != 'svg' ? img.url('resourceCard') : img.url %}
 										{% set imgAlt = img.alt ?: resource.title %}
 									{% else %}
 										{% set imgSrc = '/dist/img/placeholder-resource-' ~ cycle([1,2,3], loop.index) ~ '.jpg' %}
