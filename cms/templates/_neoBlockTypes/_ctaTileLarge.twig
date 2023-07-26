@@ -2,7 +2,7 @@
  # CTA TILE: LARGE
  #}
 {% set img          = block.image.one %}
-{% set imgSrc       = img.url('responsiveMedium') %}
+{% set imgSrc       = img.format != 'svg' ? img.url('responsiveMedium') : img.url %}
 {% set imgAlt       = img.alt %}
 <div class="col-12 col-lg-6">
 	<div class="c-tiles__tile c-tiles__tile--wide">
