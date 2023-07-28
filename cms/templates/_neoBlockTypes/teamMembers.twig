@@ -54,6 +54,12 @@
 						<h3 class="h5">{{ person.heading | raw }}</h3>
 						{% endif %}
 
+						{% if person.email is defined and person.email != '' %}
+							{% apply enkode_emails %}
+							<p><a class="btn btn-sm btn-outline-primary" href="mailto:{{ person.email }}">Contact</a></dd>
+							{% endapply %}
+						{% endif %}
+
 						{% if person.description != '' %}
 						<!-- Bio Modal: {{ person.heading }} -->
 						<div class="modal fade" id="modal-{{ person.id }}" tabindex="-1" aria-labelledby="modal-{{ person.id }}-label" aria-hidden="true">
