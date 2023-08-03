@@ -12236,6 +12236,18 @@ button > .c-icon--search {
 .c-tiles__tile--video:hover img {
   opacity: 0.75;
 }
+@media (max-width: 767.98px) {
+  .c-tiles__tile--stacked-mobile {
+    aspect-ratio: auto;
+  }
+  .c-tiles__tile--stacked-mobile .c-tiles__img-link, .c-tiles__tile--stacked-mobile .c-tiles__description {
+    position: relative;
+    top: inherit;
+    right: inherit;
+    bottom: inherit;
+    left: inherit;
+  }
+}
 .c-tiles__home .c-tiles__tile:nth-of-type(1) {
   background-color: transparent;
 }

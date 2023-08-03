@@ -5,7 +5,7 @@
 {% set imgSrc       = img.format != 'svg' ? img.url('responsiveMedium') : img.url %}
 {% set imgAlt       = img.alt %}
 <div class="col-12 col-lg-6">
-	<div class="c-tiles__tile c-tiles__tile--wide">
+	<div class="c-tiles__tile c-tiles__tile--wide{% if block.stackImageOnMobile%} c-tiles__tile--stacked-mobile{% endif %}">
 		<a class="c-tiles__img-link" href="{{ block.tileLink.getUrl() }}">
 			<img src="{{ imgSrc }}" alt="{{ imgAlt }}" />
 		</a>

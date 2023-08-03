@@ -84,6 +84,21 @@
 				}
 			}
 		}
+
+		@include modifier('stacked-mobile') {
+			@include media-breakpoint-down(md) {
+				aspect-ratio: auto;
+
+				& .c-tiles__img-link,
+				& .c-tiles__description {
+					position: relative;
+					top: inherit;
+					right: inherit;
+					bottom: inherit;
+					left: inherit;
+				}
+			}
+		}
 	}
 
 	//

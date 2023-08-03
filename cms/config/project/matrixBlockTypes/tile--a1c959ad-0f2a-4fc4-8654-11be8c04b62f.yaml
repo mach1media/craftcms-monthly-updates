@@ -19,6 +19,18 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
+            fieldUid: dba75db4-1559-48ba-b4d4-a5e5738429a4 # Stack Image on Mobile
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 606692b5-540b-4a3e-b56f-e5c5b766cfb9
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: 160cd5ce-bdfd-4507-b851-369a31a5bbb6 # Label
             instructions: null
             label: null
@@ -298,6 +310,21 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  dba75db4-1559-48ba-b4d4-a5e5738429a4: # Stack Image on Mobile
+    columnSuffix: qgprmvnp
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: stackImageOnMobile
+    instructions: null
+    name: 'Stack Image on Mobile'
+    searchable: false
+    settings:
+      default: false
+      offLabel: 'No'
+      onLabel: 'Yes'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
 handle: tile
 name: Tile
 sortOrder: 1

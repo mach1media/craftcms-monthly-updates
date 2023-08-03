@@ -1,4 +1,4 @@
-dateModified: 1689709838
+dateModified: 1691082000
 elementSources:
   craft\elements\Entry:
     -
@@ -219,6 +219,7 @@ meta:
     75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading # Heading
     91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
     92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages # Pages
+    148b8944-2e50-42a9-9275-0f8b85677134: 'Stack Image on Mobile' # Stack Image on Mobile
     160cd5ce-bdfd-4507-b851-369a31a5bbb6: Label # Label
     283a58a7-7d64-4ce3-96c6-6a2fe93bf942: 'Embed Code' # Embed Code
     403b04cf-f24a-4706-8842-0ecd144931b6: Label # Label
@@ -335,6 +336,7 @@ meta:
     d62585aa-389f-4f17-a6f8-ea404770633a: 'Preview Cards' # Preview Cards
     d1801112-12c8-4cf2-aaea-f0154e2d39a3: News # News
     da39494d-b4b7-4e57-8c52-887a18f71959: 'Resource Cards' # Resource Cards
+    dba75db4-1559-48ba-b4d4-a5e5738429a4: 'Stack Image on Mobile' # Stack Image on Mobile
     dbd3cd32-4e50-4ba5-8894-bbf8b63b3278: 'Mega Menu Fields' # Mega Menu Fields
     dc0ed69d-1dd6-496a-ab73-dea06d776bc0: Heading # Heading
     dc757580-d89c-4eb2-8e98-f03470f73495: Columns # Columns
