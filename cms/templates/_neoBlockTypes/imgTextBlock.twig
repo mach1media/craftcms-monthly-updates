@@ -40,10 +40,10 @@
 			<div class="col-12 col-lg-6{% if block.imagePositionLR == 'left' %} order-lg-1{% endif %}">
 				<div class="c-img-text__image {% if block.imagePositionLR == 'right' %}end u-rounded-top-left{% else %}start u-rounded-top-right{% endif %}">
 				{% if block.imageDesktop | length and block.imageMobile | length %}
-					<img class="d-md-none w-100 img-fluid" src="{{ imgMobile.url('responsiveMedium' ) }}" alt="{{ imgMobile.alt }}" />
-					<img class="d-none d-md-block w-100 img-fluid" src="{{ imgDesktop.url('responsiveMedium') }}" alt="{{ imgDesktop.alt }}" />
+					<img class="d-md-none w-100 img-fluid" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" />
+					<img class="d-none d-md-block w-100 img-fluid" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" />
 				{% elseif block.imageDesktop | length %}
-					<img class="d-block w-100 img-fluid" src="{{ imgDesktop.url('responsiveMedium') }}" alt="{{ imgDesktop.alt }}" />
+					<img class="d-block w-100 img-fluid" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" />
 				{% endif %}
 				</div>
 			</div>
