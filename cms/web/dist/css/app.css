@@ -12649,3 +12649,49 @@ button > .c-icon--search {
   text-transform: uppercase;
   opacity: 0.5;
 }
+
+/**
+ * LOGIN PAGE
+ */
+.c-login {
+  position: relative;
+}
+@media (min-width: 576px) {
+  .c-login {
+    height: 100vh;
+  }
+  .c-login .container-fluid, .c-login .container-sm, .c-login .container-md, .c-login .container-lg, .c-login .container-xl, .c-login .container-xxl,
+.c-login .row,
+.c-login [class*=col-] {
+    height: 100vh;
+  }
+}
+.c-login__photo {
+  background-color: #231F5B;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  overflow: hidden;
+}
+.c-login__photo img {
+  min-width: 100%;
+  width: auto;
+  height: 100%;
+}
+.c-login__content {
+  background-color: white;
+}
+.c-login__content div {
+  padding: 3rem;
+}
+@media (min-width: 576px) {
+  .c-login__content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .c-login__content div {
+    padding: 1.5rem;
+  }
+}

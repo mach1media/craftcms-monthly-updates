@@ -1,0 +1,30 @@
+<section class="c-login">
+	<div class="container-fluid gx-0">
+		<div class="row g-0">
+			<div class="col-12 col-sm-6 col-md-8 col-lg-9">
+				<div class="c-login__photo">
+					{% if entry.backgroundPhoto | length %}
+						{% set img = entry.backgroundPhoto.one %}
+						{% set imgSrc = img.format != 'svg' ? img.url('responsiveLarge') : img.url() %}
+						<img src="{{ imgSrc }}" alt="{{ img.alt ?: img.title }}">
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+				<div class="c-login__content">
+					<div>
+						{% if entry.image | length %}
+							{% set img = entry.image.one %}
+							{% set imgSrc = img.format != 'svg' ? img.url('responsiveMedium') : img.url() %}
+							<p class="text-center"><img src="{{ imgSrc }}" alt="{{ img.alt ?: img.title }}" style="max-width:50%;"><p>
+						{% endif %}
+						
+						{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
+						{% include "_pageBuilders/pageBuilderLogin" with { 'entry': entry } %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -22,7 +22,6 @@ permissions:
   - 'deleteassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'deleteassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'deleteassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
-  - 'deletecategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'deleteentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'deleteentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'deleteentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -32,7 +31,6 @@ permissions:
   - 'deletepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'deletepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'deletepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
-  - 'deletepeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'deletepeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'deletepeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'deletepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -47,7 +45,6 @@ permissions:
   - 'deletepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'deletepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - deleteusers
-  - 'editglobalset:68ecabf7-ddb5-437f-8844-30eb450a69ee' # Footer
   - 'editimages:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'editimages:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'editimages:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
@@ -122,7 +119,6 @@ permissions:
   - 'neo-createblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
   - 'neo-createblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
   - 'neo-createblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
-  - 'neo-createblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
   - 'neo-createblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
   - 'neo-deleteblocks:005b0010-da6f-4cab-a5df-5047ecc802b0' # General
   - 'neo-deleteblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3' # Video+Text Block
@@ -164,7 +160,6 @@ permissions:
   - 'neo-deleteblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
   - 'neo-deleteblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
   - 'neo-deleteblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
-  - 'neo-deleteblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
   - 'neo-deleteblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
   - 'neo-editblocks:005b0010-da6f-4cab-a5df-5047ecc802b0' # General
   - 'neo-editblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3' # Video+Text Block
@@ -206,7 +201,6 @@ permissions:
   - 'neo-editblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
   - 'neo-editblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
   - 'neo-editblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
-  - 'neo-editblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
   - 'neo-editblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
   - registerusers
   - 'replacefiles:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
@@ -218,7 +212,6 @@ permissions:
   - 'saveassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'saveassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'saveassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
-  - 'savecategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'saveentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'saveentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'saveentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -229,7 +222,6 @@ permissions:
   - 'savepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'savepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'savepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
-  - 'savepeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'savepeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'savepeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'savepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -256,7 +248,6 @@ permissions:
   - 'viewassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'viewassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'viewassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
-  - 'viewcategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'viewentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'viewentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'viewentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -267,7 +258,6 @@ permissions:
   - 'viewpeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'viewpeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'viewpeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
-  - 'viewpeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'viewpeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'viewpeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'viewpeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
