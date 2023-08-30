@@ -12681,7 +12681,7 @@ button > .c-icon--search {
 .c-login__content {
   background-color: white;
 }
-.c-login__content div {
+.c-login__content > div {
   padding: 3rem;
 }
 @media (min-width: 576px) {
@@ -12691,7 +12691,7 @@ button > .c-icon--search {
     height: 100%;
     overflow-y: auto;
   }
-  .c-login__content div {
+  .c-login__content > div {
     padding: 1.5rem;
   }
 }

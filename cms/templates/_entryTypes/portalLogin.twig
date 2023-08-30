@@ -19,6 +19,8 @@
 							{% set imgSrc = img.format != 'svg' ? img.url('responsiveMedium') : img.url() %}
 							<p class="text-center"><img src="{{ imgSrc }}" alt="{{ img.alt ?: img.title }}" style="max-width:50%;"><p>
 						{% endif %}
+
+						{% include "_fields/headingBlock" with {'heading': entry.headingBlock} %}
 						
 						{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
 						{% include "_pageBuilders/pageBuilderLogin" with { 'entry': entry } %}
