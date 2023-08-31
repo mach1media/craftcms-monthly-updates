@@ -12690,6 +12690,7 @@ button > .c-icon--search {
     align-items: center;
     height: 100%;
     overflow-y: auto;
+    transform: translate(0, -10vh);
   }
   .c-login__content > div {
     padding: 1.5rem;
