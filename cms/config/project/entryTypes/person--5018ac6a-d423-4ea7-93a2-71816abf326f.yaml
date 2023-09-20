@@ -105,10 +105,31 @@ fieldLayouts:
         name: Content
         uid: 3eb83c90-8106-4f49-9f36-999625fb38ce
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9ad8cafe-f838-425f-a1c2-2e8e1afb911c
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: a6b23cdc-897e-4137-b340-2669f321f71f
+        userCondition: null
 handle: person
 hasTitleField: true
 name: Person
 section: 61a1068b-a537-4bde-85ac-b0fe8f04946e # Team
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

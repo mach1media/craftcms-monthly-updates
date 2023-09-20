@@ -1,4 +1,4 @@
-dateModified: 1695241965
+dateModified: 1695244058
 elementSources:
   craft\elements\Entry:
     -
@@ -133,6 +133,10 @@ fs:
       path: '@webroot/uploads/videos'
     type: craft\fs\Local
     url: null
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
     0b2d797a-1a89-4e24-8ef6-9d5d39a5d548: 'Select Fields' # Select Fields
@@ -350,6 +354,7 @@ meta:
     e1cb6898-debf-4b78-bbb2-440b65278382: 'Small | Small | Large' # Small | Small | Large
     e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3: 'Resource Cards' # Resource Cards
     e8cb7b37-dddf-4600-9919-bc755b86d74e: 'Content Block' # Content Block
+    e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8: SEO # SEO
     e9d8566e-91f5-421f-a131-b9222fbc2a77: 'Grant Recipient' # Grant Recipient
     e32da315-685c-424c-8b52-95706a2d1026: 'Centered Text' # Centered Text
     e40f1bde-3da7-4a14-a813-c341a064e9a3: 'Data Table' # Data Table
@@ -645,6 +650,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: PSEDJJWTMM4WTQ2P1ZREB10A
     schemaVersion: 3.0.12
   super-table:
     edition: standard

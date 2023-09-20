@@ -85,6 +85,9 @@ handle: rateTable
 hasTitleField: true
 name: 'Rate Table'
 section: 115274b7-184f-4d2c-898d-b1f9504e6aef # Tables
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null

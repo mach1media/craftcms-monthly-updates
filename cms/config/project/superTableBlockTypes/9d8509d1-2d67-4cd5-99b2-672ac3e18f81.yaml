@@ -1,4 +1,4 @@
-changedFieldIndicator: 213711485
+changedFieldIndicator: null
 field: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
 fieldLayouts:
   a2168c7b-8bd0-41a8-9524-5452e7877464:
@@ -55,6 +55,7 @@ fields:
     name: Alignment
     searchable: true
     settings:
+      columnType: string
       options:
         -
           __assoc__:
@@ -110,6 +111,7 @@ fields:
     name: Size
     searchable: true
     settings:
+      columnType: string
       options:
         -
           __assoc__:

@@ -99,10 +99,31 @@ fieldLayouts:
         name: 'Page Builder'
         uid: 07c67ff5-b047-43ba-9eef-ea7d79d7aea1
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c86a37f-c926-4cc8-a7fb-43110cb247ea
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: d640ea12-f005-4f87-b678-bdfd6dd45dcd
+        userCondition: null
 handle: homepage
 hasTitleField: false
 name: Homepage
 section: ba00da73-87ef-49e2-b1ed-2160ae5e4857 # Homepage
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

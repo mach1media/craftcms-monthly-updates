@@ -81,6 +81,24 @@ fieldLayouts:
         name: Content
         uid: 42e191af-e101-4b12-9143-a86203e79271
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c911c59c-f908-42d7-884f-e8167bd8ae9b
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 8d5c585e-d12f-4d2f-b39a-43241441386f
+        userCondition: null
 handle: portalLogin
 hasTitleField: false
 name: 'Portal Login'

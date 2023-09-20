@@ -147,10 +147,31 @@ fieldLayouts:
         name: 'Modal Overlay'
         uid: 3f44d5da-c352-49f7-aa88-4d1a7905f29b
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f5d70121-b60b-4fe0-94da-7821d358f539
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 5410c9dc-3f9f-4073-8b64-b57d47a0773f
+        userCondition: null
 handle: grantRecipient
 hasTitleField: true
 name: 'Grant Recipient'
 section: 3dfc7896-c87e-4252-ad06-4a34e187be45 # Grant Recipients
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

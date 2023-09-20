@@ -87,10 +87,31 @@ fieldLayouts:
         name: Content
         uid: d55fd1ed-fb9d-48b1-aac6-523eb0238a57
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5f28b0a-11c5-4cc9-820b-8141ae4b231e
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: b3964abc-6684-445e-b836-8e6b3f677b18
+        userCondition: null
 handle: news
 hasTitleField: true
 name: News
 section: 72143de2-34b2-4912-87dc-02d8eb4a1a0f # News
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
