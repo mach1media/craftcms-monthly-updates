@@ -7,6 +7,7 @@
     "hybridinteractive/craft-position-fieldtype": "^4.0.0",
     "miranj/craft-obfuscator": "^1.1.1",
     "mmikkel/cp-field-inspect": "^1.4.4",
+    "nystudio107/craft-seomatic": "4.0.31",
     "sebastianlenz/linkfield": "^2.1.5",
     "spicyweb/craft-embedded-assets": "^3.1.5",
     "spicyweb/craft-neo": "^3.7.9",
@@ -42,5 +43,12 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }

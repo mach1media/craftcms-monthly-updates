@@ -1,4 +1,4 @@
-dateModified: 1693332351
+dateModified: 1695241965
 elementSources:
   craft\elements\Entry:
     -
@@ -642,6 +642,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.5
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.12
   super-table:
     edition: standard
     enabled: true
@@ -662,5 +666,5 @@ system:
   edition: pro
   live: true
   name: TMF
-  schemaVersion: 4.5.0.3
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
