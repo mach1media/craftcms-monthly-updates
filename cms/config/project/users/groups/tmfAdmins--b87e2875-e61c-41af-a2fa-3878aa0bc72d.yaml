@@ -1,4 +1,4 @@
-description: null
+description: ''
 handle: tmfAdmins
 name: 'TMF Admins'
 permissions:
@@ -6,6 +6,7 @@ permissions:
   - accesscpwhensystemisoff
   - accessplugin-formie
   - accessplugin-redirect
+  - accessplugin-seomatic
   - accesssitewhensystemisoff
   - administrateusers
   - 'assignusergroup:b87e2875-e61c-41af-a2fa-3878aa0bc72d' # TMF Admins
@@ -22,6 +23,7 @@ permissions:
   - 'deleteassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'deleteassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'deleteassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'deletecategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'deleteentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'deleteentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'deleteentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -31,6 +33,7 @@ permissions:
   - 'deletepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'deletepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'deletepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'deletepeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'deletepeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'deletepeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'deletepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -38,6 +41,7 @@ permissions:
   - 'deletepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'deletepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'deletepeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'deletepeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
   - 'deletepeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'deletepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'deletepeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
@@ -45,6 +49,7 @@ permissions:
   - 'deletepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'deletepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - deleteusers
+  - 'editglobalset:68ecabf7-ddb5-437f-8844-30eb450a69ee' # Footer
   - 'editimages:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'editimages:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'editimages:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
@@ -57,23 +62,53 @@ permissions:
   - formie-deleteforms
   - formie-editforms
   - formie-editsubmissions
+  - 'formie-manageform:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-manageform:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-manageform:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-manageform:75106dd3-8196-4032-a265-f18b3a2b7591'
   - formie-manageformappearance
+  - 'formie-manageformappearance:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-manageformappearance:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-manageformappearance:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-manageformappearance:75106dd3-8196-4032-a265-f18b3a2b7591'
   - formie-manageformbehavior
+  - 'formie-manageformbehavior:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-manageformbehavior:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-manageformbehavior:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-manageformbehavior:75106dd3-8196-4032-a265-f18b3a2b7591'
   - formie-manageformintegrations
+  - 'formie-manageformintegrations:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-manageformintegrations:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-manageformintegrations:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-manageformintegrations:75106dd3-8196-4032-a265-f18b3a2b7591'
   - formie-manageformsettings
+  - 'formie-manageformsettings:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-manageformsettings:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-manageformsettings:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-manageformsettings:75106dd3-8196-4032-a265-f18b3a2b7591'
+  - 'formie-manageformusage:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-manageformusage:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-manageformusage:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-manageformusage:75106dd3-8196-4032-a265-f18b3a2b7591'
   - formie-managenotifications
+  - 'formie-managenotifications:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-managenotifications:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-managenotifications:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-managenotifications:75106dd3-8196-4032-a265-f18b3a2b7591'
   - formie-managenotificationsadvanced
+  - 'formie-managenotificationsadvanced:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-managenotificationsadvanced:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-managenotificationsadvanced:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-managenotificationsadvanced:75106dd3-8196-4032-a265-f18b3a2b7591'
   - formie-managenotificationstemplates
+  - 'formie-managenotificationstemplates:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-managenotificationstemplates:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-managenotificationstemplates:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-managenotificationstemplates:75106dd3-8196-4032-a265-f18b3a2b7591'
+  - 'formie-managesubmission:3bd5b6eb-ba0a-40f7-a48d-3e5baa02789b'
   - 'formie-managesubmission:58ad667a-3b0d-41b3-b2b9-80231b140db1'
+  - 'formie-managesubmission:68a5cc02-9fcc-4ab2-bbf8-608f3c233f97'
+  - 'formie-managesubmission:75106dd3-8196-4032-a265-f18b3a2b7591'
   - formie-viewforms
   - formie-viewsentnotifications
   - formie-viewsubmissions
@@ -119,6 +154,8 @@ permissions:
   - 'neo-createblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
   - 'neo-createblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
   - 'neo-createblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
+  - 'neo-createblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e' # Content Block
+  - 'neo-createblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
   - 'neo-createblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
   - 'neo-deleteblocks:005b0010-da6f-4cab-a5df-5047ecc802b0' # General
   - 'neo-deleteblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3' # Video+Text Block
@@ -160,6 +197,8 @@ permissions:
   - 'neo-deleteblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
   - 'neo-deleteblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
   - 'neo-deleteblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
+  - 'neo-deleteblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e' # Content Block
+  - 'neo-deleteblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
   - 'neo-deleteblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
   - 'neo-editblocks:005b0010-da6f-4cab-a5df-5047ecc802b0' # General
   - 'neo-editblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3' # Video+Text Block
@@ -201,6 +240,8 @@ permissions:
   - 'neo-editblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
   - 'neo-editblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
   - 'neo-editblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
+  - 'neo-editblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e' # Content Block
+  - 'neo-editblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
   - 'neo-editblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
   - registerusers
   - 'replacefiles:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
@@ -212,7 +253,9 @@ permissions:
   - 'saveassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'saveassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'saveassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'savecategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'saveentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'saveentries:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
   - 'saveentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'saveentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'saveentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
@@ -222,6 +265,7 @@ permissions:
   - 'savepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'savepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'savepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'savepeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'savepeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'savepeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'savepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -229,12 +273,45 @@ permissions:
   - 'savepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'savepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'savepeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'savepeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
   - 'savepeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'savepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'savepeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'savepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'savepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'savepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
+  - 'seomatic:content-meta'
+  - 'seomatic:content-meta:facebook'
+  - 'seomatic:content-meta:general'
+  - 'seomatic:content-meta:sitemap'
+  - 'seomatic:content-meta:twitter'
+  - 'seomatic:dashboard'
+  - 'seomatic:global-meta'
+  - 'seomatic:global-meta:ads'
+  - 'seomatic:global-meta:facebook'
+  - 'seomatic:global-meta:general'
+  - 'seomatic:global-meta:humans'
+  - 'seomatic:global-meta:robots'
+  - 'seomatic:global-meta:security'
+  - 'seomatic:global-meta:twitter'
+  - 'seomatic:plugin-settings'
+  - 'seomatic:site-settings'
+  - 'seomatic:site-settings:creator'
+  - 'seomatic:site-settings:identity'
+  - 'seomatic:site-settings:miscellaneous'
+  - 'seomatic:site-settings:sitemap'
+  - 'seomatic:site-settings:social'
+  - 'seomatic:tracking-scripts'
+  - 'seomatic:tracking-scripts:facebookpixel'
+  - 'seomatic:tracking-scripts:fathom'
+  - 'seomatic:tracking-scripts:googleanalytics'
+  - 'seomatic:tracking-scripts:googletagmanager'
+  - 'seomatic:tracking-scripts:gtag'
+  - 'seomatic:tracking-scripts:hubspot'
+  - 'seomatic:tracking-scripts:linkedininsight'
+  - 'seomatic:tracking-scripts:matomo'
+  - 'seomatic:tracking-scripts:pinteresttag'
+  - 'seomatic:tracking-scripts:plausible'
   - 'utility:asset-indexes'
   - 'utility:clear-caches'
   - 'utility:db-backup'
@@ -248,7 +325,9 @@ permissions:
   - 'viewassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'viewassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'viewassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'viewcategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'viewentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'viewentries:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
   - 'viewentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'viewentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'viewentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
@@ -258,6 +337,7 @@ permissions:
   - 'viewpeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'viewpeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'viewpeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'viewpeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   - 'viewpeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'viewpeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'viewpeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
@@ -265,6 +345,7 @@ permissions:
   - 'viewpeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
   - 'viewpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'viewpeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'viewpeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
   - 'viewpeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'viewpeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'viewpeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
