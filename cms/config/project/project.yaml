@@ -1,4 +1,4 @@
-dateModified: 1695250546
+dateModified: 1695327807
 elementSources:
   craft\elements\Entry:
     -
@@ -247,6 +247,7 @@ meta:
     2160ef32-2844-4834-a6c8-c374a3efa675: 'Link Fields' # Link Fields
     02953e5d-2354-4eef-bbab-fd22e7b929c9: 'News Stories' # News Stories
     3030cab8-78a4-43c1-965d-edcb8d53848e: 'Contact Form Block' # Contact Form Block
+    4174b0ee-a490-4333-bc9f-4c13c778183f: 'Table Column Size' # Table Column Size
     4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a: 'City, State' # City, State
     5018ac6a-d423-4ea7-93a2-71816abf326f: Person # Person
     6552f23c-7f92-493a-bd10-b47693edab05: 'Column: Image' # Column: Image

@@ -1,10 +1,20 @@
 {##
  # NEO BLOCK TYPE: DATA TABLE
  #}
+{% set colContentSize = 'col-lg-6' %}
+{% set colTableSize   = 'col-lg-6' %}
+
+{% if block.tableColumnSize == 'small' %}
+	{% set colContentSize = 'col-lg-7' %}
+	{% set colTableSize   = 'col-lg-5' %}
+{% elseif block.tableColumnSize == 'large' %}
+	{% set colContentSize = 'col-lg-5' %}
+	{% set colTableSize   = 'col-lg-7' %}
+{% endif %}
 <section id="{{ sectionId }}" class="c-block c-data-table{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-12 col-lg-6 pe-lg-5 mb-5 mb-lg-0">
+			<div class="col-12 {{ colContentSize }} pe-lg-5 mb-5 mb-lg-0">
 				{% if block.preheading is defined and block.preheading != '' %}
 				<p class="u-preheading">{{ block.preheading }}</p>
 				{% endif %}
@@ -22,7 +32,7 @@
 				{% include "_fields/buttons" with {'buttons': block.buttons} %}
 			</div>
 			
-			<div class="col-12 col-lg-6 ps-lg-5">
+			<div class="col-12 {{ colTableSize }} ps-lg-5">
 				{% for table in block.dataTables.all() %}
 					
 					{##
