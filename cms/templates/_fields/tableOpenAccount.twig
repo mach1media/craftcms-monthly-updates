@@ -1,15 +1,15 @@
 <table class="table table-sm text-primary">
 	<thead>
 		<tr class="align-bottom">
-			<th class="text-left p-md-3 p-lg-4" align="left">
+			<th class="text-left p-md-3 p-lg-4" align="left" width="33%">
 				Impact Notes<br />
 				Church or Agency
 			</th>
-			<th class="text-left p-md-3 p-lg-4" align="left">
+			<th class="text-left p-md-3 p-lg-4" align="left" width="33%">
 				Equity & Bond Investing<br />
 				for Nonprofits
 			</th>
-			<th class="text-left p-md-3 p-lg-4" align="left">
+			<th class="text-left p-md-3 p-lg-4" align="left" width="33%">
 				Impact Notes<br />
 				for Individuals
 			</th>
@@ -19,9 +19,9 @@
 	<tbody>
 		{% for row in table.all() %}
 			<tr>
-				<th class="text-left p-md-3 p-lg-4" align="left">{{ row.churchOrAgency }}</th>
-				<th class="text-left p-md-3 p-lg-4" align="left">{{ row.nonprofits }}</th>
-				<th class="text-left p-md-3 p-lg-4" align="left">{{ row.individuals }}</th>
+				<td class="text-left pe-3 p-md-3 p-lg-4" align="left">{{ row.churchOrAgency }}</td>
+				<td class="text-left px-3 p-md-3 p-lg-4" align="left">{{ row.nonprofits }}</td>
+				<td class="text-left ps-3 p-md-3 p-lg-4" align="left">{{ row.individuals }}</td>
 			</tr>
 		{% endfor %}
 	</tbody>

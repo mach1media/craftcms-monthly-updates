@@ -6,108 +6,148 @@
 		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
 			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
 				{% for table in block.dataTables.all() %}
-					{% if table.heading != '' or table.subheading != '' %}
-					<p class="h4 mb-3">
-						{{ table.heading | raw }}
-						{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
-					</p>
-					{% endif %}
 
 					{% if table.type == 'rateTable' %}
-					<div class="border border-secondary rounded p-3 mb-5">
-						<div class="table-responsive">
-							<table class="table table-sm text-primary">
-								<thead>
-									<tr class="align-bottom">
+						{% if table.heading != '' or table.subheading != '' %}
+						<p class="h4 mb-3">
+							{{ table.heading | raw }}
+							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+						</p>
+						{% endif %}
+						<div class="border border-secondary rounded p-3 mb-5">
+							<div class="table-responsive">
+								<table class="table table-sm text-primary">
+									<thead>
+										<tr class="align-bottom">
+											{% for row in table.rateTable %}
+												{% if loop.first %}
+												<th>{{ row.heading }}</th>
+												<th class="text-left" align="left" width="">{{ row.yr1 | raw }}</th>
+												<th class="text-left" align="left" width="">{{ row.yr2 | raw }}</th>
+												<th class="text-left" align="left" width="">{{ row.yr3 | raw }}</th>
+												<th class="text-left" align="left" width="">{{ row.yr4 | raw }}</th>
+												<th class="text-left" align="left" width="">{{ row.yr5 | raw }}</th>
+												{% endif %}
+											{% endfor %}
+										</tr>
+									</thead>
+							
+									<tbody>
 										{% for row in table.rateTable %}
-											{% if loop.first %}
-											<th>{{ row.heading }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr1 | raw }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr2 | raw }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr3 | raw }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr4 | raw }}</th>
-											<th class="text-left" align="left" width="">{{ row.yr5 | raw }}</th>
+											{% if not loop.first %}
+											<tr>
+												<th align="left">{{ row.heading }}</th>
+												<td align="left">{{ row.yr1 | raw }}</td>
+												<td align="left">{{ row.yr2 | raw }}</td>
+												<td align="left">{{ row.yr3 | raw }}</td>
+												<td align="left">{{ row.yr4 | raw }}</td>
+												<td align="left">{{ row.yr5 | raw }}</td>
+											</tr>
 											{% endif %}
 										{% endfor %}
-									</tr>
-								</thead>
-						
-								<tbody>
-									{% for row in table.rateTable %}
-										{% if not loop.first %}
-										<tr>
-											<th align="left">{{ row.heading }}</th>
-											<td align="left">{{ row.yr1 | raw }}</td>
-											<td align="left">{{ row.yr2 | raw }}</td>
-											<td align="left">{{ row.yr3 | raw }}</td>
-											<td align="left">{{ row.yr4 | raw }}</td>
-											<td align="left">{{ row.yr5 | raw }}</td>
-										</tr>
-										{% endif %}
-									{% endfor %}
-								</tbody>
-							</table>
+									</tbody>
+								</table>
+							</div>
 						</div>
-					</div>
 
 					{% elseif table.type == 'customTable' %}
-					<div class="border border-secondary rounded p-3 mb-3">
-						<div class="table-responsive">
-							<table class="table table-sm text-primary">
-								<thead>
-									<tr class="align-bottom">
-										{% for col in table.customTable.columns %}
-											<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
-										{% endfor %}
-									</tr>
-								</thead>
-						
-								<tbody>
-									{% for row in table.customTable.rows %}
-										<tr>
-											{% for cell in row %}
-												{% if loop.first %}
-												<th align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</th>
-												{% else %}
-												<td align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</td>
-												{% endif %}
+						{% if table.heading != '' or table.subheading != '' %}
+						<p class="h4 mb-3">
+							{{ table.heading | raw }}
+							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+						</p>
+						{% endif %}
+						<div class="border border-secondary rounded p-3 mb-3">
+							<div class="table-responsive">
+								<table class="table table-sm text-primary">
+									<thead>
+										<tr class="align-bottom">
+											{% for col in table.customTable.columns %}
+												<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
 											{% endfor %}
 										</tr>
-									{% endfor %}
-								</tbody>
-							</table>
+									</thead>
+							
+									<tbody>
+										{% for row in table.customTable.rows %}
+											<tr>
+												{% for cell in row %}
+													{% if loop.first %}
+													<th align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</th>
+													{% else %}
+													<td align="{{ table.customTable.columns[loop.index0].align }}">{{ cell | raw }}</td>
+													{% endif %}
+												{% endfor %}
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
 						</div>
-					</div>
 
 					{% elseif table.type == 'preDefinedTable' %}
-					{% set tableEntry = table.table.one %}
-					<div class="border border-secondary rounded p-3 mb-3">
-						<div class="table-responsive">
-							<table class="table table-sm text-primary">
-								<thead>
-									<tr class="align-bottom">
-										{% for col in tableEntry.dataTable.columns %}
-											<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
-										{% endfor %}
-									</tr>
-								</thead>
-						
-								<tbody>
-									{% for row in tableEntry.dataTable.rows %}
-										<tr>
-											{% for cell in row %}
-												{% if loop.first %}
-												<th align="{{ tableEntry.dataTable.columns[loop.index0].align }}">{{ cell | raw }}</th>
-												{% else %}
-												<td align="{{ tableEntry.dataTable.columns[loop.index0].align }}">{{ cell | raw }}</td>
-												{% endif %}
+						{#
+						{% set tableEntry = table.table.one %}
+						<div class="border border-secondary rounded p-3 mb-3">
+							<div class="table-responsive">
+								<table class="table table-sm text-primary">
+									<thead>
+										<tr class="align-bottom">
+											{% for col in tableEntry.dataTable.columns %}
+												<th class="text-{{ col.align }}" align="{{ col.align }}" width="{{ col.width }}">{{ col.heading | raw }}</th>
 											{% endfor %}
 										</tr>
-									{% endfor %}
-								</tbody>
-							</table>
+									</thead>
+							
+									<tbody>
+										{% for row in tableEntry.dataTable.rows %}
+											<tr>
+												{% for cell in row %}
+													{% if loop.first %}
+													<th align="{{ tableEntry.dataTable.columns[loop.index0].align }}">{{ cell | raw }}</th>
+													{% else %}
+													<td align="{{ tableEntry.dataTable.columns[loop.index0].align }}">{{ cell | raw }}</td>
+													{% endif %}
+												{% endfor %}
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
 						</div>
-					</div>
+						#}
+						{% set entry = table.table.one %}
+						
+						{% if table.heading != '' or table.subheading != '' %}
+						<p class="h4 mb-3">
+							{{ table.heading | raw }}
+							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+						</p>
+						{% elseif entry.heading != '' or entry.citation != '' %}
+						<p class="h4 mb-3">
+							{{ entry.heading | raw }}
+							{% if entry.citation != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ entry.citation | raw }}</span>{% endif %}
+						</p>
+						{% endif %}
+
+						<div class="border border-secondary rounded p-3 mb-3">
+							<div class="table-responsive">
+								{% set entry = table.table.one %}
+								{% if entry.type == 'dataTable' %}
+									{% include "_fields/tableCustom" with {'table':entry.dataTable } %}
+								{% elseif entry.type == 'rateTable' %}
+									{% include "_fields/tableRate" with {'table':entry.rateTable } %}
+								{% elseif entry.type == 'openAnAccount' %}
+									{% include "_fields/tableOpenAccount" with {'table':entry.openAnAccountTable } %}
+								{% endif %}
+							</div>
+						</div>
+
+						{% if table.tableFooter != '' %}
+						<small>{{ table.tableFooter }}</small>
+						{% elseif entry.description != '' %}
+						<small>{{ entry.description }}</small>
+						{% endif %}
 					{% endif %}
 
 					{% if table.tableFooter != '' %}
