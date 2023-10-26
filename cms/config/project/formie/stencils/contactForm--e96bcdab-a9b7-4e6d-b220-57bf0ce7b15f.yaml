@@ -172,6 +172,7 @@ data:
     limitSubmissionsType: null
     loadingIndicator: spinner
     loadingIndicatorText: null
+    pageRedirectUrl: null
     progressPosition: end
     redirectUrl: null
     requireUser: false
