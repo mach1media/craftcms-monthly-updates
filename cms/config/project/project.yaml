@@ -1,4 +1,4 @@
-dateModified: 1698344960
+dateModified: 1698345455
 elementSources:
   craft\elements\Entry:
     -
@@ -144,6 +144,7 @@ meta:
     0d19f0b1-727c-4654-9f11-09b986093f3d: 'CTA Link' # CTA Link
     0d346e5c-0f60-4911-9492-f7c3c2b17328: Label # Label
     0e20b322-d191-4a5f-b3df-37ba66888043: 'Social Icons' # Social Icons
+    0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34: 'Open An Account Table' # Open An Account Table
     1a5ffd72-f05f-45ec-8db3-0930c72fe38e: 'Portal Login' # Portal Login
     1a59398d-6900-4df1-a904-341d0b1c005c: 'CTA Tiles' # CTA Tiles
     1f41377c-9452-4c44-85f2-23bcfbec5b44: 'Button Label' # Button Label
@@ -211,6 +212,7 @@ meta:
     31f2b911-731f-42b5-84c6-4b2777260f2f: 'Section Heading' # Section Heading
     38b1109c-b2b4-4a24-8273-95f4885fdbbe: 'Label: Custom' # Label: Custom
     38f59447-9f79-465c-96fc-aba9497a5d04: 'Large | Small | Small' # Large | Small | Small
+    39b454aa-6c69-4f49-b375-8bf7b6f4ce23: Nonprofits # Nonprofits
     040d7db9-375b-4b41-989d-2e38c47b90f6: 'Padding: Bottom' # Padding: Bottom
     40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link # Link
     41d75776-461e-4d36-8d1b-3d3935125b2d: 'Preview Card' # Preview Card
@@ -249,6 +251,7 @@ meta:
     3030cab8-78a4-43c1-965d-edcb8d53848e: 'Contact Form Block' # Contact Form Block
     4174b0ee-a490-4333-bc9f-4c13c778183f: 'Table Column Size' # Table Column Size
     4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a: 'City, State' # City, State
+    4644c2f1-7e88-4496-ab19-060eb4b86feb: 'Open An Account' # Open An Account
     5018ac6a-d423-4ea7-93a2-71816abf326f: Person # Person
     6552f23c-7f92-493a-bd10-b47693edab05: 'Column: Image' # Column: Image
     7122cd83-09df-457d-8ea8-284328ec238f: label # label
@@ -300,6 +303,7 @@ meta:
     aec4cf66-3af8-44c6-ba81-0ebbf0e6c837: Homepage # Homepage
     aec4351f-8a70-4278-9846-54ad19f795fc: 'Icon: Custom' # Icon: Custom
     aed0fd2d-f074-485f-b1f7-4c8ef97e91cc: Arrow # Arrow
+    af55010a-5968-4c25-91f8-dffbcb72d4db: Individuals # Individuals
     afb8f81e-7598-4dbb-8559-8aef5c3c42e6: 'Team Members' # Team Members
     b00ccfa2-369c-471f-ae02-ae5ed2a9bae6: Thumbnail # Thumbnail
     b070c34a-c1d0-4e63-ad06-862e534e4843: 'Square: 600' # Square: 600
@@ -348,6 +352,7 @@ meta:
     dbd3cd32-4e50-4ba5-8894-bbf8b63b3278: 'Mega Menu Fields' # Mega Menu Fields
     dc0ed69d-1dd6-496a-ab73-dea06d776bc0: Heading # Heading
     dc757580-d89c-4eb2-8e98-f03470f73495: Columns # Columns
+    dcce62b3-2650-4939-a381-0fcc22c0d942: 'Church or Agency' # Church or Agency
     dd3266ad-0d93-46fc-89f3-e57ebce2178c: Videos # Videos
     dd9615db-bd5d-4050-9139-1b6174979ce8: Phone # Phone
     dfbc0047-f74f-4940-baf3-7f9402fc918e: 'Background Color' # Background Color

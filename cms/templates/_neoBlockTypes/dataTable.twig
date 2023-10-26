@@ -60,6 +60,8 @@
 									{% include "_fields/tableCustom" with {'table':entry.dataTable } %}
 								{% elseif entry.type == 'rateTable' %}
 									{% include "_fields/tableRate" with {'table':entry.rateTable } %}
+								{% elseif entry.type == 'openAnAccount' %}
+									{% include "_fields/tableOpenAccount" with {'table':entry.openAnAccountTable } %}
 								{% endif %}
 							</div>
 						</div>

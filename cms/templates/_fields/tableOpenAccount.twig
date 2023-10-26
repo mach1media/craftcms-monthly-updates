@@ -1,0 +1,28 @@
+<table class="table table-sm text-primary">
+	<thead>
+		<tr class="align-bottom">
+			<th class="text-left p-md-3 p-lg-4" align="left">
+				Impact Notes<br />
+				Church or Agency
+			</th>
+			<th class="text-left p-md-3 p-lg-4" align="left">
+				Equity & Bond Investing<br />
+				for Nonprofits
+			</th>
+			<th class="text-left p-md-3 p-lg-4" align="left">
+				Impact Notes<br />
+				for Individuals
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		{% for row in table.all() %}
+			<tr>
+				<th class="text-left p-md-3 p-lg-4" align="left">{{ row.churchOrAgency }}</th>
+				<th class="text-left p-md-3 p-lg-4" align="left">{{ row.nonprofits }}</th>
+				<th class="text-left p-md-3 p-lg-4" align="left">{{ row.individuals }}</th>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
