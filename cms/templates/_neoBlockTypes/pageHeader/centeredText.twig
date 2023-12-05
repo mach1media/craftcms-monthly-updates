@@ -9,7 +9,9 @@
 					{% for ancestor in entry.ancestors %}
 						<a href="{{ ancestor.url }}">{{ ancestor.title }}</a>
 					{% endfor %}
-					{{ entry.title }}
+					{% if entry.showEntryTitle %}
+						{{ entry.title }}
+					{% endif %}
 				</p>
 				
 				<h1>{{ block.heading != '' ? block.heading : entry.title }}</h1>

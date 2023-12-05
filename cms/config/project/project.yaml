@@ -1,4 +1,4 @@
-dateModified: 1701725501
+dateModified: 1701801262
 elementSources:
   craft\elements\Entry:
     -
@@ -283,6 +283,7 @@ meta:
     37449807-b7fe-4e44-bc5d-f3469359b775: Heading # Heading
     54458965-37a8-4b1e-839f-f19934f7a8e3: 'Img+Text Block' # Img+Text Block
     56133272-2baa-403c-9702-0c006d9c3676: 'Accordion Items' # Accordion Items
+    89795803-5837-4d6f-855d-1ae3c3980e55: 'Show Entry Title' # Show Entry Title
     a1c959ad-0f2a-4fc4-8654-11be8c04b62f: Tile # Tile
     a6fd1543-ece4-4710-ad3b-195db37614a1: CTA # CTA
     a9e9ac13-8b36-4627-b8f4-43f5e99aede5: 'Responsive: Large' # Responsive: Large

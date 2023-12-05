@@ -29,7 +29,28 @@ fieldLayouts:
             uid: 0663fa6e-673e-41bc-9e6c-fa6c6d389cda
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\EmptyFieldConditionRule
+                  fieldUid: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
+                  operator: notempty
+                  uid: ce2a30e5-b6d9-4ad0-bedb-79366af5f2bb
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 89795803-5837-4d6f-855d-1ae3c3980e55 # Show Entry Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 53db6c21-6029-4bcd-9f4d-f2c0452b9d73
+            userCondition: null
+            warning: null
+            width: 25
           -
             elementCondition: null
             fieldUid: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
