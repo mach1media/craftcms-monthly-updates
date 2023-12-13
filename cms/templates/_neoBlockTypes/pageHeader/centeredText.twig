@@ -14,8 +14,12 @@
 					{% endif %}
 				</p>
 				
-				<h1>{{ block.heading != '' ? block.heading : entry.title }}</h1>
-				
+				{% if block.heading != '' %}
+					<h1>{{ block.heading | raw }}</h1>
+				{% elseif entry.showEntryTitle == 1 %}
+					<h1>{{ entry.title }}</h1>
+				{% endif %}
+
 				{% if block.description is defined and block.description != '' %}
 				<div class="c-wysiwyg">
 					{% apply enkode_emails %}
