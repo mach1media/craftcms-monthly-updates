@@ -99,11 +99,11 @@
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/67a77972b9f398ae7068dabacc39c08aeee170d5",
-                "reference": "67a77972b9f398ae7068dabacc39c08aeee170d5",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/99f76ffa36cce3b70a4a6abce41dba15ca2e84cb",
+                "reference": "99f76ffa36cce3b70a4a6abce41dba15ca2e84cb",
                 "shasum": ""
             },
             "require": {
@@ -135,7 +135,7 @@
                 "doctrine",
                 "time"
             ],
-            "time": "2023-10-01T14:29:01+00:00"
+            "time": "2023-12-11T17:09:12+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -321,11 +321,11 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.6.5",
+            "version": "2.6.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/4b0fe89db9e65b1e64df633a992e70a7a215ab33",
-                "reference": "4b0fe89db9e65b1e64df633a992e70a7a215ab33",
+                "url": "https://api.github.com/repos/composer/composer/zipball/683557bd2466072777309d039534bb1332d0dda5",
+                "reference": "683557bd2466072777309d039534bb1332d0dda5",
                 "shasum": ""
             },
             "require": {
@@ -343,7 +343,7 @@
                 "seld/jsonlint": "^1.4",
                 "seld/phar-utils": "^1.2",
                 "seld/signal-handler": "^2.0",
-                "symfony/console": "^5.4.11 || ^6.0.11 || ^7",
+                "symfony/console": "^5.4.11 || ^6.0.11",
                 "symfony/filesystem": "^5.4 || ^6.0 || ^7",
                 "symfony/finder": "^5.4 || ^6.0 || ^7",
                 "symfony/polyfill-php73": "^1.24",
@@ -397,7 +397,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2023-10-06T08:11:52+00:00"
+            "time": "2023-12-08T17:32:26+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -622,11 +622,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.5.11.1",
+            "version": "4.5.12",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/99a8f9a688483d38bdb8cefbf39ad43a5e7b7b82",
-                "reference": "99a8f9a688483d38bdb8cefbf39ad43a5e7b7b82",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d7ac8a6d9bac3a1adc2c538af17d9489f899c19e",
+                "reference": "d7ac8a6d9bac3a1adc2c538af17d9489f899c19e",
                 "shasum": ""
             },
             "require": {
@@ -714,7 +714,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2023-11-24T05:57:24+00:00"
+            "time": "2023-12-12T17:06:10+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -1250,11 +1250,11 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/e8d2d5e37e8b0b30f0732a011295ab80680d7e85",
-                "reference": "e8d2d5e37e8b0b30f0732a011295ab80680d7e85",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/093f2d9739cec57428e39ddadedfd4f3ae862c0f",
+                "reference": "093f2d9739cec57428e39ddadedfd4f3ae862c0f",
                 "shasum": ""
             },
             "require": {
@@ -1291,7 +1291,7 @@
             ],
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
-            "time": "2023-02-07T12:51:48+00:00"
+            "time": "2023-12-12T20:19:39+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -3086,11 +3086,11 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.72.0",
+            "version": "2.72.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/a6885fcbad2ec4360b0e200ee0da7d9b7c90786b",
-                "reference": "a6885fcbad2ec4360b0e200ee0da7d9b7c90786b",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/2b3b3db0a2d0556a177392ff1a3bf5608fa09f78",
+                "reference": "2b3b3db0a2d0556a177392ff1a3bf5608fa09f78",
                 "shasum": ""
             },
             "require": {
@@ -3151,15 +3151,15 @@
                 "datetime",
                 "time"
             ],
-            "time": "2023-11-28T10:13:25+00:00"
+            "time": "2023-12-08T23:47:49+00:00"
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.15",
+            "version": "1.0.16",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/80d4db7514a1f74e93200cb49e52e8c3731b5a12",
-                "reference": "80d4db7514a1f74e93200cb49e52e8c3731b5a12",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/ea5d1866d891a09f1c2e5a482d47e555bdf34392",
+                "reference": "ea5d1866d891a09f1c2e5a482d47e555bdf34392",
                 "shasum": ""
             },
             "require": {
@@ -3196,7 +3196,7 @@
                 "markdown",
                 "twig"
             ],
-            "time": "2023-11-30T19:22:16+00:00"
+            "time": "2023-12-08T14:39:29+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
@@ -3239,11 +3239,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.36",
+            "version": "4.0.37",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/3785d2cb9c28f1280c4ca65c6a576695b9d7eedf",
-                "reference": "3785d2cb9c28f1280c4ca65c6a576695b9d7eedf",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/524c5fe79fe238c124f1d5cb621bd615ebe1a821",
+                "reference": "524c5fe79fe238c124f1d5cb621bd615ebe1a821",
                 "shasum": ""
             },
             "require": {
@@ -3295,7 +3295,7 @@
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
                 "source": "https://github.com/nystudio107/craft-seomatic"
             },
-            "time": "2023-11-28T15:01:38+00:00"
+            "time": "2023-12-12T20:04:54+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3365,11 +3365,11 @@
         },
         {
             "name": "phenx/php-svg-lib",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/76876c6cf3080bcb6f249d7d59705108166a6685",
-                "reference": "76876c6cf3080bcb6f249d7d59705108166a6685",
+                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/8a8a1ebcf6aea861ef30197999f096f7bd4b4456",
+                "reference": "8a8a1ebcf6aea861ef30197999f096f7bd4b4456",
                 "shasum": ""
             },
             "require": {
@@ -3394,7 +3394,7 @@
             ],
             "description": "A library to read, parse and export to PDF SVG files.",
             "homepage": "https://github.com/PhenX/php-svg-lib",
-            "time": "2022-09-06T12:16:56+00:00"
+            "time": "2023-12-11T20:56:08+00:00"
         },
         {
             "name": "php-science/textrank",
@@ -4453,11 +4453,11 @@
         },
         {
             "name": "spicyweb/craft-embedded-assets",
-            "version": "3.1.9",
+            "version": "3.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/3edaa3796db6ce140765f2bc016d71897540df11",
-                "reference": "3edaa3796db6ce140765f2bc016d71897540df11",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/04618db82e23ddaffab6be874fe2c50f1be626a6",
+                "reference": "04618db82e23ddaffab6be874fe2c50f1be626a6",
                 "shasum": ""
             },
             "require": {
@@ -4472,7 +4472,7 @@
                 "schemaVersion": "1.0.0",
                 "class": "spicyweb\\embeddedassets\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-embedded-assets/blob/3.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/3.1.9.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/3.2.0.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -4503,18 +4503,18 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-embedded-assets/issues",
                 "source": "https://github.com/spicywebau/craft-embedded-assets",
-                "docs": "https://github.com/spicywebau/craft-embedded-assets/blob/3.1.9/README.md",
+                "docs": "https://github.com/spicywebau/craft-embedded-assets/blob/3.2.0/README.md",
                 "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/3.x.atom"
             },
-            "time": "2023-11-24T05:03:24+00:00"
+            "time": "2023-12-06T06:51:22+00:00"
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "3.9.10",
+            "version": "3.9.11",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/9faf98cc1e26dd90f2076d9f8bd56998d62377d9",
-                "reference": "9faf98cc1e26dd90f2076d9f8bd56998d62377d9",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/23e090bcc0e177976f3a78cabf7e0236db72e71d",
+                "reference": "23e090bcc0e177976f3a78cabf7e0236db72e71d",
                 "shasum": ""
             },
             "require": {
@@ -4528,7 +4528,7 @@
                 "schemaVersion": "3.6.2",
                 "class": "benf\\neo\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-neo/blob/3.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/3.9.10.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/3.9.11.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -4556,10 +4556,10 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-neo/issues",
                 "source": "https://github.com/spicywebau/craft-neo",
-                "docs": "https://github.com/spicywebau/craft-neo/blob/3.9.10/README.md",
+                "docs": "https://github.com/spicywebau/craft-neo/blob/3.9.11/README.md",
                 "rss": "https://github.com/spicywebau/craft-neo/commits/3.x.atom"
             },
-            "time": "2023-12-03T12:31:08+00:00"
+            "time": "2023-12-08T11:21:26+00:00"
         },
         {
             "name": "statikbe/craft-config-values",
@@ -6636,11 +6636,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "2.0.43",
+            "version": "2.0.44.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/82d33aef88b0048d6f30268fbb02eccf81110ece",
-                "reference": "82d33aef88b0048d6f30268fbb02eccf81110ece",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/42542dce0f9d41d435fe9937ad0df47d26a6afe0",
+                "reference": "42542dce0f9d41d435fe9937ad0df47d26a6afe0",
                 "shasum": ""
             },
             "require": {
@@ -6701,7 +6701,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2023-11-25T23:46:43+00:00"
+            "time": "2023-12-12T11:11:57+00:00"
         },
         {
             "name": "verbb/redactor-tweaks",
@@ -7722,11 +7722,11 @@
     "packages-dev": [
         {
             "name": "nikic/php-parser",
-            "version": "v4.17.1",
+            "version": "v4.18.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/a6303e50c90c355c7eeee2c4a8b27fe8dc8fef1d",
-                "reference": "a6303e50c90c355c7eeee2c4a8b27fe8dc8fef1d",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1bcbb2179f97633e98bbbc87044ee2611c7d7999",
+                "reference": "1bcbb2179f97633e98bbbc87044ee2611c7d7999",
                 "shasum": ""
             },
             "require": {
@@ -7760,7 +7760,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2023-08-13T19:53:39+00:00"
+            "time": "2023-12-10T21:03:43+00:00"
         },
         {
             "name": "psy/psysh",
