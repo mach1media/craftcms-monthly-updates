@@ -7,25 +7,25 @@ name: 'Section Heading'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 526585151
+  changedFieldIndicator: 985898365
   columns:
     __assoc__:
       -
-        - 9c2d33eb-b66e-43e7-b816-966b095202c7
+        - d33d4fab-55e7-446f-8972-f4676b5ee14a # Heading
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 65830728-ab4e-4ef0-be29-b9504de1374e
+        - fae55152-701b-4c22-9f50-453a213e9e05 # Size
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - ff1ee645-3ae0-4813-b147-3cf692c60272
+        - 853a2eb8-d408-4486-afc1-8e24fd201174 # Alignment
         -
           __assoc__:
             -

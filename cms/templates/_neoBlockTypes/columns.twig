@@ -4,7 +4,7 @@
 {% set totalColumns = block.children | length %}
 {# {% set columnsClass = totalColumns < 4 ? 12 / totalColumns : '6' %} #}
 {% set columnsClass = 12 / totalColumns %}
-<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+<section id="{{ sectionId }}" class="c-block {{ block.textColor }}{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		{% include "_fields/headingBlock" with {'heading': block.headingBlock, 'class': 'mb-4'} %}
 		
@@ -21,15 +21,15 @@
 						<!-- {{ col.type }} -->
 						{% if col.type == 'columnText' %}
 							{% if col.preheading is defined and col.preheading != '' %}
-							<p class="u-preheading mb-0">{{ col.preheading }}</p>
+							<p class="u-preheading {{ col.textColor }} mb-0">{{ col.preheading }}</p>
 							{% endif %}
 							
 							{% if col.heading != '' %}
-							<h3>{{ col.heading | raw }}</h3>
+							<h3 class="{{ col.textColor }}">{{ col.heading | raw }}</h3>
 							{% endif %}
 							
 							{% if col.description is defined and col.description != '' %}
-							<div class="c-wysiwyg{% if col.button | length %} mb-4{% endif %}">
+							<div class="c-wysiwyg {{ col.textColor }}{% if col.button | length %} mb-4{% endif %}">
 								{% apply enkode_emails %}
 									{{ col.description }}
 								{% endapply %}

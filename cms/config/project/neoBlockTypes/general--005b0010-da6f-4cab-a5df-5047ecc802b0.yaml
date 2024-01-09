@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
-  65b23fd9-7a39-4603-aa7f-21f75acc3dcd:
+  ae502cc1-372c-4b17-9f33-c27f2d3e11eb:
     tabs:
       -
         elementCondition: null
@@ -74,7 +74,7 @@ fieldLayouts:
             uid: 668a4d71-ab6f-4020-903f-67aac11bad79
             userCondition: null
             warning: null
-            width: 100
+            width: 25
           -
             elementCondition: null
             fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
@@ -86,7 +86,19 @@ fieldLayouts:
             uid: 400a4dab-53c0-490d-9dd5-d34ddfc225c5
             userCondition: null
             warning: null
-            width: 100
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e27aaa39-b6c4-4a80-aded-5bd6892c4ee6
+            userCondition: null
+            warning: null
+            width: 25
         name: 'Section Settings'
         uid: f6d0c382-470c-418a-b25d-9a39b30e2f47
         userCondition: null

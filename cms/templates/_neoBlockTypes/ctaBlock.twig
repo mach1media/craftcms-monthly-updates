@@ -4,7 +4,7 @@
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 text-{{ block.textAlignment }}">
+			<div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 text-{{ block.textAlignment }} {{ block.textColor }}">
 				{% if block.preheading is defined and block.preheading != '' %}
 				<p class="u-preheading">{{ block.preheading }}</p>
 				{% endif %}

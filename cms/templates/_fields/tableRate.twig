@@ -1,4 +1,4 @@
-<table class="table table-sm text-primary">
+<table class="table table-sm {{ textColor is defined ? textColor : 'text-primary' }}">
 	<thead>
 		<tr class="align-bottom">
 			{% for row in table %}

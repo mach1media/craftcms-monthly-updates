@@ -9,7 +9,7 @@
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
-			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-8{% endif %} text-{{ block.textAlignment}}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-md-10 col-lg-8{% endif %} {{ block.textColor }} text-{{ block.textAlignment}}">
 				{% if block.preheading is defined and block.preheading != '' %}
 				<p class="u-preheading">{{ block.preheading }}</p>
 				{% endif %}
@@ -80,13 +80,13 @@
 											</div>
 
 											<div class="col-12 col-md-8">
-												<div class="ps-md-5 text-start">
+												<div class="ps-md-5 text-start {{ person.textColor }}">
 													{% if person.preheading is defined and person.preheading != '' %}
 														<p class="u-preheading mb-0">{{ person.preheading }}</p>
 													{% endif %}
 													
 													{% if person.heading != '' %}
-													<h3 class="h5">{{ person.heading | raw }}</h3>
+													<h3 class="h5 {{ person.textColor }}">{{ person.heading | raw }}</h3>
 													{% endif %}
 
 													{% apply enkode_emails %}

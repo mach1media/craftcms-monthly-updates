@@ -4,7 +4,7 @@
 <section id="{{ sectionId }}" class="c-block c-data-table{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
-			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
+			<div class="col-12 {{ block.textColor }}{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
 				{% for table in block.dataTables.all() %}
 
 					{% if table.type == 'rateTable' %}
@@ -16,7 +16,7 @@
 						{% endif %}
 						<div class="border border-secondary rounded p-3 mb-5">
 							<div class="table-responsive">
-								<table class="table table-sm text-primary">
+								<table class="table table-sm {{ block.textColor }}">
 									<thead>
 										<tr class="align-bottom">
 											{% for row in table.rateTable %}
@@ -59,7 +59,7 @@
 						{% endif %}
 						<div class="border border-secondary rounded p-3 mb-3">
 							<div class="table-responsive">
-								<table class="table table-sm text-primary">
+								<table class="table table-sm {{ block.textColor }}">
 									<thead>
 										<tr class="align-bottom">
 											{% for col in table.customTable.columns %}
@@ -134,11 +134,11 @@
 							<div class="table-responsive">
 								{% set entry = table.table.one %}
 								{% if entry.type == 'dataTable' %}
-									{% include "_fields/tableCustom" with {'table':entry.dataTable } %}
+									{% include "_fields/tableCustom" with {'table':entry.dataTable, 'textColor': block.textColor } %}
 								{% elseif entry.type == 'rateTable' %}
-									{% include "_fields/tableRate" with {'table':entry.rateTable } %}
+									{% include "_fields/tableRate" with {'table':entry.rateTable, 'textColor': block.textColor } %}
 								{% elseif entry.type == 'openAnAccount' %}
-									{% include "_fields/tableOpenAccount" with {'table':entry.openAnAccountTable } %}
+									{% include "_fields/tableOpenAccount" with {'table':entry.openAnAccountTable, 'textColor': block.textColor } %}
 								{% endif %}
 							</div>
 						</div>

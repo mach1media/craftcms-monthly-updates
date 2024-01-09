@@ -1,3 +1,3 @@
 {% if heading | length and heading.heading != '' %}
-<h2 class="{{ heading.size != 'h2 ' ? heading.size : '' }} text-{{ heading.alignment }}{% if class is defined and class != '' %} {{ class }}{% endif %}">{{ heading.heading | raw }}</h2>
+<h2 class="{{ heading.size != 'h2 ' ? heading.size : '' }} text-{{ heading.alignment }} {{ heading.textColor }}{% if class is defined and class != '' %} {{ class }}{% endif %}">{{ heading.heading | raw }}</h2>
 {% endif %}

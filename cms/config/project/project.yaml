@@ -1,4 +1,4 @@
-dateModified: 1704834729
+dateModified: 1704838137
 elementSources:
   craft\elements\Entry:
     -
@@ -218,6 +218,7 @@ meta:
     41d75776-461e-4d36-8d1b-3d3935125b2d: 'Preview Card' # Preview Card
     49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
+    55f89f73-30c8-4eeb-b491-a0da78da6657: 'Text Color' # Text Color
     61a1068b-a537-4bde-85ac-b0fe8f04946e: Team # Team
     61b6248e-c14a-44e7-b438-2ccdbfafe7a7: 'Blog Entries' # Blog Entries
     68ecabf7-ddb5-437f-8844-30eb450a69ee: Footer # Footer
@@ -327,6 +328,7 @@ meta:
     c13a4a02-215c-406f-8eb0-6aaca8403db8: 'CTA Link' # CTA Link
     c67bfc40-e256-429b-8bc2-bf32fdbf8e43: 'Home: Intro' # Home: Intro
     c87c2284-cb4d-4e16-9b19-d1ae79c72fc5: 'Grant Recipients' # Grant Recipients
+    c94c64ea-cc6d-4b7d-9441-052031432b9e: 'Text Color' # Text Color
     c932c240-70a9-4a42-b4e8-452cde3498d7: 'Resource Card' # Resource Card
     c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: Label # Label
     c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link' # CTA Link

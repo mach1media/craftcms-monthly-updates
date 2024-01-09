@@ -5,11 +5,13 @@
 	<div class="container">
 		{% if block.preheading != '' or block.headingBlock | length or block.description != '' %}
 		<div class="row justify-content-center mb-5">
-			<div class="col-12 col-md-10 col-lg-9 col-xl-8 text-center">
+			<div class="col-12 col-md-10 col-lg-9 col-xl-8 text-center {{ block.textColor }}">
 				{% if block.preheading is defined and block.preheading != '' %}
 				<p class="u-preheading">{{ block.preheading }}</p>
 				{% endif %}
+
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+				
 				{% if block.description is defined and block.description != '' %}
 				<div class="c-wysiwyg">
 					{% apply enkode_emails %}

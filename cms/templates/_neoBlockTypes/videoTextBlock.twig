@@ -16,7 +16,7 @@
 				<div class="c-video-block__media-wrapper js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
 			</div>
 
-			<div class="col-12 col-lg-5{% if block.imagePositionLR == 'right' %} order-1{% endif %}">
+			<div class="col-12 col-lg-5 {{ block.textColor }}{% if block.imagePositionLR == 'right' %} order-1{% endif %}">
 				{% if block.preheading is defined and block.preheading != '' %}
 				<p class="u-preheading">{{ block.preheading }}</p>
 				{% endif %}

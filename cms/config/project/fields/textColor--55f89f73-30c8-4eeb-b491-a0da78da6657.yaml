@@ -1,0 +1,13 @@
+columnSuffix: jlwmgrqc
+contentColumnType: string
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
+handle: textColor
+instructions: null
+name: 'Text Color'
+searchable: false
+settings:
+  dataSet: 'Text Colors'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

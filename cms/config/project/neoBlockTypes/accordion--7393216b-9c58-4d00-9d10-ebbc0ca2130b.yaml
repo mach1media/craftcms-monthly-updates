@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
-  85058b95-9a48-4cc6-87d4-1b4e1d027f03:
+  2cdbf963-83a7-4f17-ad20-e208bc211aa0:
     tabs:
       -
         elementCondition: null
@@ -126,6 +126,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 1f97c3a6-b0da-4902-9193-bb5502e6b042
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6937255a-6e08-4b38-b59a-45d0c73535cf
             userCondition: null
             warning: null
             width: 25

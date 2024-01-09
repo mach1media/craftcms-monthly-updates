@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
-  a3571b19-4ed1-41ac-8459-9a56971c39fb:
+  1719d0b2-beca-4a01-8c16-d6cd23ba75c0:
     tabs:
       -
         elementCondition: null
@@ -20,7 +20,19 @@ fieldLayouts:
             uid: 7a921a12-b984-4b32-82aa-907e053af4e3
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 07d87eb5-f80f-4d6c-a9e8-204bb9f42aa1
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
