@@ -28,6 +28,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: Disclaimer
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ab0bd368-6e73-40b4-b558-d9fec1a438db
+            userCondition: null
+            warning: null
+            width: 100
         name: 'Footer Links'
         uid: 2374e61f-ac8d-466e-953a-f5c1e5eecb96
         userCondition: null
