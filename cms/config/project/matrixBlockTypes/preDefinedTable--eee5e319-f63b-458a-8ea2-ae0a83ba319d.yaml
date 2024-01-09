@@ -72,17 +72,6 @@ fields:
       maintainHierarchy: false
       maxRelations: 1
       minRelations: 1
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Entry
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\entries\EntryCondition
       selectionLabel: 'Add a table'
       showSiteMenu: true
       sources:

@@ -23,17 +23,6 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   restrictedLocationSubpath: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
   selectionLabel: 'Add a video'
   showSiteMenu: true
   showUnpermittedFiles: true
