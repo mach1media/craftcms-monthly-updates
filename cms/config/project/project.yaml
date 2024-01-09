@@ -1,4 +1,4 @@
-dateModified: 1704833622
+dateModified: 1704833806
 elementSources:
   craft\elements\Entry:
     -
@@ -633,7 +633,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: WGWS3FIJ3F81FB4EPTVL5Z4D
-    schemaVersion: 3.6.2
+    schemaVersion: 4.0.0
   obfuscator:
     edition: standard
     enabled: true

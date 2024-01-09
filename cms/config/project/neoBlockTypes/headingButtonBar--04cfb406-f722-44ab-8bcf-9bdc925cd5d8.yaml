@@ -58,6 +58,7 @@ group: null
 groupChildBlockTypes: true
 handle: headingButtonBar
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 0
 maxChildBlocks: 0
@@ -66,5 +67,4 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Heading+Button Bar'
-sortOrder: 3
 topLevel: true

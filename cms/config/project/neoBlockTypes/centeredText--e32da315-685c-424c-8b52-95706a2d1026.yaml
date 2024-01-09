@@ -52,6 +52,7 @@ group: null
 groupChildBlockTypes: true
 handle: centeredText
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 0
 maxChildBlocks: 0
@@ -60,5 +61,4 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Centered Text'
-sortOrder: 1
 topLevel: true

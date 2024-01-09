@@ -151,6 +151,7 @@ group: null
 groupChildBlockTypes: true
 handle: teamMembers
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 0
 maxChildBlocks: 0
@@ -159,5 +160,4 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Team Members'
-sortOrder: 13
 topLevel: true

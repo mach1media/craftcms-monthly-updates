@@ -147,6 +147,7 @@ group: null
 groupChildBlockTypes: true
 handle: resourceCards
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 0
 maxChildBlocks: 0
@@ -155,5 +156,4 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Resource Cards'
-sortOrder: 22
 topLevel: true
