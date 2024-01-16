@@ -1,4 +1,4 @@
-dateModified: 1705091894
+dateModified: 1705365881
 elementSources:
   craft\elements\Entry:
     -
@@ -375,6 +375,7 @@ meta:
     e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item' # Accordion Item
     e545221b-a425-4bf5-adef-30e8193f800d: Image # Image
     eaf0d64e-a5d2-48e0-9547-b790b9262fe3: 'Table Footer' # Table Footer
+    eb417305-8df0-4a1d-85d9-d992d5a60c7a: 'Button Block' # Button Block
     eee5e319-f63b-458a-8ea2-ae0a83ba319d: 'Pre-defined Table' # Pre-defined Table
     efb726bf-a523-4889-94d6-8865ebb534d9: 'Small | Small | Large' # Small | Small | Large
     f0fed55c-aae0-4c10-8ca5-6e4e5929674f: 'Grant Recipient' # Grant Recipient
