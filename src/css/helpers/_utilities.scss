@@ -165,6 +165,16 @@
 	@include font-heading-black-italic;
 }
 
+//
+// FONT SCRIPT UTILITIES
+//
+@include utility('font-script') {
+	@include font-script;
+}
+@include utility('font-script-alt') {
+	@include font-script-alt;
+}
+
 
 
 //

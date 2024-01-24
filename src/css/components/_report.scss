@@ -1,0 +1,30 @@
+/**
+ * IMPACT REPORT
+ */
+@include component('report') {
+	
+	@include element('heading') {
+		.u-font-script-alt {
+			font-size: 150%;
+			display: inline-block;
+			line-height: var(--bs-body-line-height);
+		}
+	}
+
+	@include element('subheading') {
+		@include base-font-semibold;
+		color: map-get($theme-colors, 'secondary');
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: .5em;
+		line-height: 2em;
+	}
+	
+	@include element('signature') {
+		@include font-script-alt;
+		color: map-get($theme-colors, 'secondary');
+		font-size: 200%;
+		display: inline-block;
+		line-height: var(--bs-body-line-height);
+	}
+}

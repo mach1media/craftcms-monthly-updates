@@ -233,6 +233,33 @@
        url('/dist/fonts/raleway-v28-latin-900italic.svg#Raleway') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: "SevilleScriptAltSlant";
+  src: url('/dist/fonts/SevilleScriptAltSlant/font.woff2') format('woff2'), 
+       url('/dist/fonts/SevilleScriptAltSlant/font.woff') format('woff');
+}
+@font-face {
+  font-family: "SevilleScriptSlant";
+  src: url('/dist/fonts/SevilleScriptSlant/font.woff2') format('woff2'), 
+       url('/dist/fonts/SevilleScriptSlant/font.woff') format('woff');
+}
+
+//
+// FONT SCRIPT: Seville Script Slant
+// FONT SCRIPT ALT: Seville Script Alt Slant
+// MyFonts.com
+//
+@mixin font-script {
+	font-family: $font-script;
+	font-weight: 400; 
+	font-style: normal;
+}
+@mixin font-script-alt {
+	font-family: $font-script-alt;
+	font-weight: 400; 
+	font-style: normal;
+}
+
 
 //
 // BASE FONT: Proxima Nova

@@ -1,6 +1,5 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
     "/vendor/fitvids/fitvids.js": "/vendor/fitvids/fitvids.js",
     "/vendor/hoverIntent/README.md": "/vendor/hoverIntent/README.md",
     "/vendor/hoverIntent/bower.json": "/vendor/hoverIntent/bower.json",
@@ -34,5 +33,6 @@
     "/vendor/withinviewport/README.md": "/vendor/withinviewport/README.md",
     "/vendor/withinviewport/jquery.withinviewport.js": "/vendor/withinviewport/jquery.withinviewport.js",
     "/vendor/withinviewport/package.json": "/vendor/withinviewport/package.json",
-    "/vendor/withinviewport/withinviewport.js": "/vendor/withinviewport/withinviewport.js"
+    "/vendor/withinviewport/withinviewport.js": "/vendor/withinviewport/withinviewport.js",
+    "/css/app.css": "/css/app.css"
 }

@@ -192,6 +192,14 @@ $container-max-widths: (
   src: url("/dist/fonts/raleway-v28-latin-900italic.eot"); /* IE9 Compat Modes */
   src: url("/dist/fonts/raleway-v28-latin-900italic.eot?#iefix") format("embedded-opentype"), url("/dist/fonts/raleway-v28-latin-900italic.woff2") format("woff2"), url("/dist/fonts/raleway-v28-latin-900italic.woff") format("woff"), url("/dist/fonts/raleway-v28-latin-900italic.ttf") format("truetype"), url("/dist/fonts/raleway-v28-latin-900italic.svg#Raleway") format("svg"); /* Legacy iOS */
 }
+@font-face {
+  font-family: "SevilleScriptAltSlant";
+  src: url("/dist/fonts/SevilleScriptAltSlant/font.woff2") format("woff2"), url("/dist/fonts/SevilleScriptAltSlant/font.woff") format("woff");
+}
+@font-face {
+  font-family: "SevilleScriptSlant";
+  src: url("/dist/fonts/SevilleScriptSlant/font.woff2") format("woff2"), url("/dist/fonts/SevilleScriptSlant/font.woff") format("woff");
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10916,6 +10924,18 @@ textarea.form-control-lg {
   font-style: italic;
 }
 
+.u-font-script {
+  font-family: "SevilleScriptSlant", Georgia, Times, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.u-font-script-alt {
+  font-family: "SevilleScriptAltSlant", Georgia, Times, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .u-preheading {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -11882,6 +11902,58 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 
 /**
+ * IMG TEXT: 2up
+ */
+.c-img-text-2up {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .c-img-text-2up__description {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+}
+.c-img-text-2up__images {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+}
+@media (min-width: 992px) {
+  .c-img-text-2up__images {
+    width: 50%;
+  }
+}
+.c-img-text-2up__img {
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+.c-img-text-2up__img::before {
+  float: left;
+  padding-top: 112.25806452%;
+  content: "";
+}
+.c-img-text-2up__img::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.c-img-text-2up__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.c-img-text-2up--left .c-img-text-2up__images {
+  padding-right: 3rem;
+}
+.c-img-text-2up--right .c-img-text-2up__images {
+  padding-left: 3rem;
+}
+
+/**
  * SEARCH MODAL
  */
 .c-search {
@@ -12626,31 +12698,6 @@ button > .c-icon--search {
 }
 
 /**
- * TWITTER BOOTSTRAP CARD OVERRIDES
- */
-/**
- * CARD
- */
-@media (min-width: 768px) {
-  .c-card__img {
-    opacity: 1;
-    transition: all 0.2s ease-in-out;
-  }
-  .c-card__img:hover {
-    opacity: 0.75;
-  }
-}
-.c-card__date {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 75%;
-  letter-spacing: 0.075em;
-  text-transform: uppercase;
-  opacity: 0.5;
-}
-
-/**
  * LOGIN PAGE
  */
 .c-login {
@@ -12695,4 +12742,32 @@ button > .c-icon--search {
   .c-login__content > div {
     padding: 1.5rem;
   }
+}
+
+/**
+ * IMPACT REPORT
+ */
+.c-report__heading .u-font-script-alt {
+  font-size: 150%;
+  display: inline-block;
+  line-height: var(--bs-body-line-height);
+}
+.c-report__subheading {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #C19D68;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.5em;
+  line-height: 2em;
+}
+.c-report__signature {
+  font-family: "SevilleScriptAltSlant", Georgia, Times, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C19D68;
+  font-size: 200%;
+  display: inline-block;
+  line-height: var(--bs-body-line-height);
 }
