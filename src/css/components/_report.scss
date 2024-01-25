@@ -11,6 +11,12 @@
 		}
 	}
 
+	h2.c-report__heading {
+		.u-font-script-alt {
+			font-size: 175% !important;
+		}
+	}
+
 	@include element('subheading') {
 		@include base-font-semibold;
 		color: map-get($theme-colors, 'secondary');

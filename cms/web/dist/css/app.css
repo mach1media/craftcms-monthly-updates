@@ -11921,6 +11921,13 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   display: flex;
   gap: 1.5rem;
 }
+@media (max-width: 991.98px) {
+  .c-img-text-2up__images {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 3rem;
+  }
+}
 @media (min-width: 992px) {
   .c-img-text-2up__images {
     width: 50%;
@@ -11946,11 +11953,56 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.c-img-text-2up--left .c-img-text-2up__images {
-  padding-right: 3rem;
+@media (min-width: 992px) {
+  .c-img-text-2up--left .c-img-text-2up__images {
+    padding-right: 3rem;
+    margin-right: auto;
+  }
 }
-.c-img-text-2up--right .c-img-text-2up__images {
-  padding-left: 3rem;
+@media (min-width: 992px) {
+  .c-img-text-2up--right .c-img-text-2up__images {
+    padding-left: 3rem;
+    margin-left: auto;
+  }
+}
+
+/**
+ * FACTOID
+ */
+.c-factoid__description {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .c-factoid__description {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .c-factoid__description {
+    width: 480px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .c-factoid__description {
+    width: 570px;
+  }
+}
+@media (min-width: 1400px) {
+  .c-factoid__description {
+    width: 660px;
+  }
+}
+.c-factoid__image.start {
+  padding: 1.5rem 3rem 0 0;
+}
+.c-factoid__image.end {
+  padding: 1.5rem 0 0 3rem;
+}
+.c-factoid__heading .u-font-script-alt {
+  font-size: 200%;
+  display: inline-block;
+  line-height: var(--bs-body-line-height);
 }
 
 /**
@@ -12751,6 +12803,9 @@ button > .c-icon--search {
   font-size: 150%;
   display: inline-block;
   line-height: var(--bs-body-line-height);
+}
+.c-report h2.c-report__heading .u-font-script-alt, .c-report .c-report__heading.h2 .u-font-script-alt {
+  font-size: 175% !important;
 }
 .c-report__subheading {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
