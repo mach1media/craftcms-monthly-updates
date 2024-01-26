@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  bdc0bc2d-c20e-4640-bd1b-72264c5602fd:
+  a00b0554-e0d6-4958-9723-e8df88d96059:
     tabs:
       -
         elementCondition: null
@@ -20,7 +20,7 @@ fieldLayouts:
             uid: 42276742-c0e0-4912-b388-b964b751b0d5
             userCondition: null
             warning: null
-            width: 100
+            width: 25
           -
             elementCondition: null
             fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
@@ -32,7 +32,19 @@ fieldLayouts:
             uid: 6e1d1aff-7973-4de6-aace-24dcfb4a52bd
             userCondition: null
             warning: null
-            width: 100
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d29bee05-7e05-4780-810c-68b521a247f9
+            userCondition: null
+            warning: null
+            width: 25
         name: Images
         uid: e11e162a-eaf4-4e5b-a22a-18522fa65d99
         userCondition: null
