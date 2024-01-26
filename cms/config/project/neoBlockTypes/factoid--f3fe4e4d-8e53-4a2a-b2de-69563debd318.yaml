@@ -1,0 +1,136 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
+fieldLayouts:
+  bdc0bc2d-c20e-4640-bd1b-72264c5602fd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
+            instructions: null
+            label: Photo
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42276742-c0e0-4912-b388-b964b751b0d5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
+            instructions: null
+            label: 'Factoid Graphic'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e1d1aff-7973-4de6-aace-24dcfb4a52bd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Images
+        uid: e11e162a-eaf4-4e5b-a22a-18522fa65d99
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62a73080-1ab4-4703-98d5-83ff709f5bc0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            instructions: null
+            label: Subheading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce994654-dd3a-41b5-be37-3aa710c6642b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f99034da-f55b-4410-9685-0239fd6a0620
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: af7fdaa2-5064-49a0-befe-9dd4e9111f5a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Description
+        uid: 637f0c17-424a-4652-be70-e097e20de077
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fdf395a4-d2e2-4b56-b9e0-ea1060a863c6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 52c44085-f32f-4666-af55-0b4a1639e7a7
+            userCondition: null
+            warning: null
+            width: 25
+        name: 'Section Settings'
+        uid: 56219217-4c9a-45ca-90b9-12aea72e6db2
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: factoid
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Factoid
+topLevel: true

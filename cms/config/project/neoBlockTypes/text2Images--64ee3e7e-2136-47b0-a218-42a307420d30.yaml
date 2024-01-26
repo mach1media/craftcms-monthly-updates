@@ -1,0 +1,106 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
+fieldLayouts:
+  6539e07e-c65d-405b-9f67-1b1952452232:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f06a4480-f195-4705-bd40-a33a08e72d0f # Images
+            instructions: 'Select TWO vertical images'
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 506ec435-d858-4a93-ab6d-537c8bc5505b
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c81bb544-4fa0-48d9-8a71-f436bd8fb57a
+            userCondition: null
+            warning: null
+            width: 25
+        name: Images
+        uid: 76ad9b9c-ead1-4dec-a921-875a60c256bb
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49539cee-ea56-4227-a186-167df6c5d057
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            instructions: null
+            label: Subheading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2ce9600a-c33b-4326-be12-6ccb045c39fc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5ed9a238-17e7-485a-90d5-98f435480b6c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62b5b776-2cb4-4dc1-9a1c-642c13fdd101
+            userCondition: null
+            warning: null
+            width: 100
+        name: Description
+        uid: 1e235bd6-2f4b-4eaa-ab3c-ec97299bd792
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: text2Images
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Text+2 Images'
+topLevel: true

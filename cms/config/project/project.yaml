@@ -1,4 +1,4 @@
-dateModified: 1705366068
+dateModified: 1706310976
 elementSources:
   craft\elements\Entry:
     -
@@ -156,6 +156,7 @@ meta:
     3b6ab5b3-228a-4f9a-b6ba-5958d0d9daf2: 'Icon: Custom' # Icon: Custom
     3b51443f-4e3e-4232-8ca5-f70fda28a3c2: Link # Link
     3be92289-0f0d-4b35-908a-44e87436fae3: 'Program Coordinator' # Program Coordinator
+    3c1eea3a-94e8-40dc-8f1f-d0df569c3542: 'Impact Report' # Impact Report
     3cd86bf3-6755-432c-a7cd-8fdb85ad0ccb: 'Table Footer' # Table Footer
     3d088ba7-2012-45f1-8454-ccf6895bd50b: 'Home: Square Tiles' # Home: Square Tiles
     3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF # TMF
@@ -200,6 +201,8 @@ meta:
     9d7fafd1-35d2-468a-929a-b88e876f64e2: Email # Email
     9e28f3c9-7883-4de5-93ef-fcf8ed4ca639: Subheading # Subheading
     9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa: Link # Link
+    9ff86f39-6873-42df-883a-5d1692acebbc: 'Text Size' # Text Size
+    9ffd20d4-1af3-48f5-8acb-b810e4169271: General # General
     11a02d8c-6388-4bec-914d-2e386b4d1101: 'Legal Links' # Legal Links
     12a86971-9af3-496d-9a73-1f277506afaa: 'Padding: Sides' # Padding: Sides
     13c74871-8a4f-4e3d-9caf-998a4119ec36: 'Text Link' # Text Link
@@ -216,16 +219,19 @@ meta:
     040d7db9-375b-4b41-989d-2e38c47b90f6: 'Padding: Bottom' # Padding: Bottom
     40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link # Link
     41d75776-461e-4d36-8d1b-3d3935125b2d: 'Preview Card' # Preview Card
+    48decd81-091f-4c64-a59a-482b826a0ef5: Media # Media
     49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
     55f89f73-30c8-4eeb-b491-a0da78da6657: 'Text Color' # Text Color
     61a1068b-a537-4bde-85ac-b0fe8f04946e: Team # Team
     61b6248e-c14a-44e7-b438-2ccdbfafe7a7: 'Blog Entries' # Blog Entries
+    64ee3e7e-2136-47b0-a218-42a307420d30: 'Text+2 Images' # Text+2 Images
     68ecabf7-ddb5-437f-8844-30eb450a69ee: Footer # Footer
     69a66c94-0c41-4248-949e-0b52659f8c9e: 'Dropdown Links' # Dropdown Links
     72c21d48-1ae1-46e6-a4d8-57c63a5eb883: Subheading # Subheading
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
     75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading # Heading
+    90bba6bb-88b4-4c3f-ae60-595e911f01ab: 'Heading Block' # Heading Block
     91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
     92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages # Pages
     148b8944-2e50-42a9-9275-0f8b85677134: 'Stack Image on Mobile' # Stack Image on Mobile
@@ -263,6 +269,7 @@ meta:
     0014573b-36a9-48c6-b523-64fbabf469f2: 'Button Style' # Button Style
     18834ccd-54b8-4774-a03c-b16f65a84197: Thumbnail # Thumbnail
     23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8: 'Page Header' # Page Header
+    23395c4f-d839-4a1e-8291-195209ed2aed: 'General: Large Text' # General: Large Text
     32847f30-97a7-46a4-aa8a-1d662159da7d: 'Link to Asset' # Link to Asset
     34324a9e-7ce8-4902-8508-1d7046c34d97: 'Team Members' # Team Members
     40462e8a-a238-4adf-9317-22de98d2878f: 'Data Table' # Data Table
@@ -305,6 +312,7 @@ meta:
     aec4cf66-3af8-44c6-ba81-0ebbf0e6c837: Homepage # Homepage
     aec4351f-8a70-4278-9846-54ad19f795fc: 'Icon: Custom' # Icon: Custom
     aed0fd2d-f074-485f-b1f7-4c8ef97e91cc: Arrow # Arrow
+    aefea3fc-ff45-4615-b305-9079e2cc6c44: 'Page Builder: Impact Report' # Page Builder: Impact Report
     af55010a-5968-4c25-91f8-dffbcb72d4db: Individuals # Individuals
     afb8f81e-7598-4dbb-8559-8aef5c3c42e6: 'Team Members' # Team Members
     b00ccfa2-369c-471f-ae02-ae5ed2a9bae6: Thumbnail # Thumbnail
@@ -380,6 +388,7 @@ meta:
     efb726bf-a523-4889-94d6-8865ebb534d9: 'Small | Small | Large' # Small | Small | Large
     f0fed55c-aae0-4c10-8ca5-6e4e5929674f: 'Grant Recipient' # Grant Recipient
     f06a4480-f195-4705-bd40-a33a08e72d0f: Images # Images
+    f3fe4e4d-8e53-4a2a-b2de-69563debd318: Factoid # Factoid
     f69cfc32-4011-4eea-a32a-f5ae9fd5b24e: 'Page Builder: General' # Page Builder: General
     f92f1b34-68ad-48fd-a712-c4cdb6b682f0: 'Rate Table' # Rate Table
     f126506f-a32d-40b2-9d16-466e4201be40: Label # Label
