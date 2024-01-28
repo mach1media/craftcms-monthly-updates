@@ -1,10 +1,10 @@
 {% if transform is defined and transform != '' %}
-<img src="{{ img.url(transform) }}" alt="{{ img.imageAlt ?: img.caption }}" />
+<img{% if class is defined and class != '' %} class="{{ class }}"{% endif %} src="{{ img.url(transform) }}" alt="{{ img.alt ?: img.caption }}" />
 {% else %}
-{% set full   = (img.width > 1140) ? 1140 : img.width %}
+{% set full   = (img.width > 2000) ? 2000 : img.width %}
 {% set half   = full / 2 | round %}
 {% set fourth = full / 4 | round %}
-<img src="{{ img.url({ width: half, format:'webp' }) }}" alt="{{ img.imageAlt ?: img.title }}"
+<img{% if class is defined and class != '' %} class="{{ class }}"{% endif %} src="{{ img.url({ width: half, format:'webp' }) }}" alt="{{ img.alt ?: img.title }}"
 	srcset="{{ img.url({ width: fourth , format:'webp'}) }} {{ fourth }}w,
 		{{ img.url({ width: half, format:'webp' }) }} {{ half }}w,
 		{{ img.url({ width: full, format:'webp' }) }} {{ full }}w"

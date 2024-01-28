@@ -1,0 +1,18 @@
+{##
+ # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: HEADING BLOCK
+ #}
+<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-10 col-lg-8 text-center">
+				{% if block.heading is defined and block.heading != '' %}
+				<h2 class="c-report__heading">{{ block.heading | raw }}</h2>
+				{% endif %}
+
+				{% if block.preheading is defined and block.preheading != '' %}
+				<h3 class="c-report__subheading">{{ block.preheading | raw }}</h3>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

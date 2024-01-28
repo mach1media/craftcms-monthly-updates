@@ -1,0 +1,31 @@
+{##
+ # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: GENERAL
+ #}
+<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-12 col-md-10 col-lg-8 text-{{ block.textAlignment }}">
+				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+
+				{% if block.preheading is defined and block.preheading != '' %}
+				<p class="c-report__subheading">{{ block.preheading | raw }}</p>
+				{% endif %}
+				
+				{% if block.description is defined and block.description != ''
+				   or block.caption is defined and block.caption != '' %}
+				<div class="c-wysiwyg{% if block.buttons | length %} mb-4{% endif %}">
+					{% apply enkode_emails %}
+						{{ block.description }}
+					{% endapply %}
+
+					{% if block.caption is defined and block.caption != '' %}
+						<p class="c-report__signature">{{ block.caption | raw }}</p>
+					{% endif %}
+				</div>
+				{% endif %}
+				
+				{% include "_fields/buttons" with {'buttons': block.buttons} %}
+			</div>
+		</div>
+	</div>
+</section>

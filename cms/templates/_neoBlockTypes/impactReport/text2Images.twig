@@ -1,0 +1,45 @@
+{##
+ # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: TEXT + 2 IMAGES
+ #}
+{% set images = block.images.limit(2).all() %}
+<section id="{{ sectionId }}" class="c-block c-img-text-2up--{{ block.imagePositionLR }}">
+	<div class="c-img-text-2up__images">
+		{% for img in images %}
+		<div class="c-img-text-2up__img">
+			{% include "_fields/image" with {'img': img, 'class': 'd-block img-fluid w-100'} %}
+		</div>
+		{% endfor %}
+	</div>
+	
+	<div class="c-img-text-2up__description">
+		<div class="container">
+			<div class="row justify-content-{{ block.imagePositionLR == 'left' ? 'end' : 'start' }} align-items-center">
+				<div class="col-12 col-lg-6">
+					{% if block.heading is defined and block.heading != '' %}
+					<h2>{{ block.preheading }}</h2>
+					{% endif %}
+
+					{% if block.preheading is defined and block.preheading != '' %}
+					<h3 class="c-report__subheading">{{ block.preheading }}</h3>
+					{% endif %}
+					
+					{% if block.description is defined and block.description != '' %}
+					<div class="c-wysiwyg{% if block.button | length %} mb-4{% endif %}">
+						{% apply enkode_emails %}
+							{{ block.description }}
+						{% endapply %}
+					</div>
+					{% endif %}
+
+					{% if block.button | length %}
+					<p>
+						{% if block.button.getLink() %}
+							{% include "_fields/button" with {'button': block.button} %}
+						{% endif %}
+					</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

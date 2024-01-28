@@ -1,0 +1,52 @@
+{##
+ # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: FACTOID
+ #}
+<section class="c-block c-factoid{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container-fluid px-0">
+		<div class="row align-items-center g-0">
+			<div class="col-12 col-lg-6 d-flex justify-content-center{% if block.imagePositionLR == 'left' %} justify-content-lg-start order-lg-2{% else %} justify-content-lg-end{% endif %}">
+				<div class="c-factoid__description end">
+					<div>
+						{% if block.heading is defined and block.heading != '' %}
+						<h2 class="c-factoid__heading mb-4">{{ block.heading | raw }}</h2>
+						{% endif %}
+
+						{% if block.preheading is defined and block.preheading != '' %}
+						<h3 class="c-report__subheading mb-5">{{ block.preheading | raw }}</h3>
+						{% endif %}
+						
+						{% if block.description is defined and block.description != '' %}
+						<div class="c-wysiwyg{% if block.button | length %} mb-4{% endif %}">
+							{% apply enkode_emails %}
+								{{ block.description }}
+							{% endapply %}
+						</div>
+						{% endif %}
+
+						{% if block.button | length %}
+						<p>
+							{% if block.button.getLink() %}
+								{% include "_fields/button" with {'button': block.button} %}
+							{% endif %}
+						</p>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-12 col-lg-6 pe-5{% if block.imagePositionLR == 'left' %} order-lg-1{% endif %}">
+				{% if block.imageDesktop | length %}
+				<div class="c-factoid__image u-rounded-top-{{ block.imagePositionLR == 'left' ? 'right' : 'left' }}">
+					{% include "_fields/image" with {'img': block.imageDesktop.one, 'class': 'd-block img-fluid w-100'} %}
+				</div>
+				{% endif %}
+				
+				{% if block.imageMobile | length %}
+				<div class="c-factoid__stat mt-3">
+					{% include "_fields/image" with {'img': block.imageMobile.one, 'class': 'd-block img-fluid w-100'} %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
