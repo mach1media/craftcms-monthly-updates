@@ -1,4 +1,4 @@
-dateModified: 1706478880
+dateModified: 1707177976
 elementSources:
   craft\elements\Entry:
     -
@@ -380,6 +380,7 @@ meta:
     e359f1b1-385c-4017-9823-ab7e63cd7efe: Citation # Citation
     e636fe1a-91ea-493b-81c8-354c9c08220f: 'Items Per Row' # Items Per Row
     e11568a1-11e3-4147-ae18-1ff01fdcd4f7: 'CTA Tile: Small' # CTA Tile: Small
+    e39974bd-ec97-4187-be91-a431e1a4fbd7: Eyebrow # Eyebrow
     e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item' # Accordion Item
     e545221b-a425-4bf5-adef-30e8193f800d: Image # Image
     eaf0d64e-a5d2-48e0-9547-b790b9262fe3: 'Table Footer' # Table Footer

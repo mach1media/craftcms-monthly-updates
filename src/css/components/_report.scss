@@ -19,6 +19,46 @@
 		letter-spacing: .5em;
 		line-height: 2em;
 	}
+
+	@include element('eyebrow') {
+		position: relative;
+		overflow: hidden;
+		@include base-font-semibold;
+		color: map-get($theme-colors, 'primary');
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: .5em;
+		line-height: 2em;
+
+		span {
+			position: relative;
+			display: inline-block;
+
+			&:after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 1000%;
+				top: 50%;
+				left: calc(100% + 1em);
+				border-top: 1px solid map-get($theme-colors, 'primary');
+			}
+		}
+
+		@include modifier('centered') {
+			span {
+				&:before {
+					content: "";
+					position: absolute;
+					display: block;
+					width: 1000%;
+					top: 50%;
+					right: calc(100% + 1.5em);
+					border-top: 1px solid map-get($theme-colors, 'primary');
+				}
+			}
+		}
+	}
 	
 	@include element('signature') {
 		@include font-script-alt;

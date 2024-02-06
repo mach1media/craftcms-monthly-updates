@@ -15,6 +15,10 @@
 		<div class="container">
 			<div class="row justify-content-{{ block.imagePositionLR == 'left' ? 'end' : 'start' }} align-items-center">
 				<div class="col-12 col-lg-6">
+					{% if block.eyebrow is defined and block.eyebrow != '' %}
+					<p class="c-report__eyebrow mb-3">{{ block.eyebrow }}</p>
+					{% endif %}
+
 					{% if block.heading is defined and block.heading != '' %}
 					<h2>{{ block.preheading }}</h2>
 					{% endif %}

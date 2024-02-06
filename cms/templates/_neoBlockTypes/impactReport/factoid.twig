@@ -7,6 +7,10 @@
 			<div class="col-12 col-lg-6 d-flex justify-content-center{% if block.imagePositionLR == 'left' %} justify-content-lg-start order-lg-2{% else %} justify-content-lg-end{% endif %}">
 				<div class="c-factoid__description end">
 					<div>
+						{% if block.eyebrow is defined and block.eyebrow != '' %}
+						<p class="c-report__eyebrow mb-3">{{ block.eyebrow }}</p>
+						{% endif %}
+						
 						{% if block.heading is defined and block.heading != '' %}
 						<h2 class="c-factoid__heading mb-4">{{ block.heading | raw }}</h2>
 						{% endif %}

@@ -4,11 +4,23 @@ description: ''
 enabled: true
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  10238833-b4d6-47bf-ac55-0da2a267db0e:
+  6a4dd7b2-0348-486c-828f-6c0fc612be72:
     tabs:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cfddf0ac-0a5f-4fe0-ae07-2e37d4c50066
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
