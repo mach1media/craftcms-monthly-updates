@@ -6,9 +6,9 @@
 		<div class="row justify-content-center">
 			<div class="col-12 col-12 col-md-10 col-lg-8 lead text-{{ block.textAlignment }}">
 				{% if block.eyebrow is defined and block.eyebrow != '' %}
-				<p class="c-report__eyebrow mb-3">{{ block.eyebrow }}</p>
+				<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
 				{% endif %}
-				
+
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 
 				{% if block.preheading is defined and block.preheading != '' %}
