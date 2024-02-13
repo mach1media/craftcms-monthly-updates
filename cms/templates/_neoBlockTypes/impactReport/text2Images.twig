@@ -18,13 +18,13 @@
 					{% if block.preEyebrow is defined and block.preEyebrow != '' %}
 					<p class="c-report__preeyebrow mb-3"><span>{{ block.preEyebrow }}</span></p>
 					{% endif %}
-					
+
 					{% if block.eyebrow is defined and block.eyebrow != '' %}
 					<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
 					{% endif %}
 
 					{% if block.heading is defined and block.heading != '' %}
-					<h2>{{ block.preheading }}</h2>
+					<h2>{{ block.heading | raw }}</h2>
 					{% endif %}
 
 					{% if block.preheading is defined and block.preheading != '' %}
