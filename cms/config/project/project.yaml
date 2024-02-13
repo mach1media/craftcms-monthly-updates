@@ -1,4 +1,4 @@
-dateModified: 1707177976
+dateModified: 1707849409
 elementSources:
   craft\elements\Entry:
     -
@@ -353,6 +353,7 @@ meta:
     d4a66aad-fd77-4abe-97e2-a01cabc77bac: Description # Description
     d5a26941-e90f-43b4-8e8b-b34c12674c8b: 'Column: Text' # Column: Text
     d8ff4807-a709-4131-95b1-7a565312e33d: 'Table Footer' # Table Footer
+    d24ab695-25c2-4078-b7e4-b936aa667ac6: Pre-Eyebrow # Pre-Eyebrow
     d33d4fab-55e7-446f-8972-f4676b5ee14a: Heading # Heading
     d46a26f8-acd0-4f06-8f57-f8e755cbcddb: Label # Label
     d3166c3a-ca64-4122-be3f-716e818e0868: 'Card Title' # Card Title

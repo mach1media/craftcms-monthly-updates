@@ -5,6 +5,10 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-12 col-md-10 col-lg-8 text-{{ block.textAlignment }}">
+				{% if block.preEyebrow is defined and block.preEyebrow != '' %}
+				<p class="c-report__preeyebrow mb-3"><span>{{ block.preEyebrow }}</span></p>
+				{% endif %}
+				
 				{% if block.eyebrow is defined and block.eyebrow != '' %}
 				<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
 				{% endif %}

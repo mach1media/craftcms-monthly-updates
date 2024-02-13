@@ -12814,6 +12814,20 @@ button > .c-icon--search {
   letter-spacing: 0.5em;
   line-height: 2em;
 }
+.c-report__preeyebrow {
+  position: relative;
+  overflow: hidden;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #C19D68;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.5em;
+  line-height: 2em;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #231F5B;
+}
 .c-report__eyebrow {
   position: relative;
   overflow: hidden;
@@ -12825,28 +12839,6 @@ button > .c-icon--search {
   font-size: 16px;
   letter-spacing: 0.5em;
   line-height: 2em;
-}
-.c-report__eyebrow span {
-  position: relative;
-  display: inline-block;
-}
-.c-report__eyebrow span:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 1000%;
-  top: 50%;
-  left: calc(100% + 1em);
-  border-top: 1px solid #231F5B;
-}
-.c-report__eyebrow--centered span:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 1000%;
-  top: 50%;
-  right: calc(100% + 1.5em);
-  border-top: 1px solid #231F5B;
 }
 .c-report__signature {
   font-family: "SevilleScriptAltSlant", Georgia, Times, "Times New Roman", serif;

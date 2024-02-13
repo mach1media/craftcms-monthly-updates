@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  d4803aba-acea-4a9b-8ec6-31b83588754a:
+  9dd89799-3baf-4dab-a962-8fbd1180daa6:
     tabs:
       -
         elementCondition: null
@@ -51,6 +51,18 @@ fieldLayouts:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6 # Pre-Eyebrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dfec663b-75aa-48cf-9695-b62e8f417e64
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
