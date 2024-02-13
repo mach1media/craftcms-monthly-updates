@@ -4,7 +4,7 @@
 <section class="c-block c-factoid{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container-fluid px-0">
 		<div class="row align-items-center g-0">
-			<div class="col-12 col-lg-6 d-flex justify-content-center{% if block.imagePositionLR == 'left' %} justify-content-lg-start order-lg-2{% else %} justify-content-lg-end{% endif %}">
+			<div class="col-12 col-lg-6 d-flex justify-content-center{% if block.imagePositionLR == 'left' %} justify-content-lg-start order-lg-2{% else %} justify-content-lg-end pe-5{% endif %}">
 				<div class="c-factoid__description end">
 					<div>
 						{% if block.preEyebrow is defined and block.preEyebrow != '' %}
@@ -42,7 +42,7 @@
 				</div>
 			</div>
 			
-			<div class="col-12 col-lg-6 pe-5{% if block.imagePositionLR == 'left' %} order-lg-1{% endif %}">
+			<div class="col-12 col-lg-6{% if block.imagePositionLR == 'left' %} order-lg-1 pe-5{% endif %}">
 				{% if block.imageDesktop | length %}
 				<div class="c-factoid__image u-rounded-top-{{ block.imagePositionLR == 'left' ? 'right' : 'left' }}">
 					{% include "_fields/image" with {'img': block.imageDesktop.one, 'class': 'd-block img-fluid w-100'} %}
