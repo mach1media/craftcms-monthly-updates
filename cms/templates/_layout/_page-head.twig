@@ -40,12 +40,6 @@
 									{{ node.title }}
 								</a>
 								#}
-								{#
-								{% set parentLink = node.linkToPage | length ? node.linkToPage.one : null %}
-								<a class="nav-link dropdown-toggle" href="{{ parentLink ? parentLink.url : '#' }}">
-									{{ node.title }}
-								</a>
-								#}
 								{{ node.textLink.getLink({
 									class: 'nav-link dropdown-toggle',
 									text: node.textLink.getCustomText(node.title)
@@ -54,7 +48,6 @@
 									{% for dropdownItem in node.dropdownLinks.all() %}
 									{% set page = dropdownItem.dropdownLink %}
 									<li>
-										{# <a class="dropdown-item" href="{{ page.getIntrinsicUrl() }}">{{ page.getText() ?: page.element.title }}</a> #}
 										{{ page.getLink({class: 'dropdown-item'}) }}
 									</li>
 									{% endfor %}
@@ -63,7 +56,6 @@
 							{% elseif node.type == 'link' %}
 							{% set page = node.textLink %}
 							<li class="nav-item">
-								{# <a class="nav-link js-nav-item" href="{{ page.getIntrinsicUrl() }}">{{ page.getText() ?: node.title }}</a> #}
 								{{ page.getLink({class: 'nav-link js-nav-item'}) }}
 							</li>
 							{% endif %}
