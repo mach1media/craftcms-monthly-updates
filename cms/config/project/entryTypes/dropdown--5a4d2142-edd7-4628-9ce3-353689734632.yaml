@@ -33,13 +33,13 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 4fea1dfb-b830-4129-bfa9-b72c6f184fef # Link to Page
+            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96 # Text Link
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d0baa105-b6f1-4a4a-85ea-ab7cc7d4cb5c
+            uid: 0fda7a28-93ed-4e74-8b06-818530893acc
             userCondition: null
             warning: null
             width: 50
