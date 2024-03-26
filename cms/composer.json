@@ -9,7 +9,7 @@
     "mmikkel/cp-field-inspect": "^1.4.4",
     "nystudio107/craft-seomatic": "^4.0.33",
     "sebastianlenz/linkfield": "^2.1.5",
-    "spicyweb/craft-embedded-assets": "^3.1.5",
+    "spicyweb/craft-embedded-assets": "4.0.0",
     "spicyweb/craft-neo": "^4.0.2",
     "statikbe/craft-config-values": "^2.0.2",
     "topshelfcraft/wordsmith": "^4.2.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "805cf253349e3c9bd4a9b0c795fb3b77",
+    "content-hash": "0ffba9f9a7a472f7b028901228c84bfe",
     "packages": [
         {
             "name": "cakephp/core",
@@ -1402,22 +1402,34 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.4.18",
+            "version": "v4.4.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/fe379f61d3ecca7a0824c4bb3839ebe0a1819520",
-                "reference": "fe379f61d3ecca7a0824c4bb3839ebe0a1819520",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/8ac21505d048e8796c6cb9172ec5e81e5d0e0408",
+                "reference": "8ac21505d048e8796c6cb9172ec5e81e5d0e0408",
                 "shasum": ""
             },
             "require": {
                 "composer/ca-bundle": "^1.0",
                 "ext-curl": "*",
                 "ext-dom": "*",
+                "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": "^5.6|^7.0|^8.0"
+                "ml/json-ld": "^1.1",
+                "oscarotero/html-parser": "^0.1.4",
+                "php": "^7.4|^8",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0|^2.0"
+            },
+            "suggest": {
+                "symfony/css-selector": "If you want to get elements using css selectors"
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
                 "psr-4": {
                     "Embed\\": "src"
                 }
@@ -1442,7 +1454,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2022-07-15T09:34:07+00:00"
+            "time": "2023-12-10T12:30:47+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -2863,6 +2875,86 @@
             "time": "2022-07-19T10:50:17+00:00"
         },
         {
+            "name": "ml/iri",
+            "version": "1.1.4",
+            "target-dir": "ML/IRI",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lanthaler/IRI/zipball/cbd44fa913e00ea624241b38cefaa99da8d71341",
+                "reference": "cbd44fa913e00ea624241b38cefaa99da8d71341",
+                "shasum": ""
+            },
+            "require": {
+                "lib-pcre": ">=4.0",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ML\\IRI": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Markus Lanthaler",
+                    "email": "mail@markus-lanthaler.com",
+                    "homepage": "http://www.markus-lanthaler.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "IRI handling for PHP",
+            "homepage": "http://www.markus-lanthaler.com",
+            "keywords": [
+                "URN",
+                "iri",
+                "uri",
+                "url"
+            ],
+            "time": "2014-01-21T13:43:39+00:00"
+        },
+        {
+            "name": "ml/json-ld",
+            "version": "1.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lanthaler/JsonLD/zipball/537e68e87a6bce23e57c575cd5dcac1f67ce25d8",
+                "reference": "537e68e87a6bce23e57c575cd5dcac1f67ce25d8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ml/iri": "^1.1.1",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ML\\JsonLD\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Markus Lanthaler",
+                    "email": "mail@markus-lanthaler.com",
+                    "homepage": "http://www.markus-lanthaler.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "JSON-LD Processor for PHP",
+            "homepage": "http://www.markus-lanthaler.com",
+            "keywords": [
+                "JSON-LD",
+                "jsonld"
+            ],
+            "time": "2022-09-29T08:45:17+00:00"
+        },
+        {
             "name": "mmikkel/cp-field-inspect",
             "version": "1.4.4",
             "dist": {
@@ -3323,6 +3415,44 @@
                 "source": "https://github.com/nystudio107/craft-seomatic"
             },
             "time": "2024-03-22T20:36:28+00:00"
+        },
+        {
+            "name": "oscarotero/html-parser",
+            "version": "v0.1.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/html-parser/zipball/10f3219267a365d9433f2f7d1694209c9d436c8d",
+                "reference": "10f3219267a365d9433f2f7d1694209c9d436c8d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HtmlParser\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Parse html strings to DOMDocument",
+            "homepage": "https://github.com/oscarotero/html-parser",
+            "keywords": [
+                "dom",
+                "html",
+                "parser"
+            ],
+            "time": "2023-11-29T20:28:41+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4495,16 +4625,16 @@
         },
         {
             "name": "spicyweb/craft-embedded-assets",
-            "version": "3.2.0",
+            "version": "4.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/04618db82e23ddaffab6be874fe2c50f1be626a6",
-                "reference": "04618db82e23ddaffab6be874fe2c50f1be626a6",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/c5c277587aaf2eef6611170ebf2ecaf513002285",
+                "reference": "c5c277587aaf2eef6611170ebf2ecaf513002285",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^4.0.0",
-                "embed/embed": "^3.4.17",
+                "craftcms/cms": "^4.7.0",
+                "embed/embed": "^4.4.10",
                 "php": "^8.0.2"
             },
             "type": "craft-plugin",
@@ -4513,8 +4643,8 @@
                 "name": "Embedded Assets",
                 "schemaVersion": "1.0.0",
                 "class": "spicyweb\\embeddedassets\\Plugin",
-                "changelogUrl": "https://github.com/spicywebau/craft-embedded-assets/blob/3.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/3.2.0.zip"
+                "changelogUrl": "https://github.com/spicywebau/craft-embedded-assets/blob/4.x/CHANGELOG.md",
+                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/4.0.0.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -4545,10 +4675,10 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-embedded-assets/issues",
                 "source": "https://github.com/spicywebau/craft-embedded-assets",
-                "docs": "https://github.com/spicywebau/craft-embedded-assets/blob/3.2.0/README.md",
-                "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/3.x.atom"
+                "docs": "https://github.com/spicywebau/craft-embedded-assets/blob/4.0.0/README.md",
+                "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/4.x.atom"
             },
-            "time": "2023-12-06T06:51:22+00:00"
+            "time": "2024-03-26T10:16:56+00:00"
         },
         {
             "name": "spicyweb/craft-neo",
@@ -7906,5 +8036,5 @@
     "platform-overrides": {
         "php": "8.0.2"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
