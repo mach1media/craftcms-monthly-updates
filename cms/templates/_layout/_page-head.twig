@@ -1,7 +1,7 @@
 {##
  # PAGE HEADER AND NAVIGATION MENU
  #}
-{% set navNodes   = craft.entries.section('navigationMenu').all() %}
+{% set navNodes   = craft.entries.section('navigationMenu').status(['not','disabled']).all() %}
 {% set linkGive   = '#' %}
 {% set linkInvest = '#' %}
 <a id="top"></a>
@@ -20,44 +20,44 @@
 					<ul class="nav flex-nowrap">
 						{% for node in navNodes %}
 							{% if node.type == 'megaMenu' %}
-							<li class="nav-item c-header__mega-toggle">
-								<button class="nav-link js-nav-item"
-									type="button" 
-									id="mega-{{ node.slug }}-tab"
-									data-bs-toggle="collapse" 
-									data-bs-target="#mega-{{ node.slug }}" 
-									aria-expanded="false" 
-									aria-controls="mega-{{ node.slug }}">{{ node.title }}</button>
-							</li>
+								<li class="nav-item c-header__mega-toggle">
+									<button class="nav-link js-nav-item"
+										type="button" 
+										id="mega-{{ node.slug }}-tab"
+										data-bs-toggle="collapse" 
+										data-bs-target="#mega-{{ node.slug }}" 
+										aria-expanded="false" 
+										aria-controls="mega-{{ node.slug }}">{{ node.title }}</button>
+								</li>
 							{% elseif node.type == 'dropdown' %}
-							<li class="nav-item dropdown">
-								{# BOOTSTRAP DROPDOWN BUTTON TOGGLE
-								<a class="nav-link dropdown-toggle" 
-									href="#" 
-									role="button" 
-									data-bs-toggle="dropdown"
-									aria-expanded="false">
-									{{ node.title }}
-								</a>
-								#}
-								{{ node.textLink.getLink({
-									class: 'nav-link dropdown-toggle',
-									text: node.textLink.getCustomText(node.title)
-								}) }}
-								<ul class="dropdown-menu">
-									{% for dropdownItem in node.dropdownLinks.all() %}
-									{% set page = dropdownItem.dropdownLink %}
-									<li>
-										{{ page.getLink({class: 'dropdown-item'}) }}
-									</li>
-									{% endfor %}
-								</ul>
-							</li>
+								<li class="nav-item dropdown">
+									{# BOOTSTRAP DROPDOWN BUTTON TOGGLE
+									<a class="nav-link dropdown-toggle" 
+										href="#" 
+										role="button" 
+										data-bs-toggle="dropdown"
+										aria-expanded="false">
+										{{ node.title }}
+									</a>
+									#}
+									{{ node.textLink.getLink({
+										class: 'nav-link dropdown-toggle',
+										text: node.textLink.getCustomText(node.title)
+									}) }}
+									<ul class="dropdown-menu">
+										{% for dropdownItem in node.dropdownLinks.all() %}
+										{% set page = dropdownItem.dropdownLink %}
+										<li>
+											{{ page.getLink({class: 'dropdown-item'}) }}
+										</li>
+										{% endfor %}
+									</ul>
+								</li>
 							{% elseif node.type == 'link' %}
-							{% set page = node.textLink %}
-							<li class="nav-item">
-								{{ page.getLink({class: 'nav-link js-nav-item'}) }}
-							</li>
+								{% set page = node.textLink %}
+								<li class="nav-item">
+									{{ page.getLink({class: 'nav-link js-nav-item'}) }}
+								</li>
 							{% endif %}
 						{% endfor %}
 					</ul>
