@@ -6,7 +6,7 @@
 {% set imgAlt       = img.alt %}
 <div class="col-12 col-lg-6">
 	<div class="c-tiles__tile c-tiles__tile--wide{% if block.stackImageOnMobile%} c-tiles__tile--stacked-mobile{% endif %}">
-		<a class="c-tiles__img-link" href="{{ block.tileLink.getUrl() }}">
+		<a class="c-tiles__img-link" href="{{ block.tileLink.getUrl() }}"{% if block.tileLink.getTarget() == '_blank' %} target="_blank"{% endif %}>
 			<img src="{{ imgSrc }}" alt="{{ imgAlt }}" />
 		</a>
 		<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
