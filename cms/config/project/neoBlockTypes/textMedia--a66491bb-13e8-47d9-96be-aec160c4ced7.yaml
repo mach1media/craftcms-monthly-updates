@@ -1,4 +1,5 @@
-childBlocks: null
+childBlocks:
+  - button
 conditions: null
 description: ''
 enabled: true

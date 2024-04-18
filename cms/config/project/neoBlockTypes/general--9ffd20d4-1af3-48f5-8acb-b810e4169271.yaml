@@ -71,13 +71,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 88feb4e6-5863-4df1-a346-724ef035fbe4
+            uid: 8f1dc6e3-ef7b-4ac5-8283-e48453fb2b14
             userCondition: null
             warning: null
             width: 75
