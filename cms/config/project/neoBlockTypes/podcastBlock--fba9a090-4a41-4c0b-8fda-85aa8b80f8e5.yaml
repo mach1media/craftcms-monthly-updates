@@ -1,12 +1,71 @@
 childBlocks:
-  - button
+  - podcastTile
 conditions: null
 description: ''
 enabled: true
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  9a194589-c96a-43a5-82c3-ae2c4a8a4e91:
+  854d10a4-601f-444d-a92f-03a80f54e0ae:
     tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 76c2555a-23b9-4d53-8c79-13892f75b970 # Factoid Description Box
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1ed98aa4-d898-434a-9d57-2cb610797594
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
+            instructions: null
+            label: 'Factoid Position [L|R]'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bad04af4-da3e-48d3-9b5c-8936b38cfc05
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 524c6e05-4d16-4e49-86a1-edfb5ff0e70c # Animation Settings
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3b980f1-bcd4-4a1c-8e51-a60aca058a97
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
+            uid: cf19c2d0-c59a-4295-a460-59fa072c02dc
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b7095ff-ac55-4565-823c-208657a98f20
+            userCondition: null
+            warning: null
+            width: 100
+        name: Factoid
+        uid: 39401142-a2e7-4e48-a5ec-74345850353c
+        userCondition: null
       -
         elementCondition: null
         elements:
@@ -18,22 +77,22 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 031103ab-5913-4ef4-aa74-850e739f61ca
+            uid: 72358b30-98b2-4831-bba9-6916b29491e4
             userCondition: null
             warning: null
-            width: 50
+            width: 75
           -
             elementCondition: null
             fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
             instructions: null
-            label: 'Pre-Eyebrow Text Alignment'
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4725c618-c7ae-4bed-a443-4e780e9fa73b
+            uid: 2e2cc323-623a-4699-9bf0-a92739c8132e
             userCondition: null
             warning: null
-            width: 50
+            width: 25
           -
             elementCondition: null
             fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
@@ -42,19 +101,19 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f6fb07b8-557f-4d0d-9ee0-54396ff0167a
+            uid: c63b9716-e130-482b-b6f7-02969e8f6fab
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8a6b0d9b-884c-4dec-bdf1-fe65c025b4e9
+            uid: ed313f74-8976-4aab-a391-cf3edfcc068b
             userCondition: null
             warning: null
             width: 100
@@ -66,19 +125,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ff491b9d-65ee-45f4-85a2-9d5f4b4017db
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 9f83996e-3759-41eb-905a-a0101283ce27 # Subheading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b0ef3099-cd54-4578-9e72-548ff10ce99a
+            uid: 892b62f6-07f1-4ed6-9f84-e8037c0db02a
             userCondition: null
             warning: null
             width: 100
@@ -90,71 +137,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 53db20fc-0885-4f0f-8298-6f774be52e27
+            uid: 196b2c52-fef2-4f49-8d0f-00620e33e228
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
-            uid: ea8fad7c-3b3c-4c21-b12e-0abfa4cd8137
-            userCondition: null
         name: Description
-        uid: dd31deb2-4907-4bef-8993-70de82b36d4e
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
-            instructions: null
-            label: 'Factoid Position [L|R]'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 06657ff8-c6e3-44a0-a467-248b0fe6ac90
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 4eda64bd-cb19-4d02-84ce-acebb228bb4f # Factoid Description Box
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: ab191fe3-294b-4e60-9717-78c65fc31e5a
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: a0d960f3-8502-4120-b6d9-6180a00b14dc # Headshot Videos
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a8bb7c71-2dfe-4791-b0f1-3ccfa76aaca6
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 58cb54dd-05b5-4d88-be3c-7f8686f72826 # Animation Settings
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 894ee0bb-efe4-4967-854d-92d284f40ab8
-            userCondition: null
-            warning: null
-            width: 100
-        name: 'Headshot Videos'
-        uid: 78a6d9d7-cd69-4d84-a561-3f93f97c0dce
+        uid: 32268a8d-12a2-4eff-b06b-2bc00abd5883
         userCondition: null
       -
         elementCondition: null
@@ -167,7 +155,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 66cd3aa4-ee9c-499a-8ebb-f138e6178b11
+            uid: f33386f6-db6e-4635-a425-dae3fc696479
             userCondition: null
             warning: null
             width: 25
@@ -179,16 +167,16 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3cfbd5a9-622f-423c-8638-be7b45975e5f
+            uid: 0675b708-c258-4263-9821-3c64a3f11cc7
             userCondition: null
             warning: null
             width: 25
         name: 'Section Settings'
-        uid: ed05bc95-235b-4083-9eab-d68f0b40fca7
+        uid: c1a37d30-cc56-42b3-8c82-da3b6d0b97a1
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: textHeadshotVideos
+handle: podcastBlock
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -198,5 +186,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Text+Headshot Videos'
+name: 'Podcast Block'
 topLevel: true

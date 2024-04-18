@@ -59,13 +59,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 59384539-3753-46c8-b8fd-957ad529e2cc # Signatures
+            fieldUid: 6add601c-de5e-4e85-8618-137007c0f910 # Signatures
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 95090408-cbd9-44eb-8526-7af7d108ad3d
+            uid: 628467c1-5bc2-496b-b60e-6b71a84b4be8
             userCondition: null
             warning: null
             width: 100
@@ -80,7 +80,19 @@ fieldLayouts:
             uid: 88feb4e6-5863-4df1-a346-724ef035fbe4
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4b5505d-8f5d-4cc7-811f-19598437ca09
+            userCondition: null
+            warning: null
+            width: 25
         name: Content
         uid: 87799b92-026b-46cc-9277-3a803013682e
         userCondition: null

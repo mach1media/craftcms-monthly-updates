@@ -1,4 +1,4 @@
-columnSuffix: msxrvkxu
+columnSuffix: gnzgofco
 contentColumnType: text
 fieldGroup: 07a87980-eb4d-4710-896e-772170d1d21d # Section Settings
 handle: animationSettings
@@ -157,7 +157,7 @@ settings:
                       - 'Flip Down'
                     -
                       - value
-                      - fade-down
+                      - flip-down
                     -
                       - default
                       - false
@@ -223,7 +223,7 @@ settings:
                       - 'Slide Right'
                     -
                       - value
-                      - slideright
+                      - slide-right
                     -
                       - default
                       - false
@@ -407,7 +407,7 @@ settings:
                       - '0'
                     -
                       - default
-                      - false
+                      - true
                 -
                   __assoc__:
                     -
@@ -463,21 +463,10 @@ settings:
                     -
                       - default
                       - false
-  defaults:
-    -
-      __assoc__:
-        -
-          - col1
-          - none
-        -
-          - col2
-          - 'no'
-        -
-          - col3
-          - '0'
+  defaults: null
   maxRows: null
   minRows: null
-  staticRows: true
+  staticRows: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Table

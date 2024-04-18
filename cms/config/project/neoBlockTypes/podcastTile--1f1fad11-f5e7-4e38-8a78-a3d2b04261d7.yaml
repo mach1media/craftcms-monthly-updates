@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  b9356146-817c-40d3-bd7a-ff66c3d41802:
+  8d99570f-e3c0-4d00-b29c-842efce3f336:
     tabs:
       -
         elementCondition: null
@@ -17,7 +17,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 220cd65d-036c-4d26-bc39-ea114a47932d
+            uid: 94cbaf65-f7fe-4fc3-a764-bada6139785d
             userCondition: null
             warning: null
             width: 100
@@ -29,7 +29,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d0840dff-208b-4331-a8ed-169d224a859a
+            uid: 4f77132d-c95b-4e2a-8780-0c676a8ac1cf
             userCondition: null
             warning: null
             width: 100
@@ -41,19 +41,19 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8c3d90e4-842e-4464-a169-55e6eb894d93
+            uid: 47603616-1af0-45e6-be98-84c0353f708c
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9f83996e-3759-41eb-905a-a0101283ce27 # Subheading
+            fieldUid: f700d39b-3a4f-4c99-a961-d9fb1f3df887 # Subheading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1123f3ac-be88-439e-b171-fc4e7f8f3e39
+            uid: b4f2d6c1-f775-4ddc-b2b8-838dbdb7c537
             userCondition: null
             warning: null
             width: 100
@@ -65,12 +65,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fa4b6fe8-9980-4643-ba27-20fdf3d1d926
+            uid: d029c5b4-abcf-47cc-98d8-684a10afaaf9
             userCondition: null
             warning: null
             width: 100
         name: 'Podcast Tile'
-        uid: cc5606dd-de31-416f-ac8c-060eee282e4c
+        uid: 7bf6e797-505e-42ac-9084-5463c03e9139
         userCondition: null
 group: null
 groupChildBlockTypes: true

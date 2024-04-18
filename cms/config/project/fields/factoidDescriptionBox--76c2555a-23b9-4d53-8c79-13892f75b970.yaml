@@ -4,17 +4,17 @@ fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
 handle: factoidDescriptionBox
 instructions: null
 name: 'Factoid Description Box'
-searchable: false
+searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1093676303
+  changedFieldIndicator: 1126437317
   contentTable: '{{%stc_factoiddescriptionbox}}'
   fieldLayout: matrix
-  maxRows: null
+  maxRows: 1
   minRows: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: null
+  selectionLabel: 'Add a description box'
   staticField: null
 translationKeyFormat: null
 translationMethod: none

@@ -1,4 +1,4 @@
-dateModified: 1713460069
+dateModified: 1713463378
 elementSources:
   craft\elements\Entry:
     -
@@ -139,19 +139,18 @@ graphql:
     expiryDate: null
 meta:
   __names__:
-    0a67fbce-11f8-44c2-8059-f5fa21089eda: Description # Description
     0b2d797a-1a89-4e24-8ef6-9d5d39a5d548: 'Select Fields' # Select Fields
     0ba00a47-4ce1-4c02-a3ca-61119f702d8d: 'Mega Menu: Links' # Mega Menu: Links
-    0c21e683-6ab5-4932-8bf7-bd7d260b8e25: Heading # Heading
     0d19f0b1-727c-4654-9f11-09b986093f3d: 'CTA Link' # CTA Link
     0d346e5c-0f60-4911-9492-f7c3c2b17328: Label # Label
     0e20b322-d191-4a5f-b3df-37ba66888043: 'Social Icons' # Social Icons
     0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34: 'Open An Account Table' # Open An Account Table
+    0fbd0f44-e701-4761-805c-fc232ba797b4: Description # Description
     1a5ffd72-f05f-45ec-8db3-0930c72fe38e: 'Portal Login' # Portal Login
     1a59398d-6900-4df1-a904-341d0b1c005c: 'CTA Tiles' # CTA Tiles
+    1f1fad11-f5e7-4e38-8a78-a3d2b04261d7: 'Podcast Tile' # Podcast Tile
     1f41377c-9452-4c44-85f2-23bcfbec5b44: 'Button Label' # Button Label
     1fc01eb4-e3aa-4109-b017-9a4357415660: Form # Form
-    2b12db6b-0ef7-4c78-80e8-38ddf462275b: Headshot # Headshot
     2bd2d918-16fc-4147-9b16-0a5c2a448d3e: 'Label: Custom' # Label: Custom
     2c56ec44-02d8-449f-b55a-ccb4e0f64909: 'Custom Table' # Custom Table
     2cc57a96-1052-495e-a015-6a4984a4fa2d: 'Page Builder: Login' # Page Builder: Login
@@ -170,18 +169,21 @@ meta:
     4cf16f08-8357-449b-a33e-172385d1c66e: 'CTA Link' # CTA Link
     04cfb406-f722-44ab-8bcf-9bdc925cd5d8: 'Heading+Button Bar' # Heading+Button Bar
     4d7096da-e00f-4539-976f-2ab6e40967b7: Thumbnail # Thumbnail
-    4eda64bd-cb19-4d02-84ce-acebb228bb4f: 'Factoid Description Box' # Factoid Description Box
     4f1a3081-cb03-47eb-b862-638e1b362e22: 'Image Position [L|R]' # Image Position [L|R]
     4fea1dfb-b830-4129-bfa9-b72c6f184fef: 'Link to Page' # Link to Page
     5a4d2142-edd7-4628-9ce3-353689734632: Dropdown # Dropdown
     005b0010-da6f-4cab-a5df-5047ecc802b0: General # General
+    5ca729bf-6b89-4d06-931b-db7f8b086ec6: 'Background Color' # Background Color
     5cf2d429-9442-49de-b0fb-aaaec557b2cd: TMF # TMF
     5d256d74-c235-43c7-aa5c-7df02909be2a: Heading # Heading
     5ecdb404-4694-4031-a4a8-b1a523c6d775: Label # Label
     6a0d0683-24f8-47d9-b693-069ad30f6a5d: 'Matrix Fields' # Matrix Fields
     6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c: Heading # Heading
+    6ad28947-80eb-413a-95d6-899fff1928b4: Headshot # Headshot
+    6add601c-de5e-4e85-8618-137007c0f910: Signatures # Signatures
     6b8077d5-b074-4ffc-8cba-4946fd5d9a35: 'Img+Text Header' # Img+Text Header
     6caec3d2-766a-490b-9491-7b784243b1d4: 'Mega Menu: CTAs' # Mega Menu: CTAs
+    6dfd2047-d32f-48df-8574-2bb332a7c17e: 'Text+Headshot Videos' # Text+Headshot Videos
     6e1fd6d5-5ab2-4bee-8393-d541afe51eea: Heading # Heading
     6ed354ea-1804-41ca-a57f-9e843614ea4a: General # General
     6eef926d-daad-4ff8-9cce-8ececaa4dcf4: Description # Description
@@ -193,7 +195,6 @@ meta:
     7f4113a8-8cb2-4670-bac9-e4de20179209: 'Text Links' # Text Links
     7f134341-6c01-4975-9ea9-60df3c3dd5f0: Image # Image
     7fdd5ed0-dc8b-4df8-bdb3-5909ceccface: Subheading # Subheading
-    8a2f3940-2ab9-4573-83bb-518400c03f5a: 'Text+Headshot Videos' # Text+Headshot Videos
     8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd: Table # Table
     08a4604d-4fdb-476b-b82c-88ef59973d9e: 'Label: Custom' # Label: Custom
     08b49f0a-64a0-4753-9893-80ca6d6ddf85: 'Rate Table' # Rate Table
@@ -204,9 +205,9 @@ meta:
     8f655278-2023-4da0-a4d7-64814ef5c669: 'CTA Tiles' # CTA Tiles
     9cbb1147-31ed-4893-8ea8-2731c0e9484a: 'Grant Recipient Card Logo' # Grant Recipient Card Logo
     9d7fafd1-35d2-468a-929a-b88e876f64e2: Email # Email
+    9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c: Label # Label
     9e28f3c9-7883-4de5-93ef-fcf8ed4ca639: Subheading # Subheading
     9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa: Link # Link
-    9f83996e-3759-41eb-905a-a0101283ce27: Subheading # Subheading
     9ff86f39-6873-42df-883a-5d1692acebbc: 'Text Size' # Text Size
     9ffd20d4-1af3-48f5-8acb-b810e4169271: General # General
     11a02d8c-6388-4bec-914d-2e386b4d1101: 'Legal Links' # Legal Links
@@ -215,22 +216,22 @@ meta:
     16e2e1ff-7c35-4030-b21c-207a4d1e88b7: 'Preview Card' # Preview Card
     17fcc0b6-4e93-425f-9380-11c07300553d: Buttons # Buttons
     19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a: General # General
+    19c27c03-7838-4358-9214-9634fe9e3970: Image # Image
     24a26f70-67f3-45a7-8828-d33f091c1508: 'Home: Tile - Wide' # Home: Tile - Wide
     28a04878-3d6a-4889-ad36-87cce2dd449e: 'Padding: Top' # Padding: Top
     30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b: 'Team Member' # Team Member
     31f2b911-731f-42b5-84c6-4b2777260f2f: 'Section Heading' # Section Heading
+    036cb663-997c-41f3-a8d2-b4c34d457976: Factoid # Factoid
     38b1109c-b2b4-4a24-8273-95f4885fdbbe: 'Label: Custom' # Label: Custom
     38f59447-9f79-465c-96fc-aba9497a5d04: 'Large | Small | Small' # Large | Small | Small
     39b454aa-6c69-4f49-b375-8bf7b6f4ce23: Nonprofits # Nonprofits
     040d7db9-375b-4b41-989d-2e38c47b90f6: 'Padding: Bottom' # Padding: Bottom
     40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link # Link
     41d75776-461e-4d36-8d1b-3d3935125b2d: 'Preview Card' # Preview Card
-    45f4f18c-dbe3-43f1-9cbe-eabea6ed064f: Image # Image
     48decd81-091f-4c64-a59a-482b826a0ef5: Media # Media
     49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
     55f89f73-30c8-4eeb-b491-a0da78da6657: 'Text Color' # Text Color
-    58cb54dd-05b5-4d88-be3c-7f8686f72826: 'Animation Settings' # Animation Settings
     61a1068b-a537-4bde-85ac-b0fe8f04946e: Team # Team
     61b6248e-c14a-44e7-b438-2ccdbfafe7a7: 'Blog Entries' # Blog Entries
     64ee3e7e-2136-47b0-a218-42a307420d30: 'Text+2 Images' # Text+2 Images
@@ -239,7 +240,8 @@ meta:
     72c21d48-1ae1-46e6-a4d8-57c63a5eb883: Subheading # Subheading
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
     75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading # Heading
-    084b735d-4d93-41f0-9287-e63f32f65611: Text+Media # Text+Media
+    76c2555a-23b9-4d53-8c79-13892f75b970: 'Factoid Description Box' # Factoid Description Box
+    86c0cfb0-f792-48aa-aef6-7f1df1dac5b1: Subheading # Subheading
     90bba6bb-88b4-4c3f-ae60-595e911f01ab: 'Heading Block' # Heading Block
     91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
     92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages # Pages
@@ -252,9 +254,11 @@ meta:
     479ec005-6f3d-4922-b8e5-da10aad75bdc: 'Data Tables' # Data Tables
     489ff905-09c2-4e5b-a990-e00ceda4050e: Tile # Tile
     517cdef8-d041-4ff8-857b-21f4f518180b: 'CTA Link' # CTA Link
+    524c6e05-4d16-4e49-86a1-edfb5ff0e70c: 'Animation Settings' # Animation Settings
     543e6694-6bf5-44ed-936b-11dd6e5ae656: 'Image Tile' # Image Tile
     643e4c17-f296-47ae-8806-45847ebda838: 'Pre Heading' # Pre Heading
     704cc16d-0736-4a6b-8d40-f267fd9ae8f9: 'Lead Block' # Lead Block
+    0774c028-80d9-40e2-a668-5558b97314d3: 'Headshot Videos' # Headshot Videos
     838ea19b-287d-4d04-bf6e-bce6a0de9c66: 'Dropdown Link' # Dropdown Link
     853a2eb8-d408-4486-afc1-8e24fd201174: Alignment # Alignment
     865ca38f-50ad-4e67-9a95-bd05ae709908: 'Embed Code' # Embed Code
@@ -262,7 +266,6 @@ meta:
     0990fff1-3f3d-49e5-a5b1-afdeb683d20e: 'CTA Tile: Large' # CTA Tile: Large
     1174bd31-94ac-4b8b-9fd9-b003f12684ae: 'Data Table' # Data Table
     01903d5e-0af8-4625-91a8-6d55351c5ec3: 'Video+Text Block' # Video+Text Block
-    1975bc95-4d7e-4ebc-bf4c-afc9b892c232: 'Factoid: 1-Up' # Factoid: 1-Up
     2160ef32-2844-4834-a6c8-c374a3efa675: 'Link Fields' # Link Fields
     02953e5d-2354-4eef-bbab-fd22e7b929c9: 'News Stories' # News Stories
     3030cab8-78a4-43c1-965d-edcb8d53848e: 'Contact Form Block' # Contact Form Block
@@ -277,20 +280,17 @@ meta:
     9804d284-d129-4704-8883-92fcd4aec0a8: 'Data Table: Full Width' # Data Table: Full Width
     13815e4c-247f-4715-b11d-7d23e38f23a4: 'Mega Menu' # Mega Menu
     0014573b-36a9-48c6-b523-64fbabf469f2: 'Button Style' # Button Style
-    17815f4d-c114-4bb6-898d-04b90f027987: Videos # Videos
     18834ccd-54b8-4774-a03c-b16f65a84197: Thumbnail # Thumbnail
     23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8: 'Page Header' # Page Header
     23395c4f-d839-4a1e-8291-195209ed2aed: 'General: Large Text' # General: Large Text
     32847f30-97a7-46a4-aa8a-1d662159da7d: 'Link to Asset' # Link to Asset
     34324a9e-7ce8-4902-8508-1d7046c34d97: 'Team Members' # Team Members
     40462e8a-a238-4adf-9317-22de98d2878f: 'Data Table' # Data Table
-    047123ae-3e61-4cb7-a121-3cacc20ecb29: Subheading # Subheading
     048761f8-a826-44ed-ad18-7137532f8c0a: 'Dropdown Link' # Dropdown Link
     54632eea-be0d-432e-9b18-64f95cdb3ddc: 'Lead Block' # Lead Block
     58712ece-7721-4366-900b-2cc4858ea5e0: Heading # Heading
     72143de2-34b2-4912-87dc-02d8eb4a1a0f: News # News
     86898b1e-5316-4337-9b1b-3b0b541bdf37: 'CTA Block' # CTA Block
-    87329a31-fda0-4466-9a1f-820d864020a5: 'Podcast Block' # Podcast Block
     98126def-cd93-43c8-b0eb-eafba4c890e0: 'Large | Small | Small' # Large | Small | Small
     115274b7-184f-4d2c-898d-b1f9504e6aef: Tables # Tables
     251036cc-4dfd-4b0f-9823-b109a413bd0b: Image # Image
@@ -304,10 +304,9 @@ meta:
     37449807-b7fe-4e44-bc5d-f3469359b775: Heading # Heading
     54458965-37a8-4b1e-839f-f19934f7a8e3: 'Img+Text Block' # Img+Text Block
     56133272-2baa-403c-9702-0c006d9c3676: 'Accordion Items' # Accordion Items
-    59384539-3753-46c8-b8fd-957ad529e2cc: Signatures # Signatures
     89795803-5837-4d6f-855d-1ae3c3980e55: 'Show Entry Title' # Show Entry Title
-    a0d960f3-8502-4120-b6d9-6180a00b14dc: 'Headshot Videos' # Headshot Videos
     a1c959ad-0f2a-4fc4-8654-11be8c04b62f: Tile # Tile
+    a1ec9be5-4a75-4566-b570-6c6e98d58bea: 'Factoid: 3-Up' # Factoid: 3-Up
     a6fd1543-ece4-4710-ad3b-195db37614a1: CTA # CTA
     a9e9ac13-8b36-4627-b8f4-43f5e99aede5: 'Responsive: Large' # Responsive: Large
     a40a3743-3dbc-48e7-a8cd-0196dd8021df: Common # Common
@@ -315,7 +314,7 @@ meta:
     a7681ee3-3f28-4c6f-9cb3-453e519368ae: Documents # Documents
     a8366a49-97a6-4a33-a567-a948f6a481ac: 'Section ID' # Section ID
     a28912df-88d7-46df-b6fa-105330a08e97: Tables # Tables
-    a7706131-f314-4ff1-a188-c3ff5caff0f3: 'Podcast Tile' # Podcast Tile
+    a66491bb-13e8-47d9-96be-aec160c4ced7: Text+Media # Text+Media
     aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e: Pre-heading # Pre-heading
     aa96dc63-49ff-4c1a-89df-d34525227436: 'Embed Code' # Embed Code
     aa92801f-a617-4884-96f7-2f325db59d9e: 'Element Fields' # Element Fields
@@ -331,6 +330,7 @@ meta:
     aefea3fc-ff45-4615-b305-9079e2cc6c44: 'Page Builder: Impact Report' # Page Builder: Impact Report
     af55010a-5968-4c25-91f8-dffbcb72d4db: Individuals # Individuals
     afb8f81e-7598-4dbb-8559-8aef5c3c42e6: 'Team Members' # Team Members
+    afc2de21-dd75-465b-8491-4ce699da74a6: Button # Button
     b00ccfa2-369c-471f-ae02-ae5ed2a9bae6: Thumbnail # Thumbnail
     b070c34a-c1d0-4e63-ad06-862e534e4843: 'Square: 600' # Square: 600
     b5e2bd07-e195-4564-94a1-74ce51723188: 'Link Group' # Link Group
@@ -339,9 +339,9 @@ meta:
     b99b6148-253d-4660-ac78-eaf2703b3856: 'Image: Mobile' # Image: Mobile
     b456d0e0-6918-43cd-82ff-a4eacd5f33cd: 'Responsive: Small' # Responsive: Small
     b613c984-854f-41b5-baea-92cd77be6d0c: Resource # Resource
+    b8904bf4-d4cd-4023-963d-3dbcebfabb78: Heading # Heading
     ba00da73-87ef-49e2-b1ed-2160ae5e4857: Homepage # Homepage
     baddf677-8996-4c34-b436-ea8341d9bed3: Heading # Heading
-    baec401b-bb78-45c7-871e-5b7df0a9e11f: 'Factoid: 3-Up' # Factoid: 3-Up
     bafdb566-dc62-40b5-9a8f-ca3010a690f9: 'Grant Years' # Grant Years
     bb9e3568-5ca9-4a9a-8534-c5e97ea203d7: 'Icon: Custom' # Icon: Custom
     be37b343-87c7-4b21-8965-829e7c555685: 'Video Tile' # Video Tile
@@ -357,10 +357,11 @@ meta:
     c932c240-70a9-4a42-b4e8-452cde3498d7: 'Resource Card' # Resource Card
     c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: Label # Label
     c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link' # CTA Link
+    c788306b-bf19-4c01-abae-ed7dd28d8a12: 'Factoid: 2-Up' # Factoid: 2-Up
     c937445d-2edd-4336-b195-241254cef98a: 'Icon: Custom' # Icon: Custom
     c8054437-50a0-4ca2-a78f-02657392c71c: 'Grant Year' # Grant Year
     cb377aa9-4075-4012-9aed-7f7baf560233: 'Text Link' # Text Link
-    ccc93f7c-cc50-49e0-8047-3d07a20a4594: 'Factoid: 2-Up' # Factoid: 2-Up
+    cc5df801-008a-4a72-aa81-bfeb16b7d2c4: 'Factoid: 1-Up' # Factoid: 1-Up
     cdb162a5-f0d2-429b-b5ac-588fc77a48da: Summary # Summary
     ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop' # Image: Desktop
     cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption # Caption
@@ -374,7 +375,7 @@ meta:
     d24ab695-25c2-4078-b7e4-b936aa667ac6: Pre-Eyebrow # Pre-Eyebrow
     d33d4fab-55e7-446f-8972-f4676b5ee14a: Heading # Heading
     d46a26f8-acd0-4f06-8f57-f8e755cbcddb: Label # Label
-    d69eb97c-2c56-4c04-b3fb-f2326923e643: Label # Label
+    d79c352e-f405-46a0-b6cd-bdfff5e4a81e: Video # Video
     d3166c3a-ca64-4122-be3f-716e818e0868: 'Card Title' # Card Title
     d62585aa-389f-4f17-a6f8-ea404770633a: 'Preview Cards' # Preview Cards
     d1801112-12c8-4cf2-aaea-f0154e2d39a3: News # News
@@ -399,7 +400,6 @@ meta:
     e96bcdab-a9b7-4e6d-b220-57bf0ce7b15f: 'Contact Form' # Contact Form
     e359f1b1-385c-4017-9823-ab7e63cd7efe: Citation # Citation
     e636fe1a-91ea-493b-81c8-354c9c08220f: 'Items Per Row' # Items Per Row
-    e921a8e2-43b6-4c2a-ae72-3df70a263bc5: Text+Factoid # Text+Factoid
     e11568a1-11e3-4147-ae18-1ff01fdcd4f7: 'CTA Tile: Small' # CTA Tile: Small
     e39974bd-ec97-4187-be91-a431e1a4fbd7: Eyebrow # Eyebrow
     e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item' # Accordion Item
@@ -410,15 +410,15 @@ meta:
     efb726bf-a523-4889-94d6-8865ebb534d9: 'Small | Small | Large' # Small | Small | Large
     f0fed55c-aae0-4c10-8ca5-6e4e5929674f: 'Grant Recipient' # Grant Recipient
     f06a4480-f195-4705-bd40-a33a08e72d0f: Images # Images
-    f3fe4e4d-8e53-4a2a-b2de-69563debd318: Factoid # Factoid
-    f12f2db8-a15c-4060-87ac-c02170fcb7eb: 'Background Color' # Background Color
     f69cfc32-4011-4eea-a32a-f5ae9fd5b24e: 'Page Builder: General' # Page Builder: General
     f92f1b34-68ad-48fd-a712-c4cdb6b682f0: 'Rate Table' # Rate Table
+    f700d39b-3a4f-4c99-a961-d9fb1f3df887: Subheading # Subheading
     f126506f-a32d-40b2-9d16-466e4201be40: Label # Label
-    fa3f1558-6d3a-4ee5-8fcc-8587a0fccfe9: Button # Button
+    faae928b-e4d7-4758-b4c1-0bc0bb55cac1: Text+Factoid # Text+Factoid
     fae047fe-30da-49d5-b8da-b1d6adafd530: 'Label: Custom' # Label: Custom
     fae55152-701b-4c22-9f50-453a213e9e05: Size # Size
     fb633af9-99e4-499c-b90f-60a8039f3046: 'Text Alignment' # Text Alignment
+    fba9a090-4a41-4c0b-8fda-85aa8b80f8e5: 'Podcast Block' # Podcast Block
     fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0: 'Text Fields' # Text Fields
     fdacfdd8-aa17-4862-b03c-7ed6c0177dee: 'Text Link' # Text Link
     ff02b5d9-24b9-4da0-858a-ad8253a72bb3: 'Text Link' # Text Link

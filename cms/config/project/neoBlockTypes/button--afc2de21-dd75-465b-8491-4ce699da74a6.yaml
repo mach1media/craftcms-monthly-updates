@@ -4,47 +4,41 @@ description: ''
 enabled: true
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  dd0a786d-275f-4267-91d3-f83ef4e2ee76:
+  0340cfae-58a4-4555-896e-ebb3cbb9e6a4:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: f06a4480-f195-4705-bd40-a33a08e72d0f # Images
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: df5a9533-fe40-4fee-bbe0-f381126f546c
-            userCondition: null
-            warning: null
-            width: 100
-        name: Graphics
-        uid: aa4e2ff9-df6c-4032-98dd-a857236702ba
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 58cb54dd-05b5-4d88-be3c-7f8686f72826 # Animation Settings
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8cf778c8-932c-4676-a473-aa890e18c70d
+            uid: d2584c5e-d887-460b-a68f-0744940bcc3c
             userCondition: null
             warning: null
-            width: 100
-        name: Animation
-        uid: eefb3994-28ee-4baa-9a9b-fa2fec8447ab
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 58d9a498-459c-40f7-a152-91dee46b3836
+            userCondition: null
+            warning: null
+            width: 25
+        name: Button
+        uid: 1b0cac3f-03be-4c98-8ddf-a47e29a59138
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: factoid2Up
+handle: button
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -54,5 +48,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Factoid: 2-Up'
+name: Button
 topLevel: false

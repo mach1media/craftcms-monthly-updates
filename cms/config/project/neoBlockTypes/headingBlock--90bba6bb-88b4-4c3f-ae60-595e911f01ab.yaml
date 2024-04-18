@@ -89,13 +89,13 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 58cb54dd-05b5-4d88-be3c-7f8686f72826 # Animation Settings
+            fieldUid: 524c6e05-4d16-4e49-86a1-edfb5ff0e70c # Animation Settings
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d98d2d36-1af0-4707-983f-8c764555d695
+            uid: cfe3190d-bc6e-4f5b-ba82-2e575216dc17
             userCondition: null
             warning: null
             width: 100
