@@ -622,11 +622,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.8.6",
+            "version": "4.8.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/8b0e1d1d221df854363b6cb399ef52a0f1a79ceb",
-                "reference": "8b0e1d1d221df854363b6cb399ef52a0f1a79ceb",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/81fc5457658ff2906e9c120f3d3f71621b1d9b73",
+                "reference": "81fc5457658ff2906e9c120f3d3f71621b1d9b73",
                 "shasum": ""
             },
             "require": {
@@ -714,7 +714,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-03-26T18:01:36+00:00"
+            "time": "2024-04-10T22:40:32+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -1251,11 +1251,11 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v2.0.4",
+            "version": "v2.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/093f2d9739cec57428e39ddadedfd4f3ae862c0f",
-                "reference": "093f2d9739cec57428e39ddadedfd4f3ae862c0f",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/ab0123052b42ad0867348f25df8c228f1ece8f14",
+                "reference": "ab0123052b42ad0867348f25df8c228f1ece8f14",
                 "shasum": ""
             },
             "require": {
@@ -1263,7 +1263,7 @@
                 "ext-mbstring": "*",
                 "masterminds/html5": "^2.0",
                 "phenx/php-font-lib": ">=0.5.4 <1.0.0",
-                "phenx/php-svg-lib": ">=0.3.3 <1.0.0",
+                "phenx/php-svg-lib": ">=0.5.2 <1.0.0",
                 "php": "^7.1 || ^8.0"
             },
             "suggest": {
@@ -1292,7 +1292,7 @@
             ],
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
-            "time": "2023-12-12T20:19:39+00:00"
+            "time": "2024-04-15T12:40:33+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -1674,11 +1674,11 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.13.33",
+            "version": "8.13.34",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/93eb45ae25fe7f816e08bf2ae13b240e32ab13ad",
-                "reference": "93eb45ae25fe7f816e08bf2ae13b240e32ab13ad",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/319810672f3f90d810e3cbc0071d0b7b329c2ec8",
+                "reference": "319810672f3f90d810e3cbc0071d0b7b329c2ec8",
                 "shasum": ""
             },
             "require": {
@@ -1723,7 +1723,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2024-03-25T07:35:47+00:00"
+            "time": "2024-04-05T09:45:18+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -2706,11 +2706,11 @@
         },
         {
             "name": "masterminds/html5",
-            "version": "2.8.1",
+            "version": "2.9.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/f47dcf3c70c584de14f21143c55d9939631bc6cf",
-                "reference": "f47dcf3c70c584de14f21143c55d9939631bc6cf",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/f5ac2c0b0a2eefca70b2ce32a5809992227e75a6",
+                "reference": "f5ac2c0b0a2eefca70b2ce32a5809992227e75a6",
                 "shasum": ""
             },
             "require": {
@@ -2756,7 +2756,7 @@
                 "serializer",
                 "xml"
             ],
-            "time": "2023-05-10T11:58:31+00:00"
+            "time": "2024-03-31T07:05:07+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
@@ -2793,15 +2793,15 @@
         },
         {
             "name": "miranj/craft-obfuscator",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/miranj/craft-obfuscator/zipball/411c264eddfa4a7d38d8dccd54c4f90f3d5f48ce",
-                "reference": "411c264eddfa4a7d38d8dccd54c4f90f3d5f48ce",
+                "url": "https://api.github.com/repos/miranj/craft-obfuscator/zipball/851c4b5b5ae0a0391e80a2d20421f2c17b757f4c",
+                "reference": "851c4b5b5ae0a0391e80a2d20421f2c17b757f4c",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0 || ^4.0",
+                "craftcms/cms": "^3.0 || ^4.0 || ^5.0",
                 "php": "^7.2.5 || ^8.0"
             },
             "type": "craft-plugin",
@@ -2842,7 +2842,7 @@
                 "issues": "https://github.com/miranj/craft-obfuscator/issues",
                 "source": "https://github.com/miranj/craft-obfuscator"
             },
-            "time": "2022-07-19T10:50:17+00:00"
+            "time": "2024-04-13T06:38:41+00:00"
         },
         {
             "name": "ml/iri",
@@ -3067,11 +3067,11 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.9.2",
+            "version": "2.9.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/437cb3628f4cf6042cc10ae97fc2b8472e48ca1f",
-                "reference": "437cb3628f4cf6042cc10ae97fc2b8472e48ca1f",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a30bfe2e142720dfa990d0a7e573997f5d884215",
+                "reference": "a30bfe2e142720dfa990d0a7e573997f5d884215",
                 "shasum": ""
             },
             "require": {
@@ -3125,7 +3125,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2023-10-27T15:25:26+00:00"
+            "time": "2024-04-12T20:52:51+00:00"
         },
         {
             "name": "mundschenk-at/php-typography",
@@ -3243,15 +3243,15 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.18",
+            "version": "1.0.19",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/e86f71c6e1eb46a5bc2e73898cd22315b5bbc1ed",
-                "reference": "e86f71c6e1eb46a5bc2e73898cd22315b5bbc1ed",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/a793406e62cd6c7d8e25ac5e0fb2208b4206815b",
+                "reference": "a793406e62cd6c7d8e25ac5e0fb2208b4206815b",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0-beta.1",
+                "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0",
                 "phpdocumentor/reflection-docblock": "^5.0.0"
             },
             "type": "yii2-extension",
@@ -3285,7 +3285,7 @@
                 "markdown",
                 "twig"
             ],
-            "time": "2024-03-19T20:14:01+00:00"
+            "time": "2024-04-15T16:35:48+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
@@ -3328,11 +3328,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.0.45",
+            "version": "4.0.48",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/03252189729e0f534880a8d3d6b23ad2a7e1b2ba",
-                "reference": "03252189729e0f534880a8d3d6b23ad2a7e1b2ba",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/4f81d00701e3c5cb6882dc76008ad7426177035f",
+                "reference": "4f81d00701e3c5cb6882dc76008ad7426177035f",
                 "shasum": ""
             },
             "require": {
@@ -3384,7 +3384,7 @@
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
                 "source": "https://github.com/nystudio107/craft-seomatic"
             },
-            "time": "2024-03-22T20:36:28+00:00"
+            "time": "2024-04-10T18:16:53+00:00"
         },
         {
             "name": "oscarotero/html-parser",
@@ -3492,11 +3492,11 @@
         },
         {
             "name": "phenx/php-svg-lib",
-            "version": "0.5.3",
+            "version": "0.5.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/0e46722c154726a5f9ac218197ccc28adba16fcf",
-                "reference": "0e46722c154726a5f9ac218197ccc28adba16fcf",
+                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/46b25da81613a9cf43c83b2a8c2c1bdab27df691",
+                "reference": "46b25da81613a9cf43c83b2a8c2c1bdab27df691",
                 "shasum": ""
             },
             "require": {
@@ -3521,7 +3521,7 @@
             ],
             "description": "A library to read, parse and export to PDF SVG files.",
             "homepage": "https://github.com/PhenX/php-svg-lib",
-            "time": "2024-02-23T20:39:24+00:00"
+            "time": "2024-04-08T12:52:34+00:00"
         },
         {
             "name": "php-science/textrank",
@@ -3614,18 +3614,20 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.3.0",
+            "version": "5.4.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/622548b623e81ca6d78b721c5e029f4ce664f170",
-                "reference": "622548b623e81ca6d78b721c5e029f4ce664f170",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/298d2febfe79d03fe714eb871d5538da55205b1a",
+                "reference": "298d2febfe79d03fe714eb871d5538da55205b1a",
                 "shasum": ""
             },
             "require": {
+                "doctrine/deprecations": "^1.1",
                 "ext-filter": "*",
-                "php": "^7.2 || ^8.0",
+                "php": "^7.4 || ^8.0",
                 "phpdocumentor/reflection-common": "^2.2",
-                "phpdocumentor/type-resolver": "^1.3",
+                "phpdocumentor/type-resolver": "^1.7",
+                "phpstan/phpdoc-parser": "^1.7",
                 "webmozart/assert": "^1.9.1"
             },
             "type": "library",
@@ -3649,11 +3651,11 @@
                 },
                 {
                     "name": "Jaap van Otterdijk",
-                    "email": "account@ijaap.nl"
+                    "email": "opensource@ijaap.nl"
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2021-10-19T17:43:47+00:00"
+            "time": "2024-04-09T21:13:58+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -3746,11 +3748,11 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.27.0",
+            "version": "1.28.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/86e4d5a4b036f8f0be1464522f4c6b584c452757",
-                "reference": "86e4d5a4b036f8f0be1464522f4c6b584c452757",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
+                "reference": "cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
                 "shasum": ""
             },
             "require": {
@@ -3768,7 +3770,7 @@
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2024-03-21T13:14:53+00:00"
+            "time": "2024-04-03T18:51:33+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -4652,11 +4654,11 @@
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "4.0.8",
+            "version": "4.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/8f6f373b59c4ae0be80a4285e8dc0d30b5c1cd5c",
-                "reference": "8f6f373b59c4ae0be80a4285e8dc0d30b5c1cd5c",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/57df1eb978a91a10ab8b660a72c8cc05b449c6f6",
+                "reference": "57df1eb978a91a10ab8b660a72c8cc05b449c6f6",
                 "shasum": ""
             },
             "require": {
@@ -4670,7 +4672,7 @@
                 "schemaVersion": "4.0.0",
                 "class": "benf\\neo\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-neo/blob/4.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.0.8.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.1.2.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -4698,10 +4700,10 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-neo/issues",
                 "source": "https://github.com/spicywebau/craft-neo",
-                "docs": "https://github.com/spicywebau/craft-neo/blob/4.0.8/README.md",
+                "docs": "https://github.com/spicywebau/craft-neo/blob/4.1.2/README.md",
                 "rss": "https://github.com/spicywebau/craft-neo/commits/4.x.atom"
             },
-            "time": "2024-03-22T05:17:19+00:00"
+            "time": "2024-04-09T05:06:47+00:00"
         },
         {
             "name": "statikbe/craft-config-values",
@@ -6309,11 +6311,11 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.4.36",
+            "version": "v5.4.38",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2e9c2b11267119d9c90d6b3fdce5e4e9f15e2e90",
-                "reference": "2e9c2b11267119d9c90d6b3fdce5e4e9f15e2e90",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/ae1d949ccc57d3f6662e4256b47ac9fbfa9651ae",
+                "reference": "ae1d949ccc57d3f6662e4256b47ac9fbfa9651ae",
                 "shasum": ""
             },
             "require": {
@@ -6363,7 +6365,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2024-02-15T11:19:14+00:00"
+            "time": "2024-03-19T10:19:25+00:00"
         },
         {
             "name": "symfony/var-exporter",
@@ -6744,11 +6746,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "2.1.9",
+            "version": "2.1.12",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/a61dd192cdb8c5684bd6e9bf01b03bd79af9c2b3",
-                "reference": "a61dd192cdb8c5684bd6e9bf01b03bd79af9c2b3",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/7ea8a00e8f8d0c9d18331ac0f5a2d6a66d3bf2b2",
+                "reference": "7ea8a00e8f8d0c9d18331ac0f5a2d6a66d3bf2b2",
                 "shasum": ""
             },
             "require": {
@@ -6809,7 +6811,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2024-03-29T12:24:58+00:00"
+            "time": "2024-04-18T00:35:25+00:00"
         },
         {
             "name": "verbb/redactor-tweaks",
@@ -6866,11 +6868,11 @@
         },
         {
             "name": "verbb/super-table",
-            "version": "3.0.12",
+            "version": "3.0.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/super-table/zipball/ba5d7b0ddbd2597c156a0e9913890d391ba54040",
-                "reference": "ba5d7b0ddbd2597c156a0e9913890d391ba54040",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/a4388a50579d3069318ee6307ebc81aa4417ad5d",
+                "reference": "a4388a50579d3069318ee6307ebc81aa4417ad5d",
                 "shasum": ""
             },
             "require": {
@@ -6916,16 +6918,11 @@
                 "docs": "https://github.com/verbb/super-table",
                 "rss": "https://github.com/verbb/super-table/commits/v2.atom"
             },
-            "time": "2023-10-05T04:08:28+00:00"
+            "time": "2024-04-10T13:08:25+00:00"
         },
         {
             "name": "verbb/tablemaker",
             "version": "4.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/verbb/tablemaker.git",
-                "reference": "d59b60c2607cd486967c0c5e931ddb69006247bb"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/verbb/tablemaker/zipball/d59b60c2607cd486967c0c5e931ddb69006247bb",
@@ -6950,7 +6947,6 @@
                     "verbb\\tablemaker\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6966,25 +6962,19 @@
             ],
             "description": "Create customizable and user-defined table fields.",
             "keywords": [
-                "Craft",
                 "cms",
+                "craft",
                 "craft-plugin",
                 "craftcms",
                 "table maker"
             ],
             "support": {
-                "docs": "https://github.com/verbb/tablemaker",
                 "email": "support@verbb.io",
                 "issues": "https://github.com/verbb/tablemaker/issues?state=open",
-                "rss": "https://github.com/verbb/tablemaker/commits/v2.atom",
-                "source": "https://github.com/verbb/tablemaker"
+                "source": "https://github.com/verbb/tablemaker",
+                "docs": "https://github.com/verbb/tablemaker",
+                "rss": "https://github.com/verbb/tablemaker/commits/v2.atom"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/verbb",
-                    "type": "github"
-                }
-            ],
             "time": "2024-03-26T12:54:28+00:00"
         },
         {
