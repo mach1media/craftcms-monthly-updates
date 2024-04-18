@@ -110,7 +110,19 @@ fieldLayouts:
             uid: 62b5b776-2cb4-4dc1-9a1c-642c13fdd101
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 453946f0-c58f-420b-a81c-ee81e0e88dbb
+            userCondition: null
+            warning: null
+            width: 25
         name: Description
         uid: 1e235bd6-2f4b-4eaa-ab3c-ec97299bd792
         userCondition: null

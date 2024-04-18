@@ -1,0 +1,483 @@
+columnSuffix: msxrvkxu
+contentColumnType: text
+fieldGroup: 07a87980-eb4d-4710-896e-772170d1d21d # Section Settings
+handle: animationSettings
+instructions: null
+name: 'Animation Settings'
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Animation
+            -
+              - handle
+              - animation
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - None
+                    -
+                      - value
+                      - none
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade In'
+                    -
+                      - value
+                      - fade
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade Up'
+                    -
+                      - value
+                      - fade-up
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade Down'
+                    -
+                      - value
+                      - fade-down
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade Left'
+                    -
+                      - value
+                      - fade-left
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade Right'
+                    -
+                      - value
+                      - fade-right
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade Up Right'
+                    -
+                      - value
+                      - fade-up-right
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade Up Left'
+                    -
+                      - value
+                      - fade-up-left
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade Down Right'
+                    -
+                      - value
+                      - fade-down-right
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Fade Down Left'
+                    -
+                      - value
+                      - fade-down-left
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Flip Up'
+                    -
+                      - value
+                      - flip-up
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Flip Down'
+                    -
+                      - value
+                      - fade-down
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Flip Left'
+                    -
+                      - value
+                      - flip-left
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Flip Right'
+                    -
+                      - value
+                      - flip-right
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Slide Up'
+                    -
+                      - value
+                      - slide-up
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Slide Down'
+                    -
+                      - value
+                      - slide-down
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Slide Left'
+                    -
+                      - value
+                      - slide-left
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Slide Right'
+                    -
+                      - value
+                      - slideright
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom In'
+                    -
+                      - value
+                      - zoom-in
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom In Up'
+                    -
+                      - value
+                      - zoom-in-up
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom In Down'
+                    -
+                      - value
+                      - zoom-in-down
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom In Left'
+                    -
+                      - value
+                      - zoom-in-left
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom In Right'
+                    -
+                      - value
+                      - zoom-in-right
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom Out'
+                    -
+                      - value
+                      - zoom-out
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom Out Up'
+                    -
+                      - value
+                      - zoom-out-up
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom Out Down'
+                    -
+                      - value
+                      - zoom-out-down
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom Out Left'
+                    -
+                      - value
+                      - zoom-out-left
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Zoom Out Right'
+                    -
+                      - value
+                      - zoom-out-right
+                    -
+                      - default
+                      - false
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Staggered
+            -
+              - handle
+              - staggered
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'No'
+                    -
+                      - value
+                      - 'no'
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Yes'
+                    -
+                      - value
+                      - 'yes'
+                    -
+                      - default
+                      - false
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Delay (seconds)'
+            -
+              - handle
+              - delay
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '0.0'
+                    -
+                      - value
+                      - '0'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '0.5'
+                    -
+                      - value
+                      - '500'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '1.0'
+                    -
+                      - value
+                      - '1000'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '1.5'
+                    -
+                      - value
+                      - '1500'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '2.0'
+                    -
+                      - value
+                      - '2000'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '2.5'
+                    -
+                      - value
+                      - '2500'
+                    -
+                      - default
+                      - false
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - none
+        -
+          - col2
+          - 'no'
+        -
+          - col3
+          - '0'
+  maxRows: null
+  minRows: null
+  staticRows: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

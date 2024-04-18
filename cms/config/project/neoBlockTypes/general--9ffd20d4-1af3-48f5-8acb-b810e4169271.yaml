@@ -59,13 +59,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: cec407c4-ded3-4457-9ffd-7caf96ab0281 # Caption
+            fieldUid: 59384539-3753-46c8-b8fd-957ad529e2cc # Signatures
             instructions: null
-            label: Signature
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 412e8bc9-0b7a-44e8-b25b-13a17c7ef3d6
+            uid: 95090408-cbd9-44eb-8526-7af7d108ad3d
             userCondition: null
             warning: null
             width: 100

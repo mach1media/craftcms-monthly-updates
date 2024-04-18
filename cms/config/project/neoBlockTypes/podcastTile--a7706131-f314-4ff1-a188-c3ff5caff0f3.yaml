@@ -4,32 +4,32 @@ description: ''
 enabled: true
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  1ef619c5-431a-433e-80e1-5a568e77f616:
+  b9356146-817c-40d3-bd7a-ff66c3d41802:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6 # Pre-Eyebrow
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f0182bba-91b7-49b7-bfaa-a2651b325a13
+            uid: 220cd65d-036c-4d26-bc39-ea114a47932d
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cfddf0ac-0a5f-4fe0-ae07-2e37d4c50066
+            uid: d0840dff-208b-4331-a8ed-169d224a859a
             userCondition: null
             warning: null
             width: 100
@@ -41,70 +41,40 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7c958974-7a39-4339-bb42-f9f4d49459cd
+            uid: 8c3d90e4-842e-4464-a169-55e6eb894d93
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            fieldUid: 9f83996e-3759-41eb-905a-a0101283ce27 # Subheading
             instructions: null
-            label: Subheading
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a3022adc-ed73-4f9a-9339-02b367a7e90f
+            uid: 1123f3ac-be88-439e-b171-fc4e7f8f3e39
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: d9994972-0f59-4134-b9b1-cd07d76bf05f
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
           -
             elementCondition: null
-            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96 # Text Link
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ee338594-9239-40db-9724-40bcb778ee85
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b9033f5b-da75-48e9-a799-5443a8bfe62b
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 58cb54dd-05b5-4d88-be3c-7f8686f72826 # Animation Settings
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d98d2d36-1af0-4707-983f-8c764555d695
+            uid: fa4b6fe8-9980-4643-ba27-20fdf3d1d926
             userCondition: null
             warning: null
             width: 100
-        name: 'Section Settings'
-        uid: f32492c4-7f1d-4b0f-84cc-caa3839921f1
+        name: 'Podcast Tile'
+        uid: cc5606dd-de31-416f-ac8c-060eee282e4c
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: headingBlock
+handle: podcastTile
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -114,5 +84,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Heading Block'
-topLevel: true
+name: 'Podcast Tile'
+topLevel: false

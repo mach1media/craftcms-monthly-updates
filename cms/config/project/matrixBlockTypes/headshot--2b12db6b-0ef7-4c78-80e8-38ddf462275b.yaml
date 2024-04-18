@@ -1,0 +1,147 @@
+field: a0d960f3-8502-4120-b6d9-6180a00b14dc # Headshot Videos
+fieldLayouts:
+  9859a18b-1abe-4e04-a324-080ebcd2ce5e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 45f4f18c-dbe3-43f1-9cbe-eabea6ed064f # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f7370b6-6d38-40e3-97ed-47447c7be813
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d69eb97c-2c56-4c04-b3fb-f2326923e643 # Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 935d5f7d-36f8-4f68-a7eb-2d462733107d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 17815f4d-c114-4bb6-898d-04b90f027987 # Videos
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef59ed51-03fa-4eb8-9dd9-42a16f34fb6e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 12c63a5d-e8a4-45df-ba4f-feab91a250d5
+        userCondition: null
+fields:
+  45f4f18c-dbe3-43f1-9cbe-eabea6ed064f: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add an image'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  17815f4d-c114-4bb6-898d-04b90f027987: # Videos
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: videos
+    instructions: "1. Click the [+ Add a video] button\r\n2. Click the [EMBED] button at the bottom of the file picker popup\r\n3. Copy and paste the video URL into the field that appears\r\n4. Click [Save] button after video preview appears\r\n5. Click [Select] button at the bottom of the file picker window "
+    name: Videos
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add a Video'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d69eb97c-2c56-4c04-b3fb-f2326923e643: # Label
+    columnSuffix: irrofggm
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: null
+    name: Label
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: headshot
+name: Headshot
+sortOrder: 1

@@ -1,0 +1,67 @@
+columnSuffix: wqttmcvc
+contentColumnType: text
+fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
+handle: signatures
+instructions: null
+name: Signatures
+searchable: false
+settings:
+  addRowLabel: 'Add a signature'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Signature
+            -
+              - handle
+              - signature
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Role
+            -
+              - handle
+              - role
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - Organization
+            -
+              - handle
+              - organization
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults: null
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

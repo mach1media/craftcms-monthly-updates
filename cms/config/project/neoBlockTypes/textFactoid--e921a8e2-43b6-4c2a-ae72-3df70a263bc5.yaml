@@ -1,11 +1,50 @@
-childBlocks: null
+childBlocks:
+  - factoid1Up
+  - factoid2Up
+  - factoid3Up
+  - button
 conditions: null
 description: ''
 enabled: true
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  35a05160-cfa6-49ab-a653-5928292513a4:
+  c919e975-55d4-417a-ad8b-cea008292a61:
     tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4eda64bd-cb19-4d02-84ce-acebb228bb4f # Factoid Description Box
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7abf9663-d2b4-47c2-84bc-eaa54d92c40b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
+            instructions: null
+            label: 'Factoid Position [L|R]'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c91b15b-91ad-47df-a545-224dfe2fee0e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
+            uid: 608fc2a9-0478-44f4-86ec-2e271939cfd5
+            userCondition: null
+        name: Factoid
+        uid: 97cbe6d6-8d49-41fd-807f-f9dc1f599c3f
+        userCondition: null
       -
         elementCondition: null
         elements:
@@ -17,10 +56,22 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c5e47a34-a751-44d3-9278-25fa5036a8d9
+            uid: 6dfd8d5d-94f0-477a-bf7a-068064ed4b43
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2dfbd5f5-beb3-4c39-b9f2-cbf1ae392d77
+            userCondition: null
+            warning: null
+            width: 25
           -
             elementCondition: null
             fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
@@ -29,19 +80,19 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 06e14924-a40c-49ff-bf6c-83f50484a9b8
+            uid: 58e74411-a391-4644-ad28-7c1bc9b00fd9
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4cb94af4-c7a2-4f96-a909-48ae615f62c9
+            uid: e593ace2-e3c8-42b8-811d-847ed0270457
             userCondition: null
             warning: null
             width: 100
@@ -53,36 +104,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0fbab881-f960-48b9-b1c5-ee17659dc12e
+            uid: 7bfd683f-d625-415b-9a1f-dd58d9234ed9
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: 59384539-3753-46c8-b8fd-957ad529e2cc # Signatures
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: faa2cca2-f618-4b98-b0b7-85250b71a467
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b1a8a9ed-c820-491a-ac9f-5128b55317ee
-            userCondition: null
-            warning: null
-            width: 100
-        name: Content
-        uid: 4927ec01-316b-456c-86ef-73bc62f72253
+        name: Text
+        uid: 00ebb387-9fdc-4e80-bbd2-1e08910824bd
         userCondition: null
       -
         elementCondition: null
@@ -95,7 +122,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: eb131433-1a98-40eb-9be6-51565f01288b
+            uid: 1b651df7-c8c4-48c5-bdc2-e1e69c310d70
             userCondition: null
             warning: null
             width: 25
@@ -107,28 +134,16 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e615d377-a0d6-491f-9777-2ad037dec425
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 12c76c00-ca72-4f90-9c45-11e4ec644668
+            uid: 0e1d6b10-56a9-4e6c-89bb-21c4d0fecfc3
             userCondition: null
             warning: null
             width: 25
         name: 'Section Settings'
-        uid: 6fa7df07-978a-4849-9691-fee910609882
+        uid: dc1ad310-a9e1-41e4-b215-1dc67fe204ad
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: generalLargeText
+handle: textFactoid
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -138,5 +153,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'General: Large Text'
+name: Text+Factoid
 topLevel: true
