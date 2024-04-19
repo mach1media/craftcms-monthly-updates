@@ -4,11 +4,43 @@
 @include component('report') {
 	
 	@include element('heading') {
+		@include base-font-light;
+		text-transform: none;
+		font-size: 32px;
+		letter-spacing: normal;
+		line-height: var(--bs-body-line-height);
+
 		.u-font-script-alt {
-			font-size: 150%;
 			display: inline-block;
-			line-height: var(--bs-body-line-height);
+			font-size: 175%;
+			//line-height: var(--bs-body-line-height);
+			padding: .1em;
+
+			.aos-animate & {
+				@include clip-reveal-ltr;
+			}
+			[data-aos-delay="1500"] &:before {
+				animation-delay: 1.5s;
+			}
+			[data-aos-delay="2000"] &:before {
+				animation-delay: 2s;
+			}
+			[data-aos-delay="2500"] &:before {
+				animation-delay: 2.5s;
+			}
+			[data-aos-delay="3000"] &:before {
+				animation-delay: 3s;
+			}
 		}
+	}
+
+	@include element('preheading') {
+		@include base-font-semibold;
+		color: map-get($theme-colors, 'primary');
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: .5em;
+		line-height: 2em;
 	}
 
 	@include element('subheading') {
@@ -23,15 +55,55 @@
 	@include element('preeyebrow') {
 		position: relative;
 		overflow: hidden;
-		@include base-font-semibold;
-		color: map-get($theme-colors, 'secondary');
+		@include base-font-bold;
+		color: map-get($theme-colors, 'primary');
 		text-transform: uppercase;
-		font-size: 16px;
+		font-size: 20px;
 		letter-spacing: .5em;
 		line-height: 2em;
 
-		padding-bottom: $gutter/2;
-		border-bottom: 2px solid map-get($theme-colors, 'primary');
+		// padding-bottom: $gutter/2;
+		// border-bottom: 2px solid map-get($theme-colors, 'primary');
+
+		span {
+			position: relative;
+			display: block;
+			padding-top: $gutter / 2;
+			border-top: 1px solid map-get($theme-colors, 'primary');
+		}
+
+		@include media-breakpoint-up(sm) {
+			span {
+				position: relative;
+				display: inline-block;
+				padding-top: 0; //$gutter / 2;
+				border-top: none;//1px solid map-get($theme-colors, 'primary');
+	
+				&:after {
+					content: "";
+					position: absolute;
+					display: block;
+					width: 1000%;
+					top: 50%;
+					left: calc(100% + 1em);
+					border-top: 1px solid map-get($theme-colors, 'primary');
+				}
+			}
+	
+			&.text-end {
+				span {
+					&:after {
+						content: "";
+						position: absolute;
+						display: block;
+						width: 2000%;
+						top: 50%;
+						left: calc(-2000% - 1em);
+						border-top: 1px solid map-get($theme-colors, 'primary');
+					}
+				}
+			}
+		}
 	}
 
 	@include element('eyebrow') {

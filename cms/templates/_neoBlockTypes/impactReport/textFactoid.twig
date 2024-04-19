@@ -1,0 +1,163 @@
+{##
+ # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: TEXT+FACTOID
+ #}
+{% set aosDelay = 0 %}
+<section id="section-{{ block.id }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="row justify-content-between">
+					{% if block.preEyebrow is defined and block.preEyebrow != '' %}
+					<div class="col-12 mb-4">
+						<p class="c-report__preeyebrow text-{{ block.textAlignment == 'right' ? 'end' : 'start' }} mb-3"><span>{{ block.preEyebrow | raw }}</span></p>
+					</div>
+					{% endif %}
+					
+					<div class="col-12 col-md-6 mb-5 mb-md-0{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">
+						{% if block.factoidDescriptionBox | length %}
+							{% for row in block.factoidDescriptionBox %}
+								<div class="d-block w-100 {{ row.backgroundColor }} bg-opacity-25 p-3 p-md-5 mb-3 rounded d-none"
+										data-aos="fade-{{ block.imagePositionLR == 'right' ? 'left' : 'right' }}"
+										data-aos-duration="1500"
+										data-aos-anchor="#section-{{ block.id }}">
+									{% if row.heading != '' %}
+										<h2 class="c-report__heading lh-1 mb-4">{{ row.heading | raw }}</h2>
+									{% endif %}
+
+									{% if row.subheading is defined and row.subheading != '' %}
+									<p class="c-report__subheading lh-1">{{ row.subheading | raw }}</p>
+									{% endif %}
+									
+									{% if row.description is defined and row.description != '' %}
+									<div class="c-wysiwyg u-last-child">
+										{{ row.description }}
+									</div>
+									{% endif %}
+								</div>
+							{% endfor %}
+						{% endif %}
+						
+						{# FACTOID CLUSTERS #}
+						{#
+						{% if block.image | length %}
+							<p>{% include "_fields/image" with {'img': block.image.one, 'class': 'd-block img-fluid w-100'} %}</p>
+						{% endif %}
+						#}
+						{% for childBlock in block.children.type('not button').all() %}
+							{% set animation = childBlock.animationSettings[0] %}
+							{% set aosDelay = animation.delay + 500 %}
+							
+							{% if childBlock.type == 'factoid1Up' and childBlock.image | length %}
+								<p{% if animation %}
+									class="d-none"
+									data-aos="{{ animation.animation }}"
+									data-aos-duration="1500"
+									data-aos-delay="{{ aosDelay }}"
+									data-aos-anchor="#section-{{ block.id }}"
+									{% endif %}>
+									{% include "_fields/image" with {'img': childBlock.image.one, 'class': 'd-block img-fluid w-100'} %}
+								</p>
+							
+							{% elseif childBlock.type == 'factoid2Up' %}
+								<div class="row">
+									{% for img in childBlock.images.limit(2) %}
+										<div class="col-6{% if block.imagePositionLR == 'left' %} order-md-{{ 2 - loop.index0 }}{% endif %}{% if animation %} d-none{% endif %}"
+											{% if animation %}
+												data-aos="{{ animation.animation }}"
+												data-aos-duration="1500"
+												data-aos-delay="{{ aosDelay }}"
+												data-aos-anchor="#section-{{ block.id }}"
+											{% endif %}>
+											<img class="d-block w-100 img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
+										</div>
+										{% if animation.staggered == 'yes' %}
+											{% set aosDelay = aosDelay + 500 %}
+										{% endif %}
+									{% endfor %}
+								</div>
+
+							{% elseif childBlock.type == 'factoid3Up' %}
+								<div class="c-factoid__3up c-factoid__3up--{{ block.imagePositionLR }}">
+									<div class="c-factoid__3up-col-1">
+										<div class="c-factoid__3up-stack">
+											{% for img in childBlock.images.limit(2) %}
+												<div{% if animation %}
+														class="d-none"
+														data-aos="{{ animation.animation }}"
+														data-aos-duration="1500"
+														data-aos-delay="{{ aosDelay }}"
+														data-aos-anchor="#section-{{ block.id }}"
+													{% endif %}>
+													<img class="d-block w-100 img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
+												</div>
+												{% if animation.staggered == 'yes' %}
+													{% set aosDelay = aosDelay + 500 %}
+												{% endif %}
+											{% endfor %}
+										</div>
+									</div>
+									<div class="c-factoid__3up-col-2">
+										{% set img = childBlock.images.limit(3) | last %}
+										<img class="d-block w-100 img-fluid{% if animation %} d-none{% endif %}" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}"{% if animation %}
+											data-aos="{{ animation.animation }}"
+											data-aos-duration="1500"
+											data-aos-delay="{{ aosDelay }}"
+											data-aos-anchor="#section-{{ block.id }}"
+										{% endif %}>
+										{% if animation.staggered == 'yes' %}
+											{% set aosDelay = aosDelay + 500 %}
+										{% endif %}
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+
+
+					<div class="col-12 col-md-5{% if block.imagePositionLR == 'right' %} order-md-1{% endif %}">
+						<div class="d-none"
+								data-aos="fade"
+								data-aos-duration="1500"
+								data-aos-delay="{{ aosDelay }}"
+								data-aos-anchor="#section-{{ block.id }}">
+							{% if block.eyebrow is defined and block.eyebrow != '' %}
+							<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
+							{% endif %}
+
+							{# animated svg heading or static heading #}
+							{% if block.image | length %}
+								{% set svg = block.image.one %}
+								<object id="animatedSvg{{ svg.id }}" type="image/svg+xml" data="{{ svg.url }}" class="mb-4"></object>
+								{#
+								{% js %}
+								new Vivus('animatedSvg{{ svg.id }}', {duration: 200});
+								{% endjs %}
+								#}
+							{% elseif block.heading is defined and block.heading != '' %}
+							<h2 class="c-report__heading">{{ block.heading | raw }}</h2>
+							{% endif %}
+
+							{% if block.preheading is defined and block.preheading != '' %}
+							<p class="c-report__subheading">{{ block.preheading | raw }}</p>
+							{% endif %}
+							
+							{% if block.description is defined and block.description != '' %}
+							<div class="c-wysiwyg{% if block.button | length %} mb-4{% endif %}">
+								{% apply enkode_emails %}
+									{{ block.description }}
+								{% endapply %}
+							</div>
+							{% endif %}
+
+							{% for childBlock in block.children.type('button').all() %}
+								{% if childBlock.button.getLink() %}
+								<p class="mt-4">{% include "_fields/button" with {'button': childBlock.button, 'color': 'secondary', 'style': childBlock.buttonStyle} %}</p>
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

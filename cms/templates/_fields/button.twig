@@ -1,6 +1,11 @@
 {% if button | length %}
 	{% set classes = ['btn'] %}
-	{% set classes = color is defined ? classes|merge([color]) : classes|merge(['btn-primary']) %}
+	{% if color is defined and color != '' %}
+		{% set classes = classes|merge([color]) %}
+	{% endif %}
+	{% if style is defined and style != '' %}
+		{% set classes = classes|merge([style]) %}
+	{% endif %}
 	{% if class is defined and class != '' %}
 		{% set classes = classes|merge([class]) %}
 	{% endif %}

@@ -3,38 +3,35 @@
  */
 @include component('factoid') {
 	
-	@include element('description') {
-		padding-right: $gutter/2;
-		padding-left: $gutter/2;
+	@include element('3up') {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		gap: $gutter;
 
-		@include media-breakpoint-between(md,lg) {
-			width: map-get($container-max-widths, 'md');
-		}
-		@include media-breakpoint-between(lg,xl) {
-			width: map-get($container-max-widths, 'lg') / 2;
-		}
-		@include media-breakpoint-between(xl,xxl) {
-			width: map-get($container-max-widths, 'xl') / 2;
-		}
-		@include media-breakpoint-up(xxl) {
-			width: map-get($container-max-widths, 'xxl') / 2;
+		@include modifier('left') {
+			.c-factoid__3up-col-1 {
+				order: 2;
+			}
+			.c-factoid__3up-col-2 {
+				order: 1;
+			}
 		}
 	}
-
-	@include element('image') {
-		&.start {
-			padding: $gutter $gutter*2 0 0;
-		}
-		&.end {
-			padding: $gutter 0 0 $gutter*2;
-		}
+	
+	@include element('3up-col-1') {
+		flex: 0 1 45%;
 	}
 
-	@include element('heading') {
-		.u-font-script-alt {
-			font-size: 200%;
-			display: inline-block;
-			line-height: var(--bs-body-line-height);
-		}
+	@include element('3up-col-2') {
+		flex: 0 1 55%;
+	}
+
+	@include element('3up-stack') {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		gap: $gutter;
 	}
 }

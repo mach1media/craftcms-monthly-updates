@@ -1,38 +1,47 @@
 {##
- # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: GENERAL
+ # IMPACT REPORT PAGE BUILDER: GENERAL
  #}
-<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+<section id="{{ sectionId }}"  class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-12 col-12 col-md-10 col-lg-8 lead text-{{ block.textAlignment }}">
+			<div class="col-12 col-md-10 col-lg-8 lead">
 				{% if block.preEyebrow is defined and block.preEyebrow != '' %}
-				<p class="c-report__preeyebrow mb-3"><span>{{ block.preEyebrow }}</span></p>
+				<p class="c-report__preeyebrow mb-3"><span>{{ block.preEyebrow | raw }}</span></p>
 				{% endif %}
 				
 				{% if block.eyebrow is defined and block.eyebrow != '' %}
 				<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
 				{% endif %}
-
+				
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 
-				{% if block.preheading is defined and block.preheading != '' %}
-				<p class="c-report__subheading">{{ block.preheading | raw }}</p>
+				{% if block.description is defined and block.description != '' %}
+				<div class="c-wysiwyg">{{ block.description }}</div>
 				{% endif %}
-				
-				{% if block.description is defined and block.description != ''
-				   or block.caption is defined and block.caption != '' %}
-				<div class="c-wysiwyg{% if block.buttons | length %} mb-4{% endif %}">
-					{% apply enkode_emails %}
-						{{ block.description }}
-					{% endapply %}
 
-					{% if block.caption is defined and block.caption != '' %}
-						<p class="c-report__signature">{{ block.caption | raw }}</p>
-					{% endif %}
-				</div>
+				{% if block.signatures is defined and block.signatures | length %}
+				<div class="d-flex justify-content-between mt-5 flex-wrap flex-md-nowrap">
+					{% for row in block.signatures %}
+					<div class="mb-5 mb-md-0">
+						{% if row.signature != '' %}
+							<p class="c-report__signature mb-0">{{ row.signature | raw }}</p>
+						{% endif %}
+
+						{% if row.role != '' %}
+							<p class="mb-0">{{ row.role | raw }}</p>
+						{% endif %}
+						
+						{% if row.organization != '' %}
+							<p class="mb-0">{{ row.organization | raw }}</p>
+						{% endif %}
+					</div>
+					{% endfor %}
+				</div>		
 				{% endif %}
-				
-				{% include "_fields/buttons" with {'buttons': block.buttons} %}
+
+				{% if block.button.getLink() %}
+				<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary', 'style': block.buttonStyle} %}</p>
+				{% endif %}
 			</div>
 		</div>
 	</div>

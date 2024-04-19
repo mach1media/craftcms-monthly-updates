@@ -1,24 +1,70 @@
 {##
- # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: HEADING BLOCK
+ # IMPACT REPORT PAGE BUILDER: GENERAL
  #}
+{% set animation = block.animationSettings[0] %}
+{% set aosDelay = animation.delay %}
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-md-10 col-lg-8 text-center">
-				{% if block.preEyebrow is defined and block.preEyebrow != '' %}
-				<p class="c-report__preeyebrow mb-3"><span>{{ block.preEyebrow }}</span></p>
-				{% endif %}
-				
 				{% if block.eyebrow is defined and block.eyebrow != '' %}
-				<p class="c-report__eyebrow c-report__eyebrow--centered mb-3"><span>{{ block.eyebrow }}</span></p>
-				{% endif %}
-				
-				{% if block.heading is defined and block.heading != '' %}
-				<h2 class="c-report__heading">{{ block.heading | raw }}</h2>
+					{% apply spaceless %}
+					<div{% if animation %} data-aos="{{ animation.animation }}" data-aos-duration="1500" data-aos-delay="{{ aosDelay }}"{% endif %}>
+						<p class="c-report__eyebrow c-report__eyebrow--centered mb-3">
+							<span>{{ block.eyebrow | raw }}</span>
+						</p>
+						{% if animation.staggered == 'yes' %}
+							{% set aosDelay = aosDelay + 500 %}
+						{% endif %}
+					</div>
+					{% endapply %}
 				{% endif %}
 
+				{% if block.image | length %}
+					{% set img = block.image.one %}
+					{% if img.extension == 'svg' %}
+						{{ svg(img) | attr({id:'animatedSvg' ~ img.id})}}
+						{#
+						{% js %}
+						animatedSvg{{ img.id }} = new Vivus('animatedSvg{{ img.id }}', {duration: 200});
+						{% endjs %}
+						#}
+					{% else %}
+						<img class="img-fluid" src="{{ img.src }}" alt="{{ img.alt ?: img.title }}">
+					{% endif %}
+				{% elseif block.heading is defined and block.heading != '' %}
+					{% apply spaceless %}
+					<div{% if animation %}
+							class="d-none"
+							data-aos="{{ animation.animation }}"
+							data-aos-duration="1500" 
+							data-aos-delay="{{ aosDelay }}"
+						{% endif %}>
+						<h1 class="c-report__heading">
+							{{ block.heading | raw }}
+						</h1>
+						{% if animation.staggered == 'yes' %}
+							{% set aosDelay = aosDelay + 500 %}
+						{% endif %}
+					</div>
+					{% endapply %}
+				{% endif %}
+				
 				{% if block.preheading is defined and block.preheading != '' %}
-				<h3 class="c-report__subheading">{{ block.preheading | raw }}</h3>
+					{% apply spaceless %}
+					<div class="c-report__subheading{% if animation %} d-none{% endif %}"
+						{% if animation %}
+							data-aos="{{ animation.animation }}"
+							data-aos-duration="1500"
+							data-aos-delay="{{ aosDelay }}"
+						{% endif %}
+						>
+						{{ block.preheading | raw }}
+					</div>
+					{% if animation.staggered == 'yes' %}
+						{% set aosDelay = aosDelay + 500 %}
+					{% endif %}
+					{% endapply %}
 				{% endif %}
 			</div>
 		</div>

@@ -5,6 +5,7 @@
 $theme-colors: (
   "primary":    $color-navy,
   "secondary":  $color-tan,
+  "tertiary":   $color-blue,
   "primary-light":    lighten($color-navy, 20%),
   "secondary-light":  lighten($color-tan, 20%),
   "primary-extralight":    lighten($color-navy, 70%),
@@ -19,7 +20,8 @@ $theme-colors: (
   "black":      black,
   "silver":     $color-silver,
   "navy":       $color-navy,
-  "tan":        $color-tan
+  "tan":        $color-tan,
+  "blue":       $color-blue
 );
 
 /*

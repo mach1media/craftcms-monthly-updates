@@ -1,26 +1,32 @@
 {##
  # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: FACTOID
  #}
-<section class="c-block c-factoid{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
-	<div class="container-fluid px-0">
-		<div class="row align-items-center g-0">
-			<div class="col-12 col-lg-6 d-flex justify-content-center{% if block.imagePositionLR == 'left' %} justify-content-lg-start order-lg-2{% else %} justify-content-lg-end pe-5{% endif %}">
-				<div class="c-factoid__description end">
-					<div>
+<section class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-12 col-md-5 mb-5 mb-md-0{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">
+						{% if block.image | length %}
+							<p>{% include "_fields/image" with {'img': block.image.one, 'class': 'd-block img-fluid w-100'} %}</p>
+						{% endif %}
+					</div>
+
+					<div class="col-12 col-md-6{% if block.imagePositionLR == 'right' %} order-md-1{% endif %}">
 						{% if block.preEyebrow is defined and block.preEyebrow != '' %}
-						<p class="c-report__preeyebrow mb-3"><span>{{ block.preEyebrow }}</span></p>
+						<p class="c-report__preeyebrow mb-3"><span>{{ block.preEyebrow | raw }}</span></p>
 						{% endif %}
 
 						{% if block.eyebrow is defined and block.eyebrow != '' %}
 						<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
 						{% endif %}
-						
+
 						{% if block.heading is defined and block.heading != '' %}
-						<h2 class="c-factoid__heading mb-4">{{ block.heading | raw }}</h2>
+						<h2 class="c-report__heading">{{ block.heading | raw }}</h2>
 						{% endif %}
 
 						{% if block.preheading is defined and block.preheading != '' %}
-						<h3 class="c-report__subheading mb-5">{{ block.preheading | raw }}</h3>
+						<p class="c-report__subheading">{{ block.preheading | raw }}</p>
 						{% endif %}
 						
 						{% if block.description is defined and block.description != '' %}
@@ -31,29 +37,11 @@
 						</div>
 						{% endif %}
 
-						{% if block.button | length %}
-						<p>
-							{% if block.button.getLink() %}
-								{% include "_fields/button" with {'button': block.button} %}
-							{% endif %}
-						</p>
+						{% if block.button.getLink() %}
+						<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary', 'style': block.buttonStyle} %}</p>
 						{% endif %}
 					</div>
 				</div>
-			</div>
-			
-			<div class="col-12 col-lg-6{% if block.imagePositionLR == 'left' %} order-lg-1 pe-5{% endif %}">
-				{% if block.imageDesktop | length %}
-				<div class="c-factoid__image u-rounded-top-{{ block.imagePositionLR == 'left' ? 'right' : 'left' }}">
-					{% include "_fields/image" with {'img': block.imageDesktop.one, 'class': 'd-block img-fluid w-100'} %}
-				</div>
-				{% endif %}
-				
-				{% if block.imageMobile | length %}
-				<div class="c-factoid__stat mt-3">
-					{% include "_fields/image" with {'img': block.imageMobile.one, 'class': 'd-block img-fluid w-100'} %}
-				</div>
-				{% endif %}
 			</div>
 		</div>
 	</div>

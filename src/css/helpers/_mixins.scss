@@ -80,6 +80,42 @@
 }
 
 
+
+
+
+//
+// clip reveals
+//
+@mixin clip-reveal-ltr {
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: 0%;
+		right: 0;
+		background-color: $body-bg;
+		@include z-1;
+
+		animation-duration: 2s;
+		animation-delay: 1s;
+		animation-name: clip-reveal-ltr;
+		animation-fill-mode: both;
+	}
+}
+@keyframes clip-reveal-ltr {
+	from {
+		left: 0%;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+
 @mixin vertically-centered {
 	display: flex;
 	align-items: center;

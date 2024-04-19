@@ -1,0 +1,180 @@
+{##
+ # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: TEXT+HEADSHOT VIDEOS
+ #}
+{% set aosDelay = 0 %}
+<section id="section-{{ block.id }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="row justify-content-between">
+					{% if block.preEyebrow is defined and block.preEyebrow != '' %}
+					<div class="col-12 mb-4">
+						<p class="c-report__preeyebrow text-{{ block.textAlignment == 'right' ? 'end' : 'start' }} mb-3"><span>{{ block.preEyebrow | raw }}</span></p>
+					</div>
+					{% endif %}
+					
+					<div class="col-12 col-md-5 mb-5 mb-md-0{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">
+						{% if block.factoidDescriptionBox | length or block.headshotVideos | length %}
+							{% for row in block.factoidDescriptionBox %}
+								<div class="d-block w-100 {{ row.backgroundColor }} bg-opacity-25 p-3 p-md-5 mb-3 rounded d-none"
+									data-aos="fade-{{ block.imagePositionLR == 'right' ? 'left' : 'right' }}"
+									data-aos-duration="1500"
+									data-aos-anchor="#section-{{ block.id }}">
+									{% if row.heading != '' %}
+										<h2 class="c-report__heading lh-1 mb-4">{{ row.heading | raw }}</h2>
+									{% endif %}
+
+									{% if row.subheading is defined and row.subheading != '' %}
+									<p class="c-report__subheading lh-1">{{ row.subheading | raw }}</p>
+									{% endif %}
+									
+									{% if row.description is defined and row.description != '' %}
+									<div class="c-wysiwyg u-last-child">
+										{{ row.description }}
+									</div>
+									{% endif %}
+
+									{% if block.headshotVideos | length %}
+										{% set animation = block.animationSettings[0] %}
+										{% set aosDelay = animation.delay + 500 %}
+										<div class="row row-cols-1 row-cols-md-2">
+											{% for headshot in block.headshotVideos.all() %}
+												{% set img    = headshot.image.one %}
+												{% set imgSrc = img.url('responsiveSmall') %}
+												{% set imgAlt = img.alt ?: img.title  %}
+												<div class="col">
+													<div class="c-headshot-video mt-5{% if animation %} d-none{% endif %}"
+														{% if animation %}
+															data-aos="{{ animation.animation }}"
+															data-aos-duration="1500"
+															data-aos-delay="{{ aosDelay }}"
+															data-aos-anchor="#section-{{ block.id }}"
+														{% endif %}>
+														<div class="c-headshot-video__thumb mb-2">
+															<a href="#modal-{{ headshot.id }}" 
+																data-bs-toggle="modal"
+																data-bs-target="#modal-{{ headshot.id }}">
+																<img class="d-block w-100 img-fluid" src="{{ imgSrc }}" alt="{{ imgAlt }}">
+															</a>
+														</div>
+														{% if headshot.label != '' %}
+														<p class="text-center">
+															{{ headshot.label | nl2br | raw }}
+														</p>
+														{% endif %}
+													</div>
+													{#
+													<!-- video modal -->
+													<div id="modal-{{ headshot.id }}" class="modal" tabindex="-1">
+														<div class="modal-dialog modal-lg modal-dialog-centered">
+															<div class="modal-content p-3 p-md-5">
+																<button type="button"
+																	class="btn-close position-absolute top-0 end-0" 
+																	data-bs-dismiss="modal" 
+																	aria-label="Close"
+																	style="transform:translate(-75%,75%);"></button>
+																<div class="modal-body position-relative">
+																	{% set embeddedAsset = craft.embeddedAssets.get(headshot.video.one()) %}
+																	<div class="js-fitvids">
+																		{{ embeddedAsset ? embeddedAsset.html }}
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													#}
+												</div>
+												{% if animation.staggered == 'yes' %}
+													{% set aosDelay = aosDelay + 500 %}
+												{% endif %}
+												{#
+												{% js %}
+												$("#modal-{{ headshot.id }}").on('d-none.bs.modal', function (e) {
+													$("#modal-{{ headshot.id }} iframe").attr("src", $("#modal-{{ headshot.id }} iframe").attr("src"));
+												});
+												{% endjs %}
+												#}
+											{% endfor %}
+										</div>
+									{% endif %}
+								</div>
+							{% endfor %}
+						{% endif %}
+						
+						{% if block.image | length %}
+							<p>{% include "_fields/image" with {'img': block.image.one, 'class': 'd-block img-fluid w-100'} %}</p>
+						{% endif %}
+					</div>
+
+					<div class="col-12 col-md-6{% if block.imagePositionLR == 'right' %} order-md-1{% endif %}">
+						<div
+							class="d-none"
+							data-aos="fade"
+						  data-aos-duration="1500"
+						  data-aos-delay="{{ aosDelay }}"
+						  data-aos-anchor="#section-{{ block.id }}">
+							{% if block.eyebrow is defined and block.eyebrow != '' %}
+							<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
+							{% endif %}
+
+							{% if block.preheading is defined and block.preheading != '' %}
+							<p class="c-report__preheading">{{ block.preheading | raw }}</p>
+							{% endif %}
+
+							{% if block.heading is defined and block.heading != '' %}
+							<h2 class="c-report__heading">{{ block.heading | raw }}</h2>
+							{% endif %}
+
+							{% if block.subheading is defined and block.subheading != '' %}
+							<p class="c-report__subheading">{{ block.subheading | raw }}</p>
+							{% endif %}
+							
+							{% if block.description is defined and block.description != '' %}
+							<div class="c-wysiwyg{% if block.button | length %} mb-4{% endif %}">
+								{% apply enkode_emails %}
+									{{ block.description }}
+								{% endapply %}
+							</div>
+							{% endif %}
+
+							{% for childBlock in block.children.all() %}
+								{% if childBlock.button.getLink() %}
+								<p class="mt-4">{% include "_fields/button" with {'button': childBlock.button, 'color': 'secondary', 'style': childBlock.buttonStyle} %}</p>
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% for headshot in block.headshotVideos.all() %}
+	{% set img    = headshot.image.one %}
+	{% set imgSrc = img.url('responsiveSmall') %}
+	{% set imgAlt = img.alt ?: img.title  %}
+	<!-- video modal -->
+	<div id="modal-{{ headshot.id }}" class="modal" tabindex="-1">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content p-3 p-md-5">
+				<button type="button"
+					class="btn-close position-absolute top-0 end-0" 
+					data-bs-dismiss="modal" 
+					aria-label="Close"
+					style="transform:translate(-75%,75%);"></button>
+				<div class="modal-body position-relative">
+					{% set embeddedAsset = craft.embeddedAssets.get(headshot.video.one()) %}
+					<div class="js-fitvids">
+						{{ embeddedAsset ? embeddedAsset.html }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% js %}
+	$("#modal-{{ headshot.id }}").on('d-none.bs.modal', function (e) {
+		$("#modal-{{ headshot.id }} iframe").attr("src", $("#modal-{{ headshot.id }} iframe").attr("src"));
+	});
+	{% endjs %}
+{% endfor %}
