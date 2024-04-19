@@ -15,14 +15,32 @@
 					{% endif %}
 					
 					<div class="col-12 col-md-6 mb-5 mb-md-0{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">
+						{% if block.image | length %}
+							{% set img = block.image.one %}
+							<div class="text-center mb-3{% if animation %} d-none{% endif %}"
+								{% if animation %}
+									data-aos="{{ animation.animation }}"
+									data-aos-duration="1500"
+									data-aos-delay="{{ aosDelay }}"
+									data-aos-anchor="#section-{{ block.id }}"
+								{% endif %}>
+								<img class="img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
+							</div>
+						{% endif %}
+
+						{% if animation and animation.staggered == 'yes' %}
+							{% set aosDelay = aosDelay + 500 %}
+						{% endif %}
+						
 						{% if block.factoidDescriptionBox | length %}
 							{% for row in block.factoidDescriptionBox %}
 								<div class="d-block w-100 {{ row.backgroundColor }} bg-opacity-25 p-3 p-md-5 mb-3 rounded{% if animation %} d-none{% endif %}"
 									{% if animation %}
-									data-aos="{{ animation.animation }}"
-									data-aos-duration="1500"
-									data-aos-delay="{{ aosDelay }}"
-									data-aos-anchor="#section-{{ block.id }}"{% endif %}>
+										data-aos="{{ animation.animation }}"
+										data-aos-duration="1500"
+										data-aos-delay="{{ aosDelay }}"
+										data-aos-anchor="#section-{{ block.id }}"
+									{% endif %}>
 									{% if row.heading != '' %}
 										<h2 class="c-report__heading lh-1 mb-4">{{ row.heading | raw }}</h2>
 									{% endif %}
@@ -105,14 +123,14 @@
 							{% if block.eyebrow is defined and block.eyebrow != '' %}
 							<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
 							{% endif %}
-
+							{#
 							{% if block.image | length %}
 								{% set img = block.image.one %}
 								<p class="text-center">
 									<img class="img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
 								</p>
 							{% endif %}
-							
+							#}
 							{% if block.heading is defined and block.heading != '' %}
 								<h2 class="c-report__heading">{{ block.heading | raw }}</h2>
 							{% endif %}
