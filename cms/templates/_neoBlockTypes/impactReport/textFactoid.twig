@@ -1,6 +1,10 @@
 {##
  # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: TEXT+FACTOID
  #}
+{% set animation = false %}
+{% for childBlock in block.children.type('not button').all() %}
+	{% set animation = childBlock.animationSettings[0] %}
+{% endfor %}
 {% set aosDelay = 0 %}
 <section id="section-{{ block.id }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
@@ -15,9 +19,19 @@
 					
 					<div class="col-12 col-md-6 mb-5 mb-md-0{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">
 						{% if block.image | length %}
-							<div class="mb-3 rounded u-rounded-top-{{ block.imagePositionLR == 'right' ? 'left' : 'right' }}">
+							<div class="mb-3 rounded u-rounded-top-{{ block.imagePositionLR == 'right' ? 'left' : 'right' }}"
+								{% if animation %}
+									data-aos="{{ animation.animation }}"
+									data-aos-duration="1500"
+									data-aos-delay="{{ aosDelay }}"
+									data-aos-anchor="#section-{{ block.id }}"
+								{% endif %}>
 								{% include "_fields/image" with {'img': block.image.one, 'class': 'd-block img-fluid w-100'} %}
 							</div>
+						{% endif %}
+
+						{% if animation and animation.staggered == 'yes' %}
+							{% set aosDelay = aosDelay + 500 %}
 						{% endif %}
 
 						{% if block.factoidDescriptionBox | length %}
@@ -25,6 +39,7 @@
 								<div class="d-block w-100 {{ row.backgroundColor }} bg-opacity-25 p-3 p-md-5 mb-3 rounded d-none"
 										data-aos="fade-{{ block.imagePositionLR == 'right' ? 'left' : 'right' }}"
 										data-aos-duration="1500"
+										data-aos-delay="{{ aosDelay }}"
 										data-aos-anchor="#section-{{ block.id }}">
 									{% if row.heading != '' %}
 										<h2 class="c-report__heading lh-1 mb-4">{{ row.heading | raw }}</h2>
@@ -42,12 +57,17 @@
 								</div>
 							{% endfor %}
 						{% endif %}
+
+						{% if animation and animation.staggered == 'yes' %}
+							{% set aosDelay = aosDelay + 500 %}
+						{% endif %}
 						
 						{# FACTOID CLUSTERS #}
 						{% for childBlock in block.children.type('not button').all() %}
+							{#
 							{% set animation = childBlock.animationSettings[0] %}
 							{% set aosDelay = animation.delay + 500 %}
-							
+							#}
 							{% if childBlock.type == 'factoid1Up' and childBlock.images | length %}
 								<div class="rounded{% if animation %} d-none{% endif %}"
 									{% if animation %}
@@ -70,7 +90,7 @@
 										{% endif %}>
 										<img class="d-block w-100 img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
 									</div>
-									{% if animation.staggered == 'yes' %}
+									{% if animation and animation.staggered == 'yes' %}
 										{% set aosDelay = aosDelay + 500 %}
 									{% endif %}
 								{% endfor %}
@@ -88,7 +108,7 @@
 											{% endif %}>
 											<img class="d-block w-100 img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
 										</div>
-										{% if animation.staggered == 'yes' %}
+										{% if animation and animation.staggered == 'yes' %}
 											{% set aosDelay = aosDelay + 500 %}
 										{% endif %}
 									</div>
@@ -107,7 +127,7 @@
 										</div>
 									</div>
 								</div>
-								{% if animation.staggered == 'yes' %}
+								{% if animation and animation.staggered == 'yes' %}
 									{% set aosDelay = aosDelay + 500 %}
 								{% endif %}
 							{% endif %}
