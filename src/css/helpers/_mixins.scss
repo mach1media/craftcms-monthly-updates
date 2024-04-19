@@ -96,7 +96,7 @@
 		top: 0;
 		bottom: 0;
 		left: 0%;
-		right: 0;
+		right: -5%;
 		background-color: $body-bg;
 		@include z-1;
 
@@ -111,7 +111,7 @@
 		left: 0%;
 	}
 	to {
-		left: 100%;
+		left: 105%;
 	}
 }
 
