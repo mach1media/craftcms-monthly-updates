@@ -1,4 +1,4 @@
-dateModified: 1713468403
+dateModified: 1713813716
 elementSources:
   craft\elements\Entry:
     -
@@ -229,6 +229,7 @@ meta:
     40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link # Link
     41d75776-461e-4d36-8d1b-3d3935125b2d: 'Preview Card' # Preview Card
     48decd81-091f-4c64-a59a-482b826a0ef5: Media # Media
+    48fda275-cc4f-48a3-9d79-c38f9cd4d1d6: 'Factoid Layout' # Factoid Layout
     49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
     55f89f73-30c8-4eeb-b491-a0da78da6657: 'Text Color' # Text Color

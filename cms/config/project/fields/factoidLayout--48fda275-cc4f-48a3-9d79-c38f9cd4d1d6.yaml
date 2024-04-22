@@ -1,0 +1,35 @@
+columnSuffix: gtgdqoai
+contentColumnType: string(10)
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
+handle: factoidLayout
+instructions: null
+name: 'Factoid Layout'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Stacked
+        -
+          - value
+          - stacked
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Side-by-side
+        -
+          - value
+          - sideBySide
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

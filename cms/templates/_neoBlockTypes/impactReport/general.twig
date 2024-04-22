@@ -20,9 +20,9 @@
 				{% endif %}
 
 				{% if block.signatures is defined and block.signatures | length %}
-				<div class="d-flex justify-content-between mt-5 flex-wrap flex-md-nowrap">
+				<div class="row mt-5">
 					{% for row in block.signatures %}
-					<div class="mb-5 mb-md-0">
+					<div class="col-12 col-md-6 mb-5 mb-md-0">
 						{% if row.signature != '' %}
 							<p class="c-report__signature mb-0">{{ row.signature | raw }}</p>
 						{% endif %}

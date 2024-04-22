@@ -3,7 +3,9 @@
  #}
 {% set animation = false %}
 {% for childBlock in block.children.type('not button').all() %}
-	{% set animation = childBlock.animationSettings[0] %}
+	{% if childBlock.animationSettings | length %}
+		{% set animation = childBlock.animationSettings[0] %}
+	{% endif %}
 {% endfor %}
 {% set aosDelay = 0 %}
 <section id="section-{{ block.id }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
@@ -17,7 +19,7 @@
 					</div>
 					{% endif %}
 					
-					<div class="col-12 col-md-6 mb-5 mb-md-0{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">
+					<div class="col-12 col-md-5 mb-5 mb-md-0{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">
 						{% if block.image | length %}
 							<div class="mb-3 rounded u-rounded-top-{{ block.imagePositionLR == 'right' ? 'left' : 'right' }}"
 								{% if animation %}
@@ -36,7 +38,7 @@
 
 						{% if block.factoidDescriptionBox | length %}
 							{% for row in block.factoidDescriptionBox %}
-								<div class="d-block w-100 {{ row.backgroundColor }} bg-opacity-25 p-3 p-md-5 mb-3 rounded d-none"
+								<div class="d-block w-100 {{ row.backgroundColor }} bg-opacity-25 p-3 p-md-4 mb-3 rounded d-none"
 										data-aos="fade-{{ block.imagePositionLR == 'right' ? 'left' : 'right' }}"
 										data-aos-duration="1500"
 										data-aos-delay="{{ aosDelay }}"
@@ -69,44 +71,62 @@
 							{% set aosDelay = animation.delay + 500 %}
 							#}
 							{% if childBlock.type == 'factoid1Up' and childBlock.images | length %}
-								<div class="rounded{% if animation %} d-none{% endif %}"
+								<div class="{% if animation %} d-none{% endif %}"
 									{% if animation %}
 										data-aos="{{ animation.animation }}"
 										data-aos-duration="1500"
 										data-aos-delay="{{ aosDelay }}"
 										data-aos-anchor="#section-{{ block.id }}"
 									{% endif %}>
-									{% include "_fields/image" with {'img': childBlock.images.one, 'class': 'd-block img-fluid w-100'} %}
+									{% include "_fields/image" with {'img': childBlock.images.one, 'class': 'd-block img-fluid w-100 rounded'} %}
 								</div>
 							
 							{% elseif childBlock.type == 'factoid2Up' %}
-								{% for img in childBlock.images.limit(2) %}
-									<div class="rounded mb-3{% if animation %} d-none{% endif %}"
-										{% if animation %} 
-											data-aos="{{ animation.animation }}"
-											data-aos-duration="1500"
-											data-aos-delay="{{ aosDelay }}"
-											data-aos-anchor="#section-{{ block.id }}"
-										{% endif %}>
-										<img class="d-block w-100 img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
+								{% if childBlock.factoidLayout == 'stacked' %}
+									{% for img in childBlock.images.limit(2) %}
+										<div class="mb-3{% if animation %} d-none{% endif %}"
+											{% if animation %} 
+												data-aos="{{ animation.animation }}"
+												data-aos-duration="1500"
+												data-aos-delay="{{ aosDelay }}"
+												data-aos-anchor="#section-{{ block.id }}"
+											{% endif %}>
+											<img class="d-block w-100 img-fluid rounded" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
+										</div>
+									{% endfor %}
+								{% else %}
+									<div class="row">
+										{% for img in childBlock.images.limit(2) %}
+											<div class="col-6 mb-3">
+												<div class="{% if animation %} d-none{% endif %}"
+													{% if animation %} 
+														data-aos="{{ animation.animation }}"
+														data-aos-duration="1500"
+														data-aos-delay="{{ aosDelay }}"
+														data-aos-anchor="#section-{{ block.id }}"
+													{% endif %}>
+													<img class="d-block w-100 img-fluid rounded" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
+												</div>
+											</div>
+										{% endfor %}
 									</div>
-									{% if animation and animation.staggered == 'yes' %}
-										{% set aosDelay = aosDelay + 500 %}
-									{% endif %}
-								{% endfor %}
+								{% endif %}
+								{% if animation and animation.staggered == 'yes' %}
+									{% set aosDelay = aosDelay + 500 %}
+								{% endif %}
 
 							{% elseif childBlock.type == 'factoid3Up' %}
 								<div class="row">
 									{% for img in childBlock.images.limit(2) %}
 									<div class="col-6 mb-3">
 										<div{% if animation %}
-												class="d-none rounded"
+												class="d-none"
 												data-aos="{{ animation.animation }}"
 												data-aos-duration="1500"
 												data-aos-delay="{{ aosDelay }}"
 												data-aos-anchor="#section-{{ block.id }}"
 											{% endif %}>
-											<img class="d-block w-100 img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
+											<img class="d-block w-100 img-fluid rounded" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
 										</div>
 										{% if animation and animation.staggered == 'yes' %}
 											{% set aosDelay = aosDelay + 500 %}
@@ -123,7 +143,7 @@
 												data-aos-delay="{{ aosDelay }}"
 												data-aos-anchor="#section-{{ block.id }}"
 											{% endif %}>
-											<img class="d-block w-100 img-fluid" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
+											<img class="d-block w-100 img-fluid rounded" src="{{ img.url }}" alt="{{ img.alt ?: img.title }}">
 										</div>
 									</div>
 								</div>
@@ -135,7 +155,7 @@
 					</div>
 
 
-					<div class="col-12 col-md-5{% if block.imagePositionLR == 'right' %} order-md-1{% endif %}">
+					<div class="col-12 col-md-6{% if block.imagePositionLR == 'right' %} order-md-1{% endif %}">
 						<div class="d-none"
 								data-aos="fade"
 								data-aos-duration="1500"

@@ -20,7 +20,19 @@ fieldLayouts:
             uid: 290ec03c-3696-4402-a097-fa7a138cb7bd
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 48fda275-cc4f-48a3-9d79-c38f9cd4d1d6 # Factoid Layout
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a80a4a84-ad00-4448-94bf-c97a519149b1
+            userCondition: null
+            warning: null
+            width: 25
         name: Graphics
         uid: e6e9135e-3951-4bc2-8790-22c24e23eb13
         userCondition: null
