@@ -95,7 +95,7 @@
 										</div>
 									{% endfor %}
 								{% else %}
-									<div class="row">
+									<div class="row g-3">
 										{% for img in childBlock.images.limit(2) %}
 											<div class="col-6 mb-3">
 												<div class="{% if animation %} d-none{% endif %}"
@@ -116,7 +116,7 @@
 								{% endif %}
 
 							{% elseif childBlock.type == 'factoid3Up' %}
-								<div class="row">
+								<div class="row g-3">
 									{% for img in childBlock.images.limit(2) %}
 									<div class="col-6 mb-3">
 										<div{% if animation %}
