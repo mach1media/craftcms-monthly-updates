@@ -46,7 +46,15 @@
 							</div>
 							
 							<div class="pt-4">
-								<a href="{{ entry.url }}" class="btn btn-sm btn-outline-secondary">Read More</a>
+								{% if entry.textLink.getLink() %}
+									{% include "_fields/button" with {
+										'button': entry.textLink, 
+										'color': 'btn-outline-secondary', 
+										'style': 'btn-sm btn-pill stretched-link'
+									} %}
+								{% else %}
+									<a href="{{ entry.url }}" class="btn btn-sm btn-outline-secondary">Read More</a>
+								{% endif %}
 							</div>
 						</div>
 					</article>

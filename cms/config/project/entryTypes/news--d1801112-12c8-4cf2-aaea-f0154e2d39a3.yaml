@@ -67,6 +67,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96 # Text Link
+            instructions: null
+            label: 'Link to this resource instead of an article detail page'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4cd8cc7a-3a3d-4252-8fab-197a525817d7
+            userCondition: null
+            warning: null
+            width: 100
         name: 'Preview Card'
         uid: b98a7140-70fa-4174-81b7-36c0bd5b8f57
         userCondition: null

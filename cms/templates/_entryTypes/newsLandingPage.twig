@@ -31,7 +31,15 @@
 						<h2 class="h3 c-news__card-heading">{{ entry.title }}</h2>
 						{% if entry.summary != '' %}<p>{{ entry.summary }}</p>{% endif %}
 						<p>
-							<a class="btn btn-secondary btn-pill stretched-link" href="{{ entry.url }}">Read More</a>
+							{% if entry.textLink.getLink() %}
+								{% include "_fields/button" with {
+									'button': entry.textLink, 
+									'color': 'secondary', 
+									'style': 'pill stretched-link'
+								} %}
+							{% else %}
+								<a class="btn btn-secondary btn-pill stretched-link" href="{{ entry.url }}">Read More</a>
+							{% endif %}
 						</p>
 					</div>
 				</article>
