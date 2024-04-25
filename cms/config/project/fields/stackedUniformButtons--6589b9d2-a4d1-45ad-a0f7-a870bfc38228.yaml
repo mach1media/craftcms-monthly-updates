@@ -1,0 +1,14 @@
+columnSuffix: ahbgerja
+contentColumnType: boolean
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
+handle: stackedUniformButtons
+instructions: null
+name: 'Stacked Uniform Buttons'
+searchable: false
+settings:
+  default: false
+  offLabel: Inline
+  onLabel: Stacked
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -6,8 +6,18 @@
 		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
 			<div class="col-12 text-{{ block.textAlignment }}{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
 				
-				{% include "_fields/buttons" with {'buttons': block.buttons} %}
-
+				{% if block.stackedUniformButtons == 1 %}
+				<div class="d-grid gap-3 mx-auto" style="max-width:350px;">
+					{% for button in block.buttons %}
+						{% if button.btnLink.getLink() %}
+							{% include "_fields/button" with {'button': button.btnLink, 'color': button.btnStyle, 'class': button.arrow == 1 ? 'btn-arrow' : '' } %}
+						{% endif %}
+					{% endfor %}
+				</div>
+				{% else %}
+					{% include "_fields/buttons" with {'buttons': block.buttons} %}
+				{% endif %}
+				
 			</div>
 		</div>
 	</div>
