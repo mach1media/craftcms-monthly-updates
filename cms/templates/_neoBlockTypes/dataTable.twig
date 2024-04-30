@@ -44,7 +44,7 @@
 						{% if table.heading != '' or table.subheading != '' %}
 						<p class="h4 mb-3">
 							{{ table.heading | raw }}
-							{% if table.subheading != '' %}<span class="d-block fs-6 u-base-font opacity-50">{{ table.subheading | raw }}</span>{% endif %}
+							{% if table.subheading != '' %}<span class="d-block fs-6 u-base-font opacity-50">{{ table.subheading | nl2br | raw }}</span>{% endif %}
 						</p>
 						{% elseif entry.heading != '' or entry.citation != '' %}
 						<p class="h4 mb-3">
@@ -79,7 +79,7 @@
 						{% if table.heading != '' or table.subheading != '' %}
 						<p class="h4 mb-3">
 							{{ table.heading | raw }}
-							{% if table.subheading != '' %}<span class="d-block fs-6 u-base-font opacity-50">{{ table.subheading | raw }}</span>{% endif %}
+							{% if table.subheading != '' %}<span class="d-block fs-6 u-base-font opacity-50">{{ table.subheading | nl2br | raw }}</span>{% endif %}
 						</p>
 						{% endif %}
 

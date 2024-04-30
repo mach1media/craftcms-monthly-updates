@@ -11,7 +11,7 @@
 						{% if table.heading != '' or table.subheading != '' %}
 						<p class="h4 mb-3">
 							{{ table.heading | raw }}
-							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | nl2br | raw }}</span>{% endif %}
 						</p>
 						{% endif %}
 						<div class="border border-secondary rounded p-3 mb-5">
@@ -54,7 +54,7 @@
 						{% if table.heading != '' or table.subheading != '' %}
 						<p class="h4 mb-3">
 							{{ table.heading | raw }}
-							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | nl2br | raw }}</span>{% endif %}
 						</p>
 						{% endif %}
 						<div class="border border-secondary rounded p-3 mb-3">
@@ -121,7 +121,7 @@
 						{% if table.heading != '' or table.subheading != '' %}
 						<p class="h4 mb-3">
 							{{ table.heading | raw }}
-							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | raw }}</span>{% endif %}
+							{% if table.subheading != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ table.subheading | nl2br | raw }}</span>{% endif %}
 						</p>
 						{% elseif entry.heading != '' or entry.citation != '' %}
 						<p class="h4 mb-3">
