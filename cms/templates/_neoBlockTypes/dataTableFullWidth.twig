@@ -126,7 +126,7 @@
 						{% elseif entry.heading != '' or entry.citation != '' %}
 						<p class="h4 mb-3">
 							{{ entry.heading | raw }}
-							{% if entry.citation != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ entry.citation | raw }}</span>{% endif %}
+							{% if entry.citation != '' %}<span class="fs-6 u-base-font opacity-50 ms-4">{{ entry.citation | nl2br | raw }}</span>{% endif %}
 						</p>
 						{% endif %}
 
