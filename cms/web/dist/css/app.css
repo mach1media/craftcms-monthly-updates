@@ -11251,12 +11251,6 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   color: white;
   background-color: white;
 }
-@media (min-width: 1400px) {
-  .c-header {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-}
 .c-header__hamburger {
   background-color: #231F5B;
   color: white;
@@ -11408,23 +11402,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 .c-header__mobile button > .c-icon--search {
   transform: translateY(0);
 }
-.c-header__mobile .nav-link {
-  position: relative;
-  letter-spacing: 0.1em;
-}
-.c-header__mobile .nav-link:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 1px;
-  height: 1em;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-  background-color: #231F5B;
-}
-.c-header__mobile nav .nav-item:last-of-type .nav-link:after {
-  display: none;
+.c-header__mobile .nav .nav-item .btn {
+  padding: 0.5em 1em;
 }
 .c-header__menu-toggle {
   border-radius: 0.5rem !important;
@@ -11592,6 +11571,34 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   left: 0;
   transform: translate(0, -50%);
   background: url("/dist/img/icon-about-tan.svg") center center no-repeat;
+  background-size: contain;
+}
+.c-header__faceted .menu-news > label:before,
+.c-header__faceted .menu-news > button:before,
+.c-header__faceted .menu-news > a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2em;
+  height: 2em;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  background: url("/dist/img/icon-newspaper.svg") center center no-repeat;
+  background-size: contain;
+}
+.c-header__faceted .menu-contact > label:before,
+.c-header__faceted .menu-contact > button:before,
+.c-header__faceted .menu-contact > a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2em;
+  height: 2em;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  background: url("/dist/img/icon-phone.svg") center center no-repeat;
   background-size: contain;
 }
 .c-header__faceted-sub {

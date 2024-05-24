@@ -13,10 +13,10 @@
 	//padding-top: $gutter/2;
 	//padding-bottom: $gutter/2;
 	
-	@include media-breakpoint-up(xxl) {
-		padding-top: $gutter;
-		padding-bottom: $gutter;
-	}
+	// @include media-breakpoint-up(xxl) {
+	// 	padding-top: $gutter;
+	// 	padding-bottom: $gutter;
+	// }
 	
 	@include element('hamburger') {
 		background-color: map-get($theme-colors,'primary');
@@ -222,29 +222,8 @@
 			transform: translateY(0);
 		}
 
-		.nav-link {
-			position: relative;
-			letter-spacing: .1em;
-
-			&:after {
-				content: "";
-				position: absolute;
-				display: block;
-				width: 1px;
-				height: 1em;
-				top: 50%;
-				right: 0;
-				transform: translate(0, -50%);
-				background-color: map-get($theme-colors, 'primary');
-			}
-		}
-
-		nav .nav-item:last-of-type {
-			// margin-left: .75em;
-
-			.nav-link:after {
-				display: none;
-			}
+		.nav .nav-item .btn {
+			padding: .5em 1em;
 		}
 	}
 	@include element('menu-toggle') {
@@ -447,6 +426,40 @@
 				left: 0;
 				transform: translate(0, -50%);
 				background: url('/dist/img/icon-about-tan.svg') center center no-repeat;
+				background-size: contain;
+			}
+		}
+
+		.menu-news > label,
+		.menu-news > button,
+		.menu-news > a {
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 2em;
+				height: 2em;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+				background: url('/dist/img/icon-newspaper.svg') center center no-repeat;
+				background-size: contain;
+			}
+		}
+
+		.menu-contact > label,
+		.menu-contact > button,
+		.menu-contact > a {
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 2em;
+				height: 2em;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+				background: url('/dist/img/icon-phone.svg') center center no-repeat;
 				background-size: contain;
 			}
 		}

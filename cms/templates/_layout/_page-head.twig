@@ -8,7 +8,21 @@
 <header class="c-header sticky-top" id="header">
 	<!-- DESKTOP HEADER -->
 	<div class="container-fluid d-none d-xxl-block c-header__desktop">
-		<div class="row align-items-center justify-content-between">
+		<div class="row align-items-center justify-content-end">
+			<div class="col d-flex justify-content-end py-3">
+				<ul class="nav flex-nowrap">
+					<li class="nav-item me-3">
+						<a class="nav-link btn btn-sm btn-outline-secondary" href="{{ url('philanthropy/donate') }}">Donate</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link btn btn-sm btn-outline-secondary" href="https://onlineportal.tmf-fdn.org/login" target="_blank" rel="noopener">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="row align-items-center justify-content-between py-xxl-4 border-top border-secondary">
 			<div class="col d-flex align-items-center">
 				<a class="c-header__branding" href="{{ siteUrl }}">
 					<img src="/dist/img/logo-color.svg" alt="{{ siteName }} home" />
@@ -88,11 +102,11 @@
 						</li>
 						#}
 						<li class="nav-item">
-							<a class="nav-link btn btn-secondary" href="https://onlineportal.tmf-fdn.org/login" target="_blank" rel="noopener">Login</a>
+							<a class="nav-link btn btn-secondary" href="{{ url('loans/inquiry') }}">Invest</a>
 						</li>
 						
 						<li class="nav-item">
-							<a class="nav-link btn btn-outline-secondary" href="{{ url('contact') }}">Contact</a>
+							<a class="nav-link btn btn-secondary" href="{{ url('investments/open-an-account') }}">Loan Inquiry</a>
 						</li>
 					</ul>
 				</nav>
@@ -127,21 +141,41 @@
 			#}
 			<nav>
 				<ul class="nav">
+					{#
 					<li class="nav-item">
 						<a class="nav-link text-uppercase text-primary" href="https://onlineportal.tmf-fdn.org/login" target="_blank" rel="noopener">Login</a>
 					</li>
-					
 					<li class="nav-item">
 						<a class="nav-link text-uppercase text-primary" href="{{ url('contact') }}">Contact</a>
+					</li>
+					#}
+					<li class="nav-item me-3">
+						<a class="nav-link btn btn-sm btn-outline-secondary" href="{{ url('philanthropy/donate') }}">Donate</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link btn btn-sm btn-outline-secondary" href="https://onlineportal.tmf-fdn.org/login" target="_blank" rel="noopener">Login</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 
-		<div class="d-flex align-items-center justify-content-between p-1{# border-secondary border-bottom #}">
+		<div class="d-flex align-items-center justify-content-between px-1 py-2 border-secondary border-top">
 			<a class="c-header__branding" href="{{ siteUrl }}">
 				<img src="/dist/img/logo-color.svg" alt="{{ siteName }} home" />
 			</a>
+
+			<nav class="c-header__utility d-flex justify-content-end me-3">
+				<ul class="nav flex-nowrap">
+					<li class="nav-item">
+						<a class="nav-link btn btn-secondary" href="{{ url('loans/inquiry') }}">Invest</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link btn btn-secondary" href="{{ url('investments/open-an-account') }}">Loan Inquiry</a>
+					</li>
+				</ul>
+			</nav>
 
 			<button class="btn btn-secondary c-header__menu-toggle"
 				id="menu-mobile-label"
