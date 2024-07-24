@@ -1,0 +1,48 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+fieldLayouts:
+  6579d1c5-3864-4ab6-b2bc-7489587e8830:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Insert three small tiles.'
+            type: craft\fieldlayoutelements\Tip
+            uid: abbdfede-8acd-4e06-b7a4-c11104be631e
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: e11568a1-11e3-4147-ae18-1ff01fdcd4f7 # CTA Tile: Small
+            instructions: null
+            label: 'CTA Tile'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5eeee589-c2e5-4051-ac85-523ff84f452a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Tiles
+        uid: 71bfd01e-12d6-401c-a251-567ae78991e8
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: tiles3Up
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Tiles: 3-up'
+topLevel: false

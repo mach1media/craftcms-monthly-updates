@@ -1,0 +1,469 @@
+field: a38f33c3-2dac-4082-a4cb-a08078ff3547 # Card Builder
+fieldLayouts:
+  11275729-cd1c-42af-9d54-09671d47508b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0b9920f2-5724-47f5-95ab-d7e0f0cf240e # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d881ebd9-d2a8-49b6-be0a-dc94d5601ade
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: d2d251eb-5f4e-4855-9415-39f044d14922 # Width
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2cd8e17c-30f2-45fb-a831-a36253b35e87
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 3099fbed-cd1b-4a59-b12e-2d55012706c4 # Spacing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 216f5098-26af-4f16-a96d-3eca1c7cbebc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1d0be375-a992-4303-a12a-4435fa422e78
+        userCondition: null
+fields:
+  0b9920f2-5724-47f5-95ab-d7e0f0cf240e: # Heading
+    columnSuffix: bafbuneu
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  3099fbed-cd1b-4a59-b12e-2d55012706c4: # Spacing
+    columnSuffix: yxhngeci
+    contentColumnType: text
+    fieldGroup: null
+    handle: spacing
+    instructions: null
+    name: Spacing
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Padding: Top'
+                -
+                  - handle
+                  - pt
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - select
+                -
+                  - options
+                  -
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '0'
+                        -
+                          - value
+                          - '0'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '1'
+                        -
+                          - value
+                          - '1'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '2'
+                        -
+                          - value
+                          - '2'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '3'
+                        -
+                          - value
+                          - '3'
+                        -
+                          - default
+                          - true
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '4'
+                        -
+                          - value
+                          - '4'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '5'
+                        -
+                          - value
+                          - '5'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '6'
+                        -
+                          - value
+                          - '6'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '7'
+                        -
+                          - value
+                          - '7'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '8'
+                        -
+                          - value
+                          - '8'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '9'
+                        -
+                          - value
+                          - '9'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '10'
+                        -
+                          - value
+                          - '10'
+                        -
+                          - default
+                          - false
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Padding: Bottom'
+                -
+                  - handle
+                  - pb
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - select
+                -
+                  - options
+                  -
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '0'
+                        -
+                          - value
+                          - '0'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '1'
+                        -
+                          - value
+                          - '1'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '2'
+                        -
+                          - value
+                          - '2'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '3'
+                        -
+                          - value
+                          - '3'
+                        -
+                          - default
+                          - true
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '4'
+                        -
+                          - value
+                          - '4'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '5'
+                        -
+                          - value
+                          - '5'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '6'
+                        -
+                          - value
+                          - '6'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '7'
+                        -
+                          - value
+                          - '7'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '8'
+                        -
+                          - value
+                          - '8'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '9'
+                        -
+                          - value
+                          - '9'
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - '10'
+                        -
+                          - value
+                          - '10'
+                        -
+                          - default
+                          - false
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - '3'
+            -
+              - col2
+              - '3'
+      maxRows: null
+      minRows: null
+      staticRows: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  d2d251eb-5f4e-4855-9415-39f044d14922: # Width
+    columnSuffix: biwbkqpz
+    contentColumnType: string(2)
+    fieldGroup: null
+    handle: width
+    instructions: null
+    name: Width
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 50%
+            -
+              - value
+              - '6'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 7/12
+            -
+              - value
+              - '7'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 8/12
+            -
+              - value
+              - '8'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 9/12
+            -
+              - value
+              - '9'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 10/12
+            -
+              - value
+              - '10'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 11/12
+            -
+              - value
+              - '11'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 100%
+            -
+              - value
+              - '12'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: heading
+name: Heading
+sortOrder: 2

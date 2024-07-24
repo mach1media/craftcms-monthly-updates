@@ -1,0 +1,48 @@
+field: a38f33c3-2dac-4082-a4cb-a08078ff3547 # Card Builder
+fieldLayouts:
+  6eda98fa-89ca-42db-9fef-0a95e1edf955:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1bd1034-0a53-48f2-8b9c-d886fd341b7c # Factoid Row
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e387f06b-345f-424c-9b23-b1e0d215cba0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: be8629d4-ee1e-4df0-bf4b-704480b0ce42
+        userCondition: null
+fields:
+  c1bd1034-0a53-48f2-8b9c-d886fd341b7c: # Factoid Row
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: factoidRow
+    instructions: null
+    name: 'Factoid Row'
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1448879718
+      contentTable: '{{%stc_factoidrow}}'
+      fieldLayout: table
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Add a factoid'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\supertable\fields\SuperTableField
+handle: factoidRow
+name: 'Factoid Row'
+sortOrder: 3

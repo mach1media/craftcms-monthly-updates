@@ -1,44 +1,40 @@
-childBlocks:
-  - largeSmallSmall
-  - smallSmallLarge
-  - tiles2Up
-  - tiles3Up
+childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+field: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
 fieldLayouts:
-  2203f2b6-2377-4e3d-9de5-be56f1d50a51:
+  474beb65-8f1b-4535-b469-44494fe5a143:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a3fb2f70-0f48-405d-9c7a-2b87bfc3c514
+            uid: 0869d716-a154-443b-bf96-e52fb5945fc6
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
+            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
             instructions: null
-            label: null
+            label: 'Large Text'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b791f64f-7457-4f30-bf39-80f22a44b751
+            uid: c410e8b2-2f3c-4600-8a19-d730c9378ce4
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: ef82b094-a52c-43b6-bc3d-e88bba161e1a
+        uid: ab08b54b-fc7b-493c-9f42-ef3e28b0cb81
         userCondition: null
       -
         elementCondition: null
@@ -51,40 +47,28 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 029a8ed4-a0ef-49c6-8f01-835f4973caab
+            uid: 9e07f992-fc19-4eed-b169-24eb221d6717
             userCondition: null
             warning: null
             width: 25
           -
             elementCondition: null
-            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5f21a4e4-c10b-493c-a9a0-f08d567c7a28
+            uid: 782a8234-bde0-46b4-bff5-9b2e59eeb93f
             userCondition: null
             warning: null
             width: 25
-          -
-            elementCondition: null
-            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: be667e3c-0820-40e2-af34-aedac6f0f55c
-            userCondition: null
-            warning: null
-            width: 25
-        name: 'Section Settings'
-        uid: 71b3cfa1-5efe-4000-98e1-8e317bc1b7f5
+        name: Settings
+        uid: a1f96330-9b2c-4c21-af76-4fb4ca143b0c
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: ctaTiles
+handle: largeText
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -94,5 +78,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'CTA Tiles'
+name: 'Large Text'
 topLevel: true

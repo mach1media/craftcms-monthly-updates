@@ -1,6 +1,7 @@
 childBlocks:
   - columnText
   - columnImage
+  - card
 conditions: null
 description: ''
 enabled: true
