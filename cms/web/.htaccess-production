@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect tmf-fdn.org to texasmethodistfoundation.org with HTTPS
+    RewriteCond %{HTTP_HOST} ^(www\.)?tmf-fdn\.org$ [NC]
+    RewriteRule ^(.*)$ https://www.texasmethodistfoundation.org/$1 [R=301,L,QSA]
+
+    # Send would-be 404 requests to Craft
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+    RewriteRule (.+) index.php?p=$1 [QSA,L]
+</IfModule>
