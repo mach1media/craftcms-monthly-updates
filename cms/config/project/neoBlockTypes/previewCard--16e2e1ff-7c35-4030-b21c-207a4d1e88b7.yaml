@@ -80,7 +80,19 @@ fieldLayouts:
             uid: 3ba7ae70-7b6f-4b8e-b59e-f1aaa6329588
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: e47176e3-add5-4f79-a2e5-6544b4099f0f # Download
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b94b8a3-9a34-443c-991d-27aaf0b8775b
+            userCondition: null
+            warning: null
+            width: 25
         name: Card
         uid: d8484d62-7f21-46a3-aeec-7d8ba55f8f92
         userCondition: null

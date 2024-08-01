@@ -39,7 +39,11 @@
 							{% if col.button | length %}
 							<p>
 								{% if col.button.getLink() %}
-									{% include "_fields/button" with {'button': col.button, 'class': 'm-2' } %}
+									{% include "_fields/button" with {
+										'button': col.button, 
+										'class': 'm-2',
+										'download': col.download
+									} %}
 								{% endif %}
 							</p>
 							{% endif %}

@@ -9,5 +9,12 @@
 	{% if class is defined and class != '' %}
 		{% set classes = classes|merge([class]) %}
 	{% endif %}
-	{{ button.getLink({'class':classes|join(' ')}) }}
+	{% if download is defined and download == 1 %}
+		{{ button.getLink({
+			'class':classes|join(' '),
+			'download':'download'
+		}) }}
+	{% else %}
+		{{ button.getLink({'class':classes|join(' ')}) }}
+	{% endif %}
 {% endif %}

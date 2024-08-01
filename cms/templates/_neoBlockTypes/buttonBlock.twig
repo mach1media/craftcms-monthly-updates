@@ -10,7 +10,12 @@
 				<div class="d-grid gap-3 mx-auto" style="max-width:350px;">
 					{% for button in block.buttons %}
 						{% if button.btnLink.getLink() %}
-							{% include "_fields/button" with {'button': button.btnLink, 'color': button.btnStyle, 'class': button.arrow == 1 ? 'btn-arrow' : '' } %}
+							{% include "_fields/button" with {
+								'button':   button.btnLink, 
+								'color':    button.btnStyle, 
+								'class':    button.arrow == 1 ? 'btn-arrow' : '',
+								'download': button.download 
+							} %}
 						{% endif %}
 					{% endfor %}
 				</div>

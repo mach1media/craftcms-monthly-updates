@@ -1,4 +1,4 @@
-dateModified: 1722538169
+dateModified: 1722539556
 elementSources:
   craft\elements\Entry:
     -
@@ -357,6 +357,7 @@ meta:
     c87c2284-cb4d-4e16-9b19-d1ae79c72fc5: 'Grant Recipients' # Grant Recipients
     c94c64ea-cc6d-4b7d-9441-052031432b9e: 'Text Color' # Text Color
     c932c240-70a9-4a42-b4e8-452cde3498d7: 'Resource Card' # Resource Card
+    c7620f65-d29a-4274-8ad9-35a968a67638: Download # Download
     c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: Label # Label
     c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link' # CTA Link
     c788306b-bf19-4c01-abae-ed7dd28d8a12: 'Factoid: 2-Up' # Factoid: 2-Up
@@ -404,6 +405,7 @@ meta:
     e636fe1a-91ea-493b-81c8-354c9c08220f: 'Items Per Row' # Items Per Row
     e11568a1-11e3-4147-ae18-1ff01fdcd4f7: 'CTA Tile: Small' # CTA Tile: Small
     e39974bd-ec97-4187-be91-a431e1a4fbd7: Eyebrow # Eyebrow
+    e47176e3-add5-4f79-a2e5-6544b4099f0f: Download # Download
     e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item' # Accordion Item
     e545221b-a425-4bf5-adef-30e8193f800d: Image # Image
     eaf0d64e-a5d2-48e0-9547-b790b9262fe3: 'Table Footer' # Table Footer

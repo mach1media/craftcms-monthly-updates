@@ -68,7 +68,19 @@ fieldLayouts:
             uid: b46897af-656f-4e59-b4aa-31e07f17c705
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: e47176e3-add5-4f79-a2e5-6544b4099f0f # Download
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 983dd573-866c-441d-b49f-5529492ef5d5
+            userCondition: null
+            warning: null
+            width: 25
           -
             elementCondition: null
             fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment

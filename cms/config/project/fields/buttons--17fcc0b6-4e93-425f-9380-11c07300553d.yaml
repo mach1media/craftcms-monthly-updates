@@ -7,7 +7,7 @@ name: Buttons
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 2101682175
+  changedFieldIndicator: 2126039923
   columns:
     __assoc__:
       -
@@ -16,7 +16,7 @@ settings:
           __assoc__:
             -
               - width
-              - 60%
+              - 40%
       -
         - 3dd8a012-e0af-46a4-a906-a538bd2c6a64 # Style
         -
@@ -26,6 +26,13 @@ settings:
               - 20%
       -
         - aed0fd2d-f074-485f-b1f7-4c8ef97e91cc # Arrow
+        -
+          __assoc__:
+            -
+              - width
+              - 20%
+      -
+        - c7620f65-d29a-4274-8ad9-35a968a67638 # Download
         -
           __assoc__:
             -
