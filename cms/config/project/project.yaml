@@ -1,4 +1,4 @@
-dateModified: 1722539847
+dateModified: 1722977395
 elementSources:
   craft\elements\Entry:
     -
@@ -366,6 +366,7 @@ meta:
     cb377aa9-4075-4012-9aed-7f7baf560233: 'Text Link' # Text Link
     cc5df801-008a-4a72-aa81-bfeb16b7d2c4: 'Factoid: 1-Up' # Factoid: 1-Up
     cdb162a5-f0d2-429b-b5ac-588fc77a48da: Summary # Summary
+    ce7c1084-d84d-4a5e-be30-3011cdda7a8a: 'Disable Image Transforms' # Disable Image Transforms
     ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop' # Image: Desktop
     cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption # Caption
     d0098f21-2d27-4c01-a70b-b9f036b1d94b: 'Custom Table' # Custom Table
