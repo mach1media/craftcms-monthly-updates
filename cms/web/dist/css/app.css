@@ -12462,6 +12462,9 @@ button > .c-icon--search {
     aspect-ratio: 1;
   }
 }
+.c-tiles__tile--medium {
+  aspect-ratio: 4/3;
+}
 .c-tiles__tile--featured {
   background-color: #231F5B;
 }
@@ -12484,6 +12487,9 @@ button > .c-icon--search {
   .c-tiles__tile--featured .c-tiles__description h2, .c-tiles__tile--featured .c-tiles__description .h2 {
     max-width: 70%;
   }
+}
+.c-tiles__tile--featured.c-tiles__tile--medium .c-tiles__description h2, .c-tiles__tile--featured.c-tiles__tile--medium .c-tiles__description .h2 {
+  max-width: inherit;
 }
 .c-tiles__tile--video img {
   transition: all 0.2s ease-in-out;

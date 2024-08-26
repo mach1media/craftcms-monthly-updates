@@ -49,6 +49,9 @@
 				aspect-ratio: 1;
 			}
 		}
+		@include modifier('medium') {
+			aspect-ratio: 4 / 3;
+		}
 
 		@include modifier('featured') {
 			background-color: map-get($theme-colors, 'primary');
@@ -70,6 +73,12 @@
 					@include media-breakpoint-between(sm, lg) {
 						max-width: 70%;
 					}
+				}
+			}
+
+			&.c-tiles__tile--medium .c-tiles__description {
+				h2 {
+					max-width: inherit;
 				}
 			}
 		}

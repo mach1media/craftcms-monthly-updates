@@ -161,7 +161,7 @@ fields:
     name: Link
     searchable: false
     settings:
-      allowCustomText: false
+      allowCustomText: true
       allowTarget: true
       autoNoReferrer: true
       customTextMaxLength: 0

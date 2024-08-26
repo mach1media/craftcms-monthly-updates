@@ -4,8 +4,8 @@
 {% set img          = block.image.one %}
 {% set imgSrc       = img.format != 'svg' ? img.url('responsiveMedium') : img.url %}
 {% set imgAlt       = img.alt %}
-<div class="col-12 col-sm-6{% if medium is not defined or not medium %} col-lg-3{% endif %}">
-	<div class="c-tiles__tile c-tiles__tile--square{% if block.stackImageOnMobile%} c-tiles__tile--stacked-mobile{% endif %}">
+<div class="col-12 col-sm-6">
+	<div class="c-tiles__tile c-tiles__tile--featured c-tiles__tile--medium{% if block.stackImageOnMobile%} c-tiles__tile--stacked-mobile{% endif %}">
 		<a class="c-tiles__img-link" href="{{ block.tileLink.getUrl() }}"{% if block.tileLink.getTarget() == '_blank' %} target="_blank"{% endif %}>
 			<img src="{{ imgSrc }}" alt="{{ imgAlt }}" />
 		</a>
@@ -26,8 +26,13 @@
 			{% elseif block.label == 'leadership-ministry' %}
 				<p class="u-preheading">Leadership Ministry</p>
 			{% endif %}
-			
+			{#
 			{% if block.heading != '' %}<h2 class="h4">{{ block.heading | raw }}</h2>{% endif %}
+			#}
+			<div>
+				{% if block.heading != '' %}<h2 class="h4">{{ block.heading }}</h2>{% endif %}
+				<div class="c-tiles__description-footer"><span class="text-white">{{ block.tileLink.getText() }}</span></div>
+			</div>
 		</div>
 	</div>
 </div>
