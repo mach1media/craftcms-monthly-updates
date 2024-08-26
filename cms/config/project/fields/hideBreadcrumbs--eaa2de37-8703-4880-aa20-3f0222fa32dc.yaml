@@ -1,0 +1,14 @@
+columnSuffix: hfnrmlfb
+contentColumnType: boolean
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
+handle: hideBreadcrumbs
+instructions: null
+name: 'Hide Breadcrumbs'
+searchable: false
+settings:
+  default: false
+  offLabel: Shown
+  onLabel: Hidden
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

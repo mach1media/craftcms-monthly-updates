@@ -1,4 +1,4 @@
-dateModified: 1722539847
+dateModified: 1724695977
 elementSources:
   craft\elements\Entry:
     -
@@ -153,6 +153,7 @@ meta:
     1fc01eb4-e3aa-4109-b017-9a4357415660: Form # Form
     2bd2d918-16fc-4147-9b16-0a5c2a448d3e: 'Label: Custom' # Label: Custom
     2c56ec44-02d8-449f-b55a-ccb4e0f64909: 'Custom Table' # Custom Table
+    02c96873-0eec-4700-b08e-205c0071a461: 'Medium | Medium' # Medium | Medium
     2cc57a96-1052-495e-a015-6a4984a4fa2d: 'Page Builder: Login' # Page Builder: Login
     2f76bca5-2eaf-4262-8c5d-edb7401cc84f: Video # Video
     3b6ab5b3-228a-4f9a-b6ba-5958d0d9daf2: 'Icon: Custom' # Icon: Custom
@@ -366,6 +367,7 @@ meta:
     cb377aa9-4075-4012-9aed-7f7baf560233: 'Text Link' # Text Link
     cc5df801-008a-4a72-aa81-bfeb16b7d2c4: 'Factoid: 1-Up' # Factoid: 1-Up
     cdb162a5-f0d2-429b-b5ac-588fc77a48da: Summary # Summary
+    ce7c1084-d84d-4a5e-be30-3011cdda7a8a: 'Disable Image Transforms' # Disable Image Transforms
     ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop' # Image: Desktop
     cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption # Caption
     d0098f21-2d27-4c01-a70b-b9f036b1d94b: 'Custom Table' # Custom Table
@@ -408,6 +410,7 @@ meta:
     e47176e3-add5-4f79-a2e5-6544b4099f0f: Download # Download
     e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item' # Accordion Item
     e545221b-a425-4bf5-adef-30e8193f800d: Image # Image
+    eaa2de37-8703-4880-aa20-3f0222fa32dc: 'Hide Breadcrumbs' # Hide Breadcrumbs
     eaf0d64e-a5d2-48e0-9547-b790b9262fe3: 'Table Footer' # Table Footer
     eb417305-8df0-4a1d-85d9-d992d5a60c7a: 'Button Block' # Button Block
     eee5e319-f63b-458a-8ea2-ae0a83ba319d: 'Pre-defined Table' # Pre-defined Table
