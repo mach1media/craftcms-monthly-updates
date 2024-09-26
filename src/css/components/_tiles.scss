@@ -79,6 +79,11 @@
 			&.c-tiles__tile--medium .c-tiles__description {
 				h2 {
 					max-width: inherit;
+
+					@include media-breakpoint-between(sm, md) {
+						padding: calc($gutter / 2) $gutter;
+						font-size: 85%;
+					}
 				}
 			}
 		}

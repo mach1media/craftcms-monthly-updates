@@ -12491,6 +12491,12 @@ button > .c-icon--search {
 .c-tiles__tile--featured.c-tiles__tile--medium .c-tiles__description h2, .c-tiles__tile--featured.c-tiles__tile--medium .c-tiles__description .h2 {
   max-width: inherit;
 }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .c-tiles__tile--featured.c-tiles__tile--medium .c-tiles__description h2, .c-tiles__tile--featured.c-tiles__tile--medium .c-tiles__description .h2 {
+    padding: 0.75rem 1.5rem;
+    font-size: 85%;
+  }
+}
 .c-tiles__tile--video img {
   transition: all 0.2s ease-in-out;
 }
