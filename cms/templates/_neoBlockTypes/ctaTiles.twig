@@ -1,35 +1,39 @@
 {##
  # NEO BLOCK TYPE: CTA TILES
  #}
-<section id="{{ sectionId }}" class="c-block">
+<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
-		<div class="row g-3 c-tiles">
-			{% for row in block.children.all() %}
-				{% if row.type == 'largeSmallSmall' %}
-					{% for block in row.ctaTileLarge.all %}
-						{% include "_neoBlockTypes/_ctaTileLarge" with { block: block } %}
-					{% endfor %}
-					
-					{% for block in row.ctaTileSmall.all %}
-						{% include "_neoBlockTypes/_ctaTileSmall" with { block: block } %}
-					{% endfor %}
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12 {{ block.textColor }}{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
+				<div class="row g-3 c-tiles">
+					{% for row in block.children.all() %}
+						{% if row.type == 'largeSmallSmall' %}
+							{% for block in row.ctaTileLarge.all %}
+								{% include "_neoBlockTypes/_ctaTileLarge" with { block: block } %}
+							{% endfor %}
+							
+							{% for block in row.ctaTileSmall.all %}
+								{% include "_neoBlockTypes/_ctaTileSmall" with { block: block } %}
+							{% endfor %}
 
-				{% elseif row.type == 'smallSmallLarge' %}
-					{% for block in row.ctaTileSmall.all %}
-						{% include "_neoBlockTypes/_ctaTileSmall" with { block: block } %}
-					{% endfor %}
+						{% elseif row.type == 'smallSmallLarge' %}
+							{% for block in row.ctaTileSmall.all %}
+								{% include "_neoBlockTypes/_ctaTileSmall" with { block: block } %}
+							{% endfor %}
 
-					{% for block in row.ctaTileLarge.all %}
-						{% include "_neoBlockTypes/_ctaTileLarge" with { block: block } %}
-					{% endfor %}
+							{% for block in row.ctaTileLarge.all %}
+								{% include "_neoBlockTypes/_ctaTileLarge" with { block: block } %}
+							{% endfor %}
 
-				{% elseif row.type == 'mediumMedium' %}
-					{% for block in row.ctaTileSmall.all %}
-						{% include "_neoBlockTypes/_ctaTileMedium" with { block: block } %}
-					{% endfor %}
+						{% elseif row.type == 'mediumMedium' %}
+							{% for block in row.ctaTileSmall.all %}
+								{% include "_neoBlockTypes/_ctaTileMedium" with { block: block } %}
+							{% endfor %}
 
-				{% endif %}
-			{% endfor %}
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
