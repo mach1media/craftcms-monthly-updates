@@ -52,9 +52,9 @@
 								<div class="pt-4 text-center">
 									<a class="btn btn-primary btn-arrow"
 										href="{{ asset.getIntrinsicUrl }}" 
-										target="{{ asset.target }}"
-										{% if asset.getType == 'asset' %} download{% endif %}
-										>{{ resource.buttonLabel ?: 'Download' }}</a>
+										target="{{ asset.target }}">
+										{{ resource.buttonLabel ?: 'Download' }}
+									</a>
 								</div>
 							</div>
 						</article>
