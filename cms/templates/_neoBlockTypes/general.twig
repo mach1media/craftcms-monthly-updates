@@ -1,6 +1,40 @@
 {##
  # NEO BLOCK TYPE: GENERAL
  #}
+{% set imgDesktop    = block.imageDesktop is defined and block.imageDesktop | length ? block.imageDesktop.one : false %}
+{% set imgMobile     = block.imgMobile is defined and block.imageMobile | length ? block.imageMobile.one : false %}
+{% set gridWidth     = block.gridWidth is defined ? block.gridWidth : false %}
+{% set imgPosition   = block.imagePositionLR is defined ? (block.imagePositionLR == 'left' ? 'start' : (block.imagePositionLR == 'right' ? 'end' : false)) : false %}
+
+{% set image %}
+	{% set imgClasses  = ['col-12','col-md-' ~ gridWidth, 'float-md-' ~ imgPosition, 'mb-4'] %}
+	
+	{% if imgPosition == 'start' %}
+		{% set imgClasses = imgClasses|merge(['me-md-4']) %}
+	{% elseif imgPosition == 'end' %}
+		{% set imgClasses = imgClasses|merge(['ms-md-4']) %}
+	{% endif %}
+	
+	{% if imgMobile and imgDesktop %}
+		{% set imgMobileClasses = imgClasses|merge(['d-md-none']) %}
+		{% include "_fields/image" with {
+			img : imgMobile,
+			class : imgMobileClasses | join(' ')
+		} %}
+
+		{% set imgDesktopClasses = imgClasses|merge(['d-none','d-md-block']) %}
+		{% include "_fields/image" with {
+			img : imgDesktop,
+			class : imgDesktopClasses | join(' ')
+		} %}
+	
+	{% elseif imgDesktop %}
+		{% include "_fields/image" with {
+			img : imgDesktop,
+			class : imgClasses | join(' ')
+		} %}
+	{% endif %}
+{% endset %}
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
@@ -12,7 +46,8 @@
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg{% if block.buttons | length %} mb-4{% endif %}">
+				<div class="c-wysiwyg clearfix{% if block.buttons | length %} mb-4{% endif %}">
+					{{ image }}
 					{% apply enkode_emails %}
 						{{ block.description }}
 					{% endapply %}

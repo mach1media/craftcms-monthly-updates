@@ -35,6 +35,64 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 51fc1db6-6668-4f93-91d3-ec12bfba9cef
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d27d3b9d-e5d7-4258-8773-419acded6d24
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b7de8d3e-303d-445f-8af9-1f5d2536734d
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: decf4c9d-4084-42d5-b054-7c034dcebcd2 # Grid Width
+            instructions: null
+            label: 'Image Width'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3dcb193d-1071-4395-82b7-b8956222143b
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3411e976-21cf-4f09-8c17-6912c652b702
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 06c521fb-c681-49ba-8fe6-f6d08a21dbee
+            userCondition: null
+          -
+            elementCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null

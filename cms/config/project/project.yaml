@@ -1,4 +1,4 @@
-dateModified: 1732128365
+dateModified: 1732128736
 elementSources:
   craft\elements\Entry:
     -
@@ -392,6 +392,7 @@ meta:
     dcce62b3-2650-4939-a381-0fcc22c0d942: 'Church or Agency' # Church or Agency
     dd3266ad-0d93-46fc-89f3-e57ebce2178c: Videos # Videos
     dd9615db-bd5d-4050-9139-1b6174979ce8: Phone # Phone
+    decf4c9d-4084-42d5-b054-7c034dcebcd2: 'Grid Width' # Grid Width
     dfbc0047-f74f-4940-baf3-7f9402fc918e: 'Background Color' # Background Color
     e03100b7-f50b-4daf-9652-85e6e60138a8: Pages # Pages
     e1cb6898-debf-4b78-bbb2-440b65278382: 'Small | Small | Large' # Small | Small | Large
