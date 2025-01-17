@@ -6,8 +6,8 @@
 # Build
 # from yarn/webpack assets
 .cache-loader
-cms/web/build
-cms/web/mix-manifest.json
+/public/build
+/public/mix-manifest.json
 node_modules
 npm-debug.log
 yarn-error.log
@@ -15,13 +15,13 @@ resources/assets/config-local.json
 *.map
 
 # CRAFT CMS
-cms/.env*
-cms/vendor
-cms/storage/*
-cms/web/cpresources/*
+.env*
+/vendor
+/storage
+/public/cpresources/*
 
 # User uploads
-cms/web/uploads
+/public/uploads
 
 
 
