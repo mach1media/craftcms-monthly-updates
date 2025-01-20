@@ -7,7 +7,7 @@
 {% set category     = craft.categories.group('newsCategories').slug(categorySlug).one() %}
 
 {% set perPage = 6 %}
-{% set allNewsEntries = craft.entries.section('news').relatedTo(category) %}
+{% set allNewsEntries = craft.entries.section('news').relatedTo(category).with(['thumbnail','newsCategory']) %}
 {% set query = allNewsEntries.limit(perPage) %}
 {% paginate query as pageInfo, pageEntries %}
 

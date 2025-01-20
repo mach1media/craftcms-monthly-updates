@@ -4,7 +4,7 @@
 {% extends "_layout/default" %}
 
 {% set perPage = 6 %}
-{% set allNewsEntries = craft.entries.section('news') %}
+{% set allNewsEntries = craft.entries.section('news').with(['thumbnail','newsCategory']) %}
 {% set query = allNewsEntries.limit(perPage) %}
 {% paginate query as pageInfo, pageEntries %}
 

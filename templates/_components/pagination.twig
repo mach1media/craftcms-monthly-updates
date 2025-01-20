@@ -3,7 +3,7 @@
 		<li class="page-item"><a class="page-link" href="{{ pageInfo.firstUrl }}">&laquo;</a></li>
 		
 		{% if pageInfo.prevUrl %}
-			<li class="page-item"><a class="page-link" href="#">Prev</a></li>
+			<li class="page-item"><a class="page-link" href="{{ pageInfo.prevUrl }}">Prev</a></li>
 		{% endif %}
 		
 		{% for page, url in pageInfo.getPrevUrls(3) %}
@@ -17,7 +17,7 @@
 		{% endfor %}
 
 		{% if pageInfo.nextUrl %}
-			<li class="page-item"><a class="page-link" href="#">Next</a></li>
+			<li class="page-item"><a class="page-link" href="{{ pageInfo.nextUrl }}">Next</a></li>
 		{% endif %}
 
 		<li class="page-item"><a class="page-link" href="{{ pageInfo.lastUrl }}">&raquo;</a></li>
