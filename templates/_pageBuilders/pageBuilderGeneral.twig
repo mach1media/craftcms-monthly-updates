@@ -1,40 +1,40 @@
 {# Eager-load the Neo field #}
-{% for block in entry.pageBuilderImpactReport %}
+{% for block in entry.pageBuilderGeneral %}
 	{% do block.useMemoized() %}
 {% endfor %}
 
 {# Loop through eager-loaded Neo fields blocks #}
-{% for block in entry.pageBuilderImpactReport %}
+{% for block in entry.pageBuilderGeneral %}
 {% if block.level == 1 %}
 
 {# = = = = = = = = = SECTION STYLES = = = = = = = = = = = #}
 {% set sectionStyleClasses = [] %}
 
-{% if block.backgroundColor is defined and block.backgroundColor != 'none' %}
+{% if block.fields.backgroundColor is defined and block.backgroundColor != 'none' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge([block.backgroundColor]) %}
 {% endif %}
 
-{% if block.paddingTop is defined and block.paddingTop != '1' %}
+{% if block.fields.paddingTop is defined and block.paddingTop != '1' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-top']) %}
 {% endif %}
 
-{% if block.paddingBottom is defined and block.paddingBottom != '1' %}
+{% if block.fields.paddingBottom is defined and block.paddingBottom != '1' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-bottom']) %}
 {% endif %}
 {#
-{% if block.paddingSides is defined and block.paddingSides == '1' %}
+{% if block.fields.paddingSides is defined and block.paddingSides == '1' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--guttered']) %}
 {% endif %}
 #}
 
-{% if block.sectionId is defined and block.sectionId != '' %}
+{% if block.fields.sectionId is defined and block.sectionId != '' %}
 	{% set sectionId = block.sectionId %}
 {% else %}
 	{% set sectionId = 'section-' ~ block.id %}
 {% endif %}
 
 <!-- {{ block.type }}: {{ block.id }} -->
-{% include "_neoBlockTypes/impactReport/" ~ block.type with {'block': block, 'sectionStyleClasses': sectionStyleClasses | join(' ')} %}
+{% include "_neoBlockTypes/" ~ block.type with {'block': block, 'sectionStyleClasses': sectionStyleClasses | join(' ')} %}
 
 {% endif %}
 {% endfor %}

@@ -1,34 +1,34 @@
 {# Eager-load the Neo field #}
-{% for block in entry.pageBuilderHome %}
+{% for block in entry.pageBuilderBlog %}
 	{% do block.useMemoized() %}
 {% endfor %}
 
 {# Loop through eager-loaded Neo fields blocks #}
-{% for block in entry.pageBuilderHome %}
+{% for block in entry.pageBuilderBlog %}
 {% if block.level == 1 %}
 
 {# = = = = = = = = = SECTION STYLES = = = = = = = = = = = #}
-{% set sectionStyleClasses = [] %}
+{% set sectionStyleClasses = ['c-block--news'] %}
 
 {#
-{% if block.backgroundColor is defined and block.backgroundColor != 'none' %}
+{% if block.fields.backgroundColor is defined and block.backgroundColor != 'none' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--' ~ block.backgroundColor]) %}
 {% endif %}
 #}
-{% if block.paddingTop is defined and block.paddingTop != '1' %}
+{% if block.fields.paddingTop is defined and block.paddingTop != '1' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-top']) %}
 {% endif %}
 
-{% if block.paddingBottom is defined and block.paddingBottom != '1' %}
+{% if block.fields.paddingBottom is defined and block.paddingBottom != '1' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-bottom']) %}
 {% endif %}
 {#
-{% if block.paddingSides is defined and block.paddingSides == '1' %}
+{% if block.fields.paddingSides is defined and block.paddingSides == '1' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--guttered']) %}
 {% endif %}
 #}
 
-{% if block.sectionId is defined and block.sectionId != '' %}
+{% if block.fields.sectionId is defined and block.sectionId != '' %}
 	{% set sectionId = block.sectionId %}
 {% else %}
 	{% set sectionId = 'section-' ~ block.id %}

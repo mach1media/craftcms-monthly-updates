@@ -4,47 +4,11 @@ description: ''
 enabled: true
 field: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
 fieldLayouts:
-  7932d8d0-34c6-433f-b2db-f35cb54aba16:
+  2a69acc2-4db0-4507-8f70-ad4878053401:
     tabs:
       -
         elementCondition: null
         elements:
-          -
-            elementCondition: null
-            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 839a07d7-4dd9-445d-a831-eabaffa62810
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 6c77480f-7c05-48e5-84f2-c15f68c0f951
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 4a554f55-a8a1-40bb-8cf4-6ad8f6d3af68
-            userCondition: null
-            warning: null
-            width: 100
           -
             elementCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
@@ -53,7 +17,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8440164a-7fc3-4767-b9f9-cd0d040d74a1
+            uid: 9f5ff0fa-edf9-4100-945b-977e994a3f29
             userCondition: null
             warning: null
             width: 100
@@ -65,7 +29,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ca87a388-afd1-4955-9af3-8be2e17364a0
+            uid: a9cc20d8-a30d-4e28-8c09-a764f13ea0e0
             userCondition: null
             warning: null
             width: 100
@@ -77,16 +41,34 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3ba188b3-a7a3-48c9-99ba-85db73d95323
+            uid: 2fa6d435-4c80-448a-b378-f9d03320986a
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 0fc992b2-4b2f-45f6-ba25-fb5efeb6f075
+        uid: 9d31fd99-c9e0-403e-9278-ff2043e607a7
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 07fcdf56-ab3c-4cef-9dc0-94e3ca7c7acf
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Section Settings'
+        uid: 0a21640e-0efe-4615-bb33-703dc8b44c18
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: imgTextHeader
+handle: centeredText
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -96,5 +78,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Img+Text Header'
+name: 'Centered Text'
 topLevel: true

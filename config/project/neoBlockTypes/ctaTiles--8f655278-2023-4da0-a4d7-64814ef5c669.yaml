@@ -62,6 +62,24 @@ fieldLayouts:
         name: 'Intro Text'
         uid: bf13238b-0a68-4f5a-86bb-43a4becebc55
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4cae26b3-825b-4149-a6b4-698420140ac6
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Section Settings'
+        uid: b44d9f64-7a52-4bba-80e5-e0e2cc4e8964
+        userCondition: null
 group: null
 groupChildBlockTypes: true
 handle: ctaTiles
