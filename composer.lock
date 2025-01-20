@@ -235,11 +235,11 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.4",
+            "version": "1.5.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/bc0593537a463e55cadf45fd938d23b75095b7e1",
-                "reference": "bc0593537a463e55cadf45fd938d23b75095b7e1",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/08c50d5ec4c6ced7d0271d2862dec8c1033283e6",
+                "reference": "08c50d5ec4c6ced7d0271d2862dec8c1033283e6",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +276,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2024-11-27T15:35:25+00:00"
+            "time": "2025-01-08T16:17:16+00:00"
         },
         {
             "name": "composer/class-map-generator",
@@ -630,11 +630,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.13.7",
+            "version": "4.13.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2805bbd1baa77298fdf6704c793518644b14711e",
-                "reference": "2805bbd1baa77298fdf6704c793518644b14711e",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/461a5f9d981868917e27706dba4e73bb755d39ec",
+                "reference": "461a5f9d981868917e27706dba4e73bb755d39ec",
                 "shasum": ""
             },
             "require": {
@@ -722,7 +722,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-12-19T17:36:46+00:00"
+            "time": "2025-01-15T00:22:02+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -1374,11 +1374,6 @@
         {
             "name": "embed/embed",
             "version": "v4.4.15",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "62bd05060757a874673b4cda2299d94dd18f9a85"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/oscarotero/Embed/zipball/62bd05060757a874673b4cda2299d94dd18f9a85",
@@ -1398,14 +1393,6 @@
                 "psr/http-factory": "^1.0",
                 "psr/http-message": "^1.0|^2.0"
             },
-            "require-dev": {
-                "brick/varexporter": "^0.3.1",
-                "friendsofphp/php-cs-fixer": "^2.0",
-                "nyholm/psr7": "^1.2",
-                "oscarotero/php-cs-fixer-config": "^1.0",
-                "phpunit/phpunit": "^9.0",
-                "symfony/css-selector": "^5.0"
-            },
             "suggest": {
                 "symfony/css-selector": "If you want to get elements using css selectors"
             },
@@ -1418,7 +1405,6 @@
                     "Embed\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1438,25 +1424,6 @@
                 "oembed",
                 "opengraph",
                 "twitter cards"
-            ],
-            "support": {
-                "email": "oom@oscarotero.com",
-                "issues": "https://github.com/oscarotero/Embed/issues",
-                "source": "https://github.com/oscarotero/Embed/tree/v4.4.15"
-            },
-            "funding": [
-                {
-                    "url": "https://paypal.me/oscarotero",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/oscarotero",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/misteroom",
-                    "type": "patreon"
-                }
             ],
             "time": "2025-01-02T16:53:09+00:00"
         },
@@ -1707,11 +1674,11 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.13.52",
+            "version": "8.13.53",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/cc9a82b237d79a85be47c0b06e3943f75ab35c32",
-                "reference": "cc9a82b237d79a85be47c0b06e3943f75ab35c32",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/b3362a3c04f87b02c6e712774d20f9e577c3918c",
+                "reference": "b3362a3c04f87b02c6e712774d20f9e577c3918c",
                 "shasum": ""
             },
             "require": {
@@ -1759,7 +1726,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2024-12-13T09:08:43+00:00"
+            "time": "2025-01-15T17:09:39+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -1927,25 +1894,26 @@
         },
         {
             "name": "guzzlehttp/oauth-subscriber",
-            "version": "0.6.0",
+            "version": "0.8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/8d6cab29f8397e5712d00a383eeead36108a3c1f",
-                "reference": "8d6cab29f8397e5712d00a383eeead36108a3c1f",
+                "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/92b619b03bd21396e51c62e6bce83467d2ce8f53",
+                "reference": "92b619b03bd21396e51c62e6bce83467d2ce8f53",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.5|^7.2",
-                "guzzlehttp/psr7": "^1.7|^2.0",
-                "php": ">=5.5.0"
+                "guzzlehttp/guzzle": "^7.9",
+                "guzzlehttp/psr7": "^2.7",
+                "php": "^7.2.5 || ^8.0"
             },
             "suggest": {
                 "ext-openssl": "Required to sign using RSA-SHA1"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "0.6-dev"
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
                 }
             },
             "autoload": {
@@ -1958,18 +1926,32 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
                 }
             ],
             "description": "Guzzle OAuth 1.0 subscriber",
-            "homepage": "http://guzzlephp.org/",
             "keywords": [
                 "Guzzle",
                 "oauth"
             ],
-            "time": "2021-07-13T12:01:32+00:00"
+            "time": "2025-01-06T19:15:59+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2640,19 +2622,24 @@
         },
         {
             "name": "league/oauth2-client",
-            "version": "2.8.0",
+            "version": "2.7.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/3d5cf8d0543731dfb725ab30e4d7289891991e13",
-                "reference": "3d5cf8d0543731dfb725ab30e4d7289891991e13",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/160d6274b03562ebeb55ed18399281d8118b76c8",
+                "reference": "160d6274b03562ebeb55ed18399281d8118b76c8",
                 "shasum": ""
             },
             "require": {
-                "ext-json": "*",
-                "guzzlehttp/guzzle": "^6.5.8 || ^7.4.5",
-                "php": "^7.1 || >=8.0.0 <8.5.0"
+                "guzzlehttp/guzzle": "^6.0 || ^7.0",
+                "paragonie/random_compat": "^1 || ^2 || ^9.99",
+                "php": "^5.6 || ^7.0 || ^8.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "League\\OAuth2\\Client\\": "src/"
@@ -2685,7 +2672,7 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2024-12-11T05:05:52+00:00"
+            "time": "2023-04-16T18:19:15+00:00"
         },
         {
             "name": "league/oauth2-google",
@@ -3351,11 +3338,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "4.1.8",
+            "version": "4.1.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/dc197809638c3c97ba9c8a9a38a0fb268617ec6d",
-                "reference": "dc197809638c3c97ba9c8a9a38a0fb268617ec6d",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/8df9dcc1b740d3ce875a547f7d62bccd70def463",
+                "reference": "8df9dcc1b740d3ce875a547f7d62bccd70def463",
                 "shasum": ""
             },
             "require": {
@@ -3407,7 +3394,7 @@
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
                 "source": "https://github.com/nystudio107/craft-seomatic"
             },
-            "time": "2024-12-21T23:32:42+00:00"
+            "time": "2025-01-16T21:25:43+00:00"
         },
         {
             "name": "oscarotero/html-parser",
@@ -4620,11 +4607,11 @@
         },
         {
             "name": "spicyweb/craft-embedded-assets",
-            "version": "4.2.0",
+            "version": "4.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/23444f18190a11731f23c5cb97dabdf4c2558d31",
-                "reference": "23444f18190a11731f23c5cb97dabdf4c2558d31",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/a87104b797e9c7d8f615b0ef179ad5944716810c",
+                "reference": "a87104b797e9c7d8f615b0ef179ad5944716810c",
                 "shasum": ""
             },
             "require": {
@@ -4639,7 +4626,7 @@
                 "schemaVersion": "1.0.0",
                 "class": "spicyweb\\embeddedassets\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-embedded-assets/blob/4.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/4.2.0.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/4.2.1.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -4670,18 +4657,18 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-embedded-assets/issues",
                 "source": "https://github.com/spicywebau/craft-embedded-assets",
-                "docs": "https://github.com/spicywebau/craft-embedded-assets/blob/4.2.0/README.md",
+                "docs": "https://github.com/spicywebau/craft-embedded-assets/blob/4.2.1/README.md",
                 "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/4.x.atom"
             },
-            "time": "2024-11-12T10:16:59+00:00"
+            "time": "2025-01-15T03:15:55+00:00"
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "4.2.23",
+            "version": "4.2.24",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/1232f8ed0b3d83d268df8f4c8a48f720139d3e80",
-                "reference": "1232f8ed0b3d83d268df8f4c8a48f720139d3e80",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/f8dbd09dd49e53a6e9237641caeb436be60035e4",
+                "reference": "f8dbd09dd49e53a6e9237641caeb436be60035e4",
                 "shasum": ""
             },
             "require": {
@@ -4695,7 +4682,7 @@
                 "schemaVersion": "4.0.0",
                 "class": "benf\\neo\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-neo/blob/4.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.2.23.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.2.24.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -4723,10 +4710,10 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-neo/issues",
                 "source": "https://github.com/spicywebau/craft-neo",
-                "docs": "https://github.com/spicywebau/craft-neo/blob/4.2.23/README.md",
+                "docs": "https://github.com/spicywebau/craft-neo/blob/4.2.24/README.md",
                 "rss": "https://github.com/spicywebau/craft-neo/commits/4.x.atom"
             },
-            "time": "2024-12-13T03:29:56+00:00"
+            "time": "2025-01-15T22:41:00+00:00"
         },
         {
             "name": "statikbe/craft-config-values",
@@ -6767,11 +6754,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "2.1.37",
+            "version": "2.1.39",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/8defa5ce13387c0f86a7a15c199131d6f4b8dc3d",
-                "reference": "8defa5ce13387c0f86a7a15c199131d6f4b8dc3d",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/abd32b833f103f0cf2f06a5c751c0941f53e1f4a",
+                "reference": "abd32b833f103f0cf2f06a5c751c0941f53e1f4a",
                 "shasum": ""
             },
             "require": {
@@ -6781,11 +6768,11 @@
                 "ezyang/htmlpurifier": "^4.13",
                 "fakerphp/faker": "^1.9.1",
                 "giggsey/libphonenumber-for-php": "^8.12",
-                "guzzlehttp/oauth-subscriber": "^0.4.0 || ^0.5.0 || ^0.6.0",
+                "guzzlehttp/oauth-subscriber": "^0.4.0 || ^0.5.0 || ^0.6.0 || ^0.7.0 || ^0.8.1",
                 "html2text/html2text": "^4.3",
                 "league/html-to-markdown": "^4.10 || ^5.0",
                 "league/oauth1-client": "^1.9",
-                "league/oauth2-client": "^2.6.0",
+                "league/oauth2-client": "2.7.0",
                 "league/oauth2-google": "^3.0 || ^4.0",
                 "moneyphp/money": "^4.0",
                 "nystudio107/craft-plugin-vite": "^4.0.0-beta.4",
@@ -6832,7 +6819,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2024-12-27T01:05:51+00:00"
+            "time": "2025-01-17T00:34:44+00:00"
         },
         {
             "name": "verbb/redactor-tweaks",
