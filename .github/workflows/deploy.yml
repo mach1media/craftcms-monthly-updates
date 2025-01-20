@@ -1,4 +1,4 @@
-name: Deploy to ${{ env.SERVER_IP }}
+name: Deploy to digitalocean
 
 on:
   push:
@@ -62,7 +62,7 @@ jobs:
     - name: Debug SSH Keys
       run: ssh-add -l
 
-    - name: Deploy to ${{ env.SERVER_IP }}
+    - name: Deploy to digitalocean
       run: |
         ssh -o StrictHostKeyChecking=no ${{ env.SERVER_USER }}@${{ env.SERVER_IP }} << 'EOF'
           cd ${{ env.APP_PATH }}
