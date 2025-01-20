@@ -1,0 +1,9 @@
+environments:
+  staging:
+    server_ip: "104.131.40.127"
+    server_user: "serverpilot"
+    app_path: "apps/tmf-staging"
+  production:
+    server_ip: "104.131.40.127"
+    server_user: "serverpilot"
+    app_path: "apps/tmf"
