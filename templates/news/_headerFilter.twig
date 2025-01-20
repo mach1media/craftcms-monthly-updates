@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-between mb-4">
+	<h1 class="mb-0">{{ heading ?: 'News & Stories' }}</h1>
+
+	<div class="dropdown c-news__category-select py-0">
+		<button class="btn btn-outline-secondary dropdown-toggle"
+			style="letter-spacing:normal;"
+			type="button"
+			data-bs-toggle="dropdown"
+			aria-expanded="false">
+			{{ category is defined and category | length ? category.title : 'types' }}
+		</button>
+
+		<ul class="dropdown-menu dropdown-menu-end">
+			<li><a class="dropdown-item" href="{{ url('news') }}">All News & Stories</a></li>
+			{% for cat in craft.categories.group('newsCategories').all() %}
+				<li><a class="dropdown-item" href="{{ cat.url() }}">{{ cat.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

@@ -42,7 +42,19 @@ fieldLayouts:
             uid: 6144b3a2-0c11-469c-96fb-57a80cbe4ae1
             userCondition: null
             warning: null
-            width: 100
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 6b671144-8ff1-4b84-9c9e-d0b03e00adfd # News Category
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0789a454-6544-4e84-8968-67f4024b60be
+            userCondition: null
+            warning: null
+            width: 25
           -
             elementCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading

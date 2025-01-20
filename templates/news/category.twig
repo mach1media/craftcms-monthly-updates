@@ -1,10 +1,13 @@
-{#
- # BASE TEMPLATE: NEWS SECTION
+{##
+ # NEWS LANDING PAGE TEMPLATE
  #}
 {% extends "_layout/default" %}
 
+{% set categorySlug = craft.app.request.getSegments | last %}
+{% set category     = craft.categories.group('newsCategories').slug(categorySlug).one() %}
+
 {% set perPage = 6 %}
-{% set allNewsEntries = craft.entries.section('news') %}
+{% set allNewsEntries = craft.entries.section('news').relatedTo(category) %}
 {% set query = allNewsEntries.limit(perPage) %}
 {% paginate query as pageInfo, pageEntries %}
 
@@ -15,7 +18,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 mb-md-5">
-				{% include "news/_headerFilter" with {'heading':'News & Stories'} %}
+				{% include "news/_headerFilter" with {
+					'heading': category.title,
+					'category': category
+				} %}
 			</div>
 		</div>
 		
@@ -39,6 +45,5 @@
 		{% endif %}
 	</div>
 </section>
-
 
 {% endblock %}

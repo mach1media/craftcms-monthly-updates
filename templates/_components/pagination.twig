@@ -1,0 +1,25 @@
+<nav aria-label="{{ paginationLabel ?: 'pagination' }}">
+	<ul class="pagination justify-content-center">
+		<li class="page-item"><a class="page-link" href="{{ pageInfo.firstUrl }}">&laquo;</a></li>
+		
+		{% if pageInfo.prevUrl %}
+			<li class="page-item"><a class="page-link" href="#">Prev</a></li>
+		{% endif %}
+		
+		{% for page, url in pageInfo.getPrevUrls(3) %}
+			<li class="page-item"><a class="page-link" href="{{ url }}">{{ page }}</a></li>
+		{% endfor %}
+		
+		<li class="page-item active" aria-current="page"><a class="page-link" href="#">{{ pageInfo.currentPage }}</a></li>
+		
+		{% for page, url in pageInfo.getNextUrls(3) %}
+			<li class="page-item"><a class="page-link" href="{{ url }}">{{ page }}</a></li>
+		{% endfor %}
+
+		{% if pageInfo.nextUrl %}
+			<li class="page-item"><a class="page-link" href="#">Next</a></li>
+		{% endif %}
+
+		<li class="page-item"><a class="page-link" href="{{ pageInfo.lastUrl }}">&raquo;</a></li>
+	</ul>
+</nav>

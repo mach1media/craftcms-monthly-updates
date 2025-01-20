@@ -1,0 +1,41 @@
+{% if entry.thumbnail | length %}
+	{% set img    = entry.thumbnail.one %}
+	{% set imgSrc = img.url('previewCard') %}
+	{% set imgAlt = img.alt ?: entry.title %}
+{% else %}
+	{% set imgSrc = '/dist/img/placeholder-' ~ cycle([1,2,3], loop.index) ~ '.jpg' %}
+	{% set imgAlt = 'placeholder' %}
+{% endif %}
+<article class="c-card card bg-white h-100">
+	<a href="{{ entry.url }}">
+		<img class="c-card__img d-block w-100 rounded-top" src="{{ imgSrc }}" alt="{{ imgAlt }}">
+	</a>
+	
+	<div class="card-body d-flex flex-column justify-content-between">
+		<div>
+			<p class="c-card__date">
+				{{ entry.postDate | date }}
+			</p>
+
+			<h2 class="fs-4 u-font-heading-bold">
+				{{ entry.title }}
+			</h2>
+
+			{% if entry.summary != '' %}
+				<p class="opacity-75">{{ entry.summary | raw }}</p>
+			{% endif %}
+		</div>
+		
+		<div class="pt-4">
+			{% if entry.textLink.getLink() %}
+				{% include "_fields/button" with {
+					'button': entry.textLink, 
+					'color': 'btn-outline-secondary', 
+					'style': 'btn-sm btn-pill stretched-link'
+				} %}
+			{% else %}
+				<a href="{{ entry.url }}" class="btn btn-sm btn-outline-secondary">Read More</a>
+			{% endif %}
+		</div>
+	</div>
+</article>

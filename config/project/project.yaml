@@ -1,4 +1,4 @@
-dateModified: 1737390517
+dateModified: 1737392128
 elementSources:
   craft\elements\Entry:
     -
@@ -58,8 +58,8 @@ elementSources:
       disabled: false
       key: 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
       tableAttributes:
+        - 'field:6b671144-8ff1-4b84-9c9e-d0b03e00adfd' # News Category
         - postDate
-        - author
         - link
       type: native
     -
@@ -183,6 +183,8 @@ meta:
     6ad28947-80eb-413a-95d6-899fff1928b4: Headshot # Headshot
     6add601c-de5e-4e85-8618-137007c0f910: Signatures # Signatures
     6b8077d5-b074-4ffc-8cba-4946fd5d9a35: 'Img+Text Header' # Img+Text Header
+    6b671144-8ff1-4b84-9c9e-d0b03e00adfd: 'News Category' # News Category
+    6c87cd30-3f4b-4da7-a4ae-b5fc2f005225: 'News Categories' # News Categories
     6caec3d2-766a-490b-9491-7b784243b1d4: 'Mega Menu: CTAs' # Mega Menu: CTAs
     6dfd2047-d32f-48df-8574-2bb332a7c17e: 'Text+Headshot Videos' # Text+Headshot Videos
     6e1fd6d5-5ab2-4bee-8393-d541afe51eea: Heading # Heading
