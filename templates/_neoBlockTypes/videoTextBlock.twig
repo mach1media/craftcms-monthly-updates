@@ -5,30 +5,23 @@
 	<div class="container">
 		<div class="row align-items-center justify-content-between">
 			<div class="col-12 col-lg-5 mb-3 mb-lg-0{% if block.imagePositionLR == 'right' %} order-2{% endif %}">
-				{#
-				<div class="c-video-block__media-wrapper">
-					<div class="c-video-block__media">
-						<img class="d-block w-100 img-fluid" src="/dist/img/home-cta-area-representatives.jpg" alt="placeholder" />
-					</div>
-				</div>
-				#}
 				{% set embeddedAsset = craft.embeddedAssets.get(block.video.one) %}
-				<div class="c-video-block__media-wrapper js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
+				<div class="js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
 			</div>
 
-			<div class="col-12 col-lg-5 {{ block.textColor }}{% if block.imagePositionLR == 'right' %} order-1{% endif %}">
+			<div class="col-12 col-lg-6 {{ block.textColor }}{% if block.imagePositionLR == 'right' %} order-1{% endif %}">
 				{% if block.preheading is defined and block.preheading != '' %}
-				<p class="u-preheading">{{ block.preheading }}</p>
+					<p class="u-preheading">{{ block.preheading }}</p>
 				{% endif %}
 
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">
-					{% apply enkode_emails %}
-						{{ block.description }}
-					{% endapply %}
-				</div>
+					<div class="c-wysiwyg">
+						{% apply enkode_emails %}
+							{{ block.description }}
+						{% endapply %}
+					</div>
 				{% endif %}
 
 				{% include "_fields/buttons" with {'buttons': block.buttons} %}
