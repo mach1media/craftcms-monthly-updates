@@ -152,52 +152,52 @@
 
 	{# =========== MEGA MENU PANELS =========== #}
 	{% for node in navNodes %}
-	{% if node.type == 'megaMenu' %}
-	<div id="mega-{{ node.slug }}" class="c-header__mega-menu js-megamenu shadow collapse" aria-labelledby="mega-{{ node.slug }}-tab" data-bs-parent="#header">
-		<div class="row gx-0">
-			{% if node.megaMenuCtas | length %}
-			<div class="col-4 c-header__mega-menu-features">
-				{% for block in node.megaMenuCtas.all() %}
-					{% if block.type == 'label' %}
-						<p class="u-base-font-semibold">{{ block.label | raw }}</p>
-					{% elseif block.type == 'cta' %}
-						{% set link   = block.ctaLink %}
-						{% set img    = block.image.one() %}
-						{% set imgSrc = img.url('responsiveSmall') %}
-						{% set imgAlt = img.alt %}
-						<a class="d-block lh-sm{% if not loop.last%} mb-5{% endif %}" href="{{ link.getIntrinsicUrl() }}">
-							<img class="d-block w-100 img-fluid rounded mb-2" src="{{ imgSrc }}" alt="{{ imgAlt }}" />
-							{{ link.getText() ?: link.element.title }}
-						</a>
-					{% endif %}
-				{% endfor %}
-			</div>
-			{% endif %}
+		{% if node.type == 'megaMenu' %}
+		<div id="mega-{{ node.slug }}" class="c-header__mega-menu js-megamenu shadow collapse" aria-labelledby="mega-{{ node.slug }}-tab" data-bs-parent="#header">
+			<div class="row gx-0">
+				{% if node.megaMenuCtas | length %}
+				<div class="col-4 c-header__mega-menu-features">
+					{% for block in node.megaMenuCtas.all() %}
+						{% if block.type == 'label' %}
+							<p class="u-base-font-semibold">{{ block.label | raw }}</p>
+						{% elseif block.type == 'cta' %}
+							{% set link   = block.ctaLink %}
+							{% set img    = block.image.one() %}
+							{% set imgSrc = img.url('responsiveSmall') %}
+							{% set imgAlt = img.alt %}
+							<a class="d-block lh-sm{% if not loop.last%} mb-5{% endif %}" href="{{ link.getIntrinsicUrl() }}">
+								<img class="d-block w-100 img-fluid rounded mb-2" src="{{ imgSrc }}" alt="{{ imgAlt }}" />
+								{{ link.getText() ?: link.element.title }}
+							</a>
+						{% endif %}
+					{% endfor %}
+				</div>
+				{% endif %}
 
-			<div class="col-8 p-5">
-				<div class="row">
-					{% set columns = (node.megaMenuLinks.level(1) | length / 2) | round(0, 'ceil') %}
-					{% for column in node.megaMenuLinks.level(1)|batch(columns) %}
-					<div class="col-6">
-						{% for group in column %}
-							{% if group.textLink | length %}
-							<p class="h5{% if group.children | length == 0 %} mb-5{% endif %}"><a href="{{ group.textLink.getIntrinsicUrl() }}">{{ group.textLink.getText() }}</a></p>
-							{% endif %}
-							{% if group.children | length %}
-							<ul class="mb-5">
-								{% for child in group.children.all() %}
-								<li><a href="{{ child.textLink.getIntrinsicUrl() }}{% if child.sectionId != '' %}#{{ child.sectionId }}{% endif %}">{{ child.textLink.getText() }}</a></li>
-								{% endfor %}
-							</ul>
-							{% endif %}
+				<div class="col-8 p-5">
+					<div class="row">
+						{% set columns = (node.megaMenuLinks.level(1) | length / 2) | round(0, 'ceil') %}
+						{% for column in node.megaMenuLinks.level(1)|batch(columns) %}
+						<div class="col-6">
+							{% for group in column %}
+								{% if group.textLink | length %}
+								<p class="h5{% if group.children | length == 0 %} mb-5{% endif %}"><a href="{{ group.textLink.getIntrinsicUrl() }}">{{ group.textLink.getText() }}</a></p>
+								{% endif %}
+								{% if group.children | length %}
+								<ul class="mb-5">
+									{% for child in group.children.all() %}
+									<li><a href="{{ child.textLink.getIntrinsicUrl() }}{% if child.sectionId != '' %}#{{ child.sectionId }}{% endif %}">{{ child.textLink.getText() }}</a></li>
+									{% endfor %}
+								</ul>
+								{% endif %}
+							{% endfor %}
+						</div>
 						{% endfor %}
 					</div>
-					{% endfor %}
 				</div>
 			</div>
 		</div>
-	</div>
-	{% endif %}
+		{% endif %}
 	{% endfor %}
 </header>
 
@@ -217,7 +217,7 @@
 			<ul class="d-flex h-100 flex-column justify-content-start">
 				{% for node in navNodes %}
 					{% if node.type == 'megaMenu' %}
-					<li class="menu-{{ node.slug }}">
+					<li class="menu-{{ node.slug }}" data-node-type="{{ node.type }}">
 						<label for="menu-{{ node.slug }}">{{ node.title }}</label>
 						<input type="checkbox" id="menu-{{ node.slug }}" name="menu-{{ node.slug }}" class="c-header__faceted-checkbox" />
 
@@ -253,7 +253,23 @@
 					</li>
 
 					{% elseif node.type == 'dropdown' %}
+						{% set link = node.textLink %}
 						<li class="menu-{{ node.slug }}">
+							<div class="c-header__faceted-accordion-toggle d-flex">
+								<a class="flex-fill"
+									href="{{ link.getIntrinsicUrl() }}">
+									{{ link.getText() ?: node.title }}
+								</a>
+								<button type="button"
+									class="btn"
+									data-bs-toggle="collapse"
+									data-bs-target="#accordion-{{ node.id }}"
+									aria-expanded="false"
+									aria-controls="accordion-{{ node.id }}">
+									<span class="visually-hidden">Toggle Dropdown</span>
+								</button>
+							</div>
+							{#
 							<button
 								class="c-header__faceted-accordion-toggle"
 								type="button" 
@@ -261,6 +277,7 @@
 								data-bs-target="#accordion-{{ node.id }}"
 								aria-expanded="false"
 								aria-controls="accordion-{{ node.id }}">{{ node.title }}</button>
+							#}
 							<div class="collapse" id="accordion-{{ node.id }}" data-bs-parent="#accordion-{{ node.slug }}">
 								<ul>
 									{% set parentLink = node.linkToPage | length ? node.linkToPage.one : null %}

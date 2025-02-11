@@ -10731,7 +10731,7 @@ textarea.form-control-lg {
   }
 }
 
-.c-header__faceted-accordion-toggle, .c-header__mega-toggle button, .c-header__utility button.nav-link {
+.c-header__faceted-accordion-toggle button, .c-header__mega-toggle button, .c-header__utility button.nav-link {
   border: none;
   margin: 0;
   padding: 0;
@@ -10750,7 +10750,7 @@ textarea.form-control-lg {
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
 }
-.c-header__faceted-accordion-toggle:hover, .c-header__mega-toggle button:hover, .c-header__utility button.nav-link:hover {
+.c-header__faceted-accordion-toggle button:hover, .c-header__mega-toggle button:hover, .c-header__utility button.nav-link:hover {
   cursor: pointer;
 }
 
@@ -11434,7 +11434,9 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted li > a,
 .c-header__faceted li > label,
-.c-header__faceted li > button {
+.c-header__faceted li > button,
+.c-header__faceted li > .c-header__faceted-accordion-toggle > a {
+  position: relative;
   display: block;
   width: 100%;
   font-size: 1.2em;
@@ -11449,19 +11451,19 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted li > a:hover,
 .c-header__faceted li > label:hover,
-.c-header__faceted li > button:hover {
+.c-header__faceted li > button:hover,
+.c-header__faceted li > .c-header__faceted-accordion-toggle > a:hover {
   color: #C19D68;
+}
+.c-header__faceted li > .c-header__faceted-accordion-toggle > button {
+  width: 1.5em;
+  height: 1.5em;
 }
 .c-header__faceted > ul > li > div:not(.c-header__faceted-sub) > ul > li > a {
   font-size: 1em;
 }
 .c-header__faceted label {
   cursor: pointer;
-}
-.c-header__faceted li > label,
-.c-header__faceted li > button,
-.c-header__faceted li > a {
-  position: relative;
 }
 .c-header__faceted li > label:after {
   content: "";
@@ -11477,7 +11479,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-investments > label:before,
 .c-header__faceted .menu-investments > button:before,
-.c-header__faceted .menu-investments > a:before {
+.c-header__faceted .menu-investments > a:before,
+.c-header__faceted .menu-investments > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11491,7 +11494,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-loans > label:before,
 .c-header__faceted .menu-loans > button:before,
-.c-header__faceted .menu-loans > a:before {
+.c-header__faceted .menu-loans > a:before,
+.c-header__faceted .menu-loans > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11505,7 +11509,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-philanthropy > label:before,
 .c-header__faceted .menu-philanthropy > button:before,
-.c-header__faceted .menu-philanthropy > a:before {
+.c-header__faceted .menu-philanthropy > a:before,
+.c-header__faceted .menu-philanthropy > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11519,7 +11524,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-grants > label:before,
 .c-header__faceted .menu-grants > button:before,
-.c-header__faceted .menu-grants > a:before {
+.c-header__faceted .menu-grants > a:before,
+.c-header__faceted .menu-grants > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11533,7 +11539,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-learning-innovation > label:before,
 .c-header__faceted .menu-learning-innovation > button:before,
-.c-header__faceted .menu-learning-innovation > a:before {
+.c-header__faceted .menu-learning-innovation > a:before,
+.c-header__faceted .menu-learning-innovation > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11547,7 +11554,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-engagement > label:before,
 .c-header__faceted .menu-engagement > button:before,
-.c-header__faceted .menu-engagement > a:before {
+.c-header__faceted .menu-engagement > a:before,
+.c-header__faceted .menu-engagement > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11561,7 +11569,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-about > label:before,
 .c-header__faceted .menu-about > button:before,
-.c-header__faceted .menu-about > a:before {
+.c-header__faceted .menu-about > a:before,
+.c-header__faceted .menu-about > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11575,7 +11584,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-news > label:before,
 .c-header__faceted .menu-news > button:before,
-.c-header__faceted .menu-news > a:before {
+.c-header__faceted .menu-news > a:before,
+.c-header__faceted .menu-news > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11589,7 +11599,8 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 }
 .c-header__faceted .menu-contact > label:before,
 .c-header__faceted .menu-contact > button:before,
-.c-header__faceted .menu-contact > a:before {
+.c-header__faceted .menu-contact > a:before,
+.c-header__faceted .menu-contact > .c-header__faceted-accordion-toggle > a:before {
   content: "";
   position: absolute;
   display: block;
@@ -11673,7 +11684,7 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
 .c-header__faceted-checkbox:checked + .c-header__faceted-sub {
   transform: translate3d(0, 0, 0);
 }
-.c-header__faceted-accordion-toggle {
+.c-header__faceted-accordion-toggle button {
   position: relative;
   display: block;
   width: 100%;
@@ -11682,7 +11693,7 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   padding-top: 0.75em;
   padding-bottom: 0.75em;
 }
-.c-header__faceted-accordion-toggle:after {
+.c-header__faceted-accordion-toggle button:after {
   content: "";
   position: absolute;
   display: block;
@@ -11695,7 +11706,7 @@ h2:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5) {
   background-size: contain;
   transition: all 0.2s ease-in-out;
 }
-.c-header__faceted-accordion-toggle[aria-expanded=true]:after {
+.c-header__faceted-accordion-toggle button[aria-expanded=true]:after {
   transform: translate(0, -50%) scale(0.8) rotate(-90deg);
 }
 .c-header__offcanvas-branding img {

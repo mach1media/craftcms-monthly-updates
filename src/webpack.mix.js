@@ -10,7 +10,7 @@ mix.autoload({
     ], 
     'js/app.js')
   .sass(`css/app.scss`, 'css')
-  .setPublicPath('../cms/web/dist');
+  .setPublicPath('../public/dist');
 
 // Copy Vendor libraries
-mix.copy(`vendor`,'../cms/web/dist/vendor');
+mix.copy(`vendor`,'../public/dist/vendor');

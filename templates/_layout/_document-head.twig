@@ -13,8 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Preload Web Fonts, CSS, and JS -->
-<link rel="preload" href="/dist/css/app.css" as="style">
-<link rel="preload" href="/dist/js/app.js" as="script">
+<link rel="preload" href="/dist/css/app.css?v={{ cacheBusterVersion }}" as="style">
+<link rel="preload" href="/dist/js/app.js?v={{ cacheBusterVersion }}" as="script">
 
 {# FAVICON #}
 {# {% include '_layouts/_favicon' %} #}
@@ -27,6 +27,6 @@
 
 <!-- CSS Styles -->
 <link rel="stylesheet" href="https://use.typekit.net/qsq2srv.css">
-<link rel="stylesheet" href="/dist/css/app.css?v=20240926.1">
+<link rel="stylesheet" href="/dist/css/app.css?v={{ cacheBusterVersion }}">
 </head>
 

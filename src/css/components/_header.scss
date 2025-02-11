@@ -262,7 +262,9 @@
 		
 		li > a,
 		li > label,
-		li > button {
+		li > button,
+		li > .c-header__faceted-accordion-toggle > a {
+			position: relative;
 			display: block;
 			width: 100%;
 			font-size: 1.2em;
@@ -280,6 +282,12 @@
 			}
 		}
 
+
+		li > .c-header__faceted-accordion-toggle > button {
+			width: 1.5em;
+			height: 1.5em;
+		}
+
 		// top-level dropdown links
 		& > ul > li > div:not(.c-header__faceted-sub) > ul > li > a {
 			font-size: 1em;
@@ -287,13 +295,6 @@
 		
 		label {
 			cursor: pointer;
-		}
-		
-
-		li > label,
-		li > button,
-		li > a {
-			position: relative;
 		}
 
 		li > label {
@@ -313,7 +314,8 @@
 
 		.menu-investments > label,
 		.menu-investments > button,
-		.menu-investments > a {
+		.menu-investments > a,
+		.menu-investments > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -330,7 +332,8 @@
 
 		.menu-loans > label,
 		.menu-loans > button,
-		.menu-loans > a {
+		.menu-loans > a,
+		.menu-loans > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -347,7 +350,8 @@
 
 		.menu-philanthropy > label,
 		.menu-philanthropy > button,
-		.menu-philanthropy > a {
+		.menu-philanthropy > a,
+		.menu-philanthropy > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -364,7 +368,8 @@
 
 		.menu-grants > label,
 		.menu-grants > button,
-		.menu-grants > a {
+		.menu-grants > a,
+		.menu-grants > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -381,7 +386,8 @@
 
 		.menu-learning-innovation > label,
 		.menu-learning-innovation > button,
-		.menu-learning-innovation > a {
+		.menu-learning-innovation > a,
+		.menu-learning-innovation > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -398,7 +404,8 @@
 
 		.menu-engagement > label,
 		.menu-engagement > button,
-		.menu-engagement > a {
+		.menu-engagement > a,
+		.menu-engagement > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -415,7 +422,8 @@
 
 		.menu-about > label,
 		.menu-about > button,
-		.menu-about > a {
+		.menu-about > a,
+		.menu-about > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -432,7 +440,8 @@
 
 		.menu-news > label,
 		.menu-news > button,
-		.menu-news > a {
+		.menu-news > a,
+		.menu-news > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -449,7 +458,8 @@
 
 		.menu-contact > label,
 		.menu-contact > button,
-		.menu-contact > a {
+		.menu-contact > a,
+		.menu-contact > .c-header__faceted-accordion-toggle > a {
 			&:before {
 				content: "";
 				position: absolute;
@@ -547,31 +557,37 @@
 		}
 	}
 	@include element('faceted-accordion-toggle') {
-		@extend %reset-button;
-		position: relative;
-		display: block;
-		width: 100%;
-		font-size: 1.2em;
-		line-height: 1em;
-		padding-top: .75em;
-		padding-bottom: .75em;
-
-		&:after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 1.5em;
-			height: 1.5em;
-			top: 50%;
-			right: 0;
-			transform: translate(0, -50%) scale(.8) rotate(90deg);
-			background: url('/dist/img/icon-chevron-circle-right.svg') center center no-repeat;
-			background-size: contain;
-			@include animate;
+		a {
+		
 		}
+		
+		button {
+			@extend %reset-button;
+			position: relative;
+			display: block;
+			width: 100%;
+			font-size: 1.2em;
+			line-height: 1em;
+			padding-top: .75em;
+			padding-bottom: .75em;
 
-		&[aria-expanded="true"]:after {
-			transform: translate(0, -50%) scale(.8) rotate(-90deg);
+			&:after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 1.5em;
+				height: 1.5em;
+				top: 50%;
+				right: 0;
+				transform: translate(0, -50%) scale(.8) rotate(90deg);
+				background: url('/dist/img/icon-chevron-circle-right.svg') center center no-repeat;
+				background-size: contain;
+				@include animate;
+			}
+
+			&[aria-expanded="true"]:after {
+				transform: translate(0, -50%) scale(.8) rotate(-90deg);
+			}
 		}
 	}
 
