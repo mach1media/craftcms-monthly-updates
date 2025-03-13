@@ -1,4 +1,4 @@
-dateModified: 1737393165
+dateModified: 1741902148
 elementSources:
   craft\elements\Entry:
     -
@@ -97,9 +97,9 @@ elementSources:
         - link
       type: native
 email:
-  fromEmail: jmitchell@tmf-fdn.org
+  fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: 'Texas Methodist Foundation'
-  replyToEmail: jmitchell@tmf-fdn.org
+  replyToEmail: $CRAFT_SYSTEM_EMAIL
   template: ''
   transportSettings:
     command: '/usr/sbin/sendmail -bs'
@@ -675,6 +675,10 @@ plugins:
       spamLimit: 500
       useQueueForIntegrations: true
       useQueueForNotifications: true
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   neo:
     edition: standard
     enabled: true
@@ -769,7 +773,8 @@ plugins:
     schemaVersion: 0.0.0.0
 system:
   edition: pro
-  live: true
-  name: TMF
+  live: $CRAFT_SYSTEM_STATUS
+  name: $CRAFT_SYSTEM_NAME
+  retryDuration: null
   schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles

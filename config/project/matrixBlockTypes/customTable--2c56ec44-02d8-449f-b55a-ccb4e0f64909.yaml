@@ -137,6 +137,8 @@ fields:
       columnsAddRowLabel: null
       columnsInstructions: null
       columnsLabel: null
+      enableAlignmentColumn: true
+      enableWidthColumn: true
       rowsAddRowLabel: null
       rowsInstructions: null
       rowsLabel: null

@@ -9,6 +9,8 @@ settings:
   columnsAddRowLabel: null
   columnsInstructions: 'Add columns to your table'
   columnsLabel: null
+  enableAlignmentColumn: true
+  enableWidthColumn: true
   rowsAddRowLabel: null
   rowsInstructions: 'Add rows to your table'
   rowsLabel: null
