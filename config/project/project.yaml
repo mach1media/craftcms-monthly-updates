@@ -1,4 +1,4 @@
-dateModified: 1741902148
+dateModified: 1741902654
 elementSources:
   craft\elements\Entry:
     -
@@ -102,8 +102,10 @@ email:
   replyToEmail: $CRAFT_SYSTEM_EMAIL
   template: ''
   transportSettings:
-    command: '/usr/sbin/sendmail -bs'
-  transportType: craft\mail\transportadapters\Sendmail
+    apiKey: $MAILGUN_API_KEY
+    domain: $MAILGUN_DOMAIN
+    endpoint: $MAILGUN_ENDPOINT
+  transportType: craft\mailgun\MailgunAdapter
 fs:
   documents:
     hasUrls: true

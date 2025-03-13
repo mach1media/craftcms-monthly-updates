@@ -25,7 +25,7 @@ tabs:
         tip: null
         title: null
         type: craft\fieldlayoutelements\addresses\LabelField
-        uid: dd9aa600-0721-4aeb-940c-955aeee6cb7d
+        uid: 04b93a14-4110-4035-8405-2ae80dce64ff
         userCondition: null
         warning: null
         width: 100
@@ -39,7 +39,7 @@ tabs:
         requirable: false
         tip: null
         type: craft\fieldlayoutelements\addresses\CountryCodeField
-        uid: 56508036-a498-480f-a190-2454d803ff15
+        uid: ed09d100-34da-472d-9f4e-a6e3204e93b3
         userCondition: null
         warning: null
         width: 100
@@ -50,9 +50,9 @@ tabs:
         required: false
         tip: null
         type: craft\fieldlayoutelements\addresses\AddressField
-        uid: 2cfa7c99-7638-4b9d-ae0b-4e7e24ce6843
+        uid: 147b1153-df07-4a4e-9f38-4114cf4f9214
         userCondition: null
         warning: null
     name: Content
-    uid: 764b4654-9004-415a-abc2-fc1c6e2f4943
+    uid: 2b9a1ec5-c0e8-48a0-904a-0bb7afaf6e34
     userCondition: null
