@@ -384,16 +384,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.8.8",
+            "version": "2.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "85ff84d6c5260ba21740a7c5c9a111890805d6e7"
+                "reference": "b4e6bff2db7ce756ddb77ecee958a0f41f42bd9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/85ff84d6c5260ba21740a7c5c9a111890805d6e7",
-                "reference": "85ff84d6c5260ba21740a7c5c9a111890805d6e7",
+                "url": "https://api.github.com/repos/composer/composer/zipball/b4e6bff2db7ce756ddb77ecee958a0f41f42bd9d",
+                "reference": "b4e6bff2db7ce756ddb77ecee958a0f41f42bd9d",
                 "shasum": ""
             },
             "require": {
@@ -478,7 +478,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.8.8"
+                "source": "https://github.com/composer/composer/tree/2.8.9"
             },
             "funding": [
                 {
@@ -494,7 +494,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-04T14:56:46+00:00"
+            "time": "2025-05-13T12:01:37+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -756,11 +756,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.15.3",
+            "version": "4.15.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/7ad3a61e84c0266d24e34d8ce3ebd13154d60b92",
-                "reference": "7ad3a61e84c0266d24e34d8ce3ebd13154d60b92",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/fe8fac5897b82d8c1f5227bbf0cb1657a7c31ebe",
+                "reference": "fe8fac5897b82d8c1f5227bbf0cb1657a7c31ebe",
                 "shasum": ""
             },
             "require": {
@@ -845,7 +845,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2025-05-06T17:37:30+00:00"
+            "time": "2025-05-20T23:23:31+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -1633,16 +1633,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v4.4.16",
+            "version": "v4.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-embed/Embed.git",
-                "reference": "71bed149a5a94c6d21e8283f0193564e9ae3a211"
+                "reference": "b2ea091a5586c14ea5f2c5bf52fb0ef38e5aef87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-embed/Embed/zipball/71bed149a5a94c6d21e8283f0193564e9ae3a211",
-                "reference": "71bed149a5a94c6d21e8283f0193564e9ae3a211",
+                "url": "https://api.github.com/repos/php-embed/Embed/zipball/b2ea091a5586c14ea5f2c5bf52fb0ef38e5aef87",
+                "reference": "b2ea091a5586c14ea5f2c5bf52fb0ef38e5aef87",
                 "shasum": ""
             },
             "require": {
@@ -1702,7 +1702,7 @@
             "support": {
                 "email": "oom@oscarotero.com",
                 "issues": "https://github.com/oscarotero/Embed/issues",
-                "source": "https://github.com/php-embed/Embed/tree/v4.4.16"
+                "source": "https://github.com/php-embed/Embed/tree/v4.4.17"
             },
             "funding": [
                 {
@@ -1718,7 +1718,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2025-05-09T16:03:16+00:00"
+            "time": "2025-05-13T12:42:29+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -3899,16 +3899,26 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.22",
+            "version": "1.0.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft-code-editor.git",
+                "reference": "0a206d73efa8f8d3bd7294ae68b3d70c696b19c5"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/170edf71355b659e1db9ede12980b17c20eb3d1f",
-                "reference": "170edf71355b659e1db9ede12980b17c20eb3d1f",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/0a206d73efa8f8d3bd7294ae68b3d70c696b19c5",
+                "reference": "0a206d73efa8f8d3bd7294ae68b3d70c696b19c5",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0",
                 "phpdocumentor/reflection-docblock": "^5.0.0"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main"
             },
             "type": "yii2-extension",
             "extra": {
@@ -3919,6 +3929,7 @@
                     "nystudio107\\codeeditor\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3941,7 +3952,18 @@
                 "markdown",
                 "twig"
             ],
-            "time": "2024-09-23T17:20:25+00:00"
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-code-editor/blob/v1/README.md",
+                "issues": "https://github.com/nystudio107/craft-code-editor/issues",
+                "source": "https://github.com/nystudio107/craft-code-editor"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/khalwat",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-05-17T20:38:20+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
@@ -5363,11 +5385,11 @@
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "4.4.1",
+            "version": "4.4.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/2af34f56d93cc5b26d73a58b819efd168023be9e",
-                "reference": "2af34f56d93cc5b26d73a58b819efd168023be9e",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/c65bc450543231a587d01b506e5b776bd6cbd8aa",
+                "reference": "c65bc450543231a587d01b506e5b776bd6cbd8aa",
                 "shasum": ""
             },
             "require": {
@@ -5381,7 +5403,7 @@
                 "schemaVersion": "4.0.0",
                 "class": "benf\\neo\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-neo/blob/4.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.4.1.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.4.2.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -5409,10 +5431,10 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-neo/issues",
                 "source": "https://github.com/spicywebau/craft-neo",
-                "docs": "https://github.com/spicywebau/craft-neo/blob/4.4.1/README.md",
+                "docs": "https://github.com/spicywebau/craft-neo/blob/4.4.2/README.md",
                 "rss": "https://github.com/spicywebau/craft-neo/commits/4.x.atom"
             },
-            "time": "2025-03-11T05:40:53+00:00"
+            "time": "2025-05-15T00:24:08+00:00"
         },
         {
             "name": "statikbe/craft-config-values",
@@ -8073,11 +8095,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "2.1.47",
+            "version": "2.1.48",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/0eaf74e58e7266fe176f3c4fce83d289bbc3e976",
-                "reference": "0eaf74e58e7266fe176f3c4fce83d289bbc3e976",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/3b702504d9e7c2a5bd3679e682e6fd8098ac7ffd",
+                "reference": "3b702504d9e7c2a5bd3679e682e6fd8098ac7ffd",
                 "shasum": ""
             },
             "require": {
@@ -8138,7 +8160,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2025-04-28T23:21:50+00:00"
+            "time": "2025-05-19T23:20:04+00:00"
         },
         {
             "name": "verbb/redactor-tweaks",
