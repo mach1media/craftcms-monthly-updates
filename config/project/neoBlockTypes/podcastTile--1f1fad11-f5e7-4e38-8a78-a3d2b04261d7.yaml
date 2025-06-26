@@ -1,0 +1,88 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44
+fieldLayouts:
+  8d99570f-e3c0-4d00-b29c-842efce3f336:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 94cbaf65-f7fe-4fc3-a764-bada6139785d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f77132d-c95b-4e2a-8780-0c676a8ac1cf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 47603616-1af0-45e6-be98-84c0353f708c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f700d39b-3a4f-4c99-a961-d9fb1f3df887
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4f2d6c1-f775-4ddc-b2b8-838dbdb7c537
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d029c5b4-abcf-47cc-98d8-684a10afaaf9
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Podcast Tile'
+        uid: 7bf6e797-505e-42ac-9084-5463c03e9139
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: podcastTile
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Podcast Tile'
+topLevel: false

@@ -1,0 +1,41 @@
+childBlocks:
+  - textLink
+conditions: null
+description: ''
+enabled: true
+field: 0ba00a47-4ce1-4c02-a3ca-61119f702d8d
+fieldLayouts:
+  3c63a6d4-5e31-4f2e-a334-43597e11283b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96
+            instructions: null
+            label: 'Large Link'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b54045b8-9eb9-423e-823c-500c1db638e4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Link
+        uid: ae6ccfdc-d176-4a40-8042-e09f73c2b934
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: linkGroup
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Link Group'
+topLevel: true

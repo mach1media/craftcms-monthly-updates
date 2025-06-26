@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 7f4113a8-8cb2-4670-bac9-e4de20179209 # Text Links
+            fieldUid: 7f4113a8-8cb2-4670-bac9-e4de20179209
             instructions: null
             label: 'Learn More Links'
             required: false
@@ -18,7 +18,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 11a02d8c-6388-4bec-914d-2e386b4d1101 # Legal Links
+            fieldUid: 11a02d8c-6388-4bec-914d-2e386b4d1101
             instructions: null
             label: null
             required: false
@@ -30,7 +30,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
             instructions: null
             label: Disclaimer
             required: false

@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: navigationMenu
+name: 'Navigation Menu'
+propagationMethod: all
+siteSettings:
+  5cf2d429-9442-49de-b0fb-aaaec557b2cd:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 7ebd1331-7fd2-4073-a26b-235a4b7abcae
+type: structure

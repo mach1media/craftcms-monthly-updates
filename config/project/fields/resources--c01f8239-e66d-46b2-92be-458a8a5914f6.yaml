@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
+fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e
 handle: resources
 instructions: null
 name: Resources
@@ -17,7 +17,7 @@ settings:
     - text
     - word
   branchLimit: null
-  defaultUploadLocationSource: 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  defaultUploadLocationSource: 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
@@ -27,14 +27,14 @@ settings:
   restrictFiles: true
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
   restrictedLocationSubpath: null
   selectionLabel: 'Add a resource document'
   showSiteMenu: true
   showUnpermittedFiles: true
   showUnpermittedVolumes: true
   sources:
-    - 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+    - 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

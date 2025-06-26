@@ -1,6 +1,6 @@
 columnSuffix: nnxmlsst
 contentColumnType: string
-fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
+fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e
 handle: newsCategory
 instructions: null
 name: 'News Category'
@@ -14,7 +14,7 @@ settings:
   minRelations: null
   selectionLabel: null
   showSiteMenu: true
-  source: 'group:6c87cd30-3f4b-4da7-a4ae-b5fc2f005225' # News Categories
+  source: 'group:6c87cd30-3f4b-4da7-a4ae-b5fc2f005225'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

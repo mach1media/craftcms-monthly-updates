@@ -1,0 +1,306 @@
+field: 479ec005-6f3d-4922-b8e5-da10aad75bdc
+fieldLayouts:
+  155ca2c2-3c1f-433e-9f12-351dda04fc37:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 75f9bb39-452b-4eaa-ad80-e825620deb6e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d3db73a1-92e6-468e-a1e6-a15e9d452c46
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 7fdd5ed0-dc8b-4df8-bdb3-5909ceccface
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a89a90d-1b03-475e-b6d9-656e1878dce2
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 08b49f0a-64a0-4753-9893-80ca6d6ddf85
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30fa5ad5-e963-4c7e-9783-b42c1fbdbd01
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d8ff4807-a709-4131-95b1-7a565312e33d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7919090-15b1-444a-9b56-801e2118cce6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cda8dd16-3527-4194-91f9-5e284687d40f
+        userCondition: null
+fields:
+  7fdd5ed0-dc8b-4df8-bdb3-5909ceccface:
+    columnSuffix: zrojogma
+    contentColumnType: text
+    fieldGroup: null
+    handle: subheading
+    instructions: null
+    name: Subheading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  08b49f0a-64a0-4753-9893-80ca6d6ddf85:
+    columnSuffix: ewhvhpwi
+    contentColumnType: text
+    fieldGroup: null
+    handle: rateTable
+    instructions: null
+    name: 'Rate Table'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Heading
+                -
+                  - handle
+                  - heading
+                -
+                  - width
+                  - 25%
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '1 Year'
+                -
+                  - handle
+                  - yr1
+                -
+                  - width
+                  - 15%
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '2 Year'
+                -
+                  - handle
+                  - yr2
+                -
+                  - width
+                  - 15%
+                -
+                  - type
+                  - singleline
+          -
+            - col4
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '3 Year'
+                -
+                  - handle
+                  - yr3
+                -
+                  - width
+                  - 15%
+                -
+                  - type
+                  - singleline
+          -
+            - col5
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '4 Year'
+                -
+                  - handle
+                  - yr4
+                -
+                  - width
+                  - 15%
+                -
+                  - type
+                  - singleline
+          -
+            - col6
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '5 Year'
+                -
+                  - handle
+                  - yr5
+                -
+                  - width
+                  - 15%
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - '1 Year'
+            -
+              - col3
+              - '2 Year'
+            -
+              - col4
+              - '3 Year'
+            -
+              - col5
+              - '4 Year'
+            -
+              - col6
+              - '5 Year'
+        -
+          __assoc__:
+            -
+              - col1
+              - Rates
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+            -
+              - col4
+              - ''
+            -
+              - col5
+              - ''
+            -
+              - col6
+              - ''
+        -
+          __assoc__:
+            -
+              - col1
+              - 'Average Percentage Yield (APY)'
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+            -
+              - col4
+              - ''
+            -
+              - col5
+              - ''
+            -
+              - col6
+              - ''
+      maxRows: null
+      minRows: null
+      staticRows: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  75f9bb39-452b-4eaa-ad80-e825620deb6e:
+    columnSuffix: loxtzasa
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d8ff4807-a709-4131-95b1-7a565312e33d:
+    columnSuffix: uepcethl
+    contentColumnType: text
+    fieldGroup: null
+    handle: tableFooter
+    instructions: null
+    name: 'Table Footer'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: rateTable
+name: 'Rate Table'
+sortOrder: 2

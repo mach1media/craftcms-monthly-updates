@@ -1,4 +1,4 @@
-field: 6caec3d2-766a-490b-9491-7b784243b1d4 # Mega Menu: CTAs
+field: 6caec3d2-766a-490b-9491-7b784243b1d4
 fieldLayouts:
   f1d65752-9882-43e4-8a13-4d61f92e6cba:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 0d346e5c-0f60-4911-9492-f7c3c2b17328 # Label
+            fieldUid: 0d346e5c-0f60-4911-9492-f7c3c2b17328
             instructions: null
             label: null
             required: false
@@ -21,7 +21,7 @@ fieldLayouts:
         uid: 49625178-5103-4a90-a56a-0e9582480d8e
         userCondition: null
 fields:
-  0d346e5c-0f60-4911-9492-f7c3c2b17328: # Label
+  0d346e5c-0f60-4911-9492-f7c3c2b17328:
     columnSuffix: zsolemia
     contentColumnType: text
     fieldGroup: null

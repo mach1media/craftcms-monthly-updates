@@ -33,7 +33,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 449b0c4e-c289-419e-bc2c-ac1a03c1a3c2 # Background Photo
+            fieldUid: 449b0c4e-c289-419e-bc2c-ac1a03c1a3c2
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0
             instructions: null
             label: 'Logo Image'
             required: false
@@ -57,7 +57,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
+            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f
             instructions: null
             label: null
             required: false
@@ -69,7 +69,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 2cc57a96-1052-495e-a015-6a4984a4fa2d # Page Builder: Login
+            fieldUid: 2cc57a96-1052-495e-a015-6a4984a4fa2d
             instructions: null
             label: null
             required: false
@@ -87,7 +87,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8
             instructions: null
             label: null
             required: false
@@ -103,7 +103,7 @@ fieldLayouts:
 handle: portalLogin
 hasTitleField: false
 name: 'Portal Login'
-section: 1a5ffd72-f05f-45ec-8db3-0930c72fe38e # Portal Login
+section: 1a5ffd72-f05f-45ec-8db3-0930c72fe38e
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

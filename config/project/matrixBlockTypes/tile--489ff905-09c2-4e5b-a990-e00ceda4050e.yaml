@@ -1,0 +1,307 @@
+field: 0990fff1-3f3d-49e5-a5b1-afdeb683d20e
+fieldLayouts:
+  7fa674ce-0a52-4efa-96e7-6472a0e5ede6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 8cf524a9-c788-4109-8c27-b973b5da1c8b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16ec6cb3-79c0-4643-8004-f2d581247695
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 148b8944-2e50-42a9-9275-0f8b85677134
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ead2334-4ca9-408f-a5e6-fee10a0ce82b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bdcce914-b0af-4ef5-8cd4-fe988cd66b0b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 08a4604d-4fdb-476b-b82c-88ef59973d9e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f866af9a-7b42-476d-b407-adc6db3ca88b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: c937445d-2edd-4336-b195-241254cef98a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a7b9517-3ed9-4953-8c3d-2fce66c20b4d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5d256d74-c235-43c7-aa5c-7df02909be2a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85726a47-07ea-4a88-b179-187604bdbd2e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3b51443f-4e3e-4232-8ca5-f70fda28a3c2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 63644b5c-b98d-4501-9793-7019e0cd2918
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4c20fe74-dfcc-4c82-8f88-33d032ef5292
+        userCondition: null
+fields:
+  3b51443f-4e3e-4232-8ca5-f70fda28a3c2:
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: tileLink
+    instructions: null
+    name: Link
+    searchable: false
+    settings:
+      allowCustomText: false
+      allowTarget: true
+      autoNoReferrer: true
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  5d256d74-c235-43c7-aa5c-7df02909be2a:
+    columnSuffix: djuojceu
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  08a4604d-4fdb-476b-b82c-88ef59973d9e:
+    columnSuffix: saauvwxx
+    contentColumnType: text
+    fieldGroup: null
+    handle: labelCustom
+    instructions: null
+    name: 'Label: Custom'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8cf524a9-c788-4109-8c27-b973b5da1c8b:
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Choose a "wide" orientation image'
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      sources:
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  148b8944-2e50-42a9-9275-0f8b85677134:
+    columnSuffix: atdhhoij
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: stackImageOnMobile
+    instructions: null
+    name: 'Stack Image on Mobile'
+    searchable: false
+    settings:
+      default: false
+      offLabel: 'No'
+      onLabel: 'Yes'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6:
+    columnSuffix: zlarxede
+    contentColumnType: string
+    fieldGroup: null
+    handle: label
+    instructions: 'Choose a pre-defined label + icon, or insert a custom label and icon'
+    name: Label
+    searchable: false
+    settings:
+      dataSet: 'CTA Tile Labels'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  c937445d-2edd-4336-b195-241254cef98a:
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: iconCustom
+    instructions: null
+    name: 'Icon: Custom'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: tile
+name: Tile
+sortOrder: 1

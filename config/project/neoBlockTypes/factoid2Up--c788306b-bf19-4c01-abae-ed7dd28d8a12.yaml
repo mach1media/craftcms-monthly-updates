@@ -1,0 +1,70 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44
+fieldLayouts:
+  '':
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f06a4480-f195-4705-bd40-a33a08e72d0f
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 290ec03c-3696-4402-a097-fa7a138cb7bd
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 48fda275-cc4f-48a3-9d79-c38f9cd4d1d6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a80a4a84-ad00-4448-94bf-c97a519149b1
+            userCondition: null
+            warning: null
+            width: 25
+        name: Graphics
+        uid: e6e9135e-3951-4bc2-8790-22c24e23eb13
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 524c6e05-4d16-4e49-86a1-edfb5ff0e70c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 01ced38c-8650-408d-9a83-563c7cb10d78
+            userCondition: null
+            warning: null
+            width: 100
+        name: Animation
+        uid: f89cf98e-b705-4108-8224-00c7077522f3
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: factoid2Up
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Factoid: 2-Up'
+topLevel: false

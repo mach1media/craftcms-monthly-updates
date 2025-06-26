@@ -33,7 +33,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: c67bfc40-e256-429b-8bc2-bf32fdbf8e43 # Home: Intro
+            fieldUid: c67bfc40-e256-429b-8bc2-bf32fdbf8e43
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d3ccac65-2f19-4621-b98f-cb5f46bf796d # Home: Feature Tile
+            fieldUid: d3ccac65-2f19-4621-b98f-cb5f46bf796d
             instructions: null
             label: null
             required: false
@@ -57,7 +57,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 24a26f70-67f3-45a7-8828-d33f091c1508 # Home: Tile - Wide
+            fieldUid: 24a26f70-67f3-45a7-8828-d33f091c1508
             instructions: null
             label: null
             required: false
@@ -69,7 +69,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 3d088ba7-2012-45f1-8454-ccf6895bd50b # Home: Square Tiles
+            fieldUid: 3d088ba7-2012-45f1-8454-ccf6895bd50b
             instructions: null
             label: null
             required: false
@@ -87,7 +87,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+            fieldUid: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
             instructions: null
             label: null
             required: false
@@ -105,7 +105,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8
             instructions: null
             label: null
             required: false
@@ -121,7 +121,7 @@ fieldLayouts:
 handle: homepage
 hasTitleField: false
 name: Homepage
-section: ba00da73-87ef-49e2-b1ed-2160ae5e4857 # Homepage
+section: ba00da73-87ef-49e2-b1ed-2160ae5e4857
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

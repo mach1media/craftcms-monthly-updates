@@ -1,0 +1,88 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+fieldLayouts:
+  ab363f87-0833-4b29-8c24-3339bb1a5466:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d23d239a-94c9-4632-b67b-7427d67b6b47
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 09105124-02cc-4802-8039-9a5e8a2a4328
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5611dc78-d262-4246-ad69-9657c40e9724
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ab7fa0e-bf66-466e-9ae3-509ce6abba69
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            instructions: 'Opens in modal overlay'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5e96176-b0fc-46b7-9307-da7f2ec9493c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a4fd1f6f-25fa-44b9-b961-18b069bc8e27
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: teamMember
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Team Member'
+topLevel: false

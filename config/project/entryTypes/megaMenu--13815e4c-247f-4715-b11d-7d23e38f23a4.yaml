@@ -33,7 +33,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6caec3d2-766a-490b-9491-7b784243b1d4 # Mega Menu: CTAs
+            fieldUid: 6caec3d2-766a-490b-9491-7b784243b1d4
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 0ba00a47-4ce1-4c02-a3ca-61119f702d8d # Mega Menu: Links
+            fieldUid: 0ba00a47-4ce1-4c02-a3ca-61119f702d8d
             instructions: null
             label: null
             required: false
@@ -61,7 +61,7 @@ fieldLayouts:
 handle: megaMenu
 hasTitleField: true
 name: 'Mega Menu'
-section: 3e2c33e8-dd58-40f6-bb8b-ee1504d3711e # Navigation Menu
+section: 3e2c33e8-dd58-40f6-bb8b-ee1504d3711e
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

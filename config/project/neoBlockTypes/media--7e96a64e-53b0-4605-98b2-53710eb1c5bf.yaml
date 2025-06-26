@@ -1,0 +1,164 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+fieldLayouts:
+  5d0e33bf-1f0f-4c09-a11c-9635d2d289af:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d76b8498-d54b-46bf-8275-bea8aed2f88a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Choose an image or video'
+            type: craft\fieldlayoutelements\Tip
+            uid: 9e701fbc-b152-4197-b1a7-e8f0ad2076b2
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4e09afd5-cf03-4485-ab3a-39fe86656878
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b131504-bca4-4f03-8556-5dafd8bcafdf
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: ce7c1084-d84d-4a5e-be30-3011cdda7a8a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d38f33db-1869-4920-bb73-a2fe0100caf0
+            userCondition: null
+            warning: null
+            width: 25
+        name: Image
+        uid: cca8e8b8-4dc5-4284-9f75-2b651f7d31cd
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: "1. Click the [+ Video] button\r\n2. In the Asset picker window click the [EMBED] button\r\n3. Copy and paste video's URL"
+            type: craft\fieldlayoutelements\Tip
+            uid: e51f3ab9-70da-43d1-a260-29f2658803eb
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c219af4-7319-4010-888e-792968979b9e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Video
+        uid: 94472eb2-7671-4ba4-8e0c-504e926146c7
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 38b0c250-4985-44ae-94be-77797cec8c5e
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3984f257-ec5d-4e66-b799-b85da888d554
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5cb51c4-fd7e-424c-a7bf-edd7be67b566
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7ae946d-1860-4c27-9cae-9502cf11aaef
+            userCondition: null
+            warning: null
+            width: 25
+        name: 'Section Settings'
+        uid: a7c50bf5-6154-485d-8ec8-1a1d6a5d1d9d
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: media
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Media
+topLevel: true

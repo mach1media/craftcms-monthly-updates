@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
+fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e
 handle: newsStories
 instructions: null
 name: 'News Stories'
@@ -15,7 +15,7 @@ settings:
   selectionLabel: 'Add a News Story'
   showSiteMenu: true
   sources:
-    - 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+    - 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

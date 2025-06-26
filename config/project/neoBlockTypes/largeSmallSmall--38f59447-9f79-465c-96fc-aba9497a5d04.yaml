@@ -1,0 +1,60 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+fieldLayouts:
+  8f1fd15b-ea3c-4434-88c0-33557b2d5d01:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Insert one large and two small tiles. The large tile will be shown first.'
+            type: craft\fieldlayoutelements\Tip
+            uid: 869edfbe-c0f3-4dbe-b148-84d5af32fdf0
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 0990fff1-3f3d-49e5-a5b1-afdeb683d20e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce58557d-2726-4e0e-80ea-250f503eb4ad
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e11568a1-11e3-4147-ae18-1ff01fdcd4f7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa733b68-012b-422a-abf3-78bbfe944dc1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Tiles
+        uid: 89e492df-f324-4b9f-a3fb-08ffea0ff4c8
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: largeSmallSmall
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Large | Small | Small'
+topLevel: false

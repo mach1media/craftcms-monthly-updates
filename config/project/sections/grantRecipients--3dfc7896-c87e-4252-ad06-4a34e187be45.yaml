@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: grantRecipients
+name: 'Grant Recipients'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5cf2d429-9442-49de-b0fb-aaaec557b2cd:
+    enabledByDefault: true
+    hasUrls: true
+    template: grant-recipients/_entry
+    uriFormat: 'grant-recipients/{slug}'
+type: channel

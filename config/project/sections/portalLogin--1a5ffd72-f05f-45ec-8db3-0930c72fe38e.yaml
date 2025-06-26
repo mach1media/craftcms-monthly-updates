@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: portalLogin
+name: 'Portal Login'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5cf2d429-9442-49de-b0fb-aaaec557b2cd:
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/portalLogin
+    uriFormat: portal-login
+type: single

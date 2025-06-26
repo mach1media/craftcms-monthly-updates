@@ -37,12 +37,12 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\EmptyFieldConditionRule
-                  fieldUid: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
+                  fieldUid: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8
                   operator: notempty
                   uid: ce2a30e5-b6d9-4ad0-bedb-79366af5f2bb
               elementType: craft\elements\Entry
               fieldContext: global
-            fieldUid: 89795803-5837-4d6f-855d-1ae3c3980e55 # Show Entry Title
+            fieldUid: 89795803-5837-4d6f-855d-1ae3c3980e55
             instructions: null
             label: null
             required: false
@@ -54,7 +54,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: eaa2de37-8703-4880-aa20-3f0222fa32dc # Hide Breadcrumbs
+            fieldUid: eaa2de37-8703-4880-aa20-3f0222fa32dc
             instructions: null
             label: null
             required: false
@@ -66,7 +66,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
+            fieldUid: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8
             instructions: null
             label: null
             required: false
@@ -78,7 +78,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+            fieldUid: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
             instructions: null
             label: null
             required: false
@@ -96,7 +96,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8
             instructions: null
             label: null
             required: false
@@ -112,7 +112,7 @@ fieldLayouts:
 handle: general
 hasTitleField: true
 name: General
-section: 92cb8d3c-2b19-477d-ad39-fe24ade9438c # Pages
+section: 92cb8d3c-2b19-477d-ad39-fe24ade9438c
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

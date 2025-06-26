@@ -1,0 +1,132 @@
+changedFieldIndicator: null
+field: 0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34
+fieldLayouts:
+  e52912fe-4e89-4536-b4e9-3a4e67cc8037:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: dcce62b3-2650-4939-a381-0fcc22c0d942
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 874afa9f-518a-4e26-87ed-635401d86465
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 39b454aa-6c69-4f49-b375-8bf7b6f4ce23
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0071240b-a2e7-45a4-b68d-eab7427f13fb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: af55010a-5968-4c25-91f8-dffbcb72d4db
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fba762e2-3251-4476-803f-d94e4cb98b81
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4177bfe7-806c-4104-8b4e-c096164518a2
+        userCondition: null
+fields:
+  39b454aa-6c69-4f49-b375-8bf7b6f4ce23:
+    columnSuffix: jgoowmvv
+    contentColumnType: text
+    fieldGroup: null
+    handle: nonprofits
+    instructions: null
+    name: Nonprofits
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: false
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  af55010a-5968-4c25-91f8-dffbcb72d4db:
+    columnSuffix: vnlksjar
+    contentColumnType: text
+    fieldGroup: null
+    handle: individuals
+    instructions: null
+    name: Individuals
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: false
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  dcce62b3-2650-4939-a381-0fcc22c0d942:
+    columnSuffix: hwrnpfmc
+    contentColumnType: text
+    fieldGroup: null
+    handle: churchOrAgency
+    instructions: null
+    name: 'Church or Agency'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: false
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

@@ -38,7 +38,7 @@ fieldLayouts:
 handle: newsCategories
 name: 'News Categories'
 siteSettings:
-  5cf2d429-9442-49de-b0fb-aaaec557b2cd: # TMF
+  5cf2d429-9442-49de-b0fb-aaaec557b2cd:
     hasUrls: true
     template: news/category
     uriFormat: 'news/category/{slug}'

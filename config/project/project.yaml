@@ -1,0 +1,782 @@
+dateModified: 1746733626
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - section
+        - type
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: singles
+      tableAttributes:
+        - link
+      type: native
+    -
+      heading: Navigation
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
+      tableAttributes:
+        - slug
+        - type
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
+      tableAttributes:
+        - uri
+        - type
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
+      tableAttributes:
+        - 'field:6b671144-8ff1-4b84-9c9e-d0b03e00adfd'
+        - postDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:115274b7-184f-4d2c-898d-b1f9504e6aef'
+      tableAttributes:
+        - 'field:6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c'
+        - 'field:e359f1b1-385c-4017-9823-ab7e63cd7efe'
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:61a1068b-a537-4bde-85ac-b0fe8f04946e'
+      tableAttributes:
+        - 'field:7f134341-6c01-4975-9ea9-60df3c3dd5f0'
+        - 'field:aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e'
+        - 'field:6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c'
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:3dfc7896-c87e-4252-ad06-4a34e187be45'
+      tableAttributes:
+        - 'field:7f134341-6c01-4975-9ea9-60df3c3dd5f0'
+        - 'field:c8054437-50a0-4ca2-a78f-02657392c71c'
+        - 'field:8069e6aa-35e5-43c0-9baa-abd171d2a2f2'
+        - 'field:4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a'
+        - link
+      type: native
+email:
+  fromEmail: $CRAFT_SYSTEM_EMAIL
+  fromName: 'Texas Methodist Foundation'
+  replyToEmail: $CRAFT_SYSTEM_EMAIL
+  template: ''
+  transportSettings:
+    apiKey: $MAILGUN_API_KEY
+    domain: $MAILGUN_DOMAIN
+    endpoint: $MAILGUN_ENDPOINT
+  transportType: craft\mailgun\MailgunAdapter
+fs:
+  documents:
+    hasUrls: true
+    name: Documents
+    settings:
+      path: '@webroot/uploads/docs'
+    type: craft\fs\Local
+    url: /uploads/docs/
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/uploads/images'
+    type: craft\fs\Local
+    url: /uploads/images/
+  transforms:
+    hasUrls: true
+    name: Transforms
+    settings:
+      path: '@webroot/uploads/transforms'
+    type: craft\fs\Local
+    url: /uploads/transforms/
+  videos:
+    hasUrls: false
+    name: Videos
+    settings:
+      path: '@webroot/uploads/videos'
+    type: craft\fs\Local
+    url: null
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+meta:
+  __names__:
+    0b2d797a-1a89-4e24-8ef6-9d5d39a5d548: 'Select Fields'
+    0ba00a47-4ce1-4c02-a3ca-61119f702d8d: 'Mega Menu: Links'
+    0d19f0b1-727c-4654-9f11-09b986093f3d: 'CTA Link'
+    0d346e5c-0f60-4911-9492-f7c3c2b17328: Label
+    0e20b322-d191-4a5f-b3df-37ba66888043: 'Social Icons'
+    0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34: 'Open An Account Table'
+    0fbd0f44-e701-4761-805c-fc232ba797b4: Description
+    1a5ffd72-f05f-45ec-8db3-0930c72fe38e: 'Portal Login'
+    1a59398d-6900-4df1-a904-341d0b1c005c: 'CTA Tiles'
+    1f1fad11-f5e7-4e38-8a78-a3d2b04261d7: 'Podcast Tile'
+    1f41377c-9452-4c44-85f2-23bcfbec5b44: 'Button Label'
+    1fc01eb4-e3aa-4109-b017-9a4357415660: Form
+    2bd2d918-16fc-4147-9b16-0a5c2a448d3e: 'Label: Custom'
+    2c56ec44-02d8-449f-b55a-ccb4e0f64909: 'Custom Table'
+    02c96873-0eec-4700-b08e-205c0071a461: 'Medium | Medium'
+    2cc57a96-1052-495e-a015-6a4984a4fa2d: 'Page Builder: Login'
+    2f76bca5-2eaf-4262-8c5d-edb7401cc84f: Video
+    3b6ab5b3-228a-4f9a-b6ba-5958d0d9daf2: 'Icon: Custom'
+    3b51443f-4e3e-4232-8ca5-f70fda28a3c2: Link
+    3be92289-0f0d-4b35-908a-44e87436fae3: 'Program Coordinator'
+    3c1eea3a-94e8-40dc-8f1f-d0df569c3542: 'Impact Report'
+    3cd86bf3-6755-432c-a7cd-8fdb85ad0ccb: 'Table Footer'
+    3d088ba7-2012-45f1-8454-ccf6895bd50b: 'Home: Square Tiles'
+    3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF
+    3dd8a012-e0af-46a4-a906-a538bd2c6a64: Style
+    3dfc7896-c87e-4252-ad06-4a34e187be45: 'Grant Recipients'
+    3e2c33e8-dd58-40f6-bb8b-ee1504d3711e: 'Navigation Menu'
+    4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd: Media
+    4cf16f08-8357-449b-a33e-172385d1c66e: 'CTA Link'
+    04cfb406-f722-44ab-8bcf-9bdc925cd5d8: 'Heading+Button Bar'
+    4d7096da-e00f-4539-976f-2ab6e40967b7: Thumbnail
+    4f1a3081-cb03-47eb-b862-638e1b362e22: 'Image Position [L|R]'
+    4fea1dfb-b830-4129-bfa9-b72c6f184fef: 'Link to Page'
+    5a4d2142-edd7-4628-9ce3-353689734632: Dropdown
+    005b0010-da6f-4cab-a5df-5047ecc802b0: General
+    5ca729bf-6b89-4d06-931b-db7f8b086ec6: 'Background Color'
+    5cf2d429-9442-49de-b0fb-aaaec557b2cd: TMF
+    5d256d74-c235-43c7-aa5c-7df02909be2a: Heading
+    5ecdb404-4694-4031-a4a8-b1a523c6d775: Label
+    6a0d0683-24f8-47d9-b693-069ad30f6a5d: 'Matrix Fields'
+    6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c: Heading
+    6ad28947-80eb-413a-95d6-899fff1928b4: Headshot
+    6add601c-de5e-4e85-8618-137007c0f910: Signatures
+    6b8077d5-b074-4ffc-8cba-4946fd5d9a35: 'Img+Text Header'
+    6b671144-8ff1-4b84-9c9e-d0b03e00adfd: 'News Category'
+    6c87cd30-3f4b-4da7-a4ae-b5fc2f005225: 'News Categories'
+    6caec3d2-766a-490b-9491-7b784243b1d4: 'Mega Menu: CTAs'
+    6dfd2047-d32f-48df-8574-2bb332a7c17e: 'Text+Headshot Videos'
+    6e1fd6d5-5ab2-4bee-8393-d541afe51eea: Heading
+    6ed354ea-1804-41ca-a57f-9e843614ea4a: General
+    6eef926d-daad-4ff8-9cce-8ececaa4dcf4: Description
+    6eeff1eb-96ce-43ab-911f-a6e7aa97139e: Heading
+    6f769974-aa7c-451e-85dc-681b49af0e84: 'Responsive: Medium'
+    7a533a82-4f0f-4e24-b8e2-f37bb95a4b06: Thumbnail
+    07a87980-eb4d-4710-896e-772170d1d21d: 'Section Settings'
+    7e96a64e-53b0-4605-98b2-53710eb1c5bf: Media
+    7f4113a8-8cb2-4670-bac9-e4de20179209: 'Text Links'
+    7f134341-6c01-4975-9ea9-60df3c3dd5f0: Image
+    7fdd5ed0-dc8b-4df8-bdb3-5909ceccface: Subheading
+    8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd: Table
+    08a4604d-4fdb-476b-b82c-88ef59973d9e: 'Label: Custom'
+    08b49f0a-64a0-4753-9893-80ca6d6ddf85: 'Rate Table'
+    8cccdb1c-6473-404a-9289-b9a52343d552: 'Label: Custom'
+    8cf524a9-c788-4109-8c27-b973b5da1c8b: Image
+    8d53efd7-98eb-40ec-a000-4b904766072d: Button
+    8d67fd8f-ca95-4a56-9885-6ada3b8515de: 'Rate Table'
+    8f655278-2023-4da0-a4d7-64814ef5c669: 'CTA Tiles'
+    9cbb1147-31ed-4893-8ea8-2731c0e9484a: 'Grant Recipient Card Logo'
+    9d7fafd1-35d2-468a-929a-b88e876f64e2: Email
+    9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c: Label
+    9e28f3c9-7883-4de5-93ef-fcf8ed4ca639: Subheading
+    9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa: Link
+    9ff86f39-6873-42df-883a-5d1692acebbc: 'Text Size'
+    9ffd20d4-1af3-48f5-8acb-b810e4169271: General
+    11a02d8c-6388-4bec-914d-2e386b4d1101: 'Legal Links'
+    12a86971-9af3-496d-9a73-1f277506afaa: 'Padding: Sides'
+    13c74871-8a4f-4e3d-9caf-998a4119ec36: 'Text Link'
+    16e2e1ff-7c35-4030-b21c-207a4d1e88b7: 'Preview Card'
+    17fcc0b6-4e93-425f-9380-11c07300553d: Buttons
+    19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a: General
+    19c27c03-7838-4358-9214-9634fe9e3970: Image
+    24a26f70-67f3-45a7-8828-d33f091c1508: 'Home: Tile - Wide'
+    28a04878-3d6a-4889-ad36-87cce2dd449e: 'Padding: Top'
+    30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b: 'Team Member'
+    31f2b911-731f-42b5-84c6-4b2777260f2f: 'Section Heading'
+    036cb663-997c-41f3-a8d2-b4c34d457976: Factoid
+    38b1109c-b2b4-4a24-8273-95f4885fdbbe: 'Label: Custom'
+    38f59447-9f79-465c-96fc-aba9497a5d04: 'Large | Small | Small'
+    39b454aa-6c69-4f49-b375-8bf7b6f4ce23: Nonprofits
+    040d7db9-375b-4b41-989d-2e38c47b90f6: 'Padding: Bottom'
+    40fb54cb-b959-40bc-8123-44ac2a4c5aa2: Link
+    41d75776-461e-4d36-8d1b-3d3935125b2d: 'Preview Card'
+    48decd81-091f-4c64-a59a-482b826a0ef5: Media
+    48fda275-cc4f-48a3-9d79-c38f9cd4d1d6: 'Factoid Layout'
+    49f76678-87cc-4e24-8127-90fe77fb1441: Quote
+    55bd2a63-aca2-431f-bdc7-c44414ac0418: Link
+    55f89f73-30c8-4eeb-b491-a0da78da6657: 'Text Color'
+    61a1068b-a537-4bde-85ac-b0fe8f04946e: Team
+    61b6248e-c14a-44e7-b438-2ccdbfafe7a7: 'Blog Entries'
+    64ee3e7e-2136-47b0-a218-42a307420d30: 'Text+2 Images'
+    68ecabf7-ddb5-437f-8844-30eb450a69ee: Footer
+    69a66c94-0c41-4248-949e-0b52659f8c9e: 'Dropdown Links'
+    72c21d48-1ae1-46e6-a4d8-57c63a5eb883: Subheading
+    74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video
+    75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading
+    76c2555a-23b9-4d53-8c79-13892f75b970: 'Factoid Description Box'
+    86c0cfb0-f792-48aa-aef6-7f1df1dac5b1: Subheading
+    90bba6bb-88b4-4c3f-ae60-595e911f01ab: 'Heading Block'
+    91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block'
+    92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages
+    148b8944-2e50-42a9-9275-0f8b85677134: 'Stack Image on Mobile'
+    160cd5ce-bdfd-4507-b851-369a31a5bbb6: Label
+    283a58a7-7d64-4ce3-96c6-6a2fe93bf942: 'Embed Code'
+    403b04cf-f24a-4706-8842-0ecd144931b6: Label
+    431ce2c5-de63-4209-b6b9-a5a836a67d82: 'Home Page Fields'
+    449b0c4e-c289-419e-bc2c-ac1a03c1a3c2: 'Background Photo'
+    479ec005-6f3d-4922-b8e5-da10aad75bdc: 'Data Tables'
+    489ff905-09c2-4e5b-a990-e00ceda4050e: Tile
+    517cdef8-d041-4ff8-857b-21f4f518180b: 'CTA Link'
+    524c6e05-4d16-4e49-86a1-edfb5ff0e70c: 'Animation Settings'
+    543e6694-6bf5-44ed-936b-11dd6e5ae656: 'Image Tile'
+    643e4c17-f296-47ae-8806-45847ebda838: 'Pre Heading'
+    704cc16d-0736-4a6b-8d40-f267fd9ae8f9: 'Lead Block'
+    0774c028-80d9-40e2-a668-5558b97314d3: 'Headshot Videos'
+    838ea19b-287d-4d04-bf6e-bce6a0de9c66: 'Dropdown Link'
+    853a2eb8-d408-4486-afc1-8e24fd201174: Alignment
+    865ca38f-50ad-4e67-9a95-bd05ae709908: 'Embed Code'
+    0914ee96-13fc-4737-ae93-8ab00d611b35: 'Page Builder: Blog'
+    0990fff1-3f3d-49e5-a5b1-afdeb683d20e: 'CTA Tile: Large'
+    1174bd31-94ac-4b8b-9fd9-b003f12684ae: 'Data Table'
+    01903d5e-0af8-4625-91a8-6d55351c5ec3: 'Video+Text Block'
+    2160ef32-2844-4834-a6c8-c374a3efa675: 'Link Fields'
+    02953e5d-2354-4eef-bbab-fd22e7b929c9: 'News Stories'
+    3030cab8-78a4-43c1-965d-edcb8d53848e: 'Contact Form Block'
+    4174b0ee-a490-4333-bc9f-4c13c778183f: 'Table Column Size'
+    4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a: 'City, State'
+    4644c2f1-7e88-4496-ab19-060eb4b86feb: 'Open An Account'
+    5018ac6a-d423-4ea7-93a2-71816abf326f: Person
+    6552f23c-7f92-493a-bd10-b47693edab05: 'Column: Image'
+    6589b9d2-a4d1-45ad-a0f7-a870bfc38228: 'Stacked Uniform Buttons'
+    7122cd83-09df-457d-8ea8-284328ec238f: label
+    8069e6aa-35e5-43c0-9baa-abd171d2a2f2: 'Program/Project Name'
+    9030c997-69e7-4a71-b846-fdadd3c6112f: Heading
+    9804d284-d129-4704-8883-92fcd4aec0a8: 'Data Table: Full Width'
+    13815e4c-247f-4715-b11d-7d23e38f23a4: 'Mega Menu'
+    0014573b-36a9-48c6-b523-64fbabf469f2: 'Button Style'
+    18834ccd-54b8-4774-a03c-b16f65a84197: Thumbnail
+    23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8: 'Page Header'
+    23395c4f-d839-4a1e-8291-195209ed2aed: 'General: Large Text'
+    32847f30-97a7-46a4-aa8a-1d662159da7d: 'Link to Asset'
+    34324a9e-7ce8-4902-8508-1d7046c34d97: 'Team Members'
+    40462e8a-a238-4adf-9317-22de98d2878f: 'Data Table'
+    048761f8-a826-44ed-ad18-7137532f8c0a: 'Dropdown Link'
+    54632eea-be0d-432e-9b18-64f95cdb3ddc: 'Lead Block'
+    58712ece-7721-4366-900b-2cc4858ea5e0: Heading
+    72143de2-34b2-4912-87dc-02d8eb4a1a0f: News
+    86898b1e-5316-4337-9b1b-3b0b541bdf37: 'CTA Block'
+    98126def-cd93-43c8-b0eb-eafba4c890e0: 'Large | Small | Small'
+    115274b7-184f-4d2c-898d-b1f9504e6aef: Tables
+    251036cc-4dfd-4b0f-9823-b109a413bd0b: Image
+    283865a1-e9b4-416a-a6ec-a6433ef01a5a: Link
+    312692fe-0d39-45bc-889d-f49efeaa0dc0: 'Column: Image'
+    356681f1-6b5a-48fb-94b8-d856247a3b67: Tile
+    424904af-03e0-49ac-aabf-921f78be4c4e: New
+    804241c5-2bd0-4d8e-84ce-a24a8dfe63fd: 'Portal Login'
+    972197b6-eda9-4a11-a983-eb2cb09bada3: Accordion
+    7393216b-9c58-4d00-9d10-ebbc0ca2130b: Accordion
+    37449807-b7fe-4e44-bc5d-f3469359b775: Heading
+    54458965-37a8-4b1e-839f-f19934f7a8e3: 'Img+Text Block'
+    56133272-2baa-403c-9702-0c006d9c3676: 'Accordion Items'
+    89795803-5837-4d6f-855d-1ae3c3980e55: 'Show Entry Title'
+    a1c959ad-0f2a-4fc4-8654-11be8c04b62f: Tile
+    a1ec9be5-4a75-4566-b570-6c6e98d58bea: 'Factoid: 3-Up'
+    a6fd1543-ece4-4710-ad3b-195db37614a1: CTA
+    a9e9ac13-8b36-4627-b8f4-43f5e99aede5: 'Responsive: Large'
+    a40a3743-3dbc-48e7-a8cd-0196dd8021df: Common
+    a60f746d-4da8-4419-876b-782449ea1381: Form
+    a7681ee3-3f28-4c6f-9cb3-453e519368ae: Documents
+    a8366a49-97a6-4a33-a567-a948f6a481ac: 'Section ID'
+    a28912df-88d7-46df-b6fa-105330a08e97: Tables
+    a66491bb-13e8-47d9-96be-aec160c4ced7: Text+Media
+    aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e: Pre-heading
+    aa96dc63-49ff-4c1a-89df-d34525227436: 'Embed Code'
+    aa92801f-a617-4884-96f7-2f325db59d9e: 'Element Fields'
+    ab0cec03-165b-46cc-b1d9-9974464ffb9a: Image
+    ab7e2d93-36c3-4838-bcb0-b9378b70308a: Heading
+    ab39e5a8-9059-4669-8998-c898c3c7ed89: Heading
+    ad9d8d2b-1080-4917-ae1e-3a6d6460fd11: 'Favicon File'
+    ad7213bd-2585-46b4-80ac-945289d706b3: 'Rate Table'
+    ae512cd8-d6a4-49a2-b185-8ba40a87fc1e: Images
+    aec4cf66-3af8-44c6-ba81-0ebbf0e6c837: Homepage
+    aec4351f-8a70-4278-9846-54ad19f795fc: 'Icon: Custom'
+    aed0fd2d-f074-485f-b1f7-4c8ef97e91cc: Arrow
+    aefea3fc-ff45-4615-b305-9079e2cc6c44: 'Page Builder: Impact Report'
+    af55010a-5968-4c25-91f8-dffbcb72d4db: Individuals
+    afb8f81e-7598-4dbb-8559-8aef5c3c42e6: 'Team Members'
+    afc2de21-dd75-465b-8491-4ce699da74a6: Button
+    b00ccfa2-369c-471f-ae02-ae5ed2a9bae6: Thumbnail
+    b070c34a-c1d0-4e63-ad06-862e534e4843: 'Square: 600'
+    b5e2bd07-e195-4564-94a1-74ce51723188: 'Link Group'
+    b6b4cc71-d295-40ea-a6fc-c7b67ec1a6c4: Columns
+    b87e2875-e61c-41af-a2fa-3878aa0bc72d: 'TMF Admins'
+    b99b6148-253d-4660-ac78-eaf2703b3856: 'Image: Mobile'
+    b456d0e0-6918-43cd-82ff-a4eacd5f33cd: 'Responsive: Small'
+    b613c984-854f-41b5-baea-92cd77be6d0c: Resource
+    b8904bf4-d4cd-4023-963d-3dbcebfabb78: Heading
+    ba00da73-87ef-49e2-b1ed-2160ae5e4857: Homepage
+    baddf677-8996-4c34-b436-ea8341d9bed3: Heading
+    bafdb566-dc62-40b5-9a8f-ca3010a690f9: 'Grant Years'
+    bb9e3568-5ca9-4a9a-8534-c5e97ea203d7: 'Icon: Custom'
+    be37b343-87c7-4b21-8965-829e7c555685: 'Video Tile'
+    be950c11-5fd5-43e5-962d-aa30d3dd2834: Form
+    bf0e4db0-9861-4bba-b0d0-98bafe12bc6c: 'Page Builders'
+    bf77811a-bc78-4e53-8e51-bb8a6e9d0c69: Website
+    c01f8239-e66d-46b2-92be-458a8a5914f6: Resources
+    c1d10006-9965-425c-961a-e3bd34a9f34c: 'Column: Text'
+    c13a4a02-215c-406f-8eb0-6aaca8403db8: 'CTA Link'
+    c67bfc40-e256-429b-8bc2-bf32fdbf8e43: 'Home: Intro'
+    c87c2284-cb4d-4e16-9b19-d1ae79c72fc5: 'Grant Recipients'
+    c94c64ea-cc6d-4b7d-9441-052031432b9e: 'Text Color'
+    c932c240-70a9-4a42-b4e8-452cde3498d7: 'Resource Card'
+    c7620f65-d29a-4274-8ad9-35a968a67638: Download
+    c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: Label
+    c89855dd-2f3d-435d-a111-48b28771ff93: 'CTA Link'
+    c788306b-bf19-4c01-abae-ed7dd28d8a12: 'Factoid: 2-Up'
+    c937445d-2edd-4336-b195-241254cef98a: 'Icon: Custom'
+    c8054437-50a0-4ca2-a78f-02657392c71c: 'Grant Year'
+    cb377aa9-4075-4012-9aed-7f7baf560233: 'Text Link'
+    cc5df801-008a-4a72-aa81-bfeb16b7d2c4: 'Factoid: 1-Up'
+    cdb162a5-f0d2-429b-b5ac-588fc77a48da: Summary
+    ce7c1084-d84d-4a5e-be30-3011cdda7a8a: 'Disable Image Transforms'
+    ce130366-bd6b-46be-ad59-10108ee88718: 'Image: Desktop'
+    cec407c4-ded3-4457-9ffd-7caf96ab0281: Caption
+    d0098f21-2d27-4c01-a70b-b9f036b1d94b: 'Custom Table'
+    d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66: Thumbnail
+    d2cf84b8-da42-48ed-9ffa-4f93da867f96: 'Text Link'
+    d3ccac65-2f19-4621-b98f-cb5f46bf796d: 'Home: Feature Tile'
+    d4a66aad-fd77-4abe-97e2-a01cabc77bac: Description
+    d5a26941-e90f-43b4-8e8b-b34c12674c8b: 'Column: Text'
+    d8ff4807-a709-4131-95b1-7a565312e33d: 'Table Footer'
+    d24ab695-25c2-4078-b7e4-b936aa667ac6: Pre-Eyebrow
+    d33d4fab-55e7-446f-8972-f4676b5ee14a: Heading
+    d46a26f8-acd0-4f06-8f57-f8e755cbcddb: Label
+    d79c352e-f405-46a0-b6cd-bdfff5e4a81e: Video
+    d3166c3a-ca64-4122-be3f-716e818e0868: 'Card Title'
+    d62585aa-389f-4f17-a6f8-ea404770633a: 'Preview Cards'
+    d1801112-12c8-4cf2-aaea-f0154e2d39a3: News
+    da39494d-b4b7-4e57-8c52-887a18f71959: 'Resource Cards'
+    dba75db4-1559-48ba-b4d4-a5e5738429a4: 'Stack Image on Mobile'
+    dbd3cd32-4e50-4ba5-8894-bbf8b63b3278: 'Mega Menu Fields'
+    dc0ed69d-1dd6-496a-ab73-dea06d776bc0: Heading
+    dc757580-d89c-4eb2-8e98-f03470f73495: Columns
+    dcce62b3-2650-4939-a381-0fcc22c0d942: 'Church or Agency'
+    dd3266ad-0d93-46fc-89f3-e57ebce2178c: Videos
+    dd9615db-bd5d-4050-9139-1b6174979ce8: Phone
+    decf4c9d-4084-42d5-b054-7c034dcebcd2: 'Grid Width'
+    dfbc0047-f74f-4940-baf3-7f9402fc918e: 'Background Color'
+    e03100b7-f50b-4daf-9652-85e6e60138a8: Pages
+    e1cb6898-debf-4b78-bbb2-440b65278382: 'Small | Small | Large'
+    e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3: 'Resource Cards'
+    e8cb7b37-dddf-4600-9919-bc755b86d74e: 'Content Block'
+    e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8: SEO
+    e9d8566e-91f5-421f-a131-b9222fbc2a77: 'Grant Recipient'
+    e32da315-685c-424c-8b52-95706a2d1026: 'Centered Text'
+    e40f1bde-3da7-4a14-a813-c341a064e9a3: 'Data Table'
+    e91b719a-22b8-4836-ac94-2eb6af576e65: 'Grant Recipient Cards'
+    e96bcdab-a9b7-4e6d-b220-57bf0ce7b15f: 'Contact Form'
+    e359f1b1-385c-4017-9823-ab7e63cd7efe: Citation
+    e636fe1a-91ea-493b-81c8-354c9c08220f: 'Items Per Row'
+    e11568a1-11e3-4147-ae18-1ff01fdcd4f7: 'CTA Tile: Small'
+    e39974bd-ec97-4187-be91-a431e1a4fbd7: Eyebrow
+    e47176e3-add5-4f79-a2e5-6544b4099f0f: Download
+    e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item'
+    e545221b-a425-4bf5-adef-30e8193f800d: Image
+    eaa2de37-8703-4880-aa20-3f0222fa32dc: 'Hide Breadcrumbs'
+    eaf0d64e-a5d2-48e0-9547-b790b9262fe3: 'Table Footer'
+    eb417305-8df0-4a1d-85d9-d992d5a60c7a: 'Button Block'
+    eee5e319-f63b-458a-8ea2-ae0a83ba319d: 'Pre-defined Table'
+    efb726bf-a523-4889-94d6-8865ebb534d9: 'Small | Small | Large'
+    f0fed55c-aae0-4c10-8ca5-6e4e5929674f: 'Grant Recipient'
+    f06a4480-f195-4705-bd40-a33a08e72d0f: Images
+    f69cfc32-4011-4eea-a32a-f5ae9fd5b24e: 'Page Builder: General'
+    f92f1b34-68ad-48fd-a712-c4cdb6b682f0: 'Rate Table'
+    f700d39b-3a4f-4c99-a961-d9fb1f3df887: Subheading
+    f126506f-a32d-40b2-9d16-466e4201be40: Label
+    faae928b-e4d7-4758-b4c1-0bc0bb55cac1: Text+Factoid
+    fae047fe-30da-49d5-b8da-b1d6adafd530: 'Label: Custom'
+    fae55152-701b-4c22-9f50-453a213e9e05: Size
+    fb633af9-99e4-499c-b90f-60a8039f3046: 'Text Alignment'
+    fba9a090-4a41-4c0b-8fda-85aa8b80f8e5: 'Podcast Block'
+    fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0: 'Text Fields'
+    fdacfdd8-aa17-4862-b03c-7ed6c0177dee: 'Text Link'
+    ff02b5d9-24b9-4da0-858a-ad8253a72bb3: 'Text Link'
+    ff81d39c-f083-4ae5-aaa1-08eabba9c8da: 'Icon: Custom'
+plugins:
+  config-values-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.1
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: BCK6Q291W0TCF0LWBUSFZ08Q
+    schemaVersion: 2.0.19
+    settings:
+      ajaxTimeout: 10
+      alertEmails: null
+      captchas:
+        __assoc__:
+          -
+            - recaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Recaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - recaptcha
+                      3:
+                        - type
+                        - v3
+                      4:
+                        - size
+                        - normal
+                      5:
+                        - theme
+                        - light
+                      6:
+                        - badge
+                        - bottomright
+                      7:
+                        - language
+                        - en
+                      8:
+                        - minScore
+                        - 0.5
+                      10:
+                        - scriptLoadingMethod
+                        - asyncDefer
+          -
+            - hcaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Hcaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - hcaptcha
+                      3:
+                        - size
+                        - normal
+                      4:
+                        - theme
+                        - light
+                      5:
+                        - language
+                        - en
+                      6:
+                        - minScore
+                        - 0.5
+                      7:
+                        - scriptLoadingMethod
+                        - asyncDefer
+          -
+            - friendlyCaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\FriendlyCaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - friendlyCaptcha
+          -
+            - turnstile
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Turnstile
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - turnstile
+                      3:
+                        - scriptLoadingMethod
+                        - asyncDefer
+          -
+            - duplicate
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Duplicate
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - duplicate
+          -
+            - honeypot
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Honeypot
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - honeypot
+          -
+            - javascript
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Javascript
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - javascript
+      defaultDateDisplayType: calendar
+      defaultDateTime: null
+      defaultDateValueOption: ''
+      defaultEmailTemplate: ''
+      defaultFileUploadVolume: ''
+      defaultFormTemplate: ''
+      defaultInstructionsPosition: verbb\formie\positions\AboveInput
+      defaultLabelPosition: verbb\formie\positions\AboveInput
+      defaultPage: submissions
+      emptyValuePlaceholder: 'No response.'
+      enableBackSubmission: true
+      enableCsrfValidationForGuests: true
+      enableLargeFieldStorage: false
+      enableUnloadWarning: true
+      includeDraftElementUsage: false
+      includeRevisionElementUsage: false
+      maxIncompleteSubmissionAge: 30
+      maxSentNotificationsAge: 30
+      pdfPaperOrientation: portrait
+      pdfPaperSize: letter
+      pluginName: Formie
+      queuePriority: null
+      saveSpam: true
+      sendEmailAlerts: false
+      sentNotifications: true
+      spamBehaviour: showSuccess
+      spamBehaviourMessage: ''
+      spamEmailNotifications: false
+      spamKeywords: ''
+      spamLimit: 500
+      useQueueForIntegrations: true
+      useQueueForNotifications: true
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  neo:
+    edition: standard
+    enabled: true
+    licenseKey: WGWS3FIJ3F81FB4EPTVL5Z4D
+    schemaVersion: 4.0.0
+  obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-tweaks:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redirect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.5
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: PSEDJJWTMM4WTQ2P1ZREB10A
+    schemaVersion: 3.0.13
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      excludeNonCanonicalUrls: false
+      generatorEnabled: true
+      headersEnabled: true
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
+      manuallySetEnvironment: false
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 0
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+        - linkedin
+      siteGroupsSeparate: true
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+      truncateDescriptionTags: true
+      truncateTitleTags: true
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  tablemaker:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
+system:
+  edition: pro
+  live: $CRAFT_SYSTEM_STATUS
+  name: $CRAFT_SYSTEM_NAME
+  retryDuration: null
+  schemaVersion: 4.15.0.0
+  timeZone: America/Los_Angeles

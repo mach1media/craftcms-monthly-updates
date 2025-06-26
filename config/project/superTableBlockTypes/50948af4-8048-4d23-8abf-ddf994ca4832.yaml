@@ -1,0 +1,142 @@
+changedFieldIndicator: null
+field: 76c2555a-23b9-4d53-8c79-13892f75b970
+fieldLayouts:
+  ac4ed749-ab9a-4787-b64e-1b4a0d8fbacd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b8904bf4-d4cd-4023-963d-3dbcebfabb78
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a0a09df5-ae2f-4a93-ba1a-869771d28706
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 86c0cfb0-f792-48aa-aef6-7f1df1dac5b1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7e9c38ca-6c6c-4ae9-a3c1-4bf6b85b48ae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0fbd0f44-e701-4761-805c-fc232ba797b4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 885658a7-bbd9-4545-a3b4-93c77fb354e5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5ca729bf-6b89-4d06-931b-db7f8b086ec6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2b7af1db-fd9f-409b-8ff4-00387c2f06cd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a2ae2fe6-4b2e-46b7-ba36-a796db1860b9
+        userCondition: null
+fields:
+  0fbd0f44-e701-4761-805c-fc232ba797b4:
+    columnSuffix: hkykxolk
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: false
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  5ca729bf-6b89-4d06-931b-db7f8b086ec6:
+    columnSuffix: crwcrjan
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: null
+    name: 'Background Color'
+    searchable: false
+    settings:
+      dataSet: 'Section Backgrounds'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  86c0cfb0-f792-48aa-aef6-7f1df1dac5b1:
+    columnSuffix: iywrvvhp
+    contentColumnType: text
+    fieldGroup: null
+    handle: subheading
+    instructions: null
+    name: Subheading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b8904bf4-d4cd-4023-963d-3dbcebfabb78:
+    columnSuffix: mbqilrul
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
