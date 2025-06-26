@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   dcba9f9c-11b2-4891-a510-1eb59c592d66:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
@@ -47,7 +47,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
@@ -59,7 +59,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
             instructions: null
             label: null
             required: false
@@ -71,7 +71,7 @@ fieldLayouts:
             width: 75
           -
             elementCondition: null
-            fieldUid: e47176e3-add5-4f79-a2e5-6544b4099f0f
+            fieldUid: e47176e3-add5-4f79-a2e5-6544b4099f0f # Download
             instructions: null
             label: null
             required: false
@@ -83,7 +83,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046
+            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
             instructions: null
             label: null
             required: false
@@ -96,7 +96,7 @@ fieldLayouts:
         name: Column
         uid: f57ade60-b9e8-42c3-8717-a9725295c890
         userCondition: null
-group: null
+group: cfcf5277-7782-4698-bf84-73607da709a9 # Text Blocks
 groupChildBlockTypes: true
 handle: columnText
 icon: null

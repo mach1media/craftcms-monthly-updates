@@ -25,6 +25,7 @@
 }
 
 .btn-secondary {
+	background-color: map-get($theme-colors, 'secondary');
 	color: white;
 	
 	&:hover {
@@ -33,6 +34,7 @@
 }
 .btn-outline-secondary {
 	color: map-get($theme-colors, 'primary');
+	border-color: map-get($theme-colors, 'secondary');
 	
 	&:hover {
 		color: white;

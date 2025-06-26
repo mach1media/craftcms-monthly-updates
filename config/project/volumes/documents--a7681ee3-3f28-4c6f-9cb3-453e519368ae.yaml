@@ -33,7 +33,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: b00ccfa2-369c-471f-ae02-ae5ed2a9bae6
+            fieldUid: b00ccfa2-369c-471f-ae02-ae5ed2a9bae6 # Thumbnail
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da
+            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
             instructions: null
             label: null
             required: false

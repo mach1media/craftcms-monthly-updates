@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: aefea3fc-ff45-4615-b305-9079e2cc6c44
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   d19cfe25-b922-4306-a793-75c6e4db055b:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6
+            fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6 # Pre-Eyebrow
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7
+            fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f
+            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
             instructions: null
             label: null
             required: false
@@ -47,7 +47,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
@@ -59,7 +59,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6add601c-de5e-4e85-8618-137007c0f910
+            fieldUid: 6add601c-de5e-4e85-8618-137007c0f910 # Signatures
             instructions: null
             label: null
             required: false
@@ -71,7 +71,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
             instructions: null
             label: null
             required: false
@@ -83,7 +83,7 @@ fieldLayouts:
             width: 75
           -
             elementCondition: null
-            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2
+            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
             instructions: null
             label: null
             required: false
@@ -101,7 +101,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
             instructions: null
             label: null
             required: false
@@ -113,7 +113,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
             instructions: null
             label: null
             required: false
@@ -125,7 +125,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046
+            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
             instructions: null
             label: null
             required: false

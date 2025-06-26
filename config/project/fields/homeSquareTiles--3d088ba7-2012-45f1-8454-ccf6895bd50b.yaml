@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 431ce2c5-de63-4209-b6b9-a5a836a67d82
+fieldGroup: 431ce2c5-de63-4209-b6b9-a5a836a67d82 # Home Page Fields
 handle: homeSquareTiles
 instructions: 'Insert four square tiles'
 name: 'Home: Square Tiles'

@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: aefea3fc-ff45-4615-b305-9079e2cc6c44
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   cf8e2e02-2888-4c19-a24e-69ae9e06b1b4:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: f06a4480-f195-4705-bd40-a33a08e72d0f
+            fieldUid: f06a4480-f195-4705-bd40-a33a08e72d0f # Images
             instructions: 'Select TWO vertical images'
             label: null
             required: true
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 75
           -
             elementCondition: null
-            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22
+            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
             instructions: null
             label: null
             required: false
@@ -41,7 +41,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6
+            fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6 # Pre-Eyebrow
             instructions: null
             label: null
             required: false
@@ -53,7 +53,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7
+            fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
             instructions: null
             label: null
             required: false
@@ -65,7 +65,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
@@ -77,7 +77,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: Subheading
             required: false
@@ -89,7 +89,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
@@ -101,7 +101,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
             instructions: null
             label: null
             required: false
@@ -113,7 +113,7 @@ fieldLayouts:
             width: 75
           -
             elementCondition: null
-            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2
+            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
             instructions: null
             label: null
             required: false

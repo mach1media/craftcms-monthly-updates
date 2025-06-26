@@ -1,4 +1,4 @@
-field: 69a66c94-0c41-4248-949e-0b52659f8c9e
+field: 69a66c94-0c41-4248-949e-0b52659f8c9e # Dropdown Links
 fieldLayouts:
   aedb29ac-f50e-4177-9d4c-0d55adf3f52f:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 838ea19b-287d-4d04-bf6e-bce6a0de9c66
+            fieldUid: 838ea19b-287d-4d04-bf6e-bce6a0de9c66 # Dropdown Link
             instructions: null
             label: null
             required: false
@@ -21,7 +21,7 @@ fieldLayouts:
         uid: beba02d1-5bdd-4368-b369-a2ab68b566b0
         userCondition: null
 fields:
-  838ea19b-287d-4d04-bf6e-bce6a0de9c66:
+  838ea19b-287d-4d04-bf6e-bce6a0de9c66: # Dropdown Link
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

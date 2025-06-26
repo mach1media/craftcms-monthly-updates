@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   5d0e33bf-1f0f-4c09-a11c-9635d2d289af:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
             instructions: null
             label: null
             required: false
@@ -31,7 +31,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718
+            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856
+            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
             instructions: null
             label: null
             required: false
@@ -55,7 +55,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: ce7c1084-d84d-4a5e-be30-3011cdda7a8a
+            fieldUid: ce7c1084-d84d-4a5e-be30-3011cdda7a8a # Disable Image Transforms
             instructions: null
             label: null
             required: false
@@ -81,7 +81,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f
+            fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f # Video
             instructions: null
             label: null
             required: false
@@ -99,7 +99,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e
+            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
             instructions: null
             label: null
             required: false
@@ -111,7 +111,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
             instructions: null
             label: null
             required: false
@@ -123,7 +123,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
             instructions: null
             label: null
             required: false
@@ -135,7 +135,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa
+            fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa # Padding: Sides
             instructions: null
             label: null
             required: false
@@ -148,7 +148,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: a7c50bf5-6154-485d-8ec8-1a1d6a5d1d9d
         userCondition: null
-group: null
+group: 2734260c-14b6-412b-a372-5a4ee016497a # Media
 groupChildBlockTypes: true
 handle: media
 icon: null

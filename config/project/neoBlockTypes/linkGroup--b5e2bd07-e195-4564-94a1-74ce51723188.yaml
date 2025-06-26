@@ -3,7 +3,7 @@ childBlocks:
 conditions: null
 description: ''
 enabled: true
-field: 0ba00a47-4ce1-4c02-a3ca-61119f702d8d
+field: 0ba00a47-4ce1-4c02-a3ca-61119f702d8d # Mega Menu: Links
 fieldLayouts:
   3c63a6d4-5e31-4f2e-a334-43597e11283b:
     tabs:
@@ -12,7 +12,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96
+            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96 # Text Link
             instructions: null
             label: 'Large Link'
             required: false

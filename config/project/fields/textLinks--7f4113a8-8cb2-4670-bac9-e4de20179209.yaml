@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 2160ef32-2844-4834-a6c8-c374a3efa675
+fieldGroup: 2160ef32-2844-4834-a6c8-c374a3efa675 # Link Fields
 handle: textLinks
 instructions: null
 name: 'Text Links'

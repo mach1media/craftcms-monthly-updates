@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 431ce2c5-de63-4209-b6b9-a5a836a67d82
+fieldGroup: 431ce2c5-de63-4209-b6b9-a5a836a67d82 # Home Page Fields
 handle: homeIntro
 instructions: null
 name: 'Home: Intro'
@@ -11,21 +11,21 @@ settings:
   columns:
     __assoc__:
       -
-        - 643e4c17-f296-47ae-8806-45847ebda838
+        - 643e4c17-f296-47ae-8806-45847ebda838 # Pre Heading
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - ab39e5a8-9059-4669-8998-c898c3c7ed89
+        - ab39e5a8-9059-4669-8998-c898c3c7ed89 # Heading
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 0d19f0b1-727c-4654-9f11-09b986093f3d
+        - 0d19f0b1-727c-4654-9f11-09b986093f3d # CTA Link
         -
           __assoc__:
             -

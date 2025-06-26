@@ -128,6 +128,12 @@
 	//
 	@include element('desktop') {
 		position: relative;
+
+		.nav-link {
+			&.btn-outline-secondary {
+				border: 2px solid map-get($theme-colors, 'secondary');
+			}
+		}
 	}
 	@include element('mega-toggle') {
 		button {
@@ -224,6 +230,10 @@
 
 		.nav .nav-item .btn {
 			padding: .5em 1em;
+
+			&.btn-outline-secondary {
+				border: 2px solid map-get($theme-colors, 'secondary');
+			}
 		}
 	}
 	@include element('menu-toggle') {

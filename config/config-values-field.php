@@ -12,7 +12,7 @@ return [
 			'secondary'            => 'Secondary (Gold)',
 			'tertiary'             => 'Tertiary (Blue)',
 			'secondary-light'      => 'Gold: Light',
-			'secondary-extralight' => 'Gold: Light',
+			'secondary-extralight' => 'Gold: Extralight',
 			'dark'                 => 'Dark',
 			'silver'               => 'Silver',
 			'white'                => 'White',

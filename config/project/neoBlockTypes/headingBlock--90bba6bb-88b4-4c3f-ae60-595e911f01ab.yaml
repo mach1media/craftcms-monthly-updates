@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: aefea3fc-ff45-4615-b305-9079e2cc6c44
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   1ef619c5-431a-433e-80e1-5a568e77f616:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6
+            fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6 # Pre-Eyebrow
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7
+            fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
@@ -47,7 +47,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: Subheading
             required: false
@@ -65,7 +65,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
             instructions: null
             label: null
             required: false
@@ -77,7 +77,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
             instructions: null
             label: null
             required: false
@@ -89,7 +89,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 524c6e05-4d16-4e49-86a1-edfb5ff0e70c
+            fieldUid: 524c6e05-4d16-4e49-86a1-edfb5ff0e70c # Animation Settings
             instructions: null
             label: null
             required: false

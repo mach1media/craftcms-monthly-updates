@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   9fccd976-a85a-43c2-b4bc-e9232075513f:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: null
             required: false
@@ -47,7 +47,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
@@ -59,7 +59,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da
+            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
             instructions: null
             label: null
             required: false
@@ -71,7 +71,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
             instructions: null
             label: null
             required: false
@@ -83,7 +83,7 @@ fieldLayouts:
             width: 75
           -
             elementCondition: null
-            fieldUid: e47176e3-add5-4f79-a2e5-6544b4099f0f
+            fieldUid: e47176e3-add5-4f79-a2e5-6544b4099f0f # Download
             instructions: null
             label: null
             required: false
@@ -96,7 +96,7 @@ fieldLayouts:
         name: Card
         uid: d8484d62-7f21-46a3-aeec-7d8ba55f8f92
         userCondition: null
-group: null
+group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
 groupChildBlockTypes: true
 handle: previewCard
 icon: null

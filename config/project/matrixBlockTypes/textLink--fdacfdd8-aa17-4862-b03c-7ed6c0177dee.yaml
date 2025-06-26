@@ -1,4 +1,4 @@
-field: 11a02d8c-6388-4bec-914d-2e386b4d1101
+field: 11a02d8c-6388-4bec-914d-2e386b4d1101 # Legal Links
 fieldLayouts:
   2c0e92f5-2dce-4b8e-bc36-f0038a91de9b:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: ff02b5d9-24b9-4da0-858a-ad8253a72bb3
+            fieldUid: ff02b5d9-24b9-4da0-858a-ad8253a72bb3 # Text Link
             instructions: null
             label: null
             required: false
@@ -21,7 +21,7 @@ fieldLayouts:
         uid: 91684d8a-62f4-4faa-96ae-7e22e1d3633e
         userCondition: null
 fields:
-  ff02b5d9-24b9-4da0-858a-ad8253a72bb3:
+  ff02b5d9-24b9-4da0-858a-ad8253a72bb3: # Text Link
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

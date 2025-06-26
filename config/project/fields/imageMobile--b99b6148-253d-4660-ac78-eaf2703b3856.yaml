@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e
+fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
 handle: imageMobile
 instructions: null
 name: 'Image: Mobile'
@@ -12,7 +12,7 @@ settings:
   allowedKinds:
     - image
   branchLimit: null
-  defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+  defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
@@ -22,14 +22,14 @@ settings:
   restrictFiles: true
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+  restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   restrictedLocationSubpath: null
   selectionLabel: 'Add an image'
   showSiteMenu: true
   showUnpermittedFiles: true
   showUnpermittedVolumes: true
   sources:
-    - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+    - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   targetSiteId: null
   validateRelatedElements: false
   viewMode: large

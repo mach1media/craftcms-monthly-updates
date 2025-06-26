@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: 0914ee96-13fc-4737-ae93-8ab00d611b35
+field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
   d7b7376f-91b4-4fd1-ab81-e6fbbf18b757:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718
+            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856
+            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
             instructions: null
             label: null
             required: false

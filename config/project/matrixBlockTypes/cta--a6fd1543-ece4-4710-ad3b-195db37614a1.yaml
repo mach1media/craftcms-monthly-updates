@@ -1,4 +1,4 @@
-field: 6caec3d2-766a-490b-9491-7b784243b1d4
+field: 6caec3d2-766a-490b-9491-7b784243b1d4 # Mega Menu: CTAs
 fieldLayouts:
   f3e13b44-4536-4b9d-996a-f7633f6043f2:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: e545221b-a425-4bf5-adef-30e8193f800d
+            fieldUid: e545221b-a425-4bf5-adef-30e8193f800d # Image
             instructions: null
             label: null
             required: true
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 517cdef8-d041-4ff8-857b-21f4f518180b
+            fieldUid: 517cdef8-d041-4ff8-857b-21f4f518180b # CTA Link
             instructions: null
             label: null
             required: false
@@ -33,7 +33,7 @@ fieldLayouts:
         uid: 6a7975a4-b63d-4115-abcc-b9ea926d5f54
         userCondition: null
 fields:
-  517cdef8-d041-4ff8-857b-21f4f518180b:
+  517cdef8-d041-4ff8-857b-21f4f518180b: # CTA Link
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -96,7 +96,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  e545221b-a425-4bf5-adef-30e8193f800d:
+  e545221b-a425-4bf5-adef-30e8193f800d: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -111,7 +111,7 @@ fields:
       allowedKinds:
         - image
       branchLimit: null
-      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
@@ -121,14 +121,14 @@ fields:
       restrictFiles: true
       restrictLocation: false
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       restrictedLocationSubpath: null
       selectionLabel: 'Add a thumbnail'
       showSiteMenu: false
       showUnpermittedFiles: true
       showUnpermittedVolumes: true
       sources:
-        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       targetSiteId: null
       validateRelatedElements: false
       viewMode: large

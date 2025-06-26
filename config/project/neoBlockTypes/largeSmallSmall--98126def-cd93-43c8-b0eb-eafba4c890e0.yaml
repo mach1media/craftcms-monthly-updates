@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8
+field: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
 fieldLayouts:
   5fdd85e3-e005-4510-935a-5b9c6d5b2e1f:
     tabs:
@@ -19,7 +19,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 0990fff1-3f3d-49e5-a5b1-afdeb683d20e
+            fieldUid: 0990fff1-3f3d-49e5-a5b1-afdeb683d20e # CTA Tile: Large
             instructions: null
             label: null
             required: false
@@ -31,7 +31,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e11568a1-11e3-4147-ae18-1ff01fdcd4f7
+            fieldUid: e11568a1-11e3-4147-ae18-1ff01fdcd4f7 # CTA Tile: Small
             instructions: null
             label: null
             required: false

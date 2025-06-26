@@ -1,4 +1,4 @@
-field: 24a26f70-67f3-45a7-8828-d33f091c1508
+field: 24a26f70-67f3-45a7-8828-d33f091c1508 # Home: Tile - Wide
 fieldLayouts:
   d0b547f6-3747-4255-9f83-81f97faeac1c:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 4d7096da-e00f-4539-976f-2ab6e40967b7
+            fieldUid: 4d7096da-e00f-4539-976f-2ab6e40967b7 # Thumbnail
             instructions: null
             label: null
             required: true
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: d46a26f8-acd0-4f06-8f57-f8e755cbcddb
+            fieldUid: d46a26f8-acd0-4f06-8f57-f8e755cbcddb # Label
             instructions: null
             label: null
             required: false
@@ -31,7 +31,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: ab7e2d93-36c3-4838-bcb0-b9378b70308a
+            fieldUid: ab7e2d93-36c3-4838-bcb0-b9378b70308a # Heading
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9
+            fieldUid: 74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9 # Video
             instructions: null
             label: null
             required: true
@@ -57,7 +57,7 @@ fieldLayouts:
         uid: 43637cf7-8578-4d01-a546-810990b395df
         userCondition: null
 fields:
-  4d7096da-e00f-4539-976f-2ab6e40967b7:
+  4d7096da-e00f-4539-976f-2ab6e40967b7: # Thumbnail
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -72,7 +72,7 @@ fields:
       allowedKinds:
         - image
       branchLimit: null
-      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
@@ -82,21 +82,21 @@ fields:
       restrictFiles: true
       restrictLocation: false
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       restrictedLocationSubpath: null
       selectionLabel: 'Add a thumbnail image'
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: true
       sources:
-        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       targetSiteId: null
       validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9:
+  74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: # Video
     columnSuffix: tbcowjcz
     contentColumnType: string
     fieldGroup: null
@@ -110,7 +110,7 @@ fields:
       allowUploads: true
       allowedKinds: null
       branchLimit: null
-      defaultUploadLocationSource: 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
+      defaultUploadLocationSource: 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
@@ -120,21 +120,21 @@ fields:
       restrictFiles: false
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
+      restrictedLocationSource: 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
       restrictedLocationSubpath: null
       selectionLabel: 'Add a video'
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: true
       sources:
-        - 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
+        - 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
       targetSiteId: null
       validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  ab7e2d93-36c3-4838-bcb0-b9378b70308a:
+  ab7e2d93-36c3-4838-bcb0-b9378b70308a: # Heading
     columnSuffix: vyoyvyhq
     contentColumnType: text
     fieldGroup: null
@@ -154,7 +154,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  d46a26f8-acd0-4f06-8f57-f8e755cbcddb:
+  d46a26f8-acd0-4f06-8f57-f8e755cbcddb: # Label
     columnSuffix: zcmdqhxs
     contentColumnType: text
     fieldGroup: null

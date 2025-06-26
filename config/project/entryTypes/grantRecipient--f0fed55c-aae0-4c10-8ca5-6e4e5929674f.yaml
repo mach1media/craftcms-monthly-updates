@@ -33,7 +33,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: c8054437-50a0-4ca2-a78f-02657392c71c
+            fieldUid: c8054437-50a0-4ca2-a78f-02657392c71c # Grant Year
             instructions: null
             label: null
             required: false
@@ -57,7 +57,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 8069e6aa-35e5-43c0-9baa-abd171d2a2f2
+            fieldUid: 8069e6aa-35e5-43c0-9baa-abd171d2a2f2 # Program/Project Name
             instructions: null
             label: null
             required: false
@@ -69,7 +69,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da
+            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
             instructions: null
             label: null
             required: false
@@ -87,7 +87,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 3be92289-0f0d-4b35-908a-44e87436fae3
+            fieldUid: 3be92289-0f0d-4b35-908a-44e87436fae3 # Program Coordinator
             instructions: null
             label: null
             required: false
@@ -99,7 +99,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 9d7fafd1-35d2-468a-929a-b88e876f64e2
+            fieldUid: 9d7fafd1-35d2-468a-929a-b88e876f64e2 # Email
             instructions: null
             label: null
             required: false
@@ -111,7 +111,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: bf77811a-bc78-4e53-8e51-bb8a6e9d0c69
+            fieldUid: bf77811a-bc78-4e53-8e51-bb8a6e9d0c69 # Website
             instructions: null
             label: null
             required: false
@@ -123,7 +123,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a
+            fieldUid: 4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a # City, State
             instructions: null
             label: null
             required: false
@@ -135,7 +135,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
@@ -153,7 +153,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8
+            fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
             instructions: null
             label: null
             required: false
@@ -169,7 +169,7 @@ fieldLayouts:
 handle: grantRecipient
 hasTitleField: true
 name: 'Grant Recipient'
-section: 3dfc7896-c87e-4252-ad06-4a34e187be45
+section: 3dfc7896-c87e-4252-ad06-4a34e187be45 # Grant Recipients
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

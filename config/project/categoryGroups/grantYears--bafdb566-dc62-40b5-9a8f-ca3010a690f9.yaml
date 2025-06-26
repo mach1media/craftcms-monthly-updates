@@ -38,7 +38,7 @@ fieldLayouts:
 handle: grantYears
 name: 'Grant Years'
 siteSettings:
-  5cf2d429-9442-49de-b0fb-aaaec557b2cd:
+  5cf2d429-9442-49de-b0fb-aaaec557b2cd: # TMF
     hasUrls: true
     template: null
     uriFormat: 'grant-years/{slug}'

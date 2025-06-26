@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   caa38434-1dc6-45cb-9574-f72c7f04b4d3:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f
+            fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f # Video
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22
+            fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
             instructions: null
             label: 'Video Position [L|R]'
             required: false
@@ -53,7 +53,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: null
             required: false
@@ -65,7 +65,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f
+            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
             instructions: null
             label: null
             required: false
@@ -77,7 +77,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
@@ -89,7 +89,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d
+            fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
             instructions: null
             label: null
             required: false
@@ -107,7 +107,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e
+            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
             instructions: null
             label: null
             required: false
@@ -119,7 +119,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
             instructions: null
             label: null
             required: false
@@ -131,7 +131,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
             instructions: null
             label: null
             required: false
@@ -143,7 +143,7 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
-            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
             instructions: null
             label: null
             required: false
@@ -156,7 +156,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 24af3211-7501-45b9-a6e7-a5d8c94df013
         userCondition: null
-group: null
+group: cfcf5277-7782-4698-bf84-73607da709a9 # Text Blocks
 groupChildBlockTypes: true
 handle: videoTextBlock
 icon: null

@@ -1,4 +1,4 @@
-field: 0774c028-80d9-40e2-a668-5558b97314d3
+field: 0774c028-80d9-40e2-a668-5558b97314d3 # Headshot Videos
 fieldLayouts:
   dd551cb8-2c1d-468b-a009-f43e5969a81f:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 19c27c03-7838-4358-9214-9634fe9e3970
+            fieldUid: 19c27c03-7838-4358-9214-9634fe9e3970 # Image
             instructions: null
             label: null
             required: true
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c
+            fieldUid: 9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c # Label
             instructions: null
             label: null
             required: false
@@ -31,7 +31,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d79c352e-f405-46a0-b6cd-bdfff5e4a81e
+            fieldUid: d79c352e-f405-46a0-b6cd-bdfff5e4a81e # Video
             instructions: null
             label: null
             required: true
@@ -45,7 +45,7 @@ fieldLayouts:
         uid: d702a99d-937d-42d1-803a-8fdc4e24b081
         userCondition: null
 fields:
-  9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c:
+  9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c: # Label
     columnSuffix: laifahns
     contentColumnType: text
     fieldGroup: null
@@ -65,7 +65,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  19c27c03-7838-4358-9214-9634fe9e3970:
+  19c27c03-7838-4358-9214-9634fe9e3970: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -80,7 +80,7 @@ fields:
       allowedKinds:
         - image
       branchLimit: null
-      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
@@ -90,21 +90,21 @@ fields:
       restrictFiles: true
       restrictLocation: false
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       restrictedLocationSubpath: null
       selectionLabel: 'Add an image'
       showSiteMenu: false
       showUnpermittedFiles: true
       showUnpermittedVolumes: true
       sources:
-        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       targetSiteId: null
       validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  d79c352e-f405-46a0-b6cd-bdfff5e4a81e:
+  d79c352e-f405-46a0-b6cd-bdfff5e4a81e: # Video
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -118,7 +118,7 @@ fields:
       allowUploads: true
       allowedKinds: null
       branchLimit: null
-      defaultUploadLocationSource: 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
+      defaultUploadLocationSource: 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
@@ -128,14 +128,14 @@ fields:
       restrictFiles: false
       restrictLocation: false
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       restrictedLocationSubpath: null
       selectionLabel: 'Add a video'
       showSiteMenu: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       sources:
-        - 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
+        - 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
       targetSiteId: null
       validateRelatedElements: false
       viewMode: list

@@ -56,7 +56,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: cec407c4-ded3-4457-9ffd-7caf96ab0281
+            fieldUid: cec407c4-ded3-4457-9ffd-7caf96ab0281 # Caption
             instructions: null
             label: null
             required: false

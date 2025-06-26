@@ -1,5 +1,5 @@
 changedFieldIndicator: null
-field: 17fcc0b6-4e93-425f-9380-11c07300553d
+field: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
 fieldLayouts:
   f5e410bb-9ab8-4e93-b35c-b34f3dcfc610:
     tabs:
@@ -8,7 +8,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 55bd2a63-aca2-431f-bdc7-c44414ac0418
+            fieldUid: 55bd2a63-aca2-431f-bdc7-c44414ac0418 # Link
             instructions: null
             label: null
             required: false
@@ -20,7 +20,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 3dd8a012-e0af-46a4-a906-a538bd2c6a64
+            fieldUid: 3dd8a012-e0af-46a4-a906-a538bd2c6a64 # Style
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: aed0fd2d-f074-485f-b1f7-4c8ef97e91cc
+            fieldUid: aed0fd2d-f074-485f-b1f7-4c8ef97e91cc # Arrow
             instructions: null
             label: null
             required: false
@@ -44,7 +44,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: c7620f65-d29a-4274-8ad9-35a968a67638
+            fieldUid: c7620f65-d29a-4274-8ad9-35a968a67638 # Download
             instructions: null
             label: null
             required: false
@@ -58,7 +58,7 @@ fieldLayouts:
         uid: aecde2d4-8aa8-4c00-9378-f6c9a101f611
         userCondition: null
 fields:
-  3dd8a012-e0af-46a4-a906-a538bd2c6a64:
+  3dd8a012-e0af-46a4-a906-a538bd2c6a64: # Style
     columnSuffix: gukpxksf
     contentColumnType: string
     fieldGroup: null
@@ -72,7 +72,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
-  55bd2a63-aca2-431f-bdc7-c44414ac0418:
+  55bd2a63-aca2-431f-bdc7-c44414ac0418: # Link
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -135,7 +135,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  aed0fd2d-f074-485f-b1f7-4c8ef97e91cc:
+  aed0fd2d-f074-485f-b1f7-4c8ef97e91cc: # Arrow
     columnSuffix: cgjmpefi
     contentColumnType: boolean
     fieldGroup: null
@@ -150,7 +150,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  c7620f65-d29a-4274-8ad9-35a968a67638:
+  c7620f65-d29a-4274-8ad9-35a968a67638: # Download
     columnSuffix: fjtltnzb
     contentColumnType: boolean
     fieldGroup: null

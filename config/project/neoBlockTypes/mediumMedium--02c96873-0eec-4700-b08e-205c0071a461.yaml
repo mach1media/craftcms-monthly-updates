@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   10625039-c3f8-439a-b1b7-2317288a5d4f:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: e11568a1-11e3-4147-ae18-1ff01fdcd4f7
+            fieldUid: e11568a1-11e3-4147-ae18-1ff01fdcd4f7 # CTA Tile: Small
             instructions: null
             label: null
             required: false
@@ -24,7 +24,7 @@ fieldLayouts:
         name: Tiles
         uid: 80e0ff76-6291-4bf2-8437-dc0be0b8fab7
         userCondition: null
-group: null
+group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
 groupChildBlockTypes: true
 handle: mediumMedium
 icon: null

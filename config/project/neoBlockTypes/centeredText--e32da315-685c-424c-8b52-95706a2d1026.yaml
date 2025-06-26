@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8
+field: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
 fieldLayouts:
   2a69acc2-4db0-4507-8f70-ad4878053401:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d
+            fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
             instructions: null
             label: null
             required: false
@@ -53,7 +53,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
             instructions: null
             label: null
             required: false

@@ -1,0 +1,36 @@
+{##
+ # NEO BLOCK TYPE: IMAGE CARDS
+ #}
+{% set totalCards = block.children | length %}
+{% set columnsClass = totalCards < 3 ? 12 / totalCards : '4' %}
+<section id="{{ sectionId }}" class="c-block {% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
+				
+				<div class="row justify-content-center gx-5">
+					{% for card in block.children.all() %}
+						{% set img = card.image.one %}
+						<div class="col-12 col-lg-{{ columnsClass }} mb-5">
+							<div class="card h-100 rounded-5 border-0 shadow">
+								<img src="{{ img.url('previewCard') }}" class="rounded-5 rounded-bottom-0" alt="{{ img.alt ?: img.caption }}" />
+								<div class="card-body text-center border-top border-5 border-{{ card.themeColor | default('secondary') }} p-4 p-lg-5">
+									{% if card.heading != '' %}
+										<h3 class="u-base-font-light text-uppercase">{{ card.heading | raw }}</h3>
+									{% endif %}
+									
+									{{ card.description }}
+
+									{% include "_fields/buttons" with {
+										buttons: card.buttons.all()
+									} %}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>

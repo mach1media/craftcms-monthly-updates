@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e
+fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
 handle: grantRecipient
 instructions: null
 name: 'Grant Recipient'
@@ -15,7 +15,7 @@ settings:
   selectionLabel: null
   showSiteMenu: true
   sources:
-    - 'section:3dfc7896-c87e-4252-ad06-4a34e187be45'
+    - 'section:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

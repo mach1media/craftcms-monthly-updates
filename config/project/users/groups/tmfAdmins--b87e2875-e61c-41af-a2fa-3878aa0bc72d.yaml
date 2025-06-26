@@ -9,53 +9,53 @@ permissions:
   - accessplugin-seomatic
   - accesssitewhensystemisoff
   - administrateusers
-  - 'assignusergroup:b87e2875-e61c-41af-a2fa-3878aa0bc72d'
+  - 'assignusergroup:b87e2875-e61c-41af-a2fa-3878aa0bc72d' # TMF Admins
   - assignuserpermissions
-  - 'createentries:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'createentries:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'createentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'createentries:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'createentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'createentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'createfolders:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'createfolders:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'createfolders:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'deleteassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'deleteassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'deleteassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'deletecategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9'
-  - 'deleteentries:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'deleteentries:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'deleteentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'deleteentries:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'deleteentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'deleteentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'deletepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'deletepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'deletepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'deletepeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9'
-  - 'deletepeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'deletepeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'deletepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'deletepeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'deletepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'deletepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'deletepeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'deletepeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e'
-  - 'deletepeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'deletepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'deletepeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'deletepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'deletepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'deletepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857'
+  - 'createentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'createentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'createentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'createentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'createentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'createentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'createfolders:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'createfolders:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'createfolders:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'deleteassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'deleteassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'deleteassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'deletecategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
+  - 'deleteentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'deleteentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'deleteentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'deleteentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'deleteentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'deleteentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'deletepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'deletepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'deletepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'deletepeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
+  - 'deletepeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'deletepeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'deletepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'deletepeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'deletepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'deletepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'deletepeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'deletepeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
+  - 'deletepeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'deletepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'deletepeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'deletepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'deletepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'deletepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - deleteusers
-  - 'editglobalset:68ecabf7-ddb5-437f-8844-30eb450a69ee'
-  - 'editimages:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'editimages:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'editimages:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'editpeerimages:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'editpeerimages:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'editpeerimages:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
+  - 'editglobalset:68ecabf7-ddb5-437f-8844-30eb450a69ee' # Footer
+  - 'editimages:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'editimages:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'editimages:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'editpeerimages:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'editpeerimages:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'editpeerimages:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
   - editusers
   - formie-createforms
   - formie-createsubmissions
@@ -114,172 +114,172 @@ permissions:
   - formie-viewsubmissions
   - impersonateusers
   - moderateusers
-  - 'neo-createblocks:005b0010-da6f-4cab-a5df-5047ecc802b0'
-  - 'neo-createblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3'
-  - 'neo-createblocks:04cfb406-f722-44ab-8bcf-9bdc925cd5d8'
-  - 'neo-createblocks:13c74871-8a4f-4e3d-9caf-998a4119ec36'
-  - 'neo-createblocks:16e2e1ff-7c35-4030-b21c-207a4d1e88b7'
-  - 'neo-createblocks:1a59398d-6900-4df1-a904-341d0b1c005c'
-  - 'neo-createblocks:1fc01eb4-e3aa-4109-b017-9a4357415660'
-  - 'neo-createblocks:283a58a7-7d64-4ce3-96c6-6a2fe93bf942'
-  - 'neo-createblocks:3030cab8-78a4-43c1-965d-edcb8d53848e'
-  - 'neo-createblocks:30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b'
-  - 'neo-createblocks:312692fe-0d39-45bc-889d-f49efeaa0dc0'
-  - 'neo-createblocks:38f59447-9f79-465c-96fc-aba9497a5d04'
-  - 'neo-createblocks:40462e8a-a238-4adf-9317-22de98d2878f'
-  - 'neo-createblocks:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd'
-  - 'neo-createblocks:54458965-37a8-4b1e-839f-f19934f7a8e3'
-  - 'neo-createblocks:54632eea-be0d-432e-9b18-64f95cdb3ddc'
-  - 'neo-createblocks:6552f23c-7f92-493a-bd10-b47693edab05'
-  - 'neo-createblocks:6b8077d5-b074-4ffc-8cba-4946fd5d9a35'
-  - 'neo-createblocks:6ed354ea-1804-41ca-a57f-9e843614ea4a'
-  - 'neo-createblocks:704cc16d-0736-4a6b-8d40-f267fd9ae8f9'
-  - 'neo-createblocks:7393216b-9c58-4d00-9d10-ebbc0ca2130b'
-  - 'neo-createblocks:7e96a64e-53b0-4605-98b2-53710eb1c5bf'
-  - 'neo-createblocks:86898b1e-5316-4337-9b1b-3b0b541bdf37'
-  - 'neo-createblocks:8f655278-2023-4da0-a4d7-64814ef5c669'
-  - 'neo-createblocks:91c4b151-928a-47de-b91b-873c8c52a099'
-  - 'neo-createblocks:972197b6-eda9-4a11-a983-eb2cb09bada3'
-  - 'neo-createblocks:9804d284-d129-4704-8883-92fcd4aec0a8'
-  - 'neo-createblocks:98126def-cd93-43c8-b0eb-eafba4c890e0'
-  - 'neo-createblocks:a60f746d-4da8-4419-876b-782449ea1381'
-  - 'neo-createblocks:aa96dc63-49ff-4c1a-89df-d34525227436'
-  - 'neo-createblocks:afb8f81e-7598-4dbb-8559-8aef5c3c42e6'
-  - 'neo-createblocks:b5e2bd07-e195-4564-94a1-74ce51723188'
-  - 'neo-createblocks:b6b4cc71-d295-40ea-a6fc-c7b67ec1a6c4'
-  - 'neo-createblocks:c1d10006-9965-425c-961a-e3bd34a9f34c'
-  - 'neo-createblocks:d5a26941-e90f-43b4-8e8b-b34c12674c8b'
-  - 'neo-createblocks:d62585aa-389f-4f17-a6f8-ea404770633a'
-  - 'neo-createblocks:dc757580-d89c-4eb2-8e98-f03470f73495'
-  - 'neo-createblocks:e1cb6898-debf-4b78-bbb2-440b65278382'
-  - 'neo-createblocks:e32da315-685c-424c-8b52-95706a2d1026'
-  - 'neo-createblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3'
-  - 'neo-createblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e'
-  - 'neo-createblocks:e91b719a-22b8-4836-ac94-2eb6af576e65'
-  - 'neo-createblocks:efb726bf-a523-4889-94d6-8865ebb534d9'
-  - 'neo-deleteblocks:005b0010-da6f-4cab-a5df-5047ecc802b0'
-  - 'neo-deleteblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3'
-  - 'neo-deleteblocks:04cfb406-f722-44ab-8bcf-9bdc925cd5d8'
-  - 'neo-deleteblocks:13c74871-8a4f-4e3d-9caf-998a4119ec36'
-  - 'neo-deleteblocks:16e2e1ff-7c35-4030-b21c-207a4d1e88b7'
-  - 'neo-deleteblocks:1a59398d-6900-4df1-a904-341d0b1c005c'
-  - 'neo-deleteblocks:1fc01eb4-e3aa-4109-b017-9a4357415660'
-  - 'neo-deleteblocks:283a58a7-7d64-4ce3-96c6-6a2fe93bf942'
-  - 'neo-deleteblocks:3030cab8-78a4-43c1-965d-edcb8d53848e'
-  - 'neo-deleteblocks:30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b'
-  - 'neo-deleteblocks:312692fe-0d39-45bc-889d-f49efeaa0dc0'
-  - 'neo-deleteblocks:38f59447-9f79-465c-96fc-aba9497a5d04'
-  - 'neo-deleteblocks:40462e8a-a238-4adf-9317-22de98d2878f'
-  - 'neo-deleteblocks:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd'
-  - 'neo-deleteblocks:54458965-37a8-4b1e-839f-f19934f7a8e3'
-  - 'neo-deleteblocks:54632eea-be0d-432e-9b18-64f95cdb3ddc'
-  - 'neo-deleteblocks:6552f23c-7f92-493a-bd10-b47693edab05'
-  - 'neo-deleteblocks:6b8077d5-b074-4ffc-8cba-4946fd5d9a35'
-  - 'neo-deleteblocks:6ed354ea-1804-41ca-a57f-9e843614ea4a'
-  - 'neo-deleteblocks:704cc16d-0736-4a6b-8d40-f267fd9ae8f9'
-  - 'neo-deleteblocks:7393216b-9c58-4d00-9d10-ebbc0ca2130b'
-  - 'neo-deleteblocks:7e96a64e-53b0-4605-98b2-53710eb1c5bf'
-  - 'neo-deleteblocks:86898b1e-5316-4337-9b1b-3b0b541bdf37'
-  - 'neo-deleteblocks:8f655278-2023-4da0-a4d7-64814ef5c669'
-  - 'neo-deleteblocks:91c4b151-928a-47de-b91b-873c8c52a099'
-  - 'neo-deleteblocks:972197b6-eda9-4a11-a983-eb2cb09bada3'
-  - 'neo-deleteblocks:9804d284-d129-4704-8883-92fcd4aec0a8'
-  - 'neo-deleteblocks:98126def-cd93-43c8-b0eb-eafba4c890e0'
-  - 'neo-deleteblocks:a60f746d-4da8-4419-876b-782449ea1381'
-  - 'neo-deleteblocks:aa96dc63-49ff-4c1a-89df-d34525227436'
-  - 'neo-deleteblocks:afb8f81e-7598-4dbb-8559-8aef5c3c42e6'
-  - 'neo-deleteblocks:b5e2bd07-e195-4564-94a1-74ce51723188'
-  - 'neo-deleteblocks:b6b4cc71-d295-40ea-a6fc-c7b67ec1a6c4'
-  - 'neo-deleteblocks:c1d10006-9965-425c-961a-e3bd34a9f34c'
-  - 'neo-deleteblocks:d5a26941-e90f-43b4-8e8b-b34c12674c8b'
-  - 'neo-deleteblocks:d62585aa-389f-4f17-a6f8-ea404770633a'
-  - 'neo-deleteblocks:dc757580-d89c-4eb2-8e98-f03470f73495'
-  - 'neo-deleteblocks:e1cb6898-debf-4b78-bbb2-440b65278382'
-  - 'neo-deleteblocks:e32da315-685c-424c-8b52-95706a2d1026'
-  - 'neo-deleteblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3'
-  - 'neo-deleteblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e'
-  - 'neo-deleteblocks:e91b719a-22b8-4836-ac94-2eb6af576e65'
-  - 'neo-deleteblocks:efb726bf-a523-4889-94d6-8865ebb534d9'
-  - 'neo-editblocks:005b0010-da6f-4cab-a5df-5047ecc802b0'
-  - 'neo-editblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3'
-  - 'neo-editblocks:04cfb406-f722-44ab-8bcf-9bdc925cd5d8'
-  - 'neo-editblocks:13c74871-8a4f-4e3d-9caf-998a4119ec36'
-  - 'neo-editblocks:16e2e1ff-7c35-4030-b21c-207a4d1e88b7'
-  - 'neo-editblocks:1a59398d-6900-4df1-a904-341d0b1c005c'
-  - 'neo-editblocks:1fc01eb4-e3aa-4109-b017-9a4357415660'
-  - 'neo-editblocks:283a58a7-7d64-4ce3-96c6-6a2fe93bf942'
-  - 'neo-editblocks:3030cab8-78a4-43c1-965d-edcb8d53848e'
-  - 'neo-editblocks:30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b'
-  - 'neo-editblocks:312692fe-0d39-45bc-889d-f49efeaa0dc0'
-  - 'neo-editblocks:38f59447-9f79-465c-96fc-aba9497a5d04'
-  - 'neo-editblocks:40462e8a-a238-4adf-9317-22de98d2878f'
-  - 'neo-editblocks:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd'
-  - 'neo-editblocks:54458965-37a8-4b1e-839f-f19934f7a8e3'
-  - 'neo-editblocks:54632eea-be0d-432e-9b18-64f95cdb3ddc'
-  - 'neo-editblocks:6552f23c-7f92-493a-bd10-b47693edab05'
-  - 'neo-editblocks:6b8077d5-b074-4ffc-8cba-4946fd5d9a35'
-  - 'neo-editblocks:6ed354ea-1804-41ca-a57f-9e843614ea4a'
-  - 'neo-editblocks:704cc16d-0736-4a6b-8d40-f267fd9ae8f9'
-  - 'neo-editblocks:7393216b-9c58-4d00-9d10-ebbc0ca2130b'
-  - 'neo-editblocks:7e96a64e-53b0-4605-98b2-53710eb1c5bf'
-  - 'neo-editblocks:86898b1e-5316-4337-9b1b-3b0b541bdf37'
-  - 'neo-editblocks:8f655278-2023-4da0-a4d7-64814ef5c669'
-  - 'neo-editblocks:91c4b151-928a-47de-b91b-873c8c52a099'
-  - 'neo-editblocks:972197b6-eda9-4a11-a983-eb2cb09bada3'
-  - 'neo-editblocks:9804d284-d129-4704-8883-92fcd4aec0a8'
-  - 'neo-editblocks:98126def-cd93-43c8-b0eb-eafba4c890e0'
-  - 'neo-editblocks:a60f746d-4da8-4419-876b-782449ea1381'
-  - 'neo-editblocks:aa96dc63-49ff-4c1a-89df-d34525227436'
-  - 'neo-editblocks:afb8f81e-7598-4dbb-8559-8aef5c3c42e6'
-  - 'neo-editblocks:b5e2bd07-e195-4564-94a1-74ce51723188'
-  - 'neo-editblocks:b6b4cc71-d295-40ea-a6fc-c7b67ec1a6c4'
-  - 'neo-editblocks:c1d10006-9965-425c-961a-e3bd34a9f34c'
-  - 'neo-editblocks:d5a26941-e90f-43b4-8e8b-b34c12674c8b'
-  - 'neo-editblocks:d62585aa-389f-4f17-a6f8-ea404770633a'
-  - 'neo-editblocks:dc757580-d89c-4eb2-8e98-f03470f73495'
-  - 'neo-editblocks:e1cb6898-debf-4b78-bbb2-440b65278382'
-  - 'neo-editblocks:e32da315-685c-424c-8b52-95706a2d1026'
-  - 'neo-editblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3'
-  - 'neo-editblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e'
-  - 'neo-editblocks:e91b719a-22b8-4836-ac94-2eb6af576e65'
-  - 'neo-editblocks:efb726bf-a523-4889-94d6-8865ebb534d9'
+  - 'neo-createblocks:005b0010-da6f-4cab-a5df-5047ecc802b0' # General
+  - 'neo-createblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3' # Video+Text Block
+  - 'neo-createblocks:04cfb406-f722-44ab-8bcf-9bdc925cd5d8' # Heading+Button Bar
+  - 'neo-createblocks:13c74871-8a4f-4e3d-9caf-998a4119ec36' # Text Link
+  - 'neo-createblocks:16e2e1ff-7c35-4030-b21c-207a4d1e88b7' # Preview Card
+  - 'neo-createblocks:1a59398d-6900-4df1-a904-341d0b1c005c' # CTA Tiles
+  - 'neo-createblocks:1fc01eb4-e3aa-4109-b017-9a4357415660' # Form
+  - 'neo-createblocks:283a58a7-7d64-4ce3-96c6-6a2fe93bf942' # Embed Code
+  - 'neo-createblocks:3030cab8-78a4-43c1-965d-edcb8d53848e' # Contact Form Block
+  - 'neo-createblocks:30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b' # Team Member
+  - 'neo-createblocks:312692fe-0d39-45bc-889d-f49efeaa0dc0' # Column: Image
+  - 'neo-createblocks:38f59447-9f79-465c-96fc-aba9497a5d04' # Large | Small | Small
+  - 'neo-createblocks:40462e8a-a238-4adf-9317-22de98d2878f' # Data Table
+  - 'neo-createblocks:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd' # Media
+  - 'neo-createblocks:54458965-37a8-4b1e-839f-f19934f7a8e3' # Img+Text Block
+  - 'neo-createblocks:54632eea-be0d-432e-9b18-64f95cdb3ddc' # Lead Block
+  - 'neo-createblocks:6552f23c-7f92-493a-bd10-b47693edab05' # Column: Image
+  - 'neo-createblocks:6b8077d5-b074-4ffc-8cba-4946fd5d9a35' # Img+Text Header
+  - 'neo-createblocks:6ed354ea-1804-41ca-a57f-9e843614ea4a' # General
+  - 'neo-createblocks:704cc16d-0736-4a6b-8d40-f267fd9ae8f9' # Lead Block
+  - 'neo-createblocks:7393216b-9c58-4d00-9d10-ebbc0ca2130b' # Accordion
+  - 'neo-createblocks:7e96a64e-53b0-4605-98b2-53710eb1c5bf' # Media
+  - 'neo-createblocks:86898b1e-5316-4337-9b1b-3b0b541bdf37' # CTA Block
+  - 'neo-createblocks:8f655278-2023-4da0-a4d7-64814ef5c669' # CTA Tiles
+  - 'neo-createblocks:91c4b151-928a-47de-b91b-873c8c52a099' # CTA Block
+  - 'neo-createblocks:972197b6-eda9-4a11-a983-eb2cb09bada3' # Accordion
+  - 'neo-createblocks:9804d284-d129-4704-8883-92fcd4aec0a8' # Data Table: Full Width
+  - 'neo-createblocks:98126def-cd93-43c8-b0eb-eafba4c890e0' # Large | Small | Small
+  - 'neo-createblocks:a60f746d-4da8-4419-876b-782449ea1381' # Form
+  - 'neo-createblocks:aa96dc63-49ff-4c1a-89df-d34525227436' # Embed Code
+  - 'neo-createblocks:afb8f81e-7598-4dbb-8559-8aef5c3c42e6' # Team Members
+  - 'neo-createblocks:b5e2bd07-e195-4564-94a1-74ce51723188' # Link Group
+  - 'neo-createblocks:b6b4cc71-d295-40ea-a6fc-c7b67ec1a6c4' # Columns
+  - 'neo-createblocks:c1d10006-9965-425c-961a-e3bd34a9f34c' # Column: Text
+  - 'neo-createblocks:d5a26941-e90f-43b4-8e8b-b34c12674c8b' # Column: Text
+  - 'neo-createblocks:d62585aa-389f-4f17-a6f8-ea404770633a' # Preview Cards
+  - 'neo-createblocks:dc757580-d89c-4eb2-8e98-f03470f73495' # Columns
+  - 'neo-createblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
+  - 'neo-createblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
+  - 'neo-createblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
+  - 'neo-createblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e' # Content Block
+  - 'neo-createblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
+  - 'neo-createblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
+  - 'neo-deleteblocks:005b0010-da6f-4cab-a5df-5047ecc802b0' # General
+  - 'neo-deleteblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3' # Video+Text Block
+  - 'neo-deleteblocks:04cfb406-f722-44ab-8bcf-9bdc925cd5d8' # Heading+Button Bar
+  - 'neo-deleteblocks:13c74871-8a4f-4e3d-9caf-998a4119ec36' # Text Link
+  - 'neo-deleteblocks:16e2e1ff-7c35-4030-b21c-207a4d1e88b7' # Preview Card
+  - 'neo-deleteblocks:1a59398d-6900-4df1-a904-341d0b1c005c' # CTA Tiles
+  - 'neo-deleteblocks:1fc01eb4-e3aa-4109-b017-9a4357415660' # Form
+  - 'neo-deleteblocks:283a58a7-7d64-4ce3-96c6-6a2fe93bf942' # Embed Code
+  - 'neo-deleteblocks:3030cab8-78a4-43c1-965d-edcb8d53848e' # Contact Form Block
+  - 'neo-deleteblocks:30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b' # Team Member
+  - 'neo-deleteblocks:312692fe-0d39-45bc-889d-f49efeaa0dc0' # Column: Image
+  - 'neo-deleteblocks:38f59447-9f79-465c-96fc-aba9497a5d04' # Large | Small | Small
+  - 'neo-deleteblocks:40462e8a-a238-4adf-9317-22de98d2878f' # Data Table
+  - 'neo-deleteblocks:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd' # Media
+  - 'neo-deleteblocks:54458965-37a8-4b1e-839f-f19934f7a8e3' # Img+Text Block
+  - 'neo-deleteblocks:54632eea-be0d-432e-9b18-64f95cdb3ddc' # Lead Block
+  - 'neo-deleteblocks:6552f23c-7f92-493a-bd10-b47693edab05' # Column: Image
+  - 'neo-deleteblocks:6b8077d5-b074-4ffc-8cba-4946fd5d9a35' # Img+Text Header
+  - 'neo-deleteblocks:6ed354ea-1804-41ca-a57f-9e843614ea4a' # General
+  - 'neo-deleteblocks:704cc16d-0736-4a6b-8d40-f267fd9ae8f9' # Lead Block
+  - 'neo-deleteblocks:7393216b-9c58-4d00-9d10-ebbc0ca2130b' # Accordion
+  - 'neo-deleteblocks:7e96a64e-53b0-4605-98b2-53710eb1c5bf' # Media
+  - 'neo-deleteblocks:86898b1e-5316-4337-9b1b-3b0b541bdf37' # CTA Block
+  - 'neo-deleteblocks:8f655278-2023-4da0-a4d7-64814ef5c669' # CTA Tiles
+  - 'neo-deleteblocks:91c4b151-928a-47de-b91b-873c8c52a099' # CTA Block
+  - 'neo-deleteblocks:972197b6-eda9-4a11-a983-eb2cb09bada3' # Accordion
+  - 'neo-deleteblocks:9804d284-d129-4704-8883-92fcd4aec0a8' # Data Table: Full Width
+  - 'neo-deleteblocks:98126def-cd93-43c8-b0eb-eafba4c890e0' # Large | Small | Small
+  - 'neo-deleteblocks:a60f746d-4da8-4419-876b-782449ea1381' # Form
+  - 'neo-deleteblocks:aa96dc63-49ff-4c1a-89df-d34525227436' # Embed Code
+  - 'neo-deleteblocks:afb8f81e-7598-4dbb-8559-8aef5c3c42e6' # Team Members
+  - 'neo-deleteblocks:b5e2bd07-e195-4564-94a1-74ce51723188' # Link Group
+  - 'neo-deleteblocks:b6b4cc71-d295-40ea-a6fc-c7b67ec1a6c4' # Columns
+  - 'neo-deleteblocks:c1d10006-9965-425c-961a-e3bd34a9f34c' # Column: Text
+  - 'neo-deleteblocks:d5a26941-e90f-43b4-8e8b-b34c12674c8b' # Column: Text
+  - 'neo-deleteblocks:d62585aa-389f-4f17-a6f8-ea404770633a' # Preview Cards
+  - 'neo-deleteblocks:dc757580-d89c-4eb2-8e98-f03470f73495' # Columns
+  - 'neo-deleteblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
+  - 'neo-deleteblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
+  - 'neo-deleteblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
+  - 'neo-deleteblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e' # Content Block
+  - 'neo-deleteblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
+  - 'neo-deleteblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
+  - 'neo-editblocks:005b0010-da6f-4cab-a5df-5047ecc802b0' # General
+  - 'neo-editblocks:01903d5e-0af8-4625-91a8-6d55351c5ec3' # Video+Text Block
+  - 'neo-editblocks:04cfb406-f722-44ab-8bcf-9bdc925cd5d8' # Heading+Button Bar
+  - 'neo-editblocks:13c74871-8a4f-4e3d-9caf-998a4119ec36' # Text Link
+  - 'neo-editblocks:16e2e1ff-7c35-4030-b21c-207a4d1e88b7' # Preview Card
+  - 'neo-editblocks:1a59398d-6900-4df1-a904-341d0b1c005c' # CTA Tiles
+  - 'neo-editblocks:1fc01eb4-e3aa-4109-b017-9a4357415660' # Form
+  - 'neo-editblocks:283a58a7-7d64-4ce3-96c6-6a2fe93bf942' # Embed Code
+  - 'neo-editblocks:3030cab8-78a4-43c1-965d-edcb8d53848e' # Contact Form Block
+  - 'neo-editblocks:30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b' # Team Member
+  - 'neo-editblocks:312692fe-0d39-45bc-889d-f49efeaa0dc0' # Column: Image
+  - 'neo-editblocks:38f59447-9f79-465c-96fc-aba9497a5d04' # Large | Small | Small
+  - 'neo-editblocks:40462e8a-a238-4adf-9317-22de98d2878f' # Data Table
+  - 'neo-editblocks:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd' # Media
+  - 'neo-editblocks:54458965-37a8-4b1e-839f-f19934f7a8e3' # Img+Text Block
+  - 'neo-editblocks:54632eea-be0d-432e-9b18-64f95cdb3ddc' # Lead Block
+  - 'neo-editblocks:6552f23c-7f92-493a-bd10-b47693edab05' # Column: Image
+  - 'neo-editblocks:6b8077d5-b074-4ffc-8cba-4946fd5d9a35' # Img+Text Header
+  - 'neo-editblocks:6ed354ea-1804-41ca-a57f-9e843614ea4a' # General
+  - 'neo-editblocks:704cc16d-0736-4a6b-8d40-f267fd9ae8f9' # Lead Block
+  - 'neo-editblocks:7393216b-9c58-4d00-9d10-ebbc0ca2130b' # Accordion
+  - 'neo-editblocks:7e96a64e-53b0-4605-98b2-53710eb1c5bf' # Media
+  - 'neo-editblocks:86898b1e-5316-4337-9b1b-3b0b541bdf37' # CTA Block
+  - 'neo-editblocks:8f655278-2023-4da0-a4d7-64814ef5c669' # CTA Tiles
+  - 'neo-editblocks:91c4b151-928a-47de-b91b-873c8c52a099' # CTA Block
+  - 'neo-editblocks:972197b6-eda9-4a11-a983-eb2cb09bada3' # Accordion
+  - 'neo-editblocks:9804d284-d129-4704-8883-92fcd4aec0a8' # Data Table: Full Width
+  - 'neo-editblocks:98126def-cd93-43c8-b0eb-eafba4c890e0' # Large | Small | Small
+  - 'neo-editblocks:a60f746d-4da8-4419-876b-782449ea1381' # Form
+  - 'neo-editblocks:aa96dc63-49ff-4c1a-89df-d34525227436' # Embed Code
+  - 'neo-editblocks:afb8f81e-7598-4dbb-8559-8aef5c3c42e6' # Team Members
+  - 'neo-editblocks:b5e2bd07-e195-4564-94a1-74ce51723188' # Link Group
+  - 'neo-editblocks:b6b4cc71-d295-40ea-a6fc-c7b67ec1a6c4' # Columns
+  - 'neo-editblocks:c1d10006-9965-425c-961a-e3bd34a9f34c' # Column: Text
+  - 'neo-editblocks:d5a26941-e90f-43b4-8e8b-b34c12674c8b' # Column: Text
+  - 'neo-editblocks:d62585aa-389f-4f17-a6f8-ea404770633a' # Preview Cards
+  - 'neo-editblocks:dc757580-d89c-4eb2-8e98-f03470f73495' # Columns
+  - 'neo-editblocks:e1cb6898-debf-4b78-bbb2-440b65278382' # Small | Small | Large
+  - 'neo-editblocks:e32da315-685c-424c-8b52-95706a2d1026' # Centered Text
+  - 'neo-editblocks:e3a0f209-10c9-4e49-bc2f-44bdbc21b1e3' # Resource Cards
+  - 'neo-editblocks:e8cb7b37-dddf-4600-9919-bc755b86d74e' # Content Block
+  - 'neo-editblocks:e91b719a-22b8-4836-ac94-2eb6af576e65' # Grant Recipient Cards
+  - 'neo-editblocks:efb726bf-a523-4889-94d6-8865ebb534d9' # Small | Small | Large
   - registerusers
-  - 'replacefiles:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'replacefiles:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'replacefiles:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'replacepeerfiles:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'replacepeerfiles:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'replacepeerfiles:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'saveassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'saveassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'saveassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'savecategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9'
-  - 'saveentries:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'saveentries:1a5ffd72-f05f-45ec-8db3-0930c72fe38e'
-  - 'saveentries:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'saveentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'saveentries:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'saveentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'saveentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'saveentries:ba00da73-87ef-49e2-b1ed-2160ae5e4857'
-  - 'savepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'savepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'savepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'savepeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9'
-  - 'savepeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'savepeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'savepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'savepeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'savepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'savepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'savepeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'savepeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e'
-  - 'savepeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'savepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'savepeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'savepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'savepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'savepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857'
+  - 'replacefiles:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'replacefiles:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'replacefiles:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'replacepeerfiles:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'replacepeerfiles:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'replacepeerfiles:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'saveassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'saveassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'saveassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'savecategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
+  - 'saveentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'saveentries:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
+  - 'saveentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'saveentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'saveentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'saveentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'saveentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'saveentries:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
+  - 'savepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'savepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'savepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'savepeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
+  - 'savepeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'savepeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'savepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'savepeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'savepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'savepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'savepeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'savepeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
+  - 'savepeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'savepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'savepeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'savepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'savepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'savepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - 'seomatic:content-meta'
   - 'seomatic:content-meta:facebook'
   - 'seomatic:content-meta:general'
@@ -322,33 +322,33 @@ permissions:
   - 'utility:queue-manager'
   - 'utility:system-messages'
   - 'utility:system-report'
-  - 'viewassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'viewassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'viewassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'viewcategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9'
-  - 'viewentries:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'viewentries:1a5ffd72-f05f-45ec-8db3-0930c72fe38e'
-  - 'viewentries:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'viewentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'viewentries:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'viewentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'viewentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'viewentries:ba00da73-87ef-49e2-b1ed-2160ae5e4857'
-  - 'viewpeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae'
-  - 'viewpeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
-  - 'viewpeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c'
-  - 'viewpeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9'
-  - 'viewpeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'viewpeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'viewpeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'viewpeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'viewpeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'viewpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'viewpeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef'
-  - 'viewpeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e'
-  - 'viewpeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45'
-  - 'viewpeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e'
-  - 'viewpeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e'
-  - 'viewpeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f'
-  - 'viewpeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c'
-  - 'viewpeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857'
+  - 'viewassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'viewassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'viewassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'viewcategories:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
+  - 'viewentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'viewentries:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
+  - 'viewentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'viewentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'viewentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'viewentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'viewentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'viewentries:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
+  - 'viewpeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
+  - 'viewpeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  - 'viewpeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  - 'viewpeercategorydrafts:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
+  - 'viewpeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'viewpeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'viewpeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'viewpeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'viewpeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'viewpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'viewpeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'viewpeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
+  - 'viewpeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'viewpeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'viewpeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'viewpeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'viewpeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'viewpeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage

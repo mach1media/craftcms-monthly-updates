@@ -33,7 +33,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
@@ -45,7 +45,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e359f1b1-385c-4017-9823-ab7e63cd7efe
+            fieldUid: e359f1b1-385c-4017-9823-ab7e63cd7efe # Citation
             instructions: null
             label: Subheading
             required: false
@@ -57,7 +57,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34
+            fieldUid: 0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34 # Open An Account Table
             instructions: null
             label: null
             required: false
@@ -69,7 +69,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: 'Table Footer'
             required: false
@@ -85,7 +85,7 @@ fieldLayouts:
 handle: openAnAccount
 hasTitleField: true
 name: 'Open An Account'
-section: 115274b7-184f-4d2c-898d-b1f9504e6aef
+section: 115274b7-184f-4d2c-898d-b1f9504e6aef # Tables
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

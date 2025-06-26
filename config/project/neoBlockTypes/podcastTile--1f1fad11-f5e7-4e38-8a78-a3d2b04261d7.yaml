@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: aefea3fc-ff45-4615-b305-9079e2cc6c44
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   8d99570f-e3c0-4d00-b29c-842efce3f336:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
             instructions: null
             label: null
             required: false
@@ -47,7 +47,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: f700d39b-3a4f-4c99-a961-d9fb1f3df887
+            fieldUid: f700d39b-3a4f-4c99-a961-d9fb1f3df887 # Subheading
             instructions: null
             label: null
             required: false
@@ -59,7 +59,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96
+            fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96 # Text Link
             instructions: null
             label: null
             required: false

@@ -1,4 +1,4 @@
-field: 479ec005-6f3d-4922-b8e5-da10aad75bdc
+field: 479ec005-6f3d-4922-b8e5-da10aad75bdc # Data Tables
 fieldLayouts:
   2a14f672-bedc-4626-aeb9-117a75dec677:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 58712ece-7721-4366-900b-2cc4858ea5e0
+            fieldUid: 58712ece-7721-4366-900b-2cc4858ea5e0 # Heading
             instructions: null
             label: null
             required: false
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 72c21d48-1ae1-46e6-a4d8-57c63a5eb883
+            fieldUid: 72c21d48-1ae1-46e6-a4d8-57c63a5eb883 # Subheading
             instructions: null
             label: null
             required: false
@@ -31,7 +31,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd
+            fieldUid: 8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd # Table
             instructions: null
             label: null
             required: true
@@ -43,7 +43,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: eaf0d64e-a5d2-48e0-9547-b790b9262fe3
+            fieldUid: eaf0d64e-a5d2-48e0-9547-b790b9262fe3 # Table Footer
             instructions: null
             label: null
             required: false
@@ -57,7 +57,7 @@ fieldLayouts:
         uid: 72c72f08-418a-4a74-b195-0cedce984b4e
         userCondition: null
 fields:
-  8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd:
+  8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd: # Table
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -75,14 +75,14 @@ fields:
       selectionLabel: 'Add a table'
       showSiteMenu: true
       sources:
-        - 'section:115274b7-184f-4d2c-898d-b1f9504e6aef'
+        - 'section:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  72c21d48-1ae1-46e6-a4d8-57c63a5eb883:
+  72c21d48-1ae1-46e6-a4d8-57c63a5eb883: # Subheading
     columnSuffix: dyzraibf
     contentColumnType: text
     fieldGroup: null
@@ -102,7 +102,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  58712ece-7721-4366-900b-2cc4858ea5e0:
+  58712ece-7721-4366-900b-2cc4858ea5e0: # Heading
     columnSuffix: yryrawzk
     contentColumnType: text
     fieldGroup: null
@@ -122,7 +122,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  eaf0d64e-a5d2-48e0-9547-b790b9262fe3:
+  eaf0d64e-a5d2-48e0-9547-b790b9262fe3: # Table Footer
     columnSuffix: yjityhxe
     contentColumnType: text
     fieldGroup: null

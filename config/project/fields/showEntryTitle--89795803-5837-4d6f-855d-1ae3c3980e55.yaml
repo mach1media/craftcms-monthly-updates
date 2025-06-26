@@ -1,6 +1,6 @@
 columnSuffix: ekmvxche
 contentColumnType: boolean
-fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
 handle: showEntryTitle
 instructions: null
 name: 'Show Entry Title'

@@ -1,4 +1,4 @@
-field: 0990fff1-3f3d-49e5-a5b1-afdeb683d20e
+field: 0990fff1-3f3d-49e5-a5b1-afdeb683d20e # CTA Tile: Large
 fieldLayouts:
   7fa674ce-0a52-4efa-96e7-6472a0e5ede6:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 8cf524a9-c788-4109-8c27-b973b5da1c8b
+            fieldUid: 8cf524a9-c788-4109-8c27-b973b5da1c8b # Image
             instructions: null
             label: null
             required: false
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 148b8944-2e50-42a9-9275-0f8b85677134
+            fieldUid: 148b8944-2e50-42a9-9275-0f8b85677134 # Stack Image on Mobile
             instructions: null
             label: null
             required: false
@@ -31,7 +31,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6
+            fieldUid: c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6 # Label
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 08a4604d-4fdb-476b-b82c-88ef59973d9e
+            fieldUid: 08a4604d-4fdb-476b-b82c-88ef59973d9e # Label: Custom
             instructions: null
             label: null
             required: false
@@ -55,7 +55,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: c937445d-2edd-4336-b195-241254cef98a
+            fieldUid: c937445d-2edd-4336-b195-241254cef98a # Icon: Custom
             instructions: null
             label: null
             required: false
@@ -67,7 +67,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 5d256d74-c235-43c7-aa5c-7df02909be2a
+            fieldUid: 5d256d74-c235-43c7-aa5c-7df02909be2a # Heading
             instructions: null
             label: null
             required: false
@@ -79,7 +79,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 3b51443f-4e3e-4232-8ca5-f70fda28a3c2
+            fieldUid: 3b51443f-4e3e-4232-8ca5-f70fda28a3c2 # Link
             instructions: null
             label: null
             required: false
@@ -93,7 +93,7 @@ fieldLayouts:
         uid: 4c20fe74-dfcc-4c82-8f88-33d032ef5292
         userCondition: null
 fields:
-  3b51443f-4e3e-4232-8ca5-f70fda28a3c2:
+  3b51443f-4e3e-4232-8ca5-f70fda28a3c2: # Link
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -156,7 +156,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  5d256d74-c235-43c7-aa5c-7df02909be2a:
+  5d256d74-c235-43c7-aa5c-7df02909be2a: # Heading
     columnSuffix: djuojceu
     contentColumnType: text
     fieldGroup: null
@@ -176,7 +176,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  08a4604d-4fdb-476b-b82c-88ef59973d9e:
+  08a4604d-4fdb-476b-b82c-88ef59973d9e: # Label: Custom
     columnSuffix: saauvwxx
     contentColumnType: text
     fieldGroup: null
@@ -196,7 +196,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  8cf524a9-c788-4109-8c27-b973b5da1c8b:
+  8cf524a9-c788-4109-8c27-b973b5da1c8b: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -211,7 +211,7 @@ fields:
       allowedKinds:
         - image
       branchLimit: null
-      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
@@ -221,21 +221,21 @@ fields:
       restrictFiles: true
       restrictLocation: false
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       restrictedLocationSubpath: null
       selectionLabel: 'Add an image'
       showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: true
       sources:
-        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       targetSiteId: null
       validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  148b8944-2e50-42a9-9275-0f8b85677134:
+  148b8944-2e50-42a9-9275-0f8b85677134: # Stack Image on Mobile
     columnSuffix: atdhhoij
     contentColumnType: boolean
     fieldGroup: null
@@ -250,7 +250,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6:
+  c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6: # Label
     columnSuffix: zlarxede
     contentColumnType: string
     fieldGroup: null
@@ -264,7 +264,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
-  c937445d-2edd-4336-b195-241254cef98a:
+  c937445d-2edd-4336-b195-241254cef98a: # Icon: Custom
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -278,7 +278,7 @@ fields:
       allowUploads: true
       allowedKinds: null
       branchLimit: null
-      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
@@ -288,14 +288,14 @@ fields:
       restrictFiles: false
       restrictLocation: false
       restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       restrictedLocationSubpath: null
       selectionLabel: null
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       sources:
-        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e'
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       targetSiteId: null
       validateRelatedElements: false
       viewMode: list

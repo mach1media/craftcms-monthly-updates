@@ -1,4 +1,4 @@
-field: 479ec005-6f3d-4922-b8e5-da10aad75bdc
+field: 479ec005-6f3d-4922-b8e5-da10aad75bdc # Data Tables
 fieldLayouts:
   155ca2c2-3c1f-433e-9f12-351dda04fc37:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 75f9bb39-452b-4eaa-ad80-e825620deb6e
+            fieldUid: 75f9bb39-452b-4eaa-ad80-e825620deb6e # Heading
             instructions: null
             label: null
             required: false
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 7fdd5ed0-dc8b-4df8-bdb3-5909ceccface
+            fieldUid: 7fdd5ed0-dc8b-4df8-bdb3-5909ceccface # Subheading
             instructions: null
             label: null
             required: false
@@ -31,7 +31,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 08b49f0a-64a0-4753-9893-80ca6d6ddf85
+            fieldUid: 08b49f0a-64a0-4753-9893-80ca6d6ddf85 # Rate Table
             instructions: null
             label: null
             required: true
@@ -43,7 +43,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d8ff4807-a709-4131-95b1-7a565312e33d
+            fieldUid: d8ff4807-a709-4131-95b1-7a565312e33d # Table Footer
             instructions: null
             label: null
             required: false
@@ -57,7 +57,7 @@ fieldLayouts:
         uid: cda8dd16-3527-4194-91f9-5e284687d40f
         userCondition: null
 fields:
-  7fdd5ed0-dc8b-4df8-bdb3-5909ceccface:
+  7fdd5ed0-dc8b-4df8-bdb3-5909ceccface: # Subheading
     columnSuffix: zrojogma
     contentColumnType: text
     fieldGroup: null
@@ -77,7 +77,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  08b49f0a-64a0-4753-9893-80ca6d6ddf85:
+  08b49f0a-64a0-4753-9893-80ca6d6ddf85: # Rate Table
     columnSuffix: ewhvhpwi
     contentColumnType: text
     fieldGroup: null
@@ -253,7 +253,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Table
-  75f9bb39-452b-4eaa-ad80-e825620deb6e:
+  75f9bb39-452b-4eaa-ad80-e825620deb6e: # Heading
     columnSuffix: loxtzasa
     contentColumnType: text
     fieldGroup: null
@@ -273,7 +273,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  d8ff4807-a709-4131-95b1-7a565312e33d:
+  d8ff4807-a709-4131-95b1-7a565312e33d: # Table Footer
     columnSuffix: uepcethl
     contentColumnType: text
     fieldGroup: null

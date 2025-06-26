@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e
+fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
 handle: tables
 instructions: null
 name: Tables
@@ -15,7 +15,7 @@ settings:
   selectionLabel: 'Add a Table'
   showSiteMenu: true
   sources:
-    - 'section:115274b7-184f-4d2c-898d-b1f9504e6aef'
+    - 'section:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

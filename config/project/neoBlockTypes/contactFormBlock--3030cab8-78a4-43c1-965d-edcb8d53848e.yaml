@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   ea2ae4d8-5826-4b35-84a7-07320928ca48:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
             instructions: null
             label: null
             required: false
@@ -55,7 +55,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f
+            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
             instructions: null
             label: null
             required: false
@@ -67,7 +67,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
@@ -80,7 +80,7 @@ fieldLayouts:
         name: 'Text Description'
         uid: 85fc8dce-0fe3-4b14-98fe-7945e7f1d489
         userCondition: null
-group: null
+group: 2734260c-14b6-412b-a372-5a4ee016497a # Media
 groupChildBlockTypes: true
 handle: contactFormBlock
 icon: null

@@ -1,4 +1,4 @@
-field: 7f4113a8-8cb2-4670-bac9-e4de20179209
+field: 7f4113a8-8cb2-4670-bac9-e4de20179209 # Text Links
 fieldLayouts:
   28e4c609-41e7-42d6-bd3d-61838a582173:
     tabs:
@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 283865a1-e9b4-416a-a6ec-a6433ef01a5a
+            fieldUid: 283865a1-e9b4-416a-a6ec-a6433ef01a5a # Link
             instructions: null
             label: null
             required: false
@@ -21,7 +21,7 @@ fieldLayouts:
         uid: 54049ab9-f201-4dd2-b743-15f5ce3fcd64
         userCondition: null
 fields:
-  283865a1-e9b4-416a-a6ec-a6433ef01a5a:
+  283865a1-e9b4-416a-a6ec-a6433ef01a5a: # Link
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

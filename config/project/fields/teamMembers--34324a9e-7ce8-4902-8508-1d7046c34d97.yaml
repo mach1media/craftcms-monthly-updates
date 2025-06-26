@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e
+fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
 handle: teamMembers
 instructions: null
 name: 'Team Members'
@@ -15,7 +15,7 @@ settings:
   selectionLabel: 'Add a Team Member'
   showSiteMenu: true
   sources:
-    - 'section:61a1068b-a537-4bde-85ac-b0fe8f04946e'
+    - 'section:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

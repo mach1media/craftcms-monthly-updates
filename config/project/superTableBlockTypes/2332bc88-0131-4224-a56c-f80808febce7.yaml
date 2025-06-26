@@ -1,5 +1,5 @@
 changedFieldIndicator: null
-field: 0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34
+field: 0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34 # Open An Account Table
 fieldLayouts:
   e52912fe-4e89-4536-b4e9-3a4e67cc8037:
     tabs:
@@ -8,7 +8,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: dcce62b3-2650-4939-a381-0fcc22c0d942
+            fieldUid: dcce62b3-2650-4939-a381-0fcc22c0d942 # Church or Agency
             instructions: null
             label: null
             required: false
@@ -20,7 +20,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 39b454aa-6c69-4f49-b375-8bf7b6f4ce23
+            fieldUid: 39b454aa-6c69-4f49-b375-8bf7b6f4ce23 # Nonprofits
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: af55010a-5968-4c25-91f8-dffbcb72d4db
+            fieldUid: af55010a-5968-4c25-91f8-dffbcb72d4db # Individuals
             instructions: null
             label: null
             required: false
@@ -46,7 +46,7 @@ fieldLayouts:
         uid: 4177bfe7-806c-4104-8b4e-c096164518a2
         userCondition: null
 fields:
-  39b454aa-6c69-4f49-b375-8bf7b6f4ce23:
+  39b454aa-6c69-4f49-b375-8bf7b6f4ce23: # Nonprofits
     columnSuffix: jgoowmvv
     contentColumnType: text
     fieldGroup: null
@@ -74,7 +74,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  af55010a-5968-4c25-91f8-dffbcb72d4db:
+  af55010a-5968-4c25-91f8-dffbcb72d4db: # Individuals
     columnSuffix: vnlksjar
     contentColumnType: text
     fieldGroup: null
@@ -102,7 +102,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  dcce62b3-2650-4939-a381-0fcc22c0d942:
+  dcce62b3-2650-4939-a381-0fcc22c0d942: # Church or Agency
     columnSuffix: hwrnpfmc
     contentColumnType: text
     fieldGroup: null

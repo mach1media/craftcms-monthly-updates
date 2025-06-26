@@ -1,6 +1,6 @@
 columnSuffix: tfohxcxz
 contentColumnType: text
-fieldGroup: fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0
+fieldGroup: fc6163a0-4dcb-460e-9f08-2c9bdbe82bd0 # Text Fields
 handle: sectionId
 instructions: 'Enter a url-friendly identifier for this section of the page. Use all lowercase letters and dashes instead of spaces. Ex: for-churches, or impact-investing. Link to this section with a URL like /impact-investing/impact-notes#for-churches'
 name: 'Section ID'

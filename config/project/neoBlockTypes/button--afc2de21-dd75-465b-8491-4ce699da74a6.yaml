@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: aefea3fc-ff45-4615-b305-9079e2cc6c44
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   0340cfae-58a4-4555-896e-ebb3cbb9e6a4:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 75
           -
             elementCondition: null
-            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2
+            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
             instructions: null
             label: null
             required: false

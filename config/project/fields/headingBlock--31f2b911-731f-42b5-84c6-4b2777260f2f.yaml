@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d
+fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
 handle: headingBlock
 instructions: null
 name: 'Section Heading'
@@ -11,21 +11,21 @@ settings:
   columns:
     __assoc__:
       -
-        - d33d4fab-55e7-446f-8972-f4676b5ee14a
+        - d33d4fab-55e7-446f-8972-f4676b5ee14a # Heading
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - fae55152-701b-4c22-9f50-453a213e9e05
+        - fae55152-701b-4c22-9f50-453a213e9e05 # Size
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 853a2eb8-d408-4486-afc1-8e24fd201174
+        - 853a2eb8-d408-4486-afc1-8e24fd201174 # Alignment
         -
           __assoc__:
             -

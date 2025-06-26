@@ -2,7 +2,7 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: 2cc57a96-1052-495e-a015-6a4984a4fa2d
+field: 2cc57a96-1052-495e-a015-6a4984a4fa2d # Page Builder: Login
 fieldLayouts:
   e2db7ba5-5ddd-4213-8c5b-bbe294d95c57:
     tabs:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d
+            fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
             instructions: null
             label: null
             required: false
@@ -35,7 +35,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2
+            fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
             instructions: null
             label: null
             required: false
