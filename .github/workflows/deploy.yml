@@ -73,6 +73,9 @@ jobs:
           composer install --no-interaction
           php craft up --interactive=0
           php craft project-config/apply
+          # Ensure the .htaccess file is set for production
+          cd public
+          mv .htaccess-production .htaccess
         EOF
       env:
         SERVER_IP: ${{ env.SERVER_IP }}
