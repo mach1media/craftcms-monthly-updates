@@ -756,11 +756,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.16.0",
+            "version": "4.16.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/cb178e448910615ae93bd43f1a8c23df93fd0c53",
-                "reference": "cb178e448910615ae93bd43f1a8c23df93fd0c53",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/16e2964e5ff17c2bf4c36a9ee656da51ebf7e911",
+                "reference": "16e2964e5ff17c2bf4c36a9ee656da51ebf7e911",
                 "shasum": ""
             },
             "require": {
@@ -845,7 +845,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2025-07-01T18:29:48+00:00"
+            "time": "2025-07-08T23:49:57+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -8394,11 +8394,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "2.1.50",
+            "version": "2.1.51",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/74abd2a23a00eb09ef4f71734d362f6626fa08cf",
-                "reference": "74abd2a23a00eb09ef4f71734d362f6626fa08cf",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/206c7b87e723f71280576d53887ff3f16403199d",
+                "reference": "206c7b87e723f71280576d53887ff3f16403199d",
                 "shasum": ""
             },
             "require": {
@@ -8459,7 +8459,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2025-06-18T12:36:39+00:00"
+            "time": "2025-07-03T03:30:04+00:00"
         },
         {
             "name": "verbb/redactor-tweaks",
