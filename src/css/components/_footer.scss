@@ -19,6 +19,56 @@
 		color: rgba(white, .65);
 	}
 
+	@include element('preeyebrow') {
+		position: relative;
+		overflow: hidden;
+		color: map-get($theme-colors, 'white');
+		text-transform: uppercase;
+		letter-spacing: .25em;
+		line-height: 2em;
+		opacity: .75;
+
+		span {
+			position: relative;
+			display: block;
+			padding-top: $gutter / 2;
+			border-top: 1px solid map-get($theme-colors, 'white');
+			opacity: .75;
+		}
+
+		@include media-breakpoint-up(sm) {
+			span {
+				position: relative;
+				display: inline-block;
+				padding-top: 0; //$gutter / 2;
+				border-top: none;//1px solid map-get($theme-colors, 'primary');
+	
+				&:after {
+					content: "";
+					position: absolute;
+					display: block;
+					width: 2000%;
+					top: 50%;
+					left: calc(100% + 1em);
+					border-top: 1px solid map-get($theme-colors, 'white');
+				}
+			}
+	
+			&.text-end {
+				span {
+					&:after {
+						content: "";
+						position: absolute;
+						display: block;
+						width: 2000%;
+						top: 50%;
+						left: calc(-2000% - 1em);
+						border-top: 1px solid map-get($theme-colors, 'white');
+					}
+				}
+			}
+		}
+	}
 	
 	@include element('bottom') {
 		padding-top: $gutter/2;

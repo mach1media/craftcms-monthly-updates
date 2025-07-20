@@ -1,7 +1,72 @@
 <!-- FOOTER: GLOBAL -->
 <footer id="footer" class="c-footer">
 	<div class="c-block container">
-		<div class="row justify-content-center">
+		<div class="row align-items-lg-end align-items-xxl-start">
+			<div class="col-12 col-lg-8 col-xxl-4 mb-3 mb-xxl-0">
+				<h2 class="c-footer__heading text-white mb-4">
+					Join us in a<br />
+					cycle of generosity
+				</h2>
+
+				<ul class="text-white">
+					<li>
+						<strong>Earn competitive returns<sup>*</sup></strong>
+					</li>
+					<li>
+						<strong>Strengthen the church's mission</strong>
+					</li>
+					<li>
+						<strong>Express your generous spirit</strong>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="col-12 col-sm-8 col-lg-4 col-xxl-2 mb-3 pe-xxl-5">
+				<div class="row">
+					<div class="col-6 col-xxl-12 p-2">
+						<a href="{{ url('optin') }}" class="btn btn-primary d-block">Subscribe</a>
+					</div>
+					<div class="col-6 col-xxl-12 p-2">
+						<a href="{{ url('contact') }}" class="btn btn-primary d-block">Contact</a>
+					</div>
+					<div class="col-6 col-xxl-12 p-2">
+						<a href="#" class="btn btn-primary d-block">Invest</a>
+					</div>
+					<div class="col-6 col-xxl-12 p-2">
+						<a href="#" class="btn btn-primary d-block">Borrow</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-12 col-xxl-6">
+				<p class="c-footer__preeyebrow text-start mb-3">
+					<span>Legal</span>
+				</p>
+
+				<div class="row ">
+					<div class="col-12 col-md-4 mb-md-3 col-lg-3">
+						<ul class="list-unstyled">
+							{% for block in footer.legalLinks.all() %}
+								{% if block.textLink.getLink() %}
+									<li class="mb-2">
+										{% include "_fields/textLink" with {
+											'textLink': block.textLink,
+											'class': 'link-primary text-decoration-none'
+										} %}
+									</li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</div>
+					
+					<div class="col-12 col-md-8 col-lg-9 text-white">
+						{{ footer.description }}
+					</div>
+				</div>
+			</div>
+
+
+			{#
 			<div class="col-12 col-lg-5 col-xl-6 col-xxl-5 mb-5 mb-lg-0 c-footer__cta">
 				<h2 class="c-footer__heading text-white mb-5">Get the latest from Texas Methodist Foundation</h2>
 				<p>
@@ -53,6 +118,7 @@
 					</ul>
 				</nav>
 			</div>
+			#}
 		</div>
 	</div>
 	
