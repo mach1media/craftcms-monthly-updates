@@ -4,46 +4,52 @@
 		<div class="row justify-content-center">
 			<div class="col-12 col-lg-5 col-xl-6 col-xxl-5 mb-5 mb-lg-0 c-footer__cta">
 				<h2 class="c-footer__heading text-white mb-5">Get the latest from Texas Methodist Foundation</h2>
+				<p>
+					<a href="{{ url('optin') }}" class="btn btn-primary btn-arrow text-white">Subscribe</a>
+				</p>
 
-                <p>
-                    <a href="{{ url('optin') }}" class="btn btn-primary btn-arrow text-white">Subscribe</a>
-                </p>
-
-                <div class="text-white mt-5">
-                    {{ footer.description }}
-                </div>
-            </div>
+				<div class="text-white mt-5">
+					{{ footer.description }}
+				</div>
+			</div>
 			
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 offset-xxl-1">
-                <p class="c-footer__list-heading">Learn More</p>
-                <nav class="c-footer__nav">
+        <p class="c-footer__list-heading">Learn More</p>
+        
+				<nav class="c-footer__nav">
 					<ul class="list-unstyled">
 						{% for block in footer.textLinks.all() %}
-                            {% if block.textLink.getLink() %}
-                                <li>{% include "_fields/textLink" with {'textLink': block.textLink} %}</li>
-                            {% endif %}
-                        {% endfor %}
+							{% if block.textLink.getLink() %}
+								<li>
+									{% include "_fields/textLink" with {'textLink': block.textLink} %}
+								</li>
+							{% endif %}
+						{% endfor %}
 					</ul>
 				</nav>
-            </div>
+      </div>
 
 
 			<div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <p class="c-footer__list-heading">Contact</p>
+        <p class="c-footer__list-heading">Contact</p>
+				
 				<p style="line-height:1.5em;">
 					11709 Boulder Lane, Suite 100<br />
 					Austin, TX 78726<br />
-                    <a class="text-primary" href="tel:8009335502">800-933-5502</a>
+					<a class="text-primary" href="tel:8009335502">800-933-5502</a>
 				</p>
 
-                <p class="c-footer__list-heading">Legal</p>
+        <p class="c-footer__list-heading">Legal</p>
+				
 				<nav class="c-footer__nav">
 					<ul class="list-unstyled">
-                        {% for block in footer.legalLinks.all() %}
-                            {% if block.textLink.getLink() %}
-                                <li>{% include "_fields/textLink" with {'textLink': block.textLink} %}</li>
-                            {% endif %}
-                        {% endfor %}
+						{% for block in footer.legalLinks.all() %}
+							{% if block.textLink.getLink() %}
+								<li>
+									{% include "_fields/textLink" with {'textLink': block.textLink} %}
+								</li>
+							{% endif %}
+						{% endfor %}
 					</ul>
 				</nav>
 			</div>
