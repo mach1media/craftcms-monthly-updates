@@ -2,12 +2,13 @@
 <footer id="footer" class="c-footer">
 	<div class="c-block container">
 		<div class="row align-items-lg-end align-items-xxl-start">
-			<div class="col-12 col-lg-8 col-xxl-4 mb-3 mb-xxl-0">
-				<h2 class="c-footer__heading text-white mb-4">
-					Join us in a<br />
-					cycle of generosity
+			<div class="col-12 col-lg-8 col-xxl-4 mb-3 mb-xxl-0 text-white">
+				<h2 class="c-footer__heading mb-4 text-white">
+					{{ footer.heading != '' ? footer.heading | raw : 'Join us in a<br />cycle of generosity' | raw }}
 				</h2>
 
+				{{ footer.quote }}
+				{#
 				<ul class="text-white">
 					<li>
 						<strong>Earn competitive returns<sup>*</sup></strong>
@@ -19,6 +20,7 @@
 						<strong>Express your generous spirit</strong>
 					</li>
 				</ul>
+				#}
 			</div>
 			
 			<div class="col-12 col-sm-8 col-lg-4 col-xxl-2 mb-3 pe-xxl-5">

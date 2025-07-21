@@ -6,6 +6,36 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7feb49d8-d645-4ec9-a05a-f27382cac827
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 49f76678-87cc-4e24-8127-90fe77fb1441 # Quote
+            instructions: null
+            label: Description
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7ca92f96-e7fe-418b-88f1-0b076fa14995
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Text Block'
+        uid: 67a9afbd-ce9d-45df-a434-fb9f2aa9719c
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 7f4113a8-8cb2-4670-bac9-e4de20179209 # Text Links
             instructions: null
             label: Buttons
@@ -15,7 +45,13 @@ fieldLayouts:
             uid: d1b3dd0b-b0f1-402e-9d38-86dff884c8f8
             userCondition: null
             warning: null
-            width: 50
+            width: 100
+        name: Buttons
+        uid: 2374e61f-ac8d-466e-953a-f5c1e5eecb96
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 11a02d8c-6388-4bec-914d-2e386b4d1101 # Legal Links
@@ -27,7 +63,7 @@ fieldLayouts:
             uid: 8c440c4e-f826-4d6f-a551-7214417b451b
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
@@ -40,8 +76,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Footer Links'
-        uid: 2374e61f-ac8d-466e-953a-f5c1e5eecb96
+        name: Legal
+        uid: 34889c25-500c-449b-afcf-92ad6549166d
         userCondition: null
 handle: footer
 name: Footer
