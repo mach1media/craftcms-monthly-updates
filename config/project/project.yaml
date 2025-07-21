@@ -1,4 +1,4 @@
-dateModified: 1753104837
+dateModified: 1753113686
 elementSources:
   craft\elements\Entry:
     -
@@ -153,6 +153,7 @@ meta:
     1f1fad11-f5e7-4e38-8a78-a3d2b04261d7: 'Podcast Tile' # Podcast Tile
     1f41377c-9452-4c44-85f2-23bcfbec5b44: 'Button Label' # Button Label
     1fc01eb4-e3aa-4109-b017-9a4357415660: Form # Form
+    2b225f12-852a-4e1b-8d6a-eb9d7d1f3711: Text+Media # Text+Media
     2bd2d918-16fc-4147-9b16-0a5c2a448d3e: 'Label: Custom' # Label: Custom
     2c56ec44-02d8-449f-b55a-ccb4e0f64909: 'Custom Table' # Custom Table
     02c96873-0eec-4700-b08e-205c0071a461: 'Medium | Medium' # Medium | Medium
@@ -197,6 +198,7 @@ meta:
     6f769974-aa7c-451e-85dc-681b49af0e84: 'Responsive: Medium' # Responsive: Medium
     7a533a82-4f0f-4e24-b8e2-f37bb95a4b06: Thumbnail # Thumbnail
     07a87980-eb4d-4710-896e-772170d1d21d: 'Section Settings' # Section Settings
+    7b673ccc-ad98-4e36-b605-78cfc5fe2c98: 'General: Large Text' # General: Large Text
     7e96a64e-53b0-4605-98b2-53710eb1c5bf: Media # Media
     7f4113a8-8cb2-4670-bac9-e4de20179209: 'Text Links' # Text Links
     7f134341-6c01-4975-9ea9-60df3c3dd5f0: Image # Image
@@ -248,6 +250,7 @@ meta:
     74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9: Video # Video
     75f9bb39-452b-4eaa-ad80-e825620deb6e: Heading # Heading
     76c2555a-23b9-4d53-8c79-13892f75b970: 'Factoid Description Box' # Factoid Description Box
+    78ec370a-6844-45d7-b822-aefb52617a11: 'Factoid: 1-Up' # Factoid: 1-Up
     86c0cfb0-f792-48aa-aef6-7f1df1dac5b1: Subheading # Subheading
     89a66249-b68c-4d46-81b7-9ef3dac29401: Cards # Cards
     90bba6bb-88b4-4c3f-ae60-595e911f01ab: 'Heading Block' # Heading Block
@@ -265,6 +268,7 @@ meta:
     524c6e05-4d16-4e49-86a1-edfb5ff0e70c: 'Animation Settings' # Animation Settings
     543e6694-6bf5-44ed-936b-11dd6e5ae656: 'Image Tile' # Image Tile
     643e4c17-f296-47ae-8806-45847ebda838: 'Pre Heading' # Pre Heading
+    0697d541-4ea4-4163-b0c5-ad9219691bb6: Button # Button
     704cc16d-0736-4a6b-8d40-f267fd9ae8f9: 'Lead Block' # Lead Block
     729c8b77-b2b4-4a51-94b3-193a36557ea5: 'Image Card' # Image Card
     0774c028-80d9-40e2-a668-5558b97314d3: 'Headshot Videos' # Headshot Videos
@@ -308,6 +312,7 @@ meta:
     312692fe-0d39-45bc-889d-f49efeaa0dc0: 'Column: Image' # Column: Image
     356681f1-6b5a-48fb-94b8-d856247a3b67: Tile # Tile
     424904af-03e0-49ac-aabf-921f78be4c4e: New # New
+    0426383a-036a-46e6-864b-bd62a77bcd8e: Text+Factoid # Text+Factoid
     804241c5-2bd0-4d8e-84ce-a24a8dfe63fd: 'Portal Login' # Portal Login
     972197b6-eda9-4a11-a983-eb2cb09bada3: Accordion # Accordion
     2734260c-14b6-412b-a372-5a4ee016497a: Media # Media
@@ -315,6 +320,7 @@ meta:
     37449807-b7fe-4e44-bc5d-f3469359b775: Heading # Heading
     54458965-37a8-4b1e-839f-f19934f7a8e3: 'Img+Text Block' # Img+Text Block
     56133272-2baa-403c-9702-0c006d9c3676: 'Accordion Items' # Accordion Items
+    76670784-7867-4bc9-ac47-a5b20b51eac3: 'Factoid: 3-Up' # Factoid: 3-Up
     89795803-5837-4d6f-855d-1ae3c3980e55: 'Show Entry Title' # Show Entry Title
     a1c959ad-0f2a-4fc4-8654-11be8c04b62f: Tile # Tile
     a1ec9be5-4a75-4566-b570-6c6e98d58bea: 'Factoid: 3-Up' # Factoid: 3-Up
@@ -352,6 +358,7 @@ meta:
     b456d0e0-6918-43cd-82ff-a4eacd5f33cd: 'Responsive: Small' # Responsive: Small
     b613c984-854f-41b5-baea-92cd77be6d0c: Resource # Resource
     b8904bf4-d4cd-4023-963d-3dbcebfabb78: Heading # Heading
+    ba0ade4a-8a63-4b1b-9cda-30cd3010746a: 'Factoid: 2-Up' # Factoid: 2-Up
     ba00da73-87ef-49e2-b1ed-2160ae5e4857: Homepage # Homepage
     baddf677-8996-4c34-b436-ea8341d9bed3: Heading # Heading
     bafdb566-dc62-40b5-9a8f-ca3010a690f9: 'Grant Years' # Grant Years

@@ -35,7 +35,15 @@
 {% endif %}
 
 <!-- {{ block.type }}: {{ block.id }} -->
-{% include "_neoBlockTypes/" ~ block.type with {'block': block, 'sectionStyleClasses': sectionStyleClasses | join(' ')} %}
+{% include [
+		("_neoBlockTypes/" ~ block.type), 
+		("_neoBlockTypes/impactReport/" ~ block.type), 
+	]
+	with {
+		'block': block, 
+		'sectionStyleClasses': sectionStyleClasses | join(' ')
+	}
+%}
 
 {% endif %}
 {% endfor %}

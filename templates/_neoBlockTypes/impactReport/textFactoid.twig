@@ -14,9 +14,19 @@
 			<div class="col">
 				<div class="row align-items-center justify-content-between">
 					{% if block.preEyebrow is defined and block.preEyebrow != '' %}
-					<div class="col-12 mb-4">
+					<div class="col-12 mb-4"
+						{% if animation %}
+							data-aos="{{ animation.animation }}"
+							data-aos-duration="1500"
+							data-aos-delay="{{ aosDelay }}"
+							data-aos-anchor="#section-{{ block.id }}"
+						{% endif %}>
 						<p class="c-report__preeyebrow text-{{ block.textAlignment }} mb-3"><span>{{ block.preEyebrow | raw }}</span></p>
 					</div>
+					{% endif %}
+
+					{% if animation and animation.staggered == 'yes' %}
+						{% set aosDelay = aosDelay + 500 %}
 					{% endif %}
 					
 					<div class="col-12 col-md-5 mb-5 mb-md-0{% if block.imagePositionLR == 'right' %} order-md-2{% endif %}">

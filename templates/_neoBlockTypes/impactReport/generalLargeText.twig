@@ -1,46 +1,60 @@
 {##
  # IMPACT REPORT PAGE BUILDER: GENERAL
  #}
-<section id="{{ sectionId }}"  class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+{% set textAlignment = 'text-' ~ block.textAlignment %}
+{% if block.textAlignment == 'left' %}
+	{% set textAlignment = 'text-start' %}
+{% elseif block.textAlignment == 'right' %}
+	{% set textAlignment = 'text-end' %}
+{% endif %}
+<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-md-10 col-lg-8 lead">
 				{% if block.preEyebrow is defined and block.preEyebrow != '' %}
-				<p class="c-report__preeyebrow mb-3"><span>{{ block.preEyebrow | raw }}</span></p>
+					<p class="c-report__preeyebrow {{ textAlignment }} mb-3"><span>{{ block.preEyebrow | raw }}</span></p>
 				{% endif %}
 				
 				{% if block.eyebrow is defined and block.eyebrow != '' %}
-				<p class="c-report__eyebrow mb-3"><span>{{ block.eyebrow }}</span></p>
+					<p class="c-report__eyebrow {{ textAlignment }} mb-3"><span>{{ block.eyebrow }}</span></p>
 				{% endif %}
 				
-				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
+				{% include "_fields/headingBlock" with {
+					'heading': block.headingBlock
+				} %}
 
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg">{{ block.description }}</div>
+					<div class="c-wysiwyg {{ textAlignment }}">{{ block.description }}</div>
 				{% endif %}
 
 				{% if block.signatures is defined and block.signatures | length %}
-				<div class="row mt-5">
-					{% for row in block.signatures %}
-					<div class="col-12 col-md-6 mb-5 mb-md-0">
-						{% if row.signature != '' %}
-							<p class="c-report__signature mb-0">{{ row.signature | raw }}</p>
-						{% endif %}
+					<div class="d-flex justify-content-{{ block.textAlignment }} mt-5 flex-wrap flex-md-nowrap">
+						{% for row in block.signatures %}
+						<div class="mb-5 mb-md-0">
+							{% if row.signature != '' %}
+								<p class="c-report__signature mb-0">{{ row.signature | raw }}</p>
+							{% endif %}
 
-						{% if row.role != '' %}
-							<p class="mb-0">{{ row.role | raw }}</p>
-						{% endif %}
-						
-						{% if row.organization != '' %}
-							<p class="mb-0">{{ row.organization | raw }}</p>
-						{% endif %}
+							{% if row.role != '' %}
+								<p class="mb-0">{{ row.role | raw }}</p>
+							{% endif %}
+							
+							{% if row.organization != '' %}
+								<p class="mb-0">{{ row.organization | raw }}</p>
+							{% endif %}
+						</div>
+						{% endfor %}
 					</div>
-					{% endfor %}
-				</div>		
 				{% endif %}
 
 				{% if block.button.getLink() %}
-				<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary', 'style': block.buttonStyle} %}</p>
+					<p class="mt-4 {{ textAlignment }}">
+						{% include "_fields/button" with {
+							'button': block.button, 
+							'color': 'secondary', 
+							'style': block.buttonStyle}
+						%}
+					</p>
 				{% endif %}
 			</div>
 		</div>

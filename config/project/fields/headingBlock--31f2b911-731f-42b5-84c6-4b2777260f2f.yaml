@@ -7,7 +7,7 @@ name: 'Section Heading'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 985898365
+  changedFieldIndicator: 1231226376
   columns:
     __assoc__:
       -
@@ -26,6 +26,13 @@ settings:
               - ''
       -
         - 853a2eb8-d408-4486-afc1-8e24fd201174 # Alignment
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c94c64ea-cc6d-4b7d-9441-052031432b9e # Text Color
         -
           __assoc__:
             -

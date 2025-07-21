@@ -1,3 +1,11 @@
 {% if heading | length and heading.heading != '' %}
-<h2 class="{{ heading.size != 'h2 ' ? heading.size : '' }} text-{{ heading.alignment }} {{ heading.textColor }}{% if class is defined and class != '' %} {{ class }}{% endif %}">{{ heading.heading | raw }}</h2>
+{% switch heading.alignment %}
+	{% case 'left' %}
+		{% set textAlignment = 'text-start' %}
+	{% case 'center' %}
+		{% set textAlignment = 'text-center' %}
+	{% case 'right' %}
+		{% set textAlignment = 'text-end' %}
+{% endswitch %}
+<h2 class="{{ heading.size != 'h2 ' ? heading.size : '' }} {{ textAlignment }} {{ heading.textColor }}{% if class is defined and class != '' %} {{ class }}{% endif %}">{{ heading.heading | raw }}</h2>
 {% endif %}

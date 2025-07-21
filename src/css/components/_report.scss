@@ -103,6 +103,20 @@
 					}
 				}
 			}
+	
+			&.text-center {
+				span {
+					&:before {
+						content: "";
+						position: absolute;
+						display: block;
+						width: 2000%;
+						top: 50%;
+						right: calc(100% + 1.5em);
+						border-top: 1px solid map-get($theme-colors, 'primary');
+					}
+				}
+			}
 		}
 	}
 

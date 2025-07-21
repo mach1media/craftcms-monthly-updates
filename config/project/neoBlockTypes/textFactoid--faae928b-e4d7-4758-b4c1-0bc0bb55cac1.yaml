@@ -76,7 +76,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
             instructions: null
-            label: null
+            label: 'Pre-Eyebrow Text Alignment'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
