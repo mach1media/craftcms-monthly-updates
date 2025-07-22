@@ -3910,16 +3910,16 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.23",
+            "version": "1.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "0a206d73efa8f8d3bd7294ae68b3d70c696b19c5"
+                "reference": "e143fe1d62fbe3599320df4ec2bef76444cedead"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/0a206d73efa8f8d3bd7294ae68b3d70c696b19c5",
-                "reference": "0a206d73efa8f8d3bd7294ae68b3d70c696b19c5",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/e143fe1d62fbe3599320df4ec2bef76444cedead",
+                "reference": "e143fe1d62fbe3599320df4ec2bef76444cedead",
                 "shasum": ""
             },
             "require": {
@@ -3974,7 +3974,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-17T20:38:20+00:00"
+            "time": "2025-07-22T16:34:58+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
@@ -8395,11 +8395,11 @@
         },
         {
             "name": "verbb/formie",
-            "version": "2.1.52",
+            "version": "2.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/55c3137ec15e74657b0e4e4ea958a4fcaed7bdbe",
-                "reference": "55c3137ec15e74657b0e4e4ea958a4fcaed7bdbe",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/d904f27eb78b1fb1b0c0b43d5b7d6cdd8dba0def",
+                "reference": "d904f27eb78b1fb1b0c0b43d5b7d6cdd8dba0def",
                 "shasum": ""
             },
             "require": {
@@ -8460,7 +8460,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2025-07-18T09:58:39+00:00"
+            "time": "2025-07-22T12:08:58+00:00"
         },
         {
             "name": "verbb/redactor-tweaks",
