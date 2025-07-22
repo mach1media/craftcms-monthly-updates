@@ -21,18 +21,8 @@
 </section>
 
 
-<section class="c-block c-block--no-padding-top">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-xl-10">
-
-				{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
-				{% include "_pageBuilders/pageBuilderBlog" with { 'entry': entry } %}
-
-			</div>
-		</div>
-	</div>
-</section>
+{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
+{% include "_pageBuilders/pageBuilderBlog" with { 'entry': entry } %}
 
 
 <section class="c-block bg-secondary-extralight">

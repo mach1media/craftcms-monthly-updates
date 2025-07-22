@@ -10,11 +10,12 @@
 {# = = = = = = = = = SECTION STYLES = = = = = = = = = = = #}
 {% set sectionStyleClasses = ['c-block--news'] %}
 
-{#
+{% set bgColor = '' %}
 {% if block.fields.backgroundColor is defined and block.backgroundColor != 'none' %}
-	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--' ~ block.backgroundColor]) %}
+	{# {% set sectionStyleClasses = sectionStyleClasses|merge([block.backgroundColor]) %} #}
+	{% set bgColor = ' ' ~ block.backgroundColor %}
 {% endif %}
-#}
+
 {% if block.fields.paddingTop is defined and block.paddingTop != '1' %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-top']) %}
 {% endif %}
@@ -34,16 +35,26 @@
 	{% set sectionId = 'section-' ~ block.id %}
 {% endif %}
 
-<!-- {{ block.type }}: {{ block.id }} -->
-{% include [
-		("_neoBlockTypes/" ~ block.type), 
-		("_neoBlockTypes/impactReport/" ~ block.type), 
-	]
-	with {
-		'block': block, 
-		'sectionStyleClasses': sectionStyleClasses | join(' ')
-	}
-%}
+<section class="c-block c-block--no-padding-top{{ bgColor }}">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-xl-10">
+
+				<!-- {{ block.type }}: {{ block.id }} -->
+				{% include [
+						("_neoBlockTypes/" ~ block.type), 
+						("_neoBlockTypes/impactReport/" ~ block.type), 
+					]
+					with {
+						'block': block, 
+						'sectionStyleClasses': sectionStyleClasses | join(' ')
+					}
+				%}
+
+			</div>
+		</div>
+	</div>
+</section>
 
 {% endif %}
 {% endfor %}

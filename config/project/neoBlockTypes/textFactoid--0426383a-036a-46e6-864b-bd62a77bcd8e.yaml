@@ -140,6 +140,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22437646-567e-4993-9a6f-f4a035a316eb
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
             fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
             instructions: null
             label: null

@@ -29,6 +29,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7ae2efa-488a-4beb-9061-869225db9372
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
             fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
             instructions: null
             label: null
@@ -38,7 +50,7 @@ fieldLayouts:
             uid: 45feba92-a59d-43ee-932d-84a6e77e1129
             userCondition: null
             warning: null
-            width: 100
+            width: 25
           -
             elementCondition: null
             fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
@@ -50,7 +62,7 @@ fieldLayouts:
             uid: 2fde6b7c-2008-445f-aa80-255c3411cd06
             userCondition: null
             warning: null
-            width: 100
+            width: 25
         name: 'Section Settings'
         uid: 86a3fe87-8d35-467f-b4ec-bfb9f6e7d09f
         userCondition: null
