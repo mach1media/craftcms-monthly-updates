@@ -7,24 +7,50 @@
 {% elseif block.textAlignment == 'right' %}
 	{% set textAlignment = 'text-end' %}
 {% endif %}
+
+{# set text color #}
+{% set textColor = '' %}
+{% if block.textColor == 'text-default' %}
+	{% switch block.backgroundColor %}
+		{% case 'bg-primary' %}
+			{% set textColor = ' text-white' %}
+
+		{% case 'bg-secondary' %}
+			{% set textColor = ' text-white' %}
+			
+		{% case 'bg-tertiary' %}
+			{% set textColor = ' text-white' %}
+			
+		{% case 'bg-dark' %}
+			{% set textColor = ' text-white' %}
+			
+		{% case 'bg-black' %}
+			{% set textColor = ' text-white' %}
+			
+	{% endswitch %}
+{% else %}
+	{% set textColor = block.textColor %}
+{% endif %}
+
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-md-10 col-lg-8 lead">
 				{% if block.preEyebrow is defined and block.preEyebrow != '' %}
-					<p class="c-report__preeyebrow {{ textAlignment }} mb-3"><span>{{ block.preEyebrow | raw }}</span></p>
+					<p class="c-report__preeyebrow {{ textAlignment }} mb-3{{ textColor }}"><span>{{ block.preEyebrow | raw }}</span></p>
 				{% endif %}
 				
 				{% if block.eyebrow is defined and block.eyebrow != '' %}
-					<p class="c-report__eyebrow {{ textAlignment }} mb-3"><span>{{ block.eyebrow }}</span></p>
+					<p class="c-report__eyebrow {{ textAlignment }} mb-3{{ textColor }}"><span>{{ block.eyebrow }}</span></p>
 				{% endif %}
 				
 				{% include "_fields/headingBlock" with {
-					'heading': block.headingBlock
+					heading: block.headingBlock,
+					class: block.textColor
 				} %}
 
 				{% if block.description is defined and block.description != '' %}
-					<div class="c-wysiwyg {{ textAlignment }}">{{ block.description }}</div>
+					<div class="c-wysiwyg {{ textAlignment }}{{ textColor }}">{{ block.description }}</div>
 				{% endif %}
 
 				{% if block.signatures is defined and block.signatures | length %}
@@ -36,11 +62,11 @@
 							{% endif %}
 
 							{% if row.role != '' %}
-								<p class="mb-0">{{ row.role | raw }}</p>
+								<p class="mb-0{{ textColor }}">{{ row.role | raw }}</p>
 							{% endif %}
 							
 							{% if row.organization != '' %}
-								<p class="mb-0">{{ row.organization | raw }}</p>
+								<p class="mb-0{{ textColor }}">{{ row.organization | raw }}</p>
 							{% endif %}
 						</div>
 						{% endfor %}
@@ -52,8 +78,8 @@
 						{% include "_fields/button" with {
 							'button': block.button, 
 							'color': 'secondary', 
-							'style': block.buttonStyle}
-						%}
+							'style': block.buttonStyle
+						} %}
 					</p>
 				{% endif %}
 			</div>

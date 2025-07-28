@@ -147,6 +147,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
+          -
+            elementCondition: null
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ac17447d-07a9-4f55-8a33-d60ee4178c74
+            userCondition: null
+            warning: null
+            width: 25
         name: 'Section Settings'
         uid: 41f569ce-cb0c-47d0-9ffe-7b37fbaa42d2
         userCondition: null

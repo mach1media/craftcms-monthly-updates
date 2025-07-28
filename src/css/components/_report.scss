@@ -89,6 +89,16 @@
 					border-top: 1px solid map-get($theme-colors, 'primary');
 				}
 			}
+
+			@each $name, $color in $theme-colors {
+				&.text-#{$name} {
+					span {
+						&:after {
+							border-top: 1px solid map-get($theme-colors, '#{$name}');
+						}
+					}
+				}
+			}
 	
 			&.text-end {
 				span {
@@ -100,6 +110,16 @@
 						top: 50%;
 						left: calc(-2000% - 1em);
 						border-top: 1px solid map-get($theme-colors, 'primary');
+					}
+				}
+
+				@each $name, $color in $theme-colors {
+					&.text-#{$name} {
+						span {
+							&:after {
+								border-top: 1px solid map-get($theme-colors, '#{$name}');
+							}
+						}
 					}
 				}
 			}
@@ -114,6 +134,16 @@
 						top: 50%;
 						right: calc(100% + 1.5em);
 						border-top: 1px solid map-get($theme-colors, 'primary');
+					}
+				}
+				
+				@each $name, $color in $theme-colors {
+					&.text-#{$name} {
+						span {
+							&:before {
+								border-top: 1px solid map-get($theme-colors, '#{$name}');
+							}
+						}
 					}
 				}
 			}
