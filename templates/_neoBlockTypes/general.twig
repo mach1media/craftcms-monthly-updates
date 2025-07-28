@@ -53,8 +53,18 @@
 					{% endapply %}
 				</div>
 				{% endif %}
-				
-				{% include "_fields/buttons" with {'buttons': block.buttons} %}
+
+				{% if block.button.getLink() %}
+					<p class="mt-4 {{ textAlignment }}">
+						{% include "_fields/button" with {
+							'button': block.button, 
+							'color': 'secondary', 
+							'style': block.buttonStyle
+						} %}
+					</p>
+				{% else %}
+					{% include "_fields/buttons" with {'buttons': block.buttons} %}
+				{% endif %}
 			</div>
 		</div>
 	</div>
