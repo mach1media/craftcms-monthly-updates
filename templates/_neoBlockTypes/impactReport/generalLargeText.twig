@@ -29,7 +29,7 @@
 			
 	{% endswitch %}
 {% else %}
-	{% set textColor = block.textColor %}
+	{% set textColor = ' ' ~ block.textColor %}
 {% endif %}
 
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
