@@ -35,18 +35,28 @@
 		} %}
 	{% endif %}
 {% endset %}
+
+{# text alignment #}
+{% set textAlignment = ' text-' ~ block.textAlignment %}
+{% if block.textAlignment == 'left' %}
+	{% set textAlignment = ' text-start' %}
+{% elseif block.textAlignment == 'right' %}
+	{% set textAlignment = ' text-end' %}
+{% endif %}
+
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
 			<div class="col-12 {{ block.textColor }}{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
 				{% if block.preheading is defined and block.preheading != '' %}
-				<p class="u-preheading">{{ block.preheading }}</p>
+				<p class="u-preheading{{ textAlignment }}">{{ block.preheading }}</p>
 				{% endif %}
 				
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock} %}
 				
 				{% if block.description is defined and block.description != '' %}
-				<div class="c-wysiwyg clearfix{% if block.buttons | length %} mb-4{% endif %}">
+				<div class="c-wysiwyg clearfix{% if block.buttons | length %} mb-4{% endif %}{{ textAlignment }}">
+					{{ block.description | raw }}
 					{{ image }}
 					{% apply enkode_emails %}
 						{{ block.description }}
@@ -55,7 +65,7 @@
 				{% endif %}
 
 				{% if block.button.getLink() %}
-					<p class="mt-4 {{ textAlignment }}">
+					<p class="mt-4{{ textAlignment }}">
 						{% include "_fields/button" with {
 							'button': block.button, 
 							'color': 'secondary', 
@@ -63,7 +73,9 @@
 						} %}
 					</p>
 				{% else %}
-					{% include "_fields/buttons" with {'buttons': block.buttons} %}
+					<p class="mt-4{{ textAlignment }}">
+						{% include "_fields/buttons" with {'buttons': block.buttons} %}
+					</p>
 				{% endif %}
 			</div>
 		</div>
