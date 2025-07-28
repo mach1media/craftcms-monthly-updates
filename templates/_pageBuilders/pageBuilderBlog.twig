@@ -16,11 +16,13 @@
 	{% set bgColor = ' ' ~ block.backgroundColor %}
 {% endif %}
 
-{% if block.fields.paddingTop is defined and block.paddingTop != '1' %}
+{% if block.fields.paddingTop is defined and block.paddingTop %}
+{% else %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-top']) %}
 {% endif %}
 
-{% if block.fields.paddingBottom is defined and block.paddingBottom != '1' %}
+{% if block.fields.paddingBottom is defined and block.paddingBottom %}
+{% else %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-bottom']) %}
 {% endif %}
 {#
