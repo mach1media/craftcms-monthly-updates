@@ -57,10 +57,9 @@
 				
 				{% if block.description is defined and block.description != '' %}
 				<div class="c-wysiwyg clearfix{% if block.buttons | length %} mb-4{% endif %}{{ textAlignment }}">
-					{{ block.description | raw }}
 					{{ image }}
 					{% apply enkode_emails %}
-						{{ block.description }}
+						{{ block.description | raw }}
 					{% endapply %}
 				</div>
 				{% endif %}
