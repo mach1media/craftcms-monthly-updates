@@ -74,9 +74,24 @@ success "✓ Update branch created"
 
 # Step 6: Composer update
 info "Running composer update..."
+
+# Get Craft CMS version before update
+CRAFT_VERSION_BEFORE=$(ddev craft --version 2>/dev/null | grep -o 'Craft CMS [0-9]\+\.[0-9]\+\.[0-9]\+' | sed 's/Craft CMS //' || echo "")
+
 ddev composer update || pause_on_error "Composer update failed"
+
+# Get Craft CMS version after update
+CRAFT_VERSION_AFTER=$(ddev craft --version 2>/dev/null | grep -o 'Craft CMS [0-9]\+\.[0-9]\+\.[0-9]\+' | sed 's/Craft CMS //' || echo "")
+
+# Create commit message with Craft version if updated
+COMMIT_MESSAGE="Update: Composer dependencies"
+if [ -n "$CRAFT_VERSION_BEFORE" ] && [ -n "$CRAFT_VERSION_AFTER" ] && [ "$CRAFT_VERSION_BEFORE" != "$CRAFT_VERSION_AFTER" ]; then
+    COMMIT_MESSAGE="$COMMIT_MESSAGE - updates craft to $CRAFT_VERSION_AFTER"
+    info "Craft CMS updated from $CRAFT_VERSION_BEFORE to $CRAFT_VERSION_AFTER"
+fi
+
 git add composer.lock
-git commit -m "Update: Composer dependencies" || true
+git commit -m "$COMMIT_MESSAGE" || true
 success "✓ Composer dependencies updated"
 
 # Step 7: Craft migrations
