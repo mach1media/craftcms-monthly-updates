@@ -1,0 +1,3 @@
+# Ignore update configuration file
+config.yml
+logs/
