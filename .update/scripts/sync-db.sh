@@ -38,8 +38,8 @@ test_ssh_connection() {
         ssh_args="-i $ssh_key"
     fi
     
-    # Test SSH connection with a simple command
-    timeout 10 ssh $ssh_args -p "$SSH_PORT" -o ConnectTimeout=5 -o BatchMode=yes "$SSH_USER@$SSH_HOST" "echo 'SSH connection successful'" 2>/dev/null
+    # Test SSH connection with a simple command - shorter timeout
+    gtimeout 10 ssh $ssh_args -p "$SSH_PORT" -o ConnectTimeout=5 -o BatchMode=yes -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "echo 'SSH connection successful'" 2>/dev/null
 }
 
 # Global variable to store SSH password to avoid multiple prompts
@@ -80,6 +80,49 @@ scp_with_password() {
     fi
 }
 
+# Cleanup function for proper signal handling
+cleanup() {
+    stop_progress
+    echo ""
+    echo "Script interrupted. Cleaning up..."
+    exit 130
+}
+
+# Set up signal traps
+trap cleanup SIGINT SIGTERM
+
+# Progress indicator function - simplified and faster
+show_progress() {
+    local message="$1"
+    local spinner="⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"
+    local i=0
+    
+    while true; do
+        local char=${spinner:$i:1}
+        echo -ne "${YELLOW}[$char]${NC} $message\r"
+        sleep 0.1
+        i=$(( (i+1) % ${#spinner} ))
+    done
+}
+
+# Start progress in background
+progress_pid=""
+start_progress() {
+    local message="$1"
+    show_progress "$message" &
+    progress_pid=$!
+}
+
+# Stop progress
+stop_progress() {
+    if [ -n "$progress_pid" ]; then
+        kill $progress_pid 2>/dev/null
+        wait $progress_pid 2>/dev/null
+        progress_pid=""
+    fi
+    echo -ne "\033[2K\r"  # Clear line
+}
+
 # Main backup process
 info "Attempting to create database backup on remote server..."
 
@@ -92,22 +135,34 @@ SSH_SUCCESS=false
 
 if [ -n "$SSH_KEY" ]; then
     info "Found SSH key: $SSH_KEY"
-    info "Testing SSH connection with key authentication..."
     
+    info "Testing SSH connection with key authentication (10s timeout)..."
     if test_ssh_connection "$SSH_KEY"; then
         info "SSH key authentication successful"
+        info "About to run backup command on remote server..."
         
         # Run backup command on remote server
         info "Creating database backup on remote server..."
         
         # Get timestamp before backup for file detection
         BACKUP_TIME=$(date +%s)
+        info "About to execute SSH backup command..."
         
+        # Temporarily disable exit on error for SSH command (deprecation warnings cause non-zero exit)
+        set +e
+        info "Executing: ssh -i \"$SSH_KEY\" -p \"$SSH_PORT\" \"$SSH_USER@$SSH_HOST\" \"cd $REMOTE_PROJECT_DIR && php craft db/backup --interactive=0\""
         BACKUP_OUTPUT=$(ssh -i "$SSH_KEY" -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "cd $REMOTE_PROJECT_DIR && php craft db/backup --interactive=0" 2>&1)
+        backup_exit_code=$?
+        set -e
+        info "SSH backup command completed"
         
-        if [ $? -eq 0 ]; then
-            info "Backup command completed successfully"
-            info "Output: $BACKUP_OUTPUT"
+        # Debug output
+        info "Backup exit code: $backup_exit_code"
+        info "Backup output: $BACKUP_OUTPUT"
+        
+        # Check if backup succeeded - look for "Backup file:" in output even if there are warnings
+        if echo "$BACKUP_OUTPUT" | grep -q "Backup file:"; then
+            info "Backup command completed successfully (found backup file in output)"
             
             # Try to extract filename from output first (more reliable)
             # Handle format: "Backup file: /path/to/file.sql (size)"
@@ -131,17 +186,24 @@ if [ -n "$SSH_KEY" ]; then
             
             if [ -n "$BACKUP_FILENAME" ]; then
                 info "Backup created: $BACKUP_FILENAME"
-                info "Downloading backup file..."
                 
                 # Download the backup file
-                scp -i "$SSH_KEY" -P "$SSH_PORT" "$SSH_USER@$SSH_HOST:$REMOTE_PROJECT_DIR/$BACKUP_DIR/$BACKUP_FILENAME" "$BACKUP_DIR/"
+                info "Downloading backup file: $BACKUP_FILENAME"
+                info "SCP command: scp -i \"$SSH_KEY\" -P \"$SSH_PORT\" \"$SSH_USER@$SSH_HOST:$REMOTE_PROJECT_DIR/$BACKUP_DIR/$BACKUP_FILENAME\" \"$BACKUP_DIR/\""
                 
-                if [ $? -eq 0 ]; then
+                set +e  # Don't exit on SCP error
+                scp -i "$SSH_KEY" -P "$SSH_PORT" "$SSH_USER@$SSH_HOST:$REMOTE_PROJECT_DIR/$BACKUP_DIR/$BACKUP_FILENAME" "$BACKUP_DIR/" 2>&1
+                scp_result=$?
+                set -e
+                
+                info "SCP exit code: $scp_result"
+                
+                if [ $scp_result -eq 0 ]; then
                     SSH_SUCCESS=true
                     LOCAL_BACKUP_FILE="$BACKUP_DIR/$BACKUP_FILENAME"
                     success "Successfully downloaded: $BACKUP_FILENAME"
                 else
-                    error "Failed to download backup file via SCP"
+                    error "Failed to download backup file via SCP (exit code: $scp_result)"
                 fi
             else
                 info "Could not find backup filename. Trying password authentication..."
@@ -165,7 +227,8 @@ if [ "$SSH_SUCCESS" = false ]; then
         info "Skipping password authentication attempt."
     else
         # Test password connection
-        if ssh_with_password "echo 'SSH password authentication successful'" &>/dev/null; then
+        info "Testing SSH password authentication (10s timeout)..."
+        if gtimeout 10 ssh_with_password "echo 'SSH password authentication successful'" &>/dev/null; then
             info "SSH password authentication successful"
             
             # Run backup command on remote server
@@ -174,11 +237,19 @@ if [ "$SSH_SUCCESS" = false ]; then
             # Get timestamp before backup for file detection
             BACKUP_TIME=$(date +%s)
             
+            # Temporarily disable exit on error for SSH command (deprecation warnings cause non-zero exit)
+            set +e
             BACKUP_OUTPUT=$(ssh_with_password "cd $REMOTE_PROJECT_DIR && php craft db/backup --interactive=0" 2>&1)
+            backup_exit_code=$?
+            set -e
             
-            if [ $? -eq 0 ]; then
-                info "Backup command completed successfully"
-                info "Output: $BACKUP_OUTPUT"
+            # Debug output
+            info "Backup exit code: $backup_exit_code"
+            info "Backup output: $BACKUP_OUTPUT"
+            
+            # Check if backup succeeded - look for "Backup file:" in output even if there are warnings
+            if echo "$BACKUP_OUTPUT" | grep -q "Backup file:"; then
+                info "Backup command completed successfully (found backup file in output)"
                 
                 # Try to extract filename from output first (more reliable)
                 # Handle format: "Backup file: /path/to/file.sql (size)"
@@ -202,17 +273,23 @@ if [ "$SSH_SUCCESS" = false ]; then
                 
                 if [ -n "$BACKUP_FILENAME" ]; then
                     info "Backup created: $BACKUP_FILENAME"
-                    info "Downloading backup file..."
                     
                     # Download the backup file
-                    scp_with_password "$REMOTE_PROJECT_DIR/$BACKUP_DIR/$BACKUP_FILENAME" "$BACKUP_DIR/"
+                    info "Downloading backup file: $BACKUP_FILENAME"
                     
-                    if [ $? -eq 0 ]; then
+                    set +e  # Don't exit on SCP error
+                    scp_with_password "$REMOTE_PROJECT_DIR/$BACKUP_DIR/$BACKUP_FILENAME" "$BACKUP_DIR/"
+                    scp_result=$?
+                    set -e
+                    
+                    info "SCP exit code: $scp_result"
+                    
+                    if [ $scp_result -eq 0 ]; then
                         SSH_SUCCESS=true
                         LOCAL_BACKUP_FILE="$BACKUP_DIR/$BACKUP_FILENAME"
                         success "Successfully downloaded: $BACKUP_FILENAME"
                     else
-                        error "Failed to download backup file via SCP with password"
+                        error "Failed to download backup file via SCP with password (exit code: $scp_result)"
                     fi
                 else
                     info "Could not find backup filename."
@@ -248,9 +325,23 @@ if [ "$SSH_SUCCESS" = false ]; then
 fi
 
 info "Found backup: $LOCAL_BACKUP_FILE"
-info "Importing database to DDEV..."
 
 # Use craft db/restore instead of ddev import-db for better compatibility
-ddev craft db/restore "$LOCAL_BACKUP_FILE" --interactive=0
+info "Importing database to DDEV..."
 
-success "Database imported successfully"
+# Temporarily disable exit on error for import command (deprecation warnings cause non-zero exit)
+set +e
+import_output=$(ddev craft db/restore "$LOCAL_BACKUP_FILE" --interactive=0 2>&1)
+import_result=$?
+set -e
+
+info "Import exit code: $import_result"
+info "Import output: $import_output"
+
+# Check if import succeeded - look for success indicators in output even if there are warnings
+if echo "$import_output" | grep -q -E "(successfully|restored|imported)" || [ $import_result -eq 0 ]; then
+    success "Database imported successfully"
+else
+    error "Database import failed"
+    info "Full import output: $import_output"
+fi

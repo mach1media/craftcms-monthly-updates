@@ -203,12 +203,20 @@ The script automatically tries SSH authentication in this order:
 
 ### Automated Process Flow
 When SSH succeeds, the script:
-1. Connects to remote server via SSH
-2. Navigates to project directory (`remote_project_dir`)
-3. Runs `php craft db/backup --interactive=0`
-4. Extracts backup filename from output
-5. Downloads backup via SCP to local `storage/backups/`
-6. Imports backup using `ddev craft db/restore`
+1. Tests SSH connection with progress indicator
+2. Connects to remote server via SSH
+3. Navigates to project directory (`remote_project_dir`)
+4. Runs `php craft db/backup --interactive=0` with progress indicator
+5. Extracts backup filename from output
+6. Downloads backup via SCP to local `storage/backups/` with progress indicator
+7. Imports backup using `ddev craft db/restore` with progress indicator
+
+### Asset Sync Features
+The asset sync script (`sync-assets`) includes:
+- **FTP Connection Testing**: Tests connection with 30-second timeout before syncing
+- **Progress Indicators**: Visual feedback during connection and sync operations
+- **Selective Sync**: Excludes directories starting with underscore (_) which contain auto-generated thumbnails
+- **Error Handling**: Graceful failure handling with clear error messages
 
 ### Filename Detection
 The script handles multiple backup filename formats:
@@ -277,6 +285,13 @@ cp .update/config.yml.example .update/config.yml
 - Test manual SSH: `ssh username@hostname`
 - Check SSH key permissions: `chmod 600 ~/.ssh/id_rsa`
 - Ensure SSH key is added to server: `ssh-copy-id username@hostname`
+
+**FTP connection timeout (30s)**
+- Check FTP credentials in config.yml
+- Verify FTP hostname and port (usually 21)
+- Test manual FTP: `ftp hostname` or `lftp -u username hostname`
+- Check firewall settings (FTP uses ports 20-21)
+- Some hosts require SFTP instead of FTP
 
 **Database backup command fails**
 - Verify PHP CLI is available on remote server

@@ -93,7 +93,6 @@ case "$SERVER_TOOL" in
         
         REMOTE_UPLOADS_DIR="$REMOTE_PROJECT_DIR/$PUBLIC_DIR/uploads"
         SSH_USER="serverpilot"
-        DEPLOYMENT_METHOD="manual"
         ;;
         
     2) # Ploi
@@ -121,12 +120,6 @@ case "$SERVER_TOOL" in
         
         REMOTE_UPLOADS_DIR="$REMOTE_PROJECT_DIR/$PUBLIC_DIR/uploads"
         SSH_USER="ploi"
-        
-        # Ploi deployment
-        DEPLOYMENT_METHOD="ploi"
-        prompt_with_default "Ploi server ID" "" "PLOI_SERVER_ID"
-        prompt_with_default "Ploi site ID" "" "PLOI_SITE_ID"
-        prompt_password "Ploi API token" "PLOI_API_TOKEN"
         ;;
         
     3) # Laravel Forge
@@ -139,31 +132,6 @@ case "$SERVER_TOOL" in
         REMOTE_UPLOADS_DIR="$REMOTE_PROJECT_DIR/web/uploads"
         SSH_USER="forge"
         PUBLIC_DIR="web"
-        
-        # Deployment method
-        echo ""
-        echo "How is this site deployed?"
-        echo "1) Envoyer"
-        echo "2) Forge deployment"
-        echo "3) Manual deployment"
-        read -p "Select option (1-3): " DEPLOY_OPTION
-        
-        case "$DEPLOY_OPTION" in
-            1) # Envoyer
-                DEPLOYMENT_METHOD="envoyer"
-                prompt_with_default "Envoyer deployment URL" "" "ENVOYER_URL"
-                ;;
-            2) # Forge
-                DEPLOYMENT_METHOD="forge"
-                prompt_with_default "Forge deployment URL" "" "FORGE_URL"
-                ;;
-            3) # Manual
-                DEPLOYMENT_METHOD="manual"
-                ;;
-            *)
-                DEPLOYMENT_METHOD="manual"
-                ;;
-        esac
         ;;
         
     4) # fortrabbit
@@ -176,9 +144,6 @@ case "$SERVER_TOOL" in
         REMOTE_UPLOADS_DIR="$REMOTE_PROJECT_DIR/web/uploads"
         SSH_USER="$APP_NAME"
         PUBLIC_DIR="web"
-        DEPLOYMENT_METHOD="github-actions" # Auto-deploys on push
-        
-        echo -e "${YELLOW}Note: fortrabbit auto-deploys on git push${NC}"
         ;;
         
     5) # Other
@@ -188,25 +153,6 @@ case "$SERVER_TOOL" in
         prompt_with_default "Remote project directory (e.g., /var/www/html)" "" "REMOTE_PROJECT_DIR"
         prompt_with_default "Public web directory name (e.g., public, web)" "public" "PUBLIC_DIR"
         REMOTE_UPLOADS_DIR="$REMOTE_PROJECT_DIR/$PUBLIC_DIR/uploads"
-        
-        # Deployment method
-        echo ""
-        echo "Deployment method?"
-        echo "1) GitHub Actions"
-        echo "2) Manual"
-        echo "3) Other"
-        read -p "Select option (1-3): " DEPLOY_OPTION
-        
-        case "$DEPLOY_OPTION" in
-            1) DEPLOYMENT_METHOD="github-actions" ;;
-            2) DEPLOYMENT_METHOD="manual" ;;
-            3) 
-                prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD"
-                ;;
-            *)
-                DEPLOYMENT_METHOD="manual"
-                ;;
-        esac
         ;;
 esac
 
@@ -217,6 +163,107 @@ prompt_with_default "SSH hostname" "${PRODUCTION_URL#https://}" "SSH_HOST"
 SSH_HOST="${SSH_HOST#http://}"  # Remove protocol if present
 SSH_HOST="${SSH_HOST#https://}" # Remove protocol if present
 prompt_with_default "SSH port" "22" "SSH_PORT"
+
+# Deployment method
+echo ""
+echo -e "${YELLOW}Deployment Configuration${NC}"
+echo ""
+echo "How do you deploy to production?"
+
+# Different options based on server type
+case "$SERVER_TOOL" in
+    1) # ServerPilot
+        echo "1) Manual deployment (SSH/SFTP)"
+        echo "2) GitHub Actions (auto-deploy on push)"
+        echo "3) Other"
+        read -p "Select option (1-3): " DEPLOY_OPTION
+        
+        case "$DEPLOY_OPTION" in
+            1) DEPLOYMENT_METHOD="manual" ;;
+            2) DEPLOYMENT_METHOD="github-actions" ;;
+            3) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+            *) DEPLOYMENT_METHOD="manual" ;;
+        esac
+        ;;
+        
+    2) # Ploi
+        echo "1) Ploi deployment (API)"
+        echo "2) Manual deployment"
+        echo "3) GitHub Actions"
+        echo "4) Other"
+        read -p "Select option (1-4): " DEPLOY_OPTION
+        
+        case "$DEPLOY_OPTION" in
+            1) 
+                DEPLOYMENT_METHOD="ploi"
+                prompt_with_default "Ploi server ID" "" "PLOI_SERVER_ID"
+                prompt_with_default "Ploi site ID" "" "PLOI_SITE_ID"
+                prompt_password "Ploi API token" "PLOI_API_TOKEN"
+                ;;
+            2) DEPLOYMENT_METHOD="manual" ;;
+            3) DEPLOYMENT_METHOD="github-actions" ;;
+            4) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+            *) DEPLOYMENT_METHOD="manual" ;;
+        esac
+        ;;
+        
+    3) # Laravel Forge
+        echo "1) Envoyer deployment"
+        echo "2) Forge deployment (webhook)"
+        echo "3) Manual deployment"
+        echo "4) GitHub Actions"
+        echo "5) Other"
+        read -p "Select option (1-5): " DEPLOY_OPTION
+        
+        case "$DEPLOY_OPTION" in
+            1) 
+                DEPLOYMENT_METHOD="envoyer"
+                prompt_with_default "Envoyer deployment URL" "" "ENVOYER_URL"
+                ;;
+            2) 
+                DEPLOYMENT_METHOD="forge"
+                prompt_with_default "Forge deployment URL" "" "FORGE_URL"
+                ;;
+            3) DEPLOYMENT_METHOD="manual" ;;
+            4) DEPLOYMENT_METHOD="github-actions" ;;
+            5) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+            *) DEPLOYMENT_METHOD="manual" ;;
+        esac
+        ;;
+        
+    4) # fortrabbit
+        echo "1) Automatic (git push to fortrabbit)"
+        echo "2) GitHub Actions"
+        echo "3) Manual"
+        echo "4) Other"
+        read -p "Select option (1-4): " DEPLOY_OPTION
+        
+        case "$DEPLOY_OPTION" in
+            1) 
+                DEPLOYMENT_METHOD="github-actions"
+                echo -e "${YELLOW}Note: fortrabbit auto-deploys on git push${NC}"
+                ;;
+            2) DEPLOYMENT_METHOD="github-actions" ;;
+            3) DEPLOYMENT_METHOD="manual" ;;
+            4) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+            *) DEPLOYMENT_METHOD="github-actions" ;;
+        esac
+        ;;
+        
+    5) # Other
+        echo "1) GitHub Actions"
+        echo "2) Manual deployment"
+        echo "3) Other"
+        read -p "Select option (1-3): " DEPLOY_OPTION
+        
+        case "$DEPLOY_OPTION" in
+            1) DEPLOYMENT_METHOD="github-actions" ;;
+            2) DEPLOYMENT_METHOD="manual" ;;
+            3) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+            *) DEPLOYMENT_METHOD="manual" ;;
+        esac
+        ;;
+esac
 
 # FTP settings
 echo ""
@@ -282,27 +329,33 @@ EOF
 # Add deployment-specific configuration
 case "$DEPLOYMENT_METHOD" in
     "ploi")
-        cat >> "$CONFIG_FILE" << EOF
+        if [ -n "$PLOI_SERVER_ID" ]; then
+            cat >> "$CONFIG_FILE" << EOF
 
 # Ploi settings
 ploi_server_id: $PLOI_SERVER_ID
 ploi_site_id: $PLOI_SITE_ID
 ploi_api_token: $PLOI_API_TOKEN
 EOF
+        fi
         ;;
     "envoyer")
-        cat >> "$CONFIG_FILE" << EOF
+        if [ -n "$ENVOYER_URL" ]; then
+            cat >> "$CONFIG_FILE" << EOF
 
 # Envoyer settings
 envoyer_url: $ENVOYER_URL
 EOF
+        fi
         ;;
     "forge")
-        cat >> "$CONFIG_FILE" << EOF
+        if [ -n "$FORGE_URL" ]; then
+            cat >> "$CONFIG_FILE" << EOF
 
 # Forge settings
 forge_url: $FORGE_URL
 EOF
+        fi
         ;;
 esac
 
@@ -329,7 +382,15 @@ echo -e "${BLUE}Setup Complete!${NC}"
 echo -e "${BLUE}=========================================${NC}"
 echo ""
 echo "Configuration summary:"
-echo "- Server type: $SERVER_TOOL"
+case "$SERVER_TOOL" in
+    1) SERVER_NAME="ServerPilot" ;;
+    2) SERVER_NAME="Ploi" ;;
+    3) SERVER_NAME="Laravel Forge" ;;
+    4) SERVER_NAME="fortrabbit" ;;
+    5) SERVER_NAME="Custom" ;;
+    *) SERVER_NAME="Unknown" ;;
+esac
+echo "- Server type: $SERVER_NAME"
 echo "- Remote path: $REMOTE_PROJECT_DIR"
 echo "- SSH: $SSH_USER@$SSH_HOST:$SSH_PORT"
 echo "- Deployment: $DEPLOYMENT_METHOD"
