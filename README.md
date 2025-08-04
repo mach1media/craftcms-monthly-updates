@@ -2,31 +2,6 @@
 
 A collection of helper script to assist in performing monthly updates for Craft CMS projects hosted on servers provisioned by various providers.
 
-## Setup Commands
-
-```bash
-# Interactive setup wizard (recommended)
-npm run update/setup
-
-# Test SSH connection to production
-npm run update/test-ssh
-
-# View recent update logs
-npm run update/logs
-```
-
-## Update & Maintenance Commands
-
-**Automated Monthly Updates:**
-```bash
-# Run complete update workflow (recommended)
-npm run update
-
-# Individual sync operations:
-npm run sync-db      # Sync database from production
-npm run sync-assets  # Sync assets from production
-npm run update/deploy  # Deploy to production
-```
 
 ## Integration into Existing Craft CMS Projects
 
@@ -40,7 +15,7 @@ git remote add craftcms-updates git@github.com:mach1media/craftcms-monthly-updat
 git fetch craftcms-updates integration
 git checkout craftcms-updates/integration -- .update/
 
-# Run setup wizard (handles npm scripts automatically)
+# Run setup wizard (prompts for project settings, adds npm scripts to package.json)
 .update/scripts/interactive-setup.sh
 
 # Commit to your project
@@ -72,6 +47,36 @@ You can also run npm setup separately:
 ```bash
 .update/scripts/setup-npm-scripts.sh
 ```
+
+
+## Setup Commands
+
+```bash
+# Interactive setup wizard
+# Runs .update/scripts/interactive-setup.sh if not already done
+npm run update/setup
+
+# Test SSH connection to production
+npm run update/test-ssh
+
+# View recent update logs
+npm run update/logs
+```
+
+## Update & Maintenance Commands
+
+**Automated Monthly Updates:**
+```bash
+# Run complete update workflow (recommended)
+npm run update
+
+# Individual sync operations:
+npm run sync-db          # Sync database from production
+npm run sync-assets      # Sync assets from production
+npm run sync-directories # Sync other specific directories from production
+npm run update/deploy    # Deploy to production
+```
+
 
 ### Available Commands After Setup
 
