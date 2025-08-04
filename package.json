@@ -1,0 +1,42 @@
+{
+  "name": "craftcms-monthly-updates",
+  "version": "1.0.0",
+  "description": "Automated monthly update helper scripts for Craft CMS projects",
+  "main": ".update/update.sh",
+  "scripts": {
+    "update": ".update/update.sh",
+    "sync-db": ".update/scripts/sync-db.sh",
+    "sync-assets": ".update/scripts/sync-assets.sh",
+    "sync-directories": ".update/scripts/sync-directories.sh",
+    "update/deploy": ".update/scripts/deploy.sh",
+    "update/setup": ".update/scripts/interactive-setup.sh",
+    "update/test-ssh": "echo 'Testing SSH connection...' && .update/scripts/test-ssh.sh",
+    "update/test": ".update/tests/run-tests.sh",
+    "update/test-connections": ".update/tests/test-connections.sh",
+    "update/logs": "ls -la .update/logs/ && echo 'Latest log:' && ls -t .update/logs/*.log 2>/dev/null | head -1 | xargs tail -20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mach1media/craftcms-monthly-updates.git"
+  },
+  "keywords": [
+    "craftcms",
+    "automation",
+    "updates",
+    "deployment",
+    "database-sync",
+    "assets-sync",
+    "monthly-maintenance"
+  ],
+  "author": "Roger Glenn <roger@mach1media.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "bin": {
+    "craftcms-update": ".update/update.sh"
+  },
+  "files": [
+    ".update/"
+  ]
+}
