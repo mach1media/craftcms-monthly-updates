@@ -147,7 +147,6 @@ if execute_remote_command "echo 'SSH connection successful'" false >/dev/null 2>
     else
         info "SSH key authentication failed. Trying password authentication..."
     fi
-fi
 
 # Try password authentication if key authentication failed
 if [ "$SSH_SUCCESS" = false ]; then
