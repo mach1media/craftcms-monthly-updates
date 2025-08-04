@@ -1,0 +1,26 @@
+# Test configuration file for unit tests
+branch: main
+production_url: https://example.com
+
+# SSH settings
+ssh_host: test.example.com
+ssh_user: testuser
+ssh_port: 22
+remote_project_dir: /var/www/test
+
+# Directory paths
+backup_dir: storage/backups
+uploads_dir: web/uploads
+
+# Asset storage
+asset_storage_type: local
+
+# Additional directories
+additional_sync_dirs: storage/runtime,config/project
+
+# Deployment
+deployment_method: manual
+
+# Build settings
+run_npm_build: false
+npm_build_command: npm run build

@@ -24,6 +24,8 @@ SCRIPT_NAMES=(
     "update/deploy"
     "update/setup"
     "update/test-ssh"
+    "update/test"
+    "update/test-connections"
     "update/logs"
 )
 
@@ -35,6 +37,8 @@ SCRIPT_COMMANDS=(
     ".update/scripts/deploy.sh"
     ".update/scripts/interactive-setup.sh"
     "echo 'Testing SSH connection...' && .update/scripts/test-ssh.sh"
+    ".update/tests/run-tests.sh"
+    ".update/tests/test-connections.sh"
     "ls -la .update/logs/ && echo 'Latest log:' && ls -t .update/logs/*.log 2>/dev/null | head -1 | xargs tail -20"
 )
 
@@ -133,6 +137,8 @@ const updateScripts = {
     "update/deploy": ".update/scripts/deploy.sh",
     "update/setup": ".update/scripts/interactive-setup.sh",
     "update/test-ssh": "echo 'Testing SSH connection...' && .update/scripts/test-ssh.sh",
+    "update/test": ".update/tests/run-tests.sh",
+    "update/test-connections": ".update/tests/test-connections.sh",
     "update/logs": "ls -la .update/logs/ && echo 'Latest log:' && ls -t .update/logs/*.log 2>/dev/null | head -1 | xargs tail -20"
 };
 
@@ -216,13 +222,15 @@ fi
 
 echo ""
 echo -e "${GREEN}Available npm commands:${NC}"
-echo "• npm run update              - Run complete update workflow"
-echo "• npm run sync-db             - Sync database from production"
-echo "• npm run sync-assets         - Sync assets from production"
-echo "• npm run sync-directories    - Sync additional directories"
-echo "• npm run update/deploy       - Deploy to production"
-echo "• npm run update/setup        - Interactive setup wizard"
-echo "• npm run update/test-ssh     - Test SSH connection"
-echo "• npm run update/logs         - View recent update logs"
+echo "• npm run update                - Run complete update workflow"
+echo "• npm run sync-db               - Sync database from production"
+echo "• npm run sync-assets           - Sync assets from production"
+echo "• npm run sync-directories      - Sync additional directories"
+echo "• npm run update/deploy         - Deploy to production"
+echo "• npm run update/setup          - Interactive setup wizard"
+echo "• npm run update/test-ssh       - Test SSH connection"
+echo "• npm run update/test           - Run all unit and integration tests"
+echo "• npm run update/test-connections - Test connections to production"
+echo "• npm run update/logs           - View recent update logs"
 echo ""
 success "NPM scripts setup complete!"
