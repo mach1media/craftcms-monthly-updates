@@ -1,6 +1,32 @@
 # Craft CMS Monthly Update Helper Scripts
 
-A collection of helper script to assist in performing monthly updates for Craft CMS projects hosted on servers provisioned by various providers.
+Automates the tedious monthly maintenance routine for Craft CMS projects. Eliminates manual database downloads, asset syncing, and deployment coordination that solo developers typically struggle with when maintaining multiple client sites.
+
+## What Problems This Solves
+
+**For Solo Developers Managing Multiple Craft CMS Sites:**
+- **Manual Database Sync Pain**: No more manually downloading production databases, importing locally, and managing backup files
+- **Asset Sync Complexity**: Automatically handles FTP/SFTP asset synchronization or skips it entirely for cloud storage (S3, Spaces)
+- **Update Workflow Chaos**: Replaces error-prone manual processes with a consistent, tested workflow
+- **Deployment Coordination**: Streamlines the update → test → deploy cycle with built-in rollback options
+- **Environment Inconsistency**: Ensures your local development environment perfectly mirrors production data
+
+## What the Main Script Does
+
+When you run `npm run update`, the orchestrator script:
+
+1. **Pulls** the latest code from your production branch
+2. **Syncs** production database automatically via SSH (handles authentication, backup, download, import)
+3. **Syncs** assets from production (FTP/SFTP) or skips for cloud storage
+4. **Creates** a dated update branch (`update/2025-01-15`)
+5. **Updates** Composer dependencies and runs Craft migrations
+6. **Pauses** for you to test locally, then offers options:
+   - Rollback and start over
+   - Merge to production and deploy automatically
+   - Merge without deploying
+   - Stay on update branch for manual control
+
+**Result**: What used to take 30+ minutes of manual work becomes a mostly-automated 5-minute process.
 
 
 ## Integration into Existing Craft CMS Projects
