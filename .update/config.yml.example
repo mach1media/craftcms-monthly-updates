@@ -3,6 +3,10 @@
 # Or copy to config.yml and fill in manually
 
 # Git settings
+# Production deployment branch - the branch used for:
+# - Pulling updates at start of process
+# - Pushing updates after completion  
+# - Deployment to production environment
 branch: main
 
 # Production site
