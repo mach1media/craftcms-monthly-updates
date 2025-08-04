@@ -2,8 +2,9 @@
  # NEO BLOCK TYPE: GENERAL
  #}
 {% css %}
-.ff-label {
-	display: inherit;
+.ff-label,
+.ff-required-mark {
+	display: inline;
 }
 {% endcss %}
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
