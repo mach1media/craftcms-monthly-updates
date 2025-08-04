@@ -32,19 +32,22 @@ get_config() {
         exit 1
     fi
     
-    # Simple YAML parser for key: value pairs
-    local value=$(grep "^${key}:" "$config_file" | sed "s/^${key}:\s*//" | sed 's/^["'\'']//' | sed 's/["'\'']$//' | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
-    
-    if [ -z "$value" ]; then
+    # Check if key exists in config file first
+    if ! grep -q "^${key}:" "$config_file"; then
         if [ -n "$default_value" ]; then
             echo "$default_value"
         else
             echo -e "${RED}[ERROR]${NC} Required config key '$key' not found in $config_file" >&2
             exit 1
         fi
-    else
-        echo "$value"
+        return
     fi
+    
+    # Simple YAML parser for key: value pairs
+    local value=$(grep "^${key}:" "$config_file" | sed "s/^${key}:\s*//" | sed 's/^["'\'']//' | sed 's/["'\'']$//' | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
+    
+    # Return the value (even if empty) since the key exists
+    echo "$value"
 }
 
 # Function to get password/token from config or prompt user
