@@ -15,16 +15,27 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# NPM scripts to add
-declare -A UPDATE_SCRIPTS=(
-    ["update"]=".update/update.sh"
-    ["sync-db"]=".update/scripts/sync-db.sh"  
-    ["sync-assets"]=".update/scripts/sync-assets.sh"
-    ["sync-directories"]=".update/scripts/sync-directories.sh"
-    ["update/deploy"]=".update/scripts/deploy.sh"
-    ["update/setup"]=".update/scripts/interactive-setup.sh"
-    ["update/test-ssh"]="echo 'Testing SSH connection...' && .update/scripts/test-ssh.sh"
-    ["update/logs"]="ls -la .update/logs/ && echo 'Latest log:' && ls -t .update/logs/*.log 2>/dev/null | head -1 | xargs tail -20"
+# NPM scripts to add - using explicit arrays to ensure proper ordering
+SCRIPT_NAMES=(
+    "update"
+    "sync-db"
+    "sync-assets"
+    "sync-directories"
+    "update/deploy"
+    "update/setup"
+    "update/test-ssh"
+    "update/logs"
+)
+
+SCRIPT_COMMANDS=(
+    ".update/update.sh"
+    ".update/scripts/sync-db.sh"
+    ".update/scripts/sync-assets.sh"
+    ".update/scripts/sync-directories.sh"
+    ".update/scripts/deploy.sh"
+    ".update/scripts/interactive-setup.sh"
+    "echo 'Testing SSH connection...' && .update/scripts/test-ssh.sh"
+    "ls -la .update/logs/ && echo 'Latest log:' && ls -t .update/logs/*.log 2>/dev/null | head -1 | xargs tail -20"
 )
 
 info() {
@@ -57,13 +68,13 @@ EOF
 
     # Add update scripts
     local first=true
-    for script_name in "${!UPDATE_SCRIPTS[@]}"; do
+    for i in "${!SCRIPT_NAMES[@]}"; do
         if [ "$first" = true ]; then
             first=false
         else
             echo "," >> "$PACKAGE_JSON"
         fi
-        echo -n "    \"$script_name\": \"${UPDATE_SCRIPTS[$script_name]}\"" >> "$PACKAGE_JSON"
+        echo -n "    \"${SCRIPT_NAMES[$i]}\": \"${SCRIPT_COMMANDS[$i]}\"" >> "$PACKAGE_JSON"
     done
     
     cat >> "$PACKAGE_JSON" << EOF
@@ -89,8 +100,8 @@ add_to_existing_package_json() {
         
         # Read existing package.json and add scripts
         jq_script='.'
-        for script_name in "${!UPDATE_SCRIPTS[@]}"; do
-            jq_script="$jq_script | .scripts[\"$script_name\"] = \"${UPDATE_SCRIPTS[$script_name]}\""
+        for i in "${!SCRIPT_NAMES[@]}"; do
+            jq_script="$jq_script | .scripts[\"${SCRIPT_NAMES[$i]}\"] = \"${SCRIPT_COMMANDS[$i]}\""
         done
         
         jq "$jq_script" "$PACKAGE_JSON" > "$temp_file"
@@ -140,8 +151,8 @@ EOF
             echo ""
             echo "Please manually add these scripts to your package.json:"
             echo ""
-            for script_name in "${!UPDATE_SCRIPTS[@]}"; do
-                echo "  \"$script_name\": \"${UPDATE_SCRIPTS[$script_name]}\","
+            for i in "${!SCRIPT_NAMES[@]}"; do
+                echo "  \"${SCRIPT_NAMES[$i]}\": \"${SCRIPT_COMMANDS[$i]}\","
             done
             echo ""
             echo "Add them to the \"scripts\" section of your package.json file."
@@ -154,9 +165,9 @@ EOF
 check_for_conflicts() {
     if command -v jq >/dev/null 2>&1; then
         local conflicts=()
-        for script_name in "${!UPDATE_SCRIPTS[@]}"; do
-            if jq -r ".scripts[\"$script_name\"] // empty" "$PACKAGE_JSON" | grep -q .; then
-                conflicts+=("$script_name")
+        for i in "${!SCRIPT_NAMES[@]}"; do
+            if jq -r ".scripts[\"${SCRIPT_NAMES[$i]}\"] // empty" "$PACKAGE_JSON" | grep -q .; then
+                conflicts+=("${SCRIPT_NAMES[$i]}")
             fi
         done
         
