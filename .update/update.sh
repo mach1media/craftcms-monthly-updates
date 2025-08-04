@@ -32,7 +32,7 @@ source "$SCRIPT_DIR/scripts/helpers.sh"
 # Parse config using helper function
 PRODUCTION_URL=$(get_config "production_url")
 DEPLOYMENT_METHOD=$(get_config "deployment_method")
-REPO_BRANCH=$(get_config "branch" "main")
+PRODUCTION_BRANCH=$(get_config "branch" "main")
 RUN_NPM_BUILD=$(get_config "run_npm_build" "false")
 NPM_BUILD_COMMAND=$(get_config "npm_build_command" "npm run build")
 ASSET_STORAGE_TYPE=$(get_config "asset_storage_type" "local")
@@ -55,7 +55,7 @@ success "✓ In project root"
 
 # Step 2: Pull from git
 info "Pulling latest changes from git..."
-git pull origin "$REPO_BRANCH" || pause_on_error "Git pull failed"
+git pull origin "$PRODUCTION_BRANCH" || pause_on_error "Git pull failed"
 success "✓ Git pull complete"
 
 # Step 3 & 4: Database sync
@@ -134,8 +134,8 @@ echo -e "${YELLOW}Current branch: $UPDATE_BRANCH${NC}"
 echo ""
 echo "What would you like to do?"
 echo "1) Start over (delete branch and restart)"
-echo "2) Merge to $REPO_BRANCH and deploy"
-echo "3) Merge to $REPO_BRANCH without deploying"
+echo "2) Merge to $PRODUCTION_BRANCH and deploy"
+echo "3) Merge to $PRODUCTION_BRANCH without deploying"
 echo "4) Exit (stay on update branch)"
 echo ""
 read -p "Enter your choice (1-4): " choice
@@ -143,19 +143,19 @@ read -p "Enter your choice (1-4): " choice
 case $choice in
     1)
         info "Starting over..."
-        git checkout "$REPO_BRANCH"
+        git checkout "$PRODUCTION_BRANCH"
         git branch -D "$UPDATE_BRANCH"
         exec "$0"  # Restart script
         ;;
     2)
-        info "Merging to $REPO_BRANCH and deploying..."
-        git checkout "$REPO_BRANCH"
+        info "Merging to $PRODUCTION_BRANCH and deploying..."
+        git checkout "$PRODUCTION_BRANCH"
         git merge "$UPDATE_BRANCH" --no-ff -m "Merge $UPDATE_BRANCH"
         git branch -d "$UPDATE_BRANCH"
         
         # Step 8: Push to git
         info "Pushing changes to git..."
-        git push origin "$REPO_BRANCH" || pause_on_error "Git push failed"
+        git push origin "$PRODUCTION_BRANCH" || pause_on_error "Git push failed"
         success "✓ Changes pushed to git"
         
         # Step 9: Deploy
@@ -164,20 +164,20 @@ case $choice in
         success "✓ Deployed to production"
         ;;
     3)
-        info "Merging to $REPO_BRANCH without deploying..."
-        git checkout "$REPO_BRANCH"
+        info "Merging to $PRODUCTION_BRANCH without deploying..."
+        git checkout "$PRODUCTION_BRANCH"
         git merge "$UPDATE_BRANCH" --no-ff -m "Merge $UPDATE_BRANCH"
         git branch -d "$UPDATE_BRANCH"
         
         # Step 8: Push to git
         info "Pushing changes to git..."
-        git push origin "$REPO_BRANCH" || pause_on_error "Git push failed"
+        git push origin "$PRODUCTION_BRANCH" || pause_on_error "Git push failed"
         success "✓ Changes pushed to git"
         info "Skipping deployment. Run '.update/scripts/deploy.sh' manually when ready."
         ;;
     4)
         info "Exiting. You are still on branch: $UPDATE_BRANCH"
-        info "To resume, manually merge to $REPO_BRANCH when ready."
+        info "To resume, manually merge to $PRODUCTION_BRANCH when ready."
         ;;
     *)
         error "Invalid choice"

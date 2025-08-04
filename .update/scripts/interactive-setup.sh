@@ -48,8 +48,14 @@ prompt_password() {
 echo -e "${YELLOW}Basic Configuration${NC}"
 echo ""
 
-# Git branch
-prompt_with_default "Git branch" "main" "BRANCH"
+# Production deployment branch
+echo "What git branch should be used for production deployment?"
+echo "This is the branch that will be:"
+echo "• Pulled from at the start of updates"
+echo "• Pushed to after successful updates"
+echo "• Used for deployment to production"
+echo ""
+prompt_with_default "Production deployment branch" "main" "PRODUCTION_BRANCH"
 
 # Production URL
 prompt_with_default "Production site URL (e.g., https://example.com)" "" "PRODUCTION_URL"
@@ -349,7 +355,7 @@ cat > "$CONFIG_FILE" << EOF
 # Generated on $(date)
 
 # Git settings
-branch: $BRANCH
+branch: $PRODUCTION_BRANCH
 
 # Production site
 production_url: $PRODUCTION_URL
