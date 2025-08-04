@@ -21,15 +21,29 @@ SSH_PORT=$(get_config "ssh_port" "22")
 FTP_PASSWORD=$(get_config "ftp_password")
 REMOTE_PROJECT_DIR=$(get_config "remote_project_dir")
 
-# Function to find SSH key
+# Function to find SSH key that actually works
 find_ssh_key() {
     local keys=(
-        "$HOME/.ssh/serverpilot"
         "$HOME/.ssh/id_rsa"
         "$HOME/.ssh/id_ed25519"
         "$HOME/.ssh/id_ecdsa"
+        "$HOME/.ssh/serverpilot"
     )
     
+    # First try to find a key that actually works by testing connection
+    for key in "${keys[@]}"; do
+        if [ -f "$key" ]; then
+            # Test if this key works for the connection
+            if ssh -o ConnectTimeout=5 -o BatchMode=yes -o StrictHostKeyChecking=no \
+                -i "$key" -p "$SSH_PORT" \
+                "$SSH_USER@$SSH_HOST" "echo 'test'" >/dev/null 2>&1; then
+                echo "$key"
+                return 0
+            fi
+        fi
+    done
+    
+    # Fallback: return first available key (old behavior)
     for key in "${keys[@]}"; do
         if [ -f "$key" ]; then
             echo "$key"
@@ -77,14 +91,12 @@ execute_remote_command() {
         full_command="cd '$REMOTE_PROJECT_DIR' && $command"
     fi
     
-    # Try SSH key authentication first
+    # Try SSH key authentication first (find_ssh_key already tested the connection)
     if SSH_KEY=$(find_ssh_key); then
-        if test_ssh_connection "key" "$SSH_KEY"; then
-            ssh -o BatchMode=yes -o StrictHostKeyChecking=no \
-                -i "$SSH_KEY" -p "$SSH_PORT" \
-                "$SSH_USER@$SSH_HOST" "$full_command"
-            return $?
-        fi
+        ssh -o BatchMode=yes -o StrictHostKeyChecking=no \
+            -i "$SSH_KEY" -p "$SSH_PORT" \
+            "$SSH_USER@$SSH_HOST" "$full_command"
+        return $?
     fi
     
     # Try password authentication
@@ -106,14 +118,12 @@ download_file() {
     local remote_path=$1
     local local_path=$2
     
-    # Try SSH key authentication first
+    # Try SSH key authentication first (find_ssh_key already tested the connection)
     if SSH_KEY=$(find_ssh_key); then
-        if test_ssh_connection "key" "$SSH_KEY"; then
-            scp -o BatchMode=yes -o StrictHostKeyChecking=no \
-                -i "$SSH_KEY" -P "$SSH_PORT" \
-                "$SSH_USER@$SSH_HOST:$remote_path" "$local_path"
-            return $?
-        fi
+        scp -o BatchMode=yes -o StrictHostKeyChecking=no \
+            -i "$SSH_KEY" -P "$SSH_PORT" \
+            "$SSH_USER@$SSH_HOST:$remote_path" "$local_path"
+        return $?
     fi
     
     # Try password authentication
@@ -145,14 +155,12 @@ sync_directory() {
         done
     fi
     
-    # Try SSH key authentication first
+    # Try SSH key authentication first (find_ssh_key already tested the connection)
     if SSH_KEY=$(find_ssh_key); then
-        if test_ssh_connection "key" "$SSH_KEY"; then
-            eval rsync -avz --delete $exclude_opts \
-                -e "ssh -i '$SSH_KEY' -p $SSH_PORT -o StrictHostKeyChecking=no" \
-                "$SSH_USER@$SSH_HOST:$remote_path/" "$local_path/"
-            return $?
-        fi
+        eval rsync -avz --delete $exclude_opts \
+            -e "ssh -i '$SSH_KEY' -p $SSH_PORT -o StrictHostKeyChecking=no" \
+            "$SSH_USER@$SSH_HOST:$remote_path/" "$local_path/"
+        return $?
     fi
     
     # Try password authentication with sshpass
