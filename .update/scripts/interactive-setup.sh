@@ -457,6 +457,12 @@ if [ -n "$ADDITIONAL_SYNC_DIRS" ]; then
 # Additional directories to sync
 additional_sync_dirs: $ADDITIONAL_SYNC_DIRS
 EOF
+else
+    cat >> "$CONFIG_FILE" << EOF
+
+# Additional directories to sync
+additional_sync_dirs: 
+EOF
 fi
 
 cat >> "$CONFIG_FILE" << EOF
