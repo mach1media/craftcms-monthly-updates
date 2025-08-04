@@ -35,6 +35,8 @@ DEPLOYMENT_METHOD=$(get_config "deployment_method")
 REPO_BRANCH=$(get_config "branch" "main")
 RUN_NPM_BUILD=$(get_config "run_npm_build" "false")
 NPM_BUILD_COMMAND=$(get_config "npm_build_command" "npm run build")
+ASSET_STORAGE_TYPE=$(get_config "asset_storage_type" "local")
+ADDITIONAL_SYNC_DIRS=$(get_config "additional_sync_dirs")
 
 # Create log directory
 mkdir -p "$SCRIPT_DIR/logs"
@@ -61,10 +63,21 @@ info "Syncing database from production..."
 "$SCRIPT_DIR/scripts/sync-db.sh" || pause_on_error "Database sync failed"
 success "✓ Database synced"
 
-# Step 5: Asset sync
-info "Syncing assets from production..."
-"$SCRIPT_DIR/scripts/sync-assets.sh" || pause_on_error "Asset sync failed"
-success "✓ Assets synced"
+# Step 5: Asset sync (only for local storage)
+if [ "$ASSET_STORAGE_TYPE" = "local" ]; then
+    info "Syncing assets from production (local storage)..."
+    "$SCRIPT_DIR/scripts/sync-assets.sh" || pause_on_error "Asset sync failed"
+    success "✓ Assets synced"
+else
+    info "Asset storage type: $ASSET_STORAGE_TYPE (cloud storage - skipping local sync)"
+fi
+
+# Step 5b: Additional directory sync
+if [ -n "$ADDITIONAL_SYNC_DIRS" ]; then
+    info "Syncing additional directories from production..."
+    "$SCRIPT_DIR/scripts/sync-directories.sh" || pause_on_error "Additional directory sync failed"
+    success "✓ Additional directories synced"
+fi
 
 # Create update branch
 UPDATE_BRANCH="update/$(date +%Y-%m-%d)"

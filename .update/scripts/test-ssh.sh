@@ -1,14 +1,17 @@
 #!/bin/bash
 
 # SSH Connection Test Script
+# Uses the same connection methods as the actual sync scripts
 
 set -e
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source "$SCRIPT_DIR/helpers.sh"
 
-# Parse config
+# Export CONFIG_FILE for helper functions
 export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
+
+source "$SCRIPT_DIR/helpers.sh"
+source "$SCRIPT_DIR/remote-exec.sh"
 
 if [ ! -f "$CONFIG_FILE" ]; then
     error "Config file not found. Run 'npm run update:config' first."
@@ -21,86 +24,128 @@ REMOTE_PROJECT_DIR=$(get_config "remote_project_dir")
 
 info "Testing SSH connection to $SSH_USER@$SSH_HOST:$SSH_PORT"
 info "Remote project directory: $REMOTE_PROJECT_DIR"
+echo ""
 
-# Test SSH key authentication
-SSH_KEY_FOUND=false
-ssh_keys=("serverpilot" "id_rsa" "id_ed25519")
+# Test connection using the same method as sync scripts
+info "Testing SSH connection methods..."
 
-for key in "${ssh_keys[@]}"; do
-    key_path="$HOME/.ssh/$key"
-    if [ -f "$key_path" ]; then
-        info "Testing SSH key: $key_path"
-        
-        # Check if key has a passphrase
-        if ssh-keygen -y -f "$key_path" >/dev/null 2>&1; then
-            info "SSH key is readable (no passphrase or passphrase in agent)"
-        else
-            info "SSH key requires passphrase or has issues - this might be the problem"
-        fi
-        
-        info "Command: ssh -i \"$key_path\" -p \"$SSH_PORT\" -o ConnectTimeout=5 -o BatchMode=yes -o StrictHostKeyChecking=no \"$SSH_USER@$SSH_HOST\""
-        
-        # First test with verbose output to see what's happening
-        info "Running SSH test with debug output..."
-        set +e  # Don't exit on error
-        
-        ssh_output=$(gtimeout 15 ssh -i "$key_path" -p "$SSH_PORT" -o ConnectTimeout=5 -o ServerAliveInterval=5 -o ServerAliveCountMax=1 -o BatchMode=yes -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "echo 'SSH key authentication successful'" 2>&1)
-        ssh_exit_code=$?
-        set -e  # Re-enable exit on error
-        
-        info "SSH exit code: $ssh_exit_code"
-        if [ -n "$ssh_output" ]; then
-            info "SSH output: $ssh_output"
-        fi
-        
-        if [ $ssh_exit_code -eq 0 ]; then
-            success "✓ SSH key authentication works with $key"
-            SSH_KEY_FOUND=true
-            
-            # Test remote Craft access
-            info "Testing remote Craft CMS access..."
-            if ssh -i "$key_path" -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "cd $REMOTE_PROJECT_DIR && php craft --version" 2>/dev/null; then
-                success "✓ Remote Craft CMS access works"
-            else
-                error "✗ Remote Craft CMS access failed"
-            fi
-            break
-        else
-            info "✗ SSH key $key did not work (exit code: $ssh_exit_code)"
-        fi
-    else
-        info "SSH key not found: $key_path"
-    fi
-done
-
-if [ "$SSH_KEY_FOUND" = false ]; then
-    info "No working SSH keys found. Testing password authentication..."
+# Try to find SSH key
+if SSH_KEY=$(find_ssh_key); then
+    info "Found SSH key: $SSH_KEY"
     
-    if command -v sshpass &> /dev/null; then
-        SSH_PASSWORD=$(get_password "ftp_password" "Enter SSH password for $SSH_USER@$SSH_HOST:")
-        
-        if sshpass -p "$SSH_PASSWORD" ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "echo 'SSH password authentication successful'" 2>/dev/null; then
-            success "✓ SSH password authentication works"
-            
-            # Test remote Craft access
-            info "Testing remote Craft CMS access..."
-            if sshpass -p "$SSH_PASSWORD" ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "cd $REMOTE_PROJECT_DIR && php craft --version" 2>/dev/null; then
-                success "✓ Remote Craft CMS access works"
-            else
-                error "✗ Remote Craft CMS access failed"
-            fi
-        else
-            error "✗ SSH password authentication failed"
-        fi
+    # Test SSH key authentication
+    if test_ssh_connection "key" "$SSH_KEY"; then
+        success "✓ SSH key authentication successful"
+        METHOD="key"
     else
-        info "sshpass not installed. Install with: brew install sshpass"
-        info "Testing basic SSH connection (will prompt for password)..."
-        if ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "echo 'SSH connection successful'"; then
-            success "✓ SSH connection works (manual password entry)"
+        warning "SSH key authentication failed"
+    fi
+else
+    info "No SSH keys found in standard locations"
+fi
+
+# If key didn't work, try password
+if [ -z "${METHOD:-}" ]; then
+    FTP_PASSWORD=$(get_config "ftp_password")
+    if [ -n "$FTP_PASSWORD" ] && command -v sshpass >/dev/null 2>&1; then
+        info "Testing password authentication..."
+        if test_ssh_connection "password"; then
+            success "✓ SSH password authentication successful"
+            METHOD="password"
         else
-            error "✗ SSH connection failed"
+            warning "SSH password authentication failed"
         fi
+    elif command -v sshpass >/dev/null 2>&1; then
+        info "No password configured in config.yml"
+    else
+        info "sshpass not installed (required for password auth)"
+        info "Install with: brew install sshpass"
     fi
 fi
 
-success "SSH connection test completed"
+# If we have a working connection, test various operations
+if [ -n "${METHOD:-}" ]; then
+    echo ""
+    info "Testing remote operations..."
+    
+    # Test basic command execution
+    info "Testing command execution..."
+    if execute_remote_command "echo 'Remote command execution works'" false >/dev/null 2>&1; then
+        success "✓ Remote command execution works"
+    else
+        error "✗ Remote command execution failed"
+    fi
+    
+    # Test project directory access
+    info "Testing project directory access..."
+    if execute_remote_command "[ -d '$REMOTE_PROJECT_DIR' ] && echo 'Directory exists'" false >/dev/null 2>&1; then
+        success "✓ Project directory exists: $REMOTE_PROJECT_DIR"
+    else
+        error "✗ Project directory not found: $REMOTE_PROJECT_DIR"
+    fi
+    
+    # Test Craft CMS access
+    info "Testing Craft CMS installation..."
+    if execute_remote_command "php craft --version 2>/dev/null || php craft about 2>/dev/null" true >/dev/null 2>&1; then
+        CRAFT_VERSION=$(execute_remote_command "php craft --version 2>/dev/null || php craft about 2>/dev/null | grep Version" true 2>/dev/null || echo "Unknown")
+        success "✓ Craft CMS found: $CRAFT_VERSION"
+    else
+        warning "✗ Could not verify Craft CMS installation"
+        echo "  This might be normal if Craft is not in the expected location"
+    fi
+    
+    # Test backup directory
+    BACKUP_DIR=$(get_config "backup_dir" "storage/backups")
+    info "Testing backup directory..."
+    if execute_remote_command "[ -d '$BACKUP_DIR' ] && echo 'Backup directory exists'" true >/dev/null 2>&1; then
+        success "✓ Backup directory exists: $BACKUP_DIR"
+    else
+        warning "✗ Backup directory not found: $BACKUP_DIR"
+        echo "  It will be created during backup if needed"
+    fi
+    
+    # Test asset storage type and directories
+    ASSET_STORAGE_TYPE=$(get_config "asset_storage_type" "local")
+    if [ "$ASSET_STORAGE_TYPE" = "local" ]; then
+        UPLOADS_DIR=$(get_config "uploads_dir" "web/uploads")
+        info "Testing uploads directory (local storage)..."
+        if execute_remote_command "[ -d '$UPLOADS_DIR' ] && echo 'Uploads directory exists'" true >/dev/null 2>&1; then
+            FILE_COUNT=$(execute_remote_command "find '$UPLOADS_DIR' -type f 2>/dev/null | wc -l" true 2>/dev/null || echo "0")
+            success "✓ Uploads directory exists: $UPLOADS_DIR ($FILE_COUNT files)"
+        else
+            warning "✗ Uploads directory not found: $UPLOADS_DIR"
+        fi
+    else
+        info "Asset storage type: $ASSET_STORAGE_TYPE (cloud storage - no local sync needed)"
+    fi
+    
+    # Test additional sync directories if configured
+    ADDITIONAL_DIRS=$(get_config "additional_sync_dirs")
+    if [ -n "$ADDITIONAL_DIRS" ]; then
+        info "Testing additional sync directories..."
+        IFS=',' read -ra DIRS <<< "$ADDITIONAL_DIRS"
+        for dir in "${DIRS[@]}"; do
+            dir=$(echo "$dir" | xargs)
+            if execute_remote_command "[ -d '$dir' ] && echo 'Directory exists'" true >/dev/null 2>&1; then
+                success "  ✓ $dir"
+            else
+                warning "  ✗ $dir (not found)"
+            fi
+        done
+    fi
+    
+    echo ""
+    success "SSH connection test completed successfully!"
+    echo "Connection method: $METHOD"
+else
+    echo ""
+    error "No working SSH authentication method found"
+    echo ""
+    echo "Troubleshooting steps:"
+    echo "1. Check SSH credentials in config.yml"
+    echo "2. Ensure SSH key is added to the server"
+    echo "3. For password auth, install sshpass: brew install sshpass"
+    echo "4. Test manual SSH: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST"
+    exit 1
+fi
+

@@ -265,18 +265,68 @@ case "$SERVER_TOOL" in
         ;;
 esac
 
-# FTP settings
+# Asset storage configuration
 echo ""
-echo -e "${YELLOW}FTP Configuration (for asset sync)${NC}"
-prompt_with_default "FTP hostname" "$SSH_HOST" "FTP_HOST"
-prompt_with_default "FTP username" "$SSH_USER" "FTP_USER"
-prompt_password "FTP/SSH password" "FTP_PASSWORD"
+echo -e "${YELLOW}Asset Storage Configuration${NC}"
+echo ""
+echo "What type of filesystem is used for Craft CMS assets?"
+echo "1) Local Folder (files stored on server)"
+echo "2) AWS S3"
+echo "3) Digital Ocean Spaces"
+echo "4) Other cloud storage"
+echo ""
+read -p "Select option (1-4): " ASSET_STORAGE
+
+case "$ASSET_STORAGE" in
+    1) 
+        ASSET_STORAGE_TYPE="local"
+        # FTP settings for local asset sync
+        echo ""
+        echo -e "${YELLOW}FTP Configuration (for asset sync)${NC}"
+        prompt_with_default "FTP hostname" "$SSH_HOST" "FTP_HOST"
+        prompt_with_default "FTP username" "$SSH_USER" "FTP_USER"
+        prompt_password "FTP/SSH password" "FTP_PASSWORD"
+        ;;
+    2) 
+        ASSET_STORAGE_TYPE="s3"
+        echo -e "${BLUE}AWS S3 configured - no local sync needed${NC}"
+        ;;
+    3) 
+        ASSET_STORAGE_TYPE="spaces"
+        echo -e "${BLUE}Digital Ocean Spaces configured - no local sync needed${NC}"
+        ;;
+    4) 
+        ASSET_STORAGE_TYPE="other"
+        echo -e "${BLUE}Cloud storage configured - no local sync needed${NC}"
+        ;;
+    *) 
+        ASSET_STORAGE_TYPE="local"
+        ;;
+esac
 
 # Shared paths
 echo ""
 echo -e "${YELLOW}Directory Paths${NC}"
 prompt_with_default "Backup directory (relative path)" "storage/backups" "BACKUP_DIR"
-prompt_with_default "Uploads directory (relative path)" "$PUBLIC_DIR/uploads" "UPLOADS_DIR"
+
+# Only ask for uploads directory if using local storage
+if [ "$ASSET_STORAGE_TYPE" = "local" ]; then
+    prompt_with_default "Uploads directory (relative path)" "$PUBLIC_DIR/uploads" "UPLOADS_DIR"
+else
+    UPLOADS_DIR="$PUBLIC_DIR/uploads"  # Set default but won't be used
+fi
+
+# Additional directories to sync
+echo ""
+echo -e "${YELLOW}Additional Directory Sync${NC}"
+echo ""
+read -p "Do you need to sync any other directories from production? (y/N): " SYNC_OTHER
+ADDITIONAL_SYNC_DIRS=""
+if [[ "$SYNC_OTHER" =~ ^[Yy]$ ]]; then
+    echo "Enter directories to sync (relative to project root, comma-separated)"
+    echo "Example: storage/runtime/temp,config/project"
+    read -p "Directories: " ADDITIONAL_SYNC_DIRS
+fi
 
 # Build settings
 echo ""
@@ -314,13 +364,34 @@ remote_project_dir: $REMOTE_PROJECT_DIR
 backup_dir: $BACKUP_DIR
 uploads_dir: $UPLOADS_DIR
 
+# Asset storage configuration
+asset_storage_type: $ASSET_STORAGE_TYPE
+
 # Remote server paths
 remote_uploads_dir: $REMOTE_UPLOADS_DIR
+EOF
+
+# Only add FTP settings if using local storage
+if [ "$ASSET_STORAGE_TYPE" = "local" ]; then
+    cat >> "$CONFIG_FILE" << EOF
 
 # FTP settings for asset sync
 ftp_host: $FTP_HOST
 ftp_user: $FTP_USER
 ftp_password: $FTP_PASSWORD
+EOF
+fi
+
+# Add additional sync directories if specified
+if [ -n "$ADDITIONAL_SYNC_DIRS" ]; then
+    cat >> "$CONFIG_FILE" << EOF
+
+# Additional directories to sync
+additional_sync_dirs: $ADDITIONAL_SYNC_DIRS
+EOF
+fi
+
+cat >> "$CONFIG_FILE" << EOF
 
 # Deployment method: $DEPLOYMENT_METHOD
 deployment_method: $DEPLOYMENT_METHOD
@@ -374,6 +445,16 @@ echo -e "${GREEN}✓ Configuration file created at: $CONFIG_FILE${NC}"
 chmod +x "$SCRIPT_DIR/../update.sh" "$SCRIPT_DIR"/*.sh
 
 echo -e "${GREEN}✓ Update scripts are now executable${NC}"
+
+# Setup npm scripts
+echo ""
+echo -e "${YELLOW}NPM Scripts Setup${NC}"
+read -p "Do you want to setup npm scripts for easy command access? (Y/n): " SETUP_NPM
+if [[ ! "$SETUP_NPM" =~ ^[Nn]$ ]]; then
+    "$SCRIPT_DIR/setup-npm-scripts.sh"
+else
+    echo "Skipped npm scripts setup. You can run it later with: .update/scripts/setup-npm-scripts.sh"
+fi
 
 # Summary
 echo ""

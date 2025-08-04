@@ -3,6 +3,10 @@
 set -e
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Export CONFIG_FILE for helper functions
+export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
+
 source "$SCRIPT_DIR/helpers.sh"
 
 # Cleanup function for proper signal handling
@@ -47,6 +51,29 @@ stop_progress() {
     fi
     echo -ne "\033[2K\r"  # Clear line
 }
+
+# Check asset storage type
+ASSET_STORAGE_TYPE=$(get_config "asset_storage_type" "local")
+
+# Exit early if not using local storage
+if [ "$ASSET_STORAGE_TYPE" != "local" ]; then
+    info "Asset storage type is '$ASSET_STORAGE_TYPE' - skipping local sync"
+    case "$ASSET_STORAGE_TYPE" in
+        "s3")
+            echo "Assets are stored in AWS S3 - no local sync needed"
+            ;;
+        "spaces")
+            echo "Assets are stored in Digital Ocean Spaces - no local sync needed"
+            ;;
+        "other")
+            echo "Assets are stored in cloud storage - no local sync needed"
+            ;;
+        *)
+            echo "Unknown storage type - no local sync performed"
+            ;;
+    esac
+    exit 0
+fi
 
 # Test SFTP connection with SSH key
 test_sftp_key_connection() {

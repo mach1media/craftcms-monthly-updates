@@ -3,82 +3,20 @@
 set -e
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Export CONFIG_FILE for helper functions
+export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
+
 source "$SCRIPT_DIR/helpers.sh"
+source "$SCRIPT_DIR/remote-exec.sh"
 
 # Parse config
-export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
 PRODUCTION_URL=$(get_config "production_url")
 BACKUP_DIR=$(get_config "backup_dir" "storage/backups")
 SSH_HOST=$(get_config "ssh_host")
 SSH_USER=$(get_config "ssh_user")
 SSH_PORT=$(get_config "ssh_port" "22")
 REMOTE_PROJECT_DIR=$(get_config "remote_project_dir")
-
-# SSH key detection function
-find_ssh_key() {
-    local ssh_keys=("serverpilot" "id_rsa" "id_ed25519")
-    
-    for key in "${ssh_keys[@]}"; do
-        local key_path="$HOME/.ssh/$key"
-        if [ -f "$key_path" ]; then
-            echo "$key_path"
-            return 0
-        fi
-    done
-    
-    return 1
-}
-
-# Test SSH connection function
-test_ssh_connection() {
-    local ssh_key="$1"
-    local ssh_args=""
-    
-    if [ -n "$ssh_key" ]; then
-        ssh_args="-i $ssh_key"
-    fi
-    
-    # Test SSH connection with a simple command - shorter timeout
-    gtimeout 10 ssh $ssh_args -p "$SSH_PORT" -o ConnectTimeout=5 -o BatchMode=yes -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "echo 'SSH connection successful'" 2>/dev/null
-}
-
-# Global variable to store SSH password to avoid multiple prompts
-SSH_PASSWORD=""
-
-# SSH with password function
-ssh_with_password() {
-    local command="$1"
-    
-    # Get password once and reuse it
-    if [ -z "$SSH_PASSWORD" ]; then
-        SSH_PASSWORD=$(get_password "ftp_password" "Enter SSH password for $SSH_USER@$SSH_HOST:")
-    fi
-    
-    # Use sshpass if available
-    if command -v sshpass &> /dev/null; then
-        sshpass -p "$SSH_PASSWORD" ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "$command"
-    else
-        error "sshpass not installed. Install with: brew install sshpass"
-    fi
-}
-
-# SCP with password function
-scp_with_password() {
-    local remote_file="$1"
-    local local_file="$2"
-    
-    # Use the same password as SSH
-    if [ -z "$SSH_PASSWORD" ]; then
-        SSH_PASSWORD=$(get_password "ftp_password" "Enter SSH password for $SSH_USER@$SSH_HOST:")
-    fi
-    
-    # Use sshpass if available
-    if command -v sshpass &> /dev/null; then
-        sshpass -p "$SSH_PASSWORD" scp -P "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST:$remote_file" "$local_file"
-    else
-        error "sshpass not installed. Install with: brew install sshpass"
-    fi
-}
 
 # Cleanup function for proper signal handling
 cleanup() {
@@ -124,37 +62,31 @@ stop_progress() {
 }
 
 # Main backup process
-info "Attempting to create database backup on remote server..."
+info "Starting database sync from production"
+info "Production: $PRODUCTION_URL"
 
 # Ensure local backup directory exists
 mkdir -p "$BACKUP_DIR"
 
-# Try SSH with key authentication first
-SSH_KEY=$(find_ssh_key) || true
 SSH_SUCCESS=false
+LOCAL_BACKUP_FILE=""
 
-if [ -n "$SSH_KEY" ]; then
-    info "Found SSH key: $SSH_KEY"
+# Test SSH connection using remote-exec
+info "Testing SSH connection..."
+if execute_remote_command "echo 'SSH connection successful'" false >/dev/null 2>&1; then
+    info "SSH connection successful"
     
-    info "Testing SSH connection with key authentication (10s timeout)..."
-    if test_ssh_connection "$SSH_KEY"; then
-        info "SSH key authentication successful"
-        info "About to run backup command on remote server..."
-        
-        # Run backup command on remote server
-        info "Creating database backup on remote server..."
-        
-        # Get timestamp before backup for file detection
-        BACKUP_TIME=$(date +%s)
-        info "About to execute SSH backup command..."
-        
-        # Temporarily disable exit on error for SSH command (deprecation warnings cause non-zero exit)
-        set +e
-        info "Executing: ssh -i \"$SSH_KEY\" -p \"$SSH_PORT\" \"$SSH_USER@$SSH_HOST\" \"cd $REMOTE_PROJECT_DIR && php craft db/backup --interactive=0\""
-        BACKUP_OUTPUT=$(ssh -i "$SSH_KEY" -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "cd $REMOTE_PROJECT_DIR && php craft db/backup --interactive=0" 2>&1)
-        backup_exit_code=$?
-        set -e
-        info "SSH backup command completed"
+    # Run backup command on remote server
+    info "Creating database backup on remote server..."
+    
+    # Get timestamp before backup for file detection
+    BACKUP_TIME=$(date +%s)
+    
+    # Temporarily disable exit on error for SSH command (deprecation warnings cause non-zero exit)
+    set +e
+    BACKUP_OUTPUT=$(execute_remote_command "php craft db/backup --interactive=0" true 2>&1)
+    backup_exit_code=$?
+    set -e
         
         # Debug output
         info "Backup exit code: $backup_exit_code"

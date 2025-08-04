@@ -24,10 +24,19 @@ remote_project_dir: /var/www/html
 backup_dir: storage/backups
 uploads_dir: web/uploads  # or public/uploads
 
-# Remote uploads path (full path for FTP)
+# Asset storage configuration
+# Options: local, s3, spaces, other
+asset_storage_type: local
+
+# Remote uploads path (full path for FTP - only needed if asset_storage_type is 'local')
 remote_uploads_dir: /var/www/html/web/uploads
 
-# FTP settings for asset sync
+# Additional directories to sync (optional)
+# Comma-separated list of directories relative to project root
+# Example: storage/runtime/temp,config/project
+additional_sync_dirs: 
+
+# FTP settings for asset sync (only needed if asset_storage_type is 'local')
 ftp_host: ftp.example.com
 ftp_user: username
 ftp_password:  # Optional - will prompt if empty

@@ -28,43 +28,90 @@ npm run sync-assets  # Sync assets from production
 npm run update/deploy  # Deploy to production
 ```
 
-## Using These Scripts in a Craft CMS Project
+## Integration into Existing Craft CMS Projects
 
-These utility scripts can be pulled into any Craft CMS project without affecting the project's main repository.
+### Method 1: Clone Integration Branch (Recommended)
 
-### Initial Setup
-
-From your Craft CMS project root:
+The `integration` branch is designed specifically for use in existing Craft CMS projects:
 
 ```bash
-# Add this repo as a remote named 'update'
-git remote add update git@github.com:mach1media/craftcms-monthly-updates.git
+# From your Craft CMS project root
+git remote add craftcms-updates https://github.com/mach1media/craftcms-monthly-updates.git
+git fetch craftcms-updates integration
+git checkout craftcms-updates/integration -- .update/
 
-# Fetch the utility scripts
-git fetch update
+# Run setup wizard
+.update/scripts/interactive-setup.sh
 
-# Pull specific scripts/folders if needed
-git checkout update/main -- .update/scripts/script.sh
-git checkout update/main -- .update/
-
-# Commit the scripts to your project
-git commit -m "Adds Craft CMS monthly update utility scripts"
+# Commit to your project
+git add .update/
+git commit -m "Add Craft CMS monthly update utility scripts"
 ```
 
-## Updating These Scripts within a Craft CMS Project
+### Method 2: Manual Integration
 
 ```bash
-# Fetch latest changes
-git fetch update
+# Download and extract the integration branch
+curl -L https://github.com/mach1media/craftcms-monthly-updates/archive/integration.tar.gz | tar -xz
+mv craftcms-monthly-updates-integration/.update ./
+rm -rf craftcms-monthly-updates-integration/
 
-# Check what changed
-git diff HEAD update/main -- .update/
-
-# Update specific files
-git checkout update/main -- .update/scripts/updated-script.sh
-git commit -m "Update utility scripts"
+# Run setup
+.update/scripts/interactive-setup.sh
 ```
 
-* Your main project's git push always goes to your Craft CMS repo (origin)
-* These scripts become part of your project's git history
-* Only pull files you actually need, not the entire repo
+### NPM Scripts Integration
+
+The setup wizard automatically handles npm scripts:
+
+- **If no package.json exists**: Creates one with the update scripts
+- **If package.json exists**: Adds update scripts to existing scripts section
+- **Conflict detection**: Warns if scripts will be overwritten
+
+You can also run npm setup separately:
+```bash
+.update/scripts/setup-npm-scripts.sh
+```
+
+### Available Commands After Setup
+
+```bash
+# Core update workflow
+npm run update
+
+# Individual operations  
+npm run sync-db
+npm run sync-assets
+npm run sync-directories
+
+# Setup and testing
+npm run update/setup
+npm run update/test-ssh
+npm run update/logs
+npm run update/deploy
+```
+
+### Updating Scripts in Your Project
+
+```bash
+# Fetch latest updates
+git fetch craftcms-updates integration
+
+# View changes
+git diff HEAD craftcms-updates/integration -- .update/
+
+# Update all scripts
+git checkout craftcms-updates/integration -- .update/
+git commit -m "Update Craft CMS utility scripts"
+
+# Update specific files only
+git checkout craftcms-updates/integration -- .update/scripts/sync-db.sh
+git commit -m "Update database sync script"
+```
+
+### Key Benefits
+
+- **No conflicts**: Integration branch excludes package.json and other project files
+- **Automatic npm setup**: Handles existing package.json files gracefully  
+- **Clean updates**: Only update the scripts you need
+- **Isolated**: Scripts don't interfere with your project structure
