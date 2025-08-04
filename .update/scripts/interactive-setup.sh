@@ -175,11 +175,11 @@ case "$SERVER_TOOL" in
         ;;
 esac
 
-# Common SSH settings
+# SSH/FTP Configuration
 echo ""
-echo -e "${YELLOW}SSH Configuration${NC}"
+echo -e "${YELLOW}SSH/FTP Configuration${NC}"
 echo ""
-echo "SSH connection details for your production server:"
+echo "SSH and FTP connection details for your production server:"
 echo "These settings enable automated:"
 echo "• Database backup creation and download"
 echo "• Remote Craft CMS command execution"
@@ -190,6 +190,28 @@ prompt_with_default "SSH hostname" "${PRODUCTION_URL#https://}" "SSH_HOST"
 SSH_HOST="${SSH_HOST#http://}"  # Remove protocol if present
 SSH_HOST="${SSH_HOST#https://}" # Remove protocol if present
 prompt_with_default "SSH port" "22" "SSH_PORT"
+
+# SSH/FTP Username
+echo ""
+echo "SSH/FTP username for connecting to your server:"
+echo "This user account must have:"
+echo "• SSH access to run remote commands"
+echo "• Read/write access to your project directory"
+echo "• Permission to create and access backup files"
+echo "• FTP/SFTP access for file synchronization (when needed)"
+echo ""
+prompt_with_default "SSH/FTP username" "$SSH_USER" "SSH_USER"
+
+# FTP Password (optional)
+echo ""
+echo "FTP/SSH password (optional):"
+echo "Leave blank if using SSH key authentication (recommended)"
+echo "Only needed if:"
+echo "• Your server requires password authentication"
+echo "• SSH key authentication is not set up"
+echo "• You want a fallback authentication method"
+echo ""
+prompt_password "FTP/SSH password" "FTP_PASSWORD"
 
 # Deployment method
 echo ""
@@ -318,20 +340,7 @@ read -p "Select option (1-4): " ASSET_STORAGE
 case "$ASSET_STORAGE" in
     1) 
         ASSET_STORAGE_TYPE="local"
-        # FTP settings for local asset sync
-        echo ""
-        echo -e "${YELLOW}FTP Configuration (for asset sync)${NC}"
-        echo ""
-        echo "FTP/SFTP settings for downloading production assets:"
-        echo "Used to synchronize:"
-        echo "• Images, documents, and media files from production"
-        echo "• User uploads and generated thumbnails"
-        echo "• Any files stored in your uploads directory"
-        echo "• Keeps local development assets in sync with production"
-        echo ""
-        prompt_with_default "FTP hostname" "$SSH_HOST" "FTP_HOST"
-        prompt_with_default "FTP username" "$SSH_USER" "FTP_USER"
-        prompt_password "FTP/SSH password" "FTP_PASSWORD"
+        echo -e "${BLUE}Local storage configured - will sync assets using SSH/FTP credentials${NC}"
         ;;
     2) 
         ASSET_STORAGE_TYPE="s3"
@@ -439,16 +448,14 @@ asset_storage_type: $ASSET_STORAGE_TYPE
 remote_uploads_dir: $REMOTE_UPLOADS_DIR
 EOF
 
-# Only add FTP settings if using local storage
-if [ "$ASSET_STORAGE_TYPE" = "local" ]; then
-    cat >> "$CONFIG_FILE" << EOF
+# Add FTP settings (using SSH credentials for FTP when needed)
+cat >> "$CONFIG_FILE" << EOF
 
-# FTP settings for asset sync
-ftp_host: $FTP_HOST
-ftp_user: $FTP_USER
+# FTP/SSH settings for file operations
+ftp_host: $SSH_HOST
+ftp_user: $SSH_USER
 ftp_password: $FTP_PASSWORD
 EOF
-fi
 
 # Add additional sync directories if specified
 if [ -n "$ADDITIONAL_SYNC_DIRS" ]; then

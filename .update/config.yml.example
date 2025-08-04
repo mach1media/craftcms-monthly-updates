@@ -14,7 +14,7 @@ production_url: https://example.com
 
 # SSH settings for automated database sync
 ssh_host: example.com
-ssh_user: username
+ssh_user: username  # forge (for Laravel Forge), serverpilot (for ServerPilot), ploi (for Ploi), etc.
 ssh_port: 22
 
 # Remote server paths (varies by hosting provider)
@@ -40,10 +40,11 @@ remote_uploads_dir: /var/www/html/web/uploads
 # Example: storage/runtime/temp,config/project
 additional_sync_dirs: 
 
-# FTP settings for asset sync (only needed if asset_storage_type is 'local')
-ftp_host: ftp.example.com
-ftp_user: username
-ftp_password:  # Optional - will prompt if empty
+# FTP/SSH settings for file operations
+# Usually same as SSH settings - used for asset sync and file operations
+ftp_host: example.com  # Usually same as ssh_host
+ftp_user: username     # Usually same as ssh_user (forge, serverpilot, ploi, etc.)
+ftp_password:          # Optional - leave empty if using SSH keys (recommended)
 
 # Deployment method options:
 # - github-actions (auto-deploy on push)
