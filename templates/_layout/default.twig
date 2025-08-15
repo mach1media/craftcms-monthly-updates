@@ -2,7 +2,7 @@
  # Layout template
  # ---------------
  #}
-{% set cacheBusterVersion = now | date('Ymd') ~ '.' ~ 0 %}
+{% set cacheBusterVersion = now | date('Ymd') ~ '.' ~ 2 %}
 {% include '_layout/_document-head' %}
 <body{% if bodyId is defined and bodyId != '' %} id="{{ bodyId }}"{% endif %} class="is-top{% if bodyClass is defined and bodyClass != '' %} {{ bodyClass }}{% endif %}">
 

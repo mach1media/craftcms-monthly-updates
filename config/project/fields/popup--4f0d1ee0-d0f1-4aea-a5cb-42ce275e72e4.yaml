@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: bf0e4db0-9861-4bba-b0d0-98bafe12bc6c # Page Builders
+handle: popup
+instructions: null
+name: Popup
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_popup}}'
+  maxBlocks: 1
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

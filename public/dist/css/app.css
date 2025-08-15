@@ -14976,3 +14976,64 @@ button > .c-icon--search {
     font-size: 3.25cqw;
   }
 }
+
+/**
+ * ALERT BAR
+ */
+.c-alert-bar .text-primary a {
+  color: #231F5B;
+}
+.c-alert-bar .text-secondary a {
+  color: #C19D68;
+}
+.c-alert-bar .text-tertiary a {
+  color: #3C3F9B;
+}
+.c-alert-bar .text-primary-light a {
+  color: #4039a7;
+}
+.c-alert-bar .text-secondary-light a {
+  color: #dfccb0;
+}
+.c-alert-bar .text-primary-extralight a {
+  color: #e9e8f7;
+}
+.c-alert-bar .text-secondary-extralight a {
+  color: #f5efe7;
+}
+.c-alert-bar .text-success a {
+  color: #198754;
+}
+.c-alert-bar .text-info a {
+  color: #0dcaf0;
+}
+.c-alert-bar .text-warning a {
+  color: #ffc107;
+}
+.c-alert-bar .text-danger a {
+  color: #dc3545;
+}
+.c-alert-bar .text-light a {
+  color: #f8f9fa;
+}
+.c-alert-bar .text-dark a {
+  color: #212529;
+}
+.c-alert-bar .text-white a {
+  color: white;
+}
+.c-alert-bar .text-black a {
+  color: black;
+}
+.c-alert-bar .text-silver a {
+  color: #F5F5F5;
+}
+.c-alert-bar .text-navy a {
+  color: #231F5B;
+}
+.c-alert-bar .text-tan a {
+  color: #C19D68;
+}
+.c-alert-bar .text-blue a {
+  color: #3C3F9B;
+}
