@@ -66,6 +66,30 @@ fieldLayouts:
             width: 25
           -
             elementCondition: null
+            fieldUid: d7309e06-7ddd-4cf6-aed8-416a67ebdaf3 # Alert Bar
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5177257f-4ac0-43c6-bc5d-03b45cb5113b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4f0d1ee0-d0f1-4aea-a5cb-42ce275e72e4 # Popup
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90ede2c3-918c-432f-af2b-e6231a4c16a1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
             instructions: null
             label: null
