@@ -3,6 +3,7 @@ name: Deploy to digitalocean
 on:
   push:
     branches:
+      - production
       - staging
       - main
 
@@ -20,7 +21,7 @@ jobs:
         CONFIG_FILE=.github/deploy-config.yml
         if [ "${{ github.ref_name }}" == "staging" ]; then
           ENVIRONMENT="staging"
-        elif [ "${{ github.ref_name }}" == "main" ]; then
+        elif [ "${{ github.ref_name }}" == "production" ]; then
           ENVIRONMENT="production"
         else
           echo "Unknown branch: ${{ github.ref_name }}"
