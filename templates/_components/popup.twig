@@ -55,7 +55,7 @@
 
 				<div class="modal-body p-0 {{ block.backgroundColor }} {{ block.textColor }} rounded">
 					{% if block.type.handle == 'sideBySide' %}
-						<div class="row g-0">
+						<div class="row g-0 align-items-center">
 							<div class="col-12 col-xl-6{% if block.imagePosition == 'right' %} order-xl-2{% endif %}">
 								{% if block.imageMobile | length %}
 									{% set imageMobile    = block.imageMobile.one %}
