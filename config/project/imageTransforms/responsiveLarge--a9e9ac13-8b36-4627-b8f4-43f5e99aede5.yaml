@@ -7,5 +7,5 @@ mode: fit
 name: 'Responsive: Large'
 position: center-center
 quality: 100
-upscale: true
+upscale: false
 width: 2000

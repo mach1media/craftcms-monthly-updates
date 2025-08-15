@@ -1,4 +1,4 @@
-dateModified: 1755277887
+dateModified: 1755290239
 elementSources:
   craft\elements\Entry:
     -
@@ -464,6 +464,7 @@ meta:
     f69cfc32-4011-4eea-a32a-f5ae9fd5b24e: 'Page Builder: General' # Page Builder: General
     f92f1b34-68ad-48fd-a712-c4cdb6b682f0: 'Rate Table' # Rate Table
     f700d39b-3a4f-4c99-a961-d9fb1f3df887: Subheading # Subheading
+    f93511fb-fce3-4ae1-bd26-27a91113ab48: 'Image: Mobile' # Image: Mobile
     f126506f-a32d-40b2-9d16-466e4201be40: Label # Label
     f8186410-e438-40ee-8131-7f31ebcd0fa9: 'Embed Code' # Embed Code
     faae928b-e4d7-4758-b4c1-0bc0bb55cac1: Text+Factoid # Text+Factoid

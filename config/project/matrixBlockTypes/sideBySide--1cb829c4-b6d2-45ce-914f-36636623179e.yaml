@@ -16,7 +16,19 @@ fieldLayouts:
             uid: 576cb5e3-d19c-43a9-86d9-3d5a5587e311
             userCondition: null
             warning: null
-            width: 50
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: f93511fb-fce3-4ae1-bd26-27a91113ab48 # Image: Mobile
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60482342-b3db-4fcf-bf0c-9e04e5e40daf
+            userCondition: null
+            warning: null
+            width: 25
           -
             elementCondition: null
             fieldUid: bbb08643-5a25-4c51-b363-072e75cdf192 # Image Position
@@ -110,13 +122,13 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: image
-    instructions: null
+    instructions: 'Tall version'
     name: Image
     searchable: false
     settings:
       allowSelfRelations: false
       allowSubfolders: false
-      allowUploads: true
+      allowUploads: false
       allowedKinds:
         - image
       branchLimit: null
@@ -133,7 +145,7 @@ fields:
       restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
       restrictedLocationSubpath: null
       selectionLabel: 'Add an image'
-      showSiteMenu: false
+      showSiteMenu: true
       showUnpermittedFiles: true
       showUnpermittedVolumes: true
       sources:
@@ -182,8 +194,24 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 269893624
-      contentTable: '{{%stc_buttons_2}}'
+      changedFieldIndicator: 634954947
+      columns:
+        __assoc__:
+          -
+            - a8aa09ad-74e8-4ad5-8d2d-7739c2b90664 # Button
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - d67baeb3-d18c-4287-8ce5-83a70d6f91d9 # Button Style
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_18_buttons}}'
       fieldLayout: matrix
       maxRows: null
       minRows: null
@@ -210,7 +238,7 @@ fields:
     type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
   bb7b4f41-f446-4225-bf73-3dd0315ee0a4: # Text Alignment
     columnSuffix: bzibguhd
-    contentColumnType: string(6)
+    contentColumnType: string(11)
     fieldGroup: null
     handle: textAlignment
     instructions: null
@@ -226,7 +254,7 @@ fields:
               - Left
             -
               - value
-              - left
+              - text-start
             -
               - default
               - '1'
@@ -237,7 +265,7 @@ fields:
               - Center
             -
               - value
-              - center
+              - text-center
             -
               - default
               - ''
@@ -311,6 +339,45 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  f93511fb-fce3-4ae1-bd26-27a91113ab48: # Image: Mobile
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: imageMobile
+    instructions: 'Wide version'
+    name: 'Image: Mobile'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add an image for mobile'
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      sources:
+        - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
 handle: sideBySide
 name: 'Side By Side'
 sortOrder: 2

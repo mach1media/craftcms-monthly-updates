@@ -1,0 +1,93 @@
+{##
+ # POPUP COMPONENT
+ #}
+{% set block = entry.popup.one() %}
+
+{% set modalContent %}
+	<div class="vstack gap-4">
+		{% if block.description is defined and block.description != '' %}
+			<div class="c-wysiwyg {{ block.textColor }} {{ block.textAlignment }}">
+				{% apply enkode_emails %}
+					{{ block.description }}
+				{% endapply %}
+			</div>
+		{% endif %}
+
+		{% if block.embedCode != '' %}
+			<div class="js-fitvids">
+				{{ block.embedCode | raw }}
+			</div>
+		{% endif %}
+
+		{% if block.buttons | length %}
+			<div class="hstack gap-3 justify-content-{{ block.textAlignment == 'text-center' ? 'center' : 'start' }}">
+				{% for button in block.buttons %}
+					{% set btn = button.button %}
+					{% if btn.getLink() %}
+						{% include "_fields/button" with {
+							'button': btn, 
+							'class':  button.buttonStyle
+						} %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+{% endset %}
+
+{% if block %}
+	{% if block.image | length %}
+		{% set img    = block.image.one %}
+		{% set imgSrc = img.format != 'svg' ? img.url('responsiveLarge') : img.url %}
+	{% endif %}
+
+	<div class="modal fade"
+		id="modal-{{ block.id }}" 
+		tabindex="-1" 
+		aria-labelledby="modal-{{ block.id }}-label" 
+		aria-hidden="true">
+		<div class="modal-dialog modal-{{ block.type.handle == 'sideBySide' ? 'xl' : 'md' }} modal-dialog-centered modal-dialog-scrollable' }}">
+			<div class="modal-content bg-transparent rounded-0 border-0">
+				<div class="d-flex justify-content-end mb-4"
+					data-bs-theme="dark">
+					<button type="button" class="btn-close fs-3" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+
+				<div class="modal-body p-0 {{ block.backgroundColor }} {{ block.textColor }} rounded">
+					{% if block.type.handle == 'sideBySide' %}
+						<div class="row g-0">
+							<div class="col-12 col-xl-6{% if block.imagePosition == 'right' %} order-xl-2{% endif %}">
+								{% if block.imageMobile | length %}
+									{% set imageMobile    = block.imageMobile.one %}
+									{% set imageMobileSrc = imageMobile.format != 'svg' ? imageMobile.url('responsiveLarge') : imageMobile.url %}
+									<img class="d-xl-none d-block w-100 h-100 img-fluid object-fit-cover" src="{{ imageMobileSrc }}" alt="{{ imageMobile.alt }}" />
+									<img class="d-none d-xl-block d-block w-100 h-100 img-fluid object-fit-cover" src="{{ imgSrc }}" alt="{{ img.alt }}" />
+								{% else %}
+									<img class="d-block w-100 h-100 img-fluid object-fit-cover" src="{{ imgSrc }}" alt="{{ img.alt }}" />
+								{% endif %}
+							</div>
+
+							<div class="col-12 col-xl-6{% if block.imagePosition == 'right' %} order-xl-1{% endif %}">
+								<div class="p-4 p-sm-5">
+									{{ modalContent }}
+								</div>
+							</div>
+						</div>
+					{% else %}
+						{% if img %}
+							<img class="d-block img-fluid mx-auto rounded-top" src="{{ imgSrc | default }}" alt="{{ img.alt }}" />
+						{% endif %}
+						<div class="p-4 p-sm-5">
+							{{ modalContent }}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% js %}
+		const modal_{{ block.id }} = new bootstrap.Modal(document.getElementById('modal-{{ block.id }}'));
+		modal_{{ block.id }}.show();
+	{% endjs %}
+{% endif %}

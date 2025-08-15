@@ -15037,3 +15037,72 @@ button > .c-icon--search {
 .c-alert-bar .text-blue a {
   color: #3C3F9B;
 }
+
+/**
+ * Popup component styles
+ */
+.c-popup .text-primary a {
+  color: #231F5B;
+}
+.c-popup .text-secondary a {
+  color: #C19D68;
+}
+.c-popup .text-tertiary a {
+  color: #3C3F9B;
+}
+.c-popup .text-primary-light a {
+  color: #4039a7;
+}
+.c-popup .text-secondary-light a {
+  color: #dfccb0;
+}
+.c-popup .text-primary-extralight a {
+  color: #e9e8f7;
+}
+.c-popup .text-secondary-extralight a {
+  color: #f5efe7;
+}
+.c-popup .text-success a {
+  color: #198754;
+}
+.c-popup .text-info a {
+  color: #0dcaf0;
+}
+.c-popup .text-warning a {
+  color: #ffc107;
+}
+.c-popup .text-danger a {
+  color: #dc3545;
+}
+.c-popup .text-light a {
+  color: #f8f9fa;
+}
+.c-popup .text-dark a {
+  color: #212529;
+}
+.c-popup .text-white a {
+  color: white;
+}
+.c-popup .text-black a {
+  color: black;
+}
+.c-popup .text-silver a {
+  color: #F5F5F5;
+}
+.c-popup .text-navy a {
+  color: #231F5B;
+}
+.c-popup .text-tan a {
+  color: #C19D68;
+}
+.c-popup .text-blue a {
+  color: #3C3F9B;
+}
+
+/**
+ * MODAL: BOOTSTRAP OVERRIDES
+ */
+.modal-body .c-wysiwyg figure {
+  padding: 0;
+  margin-bottom: 1.25rem;
+}

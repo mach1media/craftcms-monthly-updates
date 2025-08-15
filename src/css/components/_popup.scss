@@ -1,0 +1,12 @@
+/**
+ * Popup component styles
+ */
+@include component('popup') {
+	
+	// loop through $theme-colors map and make links the same color
+	@each $name, $color in $theme-colors {
+		.text-#{$name} a {
+			color: $color;
+		}
+	}
+}

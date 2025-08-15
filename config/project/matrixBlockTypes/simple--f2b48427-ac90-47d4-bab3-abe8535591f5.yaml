@@ -52,7 +52,7 @@ fieldLayouts:
             uid: dc40344a-a743-4a0b-9a1e-30a2c57e305c
             userCondition: null
             warning: null
-            width: 25
+            width: 100
           -
             elementCondition: null
             fieldUid: 75ffc990-9c9a-40b8-a214-0ae30912f453 # Description
@@ -234,7 +234,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1707888314
+      changedFieldIndicator: 979966389
       columns:
         __assoc__:
           -

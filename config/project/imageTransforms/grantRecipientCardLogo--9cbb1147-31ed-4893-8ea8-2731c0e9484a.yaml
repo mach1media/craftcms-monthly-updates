@@ -7,5 +7,5 @@ mode: fit
 name: 'Grant Recipient Card Logo'
 position: center-center
 quality: 100
-upscale: true
+upscale: false
 width: null
