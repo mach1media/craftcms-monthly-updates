@@ -1,4 +1,4 @@
-dateModified: 1755290239
+dateModified: 1757641988
 elementSources:
   craft\elements\Entry:
     -
@@ -517,38 +517,47 @@ plugins:
                   - verbb\formie\integrations\captchas\Recaptcha
                 -
                   - enabled
-                  - '0'
+                  - '1'
                 -
                   - saveSpam
-                  - true
+                  - false
                 -
                   - settings
                   -
                     __assoc__:
-                      0:
+                      -
                         - handle
                         - recaptcha
-                      3:
+                      -
+                        - secretKey
+                        - $RECAPTCHA_SECRET_KEY
+                      -
+                        - siteKey
+                        - $RECAPTCHA_SITE_KEY
+                      -
                         - type
-                        - v3
-                      4:
+                        - v2_checkbox
+                      -
                         - size
                         - normal
-                      5:
+                      -
                         - theme
                         - light
-                      6:
+                      -
                         - badge
                         - bottomright
-                      7:
+                      -
                         - language
                         - en
-                      8:
+                      -
                         - minScore
                         - 0.5
-                      10:
+                      -
                         - scriptLoadingMethod
                         - asyncDefer
+                      -
+                        - enterpriseType
+                        - score
           -
             - hcaptcha
             -
@@ -601,9 +610,15 @@ plugins:
                   - settings
                   -
                     __assoc__:
-                      -
+                      0:
                         - handle
                         - friendlyCaptcha
+                      3:
+                        - language
+                        - en
+                      4:
+                        - startMode
+                        - none
           -
             - turnstile
             -
@@ -627,6 +642,15 @@ plugins:
                       3:
                         - scriptLoadingMethod
                         - asyncDefer
+                      4:
+                        - theme
+                        - auto
+                      5:
+                        - size
+                        - normal
+                      6:
+                        - appearance
+                        - always
           -
             - duplicate
             -
@@ -687,6 +711,109 @@ plugins:
                       -
                         - handle
                         - javascript
+          -
+            - akismet
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Akismet
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - akismet
+          -
+            - captchaEu
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\CaptchaEu
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - captchaEu
+                      3:
+                        - endPoint
+                        - 'https://www.captcha.eu'
+          -
+            - cleantalk
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\CleanTalk
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - cleantalk
+          -
+            - OopSpam
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\OopSpam
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - OopSpam
+          -
+            - question
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Question
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - question
       defaultDateDisplayType: calendar
       defaultDateTime: null
       defaultDateValueOption: ''
@@ -705,6 +832,7 @@ plugins:
       includeRevisionElementUsage: false
       maxIncompleteSubmissionAge: 30
       maxSentNotificationsAge: 30
+      outputConsoleMessages: true
       pdfPaperOrientation: portrait
       pdfPaperSize: letter
       pluginName: Formie
@@ -712,13 +840,16 @@ plugins:
       saveSpam: true
       sendEmailAlerts: false
       sentNotifications: true
+      setOnlyCurrentPagePayload: false
       spamBehaviour: showSuccess
       spamBehaviourMessage: ''
       spamEmailNotifications: false
       spamKeywords: ''
       spamLimit: 500
+      useEmailTemplateForFieldVariables: false
       useQueueForIntegrations: true
       useQueueForNotifications: true
+      validateCustomTemplates: true
   mailgun:
     edition: standard
     enabled: true

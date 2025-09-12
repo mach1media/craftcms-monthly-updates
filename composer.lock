@@ -2950,16 +2950,16 @@
         },
         {
             "name": "league/csv",
-            "version": "9.24.1",
+            "version": "9.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "e0221a3f16aa2a823047d59fab5809d552e29bc8"
+                "reference": "f856f532866369fb1debe4e7c5a1db185f40ef86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/e0221a3f16aa2a823047d59fab5809d552e29bc8",
-                "reference": "e0221a3f16aa2a823047d59fab5809d552e29bc8",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/f856f532866369fb1debe4e7c5a1db185f40ef86",
+                "reference": "f856f532866369fb1debe4e7c5a1db185f40ef86",
                 "shasum": ""
             },
             "require": {
@@ -2975,7 +2975,7 @@
                 "phpstan/phpstan-deprecation-rules": "^1.2.1",
                 "phpstan/phpstan-phpunit": "^1.4.2",
                 "phpstan/phpstan-strict-rules": "^1.6.2",
-                "phpunit/phpunit": "^10.5.16 || ^11.5.22",
+                "phpunit/phpunit": "^10.5.16 || ^11.5.22 || ^12.3.6",
                 "symfony/var-dumper": "^6.4.8 || ^7.3.0"
             },
             "suggest": {
@@ -3037,7 +3037,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-25T14:53:51+00:00"
+            "time": "2025-09-11T08:29:08+00:00"
         },
         {
             "name": "league/html-to-markdown",
@@ -5543,11 +5543,11 @@
         },
         {
             "name": "spicyweb/craft-neo",
-            "version": "4.4.4",
+            "version": "4.4.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/a60290418d3d5c225088475bab2a5b8a61c45cdd",
-                "reference": "a60290418d3d5c225088475bab2a5b8a61c45cdd",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/f18cb45f0e2bff91750b67276094027d783ab28e",
+                "reference": "f18cb45f0e2bff91750b67276094027d783ab28e",
                 "shasum": ""
             },
             "require": {
@@ -5561,7 +5561,7 @@
                 "schemaVersion": "4.0.0",
                 "class": "benf\\neo\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-neo/blob/4.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.4.4.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.4.5.zip"
             },
             "autoload": {
                 "psr-4": {
@@ -5589,10 +5589,10 @@
             "support": {
                 "issues": "https://github.com/spicywebau/craft-neo/issues",
                 "source": "https://github.com/spicywebau/craft-neo",
-                "docs": "https://github.com/spicywebau/craft-neo/blob/4.4.4/README.md",
+                "docs": "https://github.com/spicywebau/craft-neo/blob/4.4.5/README.md",
                 "rss": "https://github.com/spicywebau/craft-neo/commits/4.x.atom"
             },
-            "time": "2025-08-08T06:42:30+00:00"
+            "time": "2025-09-11T03:28:36+00:00"
         },
         {
             "name": "statikbe/craft-config-values",

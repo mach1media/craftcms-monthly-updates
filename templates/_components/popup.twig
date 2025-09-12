@@ -13,13 +13,13 @@
 			</div>
 		{% endif %}
 
-		{% if block.embedCode != '' %}
+		{% if block.embedCode | default != '' %}
 			<div class="js-fitvids">
 				{{ block.embedCode | raw }}
 			</div>
 		{% endif %}
 
-		{% if block.buttons | length %}
+		{% if block.buttons | default | length %}
 			<div class="hstack gap-3 justify-content-{{ block.textAlignment == 'text-center' ? 'center' : 'start' }}">
 				{% for button in block.buttons %}
 					{% set btn = button.button %}
