@@ -23,7 +23,11 @@
 					<p><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
 				{% elseif block.video | length %}
 					{% set embeddedAsset = craft.embeddedAssets.get(block.video.one) %}
-					<div class="js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-10 col-xl-9">
+							<div class="js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
+						</div>
+					</div>
 				{% endif %}
 			</div>
 		</div>
