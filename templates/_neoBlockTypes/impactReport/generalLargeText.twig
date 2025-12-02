@@ -54,9 +54,9 @@
 				{% endif %}
 
 				{% if block.signatures is defined and block.signatures | length %}
-					<div class="d-flex justify-content-{{ block.textAlignment }} mt-5 flex-wrap flex-md-nowrap">
+					<div class="hstack gap-5 justify-content-{{ block.textAlignment }} mt-5 flex-wrap flex-md-nowrap">
 						{% for row in block.signatures %}
-						<div class="mb-5 mb-md-0">
+						<div>
 							{% if row.signature != '' %}
 								<p class="c-report__signature mb-0">{{ row.signature | raw }}</p>
 							{% endif %}
