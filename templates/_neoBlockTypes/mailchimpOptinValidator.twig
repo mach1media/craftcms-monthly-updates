@@ -33,13 +33,6 @@
 							{{ csrfInput() }}
 							
 							<div class="mb-3">
-								<label for="email-input" class="form-label">
-									{% if block.formTitle is defined and block.formTitle %}
-										{{ block.formTitle }}
-									{% else %}
-										Enter your email address to check your subscription status
-									{% endif %}
-								</label>
 								<div class="input-group">
 									<input 
 										type="email" 
@@ -51,17 +44,11 @@
 										placeholder="your.email@example.com"
 									>
 									<button class="btn btn-primary" type="submit" id="check-btn">
-										<span class="btn-text">Check Status</span>
+										<span class="btn-text">Subscribe</span>
 										<span class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
 									</button>
 								</div>
-								<div id="email-help" class="form-text">
-									{% if block.formDescription is defined and block.formDescription %}
-										{{ block.formDescription }}
-									{% else %}
-										We'll check if you're already subscribed to our mailing list.
-									{% endif %}
-								</div>
+
 								<div class="invalid-feedback"></div>
 							</div>
 						</form>
@@ -108,16 +95,9 @@
 
 					{# Formstack form for new subscribers #}
 					<div id="formstack-container" class="d-none">
-						{% if block.embedCode is defined and block.embedCode %}
-							<div class="js-fitvids">
-								{{ block.embedCode | raw }}
-							</div>
-						{% else %}
-							<div class="alert alert-info">
-								<h5 class="alert-heading">Welcome!</h5>
-								<p class="mb-0">Your email address was not found in our system. Please fill out the form below to subscribe.</p>
-							</div>
-						{% endif %}
+						<div class="js-fitvids">
+							{{ block.embedCode | raw }}
+						</div>
 					</div>
 
 				</div>
