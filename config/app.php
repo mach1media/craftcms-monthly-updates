@@ -23,6 +23,7 @@ return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
     'modules' => [
         'my-module' => \modules\Module::class,
+        'mailchimp' => \modules\mailchimp\MailchimpModule::class,
     ],
-    //'bootstrap' => ['my-module'],
+    'bootstrap' => ['mailchimp'],
 ];

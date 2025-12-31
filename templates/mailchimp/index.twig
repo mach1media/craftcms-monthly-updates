@@ -1,0 +1,183 @@
+{% extends "_layout/default.twig" %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-4">Mailchimp API Test</h1>
+    
+    <div class="card">
+        <div class="card-body">
+            <form id="mailchimp-test-form">
+                {{ csrfInput() }}
+                
+                <div class="mb-3">
+                    <label for="method" class="form-label">HTTP Method</label>
+                    <select class="form-select" id="method" name="method">
+                        <option value="GET" selected>GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PATCH">PATCH</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="endpoint" class="form-label">API Endpoint</label>
+                    <select class="form-select" id="endpoint" name="endpoint">
+                        <option value="/lists">Get all lists</option>
+                        <option value="/lists/{{ craft.app.config.general.custom.mailchimpListId ?? '{list_id}' }}">Get specific list</option>
+                        <option value="/lists/{{ craft.app.config.general.custom.mailchimpListId ?? '{list_id}' }}/members" selected>Get all members</option>
+                        <option value="/lists/{{ craft.app.config.general.custom.mailchimpListId ?? '{list_id}' }}/members/{subscriber_hash}">Get specific member</option>
+                        <option value="custom">Custom endpoint</option>
+                    </select>
+                    <input type="text" class="form-control mt-2 d-none" id="custom-endpoint" placeholder="Enter custom endpoint">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address (for member lookup)</label>
+                    <input type="email" class="form-control" id="email" placeholder="test@example.com">
+                    <small class="form-text text-muted">Will be MD5 hashed automatically for member endpoints</small>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="params" class="form-label">Additional Parameters (JSON format)</label>
+                    <textarea class="form-control" id="params" rows="3" placeholder='{"count": 10, "offset": 0}'>{}</textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Request</button>
+                <button type="button" class="btn btn-secondary" id="check-subscription">Quick Check Subscription</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <h3>Response</h3>
+        <div id="loading" class="alert alert-info d-none">Loading...</div>
+        <pre id="response" class="bg-light p-3 rounded"><code>No request sent yet</code></pre>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('mailchimp-test-form');
+    const methodSelect = document.getElementById('method');
+    const endpointSelect = document.getElementById('endpoint');
+    const customEndpointInput = document.getElementById('custom-endpoint');
+    const emailInput = document.getElementById('email');
+    const paramsTextarea = document.getElementById('params');
+    const responseDiv = document.getElementById('response');
+    const loadingDiv = document.getElementById('loading');
+    const checkButton = document.getElementById('check-subscription');
+    
+    // Get CSRF token
+    const csrfTokenName = '{{ craft.app.config.general.csrfTokenName }}';
+    const csrfTokenValue = '{{ craft.app.request.csrfToken }}';
+    
+    // Get list ID from environment
+    const listId = '{{ craft.app.config.general.custom.mailchimpListId ?? getenv("MAILCHIMP_LIST_ID") }}';
+    
+    // MD5 hash function
+    function md5(string) {
+        return CryptoJS.MD5(string.toLowerCase()).toString();
+    }
+    
+    // Toggle custom endpoint input
+    endpointSelect.addEventListener('change', function() {
+        if (this.value === 'custom') {
+            customEndpointInput.classList.remove('d-none');
+        } else {
+            customEndpointInput.classList.add('d-none');
+        }
+    });
+    
+    // Process endpoint with email hash
+    function processEndpoint(endpoint, email) {
+        if (email && endpoint.includes('{subscriber_hash}')) {
+            return endpoint.replace('{subscriber_hash}', md5(email));
+        }
+        return endpoint;
+    }
+    
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const method = methodSelect.value;
+        let endpoint = endpointSelect.value === 'custom' ? customEndpointInput.value : endpointSelect.value;
+        const email = emailInput.value;
+        
+        // Process endpoint
+        endpoint = processEndpoint(endpoint, email);
+        
+        // Parse params
+        let params = {};
+        try {
+            params = JSON.parse(paramsTextarea.value || '{}');
+        } catch (e) {
+            alert('Invalid JSON in parameters field');
+            return;
+        }
+        
+        // Show loading
+        loadingDiv.classList.remove('d-none');
+        responseDiv.innerHTML = '<code>Sending request...</code>';
+        
+        // Prepare data
+        const data = {
+            method: method,
+            endpoint: endpoint,
+            params: params,
+            [csrfTokenName]: csrfTokenValue
+        };
+        
+        // Make request
+        fetch('/actions/mailchimp/api/request', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            loadingDiv.classList.add('d-none');
+            responseDiv.innerHTML = '<code>' + JSON.stringify(data, null, 2) + '</code>';
+            
+            // Highlight based on success
+            if (data.success) {
+                responseDiv.classList.remove('bg-danger');
+                responseDiv.classList.add('bg-light');
+            } else {
+                responseDiv.classList.remove('bg-light');
+                responseDiv.classList.add('bg-danger', 'text-white');
+            }
+        })
+        .catch(error => {
+            loadingDiv.classList.add('d-none');
+            responseDiv.innerHTML = '<code class="text-danger">Error: ' + error.message + '</code>';
+        });
+    });
+    
+    // Quick check subscription button
+    checkButton.addEventListener('click', function() {
+        const email = emailInput.value;
+        if (!email) {
+            alert('Please enter an email address');
+            return;
+        }
+        
+        // Set up for member check
+        methodSelect.value = 'GET';
+        endpointSelect.value = '/lists/' + listId + '/members/{subscriber_hash}';
+        paramsTextarea.value = '{}';
+        
+        // Submit form
+        form.dispatchEvent(new Event('submit'));
+    });
+});
+</script>
+
+<!-- Include CryptoJS for MD5 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+{% endblock %}
