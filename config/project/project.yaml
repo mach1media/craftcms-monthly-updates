@@ -1,4 +1,4 @@
-dateModified: 1762959029
+dateModified: 1767214744
 elementSources:
   craft\elements\Entry:
     -
@@ -164,6 +164,7 @@ meta:
     3b51443f-4e3e-4232-8ca5-f70fda28a3c2: Link # Link
     3be92289-0f0d-4b35-908a-44e87436fae3: 'Program Coordinator' # Program Coordinator
     3c1eea3a-94e8-40dc-8f1f-d0df569c3542: 'Impact Report' # Impact Report
+    3c328fcf-4838-429f-8628-fdfcf1e07eec: 'Mailchimp Opt-In Validator' # Mailchimp Opt-In Validator
     3cd86bf3-6755-432c-a7cd-8fdb85ad0ccb: 'Table Footer' # Table Footer
     3d088ba7-2012-45f1-8454-ccf6895bd50b: 'Home: Square Tiles' # Home: Square Tiles
     3d3bcacc-dff0-41b3-ac7e-3b97a5513ae2: TMF # TMF

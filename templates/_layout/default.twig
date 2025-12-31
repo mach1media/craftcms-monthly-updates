@@ -27,6 +27,10 @@
 <!-- Global Site JS -->
 <script src="/dist/js/app.js?v={{ cacheBusterVersion }}" type="text/javascript" charset="utf-8"></script>
 
+<!-- Include CryptoJS for MD5 and Mailchimp API wrapper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="/dist/mailchimp.js?v={{ cacheBusterVersion }}"></script>
+
 {% if getenv('CRAFT_ENVIRONMENT') == 'production' %}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-559ER2JMZ8"></script>

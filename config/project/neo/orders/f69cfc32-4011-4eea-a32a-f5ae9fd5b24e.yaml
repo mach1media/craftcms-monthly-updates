@@ -22,6 +22,7 @@
 - 'blockType:a60f746d-4da8-4419-876b-782449ea1381' # Form
 - 'blockType:3030cab8-78a4-43c1-965d-edcb8d53848e' # Contact Form Block
 - 'blockType:283a58a7-7d64-4ce3-96c6-6a2fe93bf942' # Embed Code
+- 'blockType:3c328fcf-4838-429f-8628-fdfcf1e07eec' # Mailchimp Opt-In Validator
 - 'blockTypeGroup:89a66249-b68c-4d46-81b7-9ef3dac29401' # Cards
 - 'blockType:afb8f81e-7598-4dbb-8559-8aef5c3c42e6' # Team Members
 - 'blockType:30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b' # Team Member
