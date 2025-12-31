@@ -23,7 +23,7 @@ class MailchimpModule extends Module
             ],
         ]);
 
-        Craft::$app->getLog()->getLogger()->info(
+        Craft::info(
             'Mailchimp module loaded',
             __METHOD__
         );

@@ -24,9 +24,9 @@
                     <label for="endpoint" class="form-label">API Endpoint</label>
                     <select class="form-select" id="endpoint" name="endpoint">
                         <option value="/lists">Get all lists</option>
-                        <option value="/lists/{{ craft.app.config.general.custom.mailchimpListId ?? '{list_id}' }}">Get specific list</option>
-                        <option value="/lists/{{ craft.app.config.general.custom.mailchimpListId ?? '{list_id}' }}/members" selected>Get all members</option>
-                        <option value="/lists/{{ craft.app.config.general.custom.mailchimpListId ?? '{list_id}' }}/members/{subscriber_hash}">Get specific member</option>
+                        <option value="/lists/{{ getenv('MAILCHIMP_LIST_ID') ?: '{list_id}' }}">Get specific list</option>
+                        <option value="/lists/{{ getenv('MAILCHIMP_LIST_ID') ?: '{list_id}' }}/members" selected>Get all members</option>
+                        <option value="/lists/{{ getenv('MAILCHIMP_LIST_ID') ?: '{list_id}' }}/members/{subscriber_hash}">Get specific member</option>
                         <option value="custom">Custom endpoint</option>
                     </select>
                     <input type="text" class="form-control mt-2 d-none" id="custom-endpoint" placeholder="Enter custom endpoint">
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const csrfTokenValue = '{{ craft.app.request.csrfToken }}';
     
     // Get list ID from environment
-    const listId = '{{ craft.app.config.general.custom.mailchimpListId ?? getenv("MAILCHIMP_LIST_ID") }}';
+    const listId = '{{ getenv("MAILCHIMP_LIST_ID") }}';
     
     // MD5 hash function
     function md5(string) {

@@ -175,4 +175,19 @@ class ApiService extends Component
         // Fall back to configured value
         return App::env('MAILCHIMP_SERVER_PREFIX') ?: 'us1';
     }
+
+    /**
+     * Get the signup URL for a list
+     */
+    public function getListSignupUrl(string $listId): ?string
+    {
+        $response = $this->get("/lists/{$listId}");
+        
+        if ($response['success'] && !empty($response['data']['subscribe_url_long'])) {
+            return $response['data']['subscribe_url_long'];
+        }
+        
+        // Fall back to environment variable
+        return App::env('MAILCHIMP_SIGNUP_URL');
+    }
 }

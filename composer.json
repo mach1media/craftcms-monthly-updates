@@ -26,7 +26,8 @@
   },
   "autoload": {
     "psr-4": {
-      "modules\\": "modules/"
+      "modules\\": "modules/",
+      "modules\\mailchimp\\": "modules/mailchimp/src/"
     }
   },
   "config": {
