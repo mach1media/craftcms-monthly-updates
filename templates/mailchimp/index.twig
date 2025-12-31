@@ -144,12 +144,13 @@ document.addEventListener('DOMContentLoaded', function() {
             loadingDiv.classList.add('d-none');
             responseDiv.innerHTML = '<code>' + JSON.stringify(data, null, 2) + '</code>';
             
+            // Reset classes first
+            responseDiv.classList.remove('bg-danger', 'bg-light', 'text-white');
+            
             // Highlight based on success
             if (data.success) {
-                responseDiv.classList.remove('bg-danger');
                 responseDiv.classList.add('bg-light');
             } else {
-                responseDiv.classList.remove('bg-light');
                 responseDiv.classList.add('bg-danger', 'text-white');
             }
         })
