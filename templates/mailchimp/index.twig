@@ -68,16 +68,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadingDiv = document.getElementById('loading');
     const checkButton = document.getElementById('check-subscription');
     
-    // Get CSRF token
-    const csrfTokenName = '{{ craft.app.config.general.csrfTokenName }}';
-    const csrfTokenValue = '{{ craft.app.request.csrfToken }}';
+    // Initialize Mailchimp API wrapper
+    const mailchimp = new MailchimpAPI({
+        csrfTokenName: '{{ craft.app.config.general.csrfTokenName }}',
+        csrfTokenValue: '{{ craft.app.request.csrfToken }}',
+        listId: '{{ getenv("MAILCHIMP_LIST_ID") }}',
+        debug: true,
+        onSuccess: function(result) {
+            console.log('Success:', result);
+        },
+        onError: function(error) {
+            console.error('Error:', error);
+        }
+    });
     
-    // Get list ID from environment
-    const listId = '{{ getenv("MAILCHIMP_LIST_ID") }}';
-    
-    // MD5 hash function
-    function md5(string) {
-        return CryptoJS.MD5(string.toLowerCase()).toString();
+    // Display response in UI
+    function displayResponse(data) {
+        loadingDiv.classList.add('d-none');
+        responseDiv.innerHTML = '<code>' + JSON.stringify(data, null, 2) + '</code>';
+        
+        // Reset classes first
+        responseDiv.classList.remove('bg-danger', 'bg-light', 'text-white');
+        
+        // Highlight based on success
+        if (data.success) {
+            responseDiv.classList.add('bg-light');
+        } else {
+            responseDiv.classList.add('bg-danger', 'text-white');
+        }
     }
     
     // Toggle custom endpoint input
@@ -92,13 +110,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Process endpoint with email hash
     function processEndpoint(endpoint, email) {
         if (email && endpoint.includes('{subscriber_hash}')) {
-            return endpoint.replace('{subscriber_hash}', md5(email));
+            return endpoint.replace('{subscriber_hash}', mailchimp.md5(email));
         }
         return endpoint;
     }
     
     // Handle form submission
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const method = methodSelect.value;
@@ -128,64 +146,80 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingDiv.classList.remove('d-none');
         responseDiv.innerHTML = '<code>Sending request...</code>';
         
-        // Prepare data
-        const data = {
-            method: method,
-            endpoint: endpoint,
-            params: params,
-            [csrfTokenName]: csrfTokenValue
-        };
-        
-        // Make request
-        fetch('/actions/mailchimp/api/request', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            loadingDiv.classList.add('d-none');
-            responseDiv.innerHTML = '<code>' + JSON.stringify(data, null, 2) + '</code>';
-            
-            // Reset classes first
-            responseDiv.classList.remove('bg-danger', 'bg-light', 'text-white');
-            
-            // Highlight based on success
-            if (data.success) {
-                responseDiv.classList.add('bg-light');
-            } else {
-                responseDiv.classList.add('bg-danger', 'text-white');
-            }
-        })
-        .catch(error => {
-            loadingDiv.classList.add('d-none');
-            responseDiv.innerHTML = '<code class="text-danger">Error: ' + error.message + '</code>';
-        });
+        // Make request using the wrapper
+        const result = await mailchimp.request(method, endpoint, params);
+        displayResponse(result);
     });
     
-    // Quick check subscription button
-    checkButton.addEventListener('click', function() {
+    // Quick check subscription button using the abstracted method
+    checkButton.addEventListener('click', async function() {
         const email = emailInput.value;
         if (!email) {
             alert('Please enter an email address');
             return;
         }
         
-        // Set up for member check
-        methodSelect.value = 'GET';
-        endpointSelect.value = '/lists/' + listId + '/members/{subscriber_hash}';
-        paramsTextarea.value = '{}';
+        // Validate email
+        const validation = mailchimp.validateEmail(email);
+        if (!validation.valid) {
+            alert(validation.error);
+            emailInput.focus();
+            return;
+        }
         
-        // Submit form
-        form.dispatchEvent(new Event('submit'));
+        // Show loading
+        loadingDiv.classList.remove('d-none');
+        responseDiv.innerHTML = '<code>Checking subscription status...</code>';
+        
+        try {
+            // Use the abstracted getSubscriptionStatus method
+            const status = await mailchimp.getSubscriptionStatus(email);
+            displayResponse({
+                success: true,
+                data: status
+            });
+        } catch (error) {
+            displayResponse({
+                success: false,
+                error: error.message,
+                code: 500
+            });
+        }
+    });
+    
+    // Add some helper buttons to demonstrate the API wrapper
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.className = 'mt-3';
+    buttonsContainer.innerHTML = `
+        <button type="button" class="btn btn-info btn-sm me-2" id="get-all-lists">Get All Lists</button>
+        <button type="button" class="btn btn-info btn-sm me-2" id="get-list-info">Get List Info</button>
+        <button type="button" class="btn btn-info btn-sm" id="get-members">Get Members (first 5)</button>
+    `;
+    
+    checkButton.parentNode.insertBefore(buttonsContainer, checkButton.nextSibling);
+    
+    // Helper button handlers
+    document.getElementById('get-all-lists').addEventListener('click', async function() {
+        loadingDiv.classList.remove('d-none');
+        const result = await mailchimp.getLists();
+        displayResponse(result);
+    });
+    
+    document.getElementById('get-list-info').addEventListener('click', async function() {
+        loadingDiv.classList.remove('d-none');
+        const result = await mailchimp.getList();
+        displayResponse(result);
+    });
+    
+    document.getElementById('get-members').addEventListener('click', async function() {
+        loadingDiv.classList.remove('d-none');
+        const result = await mailchimp.getMembers({ count: 5, offset: 0 });
+        displayResponse(result);
     });
 });
 </script>
 
-<!-- Include CryptoJS for MD5 -->
+<!-- Include CryptoJS for MD5 and Mailchimp API wrapper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="/dist/mailchimp.js"></script>
 {% endblock %}
