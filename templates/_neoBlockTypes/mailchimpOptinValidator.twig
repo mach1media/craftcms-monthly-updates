@@ -218,14 +218,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	// Populate email in Formstack form
 	function populateFormstackEmail(email) {
-		// Try multiple selectors that Formstack commonly uses for email fields
+		// Try multiple selectors that Formstack uses for email fields
 		const emailSelectors = [
-			'input[type="email"]',
-			'input[name*="email"]',
-			'input[id*="email"]',
-			'input[placeholder*="email"]',
-			'.fsField[fs-field-type="email"] input',
-			'.fsField input[type="email"]'
+			'input[id="Lead.Email"]',  // Specific Formstack field ID
+			'input[name="Lead.Email"]', // Backup using name attribute
+			'input[vatt="EMAIL"]',      // Using vatt attribute
+			'input[data-vatt="EMAIL"]', // Using data-vatt attribute
+			'input[name*="email" i]',   // Case-insensitive name contains email
+			'input[id*="email" i]',     // Case-insensitive id contains email
+			'input[type="textbox"][name*="email" i]' // Textbox type with email in name
 		];
 		
 		let emailFieldFound = false;
@@ -235,21 +236,33 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 			if (formstackEmailFields.length > 0) {
 				formstackEmailFields.forEach(field => {
-					// Skip if it's our original input
+					// Skip if it's our original input or already has a value
 					if (field.id !== 'email-input' && !field.value) {
 						field.value = email;
 						// Trigger events to ensure Formstack recognizes the value
 						field.dispatchEvent(new Event('input', { bubbles: true }));
 						field.dispatchEvent(new Event('change', { bubbles: true }));
 						field.dispatchEvent(new Event('blur', { bubbles: true }));
+						field.dispatchEvent(new Event('keyup', { bubbles: true }));
+						
+						// Also set the attribute directly
+						field.setAttribute('value', email);
+						
 						emailFieldFound = true;
+						
+						if (mailchimp.debug) {
+							console.log('Populated Formstack field:', field.id || field.name, 'with:', email);
+						}
 					}
 				});
 			}
+			
+			// Stop searching if we found and populated the field
+			if (emailFieldFound) break;
 		}
 		
-		if (emailFieldFound && mailchimp.debug) {
-			console.log('Formstack email field populated with:', email);
+		if (!emailFieldFound && mailchimp.debug) {
+			console.warn('Could not find Formstack email field to populate');
 		}
 	}
 	
