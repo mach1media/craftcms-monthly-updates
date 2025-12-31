@@ -105,6 +105,13 @@ document.addEventListener('DOMContentLoaded', function() {
         let endpoint = endpointSelect.value === 'custom' ? customEndpointInput.value : endpointSelect.value;
         const email = emailInput.value;
         
+        // Validate email is provided for member-specific endpoints
+        if (endpoint.includes('{subscriber_hash}') && !email) {
+            alert('Please enter an email address for member-specific endpoints');
+            emailInput.focus();
+            return;
+        }
+        
         // Process endpoint
         endpoint = processEndpoint(endpoint, email);
         
