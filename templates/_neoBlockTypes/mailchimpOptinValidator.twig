@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		formstackContainer.classList.add('d-none');
 		
 		checkBtn.disabled = false;
-		btnText.textContent = 'Check Status';
+		btnText.textContent = 'Subscribe';
 		btnSpinner.classList.add('d-none');
 		
 		emailInput.classList.remove('is-invalid');
@@ -200,10 +200,57 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	
 	// Show Formstack form for new subscribers
-	function showFormstack() {
+	function showFormstack(email) {
 		emailCheckForm.classList.add('d-none');
 		loadingState.classList.add('d-none');
 		formstackContainer.classList.remove('d-none');
+		
+		// Wait for Formstack form to load and populate email field
+		setTimeout(function() {
+			populateFormstackEmail(email);
+		}, 500);
+		
+		// Try again after a longer delay in case form loads slowly
+		setTimeout(function() {
+			populateFormstackEmail(email);
+		}, 1500);
+	}
+	
+	// Populate email in Formstack form
+	function populateFormstackEmail(email) {
+		// Try multiple selectors that Formstack commonly uses for email fields
+		const emailSelectors = [
+			'input[type="email"]',
+			'input[name*="email"]',
+			'input[id*="email"]',
+			'input[placeholder*="email"]',
+			'.fsField[fs-field-type="email"] input',
+			'.fsField input[type="email"]'
+		];
+		
+		let emailFieldFound = false;
+		
+		for (const selector of emailSelectors) {
+			const formstackEmailFields = formstackContainer.querySelectorAll(selector);
+			
+			if (formstackEmailFields.length > 0) {
+				formstackEmailFields.forEach(field => {
+					// Skip if it's our original input
+					if (field.id !== 'email-input' && !field.value) {
+						field.value = email;
+						// Trigger events to ensure Formstack recognizes the value
+						field.dispatchEvent(new Event('input', { bubbles: true }));
+						field.dispatchEvent(new Event('change', { bubbles: true }));
+						field.dispatchEvent(new Event('blur', { bubbles: true }));
+						emailFieldFound = true;
+					}
+				});
+			}
+		}
+		
+		if (emailFieldFound && mailchimp.debug) {
+			console.log('Formstack email field populated with:', email);
+		}
 	}
 	
 	// Handle form submission
@@ -234,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 			if (!status.found) {
 				// Email not found - show Formstack form
-				showFormstack();
+				showFormstack(email);
 			} else if (status.subscribed) {
 				// Already subscribed
 				showSubscribed();
