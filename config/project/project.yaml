@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 dateModified: 1770314891
+=======
+dateModified: 1770316554
+>>>>>>> main
 elementSources:
   craft\elements\Entry:
     -
@@ -153,6 +157,7 @@ meta:
     1cb829c4-b6d2-45ce-914f-36636623179e: 'Side By Side' # Side By Side
     1f1fad11-f5e7-4e38-8a78-a3d2b04261d7: 'Podcast Tile' # Podcast Tile
     1f41377c-9452-4c44-85f2-23bcfbec5b44: 'Button Label' # Button Label
+    1fa48dda-e6c3-4960-a7d1-bf8ba43c4c92: 'Equal Size Tiles' # Equal Size Tiles
     1fc01eb4-e3aa-4109-b017-9a4357415660: Form # Form
     2b225f12-852a-4e1b-8d6a-eb9d7d1f3711: Text+Media # Text+Media
     2bd2d918-16fc-4147-9b16-0a5c2a448d3e: 'Label: Custom' # Label: Custom
@@ -303,9 +308,11 @@ meta:
     8069e6aa-35e5-43c0-9baa-abd171d2a2f2: 'Program/Project Name' # Program/Project Name
     9030c997-69e7-4a71-b846-fdadd3c6112f: Heading # Heading
     9804d284-d129-4704-8883-92fcd4aec0a8: 'Data Table: Full Width' # Data Table: Full Width
+    09822eda-7f51-4e16-b520-48ee041cb530: 'Equal Size Tiles' # Equal Size Tiles
     13815e4c-247f-4715-b11d-7d23e38f23a4: 'Mega Menu' # Mega Menu
     0014573b-36a9-48c6-b523-64fbabf469f2: 'Button Style' # Button Style
     18834ccd-54b8-4774-a03c-b16f65a84197: Thumbnail # Thumbnail
+    20213d46-4ad4-430d-bc80-f75c0fe26cf5: 'Equal Size Tiles' # Equal Size Tiles
     23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8: 'Page Header' # Page Header
     23395c4f-d839-4a1e-8291-195209ed2aed: 'General: Large Text' # General: Large Text
     32847f30-97a7-46a4-aa8a-1d662159da7d: 'Link to Asset' # Link to Asset
@@ -314,6 +321,7 @@ meta:
     048761f8-a826-44ed-ad18-7137532f8c0a: 'Dropdown Link' # Dropdown Link
     54632eea-be0d-432e-9b18-64f95cdb3ddc: 'Lead Block' # Lead Block
     58712ece-7721-4366-900b-2cc4858ea5e0: Heading # Heading
+    61836b2d-d794-4cdb-9e15-6733e47d036c: 'CTA Tiles' # CTA Tiles
     62383ad3-0d0f-4149-ab26-742e25c861ba: 'Text Alignment' # Text Alignment
     72143de2-34b2-4912-87dc-02d8eb4a1a0f: News # News
     86898b1e-5316-4337-9b1b-3b0b541bdf37: 'CTA Block' # CTA Block

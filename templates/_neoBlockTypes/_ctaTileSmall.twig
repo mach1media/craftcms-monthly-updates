@@ -5,7 +5,11 @@
 {% set imgSrc       = img.format != 'svg' ? img.url('responsiveMedium') : img.url %}
 {% set imgAlt       = img.alt %}
 {% set tileLink     = block.tileLink %}
-<div class="col-12 col-sm-6{% if medium is not defined or not medium %} col-lg-3{% endif %}">
+{% set colLgClass   = medium is defined and medium ? ' col-lg-3' : '' %}
+{% if rowType | default == 'equalSizeTiles' %}
+	{% set colLgClass = ' col-lg-' ~ (12 / totalTiles | default(4)) %}
+{% endif %}
+<div class="col-12 col-sm-6{{ colLgClass }}">
 	<div class="c-tiles__tile c-tiles__tile--square{% if block.stackImageOnMobile%} c-tiles__tile--stacked-mobile{% endif %}">
 		<a class="c-tiles__img-link"
 			href="{{ tileLink.getUrl() }}"

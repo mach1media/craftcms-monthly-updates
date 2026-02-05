@@ -11,6 +11,12 @@ permissions:
   - administrateusers
   - 'assignusergroup:b87e2875-e61c-41af-a2fa-3878aa0bc72d' # TMF Admins
   - assignuserpermissions
+  - 'changeauthorforpeerentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+  - 'changeauthorforpeerentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+  - 'changeauthorforpeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+  - 'changeauthorforpeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+  - 'changeauthorforpeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+  - 'changeauthorforpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
   - 'createentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'createentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'createentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu

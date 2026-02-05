@@ -1,14 +1,11 @@
 childBlocks:
-  - largeSmallSmall
-  - smallSmallLarge
-  - mediumMedium
   - equalSizeTiles
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  2203f2b6-2377-4e3d-9de5-be56f1d50a51:
+  ac552481-28d5-454b-aacc-57f5ddcb3d43:
     tabs:
       -
         elementCondition: null
@@ -21,12 +18,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a3fb2f70-0f48-405d-9c7a-2b87bfc3c514
+            uid: 1f6de3a1-9e13-4f3e-88c4-89d40611547a
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
+            uid: 58dc1a68-4082-4cb1-ad89-c2dd50e1dd6a
+            userCondition: null
         name: Content
-        uid: ef82b094-a52c-43b6-bc3d-e88bba161e1a
+        uid: 416f88bb-3ceb-4d1f-88ad-c72f32adee71
         userCondition: null
       -
         elementCondition: null
@@ -39,7 +41,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: aed93528-b282-445d-ac82-54cd58362ddf
+            uid: b0d6b2f1-6d1c-4b82-a5a6-ed55838e22d5
             userCondition: null
             warning: null
             width: 25
@@ -51,7 +53,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e484fdb3-d34a-43bc-a4da-f1aecf318c6a
+            uid: 59f2302b-1ec9-445a-a02b-8c06a0fca6a9
             userCondition: null
             warning: null
             width: 25
@@ -63,14 +65,14 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 33297d14-dea3-4d2e-8a7c-179ac897bdc5
+            uid: 23562204-1a1f-4e5e-bd01-afd2a561edab
             userCondition: null
             warning: null
             width: 25
         name: 'Section Settings'
-        uid: 2dc118f6-7f49-43ba-8152-d1a5f8dcf03e
+        uid: bb2ccc09-186b-46f2-b3fa-669ee6395b10
         userCondition: null
-group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
+group: null
 groupChildBlockTypes: true
 handle: ctaTiles
 icon: null
