@@ -155,7 +155,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 3083175e-52e2-499b-9e63-06f3165cca9c
         userCondition: null
-group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
+group: null
 groupChildBlockTypes: true
 handle: resourceCards
 icon: null

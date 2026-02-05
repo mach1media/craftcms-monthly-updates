@@ -90,7 +90,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 61ce46d7-c218-409f-9560-7ccd8bfda25d
         userCondition: null
-group: 2734260c-14b6-412b-a372-5a4ee016497a # Media
+group: null
 groupChildBlockTypes: true
 handle: embedCode
 icon: null

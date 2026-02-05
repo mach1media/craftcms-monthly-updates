@@ -114,7 +114,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 35ad1403-35b7-4e02-80db-e6cc494f0a8e
         userCondition: null
-group: cfcf5277-7782-4698-bf84-73607da709a9 # Text Blocks
+group: null
 groupChildBlockTypes: true
 handle: buttonBlock
 icon: null

@@ -24,7 +24,7 @@ fieldLayouts:
         name: Tiles
         uid: 80e0ff76-6291-4bf2-8437-dc0be0b8fab7
         userCondition: null
-group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
+group: null
 groupChildBlockTypes: true
 handle: mediumMedium
 icon: null

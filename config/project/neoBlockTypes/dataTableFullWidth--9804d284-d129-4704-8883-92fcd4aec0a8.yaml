@@ -114,7 +114,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 78a4b31f-a392-442a-bdab-819be60eee55
         userCondition: null
-group: cfcf5277-7782-4698-bf84-73607da709a9 # Text Blocks
+group: null
 groupChildBlockTypes: true
 handle: dataTableFullWidth
 icon: null
