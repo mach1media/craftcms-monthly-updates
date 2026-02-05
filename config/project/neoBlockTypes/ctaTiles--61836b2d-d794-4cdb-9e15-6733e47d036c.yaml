@@ -1,10 +1,11 @@
-childBlocks: null
+childBlocks:
+  - equalSizeTiles
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  ea2ae4d8-5826-4b35-84a7-07320928ca48:
+  ac552481-28d5-454b-aacc-57f5ddcb3d43:
     tabs:
       -
         elementCondition: null
@@ -17,72 +18,63 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6c4179d2-c663-4c43-965b-1ca98383c82d
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 460de7d4-01e9-4b2b-8c8a-f40a8598f92f
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dismissible: false
-            elementCondition: null
-            style: tip
-            tip: 'Contact form will be shown to the right of this text description.'
-            type: craft\fieldlayoutelements\Tip
-            uid: 014fadda-7061-429c-a500-92d3c36eb29f
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 87022131-e4c4-4a1e-b074-79ca8f86727e
+            uid: 1f6de3a1-9e13-4f3e-88c4-89d40611547a
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 57c0aa3e-e972-4914-bf36-79e1e0d80682
+            type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
+            uid: 58dc1a68-4082-4cb1-ad89-c2dd50e1dd6a
             userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 0e1002a0-bd1e-4fae-9982-3d7631c9d34f
-            userCondition: null
-            warning: null
-            width: 100
-        name: 'Text Description'
-        uid: 85fc8dce-0fe3-4b14-98fe-7945e7f1d489
+        name: Content
+        uid: 416f88bb-3ceb-4d1f-88ad-c72f32adee71
         userCondition: null
-group: 2734260c-14b6-412b-a372-5a4ee016497a # Media
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0d6b2f1-6d1c-4b82-a5a6-ed55838e22d5
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 59f2302b-1ec9-445a-a02b-8c06a0fca6a9
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa # Padding: Sides
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 23562204-1a1f-4e5e-bd01-afd2a561edab
+            userCondition: null
+            warning: null
+            width: 25
+        name: 'Section Settings'
+        uid: bb2ccc09-186b-46f2-b3fa-669ee6395b10
+        userCondition: null
+group: null
 groupChildBlockTypes: true
-handle: contactFormBlock
+handle: ctaTiles
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -92,5 +84,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Contact Form Block'
+name: 'CTA Tiles'
 topLevel: true

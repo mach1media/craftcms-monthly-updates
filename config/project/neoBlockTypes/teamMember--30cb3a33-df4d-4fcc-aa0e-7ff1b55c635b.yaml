@@ -72,7 +72,7 @@ fieldLayouts:
         name: Content
         uid: a4fd1f6f-25fa-44b9-b961-18b069bc8e27
         userCondition: null
-group: null
+group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
 groupChildBlockTypes: true
 handle: teamMember
 icon: null

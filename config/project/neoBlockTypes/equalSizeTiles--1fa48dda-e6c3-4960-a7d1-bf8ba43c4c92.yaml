@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
-  10625039-c3f8-439a-b1b7-2317288a5d4f:
+  309e7a07-4c3b-409f-8733-04b728f4a86f:
     tabs:
       -
         elementCondition: null
@@ -17,16 +17,16 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f0bc8fd2-b193-4282-94f3-6750cb6e9865
+            uid: 64ff13d6-8476-411f-9493-40e67430d5da
             userCondition: null
             warning: null
             width: 100
         name: Tiles
-        uid: 80e0ff76-6291-4bf2-8437-dc0be0b8fab7
+        uid: 035c0f3c-fc1f-465b-92be-aad332fb2e64
         userCondition: null
 group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
 groupChildBlockTypes: true
-handle: mediumMedium
+handle: equalSizeTiles
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -36,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Medium | Medium'
+name: 'Equal Size Tiles'
 topLevel: false

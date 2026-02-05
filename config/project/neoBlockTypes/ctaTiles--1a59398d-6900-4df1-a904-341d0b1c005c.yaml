@@ -2,6 +2,7 @@ childBlocks:
   - largeSmallSmall
   - smallSmallLarge
   - mediumMedium
+  - equalSizeTiles
 conditions: null
 description: ''
 enabled: true
@@ -69,7 +70,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 2dc118f6-7f49-43ba-8152-d1a5f8dcf03e
         userCondition: null
-group: null
+group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
 groupChildBlockTypes: true
 handle: ctaTiles
 icon: null

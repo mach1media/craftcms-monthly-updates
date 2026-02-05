@@ -2,9 +2,9 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
-  8e2be6d9-1b17-46c9-a698-50b7162ac3cd:
+  71dfcd97-fc23-49fa-ae3c-5799593413f6:
     tabs:
       -
         elementCondition: null
@@ -13,9 +13,9 @@ fieldLayouts:
             dismissible: false
             elementCondition: null
             style: tip
-            tip: 'Insert two small tiles and one large tile. The large tile will be shown last.'
+            tip: 'Insert two to four equal size tiles.'
             type: craft\fieldlayoutelements\Tip
-            uid: ada3e9f7-0a45-4a63-9417-a879d4fbcd34
+            uid: daae3b51-5c21-4574-b9a8-53e08457f392
             userCondition: null
           -
             elementCondition: null
@@ -25,28 +25,16 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 51c75f2a-5ae8-4806-83d0-490b0e130a39
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 0990fff1-3f3d-49e5-a5b1-afdeb683d20e # CTA Tile: Large
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f5ebed7b-9dbc-4117-b50a-b7ed5cc8ef03
+            uid: 13de8a83-3ecc-4817-a3fd-3b371fca509e
             userCondition: null
             warning: null
             width: 100
         name: Tiles
-        uid: 43b34341-0dfa-4287-ac4d-41bab086af32
+        uid: 6c434538-c81b-4257-a667-4b37c16708a5
         userCondition: null
-group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
+group: null
 groupChildBlockTypes: true
-handle: smallSmallLarge
+handle: equalSizeTiles
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -56,5 +44,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Small | Small | Large'
+name: 'Equal Size Tiles'
 topLevel: false
