@@ -1,4 +1,4 @@
-dateModified: 1770315822
+dateModified: 1770316554
 elementSources:
   craft\elements\Entry:
     -
@@ -308,6 +308,7 @@ meta:
     13815e4c-247f-4715-b11d-7d23e38f23a4: 'Mega Menu' # Mega Menu
     0014573b-36a9-48c6-b523-64fbabf469f2: 'Button Style' # Button Style
     18834ccd-54b8-4774-a03c-b16f65a84197: Thumbnail # Thumbnail
+    20213d46-4ad4-430d-bc80-f75c0fe26cf5: 'Equal Size Tiles' # Equal Size Tiles
     23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8: 'Page Header' # Page Header
     23395c4f-d839-4a1e-8291-195209ed2aed: 'General: Large Text' # General: Large Text
     32847f30-97a7-46a4-aa8a-1d662159da7d: 'Link to Asset' # Link to Asset

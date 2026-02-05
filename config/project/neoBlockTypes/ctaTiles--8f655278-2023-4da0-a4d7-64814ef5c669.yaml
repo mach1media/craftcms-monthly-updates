@@ -1,6 +1,7 @@
 childBlocks:
   - largeSmallSmall
   - smallSmallLarge
+  - equalSizeTiles
 conditions: null
 description: ''
 enabled: true

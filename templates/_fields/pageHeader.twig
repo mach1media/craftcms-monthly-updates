@@ -23,7 +23,13 @@
 {% endif %}
 
 <!-- {{ block.type }}: {{ block.id }} -->
-{% include "_neoBlockTypes/pageHeader/" ~ block.type with {'block': block, 'sectionStyleClasses': sectionStyleClasses | join(' ')} %}
+{% include [
+	"_neoBlockTypes/pageHeader/" ~ block.type,
+	"_neoBlockTypes/" ~ block.type
+] with {
+	'block': block,
+	'sectionStyleClasses': sectionStyleClasses | join(' ')
+} %}
 
 {% endif %}
 {% endfor %}
