@@ -18,28 +18,46 @@
 
 {# list settings #}
 {% set listSettings = block.listSettings[0] %}
-{% set stack        = listSettings.stack %}
-{% set itemsPerRow  = listSettings.itemsPerRow %}
+{% set arrangement  = listSettings.arrangement %}
 {% set columns      = listSettings.columns %}
 {% set alignment    = listSettings.alignment %}
+{% set gap          = listSettings.gap %}
 
+{# set list markup #}
 {% set listMarkup %}
-	{% if stack == 'hstack' %}
-		<div class="row">
-			{% for item in block.listItems %}
-				<div class="col-12 col-md-{{ 12 / itemsPerRow }} text-{{ alignment }}">
+	{% if arrangement == 'grid' %}
+		<ul class="list-unstyled row g-{{ gap }}">
+			{% for item in block.listItemsSimple %}
+				<li class="col-12 {{ columns }} text-{{ alignment }}">
 					{{ item.listItem | raw }}
-				</div>
+				</li>
 			{% endfor %}
-		</div>
-	{% elseif stack == 'vstack' %}
-		<div class="row">
-			{% for item in block.listItems %}
-				<div class="col-12 col-md-{{ 12 / itemsPerRow }} text-{{ alignment }}">
+		</ul>
+
+	{% elseif arrangement == 'inline' %}
+		{% set inlineClasses = [] %}
+		{% if alignment == 'center' %}
+			{% set inlineClasses = inlineClasses | merge(['d-flex', 'justify-content-center', 'flex-wrap']) %}
+		{% elseif alignment == 'end' %}
+			{% set inlineClasses = inlineClasses | merge(['d-flex', 'justify-content-end', 'flex-wrap']) %}
+		{% endif %}
+		<ul class="list-inline{{ inlineClasses ? ' ' ~ inlineClasses | join(' ') : '' }}">
+			{% for item in block.listItemsSimple %}
+				<li class="list-inline-item m-{{ gap }}">
 					{{ item.listItem | raw }}
-				</div>
+				</li>
 			{% endfor %}
-		</div>
+		</ul>
+
+	{% elseif arrangement == 'vertical' %}
+		<ul class="list-unstyled">
+			{% for item in block.listItemsSimple %}
+				<li class="text-{{ alignment }} m-{{ gap }}">
+					{{ item.listItem | raw }}
+				</li>
+			{% endfor %}
+		</ul>
+		
 	{% endif %}
 {% endset %}
 
@@ -58,7 +76,7 @@
 					heading: block.headingBlock
 				} %}
 				
-				
+				{{ listMarkup }}
 			</div>
 		</div>
 	</div>

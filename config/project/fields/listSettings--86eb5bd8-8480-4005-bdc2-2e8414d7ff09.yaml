@@ -16,10 +16,10 @@ settings:
           __assoc__:
             -
               - heading
-              - 'List Direction'
+              - 'List Arrangement'
             -
               - handle
-              - stack
+              - arrangement
             -
               - width
               - ''
@@ -33,13 +33,24 @@ settings:
                   __assoc__:
                     -
                       - label
-                      - Horizontal
+                      - Grid
                     -
                       - value
-                      - hstack
+                      - grid
                     -
                       - default
                       - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Inline
+                    -
+                      - value
+                      - inline
+                    -
+                      - default
+                      - false
                 -
                   __assoc__:
                     -
@@ -47,81 +58,7 @@ settings:
                       - Vertical
                     -
                       - value
-                      - vstack
-                    -
-                      - default
-                      - false
-      -
-        - col3
-        -
-          __assoc__:
-            -
-              - heading
-              - 'Items Per Row (Horizontal)'
-            -
-              - handle
-              - itemsPerRow
-            -
-              - width
-              - ''
-            -
-              - type
-              - select
-            -
-              - options
-              -
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '12'
-                    -
-                      - value
-                      - '1'
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '6'
-                    -
-                      - value
-                      - '2'
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '4'
-                    -
-                      - value
-                      - '3'
-                    -
-                      - default
-                      - true
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '3'
-                    -
-                      - value
-                      - '4'
-                    -
-                      - default
-                      - false
-                -
-                  __assoc__:
-                    -
-                      - label
-                      - '2'
-                    -
-                      - value
-                      - '6'
+                      - vertical
                     -
                       - default
                       - false
@@ -131,7 +68,7 @@ settings:
           __assoc__:
             -
               - heading
-              - 'Columns (Vertical)'
+              - 'Grid Columns'
             -
               - handle
               - columns
@@ -151,7 +88,7 @@ settings:
                       - '12'
                     -
                       - value
-                      - '1'
+                      - col-md-1
                     -
                       - default
                       - false
@@ -162,7 +99,7 @@ settings:
                       - '6'
                     -
                       - value
-                      - '2'
+                      - col-md-2
                     -
                       - default
                       - false
@@ -173,7 +110,7 @@ settings:
                       - '4'
                     -
                       - value
-                      - '3'
+                      - col-md-3
                     -
                       - default
                       - true
@@ -184,7 +121,7 @@ settings:
                       - '3'
                     -
                       - value
-                      - '4'
+                      - col-md-4
                     -
                       - default
                       - false
@@ -195,7 +132,7 @@ settings:
                       - '2'
                     -
                       - value
-                      - '6'
+                      - col-md-6
                     -
                       - default
                       - false
@@ -205,7 +142,7 @@ settings:
           __assoc__:
             -
               - heading
-              - Alignment
+              - 'Item Alignment'
             -
               - handle
               - alignment
@@ -251,24 +188,76 @@ settings:
                     -
                       - default
                       - false
+      -
+        - col5
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Item Spacing'
+            -
+              - handle
+              - gap
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Large
+                    -
+                      - value
+                      - '5'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Normal
+                    -
+                      - value
+                      - '3'
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Small
+                    -
+                      - value
+                      - '1'
+                    -
+                      - default
+                      - false
   defaults:
     -
       __assoc__:
         -
           - col1
-          - hstack
-        -
-          - col3
-          - '3'
+          - grid
         -
           - col4
-          - '3'
+          - col-md-1
         -
           - col2
           - start
         -
+          - col5
+          - '5'
+        -
           - rowId
-          - c3097394-b847-441e-aa82-9cb2fd240dd0
+          - 80c54202-07d9-4a80-97f9-59150c777cce
   maxRows: null
   minRows: null
   staticRows: true
