@@ -1,0 +1,35 @@
+columnSuffix: kucqdrts
+contentColumnType: text
+fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
+handle: listItemsSimple
+instructions: null
+name: 'List Items: Simple'
+searchable: false
+settings:
+  addRowLabel: 'Add a list item'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - 'List Item'
+            -
+              - handle
+              - listItem
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults: null
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

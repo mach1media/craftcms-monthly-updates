@@ -1,0 +1,277 @@
+columnSuffix: ayvkuovt
+contentColumnType: text
+fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
+handle: listSettings
+instructions: null
+name: 'List Settings'
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - 'List Direction'
+            -
+              - handle
+              - stack
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Horizontal
+                    -
+                      - value
+                      - hstack
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Vertical
+                    -
+                      - value
+                      - vstack
+                    -
+                      - default
+                      - false
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Items Per Row (Horizontal)'
+            -
+              - handle
+              - itemsPerRow
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '12'
+                    -
+                      - value
+                      - '1'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '6'
+                    -
+                      - value
+                      - '2'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '4'
+                    -
+                      - value
+                      - '3'
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '3'
+                    -
+                      - value
+                      - '4'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '2'
+                    -
+                      - value
+                      - '6'
+                    -
+                      - default
+                      - false
+      -
+        - col4
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Columns (Vertical)'
+            -
+              - handle
+              - columns
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '12'
+                    -
+                      - value
+                      - '1'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '6'
+                    -
+                      - value
+                      - '2'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '4'
+                    -
+                      - value
+                      - '3'
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '3'
+                    -
+                      - value
+                      - '4'
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - '2'
+                    -
+                      - value
+                      - '6'
+                    -
+                      - default
+                      - false
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Alignment
+            -
+              - handle
+              - alignment
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Left
+                    -
+                      - value
+                      - start
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Center
+                    -
+                      - value
+                      - center
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Right
+                    -
+                      - value
+                      - end
+                    -
+                      - default
+                      - false
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - hstack
+        -
+          - col3
+          - '3'
+        -
+          - col4
+          - '3'
+        -
+          - col2
+          - start
+        -
+          - rowId
+          - c3097394-b847-441e-aa82-9cb2fd240dd0
+  maxRows: null
+  minRows: null
+  staticRows: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table
