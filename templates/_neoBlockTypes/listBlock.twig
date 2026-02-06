@@ -1,0 +1,65 @@
+{##
+ # NEO BLOCK TYPE: LIST BLOCK
+ #}
+{% apply spaceless %}
+
+{# heading alignment #}
+{% set headingAlignment = 'text-start' %}
+{% if block.headingBlock | length and block.headingBlock.heading != '' %}
+	{% switch block.headingBlock.alignment %}
+		{% case 'left' %}
+			{% set textAlignment = 'text-start' %}
+		{% case 'center' %}
+			{% set textAlignment = 'text-center' %}
+		{% case 'right' %}
+			{% set textAlignment = 'text-end' %}
+	{% endswitch %}
+{% endif %}
+
+{# list settings #}
+{% set listSettings = block.listSettings[0] %}
+{% set stack        = listSettings.stack %}
+{% set itemsPerRow  = listSettings.itemsPerRow %}
+{% set columns      = listSettings.columns %}
+{% set alignment    = listSettings.alignment %}
+
+{% set listMarkup %}
+	{% if stack == 'hstack' %}
+		<div class="row">
+			{% for item in block.listItems %}
+				<div class="col-12 col-md-{{ 12 / itemsPerRow }} text-{{ alignment }}">
+					{{ item.listItem | raw }}
+				</div>
+			{% endfor %}
+		</div>
+	{% elseif stack == 'vstack' %}
+		<div class="row">
+			{% for item in block.listItems %}
+				<div class="col-12 col-md-{{ 12 / itemsPerRow }} text-{{ alignment }}">
+					{{ item.listItem | raw }}
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+{% endset %}
+
+{% endapply %}
+<section id="{{ sectionId }}" class="c-block {{ sectionStyleClasses | default }}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12 {{ block.textColor }}{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
+				{% if block.preheading | default %}
+					<p class="u-preheading {{ headingAlignment }}">
+						{{ block.preheading }}
+					</p>
+				{% endif %}
+				
+				{% include "_fields/headingBlock" with {
+					heading: block.headingBlock
+				} %}
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
