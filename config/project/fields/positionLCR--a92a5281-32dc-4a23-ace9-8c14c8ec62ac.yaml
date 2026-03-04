@@ -1,0 +1,32 @@
+columnSuffix: jeehktdg
+contentColumnType: string
+fieldGroup: 0b2d797a-1a89-4e24-8ef6-9d5d39a5d548 # Select Fields
+handle: positionLCR
+instructions: null
+name: 'Position[L|C|R]'
+searchable: false
+settings:
+  default: ''
+  options:
+    __assoc__:
+      -
+        - left
+        - '1'
+      -
+        - center
+        - '1'
+      -
+        - right
+        - '1'
+      -
+        - full
+        - ''
+      -
+        - drop-left
+        - ''
+      -
+        - drop-right
+        - ''
+translationKeyFormat: null
+translationMethod: none
+type: rias\positionfieldtype\fields\Position

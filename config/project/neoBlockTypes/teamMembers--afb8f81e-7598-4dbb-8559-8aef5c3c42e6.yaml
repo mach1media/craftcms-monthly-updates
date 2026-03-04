@@ -159,7 +159,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 7c1a8291-bb20-4c73-91e1-85a771d67cc3
         userCondition: null
-group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
+group: null
 groupChildBlockTypes: true
 handle: teamMembers
 icon: null

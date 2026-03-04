@@ -1,18 +1,32 @@
 {##
  # NEO BLOCK TYPE: GENERAL
  #}
-{% set imgDesktop    = block.imageDesktop is defined and block.imageDesktop | length ? block.imageDesktop.one : false %}
-{% set imgMobile     = block.imgMobile is defined and block.imageMobile | length ? block.imageMobile.one : false %}
-{% set gridWidth     = block.gridWidth is defined ? block.gridWidth : false %}
-{% set imgPosition   = block.imagePositionLR is defined ? (block.imagePositionLR == 'left' ? 'start' : (block.imagePositionLR == 'right' ? 'end' : false)) : false %}
+{% set imgDesktop       = block.imageDesktop is defined and block.imageDesktop | length ? block.imageDesktop.one : false %}
+{% set imgMobile        = block.imgMobile is defined and block.imageMobile | length ? block.imageMobile.one : false %}
+{% set gridWidth        = block.gridWidth is defined ? block.gridWidth : false %}
+{% set imagePositionLR  = block.imagePositionLR | default(false) %}
+{% set imagePositionLCR = block.positionLCR | default(false) %}
+
+{% set imgFloat    = 'none' %}
+{% set imgPosition = imagePositionLCR | default(imagePositionLR) %}
+
+{% if imgPosition | default == 'right' %}
+	{% set imgFloat = 'end' %}
+{% elseif imgPosition | default == 'left' %}
+	{% set imgFloat = 'start' %}
+{% elseif imgPosition | default == 'center' %}
+	{% set imgFloat = 'none' %}
+{% endif %}
 
 {% set image %}
-	{% set imgClasses  = ['col-12','col-md-' ~ gridWidth, 'float-md-' ~ imgPosition, 'mb-4'] %}
+	{% set imgClasses  = ['col-12','col-md-' ~ gridWidth, 'float-md-' ~ imgFloat, 'mb-4'] %}
 	
-	{% if imgPosition == 'start' %}
+	{% if imgPosition == 'left' %}
 		{% set imgClasses = imgClasses|merge(['me-md-4']) %}
-	{% elseif imgPosition == 'end' %}
+	{% elseif imgPosition == 'right' %}
 		{% set imgClasses = imgClasses|merge(['ms-md-4']) %}
+	{% elseif imgPosition == 'center' %}
+		{% set imgClasses = imgClasses|merge(['d-block','mx-md-auto']) %}
 	{% endif %}
 	
 	{% if imgMobile and imgDesktop %}
@@ -57,7 +71,7 @@
 				
 				{% if block.description is defined and block.description != '' %}
 				<div class="c-wysiwyg clearfix{% if block.buttons | length %} mb-4{% endif %}{{ textAlignment }}">
-					{{ image }}
+					{{ image | default }}
 					{% apply enkode_emails %}
 						{{ block.description | raw }}
 					{% endapply %}

@@ -138,7 +138,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: d616d6f9-d48a-41cc-8924-efa9c39a4e48
         userCondition: null
-group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
+group: null
 groupChildBlockTypes: true
 handle: ctaBlock
 icon: null

@@ -72,7 +72,7 @@ fieldLayouts:
         name: Card
         uid: c4bc3700-8989-49be-b5a0-13b32d3515a1
         userCondition: null
-group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
+group: null
 groupChildBlockTypes: true
 handle: imageCard
 icon: null
