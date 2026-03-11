@@ -7,6 +7,8 @@
 - 'blockType:312692fe-0d39-45bc-889d-f49efeaa0dc0' # Column: Image
 - 'blockType:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd' # Media
 - 'blockType:2b225f12-852a-4e1b-8d6a-eb9d7d1f3711' # Text+Media
+- 'blockType:3ad40ed4-7716-46fd-8805-0cd61e02beea' # Text+Figures in Gutter
+- 'blockType:e9a8ead1-1db9-47ff-ac47-3d0b76b55556' # Gutter Figure
 - 'blockType:0426383a-036a-46e6-864b-bd62a77bcd8e' # Text+Factoid
 - 'blockType:78ec370a-6844-45d7-b822-aefb52617a11' # Factoid: 1-Up
 - 'blockType:ba0ade4a-8a63-4b1b-9cda-30cd3010746a' # Factoid: 2-Up

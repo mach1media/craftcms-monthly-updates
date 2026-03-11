@@ -12,8 +12,7 @@
 
 {% set bgColor = '' %}
 {% if block.fields.backgroundColor is defined and block.backgroundColor != 'none' %}
-	{# {% set sectionStyleClasses = sectionStyleClasses|merge([block.backgroundColor]) %} #}
-	{% set bgColor = ' ' ~ block.backgroundColor %}
+	{% set sectionStyleClasses = sectionStyleClasses|merge([block.backgroundColor]) %}
 {% endif %}
 
 {% if block.fields.paddingTop is defined and block.paddingTop %}
@@ -25,11 +24,6 @@
 {% else %}
 	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--no-padding-bottom']) %}
 {% endif %}
-{#
-{% if block.fields.paddingSides is defined and block.paddingSides == '1' %}
-	{% set sectionStyleClasses = sectionStyleClasses|merge(['c-block--guttered']) %}
-{% endif %}
-#}
 
 {% if block.fields.sectionId is defined and block.sectionId != '' %}
 	{% set sectionId = block.sectionId %}
@@ -37,10 +31,10 @@
 	{% set sectionId = 'section-' ~ block.id %}
 {% endif %}
 
-<section class="c-block c-block--no-padding-top{{ bgColor }}">
-	<div class="container">
+<section class="c-block {{ sectionStyleClasses | join(' ') }}">
+	<div class="container{% if block.type.handle == 'textFiguresInGutter' %}-md{% endif %}">
 		<div class="row justify-content-center">
-			<div class="col-12 col-xl-10">
+			<div class="{% if block.type.handle == 'textFiguresInGutter' %}col-11{% else %}col-12 col-xl-10{% endif %}">
 
 				<!-- {{ block.type }}: {{ block.id }} -->
 				{% include [

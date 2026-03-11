@@ -4,40 +4,44 @@ description: ''
 enabled: true
 field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
-  4dd31e27-f225-4b62-8718-d2cac0877f9e:
+  ac750f5b-8d72-4224-933b-af5383f87ba6:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dismissible: false
             elementCondition: null
-            style: tip
-            tip: 'Choose an image or video'
-            type: craft\fieldlayoutelements\Tip
-            uid: 9e701fbc-b152-4197-b1a7-e8f0ad2076b2
-            userCondition: null
-          -
-            elementCondition: null
-            fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
+            fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4e09afd5-cf03-4485-ab3a-39fe86656878
+            uid: 14590273-5cd8-4bff-b197-cd9f0b13199d
             userCondition: null
             warning: null
             width: 25
           -
             elementCondition: null
-            fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
+            fieldUid: a92a5281-32dc-4a23-ace9-8c14c8ec62ac # Position[L|C|R]
             instructions: null
-            label: null
+            label: 'Image: Position'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5b131504-bca4-4f03-8556-5dafd8bcafdf
+            uid: 960c2d91-01d0-4e68-87bf-5f0ede13583b
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 9ff86f39-6873-42df-883a-5d1692acebbc # Text Size
+            instructions: null
+            label: 'Image: Size'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b361ebf2-5afd-4c50-a3b5-af9239e5e2c5
             userCondition: null
             warning: null
             width: 25
@@ -45,58 +49,32 @@ fieldLayouts:
             elementCondition: null
             fieldUid: cec407c4-ded3-4457-9ffd-7caf96ab0281 # Caption
             instructions: null
-            label: null
+            label: 'Image: Caption'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: dec1b6bb-76e4-4e48-8331-0b0b60aa89fd
+            uid: 491650e4-9102-43b9-9c12-e7b78563808c
             userCondition: null
             warning: null
             width: 100
-        name: Image
-        uid: cccadcb7-7e57-44c0-84b0-ab590997b6c4
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dismissible: false
-            elementCondition: null
-            style: tip
-            tip: "1. Click the [+ Video] button\r\n2. In the Asset picker window click the [EMBED] button\r\n3. Copy and paste video's URL"
-            type: craft\fieldlayoutelements\Tip
-            uid: e51f3ab9-70da-43d1-a260-29f2658803eb
-            userCondition: null
           -
             elementCondition: null
-            fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f # Video
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4c219af4-7319-4010-888e-792968979b9e
+            uid: 90c62e05-0e7a-4b70-a38b-62dd917e54a3
             userCondition: null
             warning: null
             width: 100
-        name: Video
-        uid: 971bba37-863b-4f10-a8a2-5f683ebb5c6c
+        name: 'Content Block'
+        uid: 7f4b3f66-238e-4ceb-a6e3-10364ad69813
         userCondition: null
       -
         elementCondition: null
         elements:
-          -
-            elementCondition: null
-            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3b2a95d4-da5c-4df0-b3a8-4da1fa79aea0
-            userCondition: null
-            warning: null
-            width: 25
           -
             elementCondition: null
             fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
@@ -105,7 +83,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 21c67259-bfa5-453a-8e2d-39d0ec0ed3af
+            uid: cc13d0db-7b34-4095-9617-0a74683b91d8
             userCondition: null
             warning: null
             width: 25
@@ -117,16 +95,28 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cc765290-e121-439c-8e81-90562f1d18d7
+            uid: 1a37fe10-8d5a-47ed-a0a3-971b17a9f003
             userCondition: null
             warning: null
             width: 25
-        name: 'Section Settings'
-        uid: fb57150d-1e52-4da9-9bfe-24ec959e74a7
+          -
+            elementCondition: null
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88d7950d-7e1a-41f9-84aa-c02bc00f9c25
+            userCondition: null
+            warning: null
+            width: 25
+        name: 'Block Spacing'
+        uid: 62626b8c-fe7d-4fb8-a85b-270b410aaf29
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: media
+handle: gutterFigure
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -136,5 +126,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: Media
-topLevel: true
+name: 'Gutter Figure'
+topLevel: false
