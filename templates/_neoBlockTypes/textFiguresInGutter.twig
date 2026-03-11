@@ -20,6 +20,7 @@
 {% set image         = row.image.one() | default(false) %}
 {% set imgPosition   = row.positionLCR | default('center') %}{# left, center, right #}
 {% set imgSize       = row.textSize | default() %}{# small, default, large #}
+{% set imgCaption    = row.caption | default(image.caption) %}
 {% set figureClasses = [
 	'position-relative',
 	'rounded-3',
@@ -161,8 +162,8 @@
 				img : image,
 				class : imageClasses | join(' '),
 			} %}
-			{% if row.caption != '' %}
-				<figcaption class="p-3 text-primary bg-primary-extralight" style="font-size:85%;">{{ row.caption | raw }}</figcaption>
+			{% if imgCaption != '' %}
+				<figcaption class="p-3 text-primary bg-primary-extralight" style="font-size:85%;">{{ imgCaption | raw }}</figcaption>
 			{% endif %}
 		</figure>
 	{% endif %}
