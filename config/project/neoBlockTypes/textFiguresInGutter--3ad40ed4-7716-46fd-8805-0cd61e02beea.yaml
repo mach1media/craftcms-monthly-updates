@@ -32,7 +32,7 @@ fieldLayouts:
             uid: 22223ee4-0041-4ec2-8d32-b49eb7415839
             userCondition: null
             warning: null
-            width: 100
+            width: 25
           -
             elementCondition: null
             fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
@@ -44,7 +44,7 @@ fieldLayouts:
             uid: 472af434-0892-45b9-9de2-88dc783dfd2b
             userCondition: null
             warning: null
-            width: 100
+            width: 25
         name: 'Section Settings'
         uid: 3c5fa4bf-c2dc-4eed-9af0-96205724b653
         userCondition: null

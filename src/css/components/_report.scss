@@ -14,7 +14,7 @@
 			display: inline-block;
 			font-size: 175%;
 			//line-height: var(--bs-body-line-height);
-			padding: .1em;
+			padding: .1em .2em .1em .1em;
 
 			.aos-animate & {
 				@include clip-reveal-ltr;
