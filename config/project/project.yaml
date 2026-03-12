@@ -1,4 +1,4 @@
-dateModified: 1773340967
+dateModified: 1773341009
 elementSources:
   craft\elements\Entry:
     -
@@ -8,6 +8,7 @@ elementSources:
       disabled: false
       key: '*'
       tableAttributes:
+        - uri
         - section
         - type
         - link
