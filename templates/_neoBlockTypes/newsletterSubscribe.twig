@@ -1,0 +1,80 @@
+{##
+ # NEO BLOCK TYPE: NEWSLETTER SUBSCRIBE
+ #}
+{% if block.textAlignment == 'center' %}
+	{% set textAlignment = 'text-center' %}
+{% elseif block.textAlignment == 'right' %}
+	{% set textAlignment = 'text-end' %}
+{% else %}
+	{% set textAlignment = 'text-default' %}
+{% endif %}
+
+{% set blockContent %}
+	<div class="c-block__content {{ textAlignment }}">
+		{% if block.preheading is defined and block.preheading != '' %}
+			<p class="u-preheading">{{ block.preheading }}</p>
+		{% endif %}
+		
+		{% if block.heading != '' %}
+			<h2>{{ block.heading | raw }}</h2>
+		{% endif %}
+		
+		{% if block.description is defined and block.description != '' %}
+			<div class="c-wysiwyg clearfix">
+				{{ block.description }}
+			</div>
+		{% endif %}
+	</div>
+{% endset %}
+
+{% set formBlock %}
+<div class="c-form__optin bg-secondary-extralight rounded p-4 p-lg-5">
+	<div class="c-form__optin-heading">
+		<h3 class="fs-5 u-base-font-semibold text-uppercase text-center mb-5">{{ block.subheading | default('Stay connected with us for more news and updates') }}</h3>
+	</div>
+
+	<div class="c-form__optin-form">
+		<form class="" method="get" action="{{ url('optin') }}">
+			<input type="hidden" id="fieldFirstName-{{ block.id }}" name="Lead.FirstName" value="" />
+			<input type="hidden" id="fieldLastName-{{ block.id }}" name="Lead.LastName" value="" />
+
+			<div class="row align-items-center">
+				<div class="col-12 col-sm-{{ block.positionLCR == 'center' ? '9' : '8' }}">
+					<input autocomplete="Email" aria-label="Email" class="form-control rounded-0 border-start-0 border-top-0 border-end-0 border-bottom border-2 border-secondary text-primary bg-transparent" id="fieldEmail-{{ block.id }}" maxlength="200" name="Lead.Email" required="" type="email" placeholder="your email">
+				</div>
+					
+				<div class="col-12 col-sm-{{ block.positionLCR == 'center' ? '3' : '4' }} text-sm-end mt-3 mt-sm-0">
+					<button type="submit" class="btn btn-pill btn-secondary border-4 border-secondary ms-sm-auto">Subscribe</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+{% endset %}
+
+<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
+	<div class="container">
+		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %} {{ textAlignment }}">
+				
+				{% if block.positionLCR == 'center' %}
+					{{ blockContent }}
+					<div class="mt-4 mt-lg-5">
+						{{ formBlock }}
+					</div>
+				{% else %}
+					<div class="row justify-content-between">
+						<div class="col-12 col-lg-5 mb-4{{ block.positionLCR == 'right' ? ' order-lg-2' }}">
+							{{ blockContent }}
+						</div>
+
+						<div class="col-12 col-lg-6{{ block.positionLCR == 'right' ? ' order-lg-1' }}">
+							{{ formBlock }}
+						</div>
+					</div>
+				{% endif %}
+				
+			</div>
+		</div>
+	</div>
+</section>

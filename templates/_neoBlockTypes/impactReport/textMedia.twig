@@ -1,8 +1,8 @@
 {##
  # NEO BLOCK TYPE: IMPACT REPORT PAGE BUILDER: TEXT+MEDIA
  #}
-{% set animation = block.animationSettings[0] %}
-{% set aosDelay  = animation.delay %}
+{% set animation = block.animationSettings[0] | default(null) %}
+{% set aosDelay  = animation.delay | default(null) %}
 
 {% if block.imageDesktop is defined and block.imageDesktop | length %}
 	{% set imgDesktop    = block.imageDesktop.one %}
@@ -55,7 +55,7 @@
 						</div>
 					</div>
 
-					{% if animation.staggered == 'yes' %}
+					{% if animation.staggered | default == 'yes' %}
 						{% set aosDelay = aosDelay + 500 %}
 					{% endif %}
 

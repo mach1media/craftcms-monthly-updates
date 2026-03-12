@@ -1,4 +1,4 @@
-dateModified: 1773326331
+dateModified: 1773340967
 elementSources:
   craft\elements\Entry:
     -
@@ -201,6 +201,7 @@ meta:
     6ed354ea-1804-41ca-a57f-9e843614ea4a: General # General
     6eef926d-daad-4ff8-9cce-8ececaa4dcf4: Description # Description
     6eeff1eb-96ce-43ab-911f-a6e7aa97139e: Heading # Heading
+    06f46195-4c79-4e55-9dd8-3ab925b7c932: 'Newsletter Subscribe' # Newsletter Subscribe
     6f769974-aa7c-451e-85dc-681b49af0e84: 'Responsive: Medium' # Responsive: Medium
     7a533a82-4f0f-4e24-b8e2-f37bb95a4b06: Thumbnail # Thumbnail
     07a87980-eb4d-4710-896e-772170d1d21d: 'Section Settings' # Section Settings

@@ -1,0 +1,3 @@
+[submodule "modules/craft-mailchimp"]
+	path = modules/craft-mailchimp
+	url = git@github.com:mach1media/craft-mailchimp.git

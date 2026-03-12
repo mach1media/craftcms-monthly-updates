@@ -1,8 +1,8 @@
 {##
  # IMPACT REPORT PAGE BUILDER: GENERAL
  #}
-{% set animation = block.animationSettings[0] %}
-{% set aosDelay = animation.delay %}
+{% set animation = block.animationSettings[0] | default(null) %}
+{% set aosDelay = animation.delay | default(null) %}
 <section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -61,7 +61,7 @@
 						>
 						{{ block.preheading | raw }}
 					</div>
-					{% if animation.staggered == 'yes' %}
+					{% if animation.staggered | default == 'yes' %}
 						{% set aosDelay = aosDelay + 500 %}
 					{% endif %}
 					{% endapply %}

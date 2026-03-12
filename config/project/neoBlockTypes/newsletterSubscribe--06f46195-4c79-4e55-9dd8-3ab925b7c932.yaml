@@ -1,0 +1,159 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
+fieldLayouts:
+  2f0e17e9-5894-41bb-a5b6-a27dc70dbca3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca761a8b-b719-4e6f-9095-5c145a96ed05
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: a92a5281-32dc-4a23-ace9-8c14c8ec62ac # Position[L|C|R]
+            instructions: null
+            label: 'Form Position'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 924f000b-966a-4f9d-af17-7038f79f5e89
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7ba7db1c-e3bf-4307-a1b3-6792f9b654fb
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: f700d39b-3a4f-4c99-a961-d9fb1f3df887 # Subheading
+            instructions: null
+            label: 'Form Heading'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d3aadf21-ab71-4154-bc56-b3424eff3ead
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 3d471b71-239e-470a-b469-491689525a9a
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a55a1bcd-1269-4325-a324-5d0752bcbfb6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b1e39cee-6bee-4fd6-a9ee-f9cf917a12d6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e46e280-a19a-4782-8ed5-c76e250a5ed8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b15656f9-a747-4860-9a2f-4079e576e332
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a750cfd6-63e0-45d7-bc7b-68acd1809391
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62d3763e-aa63-4c77-9dec-226c905400f9
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa # Padding: Sides
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b1e6d703-9145-473b-ba43-8d7bcc625edf
+            userCondition: null
+            warning: null
+            width: 25
+        name: 'Section Settings'
+        uid: b720fbf1-0591-46c6-904c-4fd6c5726884
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: newsletterSubscribe
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Newsletter Subscribe'
+topLevel: true
