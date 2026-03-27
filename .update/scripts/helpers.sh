@@ -26,6 +26,11 @@ warn() {
     echo -e "${YELLOW}[WARN]${NC} $1" >&2
 }
 
+# Alias for backwards compatibility
+warning() {
+    warn "$1"
+}
+
 pause_on_error() {
     echo -e "${RED}[ERROR]${NC} $1" >&2
     echo -e "${YELLOW}Press Enter to continue after resolving the issue, or Ctrl+C to abort${NC}"
