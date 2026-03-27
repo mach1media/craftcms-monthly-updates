@@ -117,11 +117,29 @@ case "$SERVER_TOOL" in
     2) # Ploi
         echo ""
         echo -e "${BLUE}Ploi Configuration${NC}"
+
+        # Check for Ploi CLI
+        PLOI_CLI_AVAILABLE=false
+        if command -v ploi &>/dev/null; then
+            PLOI_CLI_AVAILABLE=true
+            echo -e "${GREEN}Ploi CLI detected!${NC}"
+            echo ""
+            echo "The Ploi CLI can streamline deployments with:"
+            echo "• Direct deployment with log streaming"
+            echo "• Automatic site linking (no server/site IDs needed)"
+            echo ""
+        else
+            echo ""
+            echo "Tip: Install Ploi CLI for easier deployments:"
+            echo "  brew tap ploi/ploi && brew install ploi"
+            echo ""
+        fi
+
         prompt_with_default "Domain name (e.g., example.com)" "" "DOMAIN"
-        
+
         # Set default paths
         REMOTE_PROJECT_DIR="/home/ploi/$DOMAIN"
-        
+
         # Confirm public directory
         echo ""
         echo "What is the public web directory name?"
@@ -129,16 +147,17 @@ case "$SERVER_TOOL" in
         echo "2) web"
         echo "3) Other"
         read -p "Select option (1-3): " PUBLIC_DIR_OPTION
-        
+
         case "$PUBLIC_DIR_OPTION" in
             1) PUBLIC_DIR="public" ;;
             2) PUBLIC_DIR="web" ;;
             3) prompt_with_default "Enter public directory name" "" "PUBLIC_DIR" ;;
             *) PUBLIC_DIR="public" ;;
         esac
-        
+
         REMOTE_UPLOADS_DIR="$REMOTE_PROJECT_DIR/$PUBLIC_DIR/uploads"
         SSH_USER="ploi"
+        HOSTING_PROVIDER="ploi"
         ;;
         
     3) # Laravel Forge
@@ -242,24 +261,81 @@ case "$SERVER_TOOL" in
         ;;
         
     2) # Ploi
-        echo "1) Ploi deployment (API)"
-        echo "2) Manual deployment"
-        echo "3) GitHub Actions"
-        echo "4) Other"
-        read -p "Select option (1-4): " DEPLOY_OPTION
-        
-        case "$DEPLOY_OPTION" in
-            1) 
-                DEPLOYMENT_METHOD="ploi"
-                prompt_with_default "Ploi server ID" "" "PLOI_SERVER_ID"
-                prompt_with_default "Ploi site ID" "" "PLOI_SITE_ID"
-                prompt_password "Ploi API token" "PLOI_API_TOKEN"
-                ;;
-            2) DEPLOYMENT_METHOD="manual" ;;
-            3) DEPLOYMENT_METHOD="github-actions" ;;
-            4) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
-            *) DEPLOYMENT_METHOD="manual" ;;
-        esac
+        if [ "$PLOI_CLI_AVAILABLE" = "true" ]; then
+            echo "1) Ploi CLI deployment (recommended - streams logs)"
+            echo "2) Ploi API deployment (requires server/site IDs)"
+            echo "3) Manual deployment"
+            echo "4) GitHub Actions"
+            echo "5) Other"
+            read -p "Select option (1-5): " DEPLOY_OPTION
+
+            case "$DEPLOY_OPTION" in
+                1)
+                    DEPLOYMENT_METHOD="ploi"
+                    PLOI_USE_CLI="true"
+                    echo ""
+                    echo -e "${BLUE}Ploi CLI Setup${NC}"
+                    echo ""
+                    echo "To link this project to Ploi:"
+                    echo "  1. Run 'ploi token' to set your API token (if not done)"
+                    echo "  2. Run 'ploi init' in your project root"
+                    echo "  3. Select your server and site when prompted"
+                    echo ""
+                    echo "This creates a .ploi file that links the project."
+                    echo ""
+                    read -p "Press Enter to continue..."
+                    ;;
+                2)
+                    DEPLOYMENT_METHOD="ploi"
+                    PLOI_USE_CLI="false"
+                    echo ""
+                    echo -e "${BLUE}Finding Ploi Server/Site IDs${NC}"
+                    echo ""
+                    echo "To find your IDs:"
+                    echo "  1. Log in to https://ploi.io"
+                    echo "  2. Go to your server, then select your site"
+                    echo "  3. Check the URL: ploi.io/panel/servers/[SERVER_ID]/sites/[SITE_ID]"
+                    echo ""
+                    prompt_with_default "Ploi server ID" "" "PLOI_SERVER_ID"
+                    prompt_with_default "Ploi site ID" "" "PLOI_SITE_ID"
+                    prompt_password "Ploi API token" "PLOI_API_TOKEN"
+                    ;;
+                3) DEPLOYMENT_METHOD="manual" ;;
+                4) DEPLOYMENT_METHOD="github-actions" ;;
+                5) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+                *) DEPLOYMENT_METHOD="manual" ;;
+            esac
+        else
+            echo "1) Ploi API deployment"
+            echo "2) Manual deployment"
+            echo "3) GitHub Actions"
+            echo "4) Other"
+            read -p "Select option (1-4): " DEPLOY_OPTION
+
+            case "$DEPLOY_OPTION" in
+                1)
+                    DEPLOYMENT_METHOD="ploi"
+                    echo ""
+                    echo -e "${BLUE}Finding Ploi Server/Site IDs${NC}"
+                    echo ""
+                    echo "To find your IDs:"
+                    echo "  1. Log in to https://ploi.io"
+                    echo "  2. Go to your server, then select your site"
+                    echo "  3. Check the URL: ploi.io/panel/servers/[SERVER_ID]/sites/[SITE_ID]"
+                    echo ""
+                    echo "Tip: Install Ploi CLI for easier deployment:"
+                    echo "  brew tap ploi/ploi && brew install ploi"
+                    echo ""
+                    prompt_with_default "Ploi server ID" "" "PLOI_SERVER_ID"
+                    prompt_with_default "Ploi site ID" "" "PLOI_SITE_ID"
+                    prompt_password "Ploi API token" "PLOI_API_TOKEN"
+                    ;;
+                2) DEPLOYMENT_METHOD="manual" ;;
+                3) DEPLOYMENT_METHOD="github-actions" ;;
+                4) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+                *) DEPLOYMENT_METHOD="manual" ;;
+            esac
+        fi
         ;;
         
     3) # Laravel Forge
@@ -431,6 +507,9 @@ branch: $PRODUCTION_BRANCH
 # Production site
 production_url: $PRODUCTION_URL
 
+# Hosting provider (ploi, forge, serverpilot, fortrabbit, generic)
+hosting_provider: ${HOSTING_PROVIDER:-generic}
+
 # SSH settings for automated database sync
 ssh_host: $SSH_HOST
 ssh_user: $SSH_USER
@@ -481,13 +560,28 @@ EOF
 # Add deployment-specific configuration
 case "$DEPLOYMENT_METHOD" in
     "ploi")
-        if [ -n "$PLOI_SERVER_ID" ]; then
-            cat >> "$CONFIG_FILE" << EOF
+        cat >> "$CONFIG_FILE" << EOF
 
 # Ploi settings
+# Use CLI for deployment when available (streams logs)
+ploi_use_cli: ${PLOI_USE_CLI:-true}
+# Stream deployment logs (only used with CLI)
+ploi_stream_logs: true
+EOF
+        if [ -n "$PLOI_SERVER_ID" ]; then
+            cat >> "$CONFIG_FILE" << EOF
+# Server and site IDs (only needed for API deployment)
 ploi_server_id: $PLOI_SERVER_ID
 ploi_site_id: $PLOI_SITE_ID
 ploi_api_token: $PLOI_API_TOKEN
+EOF
+        else
+            cat >> "$CONFIG_FILE" << EOF
+# Server and site IDs (optional - not needed if using CLI with 'ploi init')
+# To find IDs: ploi.io/panel/servers/[SERVER_ID]/sites/[SITE_ID]
+ploi_server_id:
+ploi_site_id:
+ploi_api_token:
 EOF
         fi
         ;;

@@ -8,15 +8,50 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
 
 source "$SCRIPT_DIR/helpers.sh"
+source "$SCRIPT_DIR/provider-detect.sh"
 source "$SCRIPT_DIR/remote-exec.sh"
 
-# Parse config
+# Detect hosting provider for smart defaults
+DETECTED_PROVIDER=$(detect_provider)
+info "Detected hosting provider: $DETECTED_PROVIDER"
+
+# Parse config with provider-aware defaults
 PRODUCTION_URL=$(get_config "production_url")
 BACKUP_DIR=$(get_config "backup_dir" "storage/backups")
 SSH_HOST=$(get_config "ssh_host")
-SSH_USER=$(get_config "ssh_user")
 SSH_PORT=$(get_config "ssh_port" "22")
-REMOTE_PROJECT_DIR=$(get_config "remote_project_dir")
+
+# Use provider-aware SSH user if not explicitly configured
+SSH_USER=$(get_config "ssh_user" "" 2>/dev/null) || true
+if [ -z "$SSH_USER" ]; then
+    SSH_USER=$(get_provider_ssh_user "$DETECTED_PROVIDER")
+    if [ -n "$SSH_USER" ]; then
+        info "Using provider default SSH user: $SSH_USER"
+    fi
+fi
+
+# Use provider-aware remote project directory if not explicitly configured
+REMOTE_PROJECT_DIR=$(get_config "remote_project_dir" "" 2>/dev/null) || true
+if [ -z "$REMOTE_PROJECT_DIR" ]; then
+    # Try to infer domain from production URL
+    DOMAIN="${PRODUCTION_URL#https://}"
+    DOMAIN="${DOMAIN#http://}"
+    DOMAIN="${DOMAIN%%/*}"
+    if [ -n "$DOMAIN" ]; then
+        REMOTE_PROJECT_DIR=$(get_provider_project_dir "$DETECTED_PROVIDER" "$DOMAIN")
+        if [ -n "$REMOTE_PROJECT_DIR" ]; then
+            info "Using provider default path: $REMOTE_PROJECT_DIR"
+        fi
+    fi
+fi
+
+# Validate we have required values
+if [ -z "$SSH_USER" ]; then
+    error "SSH user not configured. Set ssh_user in config.yml"
+fi
+if [ -z "$REMOTE_PROJECT_DIR" ]; then
+    error "Remote project directory not configured. Set remote_project_dir in config.yml"
+fi
 
 # Cleanup function for proper signal handling
 cleanup() {

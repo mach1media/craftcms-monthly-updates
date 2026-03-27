@@ -29,6 +29,74 @@ When you run `npm run update`, the orchestrator script:
 **Result**: What used to take 30+ minutes of manual work becomes a mostly-automated 5-minute process.
 
 
+## Ploi Integration
+
+This branch includes enhanced support for [Ploi](https://ploi.io) server management, with both CLI and API deployment options.
+
+### Ploi CLI Setup (Recommended)
+
+The Ploi CLI provides the best experience with real-time log streaming during deployment.
+
+```bash
+# Install Ploi CLI
+brew tap ploi/ploi
+brew install ploi
+
+# Configure API token (get from https://ploi.io/panel/settings/api)
+ploi token
+
+# Link your project to Ploi (run in project root)
+ploi init
+```
+
+After linking, deployments automatically use the CLI with log streaming:
+
+```bash
+npm run update/deploy
+# Output streams deployment logs in real-time
+```
+
+### Ploi API Setup (No CLI Required)
+
+If you prefer not to install the CLI, you can use direct API calls:
+
+```yaml
+# config.yml
+deployment_method: ploi
+ploi_server_id: 12345
+ploi_site_id: 67890
+ploi_api_token: your-token-here  # Or set PLOI_API_TOKEN env var
+```
+
+**Finding your Server and Site IDs:**
+1. Log in to https://ploi.io
+2. Navigate to your server, then your site
+3. Check the URL: `ploi.io/panel/servers/[SERVER_ID]/sites/[SITE_ID]`
+
+Or use CLI: `ploi servers` and `ploi sites`
+
+### Ploi Path Defaults
+
+When Ploi is detected, the scripts automatically use Ploi's path structure:
+
+| Setting | Default Value |
+|---------|--------------|
+| SSH User | `ploi` |
+| Project Path | `/home/ploi/{domain}` |
+| SSH Key Paths | `~/.ssh/id_rsa`, `~/.ssh/ploi` |
+
+### Deployment Methods
+
+The scripts support multiple deployment strategies:
+
+| Method | Config Value | Description |
+|--------|-------------|-------------|
+| Ploi CLI | `ploi` | Uses `ploi deploy:run --log` for streaming logs |
+| Ploi API | `ploi` | Falls back to REST API if CLI not available |
+| GitHub Actions | `github-actions` | Triggers on push to production branch |
+| Manual | `manual` | No automated deployment |
+
+
 ## Integration into Existing Craft CMS Projects
 
 ### Method 1: Clone Integration Branch (Recommended)
