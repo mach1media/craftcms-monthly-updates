@@ -3,10 +3,13 @@
  #}
 {% set block = entry.popup.one() %}
 
+{% set modalSize = block.modalSize | default(null) %}
+{% set linkColor = block.linkColor | default(null) %}
+
 {% set modalContent %}
 	<div class="vstack gap-4">
 		{% if block.description is defined and block.description != '' %}
-			<div class="c-wysiwyg {{ block.textColor }} {{ block.textAlignment }}">
+			<div class="c-wysiwyg {{ block.textColor }} {{ block.textAlignment }}{% if linkColor %} link-{{ linkColor }}{% endif %}">
 				{% apply enkode_emails %}
 					{{ block.description }}
 				{% endapply %}
@@ -46,7 +49,7 @@
 		tabindex="-1" 
 		aria-labelledby="modal-{{ block.id }}-label" 
 		aria-hidden="true">
-		<div class="modal-dialog modal-{{ block.type.handle == 'sideBySide' ? 'xl' : 'md' }} modal-dialog-centered modal-dialog-scrollable' }}">
+		<div class="modal-dialog{% if modalSize %} modal-{{ modalSize }}{% endif %} modal-dialog-centered modal-dialog-scrollable">
 			<div class="modal-content bg-transparent rounded-0 border-0">
 				<div class="d-flex justify-content-end mb-4"
 					data-bs-theme="dark">

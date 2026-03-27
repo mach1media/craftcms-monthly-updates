@@ -17,4 +17,16 @@
 			height: auto;
 		}
 	}
+
+	@each $color, $value in $theme-colors {
+		&.link-#{$color} {
+			a {
+				color: $value !important;
+
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
 }
