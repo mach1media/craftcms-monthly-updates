@@ -80,7 +80,7 @@ fieldLayouts:
         name: 'Text Description'
         uid: 85fc8dce-0fe3-4b14-98fe-7945e7f1d489
         userCondition: null
-group: null
+group: 2734260c-14b6-412b-a372-5a4ee016497a # Media
 groupChildBlockTypes: true
 handle: contactFormBlock
 icon: null

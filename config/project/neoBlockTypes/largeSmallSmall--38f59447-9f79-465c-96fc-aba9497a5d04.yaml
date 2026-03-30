@@ -44,7 +44,7 @@ fieldLayouts:
         name: Tiles
         uid: 89e492df-f324-4b9f-a3fb-08ffea0ff4c8
         userCondition: null
-group: null
+group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
 groupChildBlockTypes: true
 handle: largeSmallSmall
 icon: null

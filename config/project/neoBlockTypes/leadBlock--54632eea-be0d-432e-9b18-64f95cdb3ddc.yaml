@@ -138,7 +138,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 193ceb77-cb82-467f-870d-93aefe5b8f67
         userCondition: null
-group: null
+group: cfcf5277-7782-4698-bf84-73607da709a9 # Text Blocks
 groupChildBlockTypes: true
 handle: leadBlock
 icon: null
