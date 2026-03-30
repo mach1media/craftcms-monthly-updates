@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "^4.4.13",
+    "craftcms/cms": "^4.17.12",
     "craftcms/feed-me": "^5.2.0",
     "craftcms/mailgun": "3.1.0",
     "craftcms/redactor": "^3.0.4",
@@ -15,10 +15,10 @@
     "statikbe/craft-config-values": "^2.0.2",
     "topshelfcraft/wordsmith": "^4.2.0",
     "verbb/field-manager": "^3.0.6",
-    "verbb/formie": "^2.0.30",
+    "verbb/formie": "^2.2.17",
     "verbb/redactor-tweaks": "^3.0.0",
     "verbb/super-table": "^3.0.9",
-    "verbb/tablemaker": "^4.0.6",
+    "verbb/tablemaker": "^4.0.18",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
