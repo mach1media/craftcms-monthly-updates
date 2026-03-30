@@ -7,6 +7,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 7e2349b9-7b97-4940-8c4a-a4f5c484dc4f # Modal Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd579443-681b-40d7-8552-f8ffc4e07608
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
             fieldUid: 7e18b560-b806-44a3-9917-0816b0ee3517 # Background Color
             instructions: null
             label: null
@@ -26,6 +38,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 254c7528-a729-4efa-ba80-d82a5ce0ccf8
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: c32f12ef-294f-48af-bc53-4f27a6cd908a # Link Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1bee181-7eb3-40d7-b2c3-5ddb942e0836
             userCondition: null
             warning: null
             width: 25
@@ -107,6 +131,64 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  7e2349b9-7b97-4940-8c4a-a4f5c484dc4f: # Modal Size
+    columnSuffix: pqppkrng
+    contentColumnType: string(2)
+    fieldGroup: null
+    handle: modalSize
+    instructions: null
+    name: 'Modal Size'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - SM
+            -
+              - value
+              - sm
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '--'
+            -
+              - value
+              - ''
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - LG
+            -
+              - value
+              - lg
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - XL
+            -
+              - value
+              - xl
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   75ffc990-9c9a-40b8-a214-0ae30912f453: # Description
     columnSuffix: stglvgif
     contentColumnType: text
@@ -224,6 +306,20 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  c32f12ef-294f-48af-bc53-4f27a6cd908a: # Link Color
+    columnSuffix: ywprjhge
+    contentColumnType: string
+    fieldGroup: null
+    handle: linkColor
+    instructions: null
+    name: 'Link Color'
+    searchable: false
+    settings:
+      dataSet: 'CSS Color Classes'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
   e1a7c463-bcb1-488f-8036-48c88e6ed43b: # Buttons
     columnSuffix: null
     contentColumnType: string
@@ -234,7 +330,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 979966389
+      changedFieldIndicator: 1271385943
       columns:
         __assoc__:
           -

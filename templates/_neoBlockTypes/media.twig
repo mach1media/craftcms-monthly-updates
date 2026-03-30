@@ -1,6 +1,7 @@
 {##
  # NEO BLOCK TYPE: MEDIA
  #}
+{% apply spaceless %}
 {% if block.imageDesktop is defined and block.imageDesktop | length %}
 	{% set imgDesktop    = block.imageDesktop.one %}
 	{% set imgDesktopSrc = imgDesktop.format != 'svg' and block.disableImageTransforms == 0 ? imgDesktop.url('responsiveMedium') : imgDesktop.url %}
@@ -12,24 +13,47 @@
 	{% set imgMobileSrc = imgMobile.format != 'svg' and block.disableImageTransforms == 0 ? imgMobile.url('responsiveSmall') : imgMobile.url %}
 	{% set imgMobileAlt = imgMobile.alt ?: imgMobile.caption %}
 {% endif %}
-<section id="{{ sectionId }}" class="c-block{% if sectionStyleClasses is defined and sectionStyleClasses != '' %} {{ sectionStyleClasses }}{% endif %}">
-	<div class="container">
-		<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
-			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
-				{% if block.imageDesktop | length and block.imageMobile | length %}
-					<p class="d-md-none"><img class="img-fluid" style="width:100%;" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" /></p>
-					<p class="d-none d-md-block"><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
-				{% elseif block.imageDesktop | length %}
-					<p><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
-				{% elseif block.video | length %}
-					{% set embeddedAsset = craft.embeddedAssets.get(block.video.one) %}
-					<div class="row justify-content-center">
-						<div class="col-12 col-lg-10 col-xl-9">
-							<div class="js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
+
+{% set sectionClasses = [] %}
+{% if not block.fullViewport %}
+	{% set sectionClasses = sectionClasses | merge(['c-block']) %}
+{% endif %}
+
+{% if sectionStyleClasses is defined and sectionStyleClasses != '' %}
+	{% set sectionClasses = sectionClasses | merge([sectionStyleClasses]) %}
+{% endif %}
+{% endapply %}
+<section id="{{ sectionId }}" class="{{ sectionClasses | join(' ') }}">
+	{% if block.fullViewport %}
+		{% if block.imageDesktop | length and block.imageMobile | length %}
+			<div class="d-md-none"><img class="img-fluid" style="width:100%;" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" /></div>
+			<div class="d-none d-md-block"><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></div>
+		{% elseif block.imageDesktop | length %}
+			<div><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></div>
+		{% elseif block.video | length %}
+			{% set embeddedAsset = craft.embeddedAssets.get(block.video.one) %}
+			<div class="js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
+		{% endif %}
+	{% else %}
+		<div class="container">
+			<div class="row{% if block.paddingSides is defined and block.paddingSides == '1' %} justify-content-center{% endif %}">
+				<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %}">
+					{% if block.imageDesktop | length and block.imageMobile | length %}
+						<p class="d-md-none"><img class="img-fluid" style="width:100%;" src="{{ imgMobileSrc }}" alt="{{ imgMobileAlt }}" /></p>
+						<p class="d-none d-md-block"><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
+					{% elseif block.imageDesktop | length %}
+						<p><img class="img-fluid" style="width:100%;" src="{{ imgDesktopSrc }}" alt="{{ imgDesktopAlt }}" /></p>
+					{% elseif block.video | length %}
+						{% set embeddedAsset = craft.embeddedAssets.get(block.video.one) %}
+						<div class="row justify-content-center">
+							<div class="col-12 col-lg-10 col-xl-9">
+								<div class="js-fitvids">{{ embeddedAsset ? embeddedAsset.html }}</div>
+							</div>
 						</div>
-					</div>
-				{% endif %}
+					{% endif %}
+				</div>
 			</div>
 		</div>
-	</div>
+	{% endif %}
 </section>
+ß

@@ -1,4 +1,4 @@
-dateModified: 1773341009
+dateModified: 1774908587
 elementSources:
   craft\elements\Entry:
     -
@@ -209,6 +209,7 @@ meta:
     7b673ccc-ad98-4e36-b605-78cfc5fe2c98: 'General: Large Text' # General: Large Text
     7e18b560-b806-44a3-9917-0816b0ee3517: 'Background Color' # Background Color
     7e96a64e-53b0-4605-98b2-53710eb1c5bf: Media # Media
+    7e2349b9-7b97-4940-8c4a-a4f5c484dc4f: 'Modal Size' # Modal Size
     7f4113a8-8cb2-4670-bac9-e4de20179209: 'Text Links' # Text Links
     7f134341-6c01-4975-9ea9-60df3c3dd5f0: Image # Image
     7fdd5ed0-dc8b-4df8-bdb3-5909ceccface: Subheading # Subheading
@@ -237,6 +238,7 @@ meta:
     19c27c03-7838-4358-9214-9634fe9e3970: Image # Image
     24a26f70-67f3-45a7-8828-d33f091c1508: 'Home: Tile - Wide' # Home: Tile - Wide
     28a04878-3d6a-4889-ad36-87cce2dd449e: 'Padding: Top' # Padding: Top
+    30b5d8ad-fec0-49ec-91ab-12b3a3f04514: 'Full Viewport' # Full Viewport
     30cb3a33-df4d-4fcc-aa0e-7ff1b55c635b: 'Team Member' # Team Member
     31f2b911-731f-42b5-84c6-4b2777260f2f: 'Section Heading' # Section Heading
     036cb663-997c-41f3-a8d2-b4c34d457976: Factoid # Factoid
@@ -249,6 +251,7 @@ meta:
     48decd81-091f-4c64-a59a-482b826a0ef5: Media # Media
     48fda275-cc4f-48a3-9d79-c38f9cd4d1d6: 'Factoid Layout' # Factoid Layout
     49f76678-87cc-4e24-8127-90fe77fb1441: Quote # Quote
+    50deb98c-8639-40ab-854c-c247f87e3d80: 'Link Color' # Link Color
     55bd2a63-aca2-431f-bdc7-c44414ac0418: Link # Link
     55f89f73-30c8-4eeb-b491-a0da78da6657: 'Text Color' # Text Color
     61a1068b-a537-4bde-85ac-b0fe8f04946e: Team # Team
@@ -394,6 +397,7 @@ meta:
     bb7b4f41-f446-4225-bf73-3dd0315ee0a4: 'Text Alignment' # Text Alignment
     bb9e3568-5ca9-4a9a-8534-c5e97ea203d7: 'Icon: Custom' # Icon: Custom
     bbb08643-5a25-4c51-b363-072e75cdf192: 'Image Position' # Image Position
+    bd344a67-a76b-4a60-a516-6f0450e88392: 'Modal Size' # Modal Size
     be37b343-87c7-4b21-8965-829e7c555685: 'Video Tile' # Video Tile
     be950c11-5fd5-43e5-962d-aa30d3dd2834: Form # Form
     bf0e4db0-9861-4bba-b0d0-98bafe12bc6c: 'Page Builders' # Page Builders
@@ -401,6 +405,7 @@ meta:
     c01f8239-e66d-46b2-92be-458a8a5914f6: Resources # Resources
     c1d10006-9965-425c-961a-e3bd34a9f34c: 'Column: Text' # Column: Text
     c13a4a02-215c-406f-8eb0-6aaca8403db8: 'CTA Link' # CTA Link
+    c32f12ef-294f-48af-bc53-4f27a6cd908a: 'Link Color' # Link Color
     c67bfc40-e256-429b-8bc2-bf32fdbf8e43: 'Home: Intro' # Home: Intro
     c87c2284-cb4d-4e16-9b19-d1ae79c72fc5: 'Grant Recipients' # Grant Recipients
     c94c64ea-cc6d-4b7d-9441-052031432b9e: 'Text Color' # Text Color

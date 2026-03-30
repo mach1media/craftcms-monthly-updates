@@ -96,7 +96,7 @@ fieldLayouts:
         name: Card
         uid: d8484d62-7f21-46a3-aeec-7d8ba55f8f92
         userCondition: null
-group: null
+group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
 groupChildBlockTypes: true
 handle: previewCard
 icon: null

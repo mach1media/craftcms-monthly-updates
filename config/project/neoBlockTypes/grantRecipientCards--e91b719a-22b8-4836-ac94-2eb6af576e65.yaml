@@ -138,7 +138,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: e59ced08-9102-4fb2-8ef7-c8df581619bd
         userCondition: null
-group: null
+group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
 groupChildBlockTypes: true
 handle: grantRecipientCards
 icon: null

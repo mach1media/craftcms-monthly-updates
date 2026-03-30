@@ -96,7 +96,7 @@ fieldLayouts:
         name: Column
         uid: f57ade60-b9e8-42c3-8717-a9725295c890
         userCondition: null
-group: null
+group: cfcf5277-7782-4698-bf84-73607da709a9 # Text Blocks
 groupChildBlockTypes: true
 handle: columnText
 icon: null
