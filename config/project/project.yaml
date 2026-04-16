@@ -1,63 +1,46 @@
-dateModified: 1776368646
+dateModified: 1776371245
 elementSources:
   craft\elements\Entry:
     -
+      heading: 'Main Pages'
+      key: 'heading:29bcbb0f-b8f8-44eb-8345-2edb615a5773'
+      page: Pages
+      type: heading
+    -
       defaultSort:
-        - postDate
-        - desc
+        - structure
+        - asc
+      defaultViewMode: ''
       disabled: false
-      key: '*'
+      key: 'section:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+      page: Pages
       tableAttributes:
         - uri
-        - section
         - type
         - link
       type: native
+    -
+      heading: 'Other Pages'
+      key: 'heading:0128d8b8-38cd-43db-96be-53dbe7524169'
+      page: Pages
+      type: heading
     -
       defaultSort:
         - title
         - asc
       disabled: false
       key: singles
+      page: Pages
       tableAttributes:
         - link
       type: native
-    -
-      heading: Navigation
-      type: heading
-    -
-      defaultSort:
-        - structure
-        - asc
-      disabled: false
-      key: 'section:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
-      tableAttributes:
-        - slug
-        - type
-      type: native
-    -
-      heading: Structures
-      type: heading
-    -
-      defaultSort:
-        - structure
-        - asc
-      disabled: false
-      key: 'section:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
-      tableAttributes:
-        - uri
-        - type
-        - link
-      type: native
-    -
-      heading: Channels
-      type: heading
     -
       defaultSort:
         - postDate
         - desc
       disabled: false
       key: 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
+      page: Channels
       tableAttributes:
         - 'field:6b671144-8ff1-4b84-9c9e-d0b03e00adfd' # News Category
         - postDate
@@ -67,18 +50,10 @@ elementSources:
       defaultSort:
         - postDate
         - desc
-      disabled: false
-      key: 'section:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
-      tableAttributes:
-        - 'field:6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c' # Heading
-        - 'field:e359f1b1-385c-4017-9823-ab7e63cd7efe' # Citation
-      type: native
-    -
-      defaultSort:
-        - postDate
-        - desc
+      defaultViewMode: ''
       disabled: false
       key: 'section:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
+      page: Channels
       tableAttributes:
         - 'field:7f134341-6c01-4975-9ea9-60df3c3dd5f0' # Image
         - 'field:aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e' # Pre-heading
@@ -90,6 +65,7 @@ elementSources:
         - desc
       disabled: false
       key: 'section:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
+      page: Channels
       tableAttributes:
         - 'field:7f134341-6c01-4975-9ea9-60df3c3dd5f0' # Image
         - 'field:c8054437-50a0-4ca2-a78f-02657392c71c' # Grant Year
@@ -97,6 +73,58 @@ elementSources:
         - 'field:4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a' # City, State
         - link
       type: native
+    -
+      heading: 'Rate Tables'
+      key: 'heading:976e215c-6e60-4ee5-95b2-1230fdf01616'
+      page: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
+      page: Channels
+      tableAttributes:
+        - 'field:6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c' # Heading
+        - 'field:e359f1b1-385c-4017-9823-ab7e63cd7efe' # Citation
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
+      page: Navigation
+      tableAttributes:
+        - slug
+        - type
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      page: 'All Entries'
+      tableAttributes:
+        - uri
+        - section
+        - type
+        - link
+      type: native
+elementSourcesPages:
+  craft\elements\Entry:
+    'All Entries':
+      icon: newspaper
+    Channels:
+      icon: folder-open
+    Navigation:
+      icon: folder-tree
+    Pages:
+      icon: browsers
 email:
   fromEmail: $CRAFT_SYSTEM_EMAIL
   fromName: 'Texas Methodist Foundation'
