@@ -1,0 +1,36 @@
+columnSuffix: null
+handle: video3
+instructions: "1. Click the [+ Add a video] button\r\n2. Click the [EMBED] button at the bottom of the file picker popup\r\n3. Copy and paste the video URL into the field that appears\r\n4. Click [Save] button after video preview appears\r\n5. Click [Select] button at the bottom of the file picker window "
+name: 'Headshot Videos - Headshot - Video'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add a video'
+  showSearchInput: true
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

@@ -1,0 +1,11 @@
+columnSuffix: swnvdhrx
+handle: linkColor2
+instructions: null
+name: 'Popup - Side By Side - Link Color'
+searchable: false
+settings:
+  dataSet: 'CSS Color Classes'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

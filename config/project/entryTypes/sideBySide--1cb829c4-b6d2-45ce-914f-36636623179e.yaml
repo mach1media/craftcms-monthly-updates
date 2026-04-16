@@ -1,0 +1,210 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  2e551f26-6365-439c-a4c1-ca0573cf949f:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:de92ac33-ded6-4fb7-8768-48c6f4734998'
+      - 'layoutElement:60482342-b3db-4fcf-bf0c-9e04e5e40daf'
+      - 'layoutElement:cc5f1705-cc51-4d73-b56e-48f5183efdbc'
+      - 'layoutElement:dfb625fe-3a3f-487d-9144-9802644a842f'
+      - 'layoutElement:1e1db8d5-d704-439f-b2f1-a522e1f9e389'
+      - 'layoutElement:0d1207a5-cab5-464c-9df0-3211a55595cf'
+      - 'layoutElement:1fd0c158-7ce5-41df-86b2-5b59dc10257c'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bd344a67-a76b-4a60-a516-6f0450e88392
+            handle: modalSize
+            instructions: null
+            label: 'Modal Size'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de92ac33-ded6-4fb7-8768-48c6f4734998
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 66c0ba20-c8b5-48ad-bad2-9f67e7eaaeca
+            handle: image
+            instructions: null
+            label: Image
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 576cb5e3-d19c-43a9-86d9-3d5a5587e311
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f93511fb-fce3-4ae1-bd26-27a91113ab48
+            handle: imageMobile
+            instructions: null
+            label: 'Image: Mobile'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60482342-b3db-4fcf-bf0c-9e04e5e40daf
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bbb08643-5a25-4c51-b363-072e75cdf192
+            handle: null
+            instructions: null
+            label: 'Image Position'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 91a7fadf-d2f7-4052-a797-8763027631b0
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e22fcfb1-941c-4f9f-8fb0-f64241fa1662
+            handle: backgroundColor
+            instructions: null
+            label: 'Background Color'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc5f1705-cc51-4d73-b56e-48f5183efdbc
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bb08a489-3362-4c74-a941-47a3f7e5c2b1
+            handle: textColor
+            instructions: null
+            label: 'Text Color'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dfb625fe-3a3f-487d-9144-9802644a842f
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 50deb98c-8639-40ab-854c-c247f87e3d80
+            handle: linkColor
+            instructions: null
+            label: 'Link Color'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e1db8d5-d704-439f-b2f1-a522e1f9e389
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bb7b4f41-f446-4225-bf73-3dd0315ee0a4
+            handle: textAlignment
+            instructions: null
+            label: 'Text Alignment'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d1207a5-cab5-464c-9df0-3211a55595cf
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 26875242-fd63-42f1-a7c4-2bbf33d2f9e7 # Popup - Side By Side - Description
+            handle: description
+            instructions: null
+            label: Description
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02fab613-e581-47bb-9aa0-ad19947f562e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: da4096f8-fda7-4c6a-a8cd-f236409cc9a7
+            handle: embedCode
+            instructions: null
+            label: 'Embed Code'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1fd0c158-7ce5-41df-86b2-5b59dc10257c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ba982279-d60f-4d80-891d-c4038dc89ba0 # Popup - Side By Side - Buttons
+            handle: buttons
+            instructions: null
+            label: Buttons
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ac2e602d-942f-479d-90d4-db0f3fbd14e5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 70f942da-1ca4-453c-8af4-153add23fb15
+        userCondition: null
+    thumbFieldKey: 'layoutElement:576cb5e3-d19c-43a9-86d9-3d5a5587e311'
+handle: sideBySide
+hasTitleField: false
+icon: null
+name: 'Side By Side'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

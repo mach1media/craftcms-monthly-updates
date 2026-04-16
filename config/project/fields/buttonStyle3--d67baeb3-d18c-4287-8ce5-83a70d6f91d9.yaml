@@ -1,0 +1,11 @@
+columnSuffix: ndfveaup
+handle: buttonStyle3
+instructions: null
+name: 'Popup - Side By Side - Buttons - Button Style'
+searchable: false
+settings:
+  dataSet: 'Button Style'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

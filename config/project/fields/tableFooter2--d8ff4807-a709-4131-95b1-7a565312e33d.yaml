@@ -1,0 +1,48 @@
+columnSuffix: uepcethl
+handle: tableFooter2
+instructions: null
+name: 'Data Tables - Rate Table - Table Footer'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: false
+  headingLevels:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  options:
+    code:
+      indentSequence: '    '
+    htmlSupport:
+      allow:
+        -
+          attributes: true
+          classes: true
+          styles: true
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  toolbar:
+    - sourceEditing
+    - '|'
+    - heading
+    - '|'
+    - blockQuote
+    - codeBlock
+    - bold
+    - italic
+    - bulletedList
+    - numberedList
+    - link
+    - insertImage
+    - mediaEmbed
+    - fullscreen
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

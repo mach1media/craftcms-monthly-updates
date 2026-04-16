@@ -1,0 +1,16 @@
+columnSuffix: lmkbbcty
+handle: embedCode3
+instructions: null
+name: 'Popup - Side By Side - Embed Code'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: true
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

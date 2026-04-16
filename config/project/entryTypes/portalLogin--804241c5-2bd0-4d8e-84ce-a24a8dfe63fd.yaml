@@ -103,7 +103,6 @@ fieldLayouts:
 handle: portalLogin
 hasTitleField: false
 name: 'Portal Login'
-section: 1a5ffd72-f05f-45ec-8db3-0930c72fe38e # Portal Login
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

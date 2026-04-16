@@ -1,6 +1,5 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
 handle: openAnAccountTable
 instructions: null
 name: 'Open An Account Table'
@@ -8,14 +7,18 @@ searchable: true
 settings:
   blockTypeFields: 0
   changedFieldIndicator: 1153518213
-  contentTable: '{{%stc_openanaccounttable}}'
+  entryTypes:
+    - 2332bc88-0131-4224-a56c-f80808febce7 # Open An Account Table Block
   fieldLayout: table
+  maxEntries: null
   maxRows: null
+  minEntries: null
   minRows: null
   propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: null
   staticField: null
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: none
 type: verbb\supertable\fields\SuperTableField

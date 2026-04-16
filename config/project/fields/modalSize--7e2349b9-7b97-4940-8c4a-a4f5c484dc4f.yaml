@@ -1,0 +1,55 @@
+columnSuffix: pqppkrng
+handle: modalSize
+instructions: null
+name: 'Popup - Simple - Modal Size'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - SM
+        -
+          - value
+          - sm
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '--'
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - LG
+        -
+          - value
+          - lg
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - XL
+        -
+          - value
+          - xl
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

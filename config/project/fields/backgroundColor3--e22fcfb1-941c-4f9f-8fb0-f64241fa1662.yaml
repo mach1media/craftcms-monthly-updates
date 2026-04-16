@@ -1,0 +1,11 @@
+columnSuffix: rmqrmwqm
+handle: backgroundColor3
+instructions: null
+name: 'Popup - Side By Side - Background Color'
+searchable: false
+settings:
+  dataSet: 'Section Backgrounds'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

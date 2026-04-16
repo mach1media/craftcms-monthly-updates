@@ -1,0 +1,11 @@
+columnSuffix: pnsksbjp
+handle: textColor3
+instructions: null
+name: 'Popup - Side By Side - Text Color'
+searchable: false
+settings:
+  dataSet: 'Text Colors'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

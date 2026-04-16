@@ -1,0 +1,11 @@
+columnSuffix: owymnhlo
+handle: textColor4
+instructions: null
+name: 'Alert Bar - Alert - Text Color'
+searchable: false
+settings:
+  dataSet: 'Text Colors'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

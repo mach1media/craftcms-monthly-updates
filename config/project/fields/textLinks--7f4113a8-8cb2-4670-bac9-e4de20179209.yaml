@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 2160ef32-2844-4834-a6c8-c374a3efa675 # Link Fields
 handle: textLinks
 instructions: null
 name: 'Text Links'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_textlinks}}'
-  maxBlocks: null
-  minBlocks: null
+  entryTypes:
+    -
+      uid: cb377aa9-4075-4012-9aed-7f7baf560233
+  maxEntries: null
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

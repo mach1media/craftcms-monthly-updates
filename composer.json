@@ -1,24 +1,21 @@
 {
   "require": {
-    "craftcms/cms": "^4.17.12",
-    "craftcms/feed-me": "^5.2.0",
-    "craftcms/mailgun": "3.1.0",
-    "craftcms/redactor": "^3.0.4",
-    "dolphiq/redirect": "^2.0.0",
-    "hybridinteractive/craft-position-fieldtype": "^4.0.0",
-    "miranj/craft-obfuscator": "^1.1.1",
-    "mmikkel/cp-field-inspect": "^1.4.4",
-    "nystudio107/craft-seomatic": "^4.0.33",
-    "sebastianlenz/linkfield": "^2.1.5",
-    "spicyweb/craft-embedded-assets": "^4.0.0",
-    "spicyweb/craft-neo": "^4.0.2",
-    "statikbe/craft-config-values": "^2.0.2",
-    "topshelfcraft/wordsmith": "^4.2.0",
-    "verbb/field-manager": "^3.0.6",
-    "verbb/formie": "^2.2.17",
-    "verbb/redactor-tweaks": "^3.0.0",
-    "verbb/super-table": "^3.0.9",
-    "verbb/tablemaker": "^4.0.18",
+    "craftcms/ckeditor": "^5.0",
+    "craftcms/cms": "^5.0",
+    "craftcms/feed-me": "^6.0",
+    "craftcms/mailgun": "^3.1.0",
+    "miranj/craft-obfuscator": "^1.2.0",
+    "mmikkel/cp-field-inspect": "^2.0",
+    "nystudio107/craft-seomatic": "^5.0",
+    "sebastianlenz/linkfield": "3.0.0-beta",
+    "spicyweb/craft-embedded-assets": "^5.0",
+    "spicyweb/craft-neo": "^5.0",
+    "statikbe/craft-config-values": "^5.0",
+    "topshelfcraft/wordsmith": "^5.0",
+    "verbb/field-manager": "^4.0",
+    "verbb/formie": "^3.0",
+    "verbb/super-table": "^4.0",
+    "verbb/tablemaker": "^5.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -46,6 +43,8 @@
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
   },
+  "minimum-stability": "beta",
+  "prefer-stable": true,
   "repositories": [
     {
       "type": "composer",

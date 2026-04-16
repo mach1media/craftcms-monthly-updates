@@ -1,0 +1,184 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+fieldLayouts:
+  75a2f883-e675-4995-88b4-cd4ba0616f78:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4091cdd8-ff25-4a5d-85e2-8ad0b78061ef
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eca9683b-0398-45fa-93b8-fe25417f3ad2
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 96f7a5e5-972d-4126-ab43-febdedead4b0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 93078d29-af72-4341-8eed-c4bdd0a8c828
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d9ef9f0-14b2-4442-81ae-9ace3f2438f9
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Text Column'
+        uid: c9bf0398-0f9a-482f-a410-5a97c380fc72
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 479ec005-6f3d-4922-b8e5-da10aad75bdc # Data Tables
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d2ca0c7-ac2e-44e6-87b6-cd46316cf01d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
+            instructions: null
+            label: Footnotes
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b327aa30-5953-48c3-bfb2-4f6038245430
+            userCondition: null
+            warning: null
+            width: 100
+        name: Tables
+        uid: ff97b0f0-b187-4982-9a07-93be6d0a2d31
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4174b0ee-a490-4333-bc9f-4c13c778183f # Table Column Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2fdf83de-17b2-436f-b22f-f125b7fb002a
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d13f449-7ea2-4875-8e86-d3210afd0b07
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bc3c92c9-9716-46f3-912f-05fd7d9f1f4f
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa3ea98c-aa9a-46ae-beb4-b5d5a67e32ab
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9304394c-44f5-4c27-bc71-02f92234eb90
+            userCondition: null
+            warning: null
+            width: 25
+        name: 'Section Settings'
+        uid: 2a826110-c73d-486e-b1d4-f66f206b228c
+        userCondition: null
+group: cfcf5277-7782-4698-bf84-73607da709a9
+groupChildBlockTypes: true
+handle: dataTable
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Data Table'
+topLevel: true

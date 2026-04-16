@@ -1,0 +1,11 @@
+columnSuffix: hdmefibo
+handle: label7
+instructions: 'Choose a pre-defined label + icon'
+name: 'CTA Tile: Small - Tile - Label'
+searchable: false
+settings:
+  dataSet: 'CTA Tile Labels'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

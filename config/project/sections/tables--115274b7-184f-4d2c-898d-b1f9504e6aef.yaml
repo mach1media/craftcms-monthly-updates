@@ -1,6 +1,14 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 4644c2f1-7e88-4496-ab19-060eb4b86feb # Open An Account
+  -
+    uid: e40f1bde-3da7-4a14-a813-c341a064e9a3 # Data Table
+  -
+    uid: f92f1b34-68ad-48fd-a712-c4cdb6b682f0 # Rate Table
 handle: tables
+maxAuthors: 1
 name: Tables
 previewTargets:
   -

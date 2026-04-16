@@ -1,0 +1,38 @@
+columnSuffix: baqwdruy
+handle: imagePosition
+instructions: null
+name: 'Popup - Side By Side - Image Position'
+searchable: false
+settings:
+  errorMessage: 'Unable to find component class ''rias\positionfieldtype\fields\Position''.'
+  expectedType: rias\positionfieldtype\fields\Position
+  settings:
+    __assoc__:
+      -
+        - default
+        - left
+      -
+        - options
+        -
+          __assoc__:
+            -
+              - left
+              - '1'
+            -
+              - center
+              - ''
+            -
+              - right
+              - '1'
+            -
+              - full
+              - ''
+            -
+              - drop-left
+              - ''
+            -
+              - drop-right
+              - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\MissingField

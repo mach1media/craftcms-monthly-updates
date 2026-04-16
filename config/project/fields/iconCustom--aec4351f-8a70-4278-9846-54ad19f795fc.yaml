@@ -1,0 +1,37 @@
+columnSuffix: null
+handle: iconCustom
+instructions: null
+name: 'Home: Square Tiles - Tile - Icon: Custom'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add a custom icon'
+  showSearchInput: true
+  showSiteMenu: false
+  showUnpermittedFiles: true
+  showUnpermittedVolumes: true
+  sources:
+    - 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: thumbs
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

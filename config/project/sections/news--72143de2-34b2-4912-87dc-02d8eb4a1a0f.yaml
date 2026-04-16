@@ -1,6 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: d1801112-12c8-4cf2-aaea-f0154e2d39a3 # News
 handle: news
+maxAuthors: 1
 name: News
 previewTargets:
   -

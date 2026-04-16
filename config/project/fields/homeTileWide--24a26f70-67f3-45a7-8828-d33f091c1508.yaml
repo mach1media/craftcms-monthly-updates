@@ -1,16 +1,20 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 431ce2c5-de63-4209-b6b9-a5a836a67d82 # Home Page Fields
 handle: homeTileWide
 instructions: null
 name: 'Home: Tile - Wide'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_hometilewide}}'
-  maxBlocks: null
-  minBlocks: null
+  entryTypes:
+    -
+      uid: be37b343-87c7-4b21-8965-829e7c555685
+    -
+      uid: 543e6694-6bf5-44ed-936b-11dd6e5ae656
+  maxEntries: null
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

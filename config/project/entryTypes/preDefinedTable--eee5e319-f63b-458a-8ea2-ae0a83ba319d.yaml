@@ -1,0 +1,93 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  2a14f672-bedc-4626-aeb9-117a75dec677:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:c49d243b-54ba-47c2-aa53-a2fd8d9883ec'
+      - 'layoutElement:992b5a16-7714-455a-96d2-8d4d69808cfb'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 58712ece-7721-4366-900b-2cc4858ea5e0
+            handle: heading
+            instructions: null
+            label: Heading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c49d243b-54ba-47c2-aa53-a2fd8d9883ec
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 72c21d48-1ae1-46e6-a4d8-57c63a5eb883
+            handle: subheading
+            instructions: null
+            label: Subheading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 992b5a16-7714-455a-96d2-8d4d69808cfb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd
+            handle: null
+            instructions: null
+            label: Table
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e35eb237-bf0c-4b86-9a61-c13d9516887d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: eaf0d64e-a5d2-48e0-9547-b790b9262fe3 # Data Tables - Pre-defined Table - Table Footer
+            handle: null
+            instructions: null
+            label: 'Table Footer'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 243da8d0-5431-48aa-ad6f-dd88da142c58
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 72c72f08-418a-4a74-b195-0cedce984b4e
+        userCondition: null
+    thumbFieldKey: 'layoutElement:e35eb237-bf0c-4b86-9a61-c13d9516887d'
+handle: preDefinedTable
+hasTitleField: false
+icon: null
+name: 'Pre-defined Table'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

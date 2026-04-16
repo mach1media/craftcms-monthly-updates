@@ -1,0 +1,31 @@
+columnSuffix: ttsakzop
+handle: message
+instructions: null
+name: 'Alert Bar - Alert - Message'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  options:
+    code:
+      indentSequence: '    '
+    htmlSupport:
+      allow:
+        -
+          attributes: true
+          classes: true
+          styles: true
+  purifyHtml: false
+  showUnpermittedFiles: true
+  showUnpermittedVolumes: true
+  toolbar:
+    - sourceEditing
+    - bold
+    - italic
+    - link
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

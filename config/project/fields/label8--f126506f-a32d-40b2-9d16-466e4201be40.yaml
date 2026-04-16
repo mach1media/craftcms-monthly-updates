@@ -1,0 +1,11 @@
+columnSuffix: pqdrxtly
+handle: label8
+instructions: 'Choose a pre-defined label+icon'
+name: 'Home: Feature Tile - Label'
+searchable: false
+settings:
+  dataSet: 'CTA Tile Labels'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

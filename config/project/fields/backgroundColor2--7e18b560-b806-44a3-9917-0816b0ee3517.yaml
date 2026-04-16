@@ -1,0 +1,11 @@
+columnSuffix: ktmhzmlr
+handle: backgroundColor2
+instructions: null
+name: 'Popup - Simple - Background Color'
+searchable: false
+settings:
+  dataSet: 'Section Backgrounds'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

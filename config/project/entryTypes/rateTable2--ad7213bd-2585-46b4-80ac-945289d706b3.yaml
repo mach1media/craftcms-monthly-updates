@@ -1,0 +1,93 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  155ca2c2-3c1f-433e-9f12-351dda04fc37:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:d3db73a1-92e6-468e-a1e6-a15e9d452c46'
+      - 'layoutElement:9a89a90d-1b03-475e-b6d9-656e1878dce2'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 75f9bb39-452b-4eaa-ad80-e825620deb6e
+            handle: heading
+            instructions: null
+            label: Heading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d3db73a1-92e6-468e-a1e6-a15e9d452c46
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7fdd5ed0-dc8b-4df8-bdb3-5909ceccface
+            handle: subheading
+            instructions: null
+            label: Subheading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a89a90d-1b03-475e-b6d9-656e1878dce2
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 08b49f0a-64a0-4753-9893-80ca6d6ddf85
+            handle: rateTable
+            instructions: null
+            label: 'Rate Table'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30fa5ad5-e963-4c7e-9783-b42c1fbdbd01
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d8ff4807-a709-4131-95b1-7a565312e33d # Data Tables - Rate Table - Table Footer
+            handle: tableFooter
+            instructions: null
+            label: 'Table Footer'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7919090-15b1-444a-9b56-801e2118cce6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cda8dd16-3527-4194-91f9-5e284687d40f
+        userCondition: null
+    thumbFieldKey: null
+handle: rateTable2
+hasTitleField: false
+icon: null
+name: 'Rate Table'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

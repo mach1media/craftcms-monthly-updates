@@ -85,7 +85,6 @@ fieldLayouts:
 handle: dataTable
 hasTitleField: true
 name: 'Data Table'
-section: 115274b7-184f-4d2c-898d-b1f9504e6aef # Tables
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

@@ -1,0 +1,77 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  dd551cb8-2c1d-468b-a009-f43e5969a81f:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:81867483-5b9d-4ae8-a40c-7b7b0b934d37'
+      - 'layoutElement:c0485475-a4d1-4a1a-8b9a-238a6e8d4348'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 19c27c03-7838-4358-9214-9634fe9e3970
+            handle: image
+            instructions: null
+            label: Image
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1fd7fcb7-2098-4a4f-8268-e00fe084fd2e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c
+            handle: label
+            instructions: null
+            label: Label
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81867483-5b9d-4ae8-a40c-7b7b0b934d37
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d79c352e-f405-46a0-b6cd-bdfff5e4a81e
+            handle: video
+            instructions: null
+            label: Video
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0485475-a4d1-4a1a-8b9a-238a6e8d4348
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d702a99d-937d-42d1-803a-8fdc4e24b081
+        userCondition: null
+    thumbFieldKey: 'layoutElement:1fd7fcb7-2098-4a4f-8268-e00fe084fd2e'
+handle: headshot
+hasTitleField: false
+icon: null
+name: Headshot
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

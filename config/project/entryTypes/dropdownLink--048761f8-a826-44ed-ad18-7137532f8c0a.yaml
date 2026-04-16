@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  aedb29ac-f50e-4177-9d4c-0d55adf3f52f:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 838ea19b-287d-4d04-bf6e-bce6a0de9c66
+            handle: null
+            instructions: null
+            label: 'Dropdown Link'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 139bb891-82d2-4da2-9536-e81f058ca6fd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: beba02d1-5bdd-4368-b369-a2ab68b566b0
+        userCondition: null
+    thumbFieldKey: null
+handle: dropdownLink
+hasTitleField: false
+icon: null
+name: 'Dropdown Link'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

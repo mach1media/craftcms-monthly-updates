@@ -1,6 +1,5 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 2160ef32-2844-4834-a6c8-c374a3efa675 # Link Fields
 handle: buttons
 instructions: null
 name: Buttons
@@ -11,41 +10,45 @@ settings:
   columns:
     __assoc__:
       -
-        - 55bd2a63-aca2-431f-bdc7-c44414ac0418 # Link
+        - 55bd2a63-aca2-431f-bdc7-c44414ac0418
         -
           __assoc__:
             -
               - width
               - 40%
       -
-        - 3dd8a012-e0af-46a4-a906-a538bd2c6a64 # Style
+        - 3dd8a012-e0af-46a4-a906-a538bd2c6a64
         -
           __assoc__:
             -
               - width
               - 20%
       -
-        - aed0fd2d-f074-485f-b1f7-4c8ef97e91cc # Arrow
+        - aed0fd2d-f074-485f-b1f7-4c8ef97e91cc
         -
           __assoc__:
             -
               - width
               - 20%
       -
-        - c7620f65-d29a-4274-8ad9-35a968a67638 # Download
+        - c7620f65-d29a-4274-8ad9-35a968a67638
         -
           __assoc__:
             -
               - width
               - 20%
-  contentTable: '{{%stc_buttons}}'
+  entryTypes:
+    - 5dee0c7a-6b25-454b-8b3f-58fbac243d82 # Buttons Block
   fieldLayout: table
+  maxEntries: null
   maxRows: null
+  minEntries: null
   minRows: null
   propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: 'Add a button'
   staticField: null
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: none
 type: verbb\supertable\fields\SuperTableField

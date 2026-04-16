@@ -1,16 +1,19 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
 handle: ctaTileLarge
 instructions: null
 name: 'CTA Tile: Large'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_ctatilelarge}}'
-  maxBlocks: 1
-  minBlocks: null
+  entryTypes:
+    -
+      handle: tile
+      uid: 489ff905-09c2-4e5b-a990-e00ceda4050e
+  maxEntries: 1
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

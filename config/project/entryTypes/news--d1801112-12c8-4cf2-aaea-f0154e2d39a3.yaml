@@ -133,7 +133,6 @@ fieldLayouts:
 handle: news
 hasTitleField: true
 name: News
-section: 72143de2-34b2-4912-87dc-02d8eb4a1a0f # News
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

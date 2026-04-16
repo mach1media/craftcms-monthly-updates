@@ -1,0 +1,127 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  7cf67546-5317-45fe-9e19-20ac8de4aaf9:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:1974ba1d-f724-4a30-b77f-e59d04362aad'
+      - 'layoutElement:a3b3a0a1-98d7-472b-b6ca-68673dd210d1'
+      - 'layoutElement:3e891993-fb4f-4a9b-b945-1208091a5393'
+      - 'layoutElement:fb80aac3-9a76-4d42-9531-e6c09fb25184'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7a533a82-4f0f-4e24-b8e2-f37bb95a4b06
+            handle: thumbnail
+            instructions: null
+            label: Thumbnail
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea6d80ea-e4d2-4ccd-8cd0-705e292bdac6
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7122cd83-09df-457d-8ea8-284328ec238f
+            handle: label
+            instructions: null
+            label: label
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1974ba1d-f724-4a30-b77f-e59d04362aad
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 38b1109c-b2b4-4a24-8273-95f4885fdbbe
+            handle: labelCustom
+            instructions: null
+            label: 'Label: Custom'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3b3a0a1-98d7-472b-b6ca-68673dd210d1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ff81d39c-f083-4ae5-aaa1-08eabba9c8da
+            handle: iconCustom
+            instructions: null
+            label: 'Icon: Custom'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e891993-fb4f-4a9b-b945-1208091a5393
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 37449807-b7fe-4e44-bc5d-f3469359b775
+            handle: heading
+            instructions: null
+            label: Heading
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb80aac3-9a76-4d42-9531-e6c09fb25184
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c13a4a02-215c-406f-8eb0-6aaca8403db8
+            handle: ctaLink
+            instructions: null
+            label: 'CTA Link'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a094be2-ee90-447c-a7c8-a2238cee9c78
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dfd79e06-ec34-4364-a116-9f7f6a0337d0
+        userCondition: null
+    thumbFieldKey: 'layoutElement:ea6d80ea-e4d2-4ccd-8cd0-705e292bdac6'
+handle: imageTile
+hasTitleField: false
+icon: null
+name: 'Image Tile'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -127,7 +127,6 @@ fieldLayouts:
 handle: person
 hasTitleField: true
 name: Person
-section: 61a1068b-a537-4bde-85ac-b0fe8f04946e # Team
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

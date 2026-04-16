@@ -1,0 +1,11 @@
+columnSuffix: ledemsdw
+handle: buttonStyle2
+instructions: null
+name: 'Popup - Simple - Buttons - Button Style'
+searchable: false
+settings:
+  dataSet: 'Button Style'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

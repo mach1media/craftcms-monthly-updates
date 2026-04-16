@@ -1,6 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 5018ac6a-d423-4ea7-93a2-71816abf326f # Person
 handle: team
+maxAuthors: 1
 name: Team
 previewTargets:
   -

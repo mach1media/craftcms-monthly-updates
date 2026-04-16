@@ -1,0 +1,31 @@
+columnSuffix: jgoowmvv
+handle: nonprofits
+instructions: null
+name: 'Open An Account Table - Nonprofits'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  options:
+    code:
+      indentSequence: '    '
+    htmlSupport:
+      allow:
+        -
+          attributes: true
+          classes: true
+          styles: true
+  purifyHtml: false
+  showUnpermittedFiles: true
+  showUnpermittedVolumes: true
+  toolbar:
+    - sourceEditing
+    - bold
+    - italic
+    - link
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

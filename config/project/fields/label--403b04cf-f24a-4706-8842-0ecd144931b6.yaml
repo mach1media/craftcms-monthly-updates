@@ -1,0 +1,11 @@
+columnSuffix: pnljiiiy
+handle: label
+instructions: 'Choose a pre-defined label+icon'
+name: 'Home: Square Tiles - Tile - Label'
+searchable: false
+settings:
+  dataSet: 'CTA Tile Labels'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

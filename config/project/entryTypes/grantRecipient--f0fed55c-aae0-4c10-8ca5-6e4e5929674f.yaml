@@ -169,7 +169,6 @@ fieldLayouts:
 handle: grantRecipient
 hasTitleField: true
 name: 'Grant Recipient'
-section: 3dfc7896-c87e-4252-ad06-4a34e187be45 # Grant Recipients
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

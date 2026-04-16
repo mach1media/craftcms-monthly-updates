@@ -1,16 +1,19 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 2160ef32-2844-4834-a6c8-c374a3efa675 # Link Fields
 handle: legalLinks
 instructions: null
 name: 'Legal Links'
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_legallinks}}'
-  maxBlocks: null
-  minBlocks: null
+  entryTypes:
+    -
+      handle: textLink
+      uid: fdacfdd8-aa17-4862-b03c-7ed6c0177dee
+  maxEntries: null
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

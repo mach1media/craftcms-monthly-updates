@@ -1,0 +1,11 @@
+columnSuffix: crwcrjan
+handle: backgroundColor5
+instructions: null
+name: 'Factoid Description Box - Background Color'
+searchable: false
+settings:
+  dataSet: 'Section Backgrounds'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

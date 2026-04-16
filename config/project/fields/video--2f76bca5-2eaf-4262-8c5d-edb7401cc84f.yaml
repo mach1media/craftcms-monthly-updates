@@ -1,6 +1,5 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: aa92801f-a617-4884-96f7-2f325db59d9e # Element Fields
 handle: video
 instructions: "1. Click the [+ Add a video] button\r\n2. Click the [EMBED] button at the bottom of the file picker window\r\n3. Copy and paste the video URL into the field that appears\r\n4. Click [Save] button after video preview appears\r\n5. Click [Select] button at the bottom of the file picker window "
 name: Video

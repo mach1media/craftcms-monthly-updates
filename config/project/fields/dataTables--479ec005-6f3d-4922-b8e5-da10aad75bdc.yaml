@@ -1,16 +1,23 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
 handle: dataTables
 instructions: null
 name: 'Data Tables'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_datatables}}'
-  maxBlocks: null
-  minBlocks: null
+  entryTypes:
+    -
+      uid: eee5e319-f63b-458a-8ea2-ae0a83ba319d
+    -
+      handle: rateTable
+      uid: ad7213bd-2585-46b4-80ac-945289d706b3
+    -
+      uid: 2c56ec44-02d8-449f-b55a-ccb4e0f64909
+  maxEntries: null
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

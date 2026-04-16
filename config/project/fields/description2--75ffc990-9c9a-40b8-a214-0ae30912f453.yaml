@@ -1,0 +1,48 @@
+columnSuffix: stglvgif
+handle: description2
+instructions: null
+name: 'Popup - Simple - Description'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  defaultTransform: a9e9ac13-8b36-4627-b8f4-43f5e99aede5 # Responsive: Large
+  enableSourceEditingForNonAdmins: true
+  headingLevels:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  options:
+    code:
+      indentSequence: '    '
+    htmlSupport:
+      allow:
+        -
+          attributes: true
+          classes: true
+          styles: true
+  purifyHtml: false
+  showUnpermittedFiles: true
+  showUnpermittedVolumes: true
+  toolbar:
+    - sourceEditing
+    - '|'
+    - heading
+    - '|'
+    - blockQuote
+    - codeBlock
+    - bold
+    - italic
+    - bulletedList
+    - numberedList
+    - link
+    - insertImage
+    - mediaEmbed
+    - fullscreen
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

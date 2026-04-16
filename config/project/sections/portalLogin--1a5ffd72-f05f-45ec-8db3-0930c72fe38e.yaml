@@ -1,6 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 804241c5-2bd0-4d8e-84ce-a24a8dfe63fd # Portal Login
 handle: portalLogin
+maxAuthors: 1
 name: 'Portal Login'
 previewTargets:
   -

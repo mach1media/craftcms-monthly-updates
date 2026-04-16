@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: buttons3
+instructions: null
+name: 'Popup - Side By Side - Buttons'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    - 410c58ac-5fa9-441c-bb60-8ad932853b13 # Popup - Side By Side - Buttons Block
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

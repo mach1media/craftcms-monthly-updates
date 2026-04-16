@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: bf0e4db0-9861-4bba-b0d0-98bafe12bc6c # Page Builders
 handle: alertBar
 instructions: null
 name: 'Alert Bar'
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_alertbar}}'
-  maxBlocks: 1
-  minBlocks: null
+  entryTypes:
+    -
+      uid: 18f80578-ea92-42da-a34e-61be2cddec76
+  maxEntries: 1
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

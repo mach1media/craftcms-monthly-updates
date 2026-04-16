@@ -1,0 +1,11 @@
+columnSuffix: nvmfxgto
+handle: label4
+instructions: null
+name: 'Home: Tile - Wide - Image Tile - label'
+searchable: false
+settings:
+  dataSet: 'CTA Tile Labels'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

@@ -49,7 +49,6 @@ fieldLayouts:
 handle: link
 hasTitleField: true
 name: Link
-section: 3e2c33e8-dd58-40f6-bb8b-ee1504d3711e # Navigation Menu
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

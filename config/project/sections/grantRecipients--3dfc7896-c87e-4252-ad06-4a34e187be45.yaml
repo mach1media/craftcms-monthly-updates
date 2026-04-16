@@ -1,6 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: f0fed55c-aae0-4c10-8ca5-6e4e5929674f # Grant Recipient
 handle: grantRecipients
+maxAuthors: 1
 name: 'Grant Recipients'
 previewTargets:
   -

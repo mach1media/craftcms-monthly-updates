@@ -1,0 +1,11 @@
+columnSuffix: ogoibwjg
+handle: backgroundColor4
+instructions: null
+name: 'Alert Bar - Alert - Background Color'
+searchable: false
+settings:
+  dataSet: 'Section Backgrounds'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

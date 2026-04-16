@@ -1,0 +1,142 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+fieldLayouts:
+  ee014335-1101-4738-a56e-3b3b434031f9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5674359c-6727-4bc6-b1cd-301754e1f061
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c46db145-e585-439b-8f40-c5128c605f1d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d359e1a-a81c-4278-b296-3ec3a9395790
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 86eb5bd8-8480-4005-bdc2-2e8414d7ff09 # List Settings
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c9f0ccce-3db4-4e18-b402-04e1985f1520
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 72470ce6-7ebd-4d30-b1a0-35daa0e17bfe # List Items: Simple
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f5367ae8-0c4b-4009-8a46-de3377aad6b6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8ca7ce65-fef9-4a85-91cc-65d77fe0017d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d603c4f9-c2ac-4b9e-9cdd-48d0480e8b93
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ea05014-1908-4de1-8259-80c79f574540
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c09ea7ce-1596-4f72-8419-31696022e0e6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa # Padding: Sides
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 69e40aa6-da53-41a7-a3d1-d482e529ea01
+            userCondition: null
+            warning: null
+            width: 25
+        name: 'Section Settings'
+        uid: 744bf5ab-7cf3-4522-a499-d8f2b3516a65
+        userCondition: null
+group: cfcf5277-7782-4698-bf84-73607da709a9
+groupChildBlockTypes: true
+handle: listBlock
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'List Block'
+topLevel: true

@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  2c0e92f5-2dce-4b8e-bc36-f0038a91de9b:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ff02b5d9-24b9-4da0-858a-ad8253a72bb3
+            handle: textLink
+            instructions: null
+            label: 'Text Link'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85db7bee-9b8a-4a9f-9c51-4ce24145f8c5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 91684d8a-62f4-4faa-96ae-7e22e1d3633e
+        userCondition: null
+    thumbFieldKey: null
+handle: textLink2
+hasTitleField: false
+icon: null
+name: 'Text Link'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

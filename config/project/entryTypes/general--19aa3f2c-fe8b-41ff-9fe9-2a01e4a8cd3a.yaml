@@ -136,7 +136,6 @@ fieldLayouts:
 handle: general
 hasTitleField: true
 name: General
-section: 92cb8d3c-2b19-477d-ad39-fe24ade9438c # Pages
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

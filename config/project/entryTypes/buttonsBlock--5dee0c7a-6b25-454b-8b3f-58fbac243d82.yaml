@@ -1,0 +1,90 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  f5e410bb-9ab8-4e93-b35c-b34f3dcfc610:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 55bd2a63-aca2-431f-bdc7-c44414ac0418
+            handle: null
+            instructions: null
+            label: Link
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22dc290a-e6c6-4d13-8106-687d1021c4cb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3dd8a012-e0af-46a4-a906-a538bd2c6a64
+            handle: null
+            instructions: null
+            label: Style
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e978eff-bab4-4525-9adc-23dbd0b33874
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: aed0fd2d-f074-485f-b1f7-4c8ef97e91cc
+            handle: null
+            instructions: null
+            label: Arrow
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2d052ea5-4f62-4e0c-845a-cdb504aa38cf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c7620f65-d29a-4274-8ad9-35a968a67638
+            handle: download
+            instructions: null
+            label: Download
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7af6bcb-e2a9-47e0-be9a-3a1064f3e211
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: aecde2d4-8aa8-4c00-9378-f6c9a101f611
+        userCondition: null
+    thumbFieldKey: null
+handle: buttonsBlock
+hasTitleField: false
+icon: null
+name: 'Buttons Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

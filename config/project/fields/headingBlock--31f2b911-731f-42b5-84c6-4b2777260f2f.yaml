@@ -1,6 +1,5 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6a0d0683-24f8-47d9-b693-069ad30f6a5d # Matrix Fields
 handle: headingBlock
 instructions: null
 name: 'Section Heading'
@@ -11,41 +10,43 @@ settings:
   columns:
     __assoc__:
       -
-        - d33d4fab-55e7-446f-8972-f4676b5ee14a # Heading
+        - d33d4fab-55e7-446f-8972-f4676b5ee14a
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - fae55152-701b-4c22-9f50-453a213e9e05 # Size
+        - fae55152-701b-4c22-9f50-453a213e9e05
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 853a2eb8-d408-4486-afc1-8e24fd201174 # Alignment
+        - 853a2eb8-d408-4486-afc1-8e24fd201174
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - c94c64ea-cc6d-4b7d-9441-052031432b9e # Text Color
+        - c94c64ea-cc6d-4b7d-9441-052031432b9e
         -
           __assoc__:
             -
               - width
               - ''
-  contentTable: '{{%stc_headingblock}}'
+  entryTypes:
+    - 9d8509d1-2d67-4cd5-99b2-672ac3e18f81 # Section Heading Block
   fieldLayout: table
-  maxRows: null
-  minRows: null
+  maxRows: 1
+  minRows: 1
   propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: 'Add a heading'
   staticField: true
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: none
 type: verbb\supertable\fields\SuperTableField

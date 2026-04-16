@@ -1,0 +1,11 @@
+columnSuffix: pmgznhcq
+handle: textColor5
+instructions: null
+name: 'Section Heading - Text Color'
+searchable: false
+settings:
+  dataSet: 'Text Colors'
+  type: dropdown
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\configvaluesfield\fields\ConfigValuesFieldField

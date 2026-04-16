@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 431ce2c5-de63-4209-b6b9-a5a836a67d82 # Home Page Fields
 handle: homeSquareTiles
 instructions: 'Insert four square tiles'
 name: 'Home: Square Tiles'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_homesquaretiles}}'
-  maxBlocks: 4
-  minBlocks: null
+  entryTypes:
+    -
+      uid: 356681f1-6b5a-48fb-94b8-d856247a3b67
+  maxEntries: 4
+  minEntries: null
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix
