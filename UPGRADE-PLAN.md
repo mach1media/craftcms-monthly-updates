@@ -107,14 +107,16 @@ Upgrade to Craft 5 with minimal field changes. Keep `sebastianlenz/linkfield` te
 
 ---
 
-## Phase 2: Template Refactoring
+## Phase 2: Template Refactoring ✓ COMPLETE
 
 ### Goal
 Refactor templates to follow composition-dev patterns, leveraging Craft's `.render()` method and `_partials/entry/` structure. This prepares the codebase for the contentBuilder implementation.
 
-### Status: IN PROGRESS
+### Status
 
 Completed: Phase 1 (Craft 5), Phase 2A (Entry Types), Phase 3 (Link Fields), Phase 4 (Vite). Phase 2B (Neo Blocks) skipped - existing include pattern works well.
+
+**Next**: Phase 5 (contentBuilder Matrix Field)
 
 ---
 
@@ -457,10 +459,14 @@ Replace Laravel Mix with Vite for faster builds and HMR. Update Bootstrap and ad
 
 ---
 
-## Phase 5: contentBuilder Matrix Field + NASAA + Globals
+## Phase 5: contentBuilder Matrix Field
 
 ### Goal
-Create a new contentBuilder Matrix field based on composition-dev patterns, import NASAA functionality from wesleyanimpactpartners, and set up globals.
+Create a new contentBuilder Matrix field based on composition-dev patterns. This will coexist with the existing Neo pageBuilder until content is migrated, at which point the existing `pages` section will be archived.
+
+**Source Projects:**
+- Base fields and templates: `/Users/mach1media/Documents/Mach 1 Media/Sites/composition-dev`
+- Main matrix template: `composition-dev/templates/_matrix/contentBuilder.twig`
 
 ### Part A: Import Base Fields from composition-dev
 
@@ -542,40 +548,14 @@ settings:
     - embedCodeBlock (group: Utility)
 ```
 
-### Part D: Import NASAA from wesleyanimpactpartners
+### Part D: Create Templates
 
-**NASAA Filesystem:**
-```yaml
-nasaa:
-  hasUrls: true
-  name: NASAA
-  settings:
-    bucket: $DO_SPACES_BUCKET
-    subfolder: nasaa
-  type: vaersaagod\dospaces\Fs
-  url: $DO_SPACES_CDN
-```
+**Main matrix template** (port from composition-dev):
+- Source: `composition-dev/templates/_matrix/contentBuilder.twig`
+- Target: `tmf/templates/_matrix/contentBuilder.twig`
+- Handles section settings, container sizing, and delegates to `block.render()`
 
-**NASAA Fields:**
-- `NASAA: Download Releases` - Matrix field for downloadable releases
-- `NASAA: Rate Table Releases` - Matrix field for rate table data
-- `NASAA Download Selector` - Entry selector for downloads
-- `NASAA Rate Table Release` - Entry type for rate tables
-
-**NASAA Global Set:**
-- Handle: `nasaa`
-- Tabs: Downloads, Rate Tables
-- Fields: Download releases, Rate table releases, Fixed term headers/footers
-
-### Part E: Create Globals
-
-Import/create globals following wesleyanimpactpartners pattern:
-- `header` - Site header configuration
-- `footer` - Site footer configuration
-- `nasaa` - NASAA-specific settings
-
-### Templates to Create
-
+**Entry type partials** (create in `_partials/entry/`):
 ```
 templates/
 ├── _partials/
@@ -587,11 +567,8 @@ templates/
 │       ├── videoBlock.twig
 │       ├── imageBlock.twig
 │       └── embedCodeBlock.twig
-├── _matrix/
-│   └── contentBuilder.twig
-└── _cp/
-    ├── globals_nasaa_downloads.twig
-    └── globals_nasaa_rate_tables.twig
+└── _matrix/
+    └── contentBuilder.twig
 ```
 
 ### Implementation Steps
@@ -601,37 +578,39 @@ templates/
    ddev craft db/backup
    ```
 
-2. **Import base fields from composition-dev**
-   - Copy field definitions from project.yaml
-   - Adjust UIDs to be unique for TMF
+2. **Create branch**
+   ```bash
+   git checkout -b feature/contentBuilder
+   ```
+
+3. **Import base fields from composition-dev**
+   - Copy field definitions from `composition-dev/config/project/`
+   - Generate new UIDs for TMF
    - Commit: `git commit -m "Phase 5: Import base fields from composition-dev"`
 
-3. **Create entry types**
+4. **Create entry types**
    - Create each entry type with field layouts
    - Commit: `git commit -m "Phase 5: Create contentBuilder entry types"`
 
-4. **Create contentBuilder Matrix field**
+5. **Create contentBuilder Matrix field**
    - Reference entry types
    - Configure groupings
    - Commit: `git commit -m "Phase 5: Create contentBuilder Matrix field"`
 
-5. **Build templates**
-   - Create renderer partial for each entry type
-   - Create main contentBuilder loop template
-   - Commit: `git commit -m "Phase 5: Create contentBuilder templates"`
+6. **Port contentBuilder.twig from composition-dev**
+   - Copy `_matrix/contentBuilder.twig`
+   - Adapt for TMF's Bootstrap/spacing classes if needed
+   - Commit: `git commit -m "Phase 5: Port contentBuilder.twig from composition-dev"`
 
-6. **Import NASAA structure**
-   - Create NASAA filesystem
-   - Import NASAA fields
-   - Create NASAA global
-   - Commit: `git commit -m "Phase 5: Import NASAA from wesleyanimpactpartners"`
+7. **Build entry type partials**
+   - Create `_partials/entry/` templates for each block type
+   - Follow composition-dev patterns
+   - Commit: `git commit -m "Phase 5: Create contentBuilder entry type templates"`
 
-7. **Create header/footer globals**
-   - Commit: `git commit -m "Phase 5: Create header/footer globals"`
-
-8. **Add contentBuilder to entry types**
-   - Add to relevant section entry types
-   - Commit: `git commit -m "Phase 5: Add contentBuilder to entry type layouts"`
+8. **Add contentBuilder to a test entry type**
+   - Add to a single entry type for testing
+   - Do NOT add to existing pages section yet
+   - Commit: `git commit -m "Phase 5: Add contentBuilder to test entry type"`
 
 9. **Test with sample content**
 
@@ -646,9 +625,106 @@ templates/
 - [ ] Embed code renders safely
 - [ ] Section settings (spacing, width) work
 - [ ] Nested content (columns > columnBuilder) works
+
+### Phase 5 Complete
+**STOP** → User tests and approves before Phase 6
+
+---
+
+## Phase 6: NASAA Implementation
+
+### Goal
+Port NASAA (North American Securities Administrators Association) functionality from wesleyanimpactpartners project.
+
+**Source Project:** `/Users/mach1media/Documents/Mach 1 Media/Sites/wesleyanimpactpartners`
+
+**Dependency:** Requires Phase 5 (contentBuilder) to be complete, as NASAA entry types reference contentBuilder blocks.
+
+### Part A: NASAA Filesystem
+
+```yaml
+nasaa:
+  hasUrls: true
+  name: NASAA
+  settings:
+    bucket: $DO_SPACES_BUCKET
+    subfolder: nasaa
+  type: vaersaagod\dospaces\Fs
+  url: $DO_SPACES_CDN
+```
+
+### Part B: NASAA Fields
+
+Port from wesleyanimpactpartners:
+- `NASAA: Download Releases` - Matrix field for downloadable releases
+- `NASAA: Rate Table Releases` - Matrix field for rate table data
+- `NASAA Download Selector` - Entry selector for downloads
+- `NASAA Rate Table Release` - Entry type for rate tables
+
+### Part C: NASAA Global Set
+
+- Handle: `nasaa`
+- Tabs: Downloads, Rate Tables
+- Fields: Download releases, Rate table releases, Fixed term headers/footers
+
+### Part D: NASAA Templates
+
+```
+templates/
+├── _partials/
+│   └── entry/
+│       └── [nasaa-specific entry types]
+└── _cp/
+    ├── globals_nasaa_downloads.twig
+    └── globals_nasaa_rate_tables.twig
+```
+
+### Implementation Steps
+
+1. **Backup**
+   ```bash
+   ddev craft db/backup
+   ```
+
+2. **Create branch**
+   ```bash
+   git checkout -b feature/nasaa
+   ```
+
+3. **Create NASAA filesystem**
+   - Configure DO Spaces for NASAA subfolder
+   - Commit: `git commit -m "Phase 6: Create NASAA filesystem"`
+
+4. **Import NASAA fields from wesleyanimpactpartners**
+   - Copy field definitions
+   - Generate new UIDs
+   - Commit: `git commit -m "Phase 6: Import NASAA fields"`
+
+5. **Create NASAA global set**
+   - Create global with tabs and field layouts
+   - Commit: `git commit -m "Phase 6: Create NASAA global set"`
+
+6. **Port NASAA templates**
+   - Copy and adapt templates from wesleyanimpactpartners
+   - Commit: `git commit -m "Phase 6: Port NASAA templates"`
+
+7. **Test NASAA functionality**
+
+### Testing Checklist
+- [ ] NASAA filesystem accessible
 - [ ] NASAA downloads functional
 - [ ] NASAA rate tables display correctly
-- [ ] Globals editable in CP
+- [ ] NASAA global editable in CP
+- [ ] Entry types referencing NASAA work correctly
+
+### Phase 6 Complete
+**STOP** → User tests and approves
+
+---
+
+## Deferred: Header/Footer Globals
+
+TMF already has existing footer globals. Header/footer global updates will be addressed after Phase 6 is complete, if needed.
 
 ---
 
@@ -659,7 +735,8 @@ Update `PROJECT_CONTEXT.md` after major structural changes:
 - After Phase 2: Update template architecture section
 - After Phase 3: Update link field notes
 - After Phase 4: Update frontend stack section
-- After Phase 5: Update content model, add contentBuilder details, NASAA section
+- After Phase 5: Update content model, add contentBuilder details
+- After Phase 6: Add NASAA section
 
 ---
 
@@ -683,7 +760,9 @@ Update `PROJECT_CONTEXT.md` after major structural changes:
 | 2B | Neo Block Templates (.render()) | Skipped |
 | 3 | Link Field Migration | ✓ Complete |
 | 4 | Vite + Bootstrap 5.3 | ✓ Complete |
-| 5 | contentBuilder + NASAA + Globals | Pending |
+| 5 | contentBuilder Matrix Field | Pending |
+| 6 | NASAA Implementation | Pending |
+| — | Header/Footer Globals | Deferred |
 
 ---
 
@@ -754,8 +833,9 @@ transforms:
 
 ## Globals Strategy
 
-- **Keep**: All existing TMF globals
-- **Add**: NASAA global (from wesleyanimpactpartners pattern)
+- **Keep**: All existing TMF globals (including footer)
+- **Add (Phase 6)**: NASAA global (from wesleyanimpactpartners pattern)
+- **Deferred**: Header/footer globals updates (revisit after Phase 6)
 
 ---
 
@@ -769,7 +849,11 @@ transforms:
 
 ## Next Steps
 
-1. **Review and approve** this plan
-2. **Sync production database** to local: `npm run sync-db`
-3. **Run `/init`** to refresh context
-4. **Begin Phase 1**: Craft 5 Upgrade
+1. **Create branch**: `git checkout -b feature/contentBuilder`
+2. **Begin Phase 5**: contentBuilder Matrix Field
+   - Import base fields from composition-dev
+   - Create entry types
+   - Create contentBuilder Matrix field
+   - Port `_matrix/contentBuilder.twig` from composition-dev
+   - Create entry type partials
+3. **After Phase 5**: Begin Phase 6 (NASAA Implementation)

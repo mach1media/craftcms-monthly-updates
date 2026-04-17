@@ -22,7 +22,8 @@ See `UPGRADE-PLAN.md` for detailed phased upgrade plan.
 | 2B | Neo Block Templates (.render()) | Skipped |
 | 3 | Link Field Migration | ✓ Complete |
 | 4 | Vite + Bootstrap 5.3 | ✓ Complete |
-| 5 | contentBuilder + NASAA + Globals | Pending |
+| 5 | contentBuilder Matrix Field | Pending |
+| 6 | NASAA Implementation | Pending |
 
 ## Content Model
 
