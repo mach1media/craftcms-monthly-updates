@@ -69,7 +69,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: bbb08643-5a25-4c51-b363-072e75cdf192
+            fieldUid: bbb08643-5a25-4c51-b363-072e75cdf192 # Popup - Side By Side - Image Position
             handle: null
             instructions: null
             label: 'Image Position'

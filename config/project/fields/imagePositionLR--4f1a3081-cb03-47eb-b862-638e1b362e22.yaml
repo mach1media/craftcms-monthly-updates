@@ -1,31 +1,45 @@
 columnSuffix: arqjmnef
-contentColumnType: string
 handle: imagePositionLR
 instructions: null
 name: 'Image Position [L|R]'
 searchable: false
 settings:
-  default: ''
+  customOptions: false
   options:
-    __assoc__:
-      -
-        - left
-        - '1'
-      -
-        - center
-        - ''
-      -
-        - right
-        - '1'
-      -
-        - full
-        - ''
-      -
-        - drop-left
-        - ''
-      -
-        - drop-right
-        - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - left
+        -
+          - icon
+          - arrow-left-long-to-line
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Right
+        -
+          - value
+          - right
+        -
+          - icon
+          - arrow-right-long-to-line
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
-type: rias\positionfieldtype\fields\Position
+type: craft\fields\Dropdown
