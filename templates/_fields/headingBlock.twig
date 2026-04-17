@@ -1,11 +1,15 @@
-{% if heading | length and heading.heading != '' %}
-{% switch heading.alignment %}
+{# Super Table field - get the first entry #}
+{% set headingEntry = heading.one() | default(null) %}
+{% if headingEntry and headingEntry.heading | default %}
+{% switch headingEntry.alignment | default('left') %}
 	{% case 'left' %}
 		{% set textAlignment = 'text-start' %}
 	{% case 'center' %}
 		{% set textAlignment = 'text-center' %}
 	{% case 'right' %}
 		{% set textAlignment = 'text-end' %}
+	{% default %}
+		{% set textAlignment = 'text-start' %}
 {% endswitch %}
-<h2 class="{{ heading.size != 'h2 ' ? heading.size : '' }} {{ textAlignment }} {{ heading.textColor }}{% if class is defined and class != '' %} {{ class }}{% endif %}">{{ heading.heading | raw }}</h2>
+<h2 class="{{ headingEntry.size | default('') != 'h2 ' ? headingEntry.size | default('') : '' }} {{ textAlignment }} {{ headingEntry.textColor | default('') }}{% if class is defined and class != '' %} {{ class }}{% endif %}">{{ headingEntry.heading | raw }}</h2>
 {% endif %}
