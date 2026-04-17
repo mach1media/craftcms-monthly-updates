@@ -3,115 +3,101 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-The Methodist Foundation (TMF) - Craft CMS 5.9.20 website with custom update automation and Bootstrap-based frontend.
 
-## Key Commands
+The Methodist Foundation (TMF) - Craft CMS 5.x website with Neo-based page builders and Bootstrap frontend.
 
-### Local Development
+## Commands
+
 ```bash
-# Start DDEV environment
-ddev start
+# Local development
+ddev start                        # Start DDEV environment
+npm run dev                       # Vite dev server with HMR (from project root)
+npm run build                     # Production build
 
-# Frontend development (run from src/ directory)
-cd src
-npm run dev          # Vite dev server with HMR
-npm run build        # Production build
-
-# Access local site
-# URL: https://tmf.ddev.site
-```
-
-### Update & Maintenance
-```bash
-# Monthly Craft CMS updates
-npm run update
+# Craft CMS
+ddev craft migrate/all            # Run migrations
+ddev craft project-config/apply   # Apply project config
+ddev craft clear-caches/all       # Clear all caches
 
 # Sync from production
-npm run sync-db      # Sync database
-npm run sync-assets  # Sync assets
+npm run sync-db                   # Sync database
+npm run sync-assets               # Sync assets
 
-# Deploy to production
-npm run update/deploy
-
-# Test update scripts
-npm run update/test
+# Monthly updates
+npm run update                    # Run Craft CMS updates
+npm run update/deploy             # Deploy to production
 ```
 
-### Craft CMS Commands
-```bash
-# Run via DDEV
-ddev craft migrate/all        # Run migrations
-ddev craft project-config/apply  # Apply project config
-ddev craft clear-caches/all   # Clear all caches
+Local site: https://tmf.ddev.site
+
+## Tech Stack
+
+- Craft CMS 5.x (PHP 8.4, MariaDB 10.11)
+- Vite 5.x + Bootstrap 5.3.3 + jQuery 3.7.1
+- DDEV for local development
+- Neo plugin for flexible content builders
+
+## Template Architecture
+
+### Entry Type Rendering
+
+Entry types use Craft 5's `.render()` method which auto-resolves templates at `_partials/entry/{handle}.twig`:
+
+```twig
+{{ entry.render() }}
 ```
 
-## Architecture Overview
-
-### Tech Stack
-- **CMS**: Craft CMS 5.9.20 (PHP 8.4)
-- **Frontend Build**: Vite 5.x
-- **CSS**: Bootstrap 5.3.3 + custom SCSS
-- **JS**: jQuery 3.7.1, AOS animations
-- **Local Dev**: DDEV (MariaDB 10.11)
-
-### Directory Structure
-```
-├── config/           # Craft CMS configuration
-├── modules/          # Custom PHP modules
-├── templates/        # Twig templates (component-based)
-│   ├── _components/  # Reusable components
-│   ├── _fields/      # Field-specific templates
-│   └── _neoBlockTypes/ # Neo block templates
-├── src/             # Frontend source
-│   ├── css/         # SCSS files
-│   └── js/          # JavaScript
-└── web/dist/        # Compiled assets
+Entry partials follow a standard structure:
+```twig
+{% include "_components/alertBar" with { 'entry': entry } %}
+{% include "_fields/pageHeader" with { 'entry': entry } %}
+{% include "_pageBuilders/pageBuilderGeneral" with { 'entry': entry } %}
 ```
 
-### Template Architecture
-- Base layout: `_layout/default.twig`
-- Component pattern: `_components/` for reusables
-- Neo blocks for flexible content
-- Entry types: General pages, Impact reports, News, Portal pages
-- Uses craft-vite plugin for asset loading
+### Neo Block Rendering
 
-### Frontend Build Process
-1. Source files in `src/` directory
-2. Vite processes SCSS and JS with HMR in dev
-3. Production builds output to `web/dist/assets/`
-4. Static assets (fonts, images) in `web/dist/`
-5. Bootstrap variables customized in `src/css/config/`
+Neo blocks use `{% include %}` with fallback arrays for context-specific templates. The page builder templates handle section styling and delegate to block templates:
 
-### Deployment
-- GitHub Actions workflow (`.github/workflows/deploy.yml`)
-- Triggers on push to `production` or `staging`
-- Deploys to DigitalOcean via SSH
-- Runs composer install, migrations, and config apply
+```twig
+{% include [
+    "_neoBlockTypes/" ~ block.type,
+    "_neoBlockTypes/impactReport/" ~ block.type
+] with { 'block': block, 'sectionStyleClasses': sectionStyleClasses } %}
+```
 
-### Key Craft Plugins
-- **Neo**: Matrix field alternative
+### Template Directory Structure
+
+```
+templates/
+├── _partials/entry/     # Entry type templates (used by .render())
+├── _pageBuilders/       # Page builder Neo field templates
+├── _neoBlockTypes/      # Neo block templates (51 block types)
+│   └── impactReport/    # Impact report-specific variants
+├── _fields/             # Field-specific templates (Super Table, etc.)
+├── _components/         # Reusable UI components
+└── _layout/             # Base layouts
+```
+
+### Super Table Fields
+
+Super Table fields return element queries. Call `.one()` before accessing properties:
+
+```twig
+{% set headingEntry = heading.one() | default(null) %}
+{% if headingEntry %}
+    {{ headingEntry.heading }}
+{% endif %}
+```
+
+## Key Plugins
+
+- **Neo**: Matrix field alternative for page builders
 - **Formie**: Form builder
 - **SEOmatic**: SEO management
-- **CKEditor**: Rich text editor
+- **CKEditor**: Rich text editing
 - **Super Table**: Complex field tables
-- **Vite**: Asset loading for Vite builds
+- **Vite**: Asset loading
 
-### Update Automation
-Custom Node.js scripts in `.update/` directory handle:
-- Monthly Craft CMS updates
-- Production database/asset syncing
-- Git branch management
-- Composer dependency updates
-- Automated testing of update process
+## Deployment
 
-### Environment Configuration
-- `.env` files for environment settings
-- Timezone: America/Chicago
-- Multi-environment support (local/staging/production)
-
-### Development Notes
-- No formal application testing framework
-- No linting configuration at project level
-- jQuery-based frontend (legacy approach)
-- Bootstrap components used throughout
-- Custom update automation tested separately
+GitHub Actions deploys on push to `production` or `staging` branches. Workflow at `.github/workflows/deploy.yml`.
