@@ -3,13 +3,13 @@
 //
 
 $theme-colors: (
-  "primary":    $color-navy,
-  "secondary":  $color-tan,
-  "tertiary":   $color-blue,
-  "primary-light":    lighten($color-navy, 20%),
-  "secondary-light":  lighten($color-tan, 20%),
-  "primary-extralight":    lighten($color-navy, 70%),
-  "secondary-extralight":  lighten($color-tan, 35%),
+  "primary":    $color-primary,
+  "secondary":  $color-secondary,
+  "tertiary":   $color-tertiary,
+  "primary-light":    $color-primary-light,
+  "secondary-light":  $color-secondary-light,
+  "primary-extralight":    $color-primary-extralight,
+  "secondary-extralight":  $color-secondary-extralight,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,

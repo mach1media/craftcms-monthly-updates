@@ -1,18 +1,32 @@
 
 // COLORS
-$color-body-bg:      white;
+$color-body-bg:         white;
 
-$color-silver:       #F5F5F5;
+$color-silver:          #F5F5F5;
 
-$color-navy:         #231F5B; //primary
-$color-tan:          #C19D68; //secondary
-$color-blue:         #3C3F9B; //tertiary
-$color-sand:         #dbd3c8;
+$color-navy:            #231F5B; //primary
+$color-navy-light:      #4039a7;
+$color-navy-extralight: #e9e8f7;
 
+$color-tan:             #C19D68; //secondary
+$color-tan-light:       #dfccb0;
+$color-tan-extralight:  #f5efe7;
 
-$color-block-border: #ccc;
-$color-black:        #333;
-$color-body-text:    $color-navy;
+$color-blue:            #3C3F9B; //tertiary
+$color-sand:            #dbd3c8;
+
+// Bootstrap theme colors
+$color-primary:              $color-navy;
+$color-primary-light:        $color-navy-light;
+$color-primary-extralight:   $color-navy-extralight;
+$color-secondary:            $color-tan;
+$color-secondary-light:      $color-tan-light;
+$color-secondary-extralight: $color-tan-extralight;
+$color-tertiary:             $color-blue;
+
+$color-block-border:    #ccc;
+$color-black:           #333;
+$color-body-text:       $color-navy;
 
 // FONTS
 $font-stack-helvetica:    'Helvetica Neue', Helvetica, Arial, sans-serif;
