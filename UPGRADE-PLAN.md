@@ -114,7 +114,7 @@ Refactor templates to follow composition-dev patterns, leveraging Craft's `.rend
 
 ### Status: IN PROGRESS
 
-Phase 1 (Craft 5) and Phase 3 (Link Field Migration) are complete. Now implementing Phase 2.
+Completed: Phase 1 (Craft 5), Phase 2A (Entry Types), Phase 3 (Link Fields), Phase 4 (Vite). Now implementing Phase 2B (Neo Blocks).
 
 ---
 
@@ -293,7 +293,7 @@ _partials/neoblock/{blockTypeHandle}.twig
 
 ---
 
-## Phase 3: Link Field Migration
+## Phase 3: Link Field Migration ✓ COMPLETE
 
 ### Goal
 Migrate from `sebastianlenz/linkfield` to Craft 5's first-party Link field.
