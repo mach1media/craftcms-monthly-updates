@@ -19,7 +19,7 @@ This document outlines a phased approach to upgrading TMF from Craft 4 to Craft 
 
 ---
 
-## Phase 1: Core Craft 5 Upgrade
+## Phase 1: Core Craft 5 Upgrade ✓ COMPLETE
 
 ### Goal
 Upgrade to Craft 5 with minimal field changes. Keep `sebastianlenz/linkfield` temporarily.
@@ -118,7 +118,7 @@ Phase 1 (Craft 5) and Phase 3 (Link Field Migration) are complete. Now implement
 
 ---
 
-### Phase 2A: First-Party Entry Types
+### Phase 2A: First-Party Entry Types ✓ COMPLETE
 
 #### Pattern Overview
 
@@ -386,7 +386,7 @@ Migrate from `sebastianlenz/linkfield` to Craft 5's first-party Link field.
 
 ---
 
-## Phase 4: Vite Migration
+## Phase 4: Vite Migration ✓ COMPLETE
 
 ### Goal
 Replace Laravel Mix with Vite for faster builds and HMR. Update Bootstrap and add libraries from composition-dev.
