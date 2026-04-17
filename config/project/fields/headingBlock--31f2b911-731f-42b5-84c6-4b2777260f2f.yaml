@@ -14,6 +14,9 @@ settings:
         -
           - uid
           - 9d8509d1-2d67-4cd5-99b2-672ac3e18f81 # Section Heading Block
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: 1
   minEntries: 1
