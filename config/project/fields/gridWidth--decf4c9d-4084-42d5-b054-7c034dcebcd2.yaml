@@ -15,6 +15,12 @@ settings:
           - value
           - 12
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - '1'
     -
@@ -25,6 +31,12 @@ settings:
         -
           - value
           - 11
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -37,6 +49,12 @@ settings:
           - value
           - 10
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -47,6 +65,12 @@ settings:
         -
           - value
           - 9
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -59,6 +83,12 @@ settings:
           - value
           - 8
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -69,6 +99,12 @@ settings:
         -
           - value
           - 7
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -81,6 +117,12 @@ settings:
           - value
           - 6
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -91,6 +133,12 @@ settings:
         -
           - value
           - 5
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -103,6 +151,12 @@ settings:
           - value
           - 4
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -113,6 +167,12 @@ settings:
         -
           - value
           - 3
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -125,6 +185,12 @@ settings:
           - value
           - 2
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -135,6 +201,12 @@ settings:
         -
           - value
           - 1
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''

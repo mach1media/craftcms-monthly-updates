@@ -15,82 +15,130 @@ settings:
           - value
           - ''
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - '1'
     -
       __assoc__:
         -
           - label
-          - 'Primary Navy (#231F5B)'
+          - Navy
         -
           - value
           - text-primary
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#231f5b'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Secondary Gold (#C19D68)'
+          - Gold
         -
           - value
           - text-secondary
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#c19d68'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Tertiary Blue (#3C3F9B)'
+          - Blue
         -
           - value
           - text-tertiary
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#3c3f9b'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Dark (#212529)'
+          - Black
+        -
+          - value
+          - text-black
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#333333'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Dark
         -
           - value
           - text-dark
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#212529'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Silver (#F5F5F5)'
+          - Silver
         -
           - value
           - text-silver
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#f5f5f5'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'White (#FFFFFF)'
+          - White
         -
           - value
           - text-white
         -
-          - default
-          - ''
-    -
-      __assoc__:
+          - icon
+          - circle
         -
-          - label
-          - 'Black (#333333)'
-        -
-          - value
-          - text-black
+          - color
+          - '#ffffff'
         -
           - default
           - ''

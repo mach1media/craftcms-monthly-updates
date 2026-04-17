@@ -15,38 +15,62 @@ settings:
           - value
           - ''
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - '1'
     -
       __assoc__:
         -
           - label
-          - 'Solid Primary Navy'
+          - 'Solid Navy'
         -
           - value
           - btn-primary
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#231f5b'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Solid Secondary Gold'
+          - 'Solid Gold'
         -
           - value
           - btn-secondary
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#c19d68'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Solid Tertiary Blue'
+          - 'Solid Blue'
         -
           - value
           - btn-tertiary
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#3c3f9b'
         -
           - default
           - ''
@@ -59,6 +83,12 @@ settings:
           - value
           - btn-dark
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#212529'
+        -
           - default
           - ''
     -
@@ -69,6 +99,12 @@ settings:
         -
           - value
           - btn-silver
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#f5f5f5'
         -
           - default
           - ''
@@ -81,6 +117,12 @@ settings:
           - value
           - btn-white
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#ffffff'
+        -
           - default
           - ''
     -
@@ -92,38 +134,62 @@ settings:
           - value
           - btn-black
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#333333'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Outline Primary Navy'
+          - 'Outline Navy'
         -
           - value
           - btn-outline-primary
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#231f5b'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Outline Secondary Gold'
+          - 'Outline Gold'
         -
           - value
           - btn-outline-secondary
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#c19d68'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Outline Tertiary Blue'
+          - 'Outline Blue'
         -
           - value
           - btn-outline-tertiary
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#3c3f9b'
         -
           - default
           - ''
@@ -136,6 +202,12 @@ settings:
           - value
           - btn-outline-dark
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#212529'
+        -
           - default
           - ''
     -
@@ -146,6 +218,12 @@ settings:
         -
           - value
           - btn-outline-silver
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#f5f5f5'
         -
           - default
           - ''
@@ -158,6 +236,12 @@ settings:
           - value
           - btn-outline-white
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#ffffff'
+        -
           - default
           - ''
     -
@@ -168,6 +252,12 @@ settings:
         -
           - value
           - btn-outline-black
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#333333'
         -
           - default
           - ''

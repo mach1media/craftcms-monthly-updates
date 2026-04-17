@@ -15,6 +15,12 @@ settings:
           - value
           - ''
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - '1'
     -
@@ -25,6 +31,12 @@ settings:
         -
           - value
           - loans
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -37,6 +49,12 @@ settings:
           - value
           - grants
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -47,6 +65,12 @@ settings:
         -
           - value
           - philanthropy
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -59,6 +83,12 @@ settings:
           - value
           - investments
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -70,6 +100,12 @@ settings:
           - value
           - area-representatives
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -80,6 +116,12 @@ settings:
         -
           - value
           - leadership-ministry
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''

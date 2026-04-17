@@ -15,60 +15,28 @@ settings:
           - value
           - ''
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - '1'
     -
       __assoc__:
         -
           - label
-          - 'Primary Navy (#231F5B)'
+          - Navy
         -
           - value
           - bg-primary
         -
-          - default
-          - ''
-    -
-      __assoc__:
+          - icon
+          - circle
         -
-          - label
-          - 'Secondary Gold (#C19D68)'
-        -
-          - value
-          - bg-secondary
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Tertiary Blue (#3C3F9B)'
-        -
-          - value
-          - bg-tertiary
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Gold Light'
-        -
-          - value
-          - bg-secondary-light
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Gold Extralight'
-        -
-          - value
-          - bg-secondary-extralight
+          - color
+          - '#231f5b'
         -
           - default
           - ''
@@ -81,6 +49,12 @@ settings:
           - value
           - bg-primary-light
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#4039a7'
+        -
           - default
           - ''
     -
@@ -92,49 +66,147 @@ settings:
           - value
           - bg-primary-extralight
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#e9e8f7'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Dark (#212529)'
+          - Gold
+        -
+          - value
+          - bg-secondary
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#c19d68'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gold Light'
+        -
+          - value
+          - bg-secondary-light
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#dfccb0'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gold Extralight'
+        -
+          - value
+          - bg-secondary-extralight
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#f5efe7'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Blue
+        -
+          - value
+          - bg-tertiary
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#3c3f9b'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Black
+        -
+          - value
+          - bg-black
+        -
+          - icon
+          - circle
+        -
+          - color
+          - '#333333'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Dark
         -
           - value
           - bg-dark
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#212529'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'Silver (#F5F5F5)'
+          - Silver
         -
           - value
           - bg-silver
         -
+          - icon
+          - circle
+        -
+          - color
+          - '#f5f5f5'
+        -
           - default
           - ''
     -
       __assoc__:
         -
           - label
-          - 'White (#FFFFFF)'
+          - White
         -
           - value
           - bg-white
         -
-          - default
-          - ''
-    -
-      __assoc__:
+          - icon
+          - circle
         -
-          - label
-          - 'Black (#333333)'
-        -
-          - value
-          - bg-black
+          - color
+          - '#ffffff'
         -
           - default
           - ''
