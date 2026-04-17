@@ -114,7 +114,7 @@ Refactor templates to follow composition-dev patterns, leveraging Craft's `.rend
 
 ### Status: IN PROGRESS
 
-Completed: Phase 1 (Craft 5), Phase 2A (Entry Types), Phase 3 (Link Fields), Phase 4 (Vite). Now implementing Phase 2B (Neo Blocks).
+Completed: Phase 1 (Craft 5), Phase 2A (Entry Types), Phase 3 (Link Fields), Phase 4 (Vite). Phase 2B (Neo Blocks) skipped - existing include pattern works well.
 
 ---
 
@@ -676,13 +676,14 @@ Update `PROJECT_CONTEXT.md` after major structural changes:
 
 ## Summary
 
-| Phase | Scope | Risk Level |
-|-------|-------|------------|
-| 1 | Core Craft 5 + CKEditor | Medium |
-| 2 | Template Refactoring (.render() pattern) | Low |
-| 3 | Link Field Migration | **High** |
-| 4 | Vite + Bootstrap 5.3 | Low |
-| 5 | contentBuilder + NASAA + Globals | Medium |
+| Phase | Scope | Status |
+|-------|-------|--------|
+| 1 | Core Craft 5 + CKEditor | ✓ Complete |
+| 2A | Entry Type Templates (.render()) | ✓ Complete |
+| 2B | Neo Block Templates (.render()) | Skipped |
+| 3 | Link Field Migration | ✓ Complete |
+| 4 | Vite + Bootstrap 5.3 | ✓ Complete |
+| 5 | contentBuilder + NASAA + Globals | Pending |
 
 ---
 
