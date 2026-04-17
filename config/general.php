@@ -18,15 +18,41 @@ return GeneralConfig::create()
     // Prevent generated URLs from including "index.php"
     ->omitScriptNameInUrls()
 
-    // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-    ->devMode(App::env('DEV_MODE') ?? false)
+	// Disable 'X-Powered-By: Craft CMS' header
+	->sendPoweredByHeader(false)
 
-    // Allow administrative changes
-    ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
+	// Preload Single entries as Twig variables
+	->preloadSingles()
 
-    // Disallow robots
-    ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+	// Prevent user enumeration attacks
+	->preventUserEnumeration()
+
+	// Security settings
+	->enableTwigSandbox()
+	->sendPoweredByHeader(false)
+	->maxInvalidLogins(5)
+	->invalidLoginWindowDuration(600)
+	->cooldownDuration(300)
+
+	// don't attempt to transform SVGs or GIFs
+	->transformSvgs(false)
+	->transformGifs(false)
+
+	// Disable GraphQL
+	->enableGql(false)
+
+	// Add trailing slashes to generated URLs
+	->addTrailingSlashesToUrls()
+
+	// Allow tokens to last 7 days
+	->defaultTokenDuration(604800)
 
     // Extra file extensions allowed to be uploaded
     ->extraAllowedFileExtensions(['ics'])
+    
+	// Aliases for CP settings
+	->aliases([
+		'@webroot' => dirname(__DIR__) . '/web',
+		'@web' => App::env('PRIMARY_SITE_URL'),
+	])
 ;

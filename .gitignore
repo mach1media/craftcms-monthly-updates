@@ -1,27 +1,20 @@
+/.env*
 /.idea
-.DS_Store
-.notes
-!assets/scss/vendor
-
-# Build
-# from yarn/webpack assets
-.cache-loader
-/public/build
-/public/mix-manifest.json
-node_modules
-npm-debug.log
-yarn-error.log
-resources/assets/config-local.json
-*.map
-
-# CRAFT CMS
-.env*
 /vendor
-/storage
-/public/cpresources/*
+.DS_Store
 
-# User uploads
-/public/uploads
+src/node_modules
 
+vendor
+storage/backups/*
+storage/config-deltas/*
+storage/logs/*
+storage/runtime/*
 
+web/uploads/*
+web/transforms/*
+web/cpresources/*
 
+public/uploads/*
+public/transforms/*
+public/cpresources/*
