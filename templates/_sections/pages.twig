@@ -1,14 +1,11 @@
 {#
- # BASE TEMPLATE: PAGES SECTION
+ # Section Router: Pages
+ #
+ # Entry types: general, landingPage, pageBuilder, impactReport
+ # Templates: _partials/entry/{entryTypeHandle}.twig
  #}
 {% extends "_layout/default" %}
 
 {% block content %}
-	{# Use the _entryTypes partial for this entry type, otherwise show "missing entry type template" error message #}
-	{% include [
-			("_entryTypes/" ~ entry.type), 
-			"_entryTypes/_missing"
-		]
-		with {'entry' : entry}
-	%}
+	{{ entry.render() }}
 {% endblock %}

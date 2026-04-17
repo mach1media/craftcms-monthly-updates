@@ -112,98 +112,184 @@ Upgrade to Craft 5 with minimal field changes. Keep `sebastianlenz/linkfield` te
 ### Goal
 Refactor templates to follow composition-dev patterns, leveraging Craft's `.render()` method and `_partials/entry/` structure. This prepares the codebase for the contentBuilder implementation.
 
-### Pattern Overview
+### Status: IN PROGRESS
+
+Phase 1 (Craft 5) and Phase 3 (Link Field Migration) are complete. Now implementing Phase 2.
+
+---
+
+### Phase 2A: First-Party Entry Types
+
+#### Pattern Overview
 
 **composition-dev template architecture:**
 ```
 templates/
-├── _layout/           # Base layouts
-├── _matrix/           # Matrix field renderers (pageBuilder, contentBuilder)
+├── _layout/           # Base layouts (existing)
+├── _sections/
+│   └── router.twig    # NEW - Universal section router using .render()
 ├── _partials/
-│   ├── entry/         # Entry type templates (called via .render())
-│   └── block/         # Content Block field templates
-├── _components/       # Reusable Twig partials
-└── _sections/         # Section routing templates
+│   ├── entry/         # NEW - Entry type templates (called via .render())
+│   └── neoblock/      # FUTURE - Neo block templates (Phase 2B)
+├── _matrix/           # NEW - Matrix field renderers
+├── _neoBlockTypes/    # EXISTING - Keep for now (Neo blocks)
+├── _pageBuilders/     # EXISTING - Keep for now
+├── _components/       # EXISTING - Reusable partials
+└── _fields/           # EXISTING - Field-specific templates
 ```
 
-**The `.render()` pattern:**
+**The `.render()` pattern for entries:**
 ```twig
-{# In _matrix/contentBuilder.twig #}
-{% for block in entry.contentBuilder.all() %}
-  {{ block.render({
-    sectionId: sectionId,
-    sectionSettings: sectionSettings
-  }) }}
-{% endfor %}
+{# _sections/router.twig #}
+{% extends "_layout/default" %}
+
+{% block content %}
+    {{ entry.render() }}
+{% endblock %}
 ```
 
-This automatically looks for `_partials/entry/{entryTypeHandle}.twig`.
+Craft automatically looks for `_partials/entry/{entryTypeHandle}.twig`.
 
-### Steps
+#### Entry Types to Migrate
 
-1. **Backup**
+| Current Location | Entry Type Handle | New Location | Complexity |
+|-----------------|-------------------|--------------|------------|
+| `_entryTypes/general.twig` | `general` | `_partials/entry/general.twig` | Simple wrapper |
+| `_entryTypes/landingPage.twig` | `landingPage` | `_partials/entry/landingPage.twig` | Simple wrapper |
+| `_entryTypes/pageBuilder.twig` | `pageBuilder` | `_partials/entry/pageBuilder.twig` | Simple wrapper |
+| `_entryTypes/impactReport.twig` | `impactReport` | `_partials/entry/impactReport.twig` | Simple wrapper |
+| `_entryTypes/news.twig` | `news` | `_partials/entry/news.twig` | Has inline markup |
+| `_entryTypes/newsLandingPage.twig` | `newsLandingPage` | `_partials/entry/newsLandingPage.twig` | Has queries |
+| `_entryTypes/boardMember.twig` | `boardMember` | `_partials/entry/boardMember.twig` | Complex + queries |
+| `_entryTypes/portalLogin.twig` | `portalLogin` | `_partials/entry/portalLogin.twig` | Has markup |
+
+#### Eager Loading Opportunities
+
+| File | Current Query | Fix |
+|------|--------------|-----|
+| `_entryTypes/boardMember.twig:24` | `entry.image.one` | Add `.eagerly()` |
+| `_entryTypes/boardMember.twig:66` | `craft.entries.section('boardMembers')...` | Add `.eagerly(['image'])` |
+| `_entryTypes/newsLandingPage.twig:5` | `craft.entries.section('news').all()` | Add `.eagerly(['thumbnail', 'textLink'])` |
+| `_entryTypes/portalLogin.twig:7` | `entry.backgroundPhoto.one` | Add `.eagerly()` |
+| `_entryTypes/portalLogin.twig:18` | `entry.image.one` | Add `.eagerly()` |
+
+#### Section Templates to Update
+
+| Current | Action | Notes |
+|---------|--------|-------|
+| `_sections/pages.twig` | Replace with `router.twig` | Uses general, landingPage, pageBuilder |
+| `_sections/landingPages.twig` | Replace with `router.twig` | Uses landingPage |
+| `_sections/news.twig` | Replace with `router.twig` | Uses news, newsLandingPage |
+| `_sections/boardMembers.twig` | Replace with `router.twig` | Uses boardMember |
+| `_sections/portalLogin.twig` | Replace with `router.twig` | Uses portalLogin |
+
+**All section templates will use the same `router.twig`:**
+```twig
+{# _sections/router.twig #}
+{% extends "_layout/default" %}
+
+{% block content %}
+    {{ entry.render() }}
+{% endblock %}
+```
+
+#### Implementation Steps
+
+1. **Create directory structure**
    ```bash
-   ddev craft db/backup
+   mkdir -p templates/_partials/entry
+   mkdir -p templates/_matrix
    ```
 
-2. **Create template directory structure**
-   ```
-   templates/
-   ├── _partials/
-   │   └── entry/        # New - for .render() delegation
-   ├── _matrix/          # New - for Matrix field loops
-   └── _components/      # Existing or create
-   ```
+2. **Create router.twig**
+   - Single template for all sections
 
-3. **Audit existing Neo templates**
-   - Document all `_neoBlockTypes/` templates
-   - Identify patterns that can be consolidated
-   - Note any shared logic
+3. **Migrate entry type templates** (one at a time, test between each, then commit atomically)
+   - Move `_entryTypes/{handle}.twig` → `_partials/entry/{handle}.twig`
+   - Add template header documentation
+   - Add `.eagerly()` calls to relational field queries
+   - Update variable guards with `| default(null)`
 
-4. **Create entry type partials**
-   - Create `_partials/entry/` templates for existing entry types
-   - Follow composition-dev naming convention (camelCase handles)
+4. **Update section routes**
+   - Point all sections to `_sections/router.twig` (no symlinks)
 
-5. **Update section templates**
-   - Refactor to use `.render()` where appropriate
-   - Centralize section wrapper logic
+5. **Deprecate `_entryTypes/` directory**
+   - Keep `_entryTypes/_missing.twig` as fallback
+   - Remove individual entry type files after migration
 
 6. **Commit incrementally**
    ```bash
-   git add templates/_partials/entry/
-   git commit -m "Phase 2: Add entry type partials for .render() pattern"
+   git add templates/_sections/router.twig
+   git commit -m "Phase 2A: Add universal section router"
+
+   git add templates/_partials/entry/general.twig
+   git commit -m "Phase 2A: Migrate general entry type to _partials/entry/"
+
+   # ... repeat for each entry type
    ```
 
-### Files to Create/Modify
+#### Template Header Standard
 
-**New directories:**
-- `templates/_partials/entry/` (entry type templates)
-- `templates/_matrix/` (matrix field renderers)
-
-**Template pattern example:**
 ```twig
-{# templates/_partials/entry/general.twig #}
 {##
- # Entry Type: General
+ # Entry Type: General Page
+ #
  # Template: _partials/entry/general.twig
  #
- # Variables available:
- #   - entry (the matrix block entry)
- #   - Any variables passed via .render()
+ # Section(s): pages
+ #
+ # Fields:
+ #   - title (Entry Title)
+ #   - pageHeader (Neo Field)
+ #   - pageBuilder (Neo Field)
+ #   - popup (Entries)
+ #
+ # Includes:
+ #   - _components/alertBar
+ #   - _fields/pageHeader
+ #   - _pageBuilders/pageBuilderGeneral
+ #   - _components/popup
  #}
-<div class="entry-content">
-  {# Entry type specific content #}
-</div>
 ```
 
-### Testing Checklist
-- [ ] All existing pages render correctly
-- [ ] Neo blocks still function
-- [ ] No broken includes
-- [ ] Section templates use consistent patterns
+### Testing Checklist (Phase 2A)
+- [ ] router.twig works for all sections
+- [ ] All 8 entry types render correctly via .render()
+- [ ] Eager loading reduces query counts
+- [ ] No broken includes or missing templates
+- [ ] Control panel preview works
+- [ ] HTTP 200 on all page types
 
-### Phase 2 Complete
-**STOP** → User tests and approves before Phase 3
+### Phase 2A Complete
+**STOP** → User tests and approves before Phase 2B (Neo blocks)
+
+---
+
+### Phase 2B: Neo Block Templates (Future)
+
+#### Goal
+Migrate Neo block templates from `_neoBlockTypes/` to `_partials/neoblock/` to use `.render()` pattern.
+
+**Important:** For Neo blocks, the `refHandle()` is `'neoblock'`, so templates go in:
+```
+_partials/neoblock/{blockTypeHandle}.twig
+```
+
+**NOT** `_partials/entry/` (that's for Matrix entries and regular entries).
+
+#### Neo Block Count
+- 49 templates in `_neoBlockTypes/`
+- Plus subdirectories: `impactReport/`, `pageBuilderMenu/`, `pageHeader/`
+
+#### Implementation (deferred to Phase 2B)
+1. Create `templates/_partials/neoblock/` directory
+2. Move Neo templates preserving structure
+3. Update `_pageBuilders/` to use `.render()` pattern
+4. Test each block type
+
+**This phase will be planned separately after Phase 2A is complete.**
+
+---
 
 ---
 

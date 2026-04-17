@@ -1,0 +1,121 @@
+{##
+ # Entry Type: Board Member Detail Page
+ #
+ # Template: _partials/entry/boardMember.twig
+ #
+ # Section(s): boardMembers
+ #
+ # Fields:
+ #   - title (Entry Title)
+ #   - preheading (Plain Text)
+ #   - image (Asset)
+ #   - description (Rich Text)
+ #
+ # Queries:
+ #   - Other board members (with eager loading)
+ #}
+
+{% set img = entry.image.eagerly().one() | default(null) %}
+
+<section class="c-block">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-3">
+				{% if img %}
+				<p>
+					<img class="d-block w-100 img-fluid" src="{{ img.url('responsiveMedium') }}" alt="{{ img.alt | default(entry.title) }}" />
+				</p>
+				{% endif %}
+			</div>
+
+			<div class="col-12 col-md-6 col-lg-7">
+				<p class="u-preheading">{{ entry.preheading | default('Board Member') }}</p>
+				<p class="h2">{{ entry.title }}</p>
+
+				<div class="c-wysiwyg">
+					{{ entry.description }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% set otherBoardMembers = craft.entries()
+	.section('boardMembers')
+	.id('not ' ~ entry.id)
+	.eagerly(['image'])
+	.inReverse()
+	.all() %}
+
+{% if otherBoardMembers | length %}
+<section class="c-block c-block--no-padding-top">
+	<!-- SLIDER CONTROLS -->
+	<div class="container">
+		<div class="d-flex justify-content-between">
+			<h2 class="mb-0" style="line-height:37px;">Board Members</h2>
+
+			<div class="c-slider__controls" data-snap-slider-nav="slider-board">
+				<button class="btn btn-text" data-snap-slider-goto="prev" title="previous">
+					<img class="d-block w-100" style="width:37px;height:37px;" src="/dist/img/icon-arrow-circle-left.svg" alt="" aria-hidden="true"/>
+				</button>
+
+				<button class="btn btn-text" data-snap-slider-goto="next" title="next">
+					<img class="d-block w-100" style="width:37px;height:37px;" src="/dist/img/icon-arrow-circle-right.svg" alt="" aria-hidden="true"/>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid px-0">
+		<div class="row gx-0 align-items-center">
+			<div class="col-12 py-5 ps-3 pe-0 ps-lg-5">
+
+				<!-- wrap slider in div with class='position-relative' -->
+				<div class="position-relative">
+					<div class="c-slider c-slider--bio-cards pe-4" data-snap-slider="slider-board">
+						{% for boardMember in otherBoardMembers %}
+							{% set memberImg = boardMember.image.one() | default(null) %}
+							{% set imgSrc = memberImg ? memberImg.url('responsiveMedium') : '' %}
+						<div class="c-slider__slide">
+							<div class="c-bio-card" style="background:url('{{ imgSrc }}') center center no-repeat;background-size:cover;">
+								<div class="c-bio-card__content">
+									{% if boardMember.preheading | default %}
+									<p class="u-preheading">{{ boardMember.preheading }}</p>
+									{% endif %}
+									<h2 class="c-bio-card__heading">{{ boardMember.title }}</h2>
+
+									<p>
+										<a href="{{ boardMember.url }}" class="btn btn-pill btn-outline-secondary js-scroll-snap-link">Read Bio</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<!-- //wrap slider -->
+
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+{% js on ready %}
+var lastClickedElement = null;
+
+document.onclick = function(e) {
+	var e = window.event || e;                // window.event for IE
+	if (!e.target) e.target = e.srcElement;   // extend target property for IE
+
+	lastClickedElement = e.target;
+}
+
+document.querySelector('.c-slider--bio-cards').SnapSlider.on('scroll.end', function(snapSlider, e) {
+	var currentSlide = document.querySelector('.c-slider--bio-cards').SnapSlider.getCurrentSlide();
+
+	if (lastClickedElement.classList.contains('c-slider--bio-cards')) {
+		currentSlide.querySelectorAll('.js-scroll-snap-link')[0].click();
+	}
+});
+{% endjs %}

@@ -1,0 +1,25 @@
+{##
+ # Entry Type: General Page
+ #
+ # Template: _partials/entry/general.twig
+ #
+ # Section(s): pages
+ #
+ # Includes:
+ #   - _components/alertBar (alert bar from globals or entry)
+ #   - _fields/pageHeader (Neo field: pageHeader)
+ #   - _pageBuilders/pageBuilderGeneral (Neo field: pageBuilder)
+ #   - _components/popup (popup entries)
+ #}
+
+{# --------------------- ALERT BAR -------------------- #}
+{% include "_components/alertBar" with { 'entry': entry } %}
+
+{# --------------------- PAGE HEADER -------------------- #}
+{% include "_fields/pageHeader" with { 'entry': entry } %}
+
+{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
+{% include "_pageBuilders/pageBuilderGeneral" with { 'entry': entry } %}
+
+{# --------------------- POPUP -------------------- #}
+{% include "_components/popup" with { 'entry': entry } %}

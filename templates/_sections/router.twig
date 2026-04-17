@@ -1,0 +1,17 @@
+{#
+ # Universal Section Router
+ #
+ # This template handles routing for all sections that use entry type partials.
+ # Entry type templates are located in _partials/entry/{entryTypeHandle}.twig
+ #
+ # Craft's .render() method automatically looks up the template based on:
+ #   - refHandle: 'entry'
+ #   - providerHandle: entry type handle
+ #
+ # Result: _partials/entry/{entryTypeHandle}.twig
+ #}
+{% extends "_layout/default" %}
+
+{% block content %}
+	{{ entry.render() }}
+{% endblock %}

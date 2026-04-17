@@ -1,0 +1,17 @@
+{##
+ # Entry Type: Landing Page
+ #
+ # Template: _partials/entry/landingPage.twig
+ #
+ # Section(s): landingPages
+ #
+ # Includes:
+ #   - _fields/pageHeader (Neo field: pageHeader)
+ #   - _pageBuilders/pageBuilderGeneral (Neo field: pageBuilder)
+ #}
+
+{# --------------------- PAGE HEADER -------------------- #}
+{% include "_fields/pageHeader" with { 'entry': entry } %}
+
+{# --------------------- PAGE BUILDER OUTPUT -------------------- #}
+{% include "_pageBuilders/pageBuilderGeneral" with { 'entry': entry } %}
