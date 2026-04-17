@@ -90,7 +90,13 @@
 	</div>
 
 	{% js %}
-		const modal_{{ block.id }} = new bootstrap.Modal(document.getElementById('modal-{{ block.id }}'));
-		modal_{{ block.id }}.show();
+		(function showModal() {
+			if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+				const modal = new bootstrap.Modal(document.getElementById('modal-{{ block.id }}'));
+				modal.show();
+			} else {
+				setTimeout(showModal, 50);
+			}
+		})();
 	{% endjs %}
 {% endif %}

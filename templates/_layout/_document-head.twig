@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <!-- environment: {{ getenv('CRAFT_ENVIRONMENT') }} -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ currentSite.language }}" dir="{{ craft.app.i18n.getLocaleById(currentSite.id).getOrientation() }}"> <!--<![endif]-->
+<html class="no-js" lang="{{ currentSite.language }}" dir="{{ craft.app.i18n.getLocaleById(currentSite.id).getOrientation() }}">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<!-- Viewport params (for iOS) -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Preload Web Fonts, CSS, and JS -->
-<link rel="preload" href="/dist/css/app.css?v={{ cacheBusterVersion }}" as="style">
-<link rel="preload" href="/dist/js/app.js?v={{ cacheBusterVersion }}" as="script">
-
-{# FAVICON #}
-{# {% include '_layouts/_favicon' %} #}
+{# Favicon #}
 <link rel="apple-touch-icon" sizes="180x180" href="/dist/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/dist/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/dist/favicon/favicon-16x16.png">
 <link rel="manifest" href="/dist/favicon/site.webmanifest">
 
-{% if getenv('CRAFT_ENVIRONMENT') == 'production' %}{% endif %}
-
-<!-- CSS Styles -->
+{# Typekit Fonts #}
 <link rel="stylesheet" href="https://use.typekit.net/qsq2srv.css">
-<link rel="stylesheet" href="/dist/css/app.css?v={{ cacheBusterVersion }}">
+
+{# Vite CSS #}
+{{ craft.vite.script('js/app.js', false) }}
 </head>
 

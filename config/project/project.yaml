@@ -1,4 +1,4 @@
-dateModified: 1776397633
+dateModified: 1776397904
 elementSources:
   craft\elements\Entry:
     -
@@ -797,6 +797,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   wordsmith:
     edition: standard
     enabled: true

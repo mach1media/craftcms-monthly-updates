@@ -1,9 +1,11 @@
 {
   "name": "tmf",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Craft CMS project with monthly update scripts",
   "private": true,
   "scripts": {
+    "dev": "ddev exec -d /var/www/html/src npm run dev",
+    "build": "ddev exec -d /var/www/html/src npm run build",
     "update": ".update/update.sh",
     "sync-db": ".update/scripts/sync-db.sh",
     "sync-assets": ".update/scripts/sync-assets.sh",
@@ -16,6 +18,6 @@
     "update/logs": "ls -la .update/logs/ && echo 'Latest log:' && ls -t .update/logs/*.log 2>/dev/null | head -1 | xargs tail -20"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=20.0.0"
   }
 }

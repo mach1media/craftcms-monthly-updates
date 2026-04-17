@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-The Methodist Foundation (TMF) - Craft CMS 4.16.16 website with custom update automation and Bootstrap-based frontend.
+The Methodist Foundation (TMF) - Craft CMS 5.9.20 website with custom update automation and Bootstrap-based frontend.
 
 ## Key Commands
 
@@ -14,8 +14,8 @@ ddev start
 
 # Frontend development (run from src/ directory)
 cd src
-npx mix watch         # Watch for changes
-npx mix --production  # Build for production
+npm run dev          # Vite dev server with HMR
+npm run build        # Production build
 
 # Access local site
 # URL: https://tmf.ddev.site
@@ -48,11 +48,11 @@ ddev craft clear-caches/all   # Clear all caches
 ## Architecture Overview
 
 ### Tech Stack
-- **CMS**: Craft CMS 4.16.16 (PHP 8.2)
-- **Frontend Build**: Laravel Mix 6.x with Webpack
-- **CSS**: Bootstrap 5.2.2 + custom SCSS
-- **JS**: jQuery 3.6.1, AOS animations
-- **Local Dev**: DDEV (MySQL 8.0)
+- **CMS**: Craft CMS 5.9.20 (PHP 8.4)
+- **Frontend Build**: Vite 5.x
+- **CSS**: Bootstrap 5.3.3 + custom SCSS
+- **JS**: jQuery 3.7.1, AOS animations
+- **Local Dev**: DDEV (MariaDB 10.11)
 
 ### Directory Structure
 ```
@@ -65,7 +65,7 @@ ddev craft clear-caches/all   # Clear all caches
 ├── src/             # Frontend source
 │   ├── css/         # SCSS files
 │   └── js/          # JavaScript
-└── public/dist/     # Compiled assets
+└── web/dist/        # Compiled assets
 ```
 
 ### Template Architecture
@@ -73,12 +73,14 @@ ddev craft clear-caches/all   # Clear all caches
 - Component pattern: `_components/` for reusables
 - Neo blocks for flexible content
 - Entry types: General pages, Impact reports, News, Portal pages
+- Uses craft-vite plugin for asset loading
 
 ### Frontend Build Process
 1. Source files in `src/` directory
-2. Laravel Mix processes SCSS and JS
-3. Outputs to `public/dist/`
-4. Bootstrap variables customized in `src/css/config/`
+2. Vite processes SCSS and JS with HMR in dev
+3. Production builds output to `web/dist/assets/`
+4. Static assets (fonts, images) in `web/dist/`
+5. Bootstrap variables customized in `src/css/config/`
 
 ### Deployment
 - GitHub Actions workflow (`.github/workflows/deploy.yml`)
@@ -90,8 +92,9 @@ ddev craft clear-caches/all   # Clear all caches
 - **Neo**: Matrix field alternative
 - **Formie**: Form builder
 - **SEOmatic**: SEO management
-- **Redactor**: Rich text editor
+- **CKEditor**: Rich text editor
 - **Super Table**: Complex field tables
+- **Vite**: Asset loading for Vite builds
 
 ### Update Automation
 Custom Node.js scripts in `.update/` directory handle:

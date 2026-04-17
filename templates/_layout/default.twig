@@ -2,7 +2,6 @@
  # Layout template
  # ---------------
  #}
-{% set cacheBusterVersion = now | date('Ymd') ~ '.' ~ 3 %}
 {% include '_layout/_document-head' %}
 <body{% if bodyId is defined and bodyId != '' %} id="{{ bodyId }}"{% endif %} class="is-top{% if bodyClass is defined and bodyClass != '' %} {{ bodyClass }}{% endif %}">
 
@@ -24,12 +23,9 @@
 <a href="#top" class="c-footer__backtotop js-backtotop"><span class="fal fa-arrow-up"></span></a>
 #}
 
-<!-- Global Site JS -->
-<script src="/dist/js/app.js?v={{ cacheBusterVersion }}" type="text/javascript" charset="utf-8"></script>
-
-<!-- Include CryptoJS for MD5 and Mailchimp API wrapper -->
+{# Include CryptoJS for MD5 and Mailchimp API wrapper #}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-<script src="/dist/mailchimp.js?v={{ cacheBusterVersion }}"></script>
+<script src="/dist/mailchimp.js"></script>
 
 {% if getenv('CRAFT_ENVIRONMENT') == 'production' %}
 <!-- Google tag (gtag.js) -->

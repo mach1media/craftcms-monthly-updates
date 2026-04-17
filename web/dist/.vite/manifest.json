@@ -1,0 +1,27 @@
+{
+  "js/app.js": {
+    "file": "assets/app-Rqw8eFmw.js",
+    "name": "app",
+    "src": "js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "vendor/fitvids/fitvids.js",
+      "vendor/hoverIntent/jquery.hoverIntent.js"
+    ],
+    "css": [
+      "assets/app-jhRHqlH-.css"
+    ]
+  },
+  "vendor/fitvids/fitvids.js": {
+    "file": "assets/fitvids-BpuvxHH1.js",
+    "name": "fitvids",
+    "src": "vendor/fitvids/fitvids.js",
+    "isDynamicEntry": true
+  },
+  "vendor/hoverIntent/jquery.hoverIntent.js": {
+    "file": "assets/jquery.hoverIntent-Cx1il44L.js",
+    "name": "jquery.hoverIntent",
+    "src": "vendor/hoverIntent/jquery.hoverIntent.js",
+    "isDynamicEntry": true
+  }
+}
