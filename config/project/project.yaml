@@ -987,10 +987,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0
-  typedlinkfield:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
   vite:
     edition: standard
     enabled: true
