@@ -1,18 +1,28 @@
 columnSuffix: null
-contentColumnType: string
 handle: legalLinks
 instructions: null
 name: 'Legal Links'
 searchable: false
 settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
-      handle: textLink
-      uid: fdacfdd8-aa17-4862-b03c-7ed6c0177dee
+      __assoc__:
+        -
+          - uid
+          - fdacfdd8-aa17-4862-b03c-7ed6c0177dee # Text Link
+        -
+          - handle
+          - textLink
+  includeTableView: false
   maxEntries: null
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

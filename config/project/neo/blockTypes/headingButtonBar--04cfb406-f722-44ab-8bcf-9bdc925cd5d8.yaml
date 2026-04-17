@@ -1,17 +1,24 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   85bb59a8-ef0b-410c-9acd-d58dfa27fd2b:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            handle: null
             instructions: null
             label: null
             required: false
@@ -22,8 +29,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
+            handle: null
             instructions: null
             label: null
             required: false
@@ -40,8 +51,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
+            handle: null
             instructions: null
             label: null
             required: false
@@ -52,8 +67,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
+            handle: null
             instructions: null
             label: null
             required: false
@@ -66,7 +85,8 @@ fieldLayouts:
         name: 'Section Settings'
         uid: f9a240b1-aff0-4b34-a464-0a130377cd6a
         userCondition: null
-group: cfcf5277-7782-4698-bf84-73607da709a9
+    thumbFieldKey: null
+group: cfcf5277-7782-4698-bf84-73607da709a9 # Text Blocks
 groupChildBlockTypes: true
 handle: headingButtonBar
 icon: null

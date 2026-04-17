@@ -1,5 +1,9 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
 fieldLayouts:
   1e5594dd-cdeb-4f9c-9619-d81d77b1a225:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,6 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -21,7 +26,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -32,8 +37,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: c67bfc40-e256-429b-8bc2-bf32fdbf8e43 # Home: Intro
+            handle: null
             instructions: null
             label: null
             required: false
@@ -44,8 +53,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d3ccac65-2f19-4621-b98f-cb5f46bf796d # Home: Feature Tile
+            handle: null
             instructions: null
             label: null
             required: false
@@ -56,8 +69,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 24a26f70-67f3-45a7-8828-d33f091c1508 # Home: Tile - Wide
+            handle: null
             instructions: null
             label: null
             required: false
@@ -68,8 +85,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 3d088ba7-2012-45f1-8454-ccf6895bd50b # Home: Square Tiles
+            handle: null
             instructions: null
             label: null
             required: false
@@ -86,8 +107,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d7309e06-7ddd-4cf6-aed8-416a67ebdaf3 # Alert Bar
+            handle: null
             instructions: null
             label: null
             required: false
@@ -98,8 +123,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4f0d1ee0-d0f1-4aea-a5cb-42ce275e72e4 # Popup
+            handle: null
             instructions: null
             label: null
             required: false
@@ -110,8 +139,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+            handle: null
             instructions: null
             label: null
             required: false
@@ -128,8 +161,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            handle: null
             instructions: null
             label: null
             required: false
@@ -142,13 +179,16 @@ fieldLayouts:
         name: SEO
         uid: d640ea12-f005-4f87-b678-bdfd6dd45dcd
         userCondition: null
+    thumbFieldKey: null
 handle: homepage
 hasTitleField: false
+icon: null
 name: Homepage
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

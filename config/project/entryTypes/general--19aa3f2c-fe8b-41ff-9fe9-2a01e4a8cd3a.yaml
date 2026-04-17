@@ -1,5 +1,9 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
 fieldLayouts:
   4d2dddb8-fbbd-4b13-98d8-b38368456e71:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,6 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -21,7 +26,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -32,6 +37,8 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -42,7 +49,9 @@ fieldLayouts:
                   uid: ce2a30e5-b6d9-4ad0-bedb-79366af5f2bb
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 89795803-5837-4d6f-855d-1ae3c3980e55 # Show Entry Title
+            handle: null
             instructions: null
             label: null
             required: false
@@ -53,8 +62,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eaa2de37-8703-4880-aa20-3f0222fa32dc # Hide Breadcrumbs
+            handle: null
             instructions: null
             label: null
             required: false
@@ -65,8 +78,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d7309e06-7ddd-4cf6-aed8-416a67ebdaf3 # Alert Bar
+            handle: null
             instructions: null
             label: null
             required: false
@@ -77,8 +94,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4f0d1ee0-d0f1-4aea-a5cb-42ce275e72e4 # Popup
+            handle: null
             instructions: null
             label: null
             required: false
@@ -89,8 +110,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 23354ff5-9e58-4f25-a8b1-77c6f7b7b7d8 # Page Header
+            handle: null
             instructions: null
             label: null
             required: false
@@ -101,8 +126,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
+            handle: null
             instructions: null
             label: null
             required: false
@@ -119,8 +148,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            handle: null
             instructions: null
             label: null
             required: false
@@ -133,13 +166,16 @@ fieldLayouts:
         name: SEO
         uid: e8a7568f-e18e-4496-8dc3-9c16a606570a
         userCondition: null
+    thumbFieldKey: null
 handle: general
 hasTitleField: true
+icon: null
 name: General
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

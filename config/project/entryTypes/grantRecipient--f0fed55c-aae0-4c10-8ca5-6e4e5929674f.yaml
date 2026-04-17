@@ -1,5 +1,9 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
 fieldLayouts:
   901c9c00-b544-4f05-96d6-a42f27be656a:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,6 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -21,7 +26,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -32,8 +37,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
+            handle: null
             instructions: null
             label: null
             required: false
@@ -44,8 +53,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: c8054437-50a0-4ca2-a78f-02657392c71c # Grant Year
+            handle: null
             instructions: null
             label: null
             required: false
@@ -56,8 +69,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8069e6aa-35e5-43c0-9baa-abd171d2a2f2 # Program/Project Name
+            handle: null
             instructions: null
             label: null
             required: false
@@ -68,8 +85,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
+            handle: null
             instructions: null
             label: null
             required: false
@@ -86,8 +107,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 3be92289-0f0d-4b35-908a-44e87436fae3 # Program Coordinator
+            handle: null
             instructions: null
             label: null
             required: false
@@ -98,8 +123,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9d7fafd1-35d2-468a-929a-b88e876f64e2 # Email
+            handle: null
             instructions: null
             label: null
             required: false
@@ -110,8 +139,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: bf77811a-bc78-4e53-8e51-bb8a6e9d0c69 # Website
+            handle: null
             instructions: null
             label: null
             required: false
@@ -122,8 +155,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4532b9cc-bc5d-4cb1-b2ae-dbdfdcd4589a # City, State
+            handle: null
             instructions: null
             label: null
             required: false
@@ -134,8 +171,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            handle: null
             instructions: null
             label: null
             required: false
@@ -152,8 +193,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e9b0d2b3-481f-4b12-bf3c-4fc241f7e6f8 # SEO
+            handle: null
             instructions: null
             label: null
             required: false
@@ -166,13 +211,16 @@ fieldLayouts:
         name: SEO
         uid: 5410c9dc-3f9f-4073-8b64-b57d47a0773f
         userCondition: null
+    thumbFieldKey: null
 handle: grantRecipient
 hasTitleField: true
+icon: null
 name: 'Grant Recipient'
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

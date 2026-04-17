@@ -26,7 +26,7 @@
 			<div class="hstack gap-3 justify-content-{{ block.textAlignment == 'text-center' ? 'center' : 'start' }}">
 				{% for button in block.buttons %}
 					{% set btn = button.button %}
-					{% if btn.getLink() %}
+					{% if btn.url | default %}
 						{% include "_fields/button" with {
 							'button': btn, 
 							'class':  button.buttonStyle

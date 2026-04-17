@@ -12,7 +12,7 @@
 							{% if not loop.first %}<p>&nbsp;</p>{% endif %}
 							{% if textBlock.heading != '' %}<h2>{{ textBlock.heading | raw }}</h2>{% endif %}
 							{{ textBlock.description }}
-							{% if textBlock.button.getLink() %}
+							{% if textBlock.button.value | default %}
 								{% set btnColor = textBlock.buttonColor == 'default' ? 'white' : textBlock.buttonColor %}
 								<p>{% include "_fields/button" with {'button': textBlock.button, 'color': btnColor} %}</p>
 							{% endif %}

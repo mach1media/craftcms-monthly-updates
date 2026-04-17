@@ -1,15 +1,19 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   8e2be6d9-1b17-46c9-a698-50b7162ac3cd:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
             dismissible: false
             elementCondition: null
             style: tip
@@ -18,8 +22,12 @@ fieldLayouts:
             uid: ada3e9f7-0a45-4a63-9417-a879d4fbcd34
             userCondition: null
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e11568a1-11e3-4147-ae18-1ff01fdcd4f7 # CTA Tile: Small
+            handle: null
             instructions: null
             label: null
             required: false
@@ -30,8 +38,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0990fff1-3f3d-49e5-a5b1-afdeb683d20e # CTA Tile: Large
+            handle: null
             instructions: null
             label: null
             required: false
@@ -44,7 +56,8 @@ fieldLayouts:
         name: Tiles
         uid: 43b34341-0dfa-4287-ac4d-41bab086af32
         userCondition: null
-group: b9b2d740-6703-4f67-9c78-59cd72835155
+    thumbFieldKey: null
+group: b9b2d740-6703-4f67-9c78-59cd72835155 # CTA's
 groupChildBlockTypes: true
 handle: smallSmallLarge
 icon: null

@@ -20,7 +20,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 7e2349b9-7b97-4940-8c4a-a4f5c484dc4f
+            fieldUid: 7e2349b9-7b97-4940-8c4a-a4f5c484dc4f # Popup - Simple - Modal Size
             handle: null
             instructions: null
             label: 'Modal Size'
@@ -36,7 +36,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 7e18b560-b806-44a3-9917-0816b0ee3517
+            fieldUid: 7e18b560-b806-44a3-9917-0816b0ee3517 # Popup - Simple - Background Color
             handle: backgroundColor
             instructions: null
             label: 'Background Color'
@@ -52,7 +52,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 162c87c8-b7da-4a3a-ad1d-a0d6745835f9
+            fieldUid: 162c87c8-b7da-4a3a-ad1d-a0d6745835f9 # Popup - Simple - Text Color
             handle: textColor
             instructions: null
             label: 'Text Color'
@@ -68,7 +68,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: c32f12ef-294f-48af-bc53-4f27a6cd908a
+            fieldUid: c32f12ef-294f-48af-bc53-4f27a6cd908a # Popup - Simple - Link Color
             handle: null
             instructions: null
             label: 'Link Color'
@@ -84,7 +84,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 62383ad3-0d0f-4149-ab26-742e25c861ba
+            fieldUid: 62383ad3-0d0f-4149-ab26-742e25c861ba # Popup - Simple - Text Alignment
             handle: textAlignment
             instructions: null
             label: 'Text Alignment'
@@ -100,7 +100,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: a15339e9-4539-4323-8a32-e6d033af151e
+            fieldUid: a15339e9-4539-4323-8a32-e6d033af151e # Popup - Simple - Image
             handle: image
             instructions: null
             label: Image
@@ -132,7 +132,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: f8186410-e438-40ee-8131-7f31ebcd0fa9
+            fieldUid: f8186410-e438-40ee-8131-7f31ebcd0fa9 # Popup - Simple - Embed Code
             handle: embedCode
             instructions: null
             label: 'Embed Code'

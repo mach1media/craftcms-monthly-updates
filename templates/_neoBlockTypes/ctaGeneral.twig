@@ -12,7 +12,7 @@
 			<div class="col-12{% if block.paddingSides is defined and block.paddingSides == '1' %} col-lg-10 col-xl-9{% endif %} text-center">
 				{% include "_fields/headingBlock" with {'heading': block.headingBlock, 'class': 'mb-4'} %}
 				<div class="lead">{{ block.description }}</div>
-				{% if block.button.getLink() %}
+				{% if block.button.value | default %}
 				{% set btnColor = block.buttonColor == 'default' ? 'white' : block.buttonColor %}
 				<p>{% include "_fields/button" with {'button': block.button, 'color': btnColor} %}</p>
 				{% endif %}

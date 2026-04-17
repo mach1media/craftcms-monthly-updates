@@ -1,12 +1,10 @@
 columnSuffix: gnzgofco
-contentColumnType: text
 handle: animationSettings
 instructions: null
 name: 'Animation Settings'
 searchable: false
 settings:
   addRowLabel: 'Add a row'
-  columnType: text
   columns:
     __assoc__:
       -

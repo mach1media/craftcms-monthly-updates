@@ -17,7 +17,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 4d7096da-e00f-4539-976f-2ab6e40967b7
+            fieldUid: 4d7096da-e00f-4539-976f-2ab6e40967b7 # Home: Tile - Wide - Video Tile - Thumbnail
             handle: thumbnail
             instructions: null
             label: Thumbnail
@@ -33,7 +33,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: d46a26f8-acd0-4f06-8f57-f8e755cbcddb
+            fieldUid: d46a26f8-acd0-4f06-8f57-f8e755cbcddb # Home: Tile - Wide - Video Tile - Label
             handle: label
             instructions: null
             label: Label
@@ -49,7 +49,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: ab7e2d93-36c3-4838-bcb0-b9378b70308a
+            fieldUid: ab7e2d93-36c3-4838-bcb0-b9378b70308a # Home: Tile - Wide - Video Tile - Heading
             handle: heading
             instructions: null
             label: Heading
@@ -65,7 +65,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9
+            fieldUid: 74ee5a5e-4ff2-4cf1-b268-c3c2ff67c2b9 # Home: Tile - Wide - Video Tile - Video
             handle: video
             instructions: null
             label: Video

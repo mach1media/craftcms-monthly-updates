@@ -1,11 +1,10 @@
 columnSuffix: tzlxqcep
-contentColumnType: string(7)
 handle: tableColumnSize
 instructions: null
 name: 'Table Column Size'
 searchable: false
 settings:
-  columnType: null
+  customOptions: false
   options:
     -
       __assoc__:

@@ -1,15 +1,19 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
   4dd31e27-f225-4b62-8718-d2cac0877f9e:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
             dismissible: false
             elementCondition: null
             style: tip
@@ -18,8 +22,12 @@ fieldLayouts:
             uid: 9e701fbc-b152-4197-b1a7-e8f0ad2076b2
             userCondition: null
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
+            handle: null
             instructions: null
             label: null
             required: false
@@ -30,8 +38,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
+            handle: null
             instructions: null
             label: null
             required: false
@@ -42,8 +54,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: cec407c4-ded3-4457-9ffd-7caf96ab0281 # Caption
+            handle: null
             instructions: null
             label: null
             required: false
@@ -60,6 +76,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
             dismissible: false
             elementCondition: null
             style: tip
@@ -68,8 +85,12 @@ fieldLayouts:
             uid: e51f3ab9-70da-43d1-a260-29f2658803eb
             userCondition: null
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 2f76bca5-2eaf-4262-8c5d-edb7401cc84f # Video
+            handle: null
             instructions: null
             label: null
             required: false
@@ -86,8 +107,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
+            handle: null
             instructions: null
             label: null
             required: false
@@ -98,8 +123,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            handle: null
             instructions: null
             label: null
             required: false
@@ -110,8 +139,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            handle: null
             instructions: null
             label: null
             required: false
@@ -124,6 +157,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: fb57150d-1e52-4da9-9bfe-24ec959e74a7
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: media

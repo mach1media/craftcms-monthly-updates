@@ -16,7 +16,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 67306533-298f-4596-8784-f3edc0f153cf
+            fieldUid: 67306533-298f-4596-8784-f3edc0f153cf # Alert Bar - Alert - Background Color
             handle: backgroundColor
             instructions: null
             label: 'Background Color'
@@ -32,7 +32,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 7484a8cf-c4be-407b-8553-4531823cd337
+            fieldUid: 7484a8cf-c4be-407b-8553-4531823cd337 # Alert Bar - Alert - Text Color
             handle: textColor
             instructions: null
             label: 'Text Color'

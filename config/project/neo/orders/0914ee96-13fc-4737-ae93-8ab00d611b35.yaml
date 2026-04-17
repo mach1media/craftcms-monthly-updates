@@ -1,19 +1,19 @@
-- 'blockType:005b0010-da6f-4cab-a5df-5047ecc802b0'
-- 'blockType:7b673ccc-ad98-4e36-b605-78cfc5fe2c98'
-- 'blockType:704cc16d-0736-4a6b-8d40-f267fd9ae8f9'
-- 'blockType:86898b1e-5316-4337-9b1b-3b0b541bdf37'
-- 'blockType:dc757580-d89c-4eb2-8e98-f03470f73495'
-- 'blockType:c1d10006-9965-425c-961a-e3bd34a9f34c'
-- 'blockType:312692fe-0d39-45bc-889d-f49efeaa0dc0'
-- 'blockType:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd'
-- 'blockType:2b225f12-852a-4e1b-8d6a-eb9d7d1f3711'
-- 'blockType:3ad40ed4-7716-46fd-8805-0cd61e02beea'
-- 'blockType:e9a8ead1-1db9-47ff-ac47-3d0b76b55556'
-- 'blockType:0426383a-036a-46e6-864b-bd62a77bcd8e'
-- 'blockType:78ec370a-6844-45d7-b822-aefb52617a11'
-- 'blockType:ba0ade4a-8a63-4b1b-9cda-30cd3010746a'
-- 'blockType:76670784-7867-4bc9-ac47-a5b20b51eac3'
-- 'blockType:0697d541-4ea4-4163-b0c5-ad9219691bb6'
-- 'blockType:972197b6-eda9-4a11-a983-eb2cb09bada3'
-- 'blockType:1fc01eb4-e3aa-4109-b017-9a4357415660'
-- 'blockType:aa96dc63-49ff-4c1a-89df-d34525227436'
+- 'blockType:005b0010-da6f-4cab-a5df-5047ecc802b0' # General
+- 'blockType:7b673ccc-ad98-4e36-b605-78cfc5fe2c98' # General: Large Text
+- 'blockType:704cc16d-0736-4a6b-8d40-f267fd9ae8f9' # Lead Block
+- 'blockType:86898b1e-5316-4337-9b1b-3b0b541bdf37' # CTA Block
+- 'blockType:dc757580-d89c-4eb2-8e98-f03470f73495' # Columns
+- 'blockType:c1d10006-9965-425c-961a-e3bd34a9f34c' # Column: Text
+- 'blockType:312692fe-0d39-45bc-889d-f49efeaa0dc0' # Column: Image
+- 'blockType:4ab2ce8a-8e3b-4c0e-9176-d0ec1f3655fd' # Media
+- 'blockType:2b225f12-852a-4e1b-8d6a-eb9d7d1f3711' # Text+Media
+- 'blockType:3ad40ed4-7716-46fd-8805-0cd61e02beea' # Text+Figures in Gutter
+- 'blockType:e9a8ead1-1db9-47ff-ac47-3d0b76b55556' # Gutter Figure
+- 'blockType:0426383a-036a-46e6-864b-bd62a77bcd8e' # Text+Factoid
+- 'blockType:78ec370a-6844-45d7-b822-aefb52617a11' # Factoid: 1-Up
+- 'blockType:ba0ade4a-8a63-4b1b-9cda-30cd3010746a' # Factoid: 2-Up
+- 'blockType:76670784-7867-4bc9-ac47-a5b20b51eac3' # Factoid: 3-Up
+- 'blockType:0697d541-4ea4-4163-b0c5-ad9219691bb6' # Button
+- 'blockType:972197b6-eda9-4a11-a983-eb2cb09bada3' # Accordion
+- 'blockType:1fc01eb4-e3aa-4109-b017-9a4357415660' # Form
+- 'blockType:aa96dc63-49ff-4c1a-89df-d34525227436' # Embed Code

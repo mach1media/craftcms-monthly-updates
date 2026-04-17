@@ -1,17 +1,24 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   52ba90fb-e459-4ed2-902a-d512724055aa:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f06a4480-f195-4705-bd40-a33a08e72d0f # Images
+            handle: null
             instructions: null
             label: null
             required: true
@@ -22,8 +29,12 @@ fieldLayouts:
             warning: null
             width: 75
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 48fda275-cc4f-48a3-9d79-c38f9cd4d1d6 # Factoid Layout
+            handle: null
             instructions: null
             label: null
             required: false
@@ -40,8 +51,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 524c6e05-4d16-4e49-86a1-edfb5ff0e70c # Animation Settings
+            handle: null
             instructions: null
             label: null
             required: false
@@ -54,6 +69,7 @@ fieldLayouts:
         name: Animation
         uid: 6878d2af-1e1b-49b5-a71a-d6eff4c39ac3
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: factoid2Up

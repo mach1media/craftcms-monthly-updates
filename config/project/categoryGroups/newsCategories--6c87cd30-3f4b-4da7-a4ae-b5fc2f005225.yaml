@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   6c85d4e0-d619-4f3e-ac38-131190f41311:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -10,6 +11,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -35,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 976642d8-d1fd-4060-967e-3dc0dba982e8
         userCondition: null
+    thumbFieldKey: null
 handle: newsCategories
 name: 'News Categories'
 siteSettings:

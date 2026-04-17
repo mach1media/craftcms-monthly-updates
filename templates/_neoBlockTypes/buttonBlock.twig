@@ -9,7 +9,7 @@
 				{% if block.stackedUniformButtons == 1 %}
 				<div class="d-grid gap-3 mx-auto" style="max-width:350px;">
 					{% for button in block.buttons %}
-						{% if button.btnLink.getLink() %}
+						{% if button.btnLink.value | default %}
 							{% include "_fields/button" with {
 								'button':   button.btnLink, 
 								'color':    button.btnStyle, 

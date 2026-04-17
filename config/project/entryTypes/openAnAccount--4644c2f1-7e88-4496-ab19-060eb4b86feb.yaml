@@ -1,5 +1,9 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
 fieldLayouts:
   a3e4be92-c16a-45dd-97f1-1887ea03dbed:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,6 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -21,7 +26,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -32,8 +37,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            handle: null
             instructions: null
             label: null
             required: false
@@ -44,8 +53,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e359f1b1-385c-4017-9823-ab7e63cd7efe # Citation
+            handle: null
             instructions: null
             label: Subheading
             required: false
@@ -56,8 +69,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0f34747a-ee7a-4dd7-8f55-3dcc2d69ae34 # Open An Account Table
+            handle: null
             instructions: null
             label: null
             required: false
@@ -68,8 +85,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            handle: null
             instructions: null
             label: 'Table Footer'
             required: false
@@ -82,13 +103,16 @@ fieldLayouts:
         name: Content
         uid: 8ceb5a44-8ad6-41bd-8174-385449f6cfe8
         userCondition: null
+    thumbFieldKey: null
 handle: openAnAccount
 hasTitleField: true
+icon: null
 name: 'Open An Account'
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

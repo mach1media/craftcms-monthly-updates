@@ -1,17 +1,24 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
   d7b7376f-91b4-4fd1-ab81-e6fbbf18b757:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ce130366-bd6b-46be-ad59-10108ee88718 # Image: Desktop
+            handle: null
             instructions: null
             label: null
             required: false
@@ -22,8 +29,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b99b6148-253d-4660-ac78-eaf2703b3856 # Image: Mobile
+            handle: null
             instructions: null
             label: null
             required: false
@@ -36,6 +47,7 @@ fieldLayouts:
         name: Column
         uid: 0e615626-6e79-48d2-95e8-759bf1d38ddb
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: columnImage

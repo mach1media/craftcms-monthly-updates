@@ -13,7 +13,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: e545221b-a425-4bf5-adef-30e8193f800d
+            fieldUid: e545221b-a425-4bf5-adef-30e8193f800d # Mega Menu: CTAs - CTA - Image
             handle: image
             instructions: null
             label: Image
@@ -29,7 +29,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 517cdef8-d041-4ff8-857b-21f4f518180b
+            fieldUid: 517cdef8-d041-4ff8-857b-21f4f518180b # Mega Menu: CTAs - CTA - CTA Link
             handle: ctaLink
             instructions: null
             label: 'CTA Link'

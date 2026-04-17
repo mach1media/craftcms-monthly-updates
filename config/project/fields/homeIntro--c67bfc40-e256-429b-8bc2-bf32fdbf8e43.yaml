@@ -1,45 +1,27 @@
 columnSuffix: null
-contentColumnType: string
 handle: homeIntro
 instructions: null
 name: 'Home: Intro'
 searchable: true
 settings:
-  blockTypeFields: 0
-  changedFieldIndicator: 2015265685
-  columns:
-    __assoc__:
-      -
-        - 643e4c17-f296-47ae-8806-45847ebda838
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - ab39e5a8-9059-4669-8998-c898c3c7ed89
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 0d19f0b1-727c-4654-9f11-09b986093f3d
-        -
-          __assoc__:
-            -
-              - width
-              - ''
+  contentTable: ''
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 23c886f3-c78f-458c-a2d5-cd6341c8019d # Home: Intro Block
-  fieldLayout: row
-  maxRows: 1
-  minRows: 1
+    -
+      __assoc__:
+        -
+          - uid
+          - 23c886f3-c78f-458c-a2d5-cd6341c8019d # Home: Intro Block
+  includeTableView: false
+  maxEntries: 1
+  minEntries: 1
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: null
-  staticField: true
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: verbb\supertable\fields\SuperTableField

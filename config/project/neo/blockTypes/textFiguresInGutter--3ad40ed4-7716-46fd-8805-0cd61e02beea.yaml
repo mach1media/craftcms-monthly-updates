@@ -1,16 +1,20 @@
 childBlocks:
   - gutterFigure
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
   c3fae260-4b16-46d0-84ef-bc7162083803:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
             elementCondition: null
             type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
             uid: f395f244-0939-41fb-86f5-d2c185f08131
@@ -22,8 +26,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            handle: null
             instructions: null
             label: null
             required: false
@@ -34,8 +42,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            handle: null
             instructions: null
             label: null
             required: false
@@ -48,6 +60,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 3c5fa4bf-c2dc-4eed-9af0-96205724b653
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: textFiguresInGutter

@@ -4,60 +4,60 @@ instructions: null
 name: 'Popup - Simple - Buttons - Button'
 searchable: false
 settings:
-  allowCustomText: true
-  allowTarget: true
-  autoNoReferrer: true
-  customTextMaxLength: 0
-  customTextRequired: false
-  defaultLinkName: entry
-  defaultText: 'Learn More'
-  enableAllLinkTypes: false
-  enableAriaLabel: false
-  enableElementCache: false
-  enableTitle: false
+  advancedFields:
+    - target
+  fullGraphqlData: true
+  maxLength: 255
+  showLabelField: true
   typeSettings:
-    asset:
-      allowCrossSiteLink: false
-      allowCustomQuery: true
-      enabled: true
-      sources: '*'
-    category:
-      allowCrossSiteLink: false
-      allowCustomQuery: true
-      enabled: true
-      sources: '*'
-    custom:
-      allowAliases: false
-      disableValidation: false
-      enabled: true
-    email:
-      allowAliases: false
-      disableValidation: false
-      enabled: true
-    entry:
-      allowCrossSiteLink: false
-      allowCustomQuery: true
-      enabled: true
-      sources:
-        - singles
-        - 'section:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-        - 'section:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
-    site:
-      enabled: false
-      sites: '*'
-    tel:
-      allowAliases: false
-      disableValidation: false
-      enabled: true
-    url:
-      allowAliases: false
-      disableValidation: false
-      enabled: false
-    user:
-      allowCrossSiteLink: false
-      allowCustomQuery: false
-      enabled: false
-      sources: '*'
+    __assoc__:
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - '1'
+            -
+              - allowAnchors
+              - '1'
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowedKinds
+              - '*'
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+  types:
+    - entry
+    - url
+    - asset
+    - category
+    - email
+    - phone
 translationKeyFormat: null
 translationMethod: none
-type: lenz\linkfield\fields\LinkField
+type: craft\fields\Link

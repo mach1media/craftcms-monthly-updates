@@ -1,52 +1,27 @@
 columnSuffix: null
-contentColumnType: string
 handle: headingBlock
 instructions: null
 name: 'Section Heading'
 searchable: true
 settings:
-  blockTypeFields: 0
-  changedFieldIndicator: 1231226376
-  columns:
-    __assoc__:
-      -
-        - d33d4fab-55e7-446f-8972-f4676b5ee14a
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - fae55152-701b-4c22-9f50-453a213e9e05
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 853a2eb8-d408-4486-afc1-8e24fd201174
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - c94c64ea-cc6d-4b7d-9441-052031432b9e
-        -
-          __assoc__:
-            -
-              - width
-              - ''
+  contentTable: ''
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 9d8509d1-2d67-4cd5-99b2-672ac3e18f81 # Section Heading Block
-  fieldLayout: table
-  maxRows: 1
-  minRows: 1
+    -
+      __assoc__:
+        -
+          - uid
+          - 9d8509d1-2d67-4cd5-99b2-672ac3e18f81 # Section Heading Block
+  includeTableView: false
+  maxEntries: 1
+  minEntries: 1
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: 'Add a heading'
-  staticField: true
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: verbb\supertable\fields\SuperTableField

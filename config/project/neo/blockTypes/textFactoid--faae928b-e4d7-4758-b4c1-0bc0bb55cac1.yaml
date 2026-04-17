@@ -3,19 +3,26 @@ childBlocks:
   - factoid2Up
   - factoid3Up
   - button
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   88d19629-8382-4884-bc57-eea101e263f1:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
+            handle: null
             instructions: null
             label: null
             required: false
@@ -26,8 +33,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 76c2555a-23b9-4d53-8c79-13892f75b970 # Factoid Description Box
+            handle: null
             instructions: null
             label: null
             required: false
@@ -38,8 +49,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4f1a3081-cb03-47eb-b862-638e1b362e22 # Image Position [L|R]
+            handle: null
             instructions: null
             label: 'Factoid Position [L|R]'
             required: false
@@ -50,6 +65,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
             elementCondition: null
             type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
             uid: 35351df1-24f8-4523-8bc2-4ff3a85cdaf7
@@ -61,8 +77,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d24ab695-25c2-4078-b7e4-b936aa667ac6 # Pre-Eyebrow
+            handle: null
             instructions: null
             label: null
             required: false
@@ -73,8 +93,12 @@ fieldLayouts:
             warning: null
             width: 75
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
+            handle: null
             instructions: null
             label: 'Pre-Eyebrow Text Alignment'
             required: false
@@ -85,8 +109,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e39974bd-ec97-4187-be91-a431e1a4fbd7 # Eyebrow
+            handle: null
             instructions: null
             label: null
             required: false
@@ -97,8 +125,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            handle: null
             instructions: null
             label: null
             required: false
@@ -109,8 +141,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            handle: null
             instructions: null
             label: null
             required: false
@@ -121,8 +157,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
+            handle: null
             instructions: null
             label: null
             required: false
@@ -139,8 +179,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            handle: null
             instructions: null
             label: null
             required: false
@@ -151,8 +195,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            handle: null
             instructions: null
             label: null
             required: false
@@ -165,6 +213,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: de57f9a3-357b-4a47-aca2-f5f55e28d042
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: textFactoid

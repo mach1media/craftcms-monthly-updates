@@ -1,5 +1,4 @@
 columnSuffix: tfohxcxz
-contentColumnType: text
 handle: sectionId
 instructions: 'Enter a url-friendly identifier for this section of the page. Use all lowercase letters and dashes instead of spaces. Ex: for-churches, or impact-investing. Link to this section with a URL like /impact-investing/impact-notes#for-churches'
 name: 'Section ID'
@@ -8,7 +7,6 @@ settings:
   byteLimit: null
   charLimit: null
   code: true
-  columnType: null
   initialRows: 4
   multiline: false
   placeholder: 'ex: section-identifier'

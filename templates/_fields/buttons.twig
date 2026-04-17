@@ -1,7 +1,7 @@
 {% if buttons | length %}
 <p>
 	{% for button in buttons %}
-		{% if button.btnLink.getLink() %}
+		{% if button.btnLink.value %}
 			{% include "_fields/button" with {
 				'button':   button.btnLink, 
 				'color':    button.btnStyle, 

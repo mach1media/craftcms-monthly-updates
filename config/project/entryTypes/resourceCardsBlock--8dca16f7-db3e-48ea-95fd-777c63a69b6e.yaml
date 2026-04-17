@@ -13,7 +13,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: b613c984-854f-41b5-baea-92cd77be6d0c
+            fieldUid: b613c984-854f-41b5-baea-92cd77be6d0c # Resource Cards - Resource
             handle: null
             instructions: null
             label: Resource
@@ -29,7 +29,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66
+            fieldUid: d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66 # Resource Cards - Thumbnail
             handle: thumbnail
             instructions: null
             label: Thumbnail
@@ -45,7 +45,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: d3166c3a-ca64-4122-be3f-716e818e0868
+            fieldUid: d3166c3a-ca64-4122-be3f-716e818e0868 # Resource Cards - Card Title
             handle: null
             instructions: null
             label: 'Card Title'
@@ -61,7 +61,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 1f41377c-9452-4c44-85f2-23bcfbec5b44
+            fieldUid: 1f41377c-9452-4c44-85f2-23bcfbec5b44 # Resource Cards - Button Label
             handle: null
             instructions: null
             label: 'Button Label'

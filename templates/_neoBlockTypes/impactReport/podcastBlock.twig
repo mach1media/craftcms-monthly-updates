@@ -78,8 +78,8 @@
 												<div class="c-story-card__content">
 													{% if childBlock.preheading != '' %}
 													<p class="u-preheading">
-														{% if childBlock.textLink.getLink() %}
-															<a href="{{ childBlock.textLink }}" class="stretched-link">{{ childBlock.preheading | raw }}</a>
+														{% if childBlock.textLink.value | default %}
+															<a href="{{ childBlock.textLink.value }}" class="stretched-link">{{ childBlock.preheading | raw }}</a>
 														{% else %}
 															{{ childBlock.preheading | raw }}
 														{% endif %}
@@ -99,10 +99,15 @@
 									{% endfor %}
 								</div>
 
-								{% if block.button.getLink() %}
+								{% if block.button.value | default %}
 									<div class="text-center mt-4 px-4 px-lg-5">
 										{% set classes = ['btn','btn-pill','btn-lg','btn-outline-secondary','text-primary','bg-white','w-100'] %}
-										{{ block.button.getLink({'class':classes|join(' ')}) }}
+										{{ tag('a', {
+											href: block.button.value,
+											target: block.button.target,
+											class: classes | join(' '),
+											text: block.button.label | default(block.button.element.title | default('Learn More'))
+										}) }}
 									</div>
 								{% endif %}
 							</div>

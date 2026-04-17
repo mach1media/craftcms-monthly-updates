@@ -1,17 +1,24 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: 2cc57a96-1052-495e-a015-6a4984a4fa2d # Page Builder: Login
 fieldLayouts:
   e2db7ba5-5ddd-4213-8c5b-bbe294d95c57:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            handle: null
             instructions: null
             label: null
             required: false
@@ -22,8 +29,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
+            handle: null
             instructions: null
             label: null
             required: false
@@ -34,8 +45,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
+            handle: null
             instructions: null
             label: null
             required: false
@@ -48,6 +63,7 @@ fieldLayouts:
         name: Content
         uid: 169d75cf-81e0-4017-a1fb-551c2ef8daea
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: contentBlock

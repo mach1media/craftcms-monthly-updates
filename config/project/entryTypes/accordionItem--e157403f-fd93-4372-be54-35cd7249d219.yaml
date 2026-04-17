@@ -15,7 +15,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 6eeff1eb-96ce-43ab-911f-a6e7aa97139e
+            fieldUid: 6eeff1eb-96ce-43ab-911f-a6e7aa97139e # Accordion Items - Accordion Item - Heading
             handle: heading
             instructions: null
             label: Heading

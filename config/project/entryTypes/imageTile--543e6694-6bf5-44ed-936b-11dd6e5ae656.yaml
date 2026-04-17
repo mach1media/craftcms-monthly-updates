@@ -18,7 +18,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 7a533a82-4f0f-4e24-b8e2-f37bb95a4b06
+            fieldUid: 7a533a82-4f0f-4e24-b8e2-f37bb95a4b06 # Home: Tile - Wide - Image Tile - Thumbnail
             handle: thumbnail
             instructions: null
             label: Thumbnail
@@ -34,7 +34,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 7122cd83-09df-457d-8ea8-284328ec238f
+            fieldUid: 7122cd83-09df-457d-8ea8-284328ec238f # Home: Tile - Wide - Image Tile - label
             handle: label
             instructions: null
             label: label
@@ -50,7 +50,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 38b1109c-b2b4-4a24-8273-95f4885fdbbe
+            fieldUid: 38b1109c-b2b4-4a24-8273-95f4885fdbbe # Home: Tile - Wide - Image Tile - Label: Custom
             handle: labelCustom
             instructions: null
             label: 'Label: Custom'
@@ -66,7 +66,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: ff81d39c-f083-4ae5-aaa1-08eabba9c8da
+            fieldUid: ff81d39c-f083-4ae5-aaa1-08eabba9c8da # Home: Tile - Wide - Image Tile - Icon: Custom
             handle: iconCustom
             instructions: null
             label: 'Icon: Custom'
@@ -82,7 +82,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 37449807-b7fe-4e44-bc5d-f3469359b775
+            fieldUid: 37449807-b7fe-4e44-bc5d-f3469359b775 # Home: Tile - Wide - Image Tile - Heading
             handle: heading
             instructions: null
             label: Heading
@@ -98,7 +98,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: c13a4a02-215c-406f-8eb0-6aaca8403db8
+            fieldUid: c13a4a02-215c-406f-8eb0-6aaca8403db8 # Home: Tile - Wide - Image Tile - CTA Link
             handle: ctaLink
             instructions: null
             label: 'CTA Link'

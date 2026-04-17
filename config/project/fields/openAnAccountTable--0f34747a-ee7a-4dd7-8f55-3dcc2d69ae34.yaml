@@ -1,24 +1,27 @@
 columnSuffix: null
-contentColumnType: string
 handle: openAnAccountTable
 instructions: null
 name: 'Open An Account Table'
 searchable: true
 settings:
-  blockTypeFields: 0
-  changedFieldIndicator: 1153518213
+  contentTable: ''
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 2332bc88-0131-4224-a56c-f80808febce7 # Open An Account Table Block
-  fieldLayout: table
+    -
+      __assoc__:
+        -
+          - uid
+          - 2332bc88-0131-4224-a56c-f80808febce7 # Open An Account Table Block
+  includeTableView: false
   maxEntries: null
-  maxRows: null
   minEntries: null
-  minRows: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: null
-  staticField: null
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: verbb\supertable\fields\SuperTableField

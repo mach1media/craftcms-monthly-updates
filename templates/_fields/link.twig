@@ -1,8 +1,9 @@
-{% if link is defined and link | length %}
-	{% set linkText = link.getCustomText('Read more') %}
-	{% if class is defined and class != '' %}
-		{{ link.getLink({'text': linkText, 'class': class}) }}
-	{% else %}
-		{{ link.getLink({'text': linkText}) }}
-	{% endif %}
+{% if link is defined and link.value | default %}
+	{% set linkText = link.label | default('Read more') %}
+	{{ tag('a', {
+		href: link.value,
+		target: link.target,
+		class: class | default(null),
+		text: linkText
+	}) }}
 {% endif %}

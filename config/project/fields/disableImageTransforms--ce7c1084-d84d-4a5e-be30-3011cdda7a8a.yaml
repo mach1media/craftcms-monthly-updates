@@ -1,5 +1,4 @@
 columnSuffix: yzdefinn
-contentColumnType: boolean
 handle: disableImageTransforms
 instructions: null
 name: 'Disable Image Transforms'
@@ -8,6 +7,7 @@ settings:
   default: false
   offLabel: Enabled
   onLabel: Disabled
+  showLabelsInCards: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

@@ -4,11 +4,16 @@ instructions: null
 name: 'Popup - Simple - Buttons'
 searchable: false
 settings:
+  contentTable: ''
   createButtonLabel: null
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
-    - c36259c6-bea8-45bc-b432-ef40fda5b6d0 # Popup - Simple - Buttons Block
+    -
+      __assoc__:
+        -
+          - uid
+          - c36259c6-bea8-45bc-b432-ef40fda5b6d0 # Popup - Simple - Buttons Block
   includeTableView: false
   maxEntries: null
   minEntries: null

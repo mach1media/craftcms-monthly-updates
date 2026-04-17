@@ -1,12 +1,17 @@
 fieldLayouts:
   ae211381-d3c7-4b3d-9461-e72c7fef5450:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            handle: null
             instructions: null
             label: null
             required: false
@@ -17,8 +22,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 49f76678-87cc-4e24-8127-90fe77fb1441 # Quote
+            handle: null
             instructions: null
             label: Description
             required: false
@@ -35,8 +44,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 7f4113a8-8cb2-4670-bac9-e4de20179209 # Text Links
+            handle: null
             instructions: null
             label: Buttons
             required: false
@@ -53,8 +66,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 11a02d8c-6388-4bec-914d-2e386b4d1101 # Legal Links
+            handle: null
             instructions: null
             label: null
             required: false
@@ -65,8 +82,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            handle: null
             instructions: null
             label: Disclaimer
             required: false
@@ -79,6 +100,7 @@ fieldLayouts:
         name: Legal
         uid: 34889c25-500c-449b-afcf-92ad6549166d
         userCondition: null
+    thumbFieldKey: null
 handle: footer
 name: Footer
 sortOrder: 1

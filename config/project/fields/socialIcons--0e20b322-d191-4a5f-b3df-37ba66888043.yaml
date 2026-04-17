@@ -1,12 +1,10 @@
 columnSuffix: xatbkcex
-contentColumnType: text
 handle: socialIcons
 instructions: null
 name: 'Social Icons'
 searchable: false
 settings:
   addRowLabel: 'Add an icon'
-  columnType: text
   columns:
     __assoc__:
       -

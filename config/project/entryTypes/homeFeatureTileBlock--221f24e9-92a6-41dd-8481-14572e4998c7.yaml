@@ -13,7 +13,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: ab0cec03-165b-46cc-b1d9-9974464ffb9a
+            fieldUid: ab0cec03-165b-46cc-b1d9-9974464ffb9a # Home: Feature Tile - Image
             handle: image
             instructions: null
             label: Image
@@ -29,7 +29,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: f126506f-a32d-40b2-9d16-466e4201be40
+            fieldUid: f126506f-a32d-40b2-9d16-466e4201be40 # Home: Feature Tile - Label
             handle: label
             instructions: null
             label: Label
@@ -45,7 +45,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 2bd2d918-16fc-4147-9b16-0a5c2a448d3e
+            fieldUid: 2bd2d918-16fc-4147-9b16-0a5c2a448d3e # Home: Feature Tile - Label: Custom
             handle: labelCustom
             instructions: null
             label: 'Label: Custom'
@@ -61,7 +61,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: bb9e3568-5ca9-4a9a-8534-c5e97ea203d7
+            fieldUid: bb9e3568-5ca9-4a9a-8534-c5e97ea203d7 # Home: Feature Tile - Icon: Custom
             handle: iconCustom
             instructions: null
             label: 'Icon: Custom'
@@ -77,7 +77,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: dc0ed69d-1dd6-496a-ab73-dea06d776bc0
+            fieldUid: dc0ed69d-1dd6-496a-ab73-dea06d776bc0 # Home: Feature Tile - Heading
             handle: heading
             instructions: null
             label: Heading
@@ -93,7 +93,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 4cf16f08-8357-449b-a33e-172385d1c66e
+            fieldUid: 4cf16f08-8357-449b-a33e-172385d1c66e # Home: Feature Tile - CTA Link
             handle: ctaLink
             instructions: null
             label: 'CTA Link'

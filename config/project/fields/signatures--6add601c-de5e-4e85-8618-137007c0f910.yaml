@@ -1,12 +1,10 @@
 columnSuffix: nzijjvek
-contentColumnType: text
 handle: signatures
 instructions: null
 name: Signatures
 searchable: false
 settings:
   addRowLabel: 'Add a signature'
-  columnType: text
   columns:
     __assoc__:
       -

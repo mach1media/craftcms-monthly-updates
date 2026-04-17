@@ -1,4 +1,4 @@
-{% if button | length %}
+{% if button.value | default %}
 	{% set classes = ['btn'] %}
 	{% if color is defined and color != '' %}
 		{% set classes = classes|merge([color]) %}
@@ -9,12 +9,11 @@
 	{% if class is defined and class != '' %}
 		{% set classes = classes|merge([class]) %}
 	{% endif %}
-	{% if download is defined and download == 1 %}
-		{{ button.getLink({
-			'class':classes|join(' '),
-			'download':'download'
-		}) }}
-	{% else %}
-		{{ button.getLink({'class':classes|join(' ')}) }}
-	{% endif %}
+	{{ tag('a', {
+		href: button.value,
+		target: button.target,
+		class: classes | join(' '),
+		download: (download is defined and download == 1) ? 'download' : null,
+		text: button.label | default(button.element.title | default('Learn More'))
+	}) }}
 {% endif %}

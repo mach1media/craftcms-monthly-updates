@@ -1,17 +1,24 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
   df78adf1-9b9b-422d-b1a5-c52f50564f61:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
+            handle: null
             instructions: null
             label: null
             required: false
@@ -22,8 +29,12 @@ fieldLayouts:
             warning: null
             width: 75
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
+            handle: null
             instructions: null
             label: null
             required: false
@@ -36,6 +47,7 @@ fieldLayouts:
         name: Button
         uid: 57332c7a-07a2-40be-b713-0dbda62ed0a1
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: button

@@ -13,7 +13,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: ff02b5d9-24b9-4da0-858a-ad8253a72bb3
+            fieldUid: ff02b5d9-24b9-4da0-858a-ad8253a72bb3 # Legal Links - Text Link - Text Link
             handle: textLink
             instructions: null
             label: 'Text Link'

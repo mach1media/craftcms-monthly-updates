@@ -1,7 +1,12 @@
-{% if textLink | length %}
+{% if textLink.value | default %}
 	{% set classes = color is defined ? [color] : [] %}
 	{% if class is defined and class != '' %}
 		{% set classes = classes|merge([class]) %}
 	{% endif %}
-	{{ textLink.getLink({'class':classes|join(' ')}) }}
+	{{ tag('a', {
+		href: textLink.value,
+		target: textLink.target,
+		class: classes | join(' ') ?: null,
+		text: textLink.label | default(textLink.element.title | default('Learn More'))
+	}) }}
 {% endif %}

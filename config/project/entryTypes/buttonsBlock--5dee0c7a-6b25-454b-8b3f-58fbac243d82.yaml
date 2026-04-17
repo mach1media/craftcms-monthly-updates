@@ -13,7 +13,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 55bd2a63-aca2-431f-bdc7-c44414ac0418
+            fieldUid: 55bd2a63-aca2-431f-bdc7-c44414ac0418 # Buttons - Link
             handle: null
             instructions: null
             label: Link
@@ -29,7 +29,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 3dd8a012-e0af-46a4-a906-a538bd2c6a64
+            fieldUid: 3dd8a012-e0af-46a4-a906-a538bd2c6a64 # Buttons - Style
             handle: null
             instructions: null
             label: Style
@@ -45,7 +45,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: aed0fd2d-f074-485f-b1f7-4c8ef97e91cc
+            fieldUid: aed0fd2d-f074-485f-b1f7-4c8ef97e91cc # Buttons - Arrow
             handle: null
             instructions: null
             label: Arrow
@@ -61,7 +61,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: c7620f65-d29a-4274-8ad9-35a968a67638
+            fieldUid: c7620f65-d29a-4274-8ad9-35a968a67638 # Buttons - Download
             handle: download
             instructions: null
             label: Download

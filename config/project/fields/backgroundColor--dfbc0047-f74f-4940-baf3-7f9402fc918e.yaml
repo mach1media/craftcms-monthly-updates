@@ -1,5 +1,4 @@
 columnSuffix: emqtrsxt
-contentColumnType: string
 handle: backgroundColor
 instructions: null
 name: 'Background Color'

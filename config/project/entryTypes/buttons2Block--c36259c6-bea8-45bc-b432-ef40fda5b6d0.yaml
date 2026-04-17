@@ -13,7 +13,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: fcb52c22-c183-41f8-8e7b-eba92f387d0d
+            fieldUid: fcb52c22-c183-41f8-8e7b-eba92f387d0d # Popup - Simple - Buttons - Button
             handle: button
             instructions: null
             label: Button
@@ -29,7 +29,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 348b4f5c-bf77-4164-a783-c2dd57770990
+            fieldUid: 348b4f5c-bf77-4164-a783-c2dd57770990 # Popup - Simple - Buttons - Button Style
             handle: buttonStyle
             instructions: null
             label: 'Button Style'

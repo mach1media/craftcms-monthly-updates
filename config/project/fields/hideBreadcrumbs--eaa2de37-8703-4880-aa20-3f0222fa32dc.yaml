@@ -1,5 +1,4 @@
 columnSuffix: hfnrmlfb
-contentColumnType: boolean
 handle: hideBreadcrumbs
 instructions: null
 name: 'Hide Breadcrumbs'
@@ -8,6 +7,7 @@ settings:
   default: false
   offLabel: Shown
   onLabel: Hidden
+  showLabelsInCards: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

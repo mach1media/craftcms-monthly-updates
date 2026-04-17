@@ -1,5 +1,4 @@
 columnSuffix: avaecucj
-contentColumnType: boolean
 handle: fullViewport
 instructions: null
 name: 'Full Viewport'
@@ -8,6 +7,7 @@ settings:
   default: false
   offLabel: 'No'
   onLabel: 'Yes'
+  showLabelsInCards: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

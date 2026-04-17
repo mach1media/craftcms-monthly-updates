@@ -1,13 +1,14 @@
 columnSuffix: xjmxbfwv
-contentColumnType: string(255)
 handle: website
 instructions: null
 name: Website
 searchable: false
 settings:
+  fullGraphqlData: false
   maxLength: 255
+  showLabelField: false
   types:
     - url
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\Url
+type: craft\fields\Link

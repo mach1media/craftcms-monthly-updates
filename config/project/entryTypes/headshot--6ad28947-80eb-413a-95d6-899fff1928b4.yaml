@@ -16,7 +16,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 19c27c03-7838-4358-9214-9634fe9e3970
+            fieldUid: 19c27c03-7838-4358-9214-9634fe9e3970 # Headshot Videos - Headshot - Image
             handle: image
             instructions: null
             label: Image
@@ -32,7 +32,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c
+            fieldUid: 9ddb9516-4a7b-47d9-8d0c-aa93fd335b4c # Headshot Videos - Headshot - Label
             handle: label
             instructions: null
             label: Label
@@ -48,7 +48,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: d79c352e-f405-46a0-b6cd-bdfff5e4a81e
+            fieldUid: d79c352e-f405-46a0-b6cd-bdfff5e4a81e # Headshot Videos - Headshot - Video
             handle: video
             instructions: null
             label: Video

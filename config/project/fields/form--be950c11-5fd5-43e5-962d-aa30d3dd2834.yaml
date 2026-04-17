@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: form
 instructions: null
 name: Form
@@ -7,16 +6,17 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
-  localizeRelations: false
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: 1
   selectionLabel: 'Select form'
+  showSearchInput: true
   showSiteMenu: true
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: verbb\formie\fields\Forms

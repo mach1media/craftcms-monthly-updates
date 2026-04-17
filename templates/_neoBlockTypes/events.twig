@@ -25,8 +25,8 @@
 					</div>
 					
 					<div class="col-12 col-md-8 col-lg-9">
-						{% if card.textLink.getLink() %}
-						<h2 class="fs-4 text-uppercase"><a class="stretched-link" href="{{ card.textLink }}">{{ card.heading }}</a></h2>
+						{% if card.textLink.value | default %}
+						<h2 class="fs-4 text-uppercase"><a class="stretched-link" href="{{ card.textLink.value }}">{{ card.heading }}</a></h2>
 						{% else %}
 						<h2 class="fs-4 text-uppercase">{{ card.heading }}</h2>
 						{% endif %}

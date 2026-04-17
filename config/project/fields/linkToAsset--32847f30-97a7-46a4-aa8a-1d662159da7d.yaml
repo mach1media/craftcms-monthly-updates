@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: linkToAsset
 instructions: null
 name: 'Link to Asset'
@@ -10,9 +9,9 @@ settings:
   allowUploads: false
   allowedKinds: null
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   defaultUploadLocationSubpath: null
-  localizeRelations: false
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
@@ -23,6 +22,7 @@ settings:
   restrictedLocationSource: 'volume:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   restrictedLocationSubpath: null
   selectionLabel: null
+  showSearchInput: true
   showSiteMenu: true
   showUnpermittedFiles: true
   showUnpermittedVolumes: true
@@ -32,5 +32,5 @@ settings:
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Assets

@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: grantYear
 instructions: null
 name: 'Grant Year'
@@ -7,16 +6,17 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
-  localizeRelations: false
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: 1
   selectionLabel: null
+  showSearchInput: true
   showSiteMenu: true
   source: 'group:bafdb566-dc62-40b5-9a8f-ca3010a690f9' # Grant Years
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Categories

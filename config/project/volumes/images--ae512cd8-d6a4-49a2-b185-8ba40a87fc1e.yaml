@@ -1,5 +1,8 @@
+altTranslationKeyFormat: null
+altTranslationMethod: site
 fieldLayouts:
   c27a65a7-c9dc-4f9a-a6b1-7a16fc59423c:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,6 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -35,6 +39,7 @@ fieldLayouts:
             attribute: alt
             class: null
             cols: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -55,8 +60,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: cec407c4-ded3-4457-9ffd-7caf96ab0281 # Caption
+            handle: null
             instructions: null
             label: null
             required: false
@@ -69,10 +78,12 @@ fieldLayouts:
         name: Content
         uid: 50a4b217-8e33-4c59-9097-59fcc2a09482
         userCondition: null
+    thumbFieldKey: null
 fs: images
 handle: images
 name: Images
 sortOrder: 1
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 transformFs: transforms

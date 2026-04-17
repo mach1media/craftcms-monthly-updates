@@ -1,11 +1,10 @@
 columnSuffix: rysukuug
-contentColumnType: string
 handle: itemsPerRow
 instructions: null
 name: 'Items Per Row'
 searchable: false
 settings:
-  columnType: string
+  customOptions: false
   options:
     -
       __assoc__:

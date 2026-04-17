@@ -1,61 +1,27 @@
 columnSuffix: null
-contentColumnType: string
 handle: homeFeatureTile
 instructions: null
 name: 'Home: Feature Tile'
 searchable: true
 settings:
-  blockTypeFields: 0
-  changedFieldIndicator: 1772391995
-  columns:
-    __assoc__:
-      -
-        - f126506f-a32d-40b2-9d16-466e4201be40
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 2bd2d918-16fc-4147-9b16-0a5c2a448d3e
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - bb9e3568-5ca9-4a9a-8534-c5e97ea203d7
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - dc0ed69d-1dd6-496a-ab73-dea06d776bc0
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 4cf16f08-8357-449b-a33e-172385d1c66e
-        -
-          __assoc__:
-            -
-              - width
-              - ''
+  contentTable: ''
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 221f24e9-92a6-41dd-8481-14572e4998c7 # Home: Feature Tile Block
-  fieldLayout: matrix
-  maxEntries: null
-  maxRows: 1
+    -
+      __assoc__:
+        -
+          - uid
+          - 221f24e9-92a6-41dd-8481-14572e4998c7 # Home: Feature Tile Block
+  includeTableView: false
+  maxEntries: 1
   minEntries: null
-  minRows: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: 'Add a Feature Tile'
-  staticField: null
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: verbb\supertable\fields\SuperTableField

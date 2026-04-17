@@ -1,5 +1,8 @@
+altTranslationKeyFormat: null
+altTranslationMethod: site
 fieldLayouts:
   bcce5546-f26e-4a08-9fa7-aa0a22b60a2c:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,6 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -32,8 +36,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b00ccfa2-369c-471f-ae02-ae5ed2a9bae6 # Thumbnail
+            handle: null
             instructions: null
             label: null
             required: false
@@ -44,8 +52,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: cdb162a5-f0d2-429b-b5ac-588fc77a48da # Summary
+            handle: null
             instructions: null
             label: null
             required: false
@@ -58,10 +70,12 @@ fieldLayouts:
         name: Content
         uid: 4b3043bd-194a-4b24-b58e-5ebb945cf0d0
         userCondition: null
+    thumbFieldKey: null
 fs: documents
 handle: documents
 name: Documents
 sortOrder: 2
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 transformFs: transforms

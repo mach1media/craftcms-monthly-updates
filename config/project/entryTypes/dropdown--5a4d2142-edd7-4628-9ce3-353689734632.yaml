@@ -1,5 +1,9 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
 fieldLayouts:
   970805be-c07e-46ce-b76a-89448377aeae:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,6 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -21,7 +26,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -32,8 +37,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d2cf84b8-da42-48ed-9ffa-4f93da867f96 # Text Link
+            handle: null
             instructions: null
             label: null
             required: true
@@ -44,8 +53,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 69a66c94-0c41-4248-949e-0b52659f8c9e # Dropdown Links
+            handle: null
             instructions: null
             label: null
             required: false
@@ -58,13 +71,16 @@ fieldLayouts:
         name: Content
         uid: 4a4a9448-4b85-4a37-872b-6fb5e317742a
         userCondition: null
+    thumbFieldKey: null
 handle: dropdown
 hasTitleField: true
+icon: null
 name: Dropdown
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

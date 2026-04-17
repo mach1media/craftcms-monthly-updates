@@ -1,54 +1,27 @@
 columnSuffix: null
-contentColumnType: string
 handle: buttons
 instructions: null
 name: Buttons
 searchable: true
 settings:
-  blockTypeFields: 0
-  changedFieldIndicator: 2126039923
-  columns:
-    __assoc__:
-      -
-        - 55bd2a63-aca2-431f-bdc7-c44414ac0418
-        -
-          __assoc__:
-            -
-              - width
-              - 40%
-      -
-        - 3dd8a012-e0af-46a4-a906-a538bd2c6a64
-        -
-          __assoc__:
-            -
-              - width
-              - 20%
-      -
-        - aed0fd2d-f074-485f-b1f7-4c8ef97e91cc
-        -
-          __assoc__:
-            -
-              - width
-              - 20%
-      -
-        - c7620f65-d29a-4274-8ad9-35a968a67638
-        -
-          __assoc__:
-            -
-              - width
-              - 20%
+  contentTable: ''
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 5dee0c7a-6b25-454b-8b3f-58fbac243d82 # Buttons Block
-  fieldLayout: table
+    -
+      __assoc__:
+        -
+          - uid
+          - 5dee0c7a-6b25-454b-8b3f-58fbac243d82 # Buttons Block
+  includeTableView: false
   maxEntries: null
-  maxRows: null
   minEntries: null
-  minRows: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: 'Add a button'
-  staticField: null
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: verbb\supertable\fields\SuperTableField

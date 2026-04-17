@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   540216b3-793c-41d0-a8c3-5a5cfad36ceb:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -10,6 +11,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: null
             disabled: false
             elementCondition: null
             id: null
@@ -35,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 85ea63c9-3f6e-4c00-892e-b4fdfcc15c51
         userCondition: null
+    thumbFieldKey: null
 handle: grantYears
 name: 'Grant Years'
 siteSettings:

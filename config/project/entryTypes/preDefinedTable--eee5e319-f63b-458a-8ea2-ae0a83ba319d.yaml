@@ -16,7 +16,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 58712ece-7721-4366-900b-2cc4858ea5e0
+            fieldUid: 58712ece-7721-4366-900b-2cc4858ea5e0 # Data Tables - Pre-defined Table - Heading
             handle: heading
             instructions: null
             label: Heading
@@ -32,7 +32,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 72c21d48-1ae1-46e6-a4d8-57c63a5eb883
+            fieldUid: 72c21d48-1ae1-46e6-a4d8-57c63a5eb883 # Data Tables - Pre-defined Table - Subheading
             handle: subheading
             instructions: null
             label: Subheading
@@ -48,7 +48,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd
+            fieldUid: 8a5f7a26-0e88-4d83-8d0e-2f3d9a1193fd # Data Tables - Pre-defined Table - Table
             handle: null
             instructions: null
             label: Table

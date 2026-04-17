@@ -22,7 +22,7 @@
 					{% endapply %}
 				</div>
 				{% endif %}
-				{% if block.button.getLink() %}
+				{% if block.button.value | default %}
 				<p>{% include "_fields/button" with {'button': block.button, 'color': 'secondary text-white'} %}</p>
 				{% endif %}
 			</div>

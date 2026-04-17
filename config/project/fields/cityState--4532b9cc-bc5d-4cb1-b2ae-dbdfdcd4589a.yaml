@@ -1,5 +1,4 @@
 columnSuffix: jfzurntb
-contentColumnType: text
 handle: cityState
 instructions: null
 name: 'City, State'
@@ -8,7 +7,6 @@ settings:
   byteLimit: null
   charLimit: null
   code: false
-  columnType: null
   initialRows: 4
   multiline: false
   placeholder: null

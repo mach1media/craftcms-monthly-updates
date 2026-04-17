@@ -1,12 +1,10 @@
 columnSuffix: kucqdrts
-contentColumnType: text
 handle: listItemsSimple
 instructions: null
 name: 'List Items: Simple'
 searchable: false
 settings:
   addRowLabel: 'Add a list item'
-  columnType: text
   columns:
     __assoc__:
       -

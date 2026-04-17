@@ -18,7 +18,7 @@
 					<div class="col-12 col-md-6 col-xl-3 mb-5 mb-xl-0 text-center">
 						<div class="c-menu-card rounded-5" style="background:url('{{ card.backgroundPhoto.one.url('responsiveMedium') }}') center center no-repeat;background-size:cover;">
 							<div class="c-menu-card__head bg-{{ card.buttonColor }}">
-								<a href="{{ card.button }}" class="btn btn-outline-white stretched-link">{{ card.button.getCustomText('View Menu') }}</a>
+								<a href="{{ card.button.value }}" class="btn btn-outline-white stretched-link">{{ card.button.label | default('View Menu') }}</a>
 							</div>
 						</div>
 						{% if card.caption != '' %}

@@ -1,19 +1,30 @@
 columnSuffix: null
-contentColumnType: string
 handle: popup
 instructions: null
 name: Popup
 searchable: false
 settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
-      uid: f2b48427-ac90-47d4-bab3-abe8535591f5
+      __assoc__:
+        -
+          - uid
+          - f2b48427-ac90-47d4-bab3-abe8535591f5 # Simple
     -
-      uid: 1cb829c4-b6d2-45ce-914f-36636623179e
+      __assoc__:
+        -
+          - uid
+          - 1cb829c4-b6d2-45ce-914f-36636623179e # Side By Side
+  includeTableView: false
   maxEntries: 1
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

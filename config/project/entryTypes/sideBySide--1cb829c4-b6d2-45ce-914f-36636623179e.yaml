@@ -21,7 +21,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: bd344a67-a76b-4a60-a516-6f0450e88392
+            fieldUid: bd344a67-a76b-4a60-a516-6f0450e88392 # Popup - Side By Side - Modal Size
             handle: modalSize
             instructions: null
             label: 'Modal Size'
@@ -37,7 +37,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 66c0ba20-c8b5-48ad-bad2-9f67e7eaaeca
+            fieldUid: 66c0ba20-c8b5-48ad-bad2-9f67e7eaaeca # Popup - Side By Side - Image
             handle: image
             instructions: null
             label: Image
@@ -53,7 +53,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: f93511fb-fce3-4ae1-bd26-27a91113ab48
+            fieldUid: f93511fb-fce3-4ae1-bd26-27a91113ab48 # Popup - Side By Side - Image: Mobile
             handle: imageMobile
             instructions: null
             label: 'Image: Mobile'
@@ -85,7 +85,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: e22fcfb1-941c-4f9f-8fb0-f64241fa1662
+            fieldUid: e22fcfb1-941c-4f9f-8fb0-f64241fa1662 # Popup - Side By Side - Background Color
             handle: backgroundColor
             instructions: null
             label: 'Background Color'
@@ -101,7 +101,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: bb08a489-3362-4c74-a941-47a3f7e5c2b1
+            fieldUid: bb08a489-3362-4c74-a941-47a3f7e5c2b1 # Popup - Side By Side - Text Color
             handle: textColor
             instructions: null
             label: 'Text Color'
@@ -117,7 +117,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 50deb98c-8639-40ab-854c-c247f87e3d80
+            fieldUid: 50deb98c-8639-40ab-854c-c247f87e3d80 # Popup - Side By Side - Link Color
             handle: linkColor
             instructions: null
             label: 'Link Color'
@@ -133,7 +133,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: bb7b4f41-f446-4225-bf73-3dd0315ee0a4
+            fieldUid: bb7b4f41-f446-4225-bf73-3dd0315ee0a4 # Popup - Side By Side - Text Alignment
             handle: textAlignment
             instructions: null
             label: 'Text Alignment'
@@ -165,7 +165,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: da4096f8-fda7-4c6a-a8cd-f236409cc9a7
+            fieldUid: da4096f8-fda7-4c6a-a8cd-f236409cc9a7 # Popup - Side By Side - Embed Code
             handle: embedCode
             instructions: null
             label: 'Embed Code'

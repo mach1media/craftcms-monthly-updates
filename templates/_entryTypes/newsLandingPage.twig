@@ -31,7 +31,7 @@
 						<h2 class="h3 c-news__card-heading">{{ entry.title }}</h2>
 						{% if entry.summary != '' %}<p>{{ entry.summary }}</p>{% endif %}
 						<p>
-							{% if entry.textLink.getLink() %}
+							{% if entry.textLink.value | default %}
 								{% include "_fields/button" with {
 									'button': entry.textLink, 
 									'color': 'secondary', 

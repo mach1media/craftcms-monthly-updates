@@ -1,17 +1,25 @@
 columnSuffix: null
-contentColumnType: string
 handle: homeSquareTiles
 instructions: 'Insert four square tiles'
 name: 'Home: Square Tiles'
 searchable: true
 settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
-      uid: 356681f1-6b5a-48fb-94b8-d856247a3b67
+      __assoc__:
+        -
+          - uid
+          - 356681f1-6b5a-48fb-94b8-d856247a3b67 # Tile
+  includeTableView: false
   maxEntries: 4
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

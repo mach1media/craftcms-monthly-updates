@@ -1,17 +1,25 @@
 columnSuffix: null
-contentColumnType: string
 handle: accordionItems
 instructions: null
 name: 'Accordion Items'
 searchable: true
 settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
-      uid: e157403f-fd93-4372-be54-35cd7249d219
+      __assoc__:
+        -
+          - uid
+          - e157403f-fd93-4372-be54-35cd7249d219 # Accordion Item
+  includeTableView: false
   maxEntries: null
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

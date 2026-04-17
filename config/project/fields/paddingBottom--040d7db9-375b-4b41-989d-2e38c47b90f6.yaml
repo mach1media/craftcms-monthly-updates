@@ -1,5 +1,4 @@
 columnSuffix: mevkrwoc
-contentColumnType: boolean
 handle: paddingBottom
 instructions: null
 name: 'Padding: Bottom'
@@ -8,6 +7,7 @@ settings:
   default: true
   offLabel: null
   onLabel: null
+  showLabelsInCards: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

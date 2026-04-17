@@ -18,7 +18,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 18834ccd-54b8-4774-a03c-b16f65a84197
+            fieldUid: 18834ccd-54b8-4774-a03c-b16f65a84197 # Home: Square Tiles - Tile - Thumbnail
             handle: thumbnail
             instructions: null
             label: Thumbnail
@@ -34,7 +34,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 403b04cf-f24a-4706-8842-0ecd144931b6
+            fieldUid: 403b04cf-f24a-4706-8842-0ecd144931b6 # Home: Square Tiles - Tile - Label
             handle: null
             instructions: null
             label: Label
@@ -50,7 +50,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: fae047fe-30da-49d5-b8da-b1d6adafd530
+            fieldUid: fae047fe-30da-49d5-b8da-b1d6adafd530 # Home: Square Tiles - Tile - Label: Custom
             handle: null
             instructions: null
             label: 'Label: Custom'
@@ -66,7 +66,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: aec4351f-8a70-4278-9846-54ad19f795fc
+            fieldUid: aec4351f-8a70-4278-9846-54ad19f795fc # Home: Square Tiles - Tile - Icon: Custom
             handle: null
             instructions: null
             label: 'Icon: Custom'
@@ -82,7 +82,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 9030c997-69e7-4a71-b846-fdadd3c6112f
+            fieldUid: 9030c997-69e7-4a71-b846-fdadd3c6112f # Home: Square Tiles - Tile - Heading
             handle: heading
             instructions: null
             label: Heading
@@ -98,7 +98,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: c89855dd-2f3d-435d-a111-48b28771ff93
+            fieldUid: c89855dd-2f3d-435d-a111-48b28771ff93 # Home: Square Tiles - Tile - CTA Link
             handle: null
             instructions: null
             label: 'CTA Link'

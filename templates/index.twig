@@ -32,7 +32,7 @@
 
 								<div class="col-12 col-xl-4">
 									{% if block.ctaLink | length %}
-									<p><a class="u-link-chevron" href="{{ block.ctaLink.getIntrinsicUrl() }}">{{ block.ctaLink.getText() }}</a></p>
+									<p><a class="u-link-chevron" href="{{ block.ctaLink.value }}">{{ block.ctaLink.label | default(block.ctaLink.element.title | default('')) }}</a></p>
 									{% endif %}
 								</div>
 							</div>
@@ -71,7 +71,7 @@
 						</div>
 						{% else %}
 						<div class="c-tiles__tile">
-							<a class="c-tiles__img-link" href="{{ block.ctaLink.getIntrinsicUrl() }}">
+							<a class="c-tiles__img-link" href="{{ block.ctaLink.value }}">
 								<img src="{{ thumb.url('responsiveLarge') }}" alt="{{ thumb.alt }}" />
 							</a>
 							<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
@@ -91,7 +91,7 @@
 								<p class="u-preheading">Leadership Ministry</p>
 								{% endif %}
 								
-								<h2 class="h4">{{ block.heading ?: block.ctaLink.getText() }}</h2>
+								<h2 class="h4">{{ block.heading ?: block.ctaLink.label | default(block.ctaLink.element.title | default('')) }}</h2>
 							</div>
 						</div>
 						{% endif %}
@@ -102,7 +102,7 @@
 					{% set block = entry.homeFeatureTile.one() %}
 					{% set img = block.image.one %}
 					<div class="c-tiles__tile c-tiles__tile--featured">
-						<a class="c-tiles__img-link" href="{{ block.ctaLink.getIntrinsicUrl() }}">
+						<a class="c-tiles__img-link" href="{{ block.ctaLink.value }}">
 							<img src="{{ img.url('responsiveLarge') }}" alt="{{ img.alt }}" />
 						</a>
 						<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
@@ -124,7 +124,7 @@
 
 							<div>
 								{% if block.heading != '' %}<h2 class="h3">{{ block.heading }}</h2>{% endif %}
-								<div class="c-tiles__description-footer"><span class="text-white">{{ block.ctaLink.getText() }}</span></div>
+								<div class="c-tiles__description-footer"><span class="text-white">{{ block.ctaLink.label | default(block.ctaLink.element.title | default('')) }}</span></div>
 							</div>
 						</div>
 					</div>
@@ -135,7 +135,7 @@
 					{% set imgSrc       = img.url('responsiveMedium') %}
 					{% set imgAlt       = img.alt %}
 					<div class="c-tiles__tile">
-						<a class="c-tiles__img-link" href="{{ block.ctaLink.getIntrinsicUrl() }}">
+						<a class="c-tiles__img-link" href="{{ block.ctaLink.value }}">
 							<img src="{{ img.url('responsiveLarge') }}" alt="{{ img.alt }}" />
 						</a>
 						<div class="c-tiles__description h-100 d-flex flex-column justify-content-between">
@@ -155,7 +155,7 @@
 							<p class="u-preheading">Leadership Ministry</p>
 							{% endif %}
 
-							<h2 class="h4">{{ block.heading ?: block.ctaLink.getText() }}</h2>
+							<h2 class="h4">{{ block.heading ?: block.ctaLink.label | default(block.ctaLink.element.title | default('')) }}</h2>
 						</div>
 					</div>
 					{% endfor %}

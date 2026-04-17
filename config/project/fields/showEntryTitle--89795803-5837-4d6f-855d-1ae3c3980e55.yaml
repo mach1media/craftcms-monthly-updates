@@ -1,5 +1,4 @@
 columnSuffix: ekmvxche
-contentColumnType: boolean
 handle: showEntryTitle
 instructions: null
 name: 'Show Entry Title'
@@ -8,6 +7,7 @@ settings:
   default: true
   offLabel: Hide
   onLabel: Show
+  showLabelsInCards: false
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch

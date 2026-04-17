@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: grantRecipient
 instructions: null
 name: 'Grant Recipient'
@@ -7,17 +6,20 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
-  localizeRelations: false
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   selectionLabel: null
+  showSearchInput: true
   showSiteMenu: true
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Entries

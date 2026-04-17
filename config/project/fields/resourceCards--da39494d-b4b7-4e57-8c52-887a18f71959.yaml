@@ -1,54 +1,27 @@
 columnSuffix: null
-contentColumnType: string
 handle: resourceCards
 instructions: null
 name: 'Resource Cards'
 searchable: true
 settings:
-  blockTypeFields: 0
-  changedFieldIndicator: 1607069158
-  columns:
-    __assoc__:
-      -
-        - b613c984-854f-41b5-baea-92cd77be6d0c
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - d1b1fa3e-1c0b-4a6d-b0b3-dd358fa59f66
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - d3166c3a-ca64-4122-be3f-716e818e0868
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 1f41377c-9452-4c44-85f2-23bcfbec5b44
-        -
-          __assoc__:
-            -
-              - width
-              - ''
+  contentTable: ''
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 8dca16f7-db3e-48ea-95fd-777c63a69b6e # Resource Cards Block
-  fieldLayout: row
+    -
+      __assoc__:
+        -
+          - uid
+          - 8dca16f7-db3e-48ea-95fd-777c63a69b6e # Resource Cards Block
+  includeTableView: false
   maxEntries: null
-  maxRows: null
   minEntries: null
-  minRows: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: 'Add a resource'
-  staticField: null
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: verbb\supertable\fields\SuperTableField

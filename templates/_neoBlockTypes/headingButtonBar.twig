@@ -8,7 +8,7 @@
 
 			<div class="c-heading-bar__buttons">
 				{% for button in block.buttons %}
-					{% if button.btnLink.getLink() %}
+					{% if button.btnLink.value | default %}
 						{% include "_fields/button" with {
 							'button': button.btnLink, 
 							'color': button.btnStyle, 

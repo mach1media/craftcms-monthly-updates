@@ -1,18 +1,28 @@
 columnSuffix: null
-contentColumnType: string
 handle: ctaTileSmall
 instructions: null
 name: 'CTA Tile: Small'
 searchable: true
 settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
-      handle: tile
-      uid: a1c959ad-0f2a-4fc4-8654-11be8c04b62f
+      __assoc__:
+        -
+          - uid
+          - a1c959ad-0f2a-4fc4-8654-11be8c04b62f # Tile
+        -
+          - handle
+          - tile
+  includeTableView: false
   maxEntries: null
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

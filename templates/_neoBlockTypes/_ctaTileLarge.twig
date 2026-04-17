@@ -8,12 +8,12 @@
 <div class="col-12 col-lg-6">
 	<div class="c-tiles__tile c-tiles__tile--wide{% if block.stackImageOnMobile%} c-tiles__tile--stacked-mobile{% endif %}">
 		<a class="c-tiles__img-link"
-			href="{{ tileLink.getUrl() }}"
-			{% if tileLink.getType == 'asset' and tileLink.getElement.kind == 'json' %}
+			href="{{ tileLink.value }}"
+			{% if tileLink.type == 'asset' and tileLink.element.kind | default == 'json' %}
 				data-bs-toggle="modal"
-				data-bs-target="#video-{{ tileLink.getElement.id }}"
+				data-bs-target="#video-{{ tileLink.element.id }}"
 			{% endif %}
-			{% if tileLink.getTarget() == '_blank' %}
+			{% if tileLink.target == '_blank' %}
 				target="_blank"
 			{% endif %}>
 			<img src="{{ imgSrc }}" alt="{{ imgAlt }}" />
@@ -42,21 +42,21 @@
 		</div>
 	</div>
 
-	{% if tileLink.getType == 'asset' and tileLink.getElement.kind | default == 'json' %}
+	{% if tileLink.type == 'asset' and tileLink.element.kind | default == 'json' %}
 		<!-- Modal -->
-		<div class="modal fade" id="video-{{ tileLink.getElement.id }}" tabindex="-1" aria-labelledby="video-{{ tileLink.getElement.id }}-label" aria-hidden="true">
+		<div class="modal fade" id="video-{{ tileLink.element.id }}" tabindex="-1" aria-labelledby="video-{{ tileLink.element.id }}-label" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-xl">
 				<div class="modal-content bg-dark">
 					<div class="modal-body">
-						{% set video = craft.embeddedAssets.get(tileLink.getElement) %}
+						{% set video = craft.embeddedAssets.get(tileLink.element) %}
 						<div class="js-fitvids">{{ video ? video.html }}</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		{% js %}
-		$("#video-{{ tileLink.getElement.id }}").on("hidden.bs.modal", function (e) {
-				$("#video-{{ tileLink.getElement.id }}").find('iframe').attr("src", $("#video-{{ tileLink.getElement.id }}").find('iframe').attr("src"));
+		$("#video-{{ tileLink.element.id }}").on("hidden.bs.modal", function (e) {
+				$("#video-{{ tileLink.element.id }}").find('iframe').attr("src", $("#video-{{ tileLink.element.id }}").find('iframe').attr("src"));
 		});
 		{% endjs %}
 	{% endif %}

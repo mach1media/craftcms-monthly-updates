@@ -2,11 +2,11 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
+    uid: 13815e4c-247f-4715-b11d-7d23e38f23a4 # Mega Menu
+  -
     uid: 5a4d2142-edd7-4628-9ce3-353689734632 # Dropdown
   -
     uid: 9f3b9b9a-e1fb-4489-8949-5a45e9fdf0fa # Link
-  -
-    uid: 13815e4c-247f-4715-b11d-7d23e38f23a4 # Mega Menu
 handle: navigationMenu
 maxAuthors: 1
 name: 'Navigation Menu'

@@ -1,17 +1,24 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: 0914ee96-13fc-4737-ae93-8ab00d611b35 # Page Builder: Blog
 fieldLayouts:
   3399e17e-a470-496e-b213-ddb224bae25f:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f06a4480-f195-4705-bd40-a33a08e72d0f # Images
+            handle: null
             instructions: null
             label: null
             required: true
@@ -22,8 +29,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 48fda275-cc4f-48a3-9d79-c38f9cd4d1d6 # Factoid Layout
+            handle: null
             instructions: null
             label: null
             required: false
@@ -40,8 +51,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 524c6e05-4d16-4e49-86a1-edfb5ff0e70c # Animation Settings
+            handle: null
             instructions: null
             label: null
             required: false
@@ -54,6 +69,7 @@ fieldLayouts:
         name: Animation
         uid: 4cb56aa7-a42c-4f19-b3f6-a4b670461e62
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: factoid3Up

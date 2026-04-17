@@ -1,24 +1,27 @@
 columnSuffix: null
-contentColumnType: string
 handle: factoidDescriptionBox
 instructions: null
 name: 'Factoid Description Box'
 searchable: true
 settings:
-  blockTypeFields: 0
-  changedFieldIndicator: 1126437317
+  contentTable: ''
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 50948af4-8048-4d23-8abf-ddf994ca4832 # Factoid Description Box Block
-  fieldLayout: matrix
-  maxEntries: null
-  maxRows: 1
+    -
+      __assoc__:
+        -
+          - uid
+          - 50948af4-8048-4d23-8abf-ddf994ca4832 # Factoid Description Box Block
+  includeTableView: false
+  maxEntries: 1
   minEntries: null
-  minRows: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: 'Add a description box'
-  staticField: null
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: verbb\supertable\fields\SuperTableField

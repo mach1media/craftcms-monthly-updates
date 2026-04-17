@@ -1,12 +1,10 @@
 columnSuffix: ulibijxb
-contentColumnType: text
 handle: rateTable
 instructions: null
 name: 'Rate Table'
 searchable: true
 settings:
   addRowLabel: 'Add a row'
-  columnType: text
   columns:
     __assoc__:
       -

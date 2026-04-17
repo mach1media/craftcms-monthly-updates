@@ -19,7 +19,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 8cf524a9-c788-4109-8c27-b973b5da1c8b
+            fieldUid: 8cf524a9-c788-4109-8c27-b973b5da1c8b # CTA Tile: Large - Tile - Image
             handle: image
             instructions: null
             label: Image
@@ -35,7 +35,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 148b8944-2e50-42a9-9275-0f8b85677134
+            fieldUid: 148b8944-2e50-42a9-9275-0f8b85677134 # CTA Tile: Large - Tile - Stack Image on Mobile
             handle: null
             instructions: null
             label: 'Stack Image on Mobile'
@@ -51,7 +51,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6
+            fieldUid: c45223e5-4822-4ae1-b1a8-0a0e1ef27aa6 # CTA Tile: Large - Tile - Label
             handle: label
             instructions: null
             label: Label
@@ -67,7 +67,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 08a4604d-4fdb-476b-b82c-88ef59973d9e
+            fieldUid: 08a4604d-4fdb-476b-b82c-88ef59973d9e # CTA Tile: Large - Tile - Label: Custom
             handle: labelCustom
             instructions: null
             label: 'Label: Custom'
@@ -83,7 +83,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: c937445d-2edd-4336-b195-241254cef98a
+            fieldUid: c937445d-2edd-4336-b195-241254cef98a # CTA Tile: Large - Tile - Icon: Custom
             handle: iconCustom
             instructions: null
             label: 'Icon: Custom'
@@ -99,7 +99,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 5d256d74-c235-43c7-aa5c-7df02909be2a
+            fieldUid: 5d256d74-c235-43c7-aa5c-7df02909be2a # CTA Tile: Large - Tile - Heading
             handle: heading
             instructions: null
             label: Heading
@@ -115,7 +115,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 3b51443f-4e3e-4232-8ca5-f70fda28a3c2
+            fieldUid: 3b51443f-4e3e-4232-8ca5-f70fda28a3c2 # CTA Tile: Large - Tile - Link
             handle: null
             instructions: null
             label: Link

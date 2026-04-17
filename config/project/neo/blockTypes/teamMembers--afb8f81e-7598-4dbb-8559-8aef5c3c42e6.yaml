@@ -1,18 +1,25 @@
 childBlocks:
   - teamMember
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   76071032-aa95-48ee-9171-9e7d97fad5a6:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            handle: null
             instructions: null
             label: null
             required: false
@@ -23,8 +30,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: aa3d7fc1-1a22-4fff-8fe2-28dd1ab8388e # Pre-heading
+            handle: null
             instructions: null
             label: null
             required: false
@@ -35,8 +46,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 31f2b911-731f-42b5-84c6-4b2777260f2f # Section Heading
+            handle: null
             instructions: null
             label: null
             required: false
@@ -47,8 +62,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            handle: null
             instructions: null
             label: null
             required: false
@@ -59,6 +78,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
             dismissible: false
             elementCondition: null
             style: tip
@@ -67,8 +87,12 @@ fieldLayouts:
             uid: a9f9805c-5d90-4b30-a651-d14206469961
             userCondition: null
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 34324a9e-7ce8-4902-8508-1d7046c34d97 # Team Members
+            handle: null
             instructions: null
             label: null
             required: false
@@ -85,8 +109,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dfbc0047-f74f-4940-baf3-7f9402fc918e # Background Color
+            handle: null
             instructions: null
             label: null
             required: false
@@ -97,8 +125,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            handle: null
             instructions: null
             label: null
             required: false
@@ -109,8 +141,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            handle: null
             instructions: null
             label: null
             required: false
@@ -121,8 +157,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa # Padding: Sides
+            handle: null
             instructions: null
             label: null
             required: false
@@ -133,8 +173,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fb633af9-99e4-499c-b90f-60a8039f3046 # Text Alignment
+            handle: null
             instructions: null
             label: null
             required: false
@@ -145,8 +189,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 55f89f73-30c8-4eeb-b491-a0da78da6657 # Text Color
+            handle: null
             instructions: null
             label: null
             required: false
@@ -159,7 +207,8 @@ fieldLayouts:
         name: 'Section Settings'
         uid: 7c1a8291-bb20-4c73-91e1-85a771d67cc3
         userCondition: null
-group: 89a66249-b68c-4d46-81b7-9ef3dac29401
+    thumbFieldKey: null
+group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
 groupChildBlockTypes: true
 handle: teamMembers
 icon: null

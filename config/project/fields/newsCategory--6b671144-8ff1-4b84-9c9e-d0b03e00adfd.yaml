@@ -1,5 +1,4 @@
 columnSuffix: nnxmlsst
-contentColumnType: string
 handle: newsCategory
 instructions: null
 name: 'News Category'
@@ -7,16 +6,17 @@ searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
-  localizeRelations: false
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
+  showSearchInput: true
   showSiteMenu: true
   source: 'group:6c87cd30-3f4b-4da7-a4ae-b5fc2f005225' # News Categories
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Categories

@@ -38,7 +38,7 @@
 							
 							{% if col.button | length %}
 							<p>
-								{% if col.button.getLink() %}
+								{% if col.button.value | default %}
 									{% include "_fields/button" with {
 										'button': col.button, 
 										'class': 'm-2',

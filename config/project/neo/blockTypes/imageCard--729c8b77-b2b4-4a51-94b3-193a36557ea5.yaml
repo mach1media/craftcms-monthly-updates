@@ -1,17 +1,24 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: f69cfc32-4011-4eea-a32a-f5ae9fd5b24e # Page Builder: General
 fieldLayouts:
   2d9906d4-1375-4539-a5c4-68735c9bd327:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 7f134341-6c01-4975-9ea9-60df3c3dd5f0 # Image
+            handle: null
             instructions: null
             label: null
             required: true
@@ -22,8 +29,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 3ffa91e2-508f-46cd-b17a-29b3bb7ced95 # Theme Color
+            handle: null
             instructions: null
             label: null
             required: false
@@ -34,8 +45,12 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6ab970bd-1621-4c3f-8eeb-6887ac8cbb2c # Heading
+            handle: null
             instructions: null
             label: null
             required: false
@@ -46,8 +61,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4a66aad-fd77-4abe-97e2-a01cabc77bac # Description
+            handle: null
             instructions: null
             label: null
             required: false
@@ -58,8 +77,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 17fcc0b6-4e93-425f-9380-11c07300553d # Buttons
+            handle: null
             instructions: null
             label: null
             required: false
@@ -72,7 +95,8 @@ fieldLayouts:
         name: Card
         uid: c4bc3700-8989-49be-b5a0-13b32d3515a1
         userCondition: null
-group: 89a66249-b68c-4d46-81b7-9ef3dac29401
+    thumbFieldKey: null
+group: 89a66249-b68c-4d46-81b7-9ef3dac29401 # Cards
 groupChildBlockTypes: true
 handle: imageCard
 icon: null

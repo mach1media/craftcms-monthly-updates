@@ -1,17 +1,24 @@
 childBlocks: null
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   0340cfae-58a4-4555-896e-ebb3cbb9e6a4:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8d53efd7-98eb-40ec-a000-4b904766072d # Button
+            handle: null
             instructions: null
             label: null
             required: false
@@ -22,8 +29,12 @@ fieldLayouts:
             warning: null
             width: 75
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0014573b-36a9-48c6-b523-64fbabf469f2 # Button Style
+            handle: null
             instructions: null
             label: null
             required: false
@@ -36,6 +47,7 @@ fieldLayouts:
         name: Button
         uid: 1b0cac3f-03be-4c98-8ddf-a47e29a59138
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: button

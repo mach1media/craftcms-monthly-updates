@@ -6,26 +6,65 @@ searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  columnType: text
-  defaultTransform: ''
-  enableSourceEditingForNonAdmins: true
+  characterLimit: null
+  css: null
+  cssFile: null
+  defaultTransform: null
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
+  headingLevels:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  jsFile: null
   options:
-    code:
-      indentSequence: '    '
-    htmlSupport:
-      allow:
+    __assoc__:
+      -
+        - code
         -
-          attributes: true
-          classes: true
-          styles: true
+          __assoc__:
+            -
+              - indentSequence
+              - '    '
+      -
+        - htmlSupport
+        -
+          __assoc__:
+            -
+              - allow
+              -
+                -
+                  __assoc__:
+                    -
+                      - attributes
+                      - true
+                    -
+                      - classes
+                      - true
+                    -
+                      - styles
+                      - true
+  parseEmbeds: false
+  purifierConfig: null
   purifyHtml: false
   showUnpermittedFiles: true
   showUnpermittedVolumes: true
+  showWordCount: false
+  sourceEditingGroups: '*'
   toolbar:
     - sourceEditing
     - bold
     - italic
     - link
+  wordLimit: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\ckeditor\Field

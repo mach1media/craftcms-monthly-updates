@@ -1,11 +1,10 @@
 columnSuffix: nafufeyw
-contentColumnType: string
 handle: textAlignment
 instructions: null
 name: 'Text Alignment'
 searchable: false
 settings:
-  columnType: string
+  customOptions: false
   options:
     -
       __assoc__:

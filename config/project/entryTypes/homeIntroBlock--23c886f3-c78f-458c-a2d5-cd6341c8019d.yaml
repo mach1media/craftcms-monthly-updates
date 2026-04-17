@@ -13,7 +13,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 643e4c17-f296-47ae-8806-45847ebda838
+            fieldUid: 643e4c17-f296-47ae-8806-45847ebda838 # Home: Intro - Pre Heading
             handle: null
             instructions: null
             label: 'Pre Heading'
@@ -29,7 +29,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: ab39e5a8-9059-4669-8998-c898c3c7ed89
+            fieldUid: ab39e5a8-9059-4669-8998-c898c3c7ed89 # Home: Intro - Heading
             handle: heading
             instructions: null
             label: Heading
@@ -45,7 +45,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 0d19f0b1-727c-4654-9f11-09b986093f3d
+            fieldUid: 0d19f0b1-727c-4654-9f11-09b986093f3d # Home: Intro - CTA Link
             handle: ctaLink
             instructions: null
             label: 'CTA Link'

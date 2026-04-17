@@ -18,7 +18,7 @@
 
 {% if block.button | length %}
 <p class="text-center">
-	{% if block.button.getLink() %}
+	{% if block.button.value | default %}
 		{% include "_fields/button" with {'button': block.button, 'color': block.buttonStyle } %}
 	{% endif %}
 </p>

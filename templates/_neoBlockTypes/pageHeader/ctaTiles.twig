@@ -21,7 +21,7 @@
 			</div>
 
 			<div class="col-12 col-lg-3 text-center">
-				{% if block.button.getLink() %}
+				{% if block.button.value | default %}
 				<p>
 					{% include "_fields/button" with {'button': block.button, 'color':'btn-outline-secondary', 'class': 'btn-arrow'} %}
 				</p>

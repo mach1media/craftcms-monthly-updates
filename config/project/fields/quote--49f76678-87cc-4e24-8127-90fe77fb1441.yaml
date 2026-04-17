@@ -1,5 +1,4 @@
 columnSuffix: yoheuumz
-contentColumnType: text
 handle: quote
 instructions: null
 name: Quote
@@ -7,9 +6,13 @@ searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  columnType: text
-  defaultTransform: ''
-  enableSourceEditingForNonAdmins: true
+  characterLimit: null
+  css: null
+  cssFile: null
+  defaultTransform: null
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
   headingLevels:
     - 1
     - 2
@@ -17,18 +20,42 @@ settings:
     - 4
     - 5
     - 6
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  jsFile: null
   options:
-    code:
-      indentSequence: '    '
-    htmlSupport:
-      allow:
+    __assoc__:
+      -
+        - code
         -
-          attributes: true
-          classes: true
+          __assoc__:
+            -
+              - indentSequence
+              - '    '
+      -
+        - htmlSupport
+        -
+          __assoc__:
+            -
+              - allow
+              -
+                -
+                  __assoc__:
+                    -
+                      - attributes
+                      - true
+                    -
+                      - classes
+                      - true
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: true
+  showWordCount: false
+  sourceEditingGroups: '*'
   toolbar:
     - sourceEditing
     - '|'
@@ -44,6 +71,7 @@ settings:
     - insertImage
     - mediaEmbed
     - fullscreen
+  wordLimit: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\ckeditor\Field

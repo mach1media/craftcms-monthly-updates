@@ -1,18 +1,25 @@
 childBlocks:
   - equalSizeTiles
+color: null
 conditions: null
 description: ''
 enabled: true
+entryType: null
 field: aefea3fc-ff45-4615-b305-9079e2cc6c44 # Page Builder: Impact Report
 fieldLayouts:
   ac552481-28d5-454b-aacc-57f5ddcb3d43:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a8366a49-97a6-4a33-a567-a948f6a481ac # Section ID
+            handle: null
             instructions: null
             label: null
             required: false
@@ -23,6 +30,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: null
             elementCondition: null
             type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
             uid: 58dc1a68-4082-4cb1-ad89-c2dd50e1dd6a
@@ -34,8 +42,12 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 28a04878-3d6a-4889-ad36-87cce2dd449e # Padding: Top
+            handle: null
             instructions: null
             label: null
             required: false
@@ -46,8 +58,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 040d7db9-375b-4b41-989d-2e38c47b90f6 # Padding: Bottom
+            handle: null
             instructions: null
             label: null
             required: false
@@ -58,8 +74,12 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: null
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 12a86971-9af3-496d-9a73-1f277506afaa # Padding: Sides
+            handle: null
             instructions: null
             label: null
             required: false
@@ -72,6 +92,7 @@ fieldLayouts:
         name: 'Section Settings'
         uid: bb2ccc09-186b-46f2-b3fa-669ee6395b10
         userCondition: null
+    thumbFieldKey: null
 group: null
 groupChildBlockTypes: true
 handle: ctaTiles

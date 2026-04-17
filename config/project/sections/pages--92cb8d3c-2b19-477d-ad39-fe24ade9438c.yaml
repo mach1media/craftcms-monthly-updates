@@ -2,9 +2,9 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 3c1eea3a-94e8-40dc-8f1f-d0df569c3542 # Impact Report
-  -
     uid: 19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a # General
+  -
+    uid: 3c1eea3a-94e8-40dc-8f1f-d0df569c3542 # Impact Report
 handle: pages
 maxAuthors: 1
 name: Pages

@@ -33,7 +33,7 @@
 		</div>
 		
 		<div class="pt-4">
-			{% if entry.textLink.getLink() %}
+			{% if entry.textLink.value | default %}
 				{% include "_fields/button" with {
 					'button': entry.textLink, 
 					'color': 'btn-outline-secondary', 

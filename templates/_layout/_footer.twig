@@ -13,7 +13,7 @@
 			<div class="col-12 col-sm-8 col-lg-4 col-xxl-2 mb-3 pe-xxl-5">
 				<div class="row">
 					{% for block in footer.textLinks.all() %}
-						{% if block.textLink.getLink() %}
+						{% if block.textLink.value | default %}
 							<div class="col-6 col-xxl-12 p-2">
 								{% include "_fields/textLink" with {
 									'textLink': block.textLink,
@@ -34,7 +34,7 @@
 					<div class="col-12 col-md-4 mb-md-3 col-lg-3">
 						<ul class="list-unstyled">
 							{% for block in footer.legalLinks.all() %}
-								{% if block.textLink.getLink() %}
+								{% if block.textLink.value | default %}
 									<li class="mb-2">
 										{% include "_fields/textLink" with {
 											'textLink': block.textLink,

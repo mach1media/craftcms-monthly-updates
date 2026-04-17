@@ -95,7 +95,7 @@
 							{% endif %}
 
 							{% for childBlock in block.children.all() %}
-								{% if childBlock.button.getLink() %}
+								{% if childBlock.button.value | default %}
 									<p class="mt-4">
 										{% include "_fields/button" with {
 											'button': childBlock.button, 

@@ -1,5 +1,4 @@
 columnSuffix: psxgefhs
-contentColumnType: text
 handle: citation
 instructions: null
 name: Citation
@@ -8,7 +7,6 @@ settings:
   byteLimit: null
   charLimit: null
   code: false
-  columnType: text
   initialRows: 1
   multiline: true
   placeholder: null

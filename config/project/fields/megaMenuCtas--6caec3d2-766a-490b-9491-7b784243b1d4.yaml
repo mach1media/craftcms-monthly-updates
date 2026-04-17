@@ -1,19 +1,30 @@
 columnSuffix: null
-contentColumnType: string
 handle: megaMenuCtas
 instructions: null
 name: 'Mega Menu: CTAs'
 searchable: false
 settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
-      uid: 5ecdb404-4694-4031-a4a8-b1a523c6d775
+      __assoc__:
+        -
+          - uid
+          - 5ecdb404-4694-4031-a4a8-b1a523c6d775 # Label
     -
-      uid: a6fd1543-ece4-4710-ad3b-195db37614a1
+      __assoc__:
+        -
+          - uid
+          - a6fd1543-ece4-4710-ad3b-195db37614a1 # CTA
+  includeTableView: false
   maxEntries: null
   minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

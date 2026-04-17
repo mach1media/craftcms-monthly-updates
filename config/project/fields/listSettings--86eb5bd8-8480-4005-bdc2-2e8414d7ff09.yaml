@@ -1,12 +1,10 @@
 columnSuffix: ayvkuovt
-contentColumnType: text
 handle: listSettings
 instructions: null
 name: 'List Settings'
 searchable: false
 settings:
   addRowLabel: 'Add a row'
-  columnType: text
   columns:
     __assoc__:
       -

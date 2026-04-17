@@ -13,7 +13,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: d33d4fab-55e7-446f-8972-f4676b5ee14a
+            fieldUid: d33d4fab-55e7-446f-8972-f4676b5ee14a # Section Heading - Heading
             handle: heading
             instructions: null
             label: Heading
@@ -29,7 +29,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: fae55152-701b-4c22-9f50-453a213e9e05
+            fieldUid: fae55152-701b-4c22-9f50-453a213e9e05 # Section Heading - Size
             handle: null
             instructions: null
             label: Size
@@ -45,7 +45,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 853a2eb8-d408-4486-afc1-8e24fd201174
+            fieldUid: 853a2eb8-d408-4486-afc1-8e24fd201174 # Section Heading - Alignment
             handle: null
             instructions: null
             label: Alignment
@@ -61,7 +61,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: c94c64ea-cc6d-4b7d-9441-052031432b9e
+            fieldUid: c94c64ea-cc6d-4b7d-9441-052031432b9e # Section Heading - Text Color
             handle: textColor
             instructions: null
             label: 'Text Color'
