@@ -265,29 +265,52 @@ Craft automatically looks for `_partials/entry/{entryTypeHandle}.twig`.
 
 ---
 
-### Phase 2B: Neo Block Templates (Future)
+### Phase 2B: Neo Block Templates — SKIPPED
 
-#### Goal
+#### Original Goal
 Migrate Neo block templates from `_neoBlockTypes/` to `_partials/neoblock/` to use `.render()` pattern.
 
-**Important:** For Neo blocks, the `refHandle()` is `'neoblock'`, so templates go in:
+#### Why This Can't Be Done
+
+**Analysis revealed a fundamental incompatibility:**
+
+The project has 6 Neo fields that share block type handles but require context-specific templates:
+
+| Neo Field | Template Directory | Example Conflict |
+|-----------|-------------------|------------------|
+| `pageBuilderGeneral` | `_neoBlockTypes/` | `general.twig` |
+| `pageBuilderImpactReport` | `_neoBlockTypes/impactReport/` | `general.twig` |
+| `pageHeader` | `_neoBlockTypes/pageHeader/` | `general.twig`, `ctaTiles.twig` |
+
+The current page builders use `{% include %}` with fallback chains to resolve context-specific templates:
+```twig
+{% include [
+    "_neoBlockTypes/impactReport/" ~ block.type,
+    "_neoBlockTypes/" ~ block.type
+] %}
 ```
-_partials/neoblock/{blockTypeHandle}.twig
-```
 
-**NOT** `_partials/entry/` (that's for Matrix entries and regular entries).
+**Craft's `.render()` method doesn't support fallback chains** — it looks for ONE template at `_partials/neoblock/{blockTypeHandle}.twig`.
 
-#### Neo Block Count
-- 49 templates in `_neoBlockTypes/`
-- Plus subdirectories: `impactReport/`, `pageBuilderMenu/`, `pageHeader/`
+#### Conflicting Block Types (Same Handle, Different Templates)
+- `general` — root vs impactReport/ vs pageHeader/
+- `media` — root vs impactReport/
+- `newsletterSubscribe` — root vs impactReport/
+- `ctaTiles` — root vs pageHeader/
 
-#### Implementation (deferred to Phase 2B)
-1. Create `templates/_partials/neoblock/` directory
-2. Move Neo templates preserving structure
-3. Update `_pageBuilders/` to use `.render()` pattern
-4. Test each block type
+#### Resolution Options (Not Implemented)
+1. **Rename block type handles** — e.g., `impactReportGeneral` instead of `general`. Requires data migration (high risk).
+2. **Merge templates with conditionals** — Single template checks context and renders differently. Increases complexity.
+3. **Custom partial path config** — Would require custom code.
 
-**This phase will be planned separately after Phase 2A is complete.**
+#### Decision
+**Keep the current `{% include %}` pattern for Neo blocks.** It works, is battle-tested, and provides the template fallback flexibility this project requires.
+
+#### What Was Preserved
+- Templates remain in `_neoBlockTypes/` with subdirectories
+- Page builders continue to use `{% include %}` with fallback chains
+- No data migration risk
+- Created `_partials/neoblock/` directory (empty, for future Matrix blocks if contentBuilder is implemented)
 
 ---
 
@@ -676,13 +699,14 @@ Update `PROJECT_CONTEXT.md` after major structural changes:
 
 ## Summary
 
-| Phase | Scope | Risk Level |
-|-------|-------|------------|
-| 1 | Core Craft 5 + CKEditor | Medium |
-| 2 | Template Refactoring (.render() pattern) | Low |
-| 3 | Link Field Migration | **High** |
-| 4 | Vite + Bootstrap 5.3 | Low |
-| 5 | contentBuilder + NASAA + Globals | Medium |
+| Phase | Scope | Status | Risk Level |
+|-------|-------|--------|------------|
+| 1 | Core Craft 5 + CKEditor | ✓ Complete | Medium |
+| 2A | Entry Type Templates (.render()) | ✓ Complete | Low |
+| 2B | Neo Block Templates | ⏭ Skipped | N/A |
+| 3 | Link Field Migration | ✓ Complete | **High** |
+| 4 | Vite + Bootstrap 5.3 | ✓ Complete | Low |
+| 5 | contentBuilder + NASAA + Globals | Pending | Medium |
 
 ---
 
