@@ -4,8 +4,118 @@ instructions: null
 name: 'Theme Color'
 searchable: false
 settings:
-  dataSet: 'CSS Color Classes'
-  type: dropdown
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '--'
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Primary Navy (#231F5B)'
+        -
+          - value
+          - primary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Secondary Gold (#C19D68)'
+        -
+          - value
+          - secondary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Tertiary Blue (#3C3F9B)'
+        -
+          - value
+          - tertiary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gold Light'
+        -
+          - value
+          - secondary-light
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gold Extralight'
+        -
+          - value
+          - secondary-extralight
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Dark (#212529)'
+        -
+          - value
+          - dark
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Silver (#F5F5F5)'
+        -
+          - value
+          - silver
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'White (#FFFFFF)'
+        -
+          - value
+          - white
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Black (#333333)'
+        -
+          - value
+          - black
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
-type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+type: craft\fields\Dropdown

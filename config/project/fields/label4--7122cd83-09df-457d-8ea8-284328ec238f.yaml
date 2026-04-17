@@ -4,8 +4,85 @@ instructions: null
 name: 'Home: Tile - Wide - Image Tile - label'
 searchable: false
 settings:
-  dataSet: 'CTA Tile Labels'
-  type: dropdown
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '-- No Label --'
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Loans
+        -
+          - value
+          - loans
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Grants
+        -
+          - value
+          - grants
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Philanthropy
+        -
+          - value
+          - philanthropy
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Investments
+        -
+          - value
+          - investments
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Area Representatives'
+        -
+          - value
+          - area-representatives
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Leadership Ministry'
+        -
+          - value
+          - leadership-ministry
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
-type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+type: craft\fields\Dropdown

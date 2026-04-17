@@ -10,7 +10,7 @@
 
 {# set text color #}
 {% set textColor = '' %}
-{% if block.textColor == 'text-default' %}
+{% if not block.textColor %}
 	{% switch block.backgroundColor %}
 		{% case 'bg-primary' %}
 			{% set textColor = ' text-white' %}

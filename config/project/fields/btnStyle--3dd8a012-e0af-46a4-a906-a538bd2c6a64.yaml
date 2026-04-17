@@ -4,8 +4,173 @@ instructions: null
 name: 'Buttons - Style'
 searchable: false
 settings:
-  dataSet: 'Button Style'
-  type: dropdown
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '--'
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid Primary Navy'
+        -
+          - value
+          - btn-primary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid Secondary Gold'
+        -
+          - value
+          - btn-secondary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid Tertiary Blue'
+        -
+          - value
+          - btn-tertiary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid Dark'
+        -
+          - value
+          - btn-dark
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid Silver'
+        -
+          - value
+          - btn-silver
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid White'
+        -
+          - value
+          - btn-white
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Solid Black'
+        -
+          - value
+          - btn-black
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Outline Primary Navy'
+        -
+          - value
+          - btn-outline-primary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Outline Secondary Gold'
+        -
+          - value
+          - btn-outline-secondary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Outline Tertiary Blue'
+        -
+          - value
+          - btn-outline-tertiary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Outline Dark'
+        -
+          - value
+          - btn-outline-dark
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Outline Silver'
+        -
+          - value
+          - btn-outline-silver
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Outline White'
+        -
+          - value
+          - btn-outline-white
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Outline Black'
+        -
+          - value
+          - btn-outline-black
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
-type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+type: craft\fields\Dropdown

@@ -1,4 +1,4 @@
-dateModified: 1776402315
+dateModified: 1776404492
 elementSources:
   craft\elements\Entry:
     -
@@ -164,10 +164,6 @@ fs:
       path: '@webroot/uploads/videos'
     type: craft\fs\Local
     url: null
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 meta:
   __names__:
     0ba00a47-4ce1-4c02-a3ca-61119f702d8d: 'Mega Menu: Links' # Mega Menu: Links
@@ -527,10 +523,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 5.0.0.1
-  config-values-field:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   cp-field-inspect:
     edition: standard
     enabled: true
@@ -987,6 +979,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
   vite:
     edition: standard
     enabled: true

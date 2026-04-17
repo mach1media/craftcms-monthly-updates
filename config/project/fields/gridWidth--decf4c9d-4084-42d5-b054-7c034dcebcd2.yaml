@@ -4,8 +4,140 @@ instructions: null
 name: 'Grid Width'
 searchable: false
 settings:
-  dataSet: 'Grid Widths'
-  type: dropdown
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '12/12 (100%)'
+        -
+          - value
+          - 12
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - '11/12 (92%)'
+        -
+          - value
+          - 11
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '10/12 (83%)'
+        -
+          - value
+          - 10
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '9/12 (75%)'
+        -
+          - value
+          - 9
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '8/12 (66%)'
+        -
+          - value
+          - 8
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '7/12 (58%)'
+        -
+          - value
+          - 7
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '6/12 (50%)'
+        -
+          - value
+          - 6
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '5/12 (42%)'
+        -
+          - value
+          - 5
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '4/12 (33%)'
+        -
+          - value
+          - 4
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '3/12 (25%)'
+        -
+          - value
+          - 3
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '2/12 (16%)'
+        -
+          - value
+          - 2
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '1/12 (8%)'
+        -
+          - value
+          - 1
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
-type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+type: craft\fields\Dropdown

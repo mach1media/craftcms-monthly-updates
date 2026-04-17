@@ -17,7 +17,7 @@
 					{% if block.heading is defined and block.heading != '' %}<h1>{{ block.heading | raw }}</h1>{% endif %}
 					{% if block.summary is defined and block.summary != '' %}<p>{{ block.summary }}</p>{% endif %}
 					{% if block.button | length %}
-					{% set btnColor = block.buttonColor == 'default' ? 'white' : block.buttonColor %}
+					{% set btnColor = not block.buttonColor ? 'white' : block.buttonColor %}
 					<p>{% include "_fields/button" with {'button': block.button, 'color': btnColor} %}</p>
 					{% endif %}
 				</div>

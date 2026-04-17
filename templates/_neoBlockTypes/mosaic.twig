@@ -37,7 +37,7 @@
 				</div>
 				{% endif %}
 				{% if block.button.value | default %}
-				{% set btnColor = block.buttonColor == 'default' ? 'white' : block.buttonColor %}
+				{% set btnColor = not block.buttonColor ? 'white' : block.buttonColor %}
 				<p>{% include "_fields/button" with {'button': block.button, 'color': btnColor, 'class':'btn-lg'} %}</p>
 				{% endif %}
 			</div>

@@ -4,8 +4,140 @@ instructions: null
 name: 'Alert Bar - Alert - Background Color'
 searchable: false
 settings:
-  dataSet: 'Section Backgrounds'
-  type: dropdown
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '--'
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Primary Navy (#231F5B)'
+        -
+          - value
+          - bg-primary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Secondary Gold (#C19D68)'
+        -
+          - value
+          - bg-secondary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Tertiary Blue (#3C3F9B)'
+        -
+          - value
+          - bg-tertiary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gold Light'
+        -
+          - value
+          - bg-secondary-light
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gold Extralight'
+        -
+          - value
+          - bg-secondary-extralight
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Navy Light'
+        -
+          - value
+          - bg-primary-light
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Navy Extralight'
+        -
+          - value
+          - bg-primary-extralight
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Dark (#212529)'
+        -
+          - value
+          - bg-dark
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Silver (#F5F5F5)'
+        -
+          - value
+          - bg-silver
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'White (#FFFFFF)'
+        -
+          - value
+          - bg-white
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Black (#333333)'
+        -
+          - value
+          - bg-black
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
-type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+type: craft\fields\Dropdown

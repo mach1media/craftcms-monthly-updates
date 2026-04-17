@@ -4,8 +4,96 @@ instructions: null
 name: 'Alert Bar - Alert - Text Color'
 searchable: false
 settings:
-  dataSet: 'Text Colors'
-  type: dropdown
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '--'
+        -
+          - value
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Primary Navy (#231F5B)'
+        -
+          - value
+          - text-primary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Secondary Gold (#C19D68)'
+        -
+          - value
+          - text-secondary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Tertiary Blue (#3C3F9B)'
+        -
+          - value
+          - text-tertiary
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Dark (#212529)'
+        -
+          - value
+          - text-dark
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Silver (#F5F5F5)'
+        -
+          - value
+          - text-silver
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'White (#FFFFFF)'
+        -
+          - value
+          - text-white
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Black (#333333)'
+        -
+          - value
+          - text-black
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
-type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+type: craft\fields\Dropdown

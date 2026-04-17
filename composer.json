@@ -10,7 +10,6 @@
     "nystudio107/craft-vite": "^5.0",
     "spicyweb/craft-embedded-assets": "^5.0",
     "spicyweb/craft-neo": "^5.0",
-    "statikbe/craft-config-values": "^5.0",
     "topshelfcraft/wordsmith": "^5.0",
     "verbb/field-manager": "^4.0",
     "verbb/formie": "^3.0",
