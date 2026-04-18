@@ -1,5 +1,5 @@
 allowLineBreaksInTitles: false
-color: null
+color: red
 description: null
 fieldLayouts:
   a7fb6757-2133-422f-a448-14430562c8a2:
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: null
+            dateAdded: '2026-04-17T22:25:08+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -37,7 +37,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:25:08+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -59,7 +59,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:25:08+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -78,10 +78,10 @@ fieldLayouts:
         uid: e86123f0-7b66-47bd-bfaf-653944b9f6b0
         userCondition: null
     thumbFieldKey: null
-handle: impactReport
+handle: impactReportNeo
 hasTitleField: true
 icon: null
-name: 'Impact Report'
+name: 'Impact Report [Neo]'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

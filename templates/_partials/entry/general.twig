@@ -9,6 +9,7 @@
  #   - _components/alertBar (alert bar from globals or entry)
  #   - _fields/pageHeader (Neo field: pageHeader)
  #   - _pageBuilders/pageBuilderGeneral (Neo field: pageBuilder)
+ #   - _matrix/contentBuilder (Matrix field: contentBuilder)
  #   - _components/popup (popup entries)
  #}
 
@@ -20,6 +21,11 @@
 
 {# --------------------- PAGE BUILDER OUTPUT -------------------- #}
 {% include "_pageBuilders/pageBuilderGeneral" with { 'entry': entry } %}
+
+{# --------------------- CONTENT BUILDER OUTPUT -------------------- #}
+{% if entry.contentBuilder | length %}
+	{% include "_matrix/contentBuilder" with { 'entry': entry } %}
+{% endif %}
 
 {# --------------------- POPUP -------------------- #}
 {% include "_components/popup" with { 'entry': entry } %}

@@ -1,0 +1,53 @@
+{
+  "link": {
+    "decorators": {
+      "openInNewTab": {
+        "attributes": {
+          "rel": "noopener noreferrer",
+          "target": "_blank"
+        },
+        "label": "Open in new tab?",
+        "mode": "manual"
+      }
+    }
+  },
+  "style": {
+    "definitions": [
+      {
+        "classes": ["fs-6"],
+        "element": "span",
+        "name": "fs-6"
+      },
+      {
+        "classes": ["fs-5"],
+        "element": "span",
+        "name": "fs-5"
+      },
+      {
+        "classes": ["fs-4"],
+        "element": "span",
+        "name": "fs-4"
+      },
+      {
+        "classes": ["fs-3"],
+        "element": "span",
+        "name": "fs-3"
+      },
+      {
+        "classes": ["fs-2"],
+        "element": "span",
+        "name": "fs-2"
+      },
+      {
+        "classes": ["fs-1"],
+        "element": "span",
+        "name": "fs-1"
+      }
+    ]
+  },
+  "ui": {
+    "view": {
+      "css": "/dist/assets/app.css"
+    }
+  }
+}
