@@ -1,0 +1,30 @@
+columnSuffix: null
+handle: cbRichText
+instructions: null
+name: 'CB: Rich Text'
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: Simple
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  headingLevels:
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  showWordCount: false
+  toolbar:
+    - heading
+    - '|'
+    - bold
+    - italic
+    - link
+    - '|'
+    - bulletedList
+    - numberedList
+translationKeyFormat: null
+translationMethod: site
+type: craft\ckeditor\Field

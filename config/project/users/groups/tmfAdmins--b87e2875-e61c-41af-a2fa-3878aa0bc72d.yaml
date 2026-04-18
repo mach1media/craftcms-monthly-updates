@@ -16,13 +16,13 @@ permissions:
   - 'changeauthorforpeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'changeauthorforpeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'changeauthorforpeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'changeauthorforpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'changeauthorforpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'createentries:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'createentries:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'createentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'createentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'createentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'createentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'createentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'createfolders:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'createfolders:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'createfolders:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
@@ -35,7 +35,7 @@ permissions:
   - 'deleteentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'deleteentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'deleteentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'deleteentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'deleteentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'deletepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'deletepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
   - 'deletepeerassets:dd3266ad-0d93-46fc-89f3-e57ebce2178c' # Videos
@@ -45,14 +45,14 @@ permissions:
   - 'deletepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'deletepeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'deletepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'deletepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'deletepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'deletepeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'deletepeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
   - 'deletepeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'deletepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'deletepeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'deletepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'deletepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'deletepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'deletepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - deleteusers
   - 'editglobalset:68ecabf7-ddb5-437f-8844-30eb450a69ee' # Footer
@@ -216,7 +216,7 @@ permissions:
   - 'saveentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'saveentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'saveentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'saveentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'saveentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'saveentries:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - 'savepeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'savepeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
@@ -227,14 +227,14 @@ permissions:
   - 'savepeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'savepeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'savepeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'savepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'savepeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'savepeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'savepeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
   - 'savepeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'savepeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'savepeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'savepeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'savepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'savepeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'savepeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - 'seomatic:content-meta'
   - 'seomatic:content-meta:facebook'
@@ -288,7 +288,7 @@ permissions:
   - 'viewentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'viewentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'viewentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'viewentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'viewentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'viewentries:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - 'viewpeerassets:a7681ee3-3f28-4c6f-9cb3-453e519368ae' # Documents
   - 'viewpeerassets:ae512cd8-d6a4-49a2-b185-8ba40a87fc1e' # Images
@@ -299,13 +299,13 @@ permissions:
   - 'viewpeerentries:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'viewpeerentries:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'viewpeerentries:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'viewpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'viewpeerentries:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'viewpeerentrydrafts:115274b7-184f-4d2c-898d-b1f9504e6aef' # Tables
   - 'viewpeerentrydrafts:1a5ffd72-f05f-45ec-8db3-0930c72fe38e' # Portal Login
   - 'viewpeerentrydrafts:3dfc7896-c87e-4252-ad06-4a34e187be45' # Grant Recipients
   - 'viewpeerentrydrafts:3e2c33e8-dd58-40f6-bb8b-ee1504d3711e' # Navigation Menu
   - 'viewpeerentrydrafts:61a1068b-a537-4bde-85ac-b0fe8f04946e' # Team
   - 'viewpeerentrydrafts:72143de2-34b2-4912-87dc-02d8eb4a1a0f' # News
-  - 'viewpeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+  - 'viewpeerentrydrafts:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
   - 'viewpeerentrydrafts:ba00da73-87ef-49e2-b1ed-2160ae5e4857' # Homepage
   - viewusers

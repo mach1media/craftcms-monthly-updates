@@ -1,5 +1,5 @@
 allowLineBreaksInTitles: false
-color: null
+color: red
 description: null
 fieldLayouts:
   4d2dddb8-fbbd-4b13-98d8-b38368456e71:
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: null
+            dateAdded: '2026-04-17T22:24:45+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -37,7 +37,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:24:45+00:00'
             editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
@@ -62,7 +62,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:24:45+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -78,7 +78,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:24:45+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -94,7 +94,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:24:45+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -110,7 +110,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:24:45+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -126,7 +126,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:24:45+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -141,6 +141,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-04-17T22:30:00+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 38d490cb-9374-44da-9a27-d2dc48529de9
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c14560e2-2dfc-4255-814e-1e7ed2721496
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 65ca309b-0738-4f16-881d-dc7ddb88c6c3
         userCondition: null
@@ -148,7 +164,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-17T22:24:45+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -167,10 +183,10 @@ fieldLayouts:
         uid: e8a7568f-e18e-4496-8dc3-9c16a606570a
         userCondition: null
     thumbFieldKey: null
-handle: general
+handle: generalNeo
 hasTitleField: true
 icon: null
-name: General
+name: 'General [Neo]'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

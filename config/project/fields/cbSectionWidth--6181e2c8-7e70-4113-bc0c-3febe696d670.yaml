@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: cbSectionWidth
+instructions: null
+name: 'CB: Section Width'
+searchable: false
+settings:
+  options:
+    -
+      default: true
+      label: '--'
+      value: ''
+    -
+      default: false
+      label: Container
+      value: container
+    -
+      default: false
+      label: Viewport
+      value: viewport
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

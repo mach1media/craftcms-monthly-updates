@@ -1,0 +1,54 @@
+columnSuffix: null
+handle: cbTextAlign
+instructions: null
+name: 'CB: Text Align'
+searchable: false
+settings:
+  customOptions: false
+  iconsOnly: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - text-start
+        -
+          - icon
+          - align-left
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Center
+        -
+          - value
+          - text-center
+        -
+          - icon
+          - align-center
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Right
+        -
+          - value
+          - text-end
+        -
+          - icon
+          - align-right
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\ButtonGroup

@@ -1,0 +1,30 @@
+{##
+ # Entry Type: CB: Image Block
+ #
+ # Template: _partials/entry/cbImageBlock.twig
+ #
+ # Used in: contentBuilder Matrix field
+ #
+ # Fields:
+ #   - cbImage (Asset field)
+ #   - cbSectionWidth (Dropdown)
+ #
+ # Variables passed from contentBuilder.twig:
+ #   - sectionId, sectionTextAlign, sectionTextColor, sectionBackgroundColor
+ #}
+
+{% set image = entry.cbImage is defined ? entry.cbImage.one() : null %}
+{% set sectionWidth = entry.cbSectionWidth is defined ? entry.cbSectionWidth.value : null %}
+
+{% if image %}
+<div class="c-image-block">
+	{{ tag('img', {
+		src: image.url,
+		width: image.width,
+		height: image.height,
+		alt: image.alt | default(''),
+		class: 'd-block img-fluid w-100',
+		loading: 'lazy'
+	}) }}
+</div>
+{% endif %}

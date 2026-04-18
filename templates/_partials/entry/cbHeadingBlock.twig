@@ -1,0 +1,42 @@
+{##
+ # Entry Type: CB: Heading Block
+ #
+ # Template: _partials/entry/cbHeadingBlock.twig
+ #
+ # Used in: contentBuilder Matrix field
+ #
+ # Fields:
+ #   - preHeading (plainText)
+ #   - heading (plainText)
+ #   - button (cbHyperlink - Link field)
+ #
+ # Variables passed from contentBuilder.twig:
+ #   - sectionId, sectionTextAlign, sectionTextColor, sectionBackgroundColor
+ #}
+
+{% set preHeading = entry.preHeading | default(null) %}
+{% set heading = entry.heading | default(null) %}
+{% set button = entry.button | default(null) %}
+
+<div class="c-heading-block">
+	{% if preHeading %}
+		<p class="c-heading-block__preheading text-uppercase fw-bold mb-2">{{ preHeading }}</p>
+	{% endif %}
+
+	{% if heading %}
+		<h2 class="c-heading-block__heading mb-0">{{ heading }}</h2>
+	{% endif %}
+
+	{% if button and button.value %}
+		<div class="c-heading-block__button mt-4">
+			{{ tag('a', {
+				class: 'btn btn-primary',
+				href: button.value,
+				target: button.target,
+				rel: button.target == '_blank' ? 'noopener noreferrer' : null,
+				'aria-label': button.ariaLabel,
+				text: button.label | default('Learn More'),
+			}) }}
+		</div>
+	{% endif %}
+</div>

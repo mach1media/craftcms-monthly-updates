@@ -1,0 +1,111 @@
+columnSuffix: null
+handle: cbSectionSpacing
+instructions: null
+name: 'CB: Section Spacing'
+searchable: false
+settings:
+  customOptions: false
+  multi: true
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - optgroup
+          - 'Padding Top'
+    -
+      __assoc__:
+        -
+          - label
+          - pt-0
+        -
+          - value
+          - pt-0
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - pt-3
+        -
+          - value
+          - pt-3
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - pt-4
+        -
+          - value
+          - pt-4
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - pt-5
+        -
+          - value
+          - pt-5
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - optgroup
+          - 'Padding Bottom'
+    -
+      __assoc__:
+        -
+          - label
+          - pb-0
+        -
+          - value
+          - pb-0
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - pb-3
+        -
+          - value
+          - pb-3
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - pb-4
+        -
+          - value
+          - pb-4
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - pb-5
+        -
+          - value
+          - pb-5
+        -
+          - default
+          - '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

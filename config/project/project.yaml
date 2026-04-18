@@ -1,4 +1,4 @@
-dateModified: 1776459831
+dateModified: 1776464790
 elementSources:
   craft\elements\Entry:
     -
@@ -12,7 +12,7 @@ elementSources:
         - asc
       defaultViewMode: ''
       disabled: false
-      key: 'section:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages
+      key: 'section:92cb8d3c-2b19-477d-ad39-fe24ade9438c' # Pages [Neo]
       page: Pages
       tableAttributes:
         - uri
@@ -190,7 +190,7 @@ meta:
     3b6ab5b3-228a-4f9a-b6ba-5958d0d9daf2: 'CTA Tile: Small - Tile - Icon: Custom' # CTA Tile: Small - Tile - Icon: Custom
     3b51443f-4e3e-4232-8ca5-f70fda28a3c2: 'CTA Tile: Large - Tile - Link' # CTA Tile: Large - Tile - Link
     3be92289-0f0d-4b35-908a-44e87436fae3: 'Program Coordinator' # Program Coordinator
-    3c1eea3a-94e8-40dc-8f1f-d0df569c3542: 'Impact Report' # Impact Report
+    3c1eea3a-94e8-40dc-8f1f-d0df569c3542: 'Impact Report [Neo]' # Impact Report [Neo]
     3c328fcf-4838-429f-8628-fdfcf1e07eec: 'Mailchimp Opt-In Validator' # Mailchimp Opt-In Validator
     3cd86bf3-6755-432c-a7cd-8fdb85ad0ccb: 'Data Tables - Custom Table - Table Footer' # Data Tables - Custom Table - Table Footer
     3d088ba7-2012-45f1-8454-ccf6895bd50b: 'Home: Square Tiles' # Home: Square Tiles
@@ -208,6 +208,7 @@ meta:
     4fea1dfb-b830-4129-bfa9-b72c6f184fef: 'Link to Page' # Link to Page
     5a4d2142-edd7-4628-9ce3-353689734632: Dropdown # Dropdown
     005b0010-da6f-4cab-a5df-5047ecc802b0: General # General
+    5c593dce-1cac-4609-9d72-1dfb9ba4f3af: 'CB: Text Block' # CB: Text Block
     5ca729bf-6b89-4d06-931b-db7f8b086ec6: 'Factoid Description Box - Background Color' # Factoid Description Box - Background Color
     5cf2d429-9442-49de-b0fb-aaaec557b2cd: TMF # TMF
     5d256d74-c235-43c7-aa5c-7df02909be2a: 'CTA Tile: Large - Tile - Heading' # CTA Tile: Large - Tile - Heading
@@ -258,7 +259,7 @@ meta:
     16e2e1ff-7c35-4030-b21c-207a4d1e88b7: 'Preview Card' # Preview Card
     17fcc0b6-4e93-425f-9380-11c07300553d: Buttons # Buttons
     18f80578-ea92-42da-a34e-61be2cddec76: Alert # Alert
-    19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a: General # General
+    19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a: 'General [Neo]' # General [Neo]
     19c27c03-7838-4358-9214-9634fe9e3970: 'Headshot Videos - Headshot - Image' # Headshot Videos - Headshot - Image
     23c886f3-c78f-458c-a2d5-cd6341c8019d: 'Home: Intro Block' # Home: Intro Block
     24a26f70-67f3-45a7-8828-d33f091c1508: 'Home: Tile - Wide' # Home: Tile - Wide
@@ -296,7 +297,7 @@ meta:
     89a66249-b68c-4d46-81b7-9ef3dac29401: Cards # Cards
     90bba6bb-88b4-4c3f-ae60-595e911f01ab: 'Heading Block' # Heading Block
     91c4b151-928a-47de-b91b-873c8c52a099: 'CTA Block' # CTA Block
-    92cb8d3c-2b19-477d-ad39-fe24ade9438c: Pages # Pages
+    92cb8d3c-2b19-477d-ad39-fe24ade9438c: 'Pages [Neo]' # Pages [Neo]
     148b8944-2e50-42a9-9275-0f8b85677134: 'CTA Tile: Large - Tile - Stack Image on Mobile' # CTA Tile: Large - Tile - Stack Image on Mobile
     160cd5ce-bdfd-4507-b851-369a31a5bbb6: 'CTA Tile: Small - Tile - Label' # CTA Tile: Small - Tile - Label
     162c87c8-b7da-4a3a-ad1d-a0d6745835f9: 'Popup - Simple - Text Color' # Popup - Simple - Text Color
@@ -314,6 +315,7 @@ meta:
     643e4c17-f296-47ae-8806-45847ebda838: 'Home: Intro - Pre Heading' # Home: Intro - Pre Heading
     0697d541-4ea4-4163-b0c5-ad9219691bb6: Button # Button
     704cc16d-0736-4a6b-8d40-f267fd9ae8f9: 'Lead Block' # Lead Block
+    704ec5d2-710d-4529-90d8-8ea96c8fc596: 'CB: Heading Block' # CB: Heading Block
     729c8b77-b2b4-4a51-94b3-193a36557ea5: 'Image Card' # Image Card
     0774c028-80d9-40e2-a668-5558b97314d3: 'Headshot Videos' # Headshot Videos
     838ea19b-287d-4d04-bf6e-bce6a0de9c66: 'Dropdown Links - Dropdown Link - Dropdown Link' # Dropdown Links - Dropdown Link - Dropdown Link
@@ -472,6 +474,7 @@ meta:
     dcce62b3-2650-4939-a381-0fcc22c0d942: 'Open An Account Table - Church or Agency' # Open An Account Table - Church or Agency
     dd3266ad-0d93-46fc-89f3-e57ebce2178c: Videos # Videos
     dd9615db-bd5d-4050-9139-1b6174979ce8: Phone # Phone
+    de52741d-93ab-4f36-8caf-8584421f4668: 'CB: Embed Code Block' # CB: Embed Code Block
     decf4c9d-4084-42d5-b054-7c034dcebcd2: 'Grid Width' # Grid Width
     dfbc0047-f74f-4940-baf3-7f9402fc918e: 'Background Color' # Background Color
     e03100b7-f50b-4daf-9652-85e6e60138a8: Pages # Pages
@@ -494,6 +497,7 @@ meta:
     e47176e3-add5-4f79-a2e5-6544b4099f0f: Download # Download
     e157403f-fd93-4372-be54-35cd7249d219: 'Accordion Item' # Accordion Item
     e545221b-a425-4bf5-adef-30e8193f800d: 'Mega Menu: CTAs - CTA - Image' # Mega Menu: CTAs - CTA - Image
+    e5982311-5ac2-4582-9c2f-466017c0c0ce: 'CB: Image Block' # CB: Image Block
     eaa2de37-8703-4880-aa20-3f0222fa32dc: 'Hide Breadcrumbs' # Hide Breadcrumbs
     eaf0d64e-a5d2-48e0-9547-b790b9262fe3: 'Data Tables - Pre-defined Table - Table Footer' # Data Tables - Pre-defined Table - Table Footer
     eb417305-8df0-4a1d-85d9-d992d5a60c7a: 'Button Block' # Button Block

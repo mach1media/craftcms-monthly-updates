@@ -2,12 +2,12 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a # General
+    uid: 19aa3f2c-fe8b-41ff-9fe9-2a01e4a8cd3a # General [Neo]
   -
-    uid: 3c1eea3a-94e8-40dc-8f1f-d0df569c3542 # Impact Report
-handle: pages
+    uid: 3c1eea3a-94e8-40dc-8f1f-d0df569c3542 # Impact Report [Neo]
+handle: pagesNeo
 maxAuthors: 1
-name: Pages
+name: 'Pages [Neo]'
 previewTargets:
   -
     label: 'Primary entry page'
