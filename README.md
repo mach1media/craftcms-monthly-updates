@@ -34,15 +34,11 @@ cd /path/to/your-craft-project
 # Add the remote (one-time setup)
 git remote add craftcms-updates git@github.com:mach1media/craftcms-monthly-updates.git
 
-# Add the subtree
+# Add the subtree (scripts will be placed in .update/)
 git subtree add --prefix=.update craftcms-updates main --squash
 
 # Run interactive setup
 .update/scripts/interactive-setup.sh
-
-# Commit to your project
-git add .
-git commit -m "Add Craft CMS monthly update scripts"
 ```
 
 **Pulling future updates:**
@@ -58,8 +54,9 @@ If you don't need to pull updates:
 # Clone temporarily
 git clone git@github.com:mach1media/craftcms-monthly-updates.git /tmp/craftcms-updates
 
-# Copy to your project
-cp -r /tmp/craftcms-updates/.update /path/to/your-craft-project/
+# Create .update directory and copy scripts
+mkdir -p /path/to/your-craft-project/.update
+cp -r /tmp/craftcms-updates/{scripts,tests,logs,update.sh,config*.example,DOCUMENTATION.md,.gitignore} /path/to/your-craft-project/.update/
 
 # Clean up and run setup
 rm -rf /tmp/craftcms-updates
@@ -212,7 +209,9 @@ cp .update/config.yml .update/config.production.yml
 rm .update/config.yml
 ```
 
-## File Structure
+## Repository Structure
+
+This repo is designed to be added as a subtree with `--prefix=.update`. After installation, your project will have:
 
 ```
 your-craft-project/
@@ -220,7 +219,7 @@ your-craft-project/
     ├── config.staging.yml      # Your staging config (gitignored)
     ├── config.production.yml   # Your production config (gitignored)
     ├── update.sh               # Main update script
-    ├── README.md               # Full documentation
+    ├── DOCUMENTATION.md        # Full documentation
     └── scripts/
         ├── interactive-setup.sh
         ├── env-detect.sh
@@ -234,7 +233,7 @@ your-craft-project/
 
 ## Documentation
 
-For complete documentation including detailed configuration, troubleshooting, and security best practices, see [.update/README.md](.update/README.md).
+For complete documentation including detailed configuration, troubleshooting, and security best practices, see [DOCUMENTATION.md](DOCUMENTATION.md).
 
 ## License
 

@@ -2,5 +2,9 @@
 config.yml
 config.staging.yml
 config.production.yml
-logs/
+
+# Logs directory (keep .gitkeep)
+logs/*
+!logs/.gitkeep
+
 .DS_Store
