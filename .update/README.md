@@ -1,6 +1,83 @@
 # Craft CMS Update Scripts
 
-Automated update workflow for monthly Craft CMS maintenance with SSH-based database sync and FTP asset sync.
+Automated update workflow for monthly Craft CMS maintenance with SSH-based database sync and asset sync.
+
+## Installation
+
+### Method 1: Git Subtree (Recommended)
+
+Git subtree allows you to include this repository as a subdirectory while keeping the ability to pull future updates.
+
+**Initial setup for a new project:**
+```bash
+# From your project root directory
+cd /path/to/your-craft-project
+
+# Add the remote (one-time setup)
+git remote add craftcms-updates git@github.com:mach1media/craftcms-monthly-updates.git
+
+# Add the subtree
+git subtree add --prefix=.update craftcms-updates main --squash
+
+# Run interactive setup
+.update/scripts/interactive-setup.sh
+```
+
+**Pulling updates from the upstream repository:**
+```bash
+# From your project root
+git subtree pull --prefix=.update craftcms-updates main --squash
+```
+
+### Method 2: Direct Copy (Simple)
+
+If you don't need to pull updates, you can copy the files directly:
+
+```bash
+# Clone the repo temporarily
+git clone git@github.com:mach1media/craftcms-monthly-updates.git /tmp/craftcms-updates
+
+# Copy to your project
+cp -r /tmp/craftcms-updates/.update /path/to/your-craft-project/
+
+# Clean up
+rm -rf /tmp/craftcms-updates
+
+# Run setup
+cd /path/to/your-craft-project
+.update/scripts/interactive-setup.sh
+```
+
+## Migrating Existing Installations to Git Subtree
+
+If you previously installed these scripts using Method 2 (direct copy) and want to migrate to git subtree for easier updates:
+
+```bash
+cd /path/to/your-craft-project
+
+# 1. Backup your current config
+cp .update/config.yml /tmp/config.yml.backup
+
+# 2. Remove the existing .update directory from git tracking
+git rm -r --cached .update
+rm -rf .update
+
+# 3. Commit the removal
+git commit -m "Remove .update directory for subtree migration"
+
+# 4. Add the remote
+git remote add craftcms-updates git@github.com:mach1media/craftcms-monthly-updates.git
+
+# 5. Add as subtree
+git subtree add --prefix=.update craftcms-updates main --squash
+
+# 6. Restore your config
+cp /tmp/config.yml.backup .update/config.yml
+
+# 7. Commit the restored config
+git add .update/config.yml
+git commit -m "Restore config.yml after subtree migration"
+```
 
 ## Quick Start
 
@@ -11,7 +88,7 @@ npm run update
 
 # Or run individual steps:
 npm run sync-db        # Sync database only
-npm run sync-assets    # Sync assets only  
+npm run sync-assets    # Sync assets only
 npm run update/deploy  # Deploy only
 ```
 
@@ -29,7 +106,7 @@ npm run update/deploy  # Deploy only
 npm run update/setup
 
 # The wizard will:
-# - Ask about your hosting provider (ServerPilot, Ploi, Forge, fortrabbit, etc.)
+# - Ask about your hosting provider (Cloudways, Ploi, Forge, etc.)
 # - Configure paths based on your provider
 # - Set up SSH and deployment settings
 # - Create config.yml with your settings
@@ -88,11 +165,17 @@ The interactive setup wizard (`npm run update/setup`) automatically configures p
 - Remote path: `/srv/app/APP_NAME`
 - Public directory: `web`
 - SSH user: `APP_NAME`
-- Deployment: Automatic on git push
+- Deployment: Push to deploy (auto-deploys on git push)
+
+### Cloudways
+- Remote path: `applications/APP_NAME/public_html`
+- Public directory: `web` (configurable)
+- SSH user: `master_xxxxxxxx` (from Application Settings > Access Details)
+- Deployment: Push to deploy via Git (configure in Cloudways dashboard)
 
 ### Other/Custom
 - Prompts for all paths and settings
-- Supports GitHub Actions, manual, or custom deployment
+- Supports push to deploy, manual, or custom deployment
 
 ## Configuration
 
@@ -103,7 +186,7 @@ The setup wizard creates `.update/config.yml` automatically. You can also edit i
 # Git and site settings
 branch: main                           # Git branch (main/master)
 production_url: https://example.com    # Production site URL
-deployment_method: ploi                 # ploi, github-actions, or forge-envoyer
+deployment_method: push-to-deploy      # push-to-deploy, ploi, manual, etc.
 
 # SSH settings for automated database sync
 ssh_host: example.com                   # SSH hostname
@@ -147,18 +230,13 @@ All commands should be run from the project root directory:
 ### Main Commands
 - `npm run update` - Run complete update workflow
 - `npm run sync-db` - Sync database from production only
-- `npm run sync-assets` - Sync assets from production only  
+- `npm run sync-assets` - Sync assets from production only
 - `npm run update/deploy` - Deploy to production only
 
 ### Setup & Testing Commands
 - `npm run update/setup` - Interactive setup wizard (auto-configures based on hosting provider)
 - `npm run update/test-ssh` - Test SSH connection to production server
 - `npm run update/logs` - View recent update logs
-
-### Frontend Build Commands
-- `npm run build/watch` - Watch and compile frontend assets
-- `npm run build/css` - Compile CSS only
-- `npm run build/js` - Compile JavaScript only
 
 ## Update Process
 
@@ -232,9 +310,20 @@ The script handles multiple backup filename formats:
 
 ## Deployment Methods
 
-### GitHub Actions
-- Automatically triggered on push
-- No additional configuration needed
+### Cloudways SSH Deployment
+Runs deployment commands directly on your Cloudways server via SSH:
+1. `git fetch origin && git reset --hard origin/BRANCH` - Pull latest code
+2. `composer install --no-interaction --prefer-dist --optimize-autoloader` - Install dependencies
+3. `php craft project-config/apply --force` - Apply project config
+4. `php craft migrate/all --no-interaction` - Run migrations
+5. `php craft clear-caches/all` - Clear all caches
+
+All output is streamed to your local terminal in real-time.
+
+### Push to Deploy
+- Server automatically deploys when code is pushed to git
+- Works with Cloudways, fortrabbit, and other hosts with git deployment
+- No additional configuration needed beyond git setup
 
 ### Ploi
 - Get API token: Settings → API → Create Token
@@ -253,10 +342,6 @@ The script handles multiple backup filename formats:
 
 **Option 3: Manual**
 - Deploy manually via Forge dashboard or SSH
-
-### fortrabbit
-- Automatic deployment on git push
-- No additional configuration needed
 
 ## Troubleshooting
 
@@ -362,7 +447,7 @@ brew install node
 **npm run command fails**
 ```bash
 # Make sure you're in the project root directory
-pwd  # Should show path ending in /thgaac
+pwd
 
 # Check if package.json exists
 ls -la package.json
@@ -401,9 +486,13 @@ ssh username@hostname "cd /path/to/project && php craft --version"
 │   └── update-YYYYMMDD-HHMMSS.log
 └── scripts/
     ├── helpers.sh              # Helper functions and config parsing
+    ├── remote-exec.sh          # SSH connection and remote execution
     ├── sync-db.sh              # Database sync via SSH
     ├── sync-assets.sh          # Asset sync via FTP
-    └── deploy.sh               # Deployment to production
+    ├── deploy.sh               # Deployment to production
+    ├── interactive-setup.sh    # Interactive configuration wizard
+    ├── setup-npm-scripts.sh    # Add npm scripts to package.json
+    └── test-ssh.sh             # Test SSH connectivity
 ```
 
 ## Logs & Monitoring
@@ -422,3 +511,17 @@ ssh username@hostname "cd /path/to/project && php craft --version"
 - API tokens can be stored in config or entered when prompted
 - FTP password reused for SSH authentication (single credential)
 - All sensitive values optional in config (will prompt if missing)
+
+## Updating These Scripts
+
+If installed via git subtree:
+```bash
+# Pull latest updates from the upstream repository
+git subtree pull --prefix=.update craftcms-updates main --squash
+
+# Commit the update
+git add .update
+git commit -m "Update: craftcms-monthly-updates scripts"
+```
+
+If installed via direct copy, re-download and replace the `.update` directory, preserving your `config.yml`.

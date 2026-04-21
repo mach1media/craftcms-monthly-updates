@@ -10,9 +10,9 @@ export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
 DEPLOYMENT_METHOD=$(get_config "deployment_method")
 
 case "$DEPLOYMENT_METHOD" in
-    "github-actions")
-        info "Deployment will be triggered by GitHub Actions on push"
-        info "Check your repository's Actions tab for deployment status"
+    "push-to-deploy"|"github-actions")
+        info "Deployment will be triggered automatically on git push"
+        info "Check your hosting provider's dashboard for deployment status"
         ;;
         
     "ploi")
@@ -50,11 +50,16 @@ case "$DEPLOYMENT_METHOD" in
         info "Deployment triggered. Check Forge dashboard for status."
         ;;
         
+    "cloudways")
+        info "Running Cloudways deployment via SSH..."
+        "$SCRIPT_DIR/deploy-cloudways.sh"
+        ;;
+
     "manual")
         info "Manual deployment configured."
         info "Please deploy the changes manually to your production server."
         ;;
-        
+
     *)
         error "Unknown deployment method: $DEPLOYMENT_METHOD"
         ;;

@@ -82,9 +82,10 @@ echo "1) ServerPilot"
 echo "2) Ploi"
 echo "3) Laravel Forge"
 echo "4) fortrabbit"
-echo "5) Other"
+echo "5) Cloudways"
+echo "6) Other"
 echo ""
-read -p "Select option (1-5): " SERVER_TOOL
+read -p "Select option (1-6): " SERVER_TOOL
 
 case "$SERVER_TOOL" in
     1) # ServerPilot
@@ -157,15 +158,47 @@ case "$SERVER_TOOL" in
         echo ""
         echo -e "${BLUE}fortrabbit Configuration${NC}"
         prompt_with_default "fortrabbit app name" "" "APP_NAME"
-        
+
         # Set default paths
         REMOTE_PROJECT_DIR="/srv/app/$APP_NAME"
         REMOTE_UPLOADS_DIR="$REMOTE_PROJECT_DIR/web/uploads"
         SSH_USER="$APP_NAME"
         PUBLIC_DIR="web"
         ;;
-        
-    5) # Other
+
+    5) # Cloudways
+        echo ""
+        echo -e "${BLUE}Cloudways Configuration${NC}"
+        prompt_with_default "Application folder name (e.g., myapp)" "" "APP_NAME"
+
+        # Set default paths for Cloudways
+        REMOTE_PROJECT_DIR="applications/$APP_NAME/public_html"
+
+        # Confirm public directory
+        echo ""
+        echo "What is the public web directory name?"
+        echo "1) web (Craft CMS default)"
+        echo "2) public"
+        echo "3) Other"
+        read -p "Select option (1-3): " PUBLIC_DIR_OPTION
+
+        case "$PUBLIC_DIR_OPTION" in
+            1) PUBLIC_DIR="web" ;;
+            2) PUBLIC_DIR="public" ;;
+            3) prompt_with_default "Enter public directory name" "" "PUBLIC_DIR" ;;
+            *) PUBLIC_DIR="web" ;;
+        esac
+
+        REMOTE_UPLOADS_DIR="$REMOTE_PROJECT_DIR/$PUBLIC_DIR/uploads"
+
+        # Cloudways uses master_xxxxx format for SSH user
+        echo ""
+        echo "Cloudways SSH username (found in Application Settings > Access Details)"
+        echo "Format is usually: master_xxxxxxxx"
+        prompt_with_default "SSH username" "" "SSH_USER"
+        ;;
+
+    6) # Other
         echo ""
         echo -e "${BLUE}Custom Server Configuration${NC}"
         prompt_with_default "SSH username" "" "SSH_USER"
@@ -220,7 +253,7 @@ echo ""
 echo "How do you deploy updates to production?"
 echo "This configures automatic deployment after successful updates:"
 echo "• API-based: Triggers deployment through hosting provider APIs"
-echo "• GitHub Actions: Deploys automatically when code is pushed"
+echo "• Push to deploy: Server auto-deploys when code is pushed to git"
 echo "• Manual: You handle deployment yourself after updates complete"
 echo "• Webhook: Triggers deployment via URL after updates"
 echo ""
@@ -229,13 +262,13 @@ echo ""
 case "$SERVER_TOOL" in
     1) # ServerPilot
         echo "1) Manual deployment (SSH/SFTP)"
-        echo "2) GitHub Actions (auto-deploy on push)"
+        echo "2) Push to deploy (auto-deploy on git push)"
         echo "3) Other"
         read -p "Select option (1-3): " DEPLOY_OPTION
-        
+
         case "$DEPLOY_OPTION" in
             1) DEPLOYMENT_METHOD="manual" ;;
-            2) DEPLOYMENT_METHOD="github-actions" ;;
+            2) DEPLOYMENT_METHOD="push-to-deploy" ;;
             3) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
             *) DEPLOYMENT_METHOD="manual" ;;
         esac
@@ -244,19 +277,19 @@ case "$SERVER_TOOL" in
     2) # Ploi
         echo "1) Ploi deployment (API)"
         echo "2) Manual deployment"
-        echo "3) GitHub Actions"
+        echo "3) Push to deploy (auto-deploy on git push)"
         echo "4) Other"
         read -p "Select option (1-4): " DEPLOY_OPTION
-        
+
         case "$DEPLOY_OPTION" in
-            1) 
+            1)
                 DEPLOYMENT_METHOD="ploi"
                 prompt_with_default "Ploi server ID" "" "PLOI_SERVER_ID"
                 prompt_with_default "Ploi site ID" "" "PLOI_SITE_ID"
                 prompt_password "Ploi API token" "PLOI_API_TOKEN"
                 ;;
             2) DEPLOYMENT_METHOD="manual" ;;
-            3) DEPLOYMENT_METHOD="github-actions" ;;
+            3) DEPLOYMENT_METHOD="push-to-deploy" ;;
             4) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
             *) DEPLOYMENT_METHOD="manual" ;;
         esac
@@ -266,53 +299,74 @@ case "$SERVER_TOOL" in
         echo "1) Envoyer deployment"
         echo "2) Forge deployment (webhook)"
         echo "3) Manual deployment"
-        echo "4) GitHub Actions"
+        echo "4) Push to deploy (auto-deploy on git push)"
         echo "5) Other"
         read -p "Select option (1-5): " DEPLOY_OPTION
-        
+
         case "$DEPLOY_OPTION" in
-            1) 
+            1)
                 DEPLOYMENT_METHOD="envoyer"
                 prompt_with_default "Envoyer deployment URL" "" "ENVOYER_URL"
                 ;;
-            2) 
+            2)
                 DEPLOYMENT_METHOD="forge"
                 prompt_with_default "Forge deployment URL" "" "FORGE_URL"
                 ;;
             3) DEPLOYMENT_METHOD="manual" ;;
-            4) DEPLOYMENT_METHOD="github-actions" ;;
+            4) DEPLOYMENT_METHOD="push-to-deploy" ;;
             5) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
             *) DEPLOYMENT_METHOD="manual" ;;
         esac
         ;;
         
     4) # fortrabbit
-        echo "1) Automatic (git push to fortrabbit)"
-        echo "2) GitHub Actions"
-        echo "3) Manual"
-        echo "4) Other"
-        read -p "Select option (1-4): " DEPLOY_OPTION
-        
+        echo "1) Push to deploy (fortrabbit auto-deploys on git push)"
+        echo "2) Manual"
+        echo "3) Other"
+        read -p "Select option (1-3): " DEPLOY_OPTION
+
         case "$DEPLOY_OPTION" in
-            1) 
-                DEPLOYMENT_METHOD="github-actions"
+            1)
+                DEPLOYMENT_METHOD="push-to-deploy"
                 echo -e "${YELLOW}Note: fortrabbit auto-deploys on git push${NC}"
                 ;;
-            2) DEPLOYMENT_METHOD="github-actions" ;;
-            3) DEPLOYMENT_METHOD="manual" ;;
-            4) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
-            *) DEPLOYMENT_METHOD="github-actions" ;;
+            2) DEPLOYMENT_METHOD="manual" ;;
+            3) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+            *) DEPLOYMENT_METHOD="push-to-deploy" ;;
         esac
         ;;
         
-    5) # Other
-        echo "1) GitHub Actions"
+    5) # Cloudways
+        echo "1) Cloudways SSH deployment (git pull, composer, craft commands via SSH)"
+        echo "2) Push to deploy (Cloudways auto-deploys on git push)"
+        echo "3) Manual deployment"
+        echo "4) Other"
+        read -p "Select option (1-4): " DEPLOY_OPTION
+
+        case "$DEPLOY_OPTION" in
+            1)
+                DEPLOYMENT_METHOD="cloudways"
+                echo -e "${GREEN}Cloudways SSH deployment configured${NC}"
+                echo -e "${YELLOW}Will run: git pull, composer install, craft project-config/apply, craft migrate/all${NC}"
+                ;;
+            2)
+                DEPLOYMENT_METHOD="push-to-deploy"
+                echo -e "${YELLOW}Note: Configure Git deployment in Cloudways Application Settings${NC}"
+                ;;
+            3) DEPLOYMENT_METHOD="manual" ;;
+            4) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
+            *) DEPLOYMENT_METHOD="cloudways" ;;
+        esac
+        ;;
+
+    6) # Other
+        echo "1) Push to deploy (auto-deploy on git push)"
         echo "2) Manual deployment"
         echo "3) Other"
         read -p "Select option (1-3): " DEPLOY_OPTION
-        
+
         case "$DEPLOY_OPTION" in
-            1) DEPLOYMENT_METHOD="github-actions" ;;
+            1) DEPLOYMENT_METHOD="push-to-deploy" ;;
             2) DEPLOYMENT_METHOD="manual" ;;
             3) prompt_with_default "Enter deployment method" "" "DEPLOYMENT_METHOD" ;;
             *) DEPLOYMENT_METHOD="manual" ;;
@@ -549,7 +603,8 @@ case "$SERVER_TOOL" in
     2) SERVER_NAME="Ploi" ;;
     3) SERVER_NAME="Laravel Forge" ;;
     4) SERVER_NAME="fortrabbit" ;;
-    5) SERVER_NAME="Custom" ;;
+    5) SERVER_NAME="Cloudways" ;;
+    6) SERVER_NAME="Custom" ;;
     *) SERVER_NAME="Unknown" ;;
 esac
 echo "- Server type: $SERVER_NAME"
