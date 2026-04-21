@@ -15,6 +15,11 @@ BLUE='\033[0;34m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+# Helper function for uppercase (bash 3.x compatible)
+to_upper() {
+    echo "$1" | tr '[:lower:]' '[:upper:]'
+}
+
 echo -e "${BLUE}=========================================${NC}"
 echo -e "${BLUE}Craft CMS Update Configuration Setup${NC}"
 echo -e "${BLUE}=========================================${NC}"
@@ -78,7 +83,7 @@ configure_environment() {
 
     echo ""
     echo -e "${BLUE}=========================================${NC}"
-    echo -e "${BLUE}Configuring ${ENV^^} Environment${NC}"
+    echo -e "${BLUE}Configuring $(to_upper "$ENV") Environment${NC}"
     echo -e "${BLUE}=========================================${NC}"
     echo ""
 
@@ -482,8 +487,9 @@ configure_environment() {
     echo ""
     echo -e "${BLUE}Creating configuration file for ${ENV}...${NC}"
 
+    local ENV_UPPER=$(to_upper "$ENV")
     cat > "$CONFIG_FILE" << EOF
-# Craft CMS Update Configuration - ${ENV^^} Environment
+# Craft CMS Update Configuration - ${ENV_UPPER} Environment
 # Generated on $(date)
 
 # Environment identifier (do not change)
@@ -652,7 +658,7 @@ echo ""
 
 for summary in "${ENV_SUMMARIES[@]}"; do
     IFS='|' read -r env server_name remote_path ssh_info deploy_method <<< "$summary"
-    echo -e "${YELLOW}${env^^}:${NC}"
+    echo -e "${YELLOW}$(to_upper "$env"):${NC}"
     echo "  - Server type: $server_name"
     echo "  - Remote path: $remote_path"
     echo "  - SSH: $ssh_info"
