@@ -15,9 +15,17 @@ BLUE='\033[0;34m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-# Helper function for uppercase (bash 3.x compatible)
+# Helper functions for case conversion (bash 3.x compatible)
 to_upper() {
     echo "$1" | tr '[:lower:]' '[:upper:]'
+}
+
+# Capitalize first letter
+capitalize() {
+    local str="$1"
+    local first=$(echo "${str:0:1}" | tr '[:lower:]' '[:upper:]')
+    local rest="${str:1}"
+    echo "${first}${rest}"
 }
 
 echo -e "${BLUE}=========================================${NC}"
@@ -106,7 +114,7 @@ configure_environment() {
     echo "• Pulled from when syncing from $ENV"
     echo "• Used for deployment to $ENV"
     echo ""
-    prompt_with_default "${ENV^} deployment branch" "$DEFAULT_BRANCH" "ENV_BRANCH"
+    prompt_with_default "$(capitalize "$ENV") deployment branch" "$DEFAULT_BRANCH" "ENV_BRANCH"
 
     # Site URL
     echo ""
@@ -117,7 +125,7 @@ configure_environment() {
     else
         URL_EXAMPLE="e.g., https://example.com"
     fi
-    prompt_with_default "${ENV^} site URL ($URL_EXAMPLE)" "" "SITE_URL"
+    prompt_with_default "$(capitalize "$ENV") site URL ($URL_EXAMPLE)" "" "SITE_URL"
 
     # Server provisioning tool
     echo ""
