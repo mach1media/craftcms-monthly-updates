@@ -30,7 +30,7 @@ find_ssh_key() {
         "$HOME/.ssh/serverpilot"
     )
     
-    # First try to find a key that actually works by testing connection
+    # Find a key that actually works by testing connection
     for key in "${keys[@]}"; do
         if [ -f "$key" ]; then
             # Test if this key works for the connection
@@ -42,15 +42,8 @@ find_ssh_key() {
             fi
         fi
     done
-    
-    # Fallback: return first available key (old behavior)
-    for key in "${keys[@]}"; do
-        if [ -f "$key" ]; then
-            echo "$key"
-            return 0
-        fi
-    done
-    
+
+    # No working key found
     return 1
 }
 
