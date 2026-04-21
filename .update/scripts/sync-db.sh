@@ -4,14 +4,16 @@ set -e
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Export CONFIG_FILE for helper functions
-export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
-
 source "$SCRIPT_DIR/helpers.sh"
+
+# Initialize environment (will prompt if on feature branch)
+# Supports: --env=staging, --env=production, --staging, --production
+init_environment "database sync" "$@"
+
 source "$SCRIPT_DIR/remote-exec.sh"
 
-# Parse config
-PRODUCTION_URL=$(get_config "production_url")
+# Parse config for selected environment
+SITE_URL=$(get_config "site_url" "$(get_config "production_url" "")")
 BACKUP_DIR=$(get_config "backup_dir" "storage/backups")
 SSH_HOST=$(get_config "ssh_host")
 SSH_USER=$(get_config "ssh_user")
@@ -62,8 +64,8 @@ stop_progress() {
 }
 
 # Main backup process
-info "Starting database sync from production"
-info "Production: $PRODUCTION_URL"
+info "Starting database sync from $CURRENT_ENV"
+info "Site: $SITE_URL"
 
 # Ensure local backup directory exists
 mkdir -p "$BACKUP_DIR"
@@ -239,7 +241,7 @@ if [ "$SSH_SUCCESS" = false ]; then
     info "Automated SSH backup failed. Falling back to manual process..."
     info ""
     info "Please download database backup manually:"
-    info "1. Go to: $PRODUCTION_URL/admin/utilities/database-backup"
+    info "1. Go to: $SITE_URL/admin/utilities/database-backup"
     info "2. Click 'Create backup'"
     info "3. Download the backup file"
     info "4. Save it to: $BACKUP_DIR/"

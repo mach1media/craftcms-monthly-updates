@@ -4,10 +4,11 @@ set -e
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Export CONFIG_FILE for helper functions
-export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
-
 source "$SCRIPT_DIR/helpers.sh"
+
+# Initialize environment (will prompt if on feature branch)
+# Supports: --env=staging, --env=production, --staging, --production
+init_environment "asset sync" "$@"
 
 # Cleanup function for proper signal handling
 cleanup() {
@@ -126,8 +127,7 @@ find_ssh_key() {
     return 1
 }
 
-# Parse config
-export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
+# Parse config for selected environment
 FTP_HOST=$(get_config "ftp_host")
 FTP_USER=$(get_config "ftp_user")
 FTP_PATH=$(get_config "remote_uploads_dir")
@@ -136,7 +136,7 @@ SSH_HOST=$(get_config "ssh_host")
 SSH_USER=$(get_config "ssh_user")
 SSH_PORT=$(get_config "ssh_port" "22")
 
-info "Syncing assets from production..."
+info "Syncing assets from $CURRENT_ENV..."
 info "FTP Host: $FTP_HOST"
 info "Remote path: $FTP_PATH"
 info "Local path: $LOCAL_UPLOADS"

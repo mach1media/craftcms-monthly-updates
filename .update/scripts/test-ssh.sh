@@ -7,16 +7,15 @@ set -e
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Export CONFIG_FILE for helper functions
-export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
-
 source "$SCRIPT_DIR/helpers.sh"
+
+# Initialize environment (will prompt if on feature branch)
+# Supports: --env=staging, --env=production, --staging, --production
+init_environment "SSH test" "$@"
+
 source "$SCRIPT_DIR/remote-exec.sh"
 
-if [ ! -f "$CONFIG_FILE" ]; then
-    error "Config file not found. Run 'npm run update:config' first."
-fi
-
+# Parse config for selected environment
 SSH_HOST=$(get_config "ssh_host")
 SSH_USER=$(get_config "ssh_user")
 SSH_PORT=$(get_config "ssh_port" "22")

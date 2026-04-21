@@ -1,0 +1,72 @@
+# Craft CMS Update Configuration - PRODUCTION Environment
+# Use 'npm run update/setup' for interactive configuration
+# Or copy to config.production.yml and fill in manually
+
+# Environment identifier (do not change)
+environment: production
+
+# Git settings
+# Branch used for production deployments
+# If your repo has a 'production' branch, use that
+# Otherwise 'main' is typically used for production
+branch: production
+
+# Production site URL
+site_url: https://example.com
+
+# SSH settings for production server
+ssh_host: example.com
+ssh_user: username  # master_xxxxx (Cloudways), forge, ploi, serverpilot, etc.
+ssh_port: 22
+
+# Remote server paths (varies by hosting provider)
+# Cloudways: applications/APP_NAME/public_html
+# ServerPilot: /srv/users/serverpilot/apps/APP_NAME
+# Ploi: /home/ploi/DOMAIN
+# Forge: /home/forge/DOMAIN
+# fortrabbit: /srv/app/APP_NAME
+remote_project_dir: /var/www/html
+
+# Shared directory paths (relative, same on local and remote)
+backup_dir: storage/backups
+uploads_dir: web/uploads
+
+# Asset storage configuration
+# Options: local, s3, spaces, other
+asset_storage_type: local
+
+# Remote uploads path (full path - only needed if asset_storage_type is 'local')
+remote_uploads_dir: /var/www/html/web/uploads
+
+# Additional directories to sync from production (optional)
+# Comma-separated list of directories relative to project root
+additional_sync_dirs:
+
+# FTP/SSH settings for file operations (usually same as SSH)
+ftp_host: example.com
+ftp_user: username
+ftp_password:  # Leave empty if using SSH keys (recommended)
+
+# Deployment method options:
+# - push-to-deploy (auto-deploy on git push)
+# - cloudways (SSH deployment with git pull, composer, craft commands)
+# - ploi (Ploi API deployment)
+# - envoyer (Envoyer webhook URL)
+# - forge (Forge deployment webhook URL)
+# - manual (no automated deployment)
+deployment_method: push-to-deploy
+
+# Ploi settings (if deployment_method: ploi)
+# ploi_server_id: 12345
+# ploi_site_id: 67890
+# ploi_api_token:
+
+# Envoyer settings (if deployment_method: envoyer)
+# envoyer_url: https://envoyer.io/deploy/PROJECT/HASH
+
+# Forge settings (if deployment_method: forge)
+# forge_url: https://forge.laravel.com/servers/12345/sites/67890/deploy/http?token=HASH
+
+# Build settings (run during deployment)
+run_npm_build: false
+npm_build_command: npm run build

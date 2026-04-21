@@ -1,4 +1,6 @@
-# Ignore update configuration file
+# Ignore update configuration files (environment-specific)
 config.yml
+config.staging.yml
+config.production.yml
 logs/
 .DS_Store

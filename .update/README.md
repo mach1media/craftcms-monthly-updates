@@ -1,6 +1,6 @@
 # Craft CMS Update Scripts
 
-Automated update workflow for monthly Craft CMS maintenance with SSH-based database sync and asset sync.
+Automated update workflow for monthly Craft CMS maintenance with SSH-based database sync and asset sync. Supports multiple environments (staging, production) with intelligent branch detection.
 
 ## Installation
 
@@ -48,15 +48,19 @@ cd /path/to/your-craft-project
 .update/scripts/interactive-setup.sh
 ```
 
-## Migrating Existing Installations to Git Subtree
+## Migrating Existing Installations
+
+### Migrating to Git Subtree
 
 If you previously installed these scripts using Method 2 (direct copy) and want to migrate to git subtree for easier updates:
 
 ```bash
 cd /path/to/your-craft-project
 
-# 1. Backup your current config
-cp .update/config.yml /tmp/config.yml.backup
+# 1. Backup your current config(s)
+cp .update/config.yml /tmp/config.yml.backup 2>/dev/null
+cp .update/config.staging.yml /tmp/config.staging.yml.backup 2>/dev/null
+cp .update/config.production.yml /tmp/config.production.yml.backup 2>/dev/null
 
 # 2. Remove the existing .update directory from git tracking
 git rm -r --cached .update
@@ -71,12 +75,33 @@ git remote add craftcms-updates git@github.com:mach1media/craftcms-monthly-updat
 # 5. Add as subtree
 git subtree add --prefix=.update craftcms-updates main --squash
 
-# 6. Restore your config
-cp /tmp/config.yml.backup .update/config.yml
+# 6. Restore your config(s)
+cp /tmp/config.staging.yml.backup .update/config.staging.yml 2>/dev/null
+cp /tmp/config.production.yml.backup .update/config.production.yml 2>/dev/null
 
-# 7. Commit the restored config
-git add .update/config.yml
-git commit -m "Restore config.yml after subtree migration"
+# 7. Commit the restored configs
+git add .update/config.*.yml
+git commit -m "Restore config files after subtree migration"
+```
+
+### Migrating to Multi-Environment Config
+
+If you have an existing `config.yml` and want to migrate to environment-specific config files:
+
+```bash
+# Option 1: Re-run interactive setup (recommended)
+npm run update/setup
+
+# Option 2: Manually copy and rename
+cp .update/config.yml .update/config.production.yml
+# Edit config.production.yml and add: environment: production
+
+# For staging, copy the production config and modify:
+cp .update/config.production.yml .update/config.staging.yml
+# Edit config.staging.yml with staging-specific values
+
+# Remove the legacy config
+rm .update/config.yml
 ```
 
 ## Quick Start
@@ -86,10 +111,19 @@ git commit -m "Restore config.yml after subtree migration"
 # From project root - run complete update workflow
 npm run update
 
-# Or run individual steps:
-npm run sync-db        # Sync database only
-npm run sync-assets    # Sync assets only
-npm run update/deploy  # Deploy only
+# Sync database (auto-detects environment from current branch)
+npm run sync-db
+
+# Or specify environment explicitly:
+npm run sync-db -- --staging
+npm run sync-db -- --production
+npm run sync-db -- --env=staging
+
+# Sync assets
+npm run sync-assets -- --production
+
+# Deploy to an environment
+npm run update/deploy -- --staging
 ```
 
 **Direct script execution:**
@@ -97,6 +131,54 @@ npm run update/deploy  # Deploy only
 # From project root
 .update/update.sh
 ```
+
+## Multi-Environment Support
+
+These scripts support multiple environments (staging, production) with separate configurations for each. The system intelligently detects which environment to target based on your current git branch.
+
+### Environment Detection
+
+Scripts automatically detect the target environment:
+
+| Current Branch | Target Environment |
+|---------------|-------------------|
+| `staging` | Staging |
+| `production` | Production |
+| `main` or `master` (no production branch exists) | Production |
+| `main` or `master` (production branch exists) | Prompts for selection |
+| Feature branches (e.g., `feature/new-login`) | Prompts for selection |
+
+### Explicit Environment Selection
+
+You can always override automatic detection:
+
+```bash
+# Long form
+npm run sync-db -- --env=staging
+npm run sync-db -- --env=production
+
+# Short form
+npm run sync-db -- --staging
+npm run sync-db -- --production
+```
+
+### Configuration Files
+
+Each environment has its own configuration file:
+
+- `.update/config.staging.yml` - Staging environment settings
+- `.update/config.production.yml` - Production environment settings
+
+The interactive setup wizard (`npm run update/setup`) allows you to configure one or both environments.
+
+### Database Sync Direction
+
+**Important**: Database sync is always **downstream only** (remote → local). This means:
+- You can sync from staging to your local DDEV environment
+- You can sync from production to your local DDEV environment
+- You **cannot** push your local database to staging or production
+
+This prevents accidental data loss on remote environments.
 
 ## Initial Setup
 
@@ -106,13 +188,15 @@ npm run update/deploy  # Deploy only
 npm run update/setup
 
 # The wizard will:
+# - Ask which environment(s) to configure (staging, production, or both)
 # - Ask about your hosting provider (Cloudways, Ploi, Forge, etc.)
 # - Configure paths based on your provider
 # - Set up SSH and deployment settings
-# - Create config.yml with your settings
+# - Create config.staging.yml and/or config.production.yml
 
 # 2. Test SSH connection
-npm run update/test-ssh
+npm run update/test-ssh -- --staging
+npm run update/test-ssh -- --production
 
 # 3. You're ready to run updates!
 npm run update
@@ -120,10 +204,11 @@ npm run update
 
 **Manual setup:**
 ```bash
-# 1. Copy config template
-cp .update/config.yml.example .update/config.yml
+# 1. Copy config templates
+cp .update/config.production.yml.example .update/config.production.yml
+cp .update/config.staging.yml.example .update/config.staging.yml
 
-# 2. Edit config.yml with your project details
+# 2. Edit config files with your project details
 
 # 3. Make scripts executable
 chmod +x .update/update.sh .update/scripts/*.sh
@@ -171,7 +256,9 @@ The interactive setup wizard (`npm run update/setup`) automatically configures p
 - Remote path: `applications/APP_NAME/public_html`
 - Public directory: `web` (configurable)
 - SSH user: `master_xxxxxxxx` (from Application Settings > Access Details)
-- Deployment: Push to deploy via Git (configure in Cloudways dashboard)
+- Deployment options:
+  - Cloudways SSH deployment (git pull, composer, craft commands via SSH)
+  - Push to deploy via Git (configure in Cloudways dashboard)
 
 ### Other/Custom
 - Prompts for all paths and settings
@@ -179,48 +266,83 @@ The interactive setup wizard (`npm run update/setup`) automatically configures p
 
 ## Configuration
 
-The setup wizard creates `.update/config.yml` automatically. You can also edit it manually:
+The setup wizard creates environment-specific config files automatically. You can also edit them manually:
 
-### Required Settings
+### Environment-Specific Config Files
+
+**config.production.yml:**
 ```yaml
-# Git and site settings
-branch: main                           # Git branch (main/master)
-production_url: https://example.com    # Production site URL
-deployment_method: push-to-deploy      # push-to-deploy, ploi, manual, etc.
+# Environment identifier (do not change)
+environment: production
 
-# SSH settings for automated database sync
-ssh_host: example.com                   # SSH hostname
-ssh_user: username                      # SSH username
-ssh_port: 22                           # SSH port (usually 22)
-remote_project_dir: /public_html       # Remote project root directory
+# Git settings
+branch: main                           # or 'production' if you use that branch
 
-# Shared directory paths (same relative paths on local and remote)
-backup_dir: storage/backups            # Database backup directory
-uploads_dir: web/uploads               # Asset uploads directory
+# Site URL
+site_url: https://example.com
+
+# SSH settings
+ssh_host: example.com
+ssh_user: username
+ssh_port: 22
+remote_project_dir: /var/www/html
+
+# Shared directory paths
+backup_dir: storage/backups
+uploads_dir: web/uploads
+
+# Asset storage: local, s3, spaces, other
+asset_storage_type: local
+
+# Remote uploads path (for local storage)
+remote_uploads_dir: /var/www/html/web/uploads
+
+# FTP/SSH settings for file operations
+ftp_host: example.com
+ftp_user: username
+ftp_password:                          # Leave empty if using SSH keys
+
+# Deployment method: push-to-deploy, cloudways, ploi, envoyer, forge, manual
+deployment_method: push-to-deploy
+
+# Build settings
+run_npm_build: false
+npm_build_command: npm run build
 ```
 
-### FTP Settings (for asset sync)
+**config.staging.yml:**
 ```yaml
-ftp_host: ftp.example.com              # FTP hostname
-ftp_user: username                     # FTP username
-ftp_password:                          # FTP password (optional - will prompt if empty)
-remote_uploads_dir: /public_html/web/uploads  # Full remote path to uploads
+# Environment identifier (do not change)
+environment: staging
+
+# Git settings
+branch: staging
+
+# Site URL
+site_url: https://staging.example.com
+
+# SSH settings (may be same or different server)
+ssh_host: staging.example.com
+ssh_user: username
+ssh_port: 22
+remote_project_dir: /var/www/staging
+
+# ... rest of settings follow same structure
 ```
 
-### Deployment Settings
+### Deployment-Specific Settings
+
 ```yaml
 # Ploi settings (if using Ploi)
-ploi_server_id: 12345                  # Your Ploi server ID
-ploi_site_id: 67890                    # Your Ploi site ID
-ploi_api_token:                        # Ploi API token (optional - will prompt)
+ploi_server_id: 12345
+ploi_site_id: 67890
+ploi_api_token:                        # Optional - will prompt if empty
 
 # Envoyer settings (if using Forge/Envoyer)
-envoyer_project_id: 12345              # Your Envoyer project ID
-envoyer_api_token:                     # Envoyer API token (optional - will prompt)
+envoyer_url: https://envoyer.io/deploy/PROJECT/HASH
 
-# Build settings (optional)
-run_npm_build: false                   # Set to true if you need npm build
-npm_build_command: npm run build       # Custom build command
+# Forge settings (if using Forge)
+forge_url: https://forge.laravel.com/servers/.../deploy/http?token=HASH
 ```
 
 ## Available npm Commands
@@ -229,13 +351,25 @@ All commands should be run from the project root directory:
 
 ### Main Commands
 - `npm run update` - Run complete update workflow
-- `npm run sync-db` - Sync database from production only
-- `npm run sync-assets` - Sync assets from production only
-- `npm run update/deploy` - Deploy to production only
+- `npm run sync-db` - Sync database from remote (auto-detects environment)
+- `npm run sync-assets` - Sync assets from remote (auto-detects environment)
+- `npm run update/deploy` - Deploy to remote (auto-detects environment)
+
+### Environment-Specific Usage
+```bash
+# All commands accept environment flags:
+npm run sync-db -- --staging
+npm run sync-db -- --production
+npm run sync-db -- --env=staging
+
+npm run sync-assets -- --staging
+npm run update/deploy -- --production
+npm run update/test-ssh -- --staging
+```
 
 ### Setup & Testing Commands
-- `npm run update/setup` - Interactive setup wizard (auto-configures based on hosting provider)
-- `npm run update/test-ssh` - Test SSH connection to production server
+- `npm run update/setup` - Interactive setup wizard (configure one or both environments)
+- `npm run update/test-ssh` - Test SSH connection (use with environment flag)
 - `npm run update/logs` - View recent update logs
 
 ## Update Process
@@ -243,8 +377,8 @@ All commands should be run from the project root directory:
 The main update script (`npm run update`) performs these steps:
 
 1. **Pull** latest code from git
-2. **Sync database** from production (automated via SSH or manual fallback)
-3. **Sync** assets from production via FTP
+2. **Sync database** from selected environment (automated via SSH or manual fallback)
+3. **Sync** assets from selected environment via FTP
 4. **Create** update branch (`update/YYYY-MM-DD`)
 5. **Update** Composer dependencies
 6. **Run** Craft migrations
@@ -270,7 +404,7 @@ The script automatically tries SSH authentication in this order:
    - Most secure and reliable method
 
 2. **SSH Password Authentication**
-   - Uses `ftp_password` from config.yml
+   - Uses `ftp_password` from config.{env}.yml
    - Requires `sshpass` utility: `brew install sshpass`
    - Prompts for password if not in config
    - Password is reused for SCP download
@@ -303,7 +437,7 @@ The script handles multiple backup filename formats:
 - **Fallback**: Lists newest .sql file in remote backup directory
 
 ### SSH Requirements
-- SSH access to production server
+- SSH access to remote server
 - PHP CLI available in remote project directory
 - Craft console commands functional (`php craft db/backup`)
 - Write permissions to remote `storage/backups/` directory
@@ -349,8 +483,12 @@ All output is streamed to your local terminal in real-time.
 
 **Config file not found**
 ```bash
-cp .update/config.yml.example .update/config.yml
-# Edit config.yml with your settings
+# Use interactive setup to create config files
+npm run update/setup
+
+# Or copy templates manually
+cp .update/config.production.yml.example .update/config.production.yml
+cp .update/config.staging.yml.example .update/config.staging.yml
 ```
 
 **"get_config: command not found"**
@@ -359,20 +497,20 @@ cp .update/config.yml.example .update/config.yml
 - Verify all scripts have proper shebang (`#!/bin/bash`)
 
 **"invalid refspec" git error**
-- Check branch name in config.yml has no extra spaces
+- Check branch name in config.{env}.yml has no extra spaces
 - Verify branch exists: `git branch -r`
 - Default branch should be 'main' or 'master'
 
 ### SSH/Database Issues
 
 **SSH connection failed**
-- Verify SSH settings in config.yml
+- Verify SSH settings in config.{env}.yml
 - Test manual SSH: `ssh username@hostname`
 - Check SSH key permissions: `chmod 600 ~/.ssh/id_rsa`
 - Ensure SSH key is added to server: `ssh-copy-id username@hostname`
 
 **FTP connection timeout (30s)**
-- Check FTP credentials in config.yml
+- Check FTP credentials in config.{env}.yml
 - Verify FTP hostname and port (usually 21)
 - Test manual FTP: `ftp hostname` or `lftp -u username hostname`
 - Check firewall settings (FTP uses ports 20-21)
@@ -432,7 +570,7 @@ ddev describe  # Check status
 
 **Multiple password prompts**
 - Password should be cached for the session
-- Check if `ftp_password` is set in config.yml
+- Check if `ftp_password` is set in config.{env}.yml
 - Verify `sshpass` is installed for automated password entry
 
 **npm command not found**
@@ -477,22 +615,26 @@ ssh username@hostname "cd /path/to/project && php craft --version"
 
 ```
 .update/
-├── config.yml.example          # Configuration template
-├── config.yml                  # Your configuration (gitignored)
-├── update.sh                   # Main update script
-├── README.md                   # This documentation
-├── logs/                       # Operation logs (gitignored)
-│   ├── .gitkeep                # Keeps directory in git
+├── config.production.yml.example   # Production config template
+├── config.staging.yml.example      # Staging config template
+├── config.production.yml           # Your production config (gitignored)
+├── config.staging.yml              # Your staging config (gitignored)
+├── update.sh                       # Main update script
+├── README.md                       # This documentation
+├── logs/                           # Operation logs (gitignored)
+│   ├── .gitkeep                    # Keeps directory in git
 │   └── update-YYYYMMDD-HHMMSS.log
 └── scripts/
-    ├── helpers.sh              # Helper functions and config parsing
-    ├── remote-exec.sh          # SSH connection and remote execution
-    ├── sync-db.sh              # Database sync via SSH
-    ├── sync-assets.sh          # Asset sync via FTP
-    ├── deploy.sh               # Deployment to production
-    ├── interactive-setup.sh    # Interactive configuration wizard
-    ├── setup-npm-scripts.sh    # Add npm scripts to package.json
-    └── test-ssh.sh             # Test SSH connectivity
+    ├── helpers.sh                  # Helper functions and config parsing
+    ├── env-detect.sh               # Environment detection logic
+    ├── remote-exec.sh              # SSH connection and remote execution
+    ├── sync-db.sh                  # Database sync via SSH
+    ├── sync-assets.sh              # Asset sync via FTP
+    ├── deploy.sh                   # Deployment to remote
+    ├── deploy-cloudways.sh         # Cloudways-specific SSH deployment
+    ├── interactive-setup.sh        # Interactive configuration wizard
+    ├── setup-npm-scripts.sh        # Add npm scripts to package.json
+    └── test-ssh.sh                 # Test SSH connectivity
 ```
 
 ## Logs & Monitoring
@@ -505,8 +647,8 @@ ssh username@hostname "cd /path/to/project && php craft --version"
 
 ## Security
 
-- Never commit `config.yml` with passwords/tokens
-- Use `chmod 600 .update/config.yml` for sensitive configs
+- Never commit `config.*.yml` files with passwords/tokens
+- Use `chmod 600 .update/config.*.yml` for sensitive configs
 - SSH keys preferred over password authentication
 - API tokens can be stored in config or entered when prompted
 - FTP password reused for SSH authentication (single credential)
@@ -524,4 +666,4 @@ git add .update
 git commit -m "Update: craftcms-monthly-updates scripts"
 ```
 
-If installed via direct copy, re-download and replace the `.update` directory, preserving your `config.yml`.
+If installed via direct copy, re-download and replace the `.update` directory, preserving your `config.*.yml` files.

@@ -5,8 +5,11 @@ set -e
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$SCRIPT_DIR/helpers.sh"
 
-# Parse config
-export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
+# Initialize environment (will prompt if on feature branch)
+# Supports: --env=staging, --env=production, --staging, --production
+init_environment "deployment" "$@"
+
+# Parse config for selected environment
 DEPLOYMENT_METHOD=$(get_config "deployment_method")
 
 case "$DEPLOYMENT_METHOD" in
@@ -52,7 +55,8 @@ case "$DEPLOYMENT_METHOD" in
         
     "cloudways")
         info "Running Cloudways deployment via SSH..."
-        "$SCRIPT_DIR/deploy-cloudways.sh"
+        # Pass environment to cloudways deploy script
+        ENV="$CURRENT_ENV" "$SCRIPT_DIR/deploy-cloudways.sh"
         ;;
 
     "manual")
