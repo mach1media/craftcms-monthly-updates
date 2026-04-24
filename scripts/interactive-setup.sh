@@ -506,8 +506,8 @@ environment: $ENV
 # Git settings
 branch: $ENV_BRANCH
 
-# Site URL
-site_url: $SITE_URL
+# Production site URL
+production_url: $SITE_URL
 
 # SSH settings
 ssh_host: $SSH_HOST
