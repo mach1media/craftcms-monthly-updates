@@ -21,6 +21,23 @@ Automates the tedious monthly maintenance routine for Craft CMS projects. Elimin
 - **Deployment Coordination**: Streamlines the update → test → deploy cycle with built-in rollback options
 - **Environment Inconsistency**: Ensures your local development environment perfectly mirrors production data
 
+## How It Works
+
+Running `npm run update`:
+
+1. **Pulls** the latest code from your production branch
+2. **Syncs** production database automatically via SSH (handles authentication, backup, download, import)
+3. **Syncs** assets from production (FTP/SFTP) or skips for cloud storage
+4. **Creates** a dated update branch (`update/2025-01-15`)
+5. **Updates** Composer dependencies and runs Craft migrations
+6. **Pauses** for you to test locally, then offers options:
+   - Rollback and start over
+   - Merge to production and deploy automatically
+   - Merge without deploying
+   - Stay on update branch for manual control
+
+**Result**: What used to take 30+ minutes of manual work becomes a mostly-automated 5-minute process.
+
 ## Installation
 
 ### Method 1: Git Subtree (Recommended)
@@ -149,11 +166,57 @@ The setup wizard auto-configures paths for:
 | Provider | SSH User | Deployment Options |
 |----------|----------|-------------------|
 | **Cloudways** | `master_xxxxx` | SSH deployment, push-to-deploy |
-| **Ploi** | `ploi` | API deployment, push-to-deploy |
+| **Ploi** | `ploi` | CLI deployment, API deployment, push-to-deploy |
 | **Laravel Forge** | `forge` | Envoyer, webhook, manual |
 | **ServerPilot** | `serverpilot` | Manual, push-to-deploy |
 | **fortrabbit** | app name | Push-to-deploy |
 | **Custom** | configurable | Any method |
+
+## Ploi Integration
+
+Enhanced support for [Ploi](https://ploi.io) server management with both CLI and API deployment options.
+
+### Ploi CLI Setup (Recommended)
+
+The Ploi CLI provides the best experience with real-time log streaming during deployment.
+
+```bash
+# Install Ploi CLI
+brew tap ploi/ploi
+brew install ploi
+
+# Configure API token (get from https://ploi.io/panel/settings/api)
+ploi token
+
+# Link your project to Ploi (run in project root)
+ploi init
+```
+
+After linking, deployments automatically use the CLI with log streaming:
+
+```bash
+npm run update/deploy
+# Output streams deployment logs in real-time
+```
+
+### Ploi API Setup (No CLI Required)
+
+If you prefer not to install the CLI, you can use direct API calls:
+
+```yaml
+# config.yml
+deployment_method: ploi
+ploi_server_id: 12345
+ploi_site_id: 67890
+ploi_api_token: your-token-here  # Or set PLOI_API_TOKEN env var
+```
+
+**Finding your Server and Site IDs:**
+1. Log in to https://ploi.io
+2. Navigate to your server, then your site
+3. Check the URL: `ploi.io/panel/servers/[SERVER_ID]/sites/[SITE_ID]`
+
+Or use CLI: `ploi servers` and `ploi sites`
 
 ## Requirements
 
@@ -228,6 +291,9 @@ your-craft-project/
         ├── sync-assets.sh
         ├── deploy.sh
         ├── deploy-cloudways.sh
+        ├── provider-detect.sh
+        ├── providers/
+        │   └── ploi.sh
         └── test-ssh.sh
 ```
 

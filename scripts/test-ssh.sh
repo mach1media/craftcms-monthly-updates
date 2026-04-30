@@ -85,9 +85,10 @@ if [ -n "${METHOD:-}" ]; then
     
     # Test Craft CMS access
     info "Testing Craft CMS installation..."
-    if execute_remote_command "php craft --version 2>/dev/null || php craft about 2>/dev/null" true >/dev/null 2>&1; then
-        CRAFT_VERSION=$(execute_remote_command "php craft --version 2>/dev/null || php craft about 2>/dev/null | grep Version" true 2>/dev/null || echo "Unknown")
-        success "✓ Craft CMS found: $CRAFT_VERSION"
+    if execute_remote_command "php craft pc/get system.schemaVersion 2>/dev/null" true >/dev/null 2>&1; then
+        CRAFT_SCHEMA=$(execute_remote_command "php craft pc/get system.schemaVersion 2>/dev/null" true 2>/dev/null | tail -1 || echo "Unknown")
+        CRAFT_EDITION=$(execute_remote_command "php craft pc/get system.edition 2>/dev/null" true 2>/dev/null | tail -1 || echo "Unknown")
+        success "✓ Craft CMS found (Edition: $CRAFT_EDITION, Schema: $CRAFT_SCHEMA)"
     else
         warning "✗ Could not verify Craft CMS installation"
         echo "  This might be normal if Craft is not in the expected location"
