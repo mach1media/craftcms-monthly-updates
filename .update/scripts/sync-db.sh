@@ -4,54 +4,24 @@ set -e
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Export CONFIG_FILE for helper functions
-export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
-
 source "$SCRIPT_DIR/helpers.sh"
-source "$SCRIPT_DIR/provider-detect.sh"
+
+# Initialize environment (will prompt if on feature branch)
+# Supports: --env=staging, --env=production, --staging, --production
+init_environment "database sync" "$@"
+
 source "$SCRIPT_DIR/remote-exec.sh"
 
-# Detect hosting provider for smart defaults
-DETECTED_PROVIDER=$(detect_provider)
-info "Detected hosting provider: $DETECTED_PROVIDER"
+# Find SSH key for direct ssh/scp commands in this script
+SSH_KEY=$(find_ssh_key 2>/dev/null) || true
 
-# Parse config with provider-aware defaults
-PRODUCTION_URL=$(get_config "production_url")
+# Parse config for selected environment
+SITE_URL=$(get_config "site_url" "$(get_config "production_url" "")")
 BACKUP_DIR=$(get_config "backup_dir" "storage/backups")
 SSH_HOST=$(get_config "ssh_host")
+SSH_USER=$(get_config "ssh_user")
 SSH_PORT=$(get_config "ssh_port" "22")
-
-# Use provider-aware SSH user if not explicitly configured
-SSH_USER=$(get_config "ssh_user" "" 2>/dev/null) || true
-if [ -z "$SSH_USER" ]; then
-    SSH_USER=$(get_provider_ssh_user "$DETECTED_PROVIDER")
-    if [ -n "$SSH_USER" ]; then
-        info "Using provider default SSH user: $SSH_USER"
-    fi
-fi
-
-# Use provider-aware remote project directory if not explicitly configured
-REMOTE_PROJECT_DIR=$(get_config "remote_project_dir" "" 2>/dev/null) || true
-if [ -z "$REMOTE_PROJECT_DIR" ]; then
-    # Try to infer domain from production URL
-    DOMAIN="${PRODUCTION_URL#https://}"
-    DOMAIN="${DOMAIN#http://}"
-    DOMAIN="${DOMAIN%%/*}"
-    if [ -n "$DOMAIN" ]; then
-        REMOTE_PROJECT_DIR=$(get_provider_project_dir "$DETECTED_PROVIDER" "$DOMAIN")
-        if [ -n "$REMOTE_PROJECT_DIR" ]; then
-            info "Using provider default path: $REMOTE_PROJECT_DIR"
-        fi
-    fi
-fi
-
-# Validate we have required values
-if [ -z "$SSH_USER" ]; then
-    error "SSH user not configured. Set ssh_user in config.yml"
-fi
-if [ -z "$REMOTE_PROJECT_DIR" ]; then
-    error "Remote project directory not configured. Set remote_project_dir in config.yml"
-fi
+REMOTE_PROJECT_DIR=$(get_config "remote_project_dir")
 
 # Cleanup function for proper signal handling
 cleanup() {
@@ -97,8 +67,8 @@ stop_progress() {
 }
 
 # Main backup process
-info "Starting database sync from production"
-info "Production: $PRODUCTION_URL"
+info "Starting database sync from $CURRENT_ENV"
+info "Site: $SITE_URL"
 
 # Ensure local backup directory exists
 mkdir -p "$BACKUP_DIR"
@@ -274,7 +244,7 @@ if [ "$SSH_SUCCESS" = false ]; then
     info "Automated SSH backup failed. Falling back to manual process..."
     info ""
     info "Please download database backup manually:"
-    info "1. Go to: $PRODUCTION_URL/admin/utilities/database-backup"
+    info "1. Go to: $SITE_URL/admin/utilities/database-backup"
     info "2. Click 'Create backup'"
     info "3. Download the backup file"
     info "4. Save it to: $BACKUP_DIR/"
