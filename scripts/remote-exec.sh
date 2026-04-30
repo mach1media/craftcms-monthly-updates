@@ -24,10 +24,10 @@ REMOTE_PROJECT_DIR=$(get_config "remote_project_dir")
 # Function to find SSH key that actually works
 find_ssh_key() {
     local keys=(
+        "$HOME/.ssh/serverpilot"
         "$HOME/.ssh/id_rsa"
         "$HOME/.ssh/id_ed25519"
         "$HOME/.ssh/id_ecdsa"
-        "$HOME/.ssh/serverpilot"
     )
     
     # Find a key that actually works by testing connection

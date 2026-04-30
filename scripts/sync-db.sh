@@ -12,6 +12,9 @@ init_environment "database sync" "$@"
 
 source "$SCRIPT_DIR/remote-exec.sh"
 
+# Find SSH key for direct ssh/scp commands in this script
+SSH_KEY=$(find_ssh_key 2>/dev/null) || true
+
 # Parse config for selected environment
 SITE_URL=$(get_config "site_url" "$(get_config "production_url" "")")
 BACKUP_DIR=$(get_config "backup_dir" "storage/backups")

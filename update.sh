@@ -17,17 +17,15 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 LOG_FILE="$SCRIPT_DIR/logs/update-$(date +%Y%m%d-%H%M%S).log"
 
-# Load configuration
-if [ ! -f "$SCRIPT_DIR/config.yml" ]; then
-    echo -e "${RED}[ERROR]${NC} config.yml not found. Please create it from config.yml.example" >&2
-    exit 1
-fi
-
-# Export CONFIG_FILE for helper functions
-export CONFIG_FILE="$SCRIPT_DIR/config.yml"
-
-# Source helper functions
+# Source helper functions (includes environment detection)
 source "$SCRIPT_DIR/scripts/helpers.sh"
+
+# Initialize environment (detects from branch or prompts user)
+# Supports: --env=staging, --env=production, --staging, --production
+init_environment "update" "$@"
+
+# Export ENV so child scripts (sync-db.sh, etc.) inherit environment without re-prompting
+export ENV="$CURRENT_ENV"
 
 # Parse config using helper function
 PRODUCTION_URL=$(get_config "production_url")

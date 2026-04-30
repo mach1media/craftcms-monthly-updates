@@ -125,8 +125,9 @@ get_environment() {
 # Usage: CONFIG_FILE=$(get_config_file_for_env "staging")
 get_config_file_for_env() {
     local env="$1"
-    local script_dir="${SCRIPT_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
-    local update_dir="$(dirname "$script_dir")"
+    # Always compute relative to this script's location (scripts/)
+    local this_script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    local update_dir="$(dirname "$this_script_dir")"
 
     echo "$update_dir/config.$env.yml"
 }

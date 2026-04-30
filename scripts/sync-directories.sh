@@ -9,11 +9,14 @@ set -e
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
 
-# Export CONFIG_FILE for helper functions
-export CONFIG_FILE="$SCRIPT_DIR/../config.yml"
-
-# Source helper functions and remote execution
+# Source helper functions
 source "$SCRIPT_DIR/helpers.sh"
+
+# Initialize environment (will prompt if on feature branch)
+# Supports: --env=staging, --env=production, --staging, --production
+init_environment "directory sync" "$@"
+
+# Source remote execution (uses CONFIG_FILE set by init_environment)
 source "$SCRIPT_DIR/remote-exec.sh"
 
 # Parse configuration
