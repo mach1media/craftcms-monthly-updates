@@ -1,9 +1,0 @@
-{% if link is defined and link.value | default %}
-	{% set linkText = link.label | default('Read more') %}
-	{{ tag('a', {
-		href: link.value,
-		target: link.target,
-		class: class | default(null),
-		text: linkText
-	}) }}
-{% endif %}

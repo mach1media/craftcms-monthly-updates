@@ -1,0 +1,134 @@
+# Craft CMS Update Configuration
+# Use 'npm run update/setup' for interactive configuration
+# Or copy to config.yml and fill in manually
+
+# Git settings
+# Production deployment branch - the branch used for:
+# - Pulling updates at start of process
+# - Pushing updates after completion
+# - Deployment to production environment
+branch: main
+
+# Production site
+production_url: https://example.com
+
+# Hosting provider (auto-detected if not specified)
+# Options: ploi, forge, serverpilot, fortrabbit, generic
+# This enables provider-specific defaults for paths and SSH users
+hosting_provider: ploi
+
+# SSH settings for automated database sync
+ssh_host: example.com
+ssh_user: ploi  # ploi (for Ploi), forge (for Laravel Forge), serverpilot (for ServerPilot), etc.
+ssh_port: 22
+
+# Remote server paths (varies by hosting provider)
+# Ploi: /home/ploi/DOMAIN
+# Forge: /home/forge/DOMAIN
+# ServerPilot: /srv/users/serverpilot/apps/APP_NAME
+# fortrabbit: /srv/app/APP_NAME
+remote_project_dir: /home/ploi/example.com
+
+# Shared directory paths (relative, same on local and remote)
+backup_dir: storage/backups
+uploads_dir: web/uploads  # or public/uploads
+
+# Asset storage configuration
+# Options: local, s3, spaces, other
+asset_storage_type: local
+
+# Remote uploads path (full path for FTP - only needed if asset_storage_type is 'local')
+remote_uploads_dir: /home/ploi/example.com/web/uploads
+
+# Additional directories to sync (optional)
+# Comma-separated list of directories relative to project root
+# Example: storage/runtime/temp,config/project
+additional_sync_dirs:
+
+# FTP/SSH settings for file operations
+# Usually same as SSH settings - used for asset sync and file operations
+ftp_host: example.com  # Usually same as ssh_host
+ftp_user: ploi         # Usually same as ssh_user (forge, serverpilot, ploi, etc.)
+ftp_password:          # Optional - leave empty if using SSH keys (recommended)
+
+# ============================================================================
+# Deployment Configuration
+# ============================================================================
+
+# Deployment method options:
+# - ploi (Ploi CLI or API deployment - recommended for Ploi users)
+# - github-actions (auto-deploy on push)
+# - envoyer (Envoyer webhook URL)
+# - forge (Forge deployment webhook URL)
+# - manual (no automated deployment)
+deployment_method: ploi
+
+# ============================================================================
+# Ploi Settings (if deployment_method: ploi)
+# ============================================================================
+
+# Prefer CLI deployment when Ploi CLI is installed
+# CLI deployment streams logs in real-time
+# Set to false to always use API deployment
+ploi_use_cli: true
+
+# Stream deployment logs when using CLI (ploi deploy:run --log)
+ploi_stream_logs: true
+
+# Server and Site IDs (only required for API deployment)
+# To find these IDs:
+#   1. Log in to https://ploi.io
+#   2. Navigate to your server, then your site
+#   3. Check the URL: ploi.io/panel/servers/[SERVER_ID]/sites/[SITE_ID]
+# Or use Ploi CLI:
+#   ploi servers    # List servers with IDs
+#   ploi sites      # List sites with IDs
+ploi_server_id: 12345
+ploi_site_id: 67890
+
+# Ploi API token
+# Get from: https://ploi.io/panel/settings/api
+# Can also be set via PLOI_API_TOKEN environment variable
+# Leave empty to be prompted during deployment
+ploi_api_token:
+
+# ============================================================================
+# Alternative Deployment Settings
+# ============================================================================
+
+# Envoyer settings (if deployment_method: envoyer)
+envoyer_url: https://envoyer.io/deploy/PROJECT/HASH
+
+# Forge settings (if deployment_method: forge)
+forge_url: https://forge.laravel.com/servers/12345/sites/67890/deploy/http?token=HASH
+
+# ============================================================================
+# Build Settings
+# ============================================================================
+
+run_npm_build: false
+npm_build_command: npm run build
+
+# ============================================================================
+# Ploi CLI Quick Reference
+# ============================================================================
+#
+# Installing Ploi CLI:
+#   macOS:  brew tap ploi/ploi && brew install ploi
+#   Other:  https://github.com/ploi/ploi-cli/releases
+#
+# Initial setup:
+#   ploi token              # Set your API token
+#   ploi init               # Link project to Ploi site (creates .ploi file)
+#
+# Deployment:
+#   ploi deploy:run         # Trigger deployment
+#   ploi deploy:run --log   # Trigger deployment with log streaming
+#
+# Useful commands:
+#   ploi servers            # List servers with IDs
+#   ploi sites              # List sites with IDs
+#   ploi ssh                # SSH into server
+#
+# The scripts will automatically use CLI if available and configured,
+# falling back to API deployment if CLI is not set up.

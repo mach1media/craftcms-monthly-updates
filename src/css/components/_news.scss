@@ -1,9 +1,0 @@
-/**
- * NEWS 
- */
-@include component('news') {
-	@include element('card-heading') {
-		letter-spacing: normal;
-		text-transform: none;
-	}
-}

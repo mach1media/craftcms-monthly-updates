@@ -1,20 +1,10 @@
-/.env*
-/.idea
-/vendor
+# Ignore update configuration files (environment-specific)
+config.yml
+config.staging.yml
+config.production.yml
+
+# Logs directory (keep .gitkeep)
+logs/*
+!logs/.gitkeep
+
 .DS_Store
-
-src/node_modules
-
-vendor
-storage/backups/*
-storage/config-deltas/*
-storage/logs/*
-storage/runtime/*
-
-web/uploads/*
-web/transforms/*
-web/cpresources/*
-
-public/uploads/*
-public/transforms/*
-public/cpresources/*
