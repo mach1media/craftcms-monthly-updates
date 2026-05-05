@@ -52,34 +52,75 @@ detect_environment_from_branch() {
     esac
 }
 
-# Prompt user to select environment
+# Capitalize first letter of a string (label form for prompts/messages)
+env_label() {
+    local env="$1"
+    echo "$(tr '[:lower:]' '[:upper:]' <<< "${env:0:1}")${env:1}"
+}
+
+# Get configured environments as a bash array via stdout (newline-separated)
+# Mirrors helpers.sh::get_configured_environments but is available before helpers.sh sources us
+list_configured_environments() {
+    local this_script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    local update_dir="$(dirname "$this_script_dir")"
+
+    for env in "${VALID_ENVIRONMENTS[@]}"; do
+        if [ -f "$update_dir/config.$env.yml" ]; then
+            echo "$env"
+        fi
+    done
+}
+
+# Prompt user to select environment, listing only configured environments with labels
 prompt_for_environment() {
     local action="${1:-operation}"
 
-    echo ""
-    echo -e "${YELLOW}Environment Selection Required${NC}"
-    echo -e "Current branch: ${BLUE}$(get_current_branch)${NC}"
-    echo ""
-    echo "Which environment should be used for this $action?"
-    echo "1) staging"
-    echo "2) production"
-    echo ""
+    # Build list of configured environments
+    local configured=()
+    while IFS= read -r env; do
+        [ -n "$env" ] && configured+=("$env")
+    done < <(list_configured_environments)
+
+    local count="${#configured[@]}"
+
+    if [ "$count" -eq 0 ]; then
+        echo -e "${RED}No environments are configured.${NC}" >&2
+        echo -e "${YELLOW}Run 'npm run update/setup' to configure an environment.${NC}" >&2
+        return 1
+    fi
+
+    echo "" >&2
+    echo -e "${YELLOW}Environment Selection Required${NC}" >&2
+    echo -e "Current branch: ${BLUE}$(get_current_branch)${NC}" >&2
+    echo "" >&2
+    echo "Which environment should be used for this $action?" >&2
+
+    local i=1
+    for env in "${configured[@]}"; do
+        echo "$i) $(env_label "$env")" >&2
+        i=$((i + 1))
+    done
+    echo "" >&2
 
     while true; do
-        read -p "Select environment (1-2): " choice
-        case "$choice" in
-            1|staging)
-                echo "staging"
+        read -p "Select environment (1-$count): " choice
+
+        # Numeric selection
+        if [[ "$choice" =~ ^[0-9]+$ ]] && [ "$choice" -ge 1 ] && [ "$choice" -le "$count" ]; then
+            echo "${configured[$((choice - 1))]}"
+            return 0
+        fi
+
+        # Name match (case-insensitive)
+        local lc_choice=$(echo "$choice" | tr '[:upper:]' '[:lower:]')
+        for env in "${configured[@]}"; do
+            if [ "$lc_choice" = "$env" ]; then
+                echo "$env"
                 return 0
-                ;;
-            2|production)
-                echo "production"
-                return 0
-                ;;
-            *)
-                echo -e "${RED}Invalid selection. Please enter 1 or 2.${NC}" >&2
-                ;;
-        esac
+            fi
+        done
+
+        echo -e "${RED}Invalid selection. Please enter a number between 1 and $count.${NC}" >&2
     done
 }
 
@@ -114,7 +155,20 @@ get_environment() {
     local detected=$(detect_environment_from_branch "$branch")
 
     if [ "$detected" = "prompt" ]; then
-        # Need to prompt user
+        # If only one environment is configured, use it without prompting
+        local configured=()
+        while IFS= read -r env; do
+            [ -n "$env" ] && configured+=("$env")
+        done < <(list_configured_environments)
+
+        if [ "${#configured[@]}" -eq 1 ]; then
+            local only_env="${configured[0]}"
+            echo -e "${BLUE}Only one environment configured — using $(env_label "$only_env")${NC}" >&2
+            echo "$only_env"
+            return 0
+        fi
+
+        # Multiple (or zero) configured — prompt user
         prompt_for_environment "$action"
     else
         echo "$detected"
@@ -163,7 +217,7 @@ show_environment_info() {
     local env="$1"
     local branch=$(get_current_branch)
 
-    echo -e "${BLUE}Environment: ${GREEN}$env${NC}"
+    echo -e "${BLUE}Environment: ${GREEN}$(env_label "$env")${NC}"
     echo -e "${BLUE}Branch: ${NC}$branch"
     echo -e "${BLUE}Config: ${NC}$(get_config_file_for_env "$env")"
 }
@@ -193,6 +247,8 @@ parse_env_flag() {
 export -f get_current_branch
 export -f branch_exists
 export -f detect_environment_from_branch
+export -f env_label
+export -f list_configured_environments
 export -f prompt_for_environment
 export -f get_environment
 export -f get_config_file_for_env

@@ -58,7 +58,7 @@ git subtree add --prefix=.update craftcms-updates main --squash
 .update/scripts/interactive-setup.sh
 ```
 
-**Pulling future updates:**
+**Pulling future updates** (see [Distributing Updates](#distributing-updates-to-existing-projects) below for the full workflow):
 ```bash
 git subtree pull --prefix=.update craftcms-updates main --squash
 ```
@@ -271,6 +271,69 @@ cp .update/config.yml .update/config.production.yml
 # Edit and add: environment: production
 rm .update/config.yml
 ```
+
+## Distributing Updates to Existing Projects
+
+When this repo is updated (new features, bug fixes), each project that installed it as a subtree needs to pull the changes down. Configs (`config.*.yml`) live alongside the scripts but are gitignored, so they're untouched by the pull.
+
+### One-time check per project
+
+Confirm the remote is registered (only needs to be done once after initial install):
+
+```bash
+cd /path/to/your-craft-project
+git remote -v | grep craftcms-updates
+```
+
+If missing, add it:
+
+```bash
+git remote add craftcms-updates git@github.com:mach1media/craftcms-monthly-updates.git
+```
+
+### Pulling the latest scripts
+
+From the project root:
+
+```bash
+git subtree pull --prefix=.update craftcms-updates main --squash
+```
+
+This creates a merge commit on your project's current branch. Push when you're ready:
+
+```bash
+git push origin main   # or whichever branch you're on
+```
+
+### Distributing across all monthly-update projects
+
+For solo developers maintaining multiple Craft sites that all use these scripts, run the pull in each project. A simple loop:
+
+```bash
+for project in ~/Sites/client-a ~/Sites/client-b ~/Sites/client-c; do
+    echo "=== Updating $project ==="
+    cd "$project" || continue
+    git subtree pull --prefix=.update craftcms-updates main --squash
+done
+```
+
+After pulling, verify nothing broke by running a no-op command:
+
+```bash
+.update/scripts/test-ssh.sh   # or any individual script
+```
+
+### Conflict resolution
+
+If `git subtree pull` reports conflicts, they'll be in `.update/` files. Since `.update/` is upstream-managed code, prefer the incoming changes:
+
+```bash
+git checkout --theirs .update/
+git add .update/
+git commit
+```
+
+Only resolve manually if you've intentionally modified a script locally (which is generally discouraged — open an issue or PR upstream instead).
 
 ## Repository Structure
 
