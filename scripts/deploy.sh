@@ -12,9 +12,6 @@ init_environment "deployment" "$@"
 # Parse config for selected environment
 DEPLOYMENT_METHOD=$(get_config "deployment_method")
 
-# Source provider detection
-source "$SCRIPT_DIR/provider-detect.sh"
-
 case "$DEPLOYMENT_METHOD" in
     "push-to-deploy"|"github-actions")
         info "Deployment will be triggered automatically on git push"
@@ -22,6 +19,8 @@ case "$DEPLOYMENT_METHOD" in
         ;;
 
     "ploi"|"ploi-cli"|"ploi-api")
+        # Source provider detection (only needed for provider-specific deployments)
+        source "$SCRIPT_DIR/provider-detect.sh"
         # Source Ploi provider functions
         source "$SCRIPT_DIR/providers/ploi.sh"
 
