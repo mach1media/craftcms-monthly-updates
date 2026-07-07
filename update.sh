@@ -77,11 +77,31 @@ if [ -n "$ADDITIONAL_SYNC_DIRS" ]; then
     success "✓ Additional directories synced"
 fi
 
-# Create update branch
+# Create or switch to update branch
 UPDATE_BRANCH="update/$(date +%Y-%m-%d)"
-info "Creating update branch: $UPDATE_BRANCH"
-git checkout -b "$UPDATE_BRANCH" || error "Failed to create update branch"
-success "✓ Update branch created"
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [ "$CURRENT_BRANCH" = "$UPDATE_BRANCH" ]; then
+    # Already on the update branch
+    info "Already on update branch: $UPDATE_BRANCH"
+
+    # Verify working tree is clean (allow untracked files)
+    if ! git diff --quiet || ! git diff --cached --quiet; then
+        warning "Working tree has uncommitted changes"
+        warning "Continuing with existing changes..."
+    fi
+    success "✓ Using existing update branch"
+elif git show-ref --verify --quiet "refs/heads/$UPDATE_BRANCH"; then
+    # Branch exists but we're not on it - switch to it
+    info "Update branch exists, switching to: $UPDATE_BRANCH"
+    git checkout "$UPDATE_BRANCH" || error "Failed to switch to update branch"
+    success "✓ Switched to existing update branch"
+else
+    # Branch doesn't exist - create it
+    info "Creating update branch: $UPDATE_BRANCH"
+    git checkout -b "$UPDATE_BRANCH" || error "Failed to create update branch"
+    success "✓ Update branch created"
+fi
 
 # Step 6: Composer update
 info "Running composer update..."
